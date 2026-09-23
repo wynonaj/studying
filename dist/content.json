@@ -1,0 +1,2630 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Network foundations"
+    },
+    {
+      "id": 2,
+      "title": "Signals & physical media"
+    },
+    {
+      "id": 3,
+      "title": "Ethernet & the data link"
+    },
+    {
+      "id": 4,
+      "title": "IP addressing & routing"
+    },
+    {
+      "id": 12,
+      "title": "Network design & management"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q2",
+      "ch": 1,
+      "q": "What is layering? Why is layering useful in computer networking?",
+      "a": "Layering means dividing networking into separate levels, where each layer has it\u2019s own job. \nIt is useful because:\nEach layer can work somewhat independently\nYou can change one layer without redesigning everything.\nIt makes networks easier to understand and troubleshoot.\nDivides one complicated network process into smaller jobs.",
+      "note": "Study guide",
+      "practiceQ": "What is layering? Why is layering useful in computer networking?",
+      "explain": "Each layer hides details from the layer above it. For example, an application can keep using IP even if the local connection changes from copper Ethernet to Wi-Fi. This separation also lets you troubleshoot one responsibility at a time.",
+      "quizAnswer": "Separate responsibilities into layers so parts can change independently and troubleshooting is easier.",
+      "distractors": [
+        "Repeat the same job at every layer so all layers must be redesigned together.",
+        "Put all networking functions in one layer so no interfaces are needed.",
+        "Separate devices by manufacturer so each vendor uses an unrelated network process."
+      ]
+    },
+    {
+      "id": "q9",
+      "ch": 1,
+      "q": "What are the layers of the TCP/ IP stack?",
+      "a": "Top to bottom:\nApplication -> Transport -> Network/IP -> Data Link -> Physical\nApplication: What am I sending?\nTransport: How should it be delivered?\nNetwork: Where is it going?\nData Link: How do I reach the next device?\nPhysical: How do the actual bits travel?",
+      "note": "Study guide",
+      "practiceQ": "What are the layers of the TCP/ IP stack?",
+      "explain": "Read the stack from the user toward the wire: the application creates data, transport connects processes, IP routes packets, the data-link layer delivers frames locally, and the physical layer carries the bits.",
+      "quizAnswer": "Application \u2192 Transport \u2192 Network/IP \u2192 Data Link \u2192 Physical",
+      "distractors": [
+        "Application \u2192 Network/IP \u2192 Transport \u2192 Data Link \u2192 Physical",
+        "Application \u2192 Transport \u2192 Data Link \u2192 Network/IP \u2192 Physical",
+        "Physical \u2192 Transport \u2192 Network/IP \u2192 Data Link \u2192 Application"
+      ]
+    },
+    {
+      "id": "q17",
+      "ch": 1,
+      "q": "What are the primary functions of each layer in the TCP/ IP stack?",
+      "a": "Application: Provides network services to applications/users\nTransport: End-to-end communication between applications\nNetwork/IP: IP addressing and routing\nData Link: Transfers frames on the local network; uses MAC addresses\nPhysical: Sends bits as electrical/light/radio signals\nIP address: Network layer\nMAC address: Data Link layer",
+      "note": "Study guide",
+      "practiceQ": "What are the primary functions of each layer in the TCP/ IP stack?",
+      "explain": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+      "quizAnswer": "Application: services; Transport: end-to-end processes; Network: IP routing; Data Link: local frames/MAC; Physical: signals.",
+      "distractors": [
+        "Application: services; Transport: IP routing; Network: end-to-end processes; Data Link: local frames/MAC; Physical: signals.",
+        "Application: signals; Transport: end-to-end processes; Network: IP routing; Data Link: local frames/MAC; Physical: services.",
+        "Application: services; Transport: end-to-end processes; Network: local MAC frames; Data Link: IP routing; Physical: signals."
+      ]
+    },
+    {
+      "id": "q25",
+      "ch": 1,
+      "q": "What is the Open Standards Interconnect (OSI) model? What was the motivation for the development of the OSI model?",
+      "a": "OSI means Open Systems Interconnection. It is a seven-layer reference model intended to standardize network functions and enable interoperability between different vendors.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is the Open Standards Interconnect (OSI) model? What was the motivation for the development of the OSI model?",
+      "explain": "The key idea is interoperability: a common reference model lets different vendors describe the same networking functions. OSI expands to Open Systems Interconnection, rather than the wording in the original prompt.",
+      "quizAnswer": "Open Systems Interconnection: a seven-layer reference model supporting standardization and interoperability.",
+      "distractors": [
+        "Open Systems Interconnection: a five-layer model created to eliminate interoperability.",
+        "Open Systems Interconnection: a seven-layer model requiring all equipment from one vendor.",
+        "Open Systems Interconnection: a seven-layer model intended only to describe cable construction."
+      ]
+    },
+    {
+      "id": "q29",
+      "ch": 1,
+      "q": "What are the seven layers of the OSI model? What are the primary functions of each of the seven layers of the OSI model?",
+      "a": "From top to bottom:\nApplication: Network services for application\nPresentation: Formats, encrypts, compresses data\nSession: Starts, manages, ends communication sessions\nTransport: End-to end delivery\nNetwork: IP addressing and routing\nData Link: Frames and MAC addresses\nPhysical: Sends bits/signals\nMnemonic: APSTNDP - All people seem to need data processing",
+      "note": "Study guide",
+      "practiceQ": "What are the seven layers of the OSI model? What are the primary functions of each of the seven layers of the OSI model?",
+      "explain": "The top three OSI layers separate application services, data representation and session management. The bottom four handle end-to-end delivery, routing, local frames and actual signals. Remember APSTNDP from top to bottom.",
+      "quizAnswer": "Application \u2192 Presentation \u2192 Session \u2192 Transport \u2192 Network \u2192 Data Link \u2192 Physical; representation belongs to Presentation and session management to Session.",
+      "distractors": [
+        "Application \u2192 Session \u2192 Presentation \u2192 Transport \u2192 Network \u2192 Data Link \u2192 Physical; representation belongs to Session.",
+        "Application \u2192 Presentation \u2192 Session \u2192 Network \u2192 Transport \u2192 Data Link \u2192 Physical; routing belongs to Transport.",
+        "Application \u2192 Presentation \u2192 Session \u2192 Transport \u2192 Data Link \u2192 Network \u2192 Physical; MAC frames belong to Network."
+      ]
+    },
+    {
+      "id": "q39",
+      "ch": 1,
+      "q": "What are the computer network authorities?",
+      "a": "These are organizations responsible for networking standards and internet resources\nIEEE -> LAN/WLAN standards, such as Ethernet and Wi-Fi\nIETF -> Internet standards such as TCP/IP, DNS, HTTP",
+      "note": "Study guide",
+      "practiceQ": "What are the computer network authorities?",
+      "explain": "Associate IEEE with the local link (Ethernet and Wi-Fi) and IETF with Internet protocols (such as TCP/IP and DNS). Standards organizations define shared rules so products can communicate.",
+      "quizAnswer": "IEEE develops LAN/WLAN standards; IETF develops Internet protocol standards.",
+      "distractors": [
+        "IEEE develops Internet protocols; IETF develops LAN/WLAN standards.",
+        "IEEE and IETF primarily allocate regional IP-address blocks rather than develop standards.",
+        "IEEE and IETF both define only physical cable dimensions, not communication standards."
+      ]
+    },
+    {
+      "id": "q44",
+      "ch": 2,
+      "q": "What is the primary responsibility of the physical layer in data communication?",
+      "a": "The Physical Layer transmits raw bits (0s and 1s) through a physical medium using signals.\nBits -> Signals -> Travel through medium",
+      "note": "Study guide",
+      "practiceQ": "What is the primary responsibility of the physical layer in data communication?",
+      "explain": "Bits are abstract values. The physical layer represents those values as a measurable electrical voltage, light pulse or radio signal that can travel through a medium.",
+      "quizAnswer": "Transmit raw bits through a medium as physical signals.",
+      "distractors": [
+        "Route IP packets between networks using logical addresses.",
+        "Form local frames and interpret their source/destination MAC addresses.",
+        "Provide end-to-end communication between application processes."
+      ]
+    },
+    {
+      "id": "q47",
+      "ch": 2,
+      "q": "Define physical medium in the context of computer networking. What are the common physical media used in computer networks?",
+      "a": "A physical medium is what carries a network signal from one device to another.\nCommon media:\nCopper cable\nFiber-optic cable\nWireless/radio",
+      "note": "Study guide",
+      "practiceQ": "Define physical medium in the context of computer networking. What are the common physical media used in computer networks?",
+      "explain": "The medium is the path a signal uses, not the protocol that controls communication. Copper carries electrical signals, fiber carries light, and wireless uses radio waves through space.",
+      "quizAnswer": "A signal-carrying medium, commonly copper cable, optical fiber or wireless/radio space.",
+      "distractors": [
+        "A logical address that tells the network where a host is located.",
+        "A frame format that defines the order of header fields.",
+        "A route entry that lists the next router on a path."
+      ]
+    },
+    {
+      "id": "q53",
+      "ch": 2,
+      "q": "What properties are required for a material to be suitable for use as a physical medium in computer networks?",
+      "a": "It should:\nCarry signals effectively\nSupport high speeds/bandwidth\nWork over the needed distance\nResist interference/noise\nBe reliable and practical to install",
+      "note": "Study guide",
+      "practiceQ": "What properties are required for a material to be suitable for use as a physical medium in computer networks?",
+      "explain": "A medium must work for the particular link. A cable that supports the needed speed over a short distance may not do so over a long distance; noise resistance, installation and reliability also matter.",
+      "quizAnswer": "Required bandwidth and distance, effective signal transmission, noise resistance, reliability and practicality.",
+      "distractors": [
+        "Maximum bandwidth alone, regardless of distance or interference.",
+        "Longest possible distance alone, regardless of data rate or installation needs.",
+        "The same appearance as other cables, regardless of signal performance."
+      ]
+    },
+    {
+      "id": "q60",
+      "ch": 2,
+      "q": "What is UTP? What factors favor the use of optical fiber as a physical medium over copper? Categories of UTP and their speeds.",
+      "a": "UTP = Unshielded Twisted Pair. Twists reduce interference. Cat 5e: 1 Gbps to 100 m. Cat 6: 1 Gbps to 100 m; 10 Gbps at shorter runs (often up to 55 m, installation dependent). Cat 6a: 10 Gbps to 100 m. Cat 8: 25/40 Gbps to 30 m; Cat 8 is shielded, not UTP. Fiber is useful for long distance, high bandwidth and immunity to electromagnetic interference.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is UTP? What factors favor the use of optical fiber as a physical medium over copper? Categories of UTP and their speeds.",
+      "explain": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+      "quizAnswer": "UTP is Unshielded Twisted Pair; fiber favors distance, bandwidth and EMI resistance; Cat 5e \u2248 1 Gbps, Cat 6a \u2248 10 Gbps, Cat 8 \u2248 25\u201340 Gbps.",
+      "distractors": [
+        "UTP is Unshielded Twisted Pair; fiber is more vulnerable to EMI than copper; Cat 5e \u2248 1 Gbps, Cat 6a \u2248 10 Gbps.",
+        "UTP is Unshielded Transmission Pair; Cat 5e \u2248 10 Gbps, Cat 6a \u2248 1 Gbps, Cat 8 \u2248 25\u201340 Gbps.",
+        "UTP is Unshielded Twisted Pair; Cat 6 always supports 10 Gbps at every distance; fiber has no distance advantage."
+      ]
+    },
+    {
+      "id": "q73",
+      "ch": 2,
+      "q": "What is total internal reflection? How does it help optical fiber transmit light signals efficiently?",
+      "a": "It is the process that keeps light bouncing inside the fiber\u2019s glass core instead of escaping.\nThat allows the light to signal to travel long distance efficiently.\nLight trapped inside the fiber.",
+      "note": "Study guide",
+      "practiceQ": "What is total internal reflection? How does it help optical fiber transmit light signals efficiently?",
+      "explain": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
+      "quizAnswer": "Light is reflected back within the fiber core instead of escaping, helping it travel along the fiber.",
+      "distractors": [
+        "Light escapes the core into the surroundings at every reflection, which improves transmission.",
+        "Light is converted into electrical current each time it reaches the edge of the core.",
+        "The fiber absorbs each light pulse completely and replaces it with a radio wave."
+      ]
+    },
+    {
+      "id": "q77",
+      "ch": 2,
+      "q": "What are the two categories of optical fiber? Under what conditions is each category preferred? Their distance covered (and diameters of glass)",
+      "a": "Single-mode fiber: about 9 \u03bcm core, preferred for long distances; kilometer-scale links depend on optics (for example 10GBASE-LR supports 10 km). Multimode: 50 or 62.5 \u03bcm core, preferred for shorter building/data-center links; 10GBASE-SR supports 300 m on OM3 or 400 m on OM4. Reach is not one fixed distance per fiber type: it depends on fiber grade, wavelength, transceiver and data rate.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What are the two categories of optical fiber? Under what conditions is each category preferred? Their distance covered (and diameters of glass)",
+      "explain": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word \u201cfiber.\u201d",
+      "quizAnswer": "Single-mode: about 9 \u03bcm core, generally longer links; multimode: larger 50/62.5 \u03bcm core, generally shorter links; exact reach depends on optics.",
+      "distractors": [
+        "Single-mode: larger 50/62.5 \u03bcm core, generally shorter links; multimode: about 9 \u03bcm core, generally longer links.",
+        "Single-mode and multimode both have a 9 \u03bcm core and identical reach with every transceiver.",
+        "Multimode always reaches farther because a larger core guarantees greater distance."
+      ]
+    },
+    {
+      "id": "q85",
+      "ch": 2,
+      "q": "What is the need to convert data to signals?",
+      "a": "Because the physical medium cannot directly transmit abstract 0s and 1s.\nThe data must be represented as physical signal, such as:\nElectrical signal\nLight\nRadio wave",
+      "note": "Study guide",
+      "practiceQ": "What is the need to convert data to signals?",
+      "explain": "A receiver cannot sense an abstract number directly. The sender must encode the data into a physical quantity the receiver can detect, such as voltage or light intensity.",
+      "quizAnswer": "Bits must be represented by detectable electrical, light or radio signals to cross the medium.",
+      "distractors": [
+        "Bits must first be changed from binary to decimal because media cannot carry binary information.",
+        "Bits already travel as abstract numbers without any physical representation.",
+        "Only addressing data needs signals; application data does not need a physical representation."
+      ]
+    },
+    {
+      "id": "q91",
+      "ch": 2,
+      "q": "What are the properties of a good signal? [think of: easily detectable, resist noise, allowing multiplexing; efficient at using bandwidth]",
+      "a": "Easy to detect\nResists noise\nAllows multiplexing\nUses bandwidth efficiently",
+      "note": "Study guide",
+      "practiceQ": "What are the properties of a good signal? [think of: easily detectable, resist noise, allowing multiplexing; efficient at using bandwidth]",
+      "explain": "Reliable detection and resistance to noise reduce mistakes. Efficient bandwidth use increases useful data carried, while multiplexing allows multiple users to share the medium.",
+      "quizAnswer": "Easy detection, noise resistance, multiplexing support and efficient bandwidth use.",
+      "distractors": [
+        "High amplitude alone, even if noise makes the signal impossible to distinguish.",
+        "Maximum bandwidth consumption, even when carrying very little useful data.",
+        "Good detection only when each user has a completely separate medium."
+      ]
+    },
+    {
+      "id": "q96",
+      "ch": 2,
+      "q": "What are amplitude, frequency, phase, QAM modulations? Which one is better at what (bandwidth and noise resistance)?",
+      "a": "Amplitude Modulation: Changes the strength/height of the signal.\nFrequency modulation: changes how fast the wave cycles. \nPhase modulation: changes the position/phase of the wave. \nQAM \u2013 Quadrature Amplitude Modulation: combines changes in amplitude + phase to represent more bits.\nQAM can send more data efficiently using available bandwidth, but more complex/high-order QAM is generally more sensitive to noise.\nAM is vulnerable to amplitude noise. FM generally rejects amplitude noise better, often at the cost of greater bandwidth. Phase-based digital schemes can be power-efficient, but resistance depends on the particular scheme and order. High-order QAM improves spectral efficiency (bits per second per hertz) but requires a higher signal-to-noise ratio. No modulation is universally best.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What are amplitude, frequency, phase, QAM modulations? Which one is better at what (bandwidth and noise resistance)?",
+      "explain": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+      "quizAnswer": "AM varies amplitude; FM varies frequency; PM varies phase; QAM combines amplitude and phase, trading higher efficiency for greater noise sensitivity at high orders.",
+      "distractors": [
+        "AM varies frequency; FM varies amplitude; PM varies phase; QAM combines frequency and time slots.",
+        "AM varies amplitude; FM varies phase; PM varies frequency; higher-order QAM is always more noise-resistant.",
+        "AM varies amplitude; FM varies frequency; PM varies phase; QAM changes amplitude only and never phase."
+      ]
+    },
+    {
+      "id": "q102",
+      "ch": 2,
+      "q": "What is multiplexing? What are the two categories of multiplexing?",
+      "a": "Multiplexing means allowing multiple signals/users to share the same communication medium. \nTwo major categories:\nFDM \u2013 Frequence Division Multiplexing: Different users get different frequency ranges\nTDM \u2013 Time Division Multiplexing: Different users get different time slots.\nRemember: \nFDM = Frequency\nTDM = Time",
+      "note": "Study guide",
+      "practiceQ": "What is multiplexing? What are the two categories of multiplexing?",
+      "explain": "FDM separates users by frequency, like different radio stations. TDM separates users by time, like people taking turns speaking. Both share one medium without assigning each user a separate cable.",
+      "quizAnswer": "Multiplexing shares a medium: FDM uses separate frequency ranges and TDM uses separate time slots.",
+      "distractors": [
+        "Multiplexing shares a medium: FDM uses time slots and TDM uses frequency ranges.",
+        "Multiplexing requires one separate physical medium for every user, so users never share.",
+        "FDM and TDM both assign separate frequency ranges; neither separates users in time."
+      ]
+    },
+    {
+      "id": "q111",
+      "ch": 3,
+      "q": "What are the primary functions of the data-link layer?",
+      "a": "The Data Link Layer handles communication over a local network/link.\nMajor jobs: \nCreates frames\nUses MAC addresses\nDetects transmission errors\nControls access to the local medium",
+      "note": "Study guide",
+      "practiceQ": "What are the primary functions of the data-link layer?",
+      "explain": "The data-link layer handles one local link. It packages data into frames, uses link-layer addresses, checks for transmission errors and manages access to the shared medium when needed.",
+      "quizAnswer": "Create frames, use MAC addresses, detect errors and control access to the local medium.",
+      "distractors": [
+        "Choose IP routes between networks and replace every MAC address with an IP address.",
+        "Only convert bits into physical signals, without framing or error detection.",
+        "Manage application sessions and data compression, without local-link delivery."
+      ]
+    },
+    {
+      "id": "q118",
+      "ch": 3,
+      "q": "What are the components of a typical Ethernet? What are the functions of each component? (a cable, and hosts with NICs)",
+      "a": "Cable -> carries the signal\nHosts with NICs -> devices connected to Ethernet.\nA NIC (Network Interface Card) allows a device to connect to the network and has a MAC address.",
+      "note": "Study guide",
+      "practiceQ": "What are the components of a typical Ethernet? What are the functions of each component? (a cable, and hosts with NICs)",
+      "explain": "A cable supplies the signal path, while each NIC sends and receives on that path. The NIC gives the host a network interface; an Ethernet MAC address identifies an interface at the link layer.",
+      "quizAnswer": "The cable carries signals; hosts use NICs to connect, and NICs have MAC addresses.",
+      "distractors": [
+        "The NIC carries signals between buildings without a medium; the cable stores the host\u2019s MAC address.",
+        "Hosts need cables but no network interfaces, because a cable performs all NIC functions.",
+        "The cable selects routes between IP networks; the NIC\u2019s only job is compressing application data."
+      ]
+    },
+    {
+      "id": "q122",
+      "ch": 3,
+      "q": "What is broadcast in the context of Ethernet? What are its advantages.",
+      "a": "A broadcast sends a frame to every device on the local Ethernet network.\nAdvantage: Useful when the sender doesn\u2019t know exactly which device needs to respond. Instead of it being sent only to one person, it\u2019s sent to everyone.",
+      "note": "Study guide",
+      "practiceQ": "What is broadcast in the context of Ethernet? What are its advantages.",
+      "explain": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
+      "quizAnswer": "A frame sent throughout the local broadcast domain, useful when the correct responder is not yet known.",
+      "distractors": [
+        "A frame addressed to exactly one already-known receiver, so no other local device receives it.",
+        "A frame that automatically reaches every device on the entire Internet.",
+        "A frame that reaches only the sending device and cannot discover other hosts."
+      ]
+    },
+    {
+      "id": "q125",
+      "ch": 3,
+      "q": "What is Carrier Sensing Multiple Access with Collision Detection in Ethernet? ",
+      "a": "CSMA/CD = Carrier Sense Multiple Access with Collision Detection. For shared, half-duplex Ethernet: sense the medium, transmit if idle, detect a collision, send a jam signal and stop, wait a random backoff interval, then retry. Modern switched full-duplex Ethernet does not use CSMA/CD.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is Carrier Sensing Multiple Access with Collision Detection in Ethernet? ",
+      "explain": "Listening reduces collisions but cannot eliminate them: two devices may start together. Detection, stopping and randomized backoff let them retry at different times. This applies to shared half-duplex Ethernet, not switched full-duplex links.",
+      "quizAnswer": "Sense the medium, transmit if idle, detect a collision, stop and wait a randomized interval, then retry.",
+      "distractors": [
+        "Transmit without sensing, continue through a collision, and never retry.",
+        "Sense the medium, then force every other device to keep waiting forever after one collision.",
+        "After a collision, all senders retry immediately at the same fixed instant."
+      ]
+    },
+    {
+      "id": "q134",
+      "ch": 3,
+      "q": "What is the size of the largest frame? 1518 Bytes (8 bytes preamble/SFD not counted; 14 bytes header, 1500 bytes payload, 4 bytes FCS)",
+      "a": "1518 bytes is the maximum ordinary untagged Ethernet frame: 14-byte header + 1500-byte payload + 4-byte FCS. The 8 bytes of preamble/SFD are not counted. 1500 is the payload, not the whole frame. VLAN tags and jumbo frames change the size.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is the maximum ordinary untagged Ethernet frame size? How much is payload, header and FCS, and is preamble/SFD counted?",
+      "explain": "Do the addition: 14 bytes of header + 1500 bytes of payload + 4 bytes of FCS = 1518. The common confusion is calling the 1500-byte payload the whole frame. Preamble/SFD adds 8 bytes on the wire but is excluded from that frame count.",
+      "quizAnswer": "1518 bytes: 14-byte header + 1500-byte payload + 4-byte FCS; preamble/SFD excluded.",
+      "distractors": [
+        "1500 bytes total: the header and FCS are already included in that payload value.",
+        "1526 bytes for the ordinary frame count because the 8-byte preamble/SFD must be counted.",
+        "1514 bytes total: 14-byte header + 1500-byte payload, with no FCS included."
+      ]
+    },
+    {
+      "id": "q136",
+      "ch": 3,
+      "q": "List the fields in the Ethernet header. What are the roles of each of these fields? Preamble +SFD; Destination Address; Source Address; Length/Type; Data from IP-Layer and Padding; FCS.",
+      "a": "On the wire: preamble (7 bytes) and SFD (1) synchronize/start; destination MAC (6) identifies the intended receiver; source MAC (6) identifies the sender; Length/Type (2) gives length or upper-layer protocol; data/padding carries the payload; FCS (4) detects errors. The ordinary header itself is destination + source + Length/Type, 14 bytes. Preamble/SFD, payload and FCS are not all header fields.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "List the Ethernet fields in transmission order and explain the role of each. Which fields form the ordinary header?",
+      "explain": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+      "quizAnswer": "Preamble/SFD synchronize/start; destination identifies receiver; source identifies sender; Type/Length describes data; payload/padding carry data; FCS detects errors.",
+      "distractors": [
+        "Preamble/SFD synchronize/start; destination identifies sender; source identifies receiver; FCS detects errors.",
+        "Destination/source identify endpoints; Type/Length detects errors; FCS identifies the upper-layer protocol.",
+        "Preamble contains the payload; padding stores the source MAC; FCS synchronizes the start of transmission."
+      ]
+    },
+    {
+      "id": "q144",
+      "ch": 3,
+      "q": "What is the structure of a MAC address? 48 bits (24 OUI of manufacturer; 24 host NIC unique #)",
+      "a": "A MAC address has 48 bits, usually written as six hexadecimal octets (for example 00:1A:2B:3C:4D:5E). In the traditional universally administered format, the first 24 bits are the OUI (manufacturer allocation), and the final 24 identify the interface within that allocation. Locally administered/randomized addresses do not necessarily identify a manufacturer.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "How is a traditional universally administered MAC address structured?",
+      "explain": "Each of the six hexadecimal octets contains 8 bits, so 6 \u00d7 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
+      "quizAnswer": "48 bits total: traditionally 24-bit OUI + 24-bit interface identifier.",
+      "distractors": [
+        "48 bits total: 16-bit OUI + 32-bit interface identifier.",
+        "32 bits total: 16-bit OUI + 16-bit interface identifier.",
+        "64 bits total: 24-bit OUI + 40-bit interface identifier."
+      ]
+    },
+    {
+      "id": "q151",
+      "ch": 3,
+      "q": "Know how to convert binary to decimal (vice versa); and binary to hex (vice versa)",
+      "a": "For binary -> decimal:\n128 64 32 16 8 4 2 1\n00001010\n8 + 2 = 10\nFor binary -> Hex, split into groups of 4 bits\n1010 1111\n1010 = A\n1111 = F\nAnswer = AF",
+      "note": "Study guide",
+      "practiceQ": "Know how to convert binary to decimal (vice versa); and binary to hex (vice versa)",
+      "explain": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+      "quizAnswer": "Binary place values are powers of 2; one hex digit represents 4 bits. 00001010\u2082 = 10\u2081\u2080 and 10101111\u2082 = AF\u2081\u2086.",
+      "distractors": [
+        "Binary place values are powers of 10; one hex digit represents 8 bits. 00001010\u2082 = 1010\u2081\u2080.",
+        "Binary place values are powers of 2, but 00001010\u2082 = 12\u2081\u2080 and 10101111\u2082 = FA\u2081\u2086.",
+        "Binary digits are added without place values, so 00001010\u2082 = 2\u2081\u2080 and 1111\u2082 = 4\u2081\u2086."
+      ]
+    },
+    {
+      "id": "q161",
+      "ch": 3,
+      "q": "What is the difference between hubs and switches?",
+      "a": "A hub repeats incoming bits to other ports and shares a collision domain. A switch learns source MAC-to-port mappings and forwards known unicast frames to the matching port. A switch floods broadcast and unknown-unicast frames within the VLAN; it does not always send to just one port.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is the difference between hubs and switches?",
+      "explain": "A hub repeats signals without learning destinations. A switch learns which source MAC appears on which port, then uses that table for known unicast traffic. Broadcast and unknown destinations still require flooding within the VLAN.",
+      "quizAnswer": "A hub repeats incoming signals to other ports; a switch learns MAC-to-port mappings and forwards known unicast traffic selectively.",
+      "distractors": [
+        "A switch repeats every signal without learning; a hub learns MAC addresses and selects destination ports.",
+        "Both hubs and switches learn IP routing tables and route between subnets as their defining function.",
+        "A hub and a switch behave identically: neither can learn which device is on a port."
+      ]
+    },
+    {
+      "id": "q166",
+      "ch": 3,
+      "q": "What is the spanning tree protocol? What is it used for?",
+      "a": "STP prevents network loops when switches have multiple paths between them.\nIt can temporarily block redundant paths so frames don\u2019t loop forever.\nSTP = prevents switching loops.",
+      "note": "Study guide",
+      "practiceQ": "What is the spanning tree protocol? What is it used for?",
+      "explain": "Redundant links can create loops in which Ethernet frames keep circulating. STP creates a loop-free forwarding tree by blocking selected redundant paths while retaining alternatives for failures.",
+      "quizAnswer": "STP prevents layer-2 loops by blocking selected redundant forwarding paths.",
+      "distractors": [
+        "STP makes every redundant path forward each frame simultaneously to prevent loops.",
+        "STP assigns a new IP prefix to every frame so it can loop safely forever.",
+        "STP removes every backup cable permanently, rather than controlling forwarding."
+      ]
+    },
+    {
+      "id": "q170",
+      "ch": 3,
+      "q": "Different topologies",
+      "a": "Star: devices connect to one central device\nBus: devices share one main cable\nRing: devices form a circle\nMesh: devices have multiple connections to each other\nThe most common Ethernet topology today is star",
+      "note": "Study guide",
+      "practiceQ": "Different topologies",
+      "explain": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
+      "quizAnswer": "Star: central device; bus: shared cable; ring: circle; mesh: multiple interconnections. Star is common in Ethernet.",
+      "distractors": [
+        "Star: shared cable; bus: central device; ring: circle; mesh: multiple interconnections.",
+        "Star: central device; bus: circle; ring: shared cable; mesh: no redundant connections.",
+        "Star: all devices directly connect to every other device; mesh: one central device only."
+      ]
+    },
+    {
+      "id": "q177",
+      "ch": 4,
+      "q": "What is Routing? What are Routing Tables (hold all the routers information thus the network layout)",
+      "a": "Routing selects the next hop/path for packets between networks. Routing tables contain destination prefixes and forwarding information (such as next hop, interface and metrics). They need not contain the complete network topology.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is routing, and what information is stored in a routing table?",
+      "explain": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+      "quizAnswer": "Routing chooses packet paths/next hops between networks; routing tables contain destination routes and forwarding information.",
+      "distractors": [
+        "Routing delivers only local MAC frames; routing tables contain only manufacturer OUIs.",
+        "Routing chooses cable signal amplitude; routing tables record only cable lengths.",
+        "Routing requires a complete list of every host and cable in the entire Internet in each router\u2019s table."
+      ]
+    },
+    {
+      "id": "q180",
+      "ch": 4,
+      "q": "What is the need for a computer address at the IP layer when computers also have a MAC address? layering independence (changing one without changing the other).",
+      "a": "Because IP and MAC addresses serve different layers and purposes.\nMAC address: local data link communication\nIP address: communication/routing across networks.\nLayering independence: one can change without requiring the other to change.",
+      "note": "Study guide",
+      "practiceQ": "Why is an IP address needed when a computer already has a MAC address?",
+      "explain": "IP identifies where to route across networks, while MAC addressing delivers a frame on the current local link. As a packet crosses routers, link-layer addressing can change while the IP destination remains the remote host.",
+      "quizAnswer": "IP supports addressing/routing across networks; MAC supports local-link delivery, keeping the layers independent.",
+      "distractors": [
+        "IP and MAC are redundant names for the same address and can always replace one another.",
+        "MAC routes across networks; IP identifies only the next local Ethernet receiver.",
+        "An IP address is needed only to record the manufacturer of the NIC."
+      ]
+    },
+    {
+      "id": "q185",
+      "ch": 4,
+      "q": "The 2 parts of an IP address?",
+      "a": "An ip address contains:\nNetwork portion + Host portion\nNetwork = which network?\nHost = which device inside that network?",
+      "note": "Study guide",
+      "practiceQ": "The 2 parts of an IP address?",
+      "explain": "The prefix length determines which bits belong to the network. The remaining bits identify a host/interface within that subnet, so the split is not always at an octet boundary.",
+      "quizAnswer": "Network portion identifies the subnet; host portion identifies a host/interface within it.",
+      "distractors": [
+        "Host portion identifies the subnet; network portion identifies the device within it.",
+        "The two parts are manufacturer OUI and a NIC-specific identifier.",
+        "The network and host portions are always exactly 16 bits each."
+      ]
+    },
+    {
+      "id": "q190",
+      "ch": 4,
+      "q": "Classless Inter Domain Routing (CIDR) notation and calculations: ex: 73.5.0.0/17 ; ",
+      "a": "/17 means 17 bits = network portion\nIPv4 has 32 total bits, so:\n32-17 = 15 host bits.\n Number of total addresses: 2^15 = 32,768 addresses\nFor traditional usable-host calculation:\n32,768 \u2013 2 = 32,766 usable hosts\nThe two traditionally reserved addresses are the network address and broadcast address.",
+      "note": "Study guide",
+      "practiceQ": "Classless Inter Domain Routing (CIDR) notation and calculations: ex: 73.5.0.0/17 ; ",
+      "explain": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
+      "quizAnswer": "/17 means 17 network bits and 15 host bits: 32,768 total addresses and traditionally 32,766 usable hosts.",
+      "distractors": [
+        "/17 means 17 host bits and 15 network bits: 131,072 total addresses.",
+        "/17 means 17 network bits and 15 host bits: 32,766 total addresses and 32,768 usable hosts.",
+        "/17 means 17 network bytes and 15 host bytes: 32 total addresses."
+      ]
+    },
+    {
+      "id": "q198",
+      "ch": 4,
+      "q": "How many objects can be uniquely labeled with 10-bit address labels? Hint (210 ) . You wish to assign unique labels to 200 objects using binary numbers. What is the minimum number of bits needed? Hint \u2013 start from somewhere 27 =128 (too few); 210 1024 (too many); 28 (just right; should be little bit above the target)",
+      "a": "Rule:\nWith n bits, you can create 2^n unique combinations.\nSo with 10 bits:\n2^10 = 1024\nTherefore, 10-bit labels can uniquely label 1,024 objects\nFor 200 objects, find the smallest power of 2 that reaches at least 200:\n2^7 = 128\n2^8 = 256\nAnswer = 8 bits.",
+      "note": "Study guide",
+      "practiceQ": "How many objects can 10-bit labels uniquely identify? What is the minimum number of bits needed to label 200 objects?",
+      "explain": "Each additional bit doubles the number of possible labels. Ten bits give 1024 labels. For 200 objects, seven bits give only 128, while eight give 256, so eight is the minimum.",
+      "quizAnswer": "10 bits label 1024 objects; 200 objects need at least 8 bits because 2^7 < 200 \u2264 2^8.",
+      "distractors": [
+        "10 bits label 1000 objects; 200 objects need 7 bits because 2^7 exceeds 200.",
+        "10 bits label 1024 objects; 200 objects need 200 bits, one bit per object.",
+        "10 bits label 20 objects; 200 objects need 100 bits because each bit labels two objects."
+      ]
+    },
+    {
+      "id": "q208",
+      "ch": 4,
+      "q": "What are the disadvantages of using address classes (A, B, C\u2026)? How does CIDR overcome these disadvantages?",
+      "a": "Old classful addressing used fixed sizes like Class A, B, and C.\nProblem: wasted IP addresses because organizations were forced into fixed network sizes.\nCIDR allows flexible prefix lengths like: /17, /20 /24, etc.\nThat lets networks receive an address block closer to the size they actually need.\nClasses = rigid\nCIDR = flexible",
+      "note": "Study guide",
+      "practiceQ": "What are the disadvantages of using address classes (A, B, C\u2026)? How does CIDR overcome these disadvantages?",
+      "explain": "Fixed address classes force organizations into large predefined block sizes. CIDR changes the prefix length so allocations can fit more closely, reducing wasted addresses and supporting route aggregation.",
+      "quizAnswer": "Fixed class sizes waste addresses; CIDR uses flexible prefix lengths to fit allocations more closely.",
+      "distractors": [
+        "CIDR wastes addresses by requiring every organization to use a fixed Class A block.",
+        "Address classes are flexible; CIDR replaces them with only three fixed block sizes.",
+        "CIDR eliminates the network/host split and therefore cannot express subnet sizes."
+      ]
+    },
+    {
+      "id": "q215",
+      "ch": 4,
+      "q": "What is the correct representation of an IPv6 address",
+      "a": "IPv6 addresses are 128 bits, written as eight groups of up to four hexadecimal digits separated by colons. Leading zeros within groups may be omitted; one run of zero groups may be replaced by ::, at most once in an address. 2001:0db8:85a3:0000:0000:8a2e:0370:7334 compresses to 2001:db8:85a3::8a2e:370:7334. 2001:db8::1 is a separate valid example, not a shortening of that address.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is the correct representation of an IPv6 address",
+      "explain": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+      "quizAnswer": "128 bits in eight hexadecimal groups separated by colons; omit leading zeros and use :: once for a run of zero groups.",
+      "distractors": [
+        "32 bits in four decimal groups separated by dots; :: can appear anywhere repeatedly.",
+        "128 bits in eight decimal groups separated by dots; each group must contain exactly one digit.",
+        "128 bits in hexadecimal, but :: can occur multiple times with no ambiguity."
+      ]
+    },
+    {
+      "id": "q222",
+      "ch": 4,
+      "q": "ICMP utilities (ping, traceroute, pingpath)",
+      "a": "ICMP = Internet Control Message Protocol; it carries diagnostics and error/status messages. Ping uses echo request/reply to test reachability. Traceroute discovers hops using increasing TTL/hop limit and returned ICMP messages; probes vary by implementation. Windows pathping combines route tracing with loss/latency measurement. A blocked ping does not always mean the host is down.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "ICMP utilities (ping, traceroute, pingpath)",
+      "explain": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+      "quizAnswer": "Ping tests reachability; traceroute shows hops; pathping adds loss/latency measurements; ICMP carries diagnostic/error messages.",
+      "distractors": [
+        "Ping lists every hop; traceroute only measures cable bandwidth; pathping assigns IP addresses.",
+        "Ping changes the route; traceroute assigns MAC addresses; ICMP defines Ethernet cabling.",
+        "Ping tests reachability; traceroute shows hops; pathping is a physical cable, not a utility."
+      ]
+    },
+    {
+      "id": "q227",
+      "ch": 4,
+      "q": "What are regional registries? What is the need for regional registries?",
+      "a": "Regional Internet Registries (RIRs) manage and distribution IP addresses within different regions of the world. \nThey\u2019re needed so IP address allocation is organized and unique, instead of different organizations accidentally assigning overlapping public address space.",
+      "note": "Study guide",
+      "practiceQ": "What are regional registries? What is the need for regional registries?",
+      "explain": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
+      "quizAnswer": "RIRs coordinate Internet-number allocation in geographic regions to keep public allocations organized and unique.",
+      "distractors": [
+        "RIRs give every organization the same public address block to simplify routing.",
+        "RIRs assign the manufacturer half of every MAC address rather than IP resources.",
+        "RIRs are routers inside each building that broadcast all IP addresses to local hosts."
+      ]
+    },
+    {
+      "id": "q231",
+      "ch": 12,
+      "q": "What are the goals of network design and implementation?",
+      "a": "meet current and foreseeable end-user needs, using the most appropriate technology and addressing any organizational constraints in a manner that minimizes costs over a specified time period. Cost include initial setup + maintenance. If network too slow or unreliable there is cost of user downtime (users unable to perform their jobs).",
+      "note": "Study guide",
+      "practiceQ": "What are the goals of network design and implementation?",
+      "explain": "The cheapest purchase is not always the cheapest network. A design must account for future needs, maintenance and the cost of downtime as well as initial equipment and installation.",
+      "quizAnswer": "Meet present and foreseeable needs within constraints while minimizing costs over time, including setup, maintenance and downtime.",
+      "distractors": [
+        "Minimize purchase price alone, even if users repeatedly cannot work.",
+        "Maximize speed at any cost without considering user needs or constraints.",
+        "Meet only today\u2019s needs and exclude maintenance and future demand from planning."
+      ]
+    },
+    {
+      "id": "q233",
+      "ch": 12,
+      "q": "What are some of the important pieces of information you should gather during the requirements-analysis phase of network design?",
+      "a": "Identifying the different categories of users and applications + office locations so that network can support high bandwidth at required locations.",
+      "note": "Study guide",
+      "practiceQ": "What are some of the important pieces of information you should gather during the requirements-analysis phase of network design?",
+      "explain": "You must know who uses the network, which applications they run and where they work before estimating link capacity and placing equipment. Requirements drive the design decisions.",
+      "quizAnswer": "User categories, applications, office locations, capacity needs and constraints.",
+      "distractors": [
+        "Only cable colors and equipment brand names, before considering users.",
+        "Only the number of routers, regardless of applications or user locations.",
+        "Only the initial purchase budget, excluding all performance requirements."
+      ]
+    },
+    {
+      "id": "q235",
+      "ch": 12,
+      "q": "What is a logical network design?",
+      "a": "indicates the layout of the network, the subnets in the network, IP addressing and naming schemes used in the network and management strategies used in the network.  In Drawing.",
+      "note": "Study guide",
+      "practiceQ": "What is a logical network design?",
+      "explain": "Logical design describes how the network is organized: subnets, addressing, names and management. Physical design then chooses the actual media and devices that implement that plan.",
+      "quizAnswer": "A plan of network organization, subnets, addressing/naming and management strategies.",
+      "distractors": [
+        "A list only of exact cable materials and switch model numbers.",
+        "An inventory only of broken devices awaiting repair.",
+        "A drawing only of electrical signal amplitudes on each cable."
+      ]
+    },
+    {
+      "id": "q237",
+      "ch": 12,
+      "q": "What are some important pieces of information you should show in a drawing of the logical network design?",
+      "a": "total number of general-purpose desktops, servers, shared devices such as printers, and any devices with special network needs for every area of the network",
+      "note": "Study guide",
+      "practiceQ": "What are some important pieces of information you should show in a drawing of the logical network design?",
+      "explain": "Device counts and special requirements help you size each area correctly. Desktops, servers and shared devices create different traffic demands and may need different connectivity.",
+      "quizAnswer": "Counts of desktops, servers, shared devices and devices with special network needs for each area.",
+      "distractors": [
+        "Only desktops, since servers and printers do not affect network capacity.",
+        "Only the total number of buildings, with no devices shown in any area.",
+        "Only the brand of each cable, with no device counts or special requirements."
+      ]
+    },
+    {
+      "id": "q239",
+      "ch": 12,
+      "q": "What is a physical network design?",
+      "a": "indicates the technologies (for example, copper/fiber media for cabling, switches, routers, data link layer technologies such as Ethernet) that will be used to implement the logical design.",
+      "note": "Study guide",
+      "practiceQ": "What is a physical network design?",
+      "explain": "Physical design turns a logical plan into installable choices: cabling, switches, routers and link technologies. It answers what equipment and media will make the logical connections real.",
+      "quizAnswer": "The media, equipment and technologies selected to implement the logical design.",
+      "distractors": [
+        "Only the IP-addressing and naming plan, without specifying equipment or media.",
+        "Only the policy for choosing names, excluding switches and routers.",
+        "Only the user/application requirements, with no implementation choices."
+      ]
+    },
+    {
+      "id": "q241",
+      "ch": 12,
+      "q": "What is a building network? Connects devices in a single building with Ethernet technology.",
+      "a": "A building network connects devices within one building, commonly through Ethernet switches and cabling plus wireless access points.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is a building network?",
+      "explain": "The boundary here is one building. Devices usually connect through Ethernet switches and cabling, with wireless access points also providing local connectivity.",
+      "quizAnswer": "A network connecting devices within a single building, commonly using Ethernet.",
+      "distractors": [
+        "A network defined by connecting multiple nearby buildings rather than one building.",
+        "A network defined by geographically scattered offices connected through WAN services.",
+        "A network that requires every device to be in the same room, not merely the same building."
+      ]
+    },
+    {
+      "id": "q242",
+      "ch": 12,
+      "q": "Components of a structured cabling + horizontal/vertical cabling.",
+      "a": "Structured cabling is an organized cabling system for a building.\nHorizontal cabling: runs from telecommunications/network rooms to individual work areas/devices on a floor.\nVertical cabling/backbone connects different floors or telecommunications rooms.\nCommon structured-cabling components include the entrance facility, equipment room, backbone cabling, telecommunications rooms, horizontal cabling and work areas; patch panels organize terminations.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "Components of a structured cabling + horizontal/vertical cabling.",
+      "explain": "Horizontal cabling serves work areas on a floor; vertical/backbone cabling joins rooms or floors. Structured cabling organizes these paths and termination points so installation and maintenance are predictable.",
+      "quizAnswer": "Structured cabling organizes building wiring; horizontal serves work areas on a floor, vertical/backbone joins floors or rooms.",
+      "distractors": [
+        "Horizontal cabling joins different floors; vertical cabling connects desks on one floor.",
+        "Horizontal and vertical both describe IP address portions, not cable paths.",
+        "Structured cabling means every device must connect directly to every other device."
+      ]
+    },
+    {
+      "id": "q246",
+      "ch": 12,
+      "q": "Data Center Topology",
+      "a": "A data center topology is the layout showing how servers and networking equipment are interconnected inside a data center. \nThe key idea is supporting fast, reliable communication between large numbers, of servers. \nExamples include traditional tiered designs and spine-leaf: servers connect to leaf switches, and each leaf connects to each spine, giving predictable paths and redundant capacity.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "Data Center Topology",
+      "explain": "Many servers exchange traffic with one another, so the topology must support capacity and resilience. In a spine-leaf example, every leaf connects to every spine, giving multiple predictable paths.",
+      "quizAnswer": "The arrangement of server/network connections to support fast, reliable communication among many servers.",
+      "distractors": [
+        "Only the assignment of individual server passwords, not their interconnections.",
+        "Only the public IP allocation for a whole geographic region.",
+        "The requirement that all server traffic must use one unprotected shared cable."
+      ]
+    },
+    {
+      "id": "q249",
+      "ch": 12,
+      "q": "What is a campus network? Multiple buildings with 3 layers (core, distribution, access)",
+      "a": "A campus network connects multiple nearby buildings. A common hierarchical design has Core \u2192 Distribution \u2192 Access layers.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is a campus network, and what are its three hierarchical layers?",
+      "explain": "A campus joins nearby buildings. The access layer connects devices, distribution aggregates and applies policy, and the core provides fast transport between distribution areas.",
+      "quizAnswer": "A campus connects multiple nearby buildings; a common hierarchy is Core \u2192 Distribution \u2192 Access.",
+      "distractors": [
+        "A campus connects a single workstation only; its hierarchy is Access \u2192 Core \u2192 Distribution.",
+        "A campus is always geographically scattered across distant cities with no nearby buildings.",
+        "A campus has the hierarchy Application \u2192 Presentation \u2192 Session instead of network-design tiers."
+      ]
+    },
+    {
+      "id": "q251",
+      "ch": 12,
+      "q": "What is the role of the core layer? Connected to all parts (all traffic passes through), fast and reliable data transport, called backbone.",
+      "a": "The core is the network\u2019s backbone.\nIt provides\nFast transportation\nReliable transportation\nConnections between different parts of the network\nA lot of network traffic passes through it.\nCore = fast backbone.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is the role of the core layer?",
+      "explain": "The core prioritizes reliable, high-speed transport across the network. Think of it as the backbone that joins major network regions rather than the layer supplying individual user ports.",
+      "quizAnswer": "Fast, reliable backbone transport linking major parts of the network.",
+      "distractors": [
+        "Providing individual users with their first network connection as its primary role.",
+        "Formatting and encrypting application data as an OSI layer.",
+        "Replacing all distribution-layer policies with individual desktop ports."
+      ]
+    },
+    {
+      "id": "q259",
+      "ch": 12,
+      "q": "What are the roles of the distribution layer? Administrative layer, organizes subnets, responsible for firewalls, and authentication (thus internet connectivity to the outside world). ",
+      "a": "The distribution layer aggregates access networks, routes between subnets and applies policies such as filtering and access control. The guide associates it with firewalls, authentication and external connectivity; exact service placement depends on the design.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What are the roles of the distribution layer?",
+      "explain": "Distribution sits between access and core. It groups access networks and is a common place for inter-subnet routing and policy enforcement; the exact placement of firewalls and authentication varies by design.",
+      "quizAnswer": "Aggregate access networks, organize/route between subnets and apply administrative/security policies.",
+      "distractors": [
+        "Primarily provide a single end-user port at every desk, with no aggregation role.",
+        "Only send raw electrical/light signals, with no policy or subnet role.",
+        "Only act as the fastest backbone, never performing administrative policy functions."
+      ]
+    },
+    {
+      "id": "q260",
+      "ch": 12,
+      "q": "What service is offered by the access layer? Providing network ports to end users, includes hubs/switches, organizing the devices in a building into Ethernets.",
+      "a": "The access layer connects end-user devices through network ports and wireless access points, normally using switches; it can assign devices to VLANs/Ethernet segments.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What service is offered by the access layer?",
+      "explain": "The access layer is where end devices enter the network. Switch ports and wireless access points provide this attachment; higher layers aggregate and transport the resulting traffic.",
+      "quizAnswer": "Connect end-user devices through network ports and access equipment.",
+      "distractors": [
+        "Provide only the high-speed backbone between distribution regions.",
+        "Allocate public address blocks to organizations throughout a region.",
+        "Choose the organization\u2019s standards approval procedure."
+      ]
+    },
+    {
+      "id": "q261",
+      "ch": 12,
+      "q": "What is an enterprise network? organization\u2019s geographically scattered network (ISPs provide WAN connectivity). An enterprise network connects and organization\u2019s networks across geographically separated locations.",
+      "a": "An enterprise network connects an organization\u2019s networks across geographically separated locations. ISPs can provide the WAN connectivity connection those locations.",
+      "note": "Study guide",
+      "practiceQ": "What is an enterprise network? How are its distant locations connected?",
+      "explain": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
+      "quizAnswer": "An organization\u2019s networks across geographically separated locations, often joined using provider WAN connectivity.",
+      "distractors": [
+        "Only one floor\u2019s horizontal cabling, with no connections beyond that floor.",
+        "Only nearby buildings on a single campus; distant sites are excluded by definition.",
+        "A shared Ethernet frame format that does not describe organizational networks."
+      ]
+    },
+    {
+      "id": "q263",
+      "ch": 12,
+      "q": "What are the important activities in network maintenance? inspection, testing, and servicing of devices and software, monitoring, updating both HW and SW.",
+      "a": "Network maintenance includes inspection, testing, servicing, monitoring, configuration/backup management, and updating hardware and software.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What are the important activities in network maintenance?",
+      "explain": "Maintenance combines prevention and response: inspect and test, monitor for changes, service equipment, protect configurations and keep hardware/software current. Waiting for a failure is only one part of the job.",
+      "quizAnswer": "Inspection, testing, servicing, monitoring and hardware/software updates.",
+      "distractors": [
+        "Initial installation only; nothing is needed once users connect.",
+        "Waiting for complete failure without monitoring or routine inspection.",
+        "Changing cable categories daily without checking equipment or software."
+      ]
+    },
+    {
+      "id": "q264",
+      "ch": 12,
+      "q": "What is a Simple Network Management Protocol? ",
+      "a": "With SNMP, the management application on the network management station can poll all the managed elements (configurations, fan speed, temps etc), say, once per hour and observe the status of all the information items. If discrepancy  alert the admin via email, SMS etc.",
+      "note": "Study guide",
+      "practiceQ": "What is a Simple Network Management Protocol? ",
+      "explain": "SNMP separates the manager from agents on devices. The manager can poll values such as temperatures or interface counters, while device notifications can flag events that need attention.",
+      "quizAnswer": "Simple Network Management Protocol lets a management system query device information and monitor status.",
+      "distractors": [
+        "Simple Network Management Protocol chooses loop-free Ethernet paths by blocking links.",
+        "Simple Network Management Protocol assigns every host its MAC manufacturer identifier.",
+        "Simple Network Management Protocol replaces all raw bits with optical signals."
+      ]
+    },
+    {
+      "id": "q266",
+      "ch": 12,
+      "q": "What is the Management Information Base (MIB)? an information store that contains information which is essential for fault management",
+      "a": "MIB = Management Information Base. A structured collection of managed objects, identified by object identifiers (OIDs), that management software can query through SNMP; supports monitoring and fault management.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is the Management Information Base (MIB)?",
+      "explain": "An MIB organizes management information into named objects with OIDs. Management software needs this structure to know what a queried value means, such as a temperature or interface counter.",
+      "quizAnswer": "A structured Management Information Base containing information used for monitoring and fault management.",
+      "distractors": [
+        "A table containing only routes to remote IP networks, with no device-management information.",
+        "The payload part of an Ethernet frame, excluding all management information.",
+        "A physical store of spare cables used instead of monitoring data."
+      ]
+    },
+    {
+      "id": "q267",
+      "ch": 12,
+      "q": "What are standards? Consensus documents having rules, guidelines  interoperability. ",
+      "a": "Standards are consensus specifications/rules/guidelines that support interoperability and consistent behavior.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What are standards?",
+      "explain": "Shared specifications reduce the chance that each vendor implements an incompatible interpretation. Interoperability is the central reason standards matter in networking.",
+      "quizAnswer": "Consensus specifications and guidelines supporting interoperability.",
+      "distractors": [
+        "Private rules deliberately preventing different vendors from communicating.",
+        "Temporary device readings such as temperature, rather than agreed specifications.",
+        "Unique labels assigned to hosts, rather than rules for implementations."
+      ]
+    },
+    {
+      "id": "q268",
+      "ch": 12,
+      "q": "What is the typical procedure by which a standard is developed? Lead organization (ex: Institute Electrical Electronics Engineers; IEEE  for LAN/WLAN; Internet Engineering Task Force; IETF)  for TCP/IP, DNS, HTTP) create Working Groups which specify requirements  companies give technical solutions  members of lead org vote on the best solution.",
+      "a": "A standards organization establishes a working group, defines requirements, develops and reviews technical proposals, reaches agreement and publishes a specification. The exact process varies: IEEE uses working groups and ballots; IETF emphasizes rough consensus and technical review rather than simply a majority vote for a best vendor solution.",
+      "note": "Clarified / supplemented",
+      "practiceQ": "What is the typical procedure by which a networking standard is developed?",
+      "explain": "Standards require shared technical requirements, proposals, review and agreement before publication. Procedures differ by organization; IEEE ballots and IETF rough consensus are not identical processes.",
+      "quizAnswer": "Define requirements in a working group, develop/review proposals, reach agreement and publish; exact procedures vary by organization.",
+      "distractors": [
+        "Publish a final standard first, then decide the requirements without technical review.",
+        "Let each vendor choose incompatible rules without a shared review process.",
+        "Allow only end users to vote on cable colors, with no technical requirements or proposals."
+      ]
+    }
+  ],
+  "vocabExplanations": {
+    "Layering": "Each layer hides details from the layer above it. For example, an application can keep using IP even if the local connection changes from copper Ethernet to Wi-Fi. This separation also lets you troubleshoot one responsibility at a time.",
+    "Protocol": "Each layer hides details from the layer above it. For example, an application can keep using IP even if the local connection changes from copper Ethernet to Wi-Fi. This separation also lets you troubleshoot one responsibility at a time.",
+    "Interoperability": "Each layer hides details from the layer above it. For example, an application can keep using IP even if the local connection changes from copper Ethernet to Wi-Fi. This separation also lets you troubleshoot one responsibility at a time.",
+    "TCP/IP": "Read the stack from the user toward the wire: the application creates data, transport connects processes, IP routes packets, the data-link layer delivers frames locally, and the physical layer carries the bits.",
+    "Encapsulation": "Read the stack from the user toward the wire: the application creates data, transport connects processes, IP routes packets, the data-link layer delivers frames locally, and the physical layer carries the bits.",
+    "Decapsulation": "Read the stack from the user toward the wire: the application creates data, transport connects processes, IP routes packets, the data-link layer delivers frames locally, and the physical layer carries the bits.",
+    "Application layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "Transport layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "Network layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "Data Link layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "Physical layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "TCP": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "IP": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "OSI": "The key idea is interoperability: a common reference model lets different vendors describe the same networking functions. OSI expands to Open Systems Interconnection, rather than the wording in the original prompt.",
+    "Presentation layer": "The top three OSI layers separate application services, data representation and session management. The bottom four handle end-to-end delivery, routing, local frames and actual signals. Remember APSTNDP from top to bottom.",
+    "Session layer": "The top three OSI layers separate application services, data representation and session management. The bottom four handle end-to-end delivery, routing, local frames and actual signals. Remember APSTNDP from top to bottom.",
+    "IEEE": "Associate IEEE with the local link (Ethernet and Wi-Fi) and IETF with Internet protocols (such as TCP/IP and DNS). Standards organizations define shared rules so products can communicate.",
+    "IETF": "Associate IEEE with the local link (Ethernet and Wi-Fi) and IETF with Internet protocols (such as TCP/IP and DNS). Standards organizations define shared rules so products can communicate.",
+    "LAN": "Associate IEEE with the local link (Ethernet and Wi-Fi) and IETF with Internet protocols (such as TCP/IP and DNS). Standards organizations define shared rules so products can communicate.",
+    "WLAN": "Associate IEEE with the local link (Ethernet and Wi-Fi) and IETF with Internet protocols (such as TCP/IP and DNS). Standards organizations define shared rules so products can communicate.",
+    "DNS": "Associate IEEE with the local link (Ethernet and Wi-Fi) and IETF with Internet protocols (such as TCP/IP and DNS). Standards organizations define shared rules so products can communicate.",
+    "HTTP": "Associate IEEE with the local link (Ethernet and Wi-Fi) and IETF with Internet protocols (such as TCP/IP and DNS). Standards organizations define shared rules so products can communicate.",
+    "Physical medium": "The medium is the path a signal uses, not the protocol that controls communication. Copper carries electrical signals, fiber carries light, and wireless uses radio waves through space.",
+    "Copper cable": "The medium is the path a signal uses, not the protocol that controls communication. Copper carries electrical signals, fiber carries light, and wireless uses radio waves through space.",
+    "Fiber-optic cable": "The medium is the path a signal uses, not the protocol that controls communication. Copper carries electrical signals, fiber carries light, and wireless uses radio waves through space.",
+    "Wireless": "The medium is the path a signal uses, not the protocol that controls communication. Copper carries electrical signals, fiber carries light, and wireless uses radio waves through space.",
+    "UTP": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+    "EMI": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+    "Crosstalk": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+    "Cat 5e": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+    "Cat 6": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+    "Cat 6a": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+    "Cat 8": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
+    "Bandwidth": "Reliable detection and resistance to noise reduce mistakes. Efficient bandwidth use increases useful data carried, while multiplexing allows multiple users to share the medium.",
+    "Bit rate": "Reliable detection and resistance to noise reduce mistakes. Efficient bandwidth use increases useful data carried, while multiplexing allows multiple users to share the medium.",
+    "Gbps": "Reliable detection and resistance to noise reduce mistakes. Efficient bandwidth use increases useful data carried, while multiplexing allows multiple users to share the medium.",
+    "Noise": "Reliable detection and resistance to noise reduce mistakes. Efficient bandwidth use increases useful data carried, while multiplexing allows multiple users to share the medium.",
+    "Attenuation": "Reliable detection and resistance to noise reduce mistakes. Efficient bandwidth use increases useful data carried, while multiplexing allows multiple users to share the medium.",
+    "Total internal reflection": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
+    "Core": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
+    "Cladding": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
+    "Single-mode fiber": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word \u201cfiber.\u201d",
+    "Multimode fiber": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word \u201cfiber.\u201d",
+    "Amplitude": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "Frequency": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "Phase": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "Modulation": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "AM": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "FM": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "PM": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "QAM": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
+    "Multiplexing": "FDM separates users by frequency, like different radio stations. TDM separates users by time, like people taking turns speaking. Both share one medium without assigning each user a separate cable.",
+    "FDM": "FDM separates users by frequency, like different radio stations. TDM separates users by time, like people taking turns speaking. Both share one medium without assigning each user a separate cable.",
+    "TDM": "FDM separates users by frequency, like different radio stations. TDM separates users by time, like people taking turns speaking. Both share one medium without assigning each user a separate cable.",
+    "Ethernet": "The data-link layer handles one local link. It packages data into frames, uses link-layer addresses, checks for transmission errors and manages access to the shared medium when needed.",
+    "Frame": "The data-link layer handles one local link. It packages data into frames, uses link-layer addresses, checks for transmission errors and manages access to the shared medium when needed.",
+    "Packet": "The data-link layer handles one local link. It packages data into frames, uses link-layer addresses, checks for transmission errors and manages access to the shared medium when needed.",
+    "Payload": "Do the addition: 14 bytes of header + 1500 bytes of payload + 4 bytes of FCS = 1518. The common confusion is calling the 1500-byte payload the whole frame. Preamble/SFD adds 8 bytes on the wire but is excluded from that frame count.",
+    "MTU": "Do the addition: 14 bytes of header + 1500 bytes of payload + 4 bytes of FCS = 1518. The common confusion is calling the 1500-byte payload the whole frame. Preamble/SFD adds 8 bytes on the wire but is excluded from that frame count.",
+    "NIC": "A cable supplies the signal path, while each NIC sends and receives on that path. The NIC gives the host a network interface; an Ethernet MAC address identifies an interface at the link layer.",
+    "MAC": "Each of the six hexadecimal octets contains 8 bits, so 6 \u00d7 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
+    "OUI": "Each of the six hexadecimal octets contains 8 bits, so 6 \u00d7 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
+    "Broadcast": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
+    "Unicast": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
+    "VLAN": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
+    "CSMA/CD": "Listening reduces collisions but cannot eliminate them: two devices may start together. Detection, stopping and randomized backoff let them retry at different times. This applies to shared half-duplex Ethernet, not switched full-duplex links.",
+    "Collision": "Listening reduces collisions but cannot eliminate them: two devices may start together. Detection, stopping and randomized backoff let them retry at different times. This applies to shared half-duplex Ethernet, not switched full-duplex links.",
+    "Backoff": "Listening reduces collisions but cannot eliminate them: two devices may start together. Detection, stopping and randomized backoff let them retry at different times. This applies to shared half-duplex Ethernet, not switched full-duplex links.",
+    "Full duplex": "Listening reduces collisions but cannot eliminate them: two devices may start together. Detection, stopping and randomized backoff let them retry at different times. This applies to shared half-duplex Ethernet, not switched full-duplex links.",
+    "Half duplex": "Listening reduces collisions but cannot eliminate them: two devices may start together. Detection, stopping and randomized backoff let them retry at different times. This applies to shared half-duplex Ethernet, not switched full-duplex links.",
+    "Preamble": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "SFD": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "Destination MAC": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "Source MAC": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "EtherType": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "Padding": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "FCS": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "CRC": "Synchronization comes first so the receiver can find the frame. Addresses identify who receives and who sent it, Type/Length describes the carried data, and FCS checks for corruption. Only destination, source and Type/Length form the ordinary 14-byte header.",
+    "Bit": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+    "Byte": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+    "Octet": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+    "Nibble": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+    "Binary": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+    "Decimal": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+    "Hexadecimal": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
+    "Hub": "A hub repeats signals without learning destinations. A switch learns which source MAC appears on which port, then uses that table for known unicast traffic. Broadcast and unknown destinations still require flooding within the VLAN.",
+    "Switch": "A hub repeats signals without learning destinations. A switch learns which source MAC appears on which port, then uses that table for known unicast traffic. Broadcast and unknown destinations still require flooding within the VLAN.",
+    "STP": "Redundant links can create loops in which Ethernet frames keep circulating. STP creates a loop-free forwarding tree by blocking selected redundant paths while retaining alternatives for failures.",
+    "Topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
+    "Star topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
+    "Bus topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
+    "Ring topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
+    "Mesh topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
+    "Router": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "Routing": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "Routing table": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "Next hop": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "IPv4": "The prefix length determines which bits belong to the network. The remaining bits identify a host/interface within that subnet, so the split is not always at an octet boundary.",
+    "Network portion": "The prefix length determines which bits belong to the network. The remaining bits identify a host/interface within that subnet, so the split is not always at an octet boundary.",
+    "Host portion": "The prefix length determines which bits belong to the network. The remaining bits identify a host/interface within that subnet, so the split is not always at an octet boundary.",
+    "CIDR": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
+    "Prefix length": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
+    "Subnet mask": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
+    "Network address": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
+    "Broadcast address": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
+    "Classful addressing": "Fixed address classes force organizations into large predefined block sizes. CIDR changes the prefix length so allocations can fit more closely, reducing wasted addresses and supporting route aggregation.",
+    "IPv6": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+    "Hextet": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+    "Zero compression": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+    "ICMP": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+    "Ping": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+    "Traceroute": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+    "Pathping": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+    "TTL": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+    "Latency": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+    "Packet loss": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
+    "RIR": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
+    "ARIN": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
+    "RIPE NCC": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
+    "APNIC": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
+    "LACNIC": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
+    "AFRINIC": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
+    "Requirements analysis": "You must know who uses the network, which applications they run and where they work before estimating link capacity and placing equipment. Requirements drive the design decisions.",
+    "Logical design": "Logical design describes how the network is organized: subnets, addressing, names and management. Physical design then chooses the actual media and devices that implement that plan.",
+    "Physical design": "Physical design turns a logical plan into installable choices: cabling, switches, routers and link technologies. It answers what equipment and media will make the logical connections real.",
+    "Building network": "The boundary here is one building. Devices usually connect through Ethernet switches and cabling, with wireless access points also providing local connectivity.",
+    "Structured cabling": "Horizontal cabling serves work areas on a floor; vertical/backbone cabling joins rooms or floors. Structured cabling organizes these paths and termination points so installation and maintenance are predictable.",
+    "Horizontal cabling": "Horizontal cabling serves work areas on a floor; vertical/backbone cabling joins rooms or floors. Structured cabling organizes these paths and termination points so installation and maintenance are predictable.",
+    "Vertical cabling": "Horizontal cabling serves work areas on a floor; vertical/backbone cabling joins rooms or floors. Structured cabling organizes these paths and termination points so installation and maintenance are predictable.",
+    "Patch panel": "Horizontal cabling serves work areas on a floor; vertical/backbone cabling joins rooms or floors. Structured cabling organizes these paths and termination points so installation and maintenance are predictable.",
+    "Telecommunications room": "Horizontal cabling serves work areas on a floor; vertical/backbone cabling joins rooms or floors. Structured cabling organizes these paths and termination points so installation and maintenance are predictable.",
+    "Data center": "Many servers exchange traffic with one another, so the topology must support capacity and resilience. In a spine-leaf example, every leaf connects to every spine, giving multiple predictable paths.",
+    "Data center topology": "Many servers exchange traffic with one another, so the topology must support capacity and resilience. In a spine-leaf example, every leaf connects to every spine, giving multiple predictable paths.",
+    "Spine-leaf": "Many servers exchange traffic with one another, so the topology must support capacity and resilience. In a spine-leaf example, every leaf connects to every spine, giving multiple predictable paths.",
+    "Campus network": "A campus joins nearby buildings. The access layer connects devices, distribution aggregates and applies policy, and the core provides fast transport between distribution areas.",
+    "Core layer": "The core prioritizes reliable, high-speed transport across the network. Think of it as the backbone that joins major network regions rather than the layer supplying individual user ports.",
+    "Backbone": "The core prioritizes reliable, high-speed transport across the network. Think of it as the backbone that joins major network regions rather than the layer supplying individual user ports.",
+    "Distribution layer": "Distribution sits between access and core. It groups access networks and is a common place for inter-subnet routing and policy enforcement; the exact placement of firewalls and authentication varies by design.",
+    "Firewall": "Distribution sits between access and core. It groups access networks and is a common place for inter-subnet routing and policy enforcement; the exact placement of firewalls and authentication varies by design.",
+    "Authentication": "Distribution sits between access and core. It groups access networks and is a common place for inter-subnet routing and policy enforcement; the exact placement of firewalls and authentication varies by design.",
+    "Access layer": "The access layer is where end devices enter the network. Switch ports and wireless access points provide this attachment; higher layers aggregate and transport the resulting traffic.",
+    "Enterprise network": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
+    "WAN": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
+    "ISP": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
+    "Network maintenance": "Maintenance combines prevention and response: inspect and test, monitor for changes, service equipment, protect configurations and keep hardware/software current. Waiting for a failure is only one part of the job.",
+    "Downtime": "The cheapest purchase is not always the cheapest network. A design must account for future needs, maintenance and the cost of downtime as well as initial equipment and installation.",
+    "SNMP": "SNMP separates the manager from agents on devices. The manager can poll values such as temperatures or interface counters, while device notifications can flag events that need attention.",
+    "Polling": "SNMP separates the manager from agents on devices. The manager can poll values such as temperatures or interface counters, while device notifications can flag events that need attention.",
+    "SNMP agent": "SNMP separates the manager from agents on devices. The manager can poll values such as temperatures or interface counters, while device notifications can flag events that need attention.",
+    "SNMP trap": "SNMP separates the manager from agents on devices. The manager can poll values such as temperatures or interface counters, while device notifications can flag events that need attention.",
+    "MIB": "An MIB organizes management information into named objects with OIDs. Management software needs this structure to know what a queried value means, such as a temperature or interface counter.",
+    "OID": "An MIB organizes management information into named objects with OIDs. Management software needs this structure to know what a queried value means, such as a temperature or interface counter.",
+    "Standard": "Shared specifications reduce the chance that each vendor implements an incompatible interpretation. Interoperability is the central reason standards matter in networking.",
+    "Working group": "Standards require shared technical requirements, proposals, review and agreement before publication. Procedures differ by organization; IEEE ballots and IETF rough consensus are not identical processes."
+  },
+  "understanding": [
+    {
+      "id": "u2",
+      "ch": 1,
+      "q": "A network changes the medium carrying its signals without redesigning all the application software. Which benefit of layering does this illustrate?",
+      "answer": "One layer can change while other layers keep their roles.",
+      "options": [
+        "One layer can change while other layers keep their roles.",
+        "Changing one layer requires every other layer to perform that layer\u2019s job.",
+        "The application must know every physical signaling detail.",
+        "Layering works only when the physical medium never changes."
+      ],
+      "explain": "Separating responsibilities limits how much of the system must change when one part changes.",
+      "sourceId": "q2",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u9",
+      "ch": 1,
+      "q": "In the guide\u2019s five-layer TCP/IP stack, which layer lies directly between Transport and Data Link?",
+      "answer": "Network / IP",
+      "options": [
+        "Network / IP",
+        "Transport",
+        "Data Link",
+        "Physical"
+      ],
+      "explain": "Top to bottom is Application \u2192 Transport \u2192 Network/IP \u2192 Data Link \u2192 Physical. Presentation is part of the seven-layer OSI model.",
+      "sourceId": "q9",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u17",
+      "ch": 1,
+      "q": "A question asks how to reach the next device on the local link, using a MAC address. Which layer is responsible?",
+      "answer": "Data Link",
+      "options": [
+        "Data Link",
+        "Transport",
+        "Physical",
+        "Network / IP"
+      ],
+      "explain": "Data Link handles frames and local MAC addressing. Network/IP addresses the different problem of routing across networks.",
+      "sourceId": "q17",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u25",
+      "ch": 1,
+      "q": "Two companies want their networking products to work together. What goal of the OSI model supports this?",
+      "answer": "A shared model for standardizing communication functions",
+      "options": [
+        "A shared model for standardizing communication functions",
+        "Requiring every vendor to implement one inseparable networking layer",
+        "Defining different incompatible functions for each manufacturer",
+        "Providing only cable specifications rather than a model of communication"
+      ],
+      "explain": "OSI provides a common description of networking functions, supporting interoperability among different vendors.",
+      "sourceId": "q25",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u29",
+      "ch": 1,
+      "q": "Formatting and compressing data are separated from starting and ending sessions. Which OSI layer handles formatting and compression?",
+      "answer": "Presentation",
+      "options": [
+        "Presentation",
+        "Session",
+        "Application",
+        "Transport"
+      ],
+      "explain": "Presentation concerns how data is represented, including formatting, encryption and compression. Session manages the communication session itself.",
+      "sourceId": "q29",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u39",
+      "ch": 1,
+      "q": "A group is developing an Ethernet LAN standard. Which organization in the guide is the relevant standards authority?",
+      "answer": "IEEE",
+      "options": [
+        "IEEE",
+        "IETF, because it specifically develops Ethernet LAN standards",
+        "A regional registry, because it specifies Ethernet framing",
+        "IEEE and IETF have no role in any networking standards"
+      ],
+      "explain": "The guide associates IEEE with LAN/WLAN standards such as Ethernet and Wi-Fi. It associates IETF with Internet protocols such as TCP/IP, DNS and HTTP.",
+      "sourceId": "q39",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u44",
+      "ch": 2,
+      "q": "A device turns a sequence of bits into light pulses on a cable. Which layer\u2019s main responsibility is being performed?",
+      "answer": "Physical",
+      "options": [
+        "Physical",
+        "Data Link, because it sends complete MAC frames",
+        "Network, because it decides the destination route",
+        "Transport, because it provides end-to-end process communication"
+      ],
+      "explain": "The physical layer transmits raw bits through a medium using physical signals. Light pulses are one way to represent those bits.",
+      "sourceId": "q44",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u47",
+      "ch": 2,
+      "q": "Which item is the medium carrying a signal, rather than an address or a networking model?",
+      "answer": "Copper cable",
+      "options": [
+        "Copper cable",
+        "The frame structure that organizes the carried bits",
+        "The signal\u2019s frequency rather than its transmission path",
+        "The addressing scheme used by the endpoints"
+      ],
+      "explain": "A physical medium carries a signal between devices. Copper, optical fiber and wireless/radio are the guide\u2019s examples.",
+      "sourceId": "q47",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u53",
+      "ch": 2,
+      "q": "A material can carry a signal across a desk but not across the required building distance. Why might it be unsuitable?",
+      "answer": "It does not meet the required distance for the link.",
+      "options": [
+        "It does not meet the required distance for the link.",
+        "Distance does not matter once the material can carry any signal.",
+        "Bandwidth automatically stays constant at every distance.",
+        "A medium needs only to be easy to install, not to carry the required link."
+      ],
+      "explain": "Suitability depends on the actual link requirements: speed, distance, interference resistance, reliability and installation practicality.",
+      "sourceId": "q53",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u60",
+      "ch": 2,
+      "q": "A link must cover a long distance through an area with strong electromagnetic interference. Which choice best fits the guide\u2019s comparison?",
+      "answer": "Optical fiber",
+      "options": [
+        "Optical fiber",
+        "Copper because twisting makes it completely immune to electromagnetic interference",
+        "Copper because fiber is useful only for shorter links than copper",
+        "Either medium because distance and interference never affect the choice"
+      ],
+      "explain": "Fiber is favored for long distances, high bandwidth and resistance to electromagnetic interference. Twisting helps copper, but does not give it fiber\u2019s immunity.",
+      "sourceId": "q60",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u73",
+      "ch": 2,
+      "q": "If light repeatedly escaped from the core of an optical fiber, which useful process would not be doing its job?",
+      "answer": "Total internal reflection",
+      "options": [
+        "Total internal reflection",
+        "Light amplification by escaping from the core",
+        "Converting light into current at each reflection",
+        "Absorbing the light at the core boundary"
+      ],
+      "explain": "Total internal reflection keeps light guided within the fiber\u2019s core instead of escaping, allowing efficient transmission along the fiber.",
+      "sourceId": "q73",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u77",
+      "ch": 2,
+      "q": "One fiber has a very small core and another has a larger core. Which choice best matches the guide\u2019s long-distance preference?",
+      "answer": "Single-mode fiber with the smaller core",
+      "options": [
+        "Single-mode fiber with the smaller core",
+        "Multimode fiber because a larger core always means a longer reach",
+        "Either type because core size can never affect light propagation",
+        "Single-mode because its core is larger than multimode\u2019s core"
+      ],
+      "explain": "The guide links single-mode\u2019s small core with longer distances and multimode\u2019s larger core with shorter distances. Actual reach also depends on the equipment.",
+      "sourceId": "q77",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u85",
+      "ch": 2,
+      "q": "Why can a sender not simply put abstract 0s and 1s onto a cable without representing them physically?",
+      "answer": "The medium carries detectable signals, so bits must be encoded as signals.",
+      "options": [
+        "The medium carries detectable signals, so bits must be encoded as signals.",
+        "Only decimal data can be represented by a physical signal.",
+        "Binary data already travels without any physical carrier.",
+        "Signal conversion is needed only for addresses, never for payload data."
+      ],
+      "explain": "The receiver must detect a physical change, such as an electrical signal or light pulse, to recover the data values.",
+      "sourceId": "q85",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u91",
+      "ch": 2,
+      "q": "A signal carries lots of data but is difficult to distinguish from noise. Which required property is missing?",
+      "answer": "Reliable detectability and noise resistance",
+      "options": [
+        "Reliable detectability and noise resistance",
+        "Noise resistance is unnecessary if the bit rate is high.",
+        "A good signal should consume more bandwidth even if it carries no more data.",
+        "A signal need only be detectable at the sender, not at the receiver."
+      ],
+      "explain": "Bandwidth efficiency alone is not enough. A good signal must also be detectable and resist noise so the receiver can recover the information.",
+      "sourceId": "q91",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u96",
+      "ch": 2,
+      "q": "A modulation method changes both a wave\u2019s amplitude and phase to carry more bits. Which method is it?",
+      "answer": "QAM",
+      "options": [
+        "QAM",
+        "Amplitude modulation alone",
+        "Phase modulation alone",
+        "Frequency modulation alone"
+      ],
+      "explain": "QAM combines amplitude and phase changes. Using more closely spaced signal states can improve bandwidth efficiency but makes noise more troublesome.",
+      "sourceId": "q96",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u102",
+      "ch": 2,
+      "q": "Several users share a medium, each taking a separate time slot. What is this, and how would FDM differ?",
+      "answer": "TDM; FDM assigns separate frequency ranges.",
+      "options": [
+        "TDM; FDM assigns separate frequency ranges.",
+        "FDM; TDM assigns separate frequency ranges.",
+        "TDM; FDM also assigns time slots, with no frequency separation.",
+        "FDM; both methods require a separate physical cable for every user."
+      ],
+      "explain": "TDM divides access by time. FDM divides the available frequency range so signals can occupy different bands.",
+      "sourceId": "q102",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u111",
+      "ch": 3,
+      "q": "A component forms frames, checks transmission errors and manages access to a local medium. Which layer best matches these jobs?",
+      "answer": "Data Link",
+      "options": [
+        "Data Link",
+        "Physical, because framing and MAC addressing are physical-layer jobs",
+        "Network/IP, because all local frames are routing-table entries",
+        "Transport, because it defines all local MAC addresses"
+      ],
+      "explain": "The data-link layer organizes communication over a local link. Physical sends the signals, while Network/IP handles addressing and routing across networks.",
+      "sourceId": "q111",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u118",
+      "ch": 3,
+      "q": "A host has an Ethernet cable available but needs hardware that allows it to connect and has a MAC address. What is needed?",
+      "answer": "A NIC",
+      "options": [
+        "A NIC",
+        "Only a cable, because the cable itself provides the host\u2019s MAC interface",
+        "Only a switch port, with no interface hardware at the host",
+        "Only a routing table, which replaces the host\u2019s physical network interface"
+      ],
+      "explain": "The NIC is the host\u2019s network interface hardware. The cable carries the signal; it does not replace the host interface.",
+      "sourceId": "q118",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u122",
+      "ch": 3,
+      "q": "A sender needs to reach every device on its local Ethernet network because it does not know which one should respond. Which transmission fits?",
+      "answer": "Broadcast",
+      "options": [
+        "Broadcast",
+        "A frame sent only to one already-known receiver",
+        "A frame guaranteed to reach every network on the Internet",
+        "A frame sent only to the local switch without reaching other hosts"
+      ],
+      "explain": "A broadcast distributes the frame throughout the local broadcast domain, making it useful when the appropriate responder is not yet known.",
+      "sourceId": "q122",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u125",
+      "ch": 3,
+      "q": "Two devices on traditional shared Ethernet transmit at the same time and detect a collision. What should happen next?",
+      "answer": "Stop, wait before retrying, then attempt transmission again.",
+      "options": [
+        "Stop, wait before retrying, then attempt transmission again.",
+        "Immediately retry together without waiting.",
+        "Continue the same transmissions without stopping.",
+        "Wait only before the first transmission, but never after a collision."
+      ],
+      "explain": "CSMA/CD includes collision detection and recovery. Stopping and waiting before retrying reduces the chance of immediately colliding again.",
+      "sourceId": "q125",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u134",
+      "ch": 3,
+      "q": "A student calls 1500 bytes the size of the entire ordinary untagged Ethernet frame. What did the student leave out?",
+      "answer": "The 14-byte header and 4-byte FCS",
+      "options": [
+        "The 14-byte header and 4-byte FCS",
+        "Only the 8-byte preamble/SFD, because the header and FCS are already included",
+        "Only the 14-byte header, because ordinary frames contain no FCS",
+        "Only the 4-byte FCS, because 1500 already counts the header"
+      ],
+      "explain": "1500 bytes is the payload. Adding 14 bytes of header and 4 bytes of FCS gives 1518 bytes. Preamble/SFD is excluded from that count.",
+      "sourceId": "q134",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u136",
+      "ch": 3,
+      "q": "A frame arrives with corrupted data. Which Ethernet field is used to detect that corruption?",
+      "answer": "FCS",
+      "options": [
+        "FCS",
+        "Preamble/SFD",
+        "Length/Type",
+        "Destination address"
+      ],
+      "explain": "The Frame Check Sequence detects transmission errors. The address fields identify the sender and receiver; preamble/SFD helps synchronize and identify the start.",
+      "sourceId": "q136",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u144",
+      "ch": 3,
+      "q": "In the guide\u2019s traditional MAC-address structure, the first half identifies the manufacturer allocation. How many bits remain for the interface-specific half?",
+      "answer": "24 bits",
+      "options": [
+        "24 bits",
+        "48 bits",
+        "32 bits",
+        "16 bits"
+      ],
+      "explain": "A MAC address has 48 bits total. The traditional split is 24 bits for the OUI and 24 bits for the interface identifier within that allocation.",
+      "sourceId": "q144",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u151",
+      "ch": 3,
+      "q": "Which decimal value equals the binary number 00001101?",
+      "answer": "13",
+      "options": [
+        "13",
+        "11",
+        "14",
+        "12"
+      ],
+      "explain": "The 1s are in the 8, 4 and 1 positions. Add them: 8 + 4 + 1 = 13. Do not read binary digits as a decimal number.",
+      "sourceId": "q151",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u161",
+      "ch": 3,
+      "q": "A device knows which port leads to a particular destination MAC and sends a known-destination frame to that port. Is it acting like a hub or a switch?",
+      "answer": "A switch, because it uses learned MAC-to-port information.",
+      "options": [
+        "A switch, because it uses learned MAC-to-port information.",
+        "A hub, because hubs learn MAC-to-port information.",
+        "A hub, because selective forwarding is the same as repeating every signal.",
+        "A switch, because it ignores MAC addresses and floods every known-destination frame."
+      ],
+      "explain": "Switches learn MAC address locations and selectively forward known unicast frames. Hubs repeat incoming signals to other ports.",
+      "sourceId": "q161",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u166",
+      "ch": 3,
+      "q": "Redundant connections between switches could let frames circle repeatedly. Which protocol addresses this problem?",
+      "answer": "STP",
+      "options": [
+        "STP",
+        "SNMP, because polling device status removes switching loops",
+        "ICMP, because echo replies block redundant Ethernet links",
+        "STP, but by forcing all redundant paths to forward every frame"
+      ],
+      "explain": "Spanning Tree Protocol prevents switching loops by blocking selected redundant forwarding paths. Redundancy can remain available without every path forwarding at once.",
+      "sourceId": "q166",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u170",
+      "ch": 3,
+      "q": "Every workstation has its own connection to one central switch. Which topology does this describe?",
+      "answer": "Star",
+      "options": [
+        "Star",
+        "Bus",
+        "Ring",
+        "Mesh"
+      ],
+      "explain": "A star has a central connection point. A bus uses one shared main cable, a ring forms a circle, and a mesh has multiple interconnections.",
+      "sourceId": "q170",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u177",
+      "ch": 4,
+      "q": "A router receives a packet destined for another network. What information helps it decide where to send the packet next?",
+      "answer": "A routing table containing routes and forwarding information",
+      "options": [
+        "A routing table containing routes and forwarding information",
+        "A table only of the manufacturer half of each MAC address",
+        "A table only mapping local MAC addresses to switch ports",
+        "A table of physical signal amplitudes without destination routes"
+      ],
+      "explain": "Routing tables associate destination networks with forwarding information such as the next hop. Routing selects how to move a packet toward its destination.",
+      "sourceId": "q177",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u180",
+      "ch": 4,
+      "q": "Why is a MAC address alone not a replacement for IP addressing across networks?",
+      "answer": "MAC supports local-link delivery; IP supports routing between networks.",
+      "options": [
+        "MAC supports local-link delivery; IP supports routing between networks.",
+        "MAC supports remote IP routing, while IP is used only on the local link.",
+        "The addresses have the same purpose, but IP is used only because it is longer.",
+        "IP replaces local MAC framing so no data-link address is needed anywhere."
+      ],
+      "explain": "The two addresses serve different layers and scopes. This separation supports layering independence and communication beyond a single local link.",
+      "sourceId": "q180",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u185",
+      "ch": 4,
+      "q": "Two addresses share a network portion but differ in their host portions. What does that difference identify within the subnet?",
+      "answer": "Different hosts/interfaces",
+      "options": [
+        "Different hosts/interfaces",
+        "Different subnets even though the network bits are identical",
+        "Different manufacturer allocations within a MAC address",
+        "Different prefix lengths regardless of the address\u2019s stated mask"
+      ],
+      "explain": "The network portion identifies the subnet; the host portion distinguishes hosts/interfaces within it.",
+      "sourceId": "q185",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u190",
+      "ch": 4,
+      "q": "For an IPv4 /20 block, how many host bits remain, and how many total addresses does that allow?",
+      "answer": "12 host bits and 4096 total addresses",
+      "options": [
+        "12 host bits and 4096 total addresses",
+        "20 host bits and 4096 total addresses",
+        "12 host bits and 4094 total addresses",
+        "20 host bits and 1,048,576 total addresses"
+      ],
+      "explain": "The same rule as the guide\u2019s /17 example applies: 32 \u2212 20 = 12, then 2^12 = 4096 total addresses. Subtracting two gives the traditional usable-host count, not the total.",
+      "sourceId": "q190",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u198",
+      "ch": 4,
+      "q": "You need unique binary labels for 130 objects. Seven bits give 128 labels. What is the smallest sufficient label size?",
+      "answer": "8 bits",
+      "options": [
+        "8 bits",
+        "7 bits, because 128 is close enough to 130",
+        "9 bits, because 8 bits provide only 128 labels",
+        "130 bits, because one bit is required per object"
+      ],
+      "explain": "Seven bits fall short. Eight bits provide 2^8 = 256 combinations, enough for 130 objects; always choose the smallest power of two that reaches the target.",
+      "sourceId": "q198",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u208",
+      "ch": 4,
+      "q": "An organization needs a block size that does not fit an old fixed address class well. Why is CIDR useful?",
+      "answer": "Its flexible prefix lengths can fit the needed allocation more closely.",
+      "options": [
+        "Its flexible prefix lengths can fit the needed allocation more closely.",
+        "It requires all networks to take the same fixed-size block.",
+        "It makes the host portion fixed at 24 bits for every allocation.",
+        "It assigns address classes more rigidly instead of varying the prefix."
+      ],
+      "explain": "Classful addressing uses fixed sizes that can waste addresses. CIDR varies the number of network bits to make block sizes more flexible.",
+      "sourceId": "q208",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u215",
+      "ch": 4,
+      "q": "Which address has the hexadecimal groups and colon separators used by IPv6?",
+      "answer": "2001:db8::1",
+      "options": [
+        "2001:db8::1",
+        "2001.db8.0.1",
+        "2001:db8::85a3::1",
+        "2001:dg8::1"
+      ],
+      "explain": "IPv6 uses 128-bit addresses written with hexadecimal groups separated by colons. The double colon represents a run of zero groups; IPv4 uses dotted decimal notation.",
+      "sourceId": "q215",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u222",
+      "ch": 4,
+      "q": "You want to see which routers a packet passes through, rather than only check whether a host replies. Which utility fits?",
+      "answer": "Traceroute",
+      "options": [
+        "Traceroute",
+        "Ping alone, because its main purpose is listing each router",
+        "Pathping only as a cable test, without route discovery",
+        "Traceroute only to change the route rather than display its hops"
+      ],
+      "explain": "Traceroute discovers the path\u2019s hops. Ping checks reachability, while pathping combines route discovery with loss/latency measurement.",
+      "sourceId": "q222",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u227",
+      "ch": 4,
+      "q": "Why should public IP-address allocations be coordinated across a region rather than assigned independently by every organization?",
+      "answer": "To keep allocation organized and avoid overlapping public address assignments",
+      "options": [
+        "To keep allocation organized and avoid overlapping public address assignments",
+        "To intentionally assign identical public blocks to unrelated organizations",
+        "To make public allocations independent with no coordination or records",
+        "To allocate public IP addresses based only on a NIC\u2019s manufacturer"
+      ],
+      "explain": "Regional Internet Registries manage allocations in geographic regions as part of a coordinated system, helping preserve uniqueness of public address space.",
+      "sourceId": "q227",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u231",
+      "ch": 12,
+      "q": "A cheap network repeatedly stops employees from working. Why might it fail the guide\u2019s design goals despite a low purchase price?",
+      "answer": "Downtime and maintenance contribute to the total cost.",
+      "options": [
+        "Downtime and maintenance contribute to the total cost.",
+        "Only initial equipment price counts toward network cost.",
+        "Maintenance costs matter, but the cost of lost user work never does.",
+        "Future requirements should be ignored to keep the initial design cheaper."
+      ],
+      "explain": "The design goal includes current and foreseeable needs and cost over time. Unreliable service can create substantial costs from lost work.",
+      "sourceId": "q231",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u233",
+      "ch": 12,
+      "q": "Before choosing link capacity, a designer asks where users work and which applications they run. What phase is this?",
+      "answer": "Requirements analysis",
+      "options": [
+        "Requirements analysis",
+        "Physical design, because asking about applications selects exact cable materials",
+        "Maintenance, because requirements can be learned only after deployment",
+        "Logical addressing, because only subnet numbers matter at this stage"
+      ],
+      "explain": "Requirements analysis identifies users, applications, locations and constraints so the design can provide capacity where it is needed.",
+      "sourceId": "q233",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u235",
+      "ch": 12,
+      "q": "A plan specifies subnet layout and an IP-addressing scheme but has not chosen cable types. What kind of design is this?",
+      "answer": "Logical network design",
+      "options": [
+        "Logical network design",
+        "Physical design, because subnet numbers are physical cable properties",
+        "Maintenance planning, because addressing is only a repair activity",
+        "Requirements analysis alone, because no logical layout has been planned"
+      ],
+      "explain": "Logical design describes organization and addressing. The choice of actual media and equipment belongs to physical design.",
+      "sourceId": "q235",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u237",
+      "ch": 12,
+      "q": "A network drawing shows an office area but leaves out its shared printers and special-purpose devices. Why should those be added?",
+      "answer": "They affect the number and types of connections the area needs.",
+      "options": [
+        "They affect the number and types of connections the area needs.",
+        "Only desktops should be counted because other device types use no network capacity.",
+        "Shared devices should be counted only after all network ports are installed.",
+        "Special requirements can be ignored whenever an area already has one connection."
+      ],
+      "explain": "The guide asks for counts of desktops, servers, shared devices and devices with special needs in each area, so their requirements are included in planning.",
+      "sourceId": "q237",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u239",
+      "ch": 12,
+      "q": "A designer chooses copper for some runs, fiber for others, and specific switches and routers. What part of the design is being decided?",
+      "answer": "Physical implementation",
+      "options": [
+        "Physical implementation",
+        "Logical addressing only, because choosing media does not concern physical design",
+        "Requirements analysis only, because hardware selection identifies user categories",
+        "Network maintenance only, even though the network has not been implemented"
+      ],
+      "explain": "Physical design specifies the media, devices and link technologies that implement the logical design.",
+      "sourceId": "q239",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u241",
+      "ch": 12,
+      "q": "A network connects devices across several floors within one building. Which description fits the guide\u2019s scope categories?",
+      "answer": "Building network",
+      "options": [
+        "Building network",
+        "Campus network solely because the building has several floors",
+        "Enterprise WAN solely because two rooms are on different floors",
+        "Building network only if all devices are in one room"
+      ],
+      "explain": "A building network is defined by the single-building scope. Multiple nearby buildings form a campus network.",
+      "sourceId": "q241",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u242",
+      "ch": 12,
+      "q": "One cable run joins rooms on different floors, while another goes from a floor\u2019s network room to a desk. How are they classified?",
+      "answer": "Vertical/backbone first; horizontal second",
+      "options": [
+        "Vertical/backbone first; horizontal second",
+        "Horizontal first; vertical/backbone second",
+        "Both horizontal because both are within one building",
+        "Both vertical because both start or end in a network room"
+      ],
+      "explain": "Backbone/vertical cabling connects floors or telecommunications rooms. Horizontal cabling serves work areas from the room on a floor.",
+      "sourceId": "q242",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u246",
+      "ch": 12,
+      "q": "A data-center diagram shows how many servers and network devices are interconnected. What goal should guide that topology?",
+      "answer": "Fast, reliable communication among large numbers of servers",
+      "options": [
+        "Fast, reliable communication among large numbers of servers",
+        "Minimizing connections even if server communication becomes unreliable",
+        "Showing server locations without considering their communication paths",
+        "Optimizing only individual desktop ports, not communication among servers"
+      ],
+      "explain": "The guide\u2019s data-center topic concerns how equipment is interconnected to support fast and reliable server communication.",
+      "sourceId": "q246",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u249",
+      "ch": 12,
+      "q": "Several nearby buildings are connected using core, distribution and access layers. What network type does this describe?",
+      "answer": "Campus network",
+      "options": [
+        "Campus network",
+        "Building network, even though the scope explicitly includes multiple buildings",
+        "Enterprise WAN specifically defined by distant cities rather than nearby buildings",
+        "Campus network with only OSI layers and no core/distribution/access hierarchy"
+      ],
+      "explain": "The guide defines a campus network as connecting multiple buildings and describes a three-layer hierarchical design.",
+      "sourceId": "q249",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u251",
+      "ch": 12,
+      "q": "Which campus layer should prioritize fast, reliable backbone transport between major parts of the network?",
+      "answer": "Core",
+      "options": [
+        "Core",
+        "Distribution",
+        "Access",
+        "All three tiers have exactly the same primary role"
+      ],
+      "explain": "Core is the campus backbone. Access serves end devices, while Presentation and Session are OSI layers rather than campus design tiers.",
+      "sourceId": "q251",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u259",
+      "ch": 12,
+      "q": "A campus designer needs a layer to organize subnets and apply administrative policies between access networks and the backbone. Which layer fits?",
+      "answer": "Distribution",
+      "options": [
+        "Distribution",
+        "Core, whose primary role is administrative subnet policy",
+        "Access, whose primary role is aggregating distribution layers",
+        "Distribution, whose only role is carrying raw electrical signals"
+      ],
+      "explain": "Distribution aggregates access networks and handles administrative functions and policies. The guide associates subnet organization and security controls with this layer.",
+      "sourceId": "q259",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u260",
+      "ch": 12,
+      "q": "A student plugs a computer into a network port supplied for end users. Which campus layer supplies this service?",
+      "answer": "Access",
+      "options": [
+        "Access",
+        "Core",
+        "Distribution as the backbone above core",
+        "Access only if the device is a router, never an end-user computer"
+      ],
+      "explain": "The access layer provides user/device connectivity. Core supplies fast transport between major network regions rather than individual user ports.",
+      "sourceId": "q260",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u261",
+      "ch": 12,
+      "q": "An organization connects offices in geographically separated cities through provider connectivity. Which description fits?",
+      "answer": "Enterprise network using WAN connectivity",
+      "options": [
+        "Enterprise network using WAN connectivity",
+        "Building network, even though the offices are in different cities",
+        "Campus network defined only by nearby buildings on one site",
+        "Enterprise network that cannot use ISP-provided WAN links"
+      ],
+      "explain": "The guide describes an enterprise network as connecting geographically scattered organizational networks, with ISPs providing WAN connectivity.",
+      "sourceId": "q261",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u263",
+      "ch": 12,
+      "q": "Which activity belongs to ongoing network maintenance after the network is installed?",
+      "answer": "Inspecting, testing, monitoring and updating devices and software",
+      "options": [
+        "Inspecting, testing, monitoring and updating devices and software",
+        "Only purchasing initial equipment, with no inspection after deployment",
+        "Only servicing complete failures, with no testing or monitoring",
+        "Updating software while permanently ignoring all hardware condition"
+      ],
+      "explain": "Maintenance includes regular inspection, testing, servicing, monitoring and updates, helping keep the network reliable over time.",
+      "sourceId": "q263",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u264",
+      "ch": 12,
+      "q": "A management application checks device temperatures and fan speeds regularly and alerts an administrator about a problem. Which protocol from the guide supports this?",
+      "answer": "SNMP",
+      "options": [
+        "SNMP",
+        "STP, because it polls fan speeds and temperatures",
+        "ICMP, because it is the guide\u2019s device-management polling protocol",
+        "SNMP, but only for changing signal amplitude rather than querying device information"
+      ],
+      "explain": "SNMP allows management software to obtain information from managed network devices. Regular polling can reveal abnormal values needing attention.",
+      "sourceId": "q264",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u266",
+      "ch": 12,
+      "q": "In the management topics, which item organizes information that management software needs to monitor devices and identify faults?",
+      "answer": "MIB",
+      "options": [
+        "MIB",
+        "A routing table containing destination prefixes and next hops",
+        "A MAC-learning table containing only switch-port mappings",
+        "An MIB containing only raw user payload, with no management objects"
+      ],
+      "explain": "The Management Information Base contains structured management information. It provides information used for monitoring and fault management, rather than carrying a user\u2019s Ethernet payload.",
+      "sourceId": "q266",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u267",
+      "ch": 12,
+      "q": "Different vendors implement a common set of networking rules so their products can communicate. What is the purpose of those standards?",
+      "answer": "Interoperability",
+      "options": [
+        "Interoperability",
+        "Requiring compatible products to come from one vendor only",
+        "Allowing every vendor to interpret communication rules incompatibly",
+        "Replacing shared specifications with per-device ad hoc rules"
+      ],
+      "explain": "Standards provide agreed rules and guidelines. Following common specifications makes independent implementations more likely to work together.",
+      "sourceId": "q267",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    },
+    {
+      "id": "u268",
+      "ch": 12,
+      "q": "Why does a standards effort define requirements and review technical proposals before agreeing on a specification?",
+      "answer": "To develop an agreed solution that meets shared needs",
+      "options": [
+        "To develop an agreed solution that meets shared needs",
+        "To approve a final specification before determining its requirements",
+        "To let incompatible vendor proposals avoid any shared technical review",
+        "To ensure the specification is chosen without evaluating technical solutions"
+      ],
+      "explain": "Working groups develop requirements and evaluate proposals toward a shared standard. The exact approval process varies by organization.",
+      "sourceId": "q268",
+      "kind": "understanding",
+      "note": "Check your understanding \u00b7 Based on your guide"
+    }
+  ],
+  "vocabDistractors": {
+    "Layering": [
+      "Combining all network tasks into one inseparable function",
+      "Repeating identical tasks at every network level",
+      "Separating networks only by equipment manufacturer"
+    ],
+    "Protocol": [
+      "A physical cable type rather than communication rules",
+      "A unique device label rather than rules for communicating",
+      "A measurement of signal strength rather than communication rules"
+    ],
+    "TCP/IP": [
+      "Transmission Control Process / Internet Protocol",
+      "Transport Connection Protocol / Internet Protocol",
+      "Transmission Control Protocol / Interface Protocol"
+    ],
+    "Application layer": [
+      "Carries raw electrical or optical signals",
+      "Routes IP packets between networks",
+      "Delivers frames using local MAC addresses"
+    ],
+    "Transport layer": [
+      "Routes packets between IP networks",
+      "Delivers frames to a device on the local link",
+      "Formats and compresses data in the OSI model"
+    ],
+    "Network layer": [
+      "Transfers local frames using only MAC addresses",
+      "Provides network services directly to user applications",
+      "Transmits raw physical signals without routing"
+    ],
+    "Data Link layer": [
+      "Selects IP routes between remote networks",
+      "Provides end-to-end delivery between application processes",
+      "Only converts bits into electrical/light signals"
+    ],
+    "Physical layer": [
+      "Creates local Ethernet frames and interprets MAC addresses",
+      "Chooses packet routes using IP prefixes",
+      "Starts and ends application sessions"
+    ],
+    "OSI": [
+      "Open Standards Interconnection",
+      "Open Systems Interface",
+      "Operational Systems Interconnection"
+    ],
+    "Presentation layer": [
+      "Starts and ends communication sessions",
+      "Routes packets using IP addresses",
+      "Controls access to the local physical medium"
+    ],
+    "Session layer": [
+      "Compresses and reformats application data",
+      "Provides IP addressing and routing",
+      "Converts data into electrical signals"
+    ],
+    "Encapsulation": [
+      "Removing successive protocol headers as data moves upward",
+      "Assigning a new manufacturer identifier to a NIC",
+      "Converting every binary digit into a decimal digit for transmission"
+    ],
+    "Decapsulation": [
+      "Adding protocol headers as data moves downward",
+      "Changing the medium from copper to fiber",
+      "Replacing every host address with a network prefix"
+    ],
+    "IEEE": [
+      "Institute of Electrical and Ethernet Engineers",
+      "International Electronics Engineering Establishment",
+      "Institute of Electronic and Equipment Engineers"
+    ],
+    "IETF": [
+      "Internet Engineering Technical Forum",
+      "International Ethernet Task Force",
+      "Internet Equipment Testing Foundation"
+    ],
+    "LAN": [
+      "Linked Access Network",
+      "Local Address Network",
+      "Limited Application Network"
+    ],
+    "WLAN": [
+      "Wired Local Area Network",
+      "Wireless Link Access Network",
+      "Wide Local Address Network"
+    ],
+    "TCP": [
+      "Transport Connection Protocol",
+      "Transmission Communication Process",
+      "Terminal Control Protocol"
+    ],
+    "IP": [
+      "Interface Protocol",
+      "Internet Process",
+      "Interconnection Procedure"
+    ],
+    "DNS": [
+      "Domain Naming Service",
+      "Digital Network System",
+      "Domain Numbering Standard"
+    ],
+    "HTTP": [
+      "Hypertext Transmission Process",
+      "Hyperlink Transport Protocol",
+      "Host Text Transfer Protocol"
+    ],
+    "Interoperability": [
+      "The ability to work only with products from one vendor",
+      "The ability to assign every device the same address",
+      "The requirement that every layer perform an identical function"
+    ],
+    "Physical medium": [
+      "The rules determining how a protocol behaves",
+      "The logical address assigned to an interface",
+      "The sequence of fields within a network packet"
+    ],
+    "Copper cable": [
+      "Carries light pulses through a glass core",
+      "Carries signals without any guided conductor",
+      "Stores IP routing information in its insulation"
+    ],
+    "Fiber-optic cable": [
+      "Carries data as current in twisted metal pairs",
+      "Carries radio waves without a physical guide",
+      "Requires electrical pulses to travel directly through its glass core"
+    ],
+    "Wireless": [
+      "Transmission through a glass core only",
+      "Transmission through twisted copper conductors only",
+      "Communication that does not use any physical signal"
+    ],
+    "UTP": [
+      "Unshielded Transmission Pair",
+      "Universal Twisted Pair",
+      "Unshielded Twisted Protocol"
+    ],
+    "EMI": [
+      "Electrical Media Integration",
+      "Electromagnetic Interface",
+      "Ethernet Modulation Interference"
+    ],
+    "Crosstalk": [
+      "Loss of signal strength solely from distance",
+      "A collision between two IP routing tables",
+      "The intentional sharing of time slots by users"
+    ],
+    "Bandwidth": [
+      "The elapsed delay for a packet\u2019s round trip",
+      "The number of bits in a MAC address",
+      "The intensity of one signal at a single instant"
+    ],
+    "Bit rate": [
+      "The number of wave cycles per second, regardless of encoded data",
+      "The number of seconds required per transmitted bit",
+      "The number of bytes in one Ethernet header"
+    ],
+    "Gbps": [
+      "Gigabytes per second",
+      "Gigabits per sample",
+      "Gigabytes per signal"
+    ],
+    "Noise": [
+      "Only the intended information encoded on a signal",
+      "The useful capacity of a link, measured in bits per second",
+      "An assigned frequency band with no unwanted variation"
+    ],
+    "Attenuation": [
+      "An increase in signal strength with distance",
+      "Interference specifically from a neighboring conductor",
+      "The grouping of multiple users into time slots"
+    ],
+    "Cat 5e": [
+      "Copper category commonly rated for 10 Gbps at 100 m",
+      "Copper category intended for 40 Gbps at 100 m",
+      "A fiber category with an approximately 9 \u03bcm core"
+    ],
+    "Cat 6": [
+      "Copper category guaranteeing 10 Gbps over every 100 m installation",
+      "Copper category limited to 10 Mbps at any distance",
+      "Fiber category used only for long-distance single-mode links"
+    ],
+    "Cat 6a": [
+      "Copper category supporting only 1 Gbps at 100 m",
+      "Copper category supporting 40 Gbps at 100 m",
+      "An unshielded 25/40 Gbps category intended only for 30 m channels"
+    ],
+    "Cat 8": [
+      "Unshielded copper for 25/40 Gbps over 100 m",
+      "Shielded copper for 1 Gbps only over 30 m",
+      "Single-mode fiber supporting 40 Gbps over a fixed 30 m maximum"
+    ],
+    "Total internal reflection": [
+      "Light repeatedly escapes the fiber core to carry data through surrounding air",
+      "Light is absorbed completely at each boundary",
+      "Electrical current bounces inside the glass instead of light"
+    ],
+    "Core": [
+      "The outer fiber coating used only for physical protection",
+      "The lower-index material surrounding the light-carrying center",
+      "The copper conductor within an optical fiber"
+    ],
+    "Cladding": [
+      "The center of the fiber where guided light primarily travels",
+      "A metal shield that carries the optical data as current",
+      "A material with no role in keeping light within the core"
+    ],
+    "Single-mode fiber": [
+      "A large 50/62.5 \u03bcm core carrying many light paths",
+      "A 9 \u03bcm copper conductor carrying electrical signals",
+      "A fiber type whose reach is always exactly one meter"
+    ],
+    "Multimode fiber": [
+      "A roughly 9 \u03bcm core intended for only one guided mode",
+      "A copper cable containing multiple twisted pairs",
+      "Fiber that must always reach farther than single-mode at the same rate"
+    ],
+    "Amplitude": [
+      "The number of wave cycles completed each second",
+      "The position of a wave within its cycle",
+      "The time assigned to one user in TDM"
+    ],
+    "Frequency": [
+      "The height or strength of a wave",
+      "The position of a wave relative to another wave",
+      "The number of host bits in an address"
+    ],
+    "Phase": [
+      "The magnitude of a wave\u2019s height",
+      "The rate at which complete wave cycles occur",
+      "The amount of packet payload in a frame"
+    ],
+    "Modulation": [
+      "Assigning packet routes without changing a carrier",
+      "Adding host bits to an IP prefix",
+      "Removing noise by eliminating all physical signals"
+    ],
+    "AM": [
+      "Amplitude Multiplexing",
+      "Analog Modulation",
+      "Amplitude Management"
+    ],
+    "FM": [
+      "Frequency Multiplexing",
+      "Frame Modulation",
+      "Frequency Management"
+    ],
+    "PM": [
+      "Pulse Multiplexing",
+      "Phase Multiplexing",
+      "Protocol Modulation"
+    ],
+    "QAM": [
+      "Quadrature Amplitude Multiplexing",
+      "Quantum Amplitude Modulation",
+      "Quadrature Analog Multiplexing"
+    ],
+    "Multiplexing": [
+      "Giving every user a permanently separate physical medium",
+      "Sending one user\u2019s signal while forbidding all other users permanently",
+      "Converting a MAC address into an IP address"
+    ],
+    "FDM": [
+      "Frame Division Multiplexing",
+      "Frequency Data Modulation",
+      "Frequency Division Modulation"
+    ],
+    "TDM": [
+      "Transmission Division Multiplexing",
+      "Time Data Modulation",
+      "Time Division Modulation"
+    ],
+    "Ethernet": [
+      "A network-layer protocol that routes IP packets across the Internet",
+      "A seven-layer reference model rather than a LAN technology family",
+      "A management protocol used only to poll device temperatures"
+    ],
+    "Frame": [
+      "A network-layer unit identified only by an IP header",
+      "A single raw bit before any data-link organization",
+      "A list of destination prefixes in a router"
+    ],
+    "Packet": [
+      "A physical signal cycle rather than a network-layer unit",
+      "A data-link-only unit consisting of an Ethernet header and FCS",
+      "A manufacturer identifier stored in the first half of a MAC address"
+    ],
+    "Payload": [
+      "Only the protocol\u2019s header and trailer overhead",
+      "Only the field used for error detection",
+      "The synchronization pattern preceding the frame"
+    ],
+    "NIC": [
+      "Network Interconnection Cable",
+      "Network Internet Controller",
+      "Network Interface Connection"
+    ],
+    "MAC": [
+      "Medium Address Code",
+      "Media Access Connection",
+      "Multiple Address Control"
+    ],
+    "OUI": [
+      "Organizational User Identifier",
+      "Optical Unique Interface",
+      "Organization Universal Index"
+    ],
+    "Broadcast": [
+      "A transmission addressed to exactly one known destination",
+      "A transmission sent automatically to every device across the Internet",
+      "A transmission that can reach only the sender itself"
+    ],
+    "Unicast": [
+      "A transmission addressed to every device in a local broadcast domain",
+      "A transmission repeated to all networks without a destination",
+      "A transmission directed to a group of destinations rather than one"
+    ],
+    "CSMA/CD": [
+      "Carrier Sense Multiple Access with Collision Avoidance",
+      "Carrier Signal Multiple Addressing with Collision Detection",
+      "Carrier Sense Media Access with Connection Detection"
+    ],
+    "Collision": [
+      "One successful transmission on an idle link",
+      "Two hosts having different IP addresses on one network",
+      "A router selecting one valid next hop from several routes"
+    ],
+    "Backoff": [
+      "Immediate synchronized retransmission by all colliding senders",
+      "A permanent ban on transmitting after one collision",
+      "The time needed to convert a MAC address into binary"
+    ],
+    "Full duplex": [
+      "Sending and receiving in turns but never simultaneously",
+      "Sending only, with no receiving capability",
+      "Shared-medium operation that requires collisions to succeed"
+    ],
+    "Half duplex": [
+      "Simultaneous transmission in both directions",
+      "Communication in one direction only, forever",
+      "A link with exactly half of an IP address"
+    ],
+    "Preamble": [
+      "The 4-byte field at the end that detects errors",
+      "The 6-byte field identifying the frame\u2019s receiver",
+      "The 2-byte field identifying the carried protocol"
+    ],
+    "SFD": [
+      "Start Field Detector",
+      "Signal Frame Divider",
+      "Source Frame Delimiter"
+    ],
+    "Destination MAC": [
+      "The address of the device that sent the frame",
+      "The IP prefix used to route across distant networks",
+      "The error-detection code at the end of the frame"
+    ],
+    "Source MAC": [
+      "The address of the intended frame receiver",
+      "The public IP allocation assigned to an organization",
+      "The manufacturer identifier alone, excluding the rest of the MAC"
+    ],
+    "EtherType": [
+      "A field identifying only the sender\u2019s manufacturer",
+      "The checksum used to detect frame corruption",
+      "The time slot assigned to an Ethernet transmitter"
+    ],
+    "Padding": [
+      "Data added solely to change the destination MAC address",
+      "The source address duplicated to increase route accuracy",
+      "The error code replacing the FCS when a frame is long"
+    ],
+    "FCS": [
+      "Frame Control Sequence",
+      "Frequency Check Signal",
+      "Frame Check Standard"
+    ],
+    "CRC": [
+      "Cyclic Redundancy Code",
+      "Continuous Reliability Check",
+      "Carrier Redundancy Control"
+    ],
+    "MTU": [
+      "Minimum Transmission Unit",
+      "Maximum Transport Utility",
+      "Media Transfer Unit"
+    ],
+    "Bit": [
+      "A group of eight binary digits",
+      "A base-16 digit containing four bits",
+      "A group of sixteen hexadecimal digits"
+    ],
+    "Byte": [
+      "A group of four bits",
+      "A group of sixteen bits",
+      "One binary digit only"
+    ],
+    "Octet": [
+      "A group of four bits",
+      "A group of sixteen bits",
+      "A decimal digit whose bit count changes with its value"
+    ],
+    "Nibble": [
+      "Eight bits, corresponding to two hex digits",
+      "One bit, corresponding to one hex digit",
+      "Sixteen bits, corresponding to one hex digit"
+    ],
+    "Binary": [
+      "Base-10 notation using the digits 0 through 9",
+      "Base-16 notation using digits and A\u2013F",
+      "Base-2 notation allowing digits 0, 1 and 2"
+    ],
+    "Decimal": [
+      "Base-2 notation using only 0 and 1",
+      "Base-16 notation using 0\u20139 and A\u2013F",
+      "Base-10 notation in which place values are powers of 2"
+    ],
+    "Hexadecimal": [
+      "Base-16 notation in which A=1 and F=6",
+      "Base-10 notation with extra letters that do not represent values",
+      "Base-16 notation where each digit represents eight bits"
+    ],
+    "Hub": [
+      "Learns destination MAC-to-port mappings for selective forwarding",
+      "Chooses next hops using IP destination prefixes",
+      "Blocks redundant switch paths using a spanning-tree calculation"
+    ],
+    "Switch": [
+      "Repeats every incoming signal without learning any MAC-to-port information",
+      "Routes packets only by public IP prefixes as its defining layer-2 role",
+      "Converts light into radio without inspecting any frames"
+    ],
+    "STP": [
+      "Spanning Transport Protocol",
+      "Switching Tree Process",
+      "Spanning Transfer Protocol"
+    ],
+    "Topology": [
+      "The numeric rate of signal cycles per second",
+      "The manufacturer allocation within a MAC address",
+      "The list of expansions for protocol abbreviations"
+    ],
+    "Star topology": [
+      "All devices share one continuous main cable",
+      "Devices connect in a closed circle with no central point",
+      "Every device has a direct connection to every other device"
+    ],
+    "Bus topology": [
+      "Every device has a separate link to one central switch",
+      "Devices form a closed circular chain",
+      "Every device connects directly to every other device"
+    ],
+    "Ring topology": [
+      "Devices share one linear backbone cable",
+      "All devices independently connect to one central device",
+      "Devices have no path back toward the starting point"
+    ],
+    "Mesh topology": [
+      "Devices must connect only to one central device",
+      "Devices must share only one common cable",
+      "Devices can have only one neighbor and no alternative links"
+    ],
+    "VLAN": [
+      "Virtual Link Address Number",
+      "Variable Local Access Network",
+      "Virtual Layer Application Node"
+    ],
+    "Router": [
+      "Learns only MAC-to-port mappings to forward local frames",
+      "Repeats raw signals to every other port without routing",
+      "Defines the physical wire category used in a building"
+    ],
+    "Routing": [
+      "Repeating every Ethernet frame to all local ports",
+      "Selecting a manufacturer OUI for a NIC",
+      "Choosing a signal\u2019s amplitude without considering a destination"
+    ],
+    "Routing table": [
+      "A table containing only NIC manufacturer OUIs",
+      "A list only of local MAC-to-switch-port mappings",
+      "A list of cable colors with no destination or next-hop information"
+    ],
+    "Next hop": [
+      "The original sender of every packet, regardless of its path",
+      "The final destination only, never an intermediate router",
+      "The number of bits in the host portion of an IP address"
+    ],
+    "IPv4": [
+      "Internet Protocol variant 4",
+      "Internet Procedure version 4",
+      "Interface Protocol version 4"
+    ],
+    "IPv6": [
+      "Internet Protocol variant 6",
+      "Internet Procedure version 6",
+      "Interface Protocol version 6"
+    ],
+    "Network portion": [
+      "The remaining bits identifying a host within the subnet",
+      "The last 24 bits identifying an Ethernet NIC",
+      "The complete MAC address of a router"
+    ],
+    "Host portion": [
+      "The prefix bits shared by the subnet",
+      "The OUI identifying the NIC manufacturer",
+      "The slash number that directly counts network bits"
+    ],
+    "CIDR": [
+      "Classful Inter-Domain Routing",
+      "Classless Internet Data Routing",
+      "Classless Inter-Device Routing"
+    ],
+    "Prefix length": [
+      "The number of host bits remaining after the network split",
+      "The number of bytes in an IPv4 address",
+      "The number of usable devices always available in the subnet"
+    ],
+    "Subnet mask": [
+      "A pattern with 0s for network bits and 1s for host bits",
+      "The MAC address of the subnet\u2019s default router",
+      "An arbitrary 48-bit identifier with no relation to the prefix length"
+    ],
+    "Network address": [
+      "An IPv4 address with all host bits set to 1",
+      "An address formed by making all network bits 0 and all host bits 1",
+      "The final usable host address before the broadcast address"
+    ],
+    "Broadcast address": [
+      "The IPv4 subnet address with all host bits set to 0",
+      "The first usable host address with host value 1",
+      "The physical MAC of the router on the subnet"
+    ],
+    "Classful addressing": [
+      "Allocating arbitrarily sized blocks using flexible /n prefixes",
+      "Assigning MAC addresses using the last half of an OUI",
+      "Using a separate prefix length for every bit in a single address"
+    ],
+    "Hextet": [
+      "An 8-bit IPv6 group written as two hexadecimal digits",
+      "A 4-bit IPv6 group written as four hexadecimal digits",
+      "A complete 128-bit IPv6 address written as one hex digit"
+    ],
+    "Zero compression": [
+      "Replacing any arbitrary nonzero IPv6 groups with ::",
+      "Using :: repeatedly for separate zero runs without ambiguity",
+      "Removing internal zero digits from nonzero groups even when that changes the value"
+    ],
+    "ICMP": [
+      "Internet Connection Management Protocol",
+      "Internet Control Mapping Process",
+      "Internet Communication Message Procedure"
+    ],
+    "Ping": [
+      "A utility that lists each successive router as its main output",
+      "A utility that assigns a fresh IP address to the destination",
+      "A utility that measures fiber core diameter"
+    ],
+    "Traceroute": [
+      "A utility whose only purpose is to resolve a name to an address",
+      "A utility that assigns all hosts a new MAC address",
+      "A utility that tests only whether the final host replies without discovering hops"
+    ],
+    "Pathping": [
+      "A utility that only changes routing-table entries",
+      "A utility that measures cable bandwidth without tracing any route",
+      "A utility that detects Ethernet manufacturer allocations from the OUI"
+    ],
+    "TTL": [
+      "Total Transfer Length",
+      "Time To Link",
+      "Transport Timing Limit"
+    ],
+    "Latency": [
+      "The maximum possible bit rate of a link",
+      "The number of lost packets, independent of elapsed time",
+      "The number of bits used by a subnet prefix"
+    ],
+    "Packet loss": [
+      "The time a successfully delivered packet takes to return",
+      "The size of an Ethernet header",
+      "An increase in the number of bits available for addressing"
+    ],
+    "RIR": [
+      "Regional Internet Router",
+      "Registered Internet Region",
+      "Regional Interface Registry"
+    ],
+    "ARIN": [
+      "American Registry for Interface Names",
+      "American Routing Institute for Networks",
+      "Address Registry for Internet Nodes"
+    ],
+    "RIPE NCC": [
+      "R\u00e9seaux IP Europ\u00e9ens Network Control Council",
+      "Regional IP Exchange Network Coordination Centre",
+      "R\u00e9seaux Internet Protocol Network Connection Committee"
+    ],
+    "APNIC": [
+      "Asia Pacific Network Internet Council",
+      "Asia Protocol Number Identification Centre",
+      "Asia Pacific Networking Interface Committee"
+    ],
+    "LACNIC": [
+      "Latin America and Caribbean Network Interface Council",
+      "Latin American Communication Network Internet Committee",
+      "Local Address Coordination Network Information Centre"
+    ],
+    "AFRINIC": [
+      "African Routing Internet Council",
+      "African Network Interface Committee",
+      "Africa Regional Internet Naming Centre"
+    ],
+    "Requirements analysis": [
+      "Choosing switch models before learning what users need",
+      "Servicing installed hardware without gathering user needs",
+      "Assigning only equipment serial numbers after deployment"
+    ],
+    "Logical design": [
+      "Choosing the exact copper/fiber runs and hardware models",
+      "Recording only the physical room dimensions and rack locations",
+      "Performing only hardware repairs on a running network"
+    ],
+    "Physical design": [
+      "Specifying only subnet organization and address naming",
+      "Identifying users and applications without implementation choices",
+      "Writing only administrative naming policies with no equipment or media"
+    ],
+    "Building network": [
+      "A network defined by multiple distant cities",
+      "A network defined by several separate nearby buildings",
+      "A network that can connect only one room, never different floors"
+    ],
+    "Structured cabling": [
+      "An unplanned set of point-to-point wires with no organized termination points",
+      "The logical assignment of subnets without physical cable organization",
+      "A rule that every device must use a different incompatible cable type"
+    ],
+    "Horizontal cabling": [
+      "Backbone links joining telecommunications rooms on different floors",
+      "WAN links joining distant cities",
+      "Only the cable inside a fiber\u2019s optical core"
+    ],
+    "Vertical cabling": [
+      "Runs from a floor\u2019s network room to individual desks on that floor",
+      "Only short patch leads joining a user\u2019s keyboard and computer",
+      "The logical network/host split in an IP address"
+    ],
+    "Patch panel": [
+      "A router that chooses paths between IP networks",
+      "A fiber amplifier that generates every light signal",
+      "An application that assigns MAC addresses to remote servers"
+    ],
+    "Telecommunications room": [
+      "A user\u2019s desktop work area rather than a cable/network equipment space",
+      "The logical host portion of an IP address",
+      "A regional public-address registry serving many organizations"
+    ],
+    "Data center": [
+      "A single logical IP address assigned to a workstation",
+      "A list of network protocols without any hosting facility",
+      "A room used only for public-address allocation, never servers"
+    ],
+    "Data center topology": [
+      "Only a naming rule for server hostnames",
+      "Only a list of software passwords on servers",
+      "Only a diagram of distant public-address registry regions"
+    ],
+    "Spine-leaf": [
+      "Each leaf connects only to one other leaf in a closed ring",
+      "Every server connects to every other server directly with no switches",
+      "Each spine connects only to one leaf with no shared spine connectivity"
+    ],
+    "Campus network": [
+      "An organization\u2019s sites distributed across distant cities only",
+      "A single host connected to one cable with no buildings involved",
+      "A network restricted to one individual room by definition"
+    ],
+    "Core layer": [
+      "The layer whose primary role is providing individual user ports",
+      "The OSI layer for compression and data representation",
+      "The tier primarily aggregating user access networks and applying local policy"
+    ],
+    "Distribution layer": [
+      "The tier connecting each end-user device directly as its only role",
+      "The physical signal layer converting bits into voltage",
+      "The OSI layer that manages application sessions"
+    ],
+    "Access layer": [
+      "The high-speed backbone tier linking major distribution areas",
+      "The tier whose primary job is aggregating several access networks",
+      "The OSI layer that formats and encrypts data"
+    ],
+    "Backbone": [
+      "The cable from a network room to a single user desk only",
+      "The final host bits in an IP address",
+      "The manufacturer half of a MAC address"
+    ],
+    "Enterprise network": [
+      "Only a single Ethernet collision domain, never multiple locations",
+      "Only one building\u2019s horizontal cabling by definition",
+      "A regional registry\u2019s allocation rules, not an organization\u2019s network"
+    ],
+    "WAN": [
+      "Wireless Access Node",
+      "Wide Address Network",
+      "World Application Network"
+    ],
+    "ISP": [
+      "Internet Service Protocol",
+      "Internet Systems Provider",
+      "Interface Service Provider"
+    ],
+    "Firewall": [
+      "A system that forwards every packet without any traffic policy",
+      "A physical signal generator that replaces routing",
+      "A protocol that assigns manufacturers their OUI"
+    ],
+    "Authentication": [
+      "Deciding whether traffic is electrically detectable",
+      "Assigning each packet a new cable category",
+      "Measuring network speed without verifying identity"
+    ],
+    "Network maintenance": [
+      "Only initial requirements analysis before any network exists",
+      "Only the one-time installation, with no ongoing monitoring",
+      "Waiting for complete failure instead of testing or updating"
+    ],
+    "Downtime": [
+      "A period when every service is available and functioning normally",
+      "The maximum link rate measured in bits per second",
+      "The number of host addresses within a prefix"
+    ],
+    "SNMP": [
+      "Simple Network Monitoring Process",
+      "Standard Network Management Protocol",
+      "Simple Node Management Procedure"
+    ],
+    "MIB": [
+      "Management Interface Base",
+      "Managed Information Buffer",
+      "Monitoring Internet Base"
+    ],
+    "OID": [
+      "Object Interface Definition",
+      "Operational Internet Descriptor",
+      "Object Index Directory"
+    ],
+    "Polling": [
+      "A device sending an unsolicited notification without a manager\u2019s request",
+      "A manager permanently disabling all device measurements",
+      "A switch learning MAC addresses solely from Ethernet frames"
+    ],
+    "SNMP agent": [
+      "The central manager that sends every request to other devices",
+      "The cable carrying raw bits between two hosts",
+      "An IP packet\u2019s network-prefix field"
+    ],
+    "SNMP trap": [
+      "A scheduled request from the manager asking for a reading",
+      "A response that can occur only after a polling request",
+      "A protocol that blocks all redundant Ethernet links"
+    ],
+    "Standard": [
+      "A vendor-specific rule intended to prevent interoperability",
+      "A transient temperature value from one device",
+      "A random configuration selected without review or agreement"
+    ],
+    "Working group": [
+      "A set of hosts that happen to share the same last IP octet",
+      "A fixed route through a series of routers",
+      "A group dedicated only to measuring cable lengths after installation"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const context=vm.createContext({localStorage:{getItem:()=>null},console});
+vm.runInContext(fs.readFileSync('dist/vocab.js','utf8'),context);
+let app=fs.readFileSync('dist/app.js','utf8');vm.runInContext(app.split("document.addEventListener('click'")[0],context);
+context.data=JSON.parse(fs.readFileSync('dist/content.json'));
+vm.runInContext('DATA=data',context);
+let result=vm.runInContext(`(()=>{let banks=[...all(),...DATA.understanding,...labItems(),...conversionCards()];for(let x of banks){let mc=makeMC(x);if(mc.options.length!==4||new Set(mc.options).size!==4||mc.options.filter(a=>a===mc.answer).length!==1)throw Error('Bad options: '+x.id);if(!explanationHTML(mc,mc.answer).includes('Correct'))throw Error('Missing explanation '+x.id)}let counts=[];for(let c of DATA.chapters){let pool=learnPool().filter(x=>x.ch===c.id);for(let i=0;i<100;i++){let sample=mixedReview(pool);if(sample.length!==10||new Set(sample.map(x=>x.id)).size!==10||sample.some(x=>x.ch!==c.id))throw Error('Bad chapter mixture');for(let kind of new Set(pool.map(x=>x.kind)))if(!sample.some(x=>x.kind===kind))throw Error('Missing '+kind);if(sample.some(x=>x.kind==='understanding'))throw Error('Separate bank leaked')}counts.push({chapter:c.id,count:pool.length,types:[...new Set(pool.map(x=>x.kind))]})}if(DATA.understanding.length!==54)throw Error('Coverage');for(let x of DATA.understanding){let source=DATA.questions.find(q=>q.id===x.sourceId);if(!source||source.ch!==x.ch)throw Error('Invalid source');if(!explanationHTML(x,x.answer).includes('Study-guide topic'))throw Error('Source not displayed')}return {banksTested:banks.length,counts}})()`,context);
+assert.equal(context.data.questions.length,54);assert.equal(new Set(context.data.questions.map(q=>q.id)).size,54);assert.equal(new Set(context.data.understanding.map(q=>q.sourceId)).size,54);
+assert(!app.includes('id="response"')&&!app.includes('<textarea'));
+console.log(JSON.stringify(result,null,2));console.log('PASS: 54 original prompts present, authored choices unique, sources valid, 500 chapter mixtures correctly scoped, no typed answers.');
