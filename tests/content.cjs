@@ -30,3 +30,17 @@ check(readableText('One idea. Another idea.').match(/<p>/g).length===2,'Separate
 check(readableText('Value 1.5 Gbps. Next idea.').includes('1.5'),'Do not split decimal values');
 `,Object.assign(context,{window:{scrollTo(){}}}));
 console.log('PASS: delayed retries, repeated misses, completion gate, contextual explanations and layer matching.');
+vm.runInContext(`
+modelBuild={slots:{osi:[...modelLayers('osi')],tcpip:[...modelLayers('tcpip')]}};
+check(modelIsCorrect('osi')&&modelIsCorrect('tcpip'),'Both correct stacks accepted');
+modelBuild.slots.tcpip[1]='Presentation';
+check(!modelIsCorrect('tcpip'),'Reject separate Presentation layer in course TCP/IP model');
+modelBuild.slots.osi[0]=null;
+check(!modelIsCorrect('osi'),'Reject incomplete model');
+const physical=makeMC(VOCAB.find(x=>x.term==='Physical layer'));
+check(explanationHTML(physical,physical.answer).includes('copper carries electrical signals'),'Physical answer has a concrete explanation');
+check(!explanationHTML(physical,physical.answer).includes('Match a layer to the scope'),'No generic layer paragraph in Physical feedback');
+`,context);
+assert(!app.includes("$('#export')")&&!app.includes("$('#import')"));
+assert(!/id="(?:export|import|file)"/.test(fs.readFileSync('dist/index.html','utf8')));
+console.log('PASS: model comparison grading, physical explanation, and removal of import/export.');

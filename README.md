@@ -25,7 +25,7 @@ Use an HTTP server rather than opening `index.html` directly: the app loads its 
 - **Flashcards, Terms & definitions, Abbreviations, Put it in order, Numbers lab, Practice exam, Full study guide:** separate dedicated sections remain available.
 - Multiple-choice alternatives are authored for each prompt/term. They are not answers sampled from unrelated questions.
 - Missed practice items return after up to three intervening items, with shuffled choices or sorting order. Practice finishes only after every selected item has been answered correctly. Exams retain first-answer scoring.
-- Correct and incorrect answers receive spaced explanations; broader vocabulary comparisons are expandable. Layer-job matching is available in Put it in order. No exercise requires a typed answer.
+- Correct and incorrect answers receive spaced explanations; broader vocabulary comparisons are expandable. Layer-job matching and a side-by-side OSI/TCP/IP model builder are available in Put it in order. No exercise requires a typed answer.
 
 The full guide retains all 54 original prompts. Clarifications correct inconsistencies in the provided notes. The dictionary has 154 terms, including supplemental vocabulary; Learn uses an explicit list of guide-relevant terms. The new understanding bank is excluded from the original-question and exam banks.
 
@@ -68,4 +68,4 @@ This creates `artifacts/cis320-recall-lab.tar.gz` and requires the standard `tar
 
 ## Progress
 
-Progress, XP, and review dates are stored in the current browser under localStorage key `cis320-v1`. Export/import buttons provide a JSON backup. There is no account synchronization or server-side progress database. Changing the site origin uses a different browser storage area; export a backup before moving to a new domain. Retained status estimates practice performance and does not guarantee exam results.
+Progress, XP, and review dates are stored in the current browser under localStorage key `cis320-v1`. There is no account synchronization or server-side progress database. Changing the site origin uses a different browser storage area. Retained status estimates practice performance and does not guarantee exam results.
