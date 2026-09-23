@@ -8,3 +8,25 @@ let result=vm.runInContext(`(()=>{let banks=[...all(),...DATA.understanding,...l
 assert.equal(context.data.questions.length,54);assert.equal(new Set(context.data.questions.map(q=>q.id)).size,54);assert.equal(new Set(context.data.understanding.map(q=>q.sourceId)).size,54);
 assert(!app.includes('id="response"')&&!app.includes('<textarea'));
 console.log(JSON.stringify(result,null,2));console.log('PASS: 54 original prompts present, authored choices unique, sources valid, 500 chapter mixtures correctly scoped, no typed answers.');
+vm.runInContext(`
+record=()=>{};renderSession=()=>{};
+function check(value,message){if(!value)throw Error(message)}
+const cards=[1,2,3,4].map(id=>({id:'test-'+id,answer:'yes',options:['yes','no']}));
+session={mode:'mixed',items:cards,index:0,total:4,cleared:new Set(),attempts:0,right:0,missed:[]};
+advance(false);
+check(session.items.length===5&&session.items[4].id==='test-1','Missed card must return after intervening cards');
+advance(true);advance(true);advance(true);
+check(session.cleared.size===3&&session.index<session.items.length,'Cannot finish with unresolved card');
+advance(false);
+check(session.index<session.items.length,'Repeated miss must return again');
+advance(true);
+check(session.cleared.size===4&&session.index===session.items.length,'Finish only after all answered correctly');
+check(session.attempts===6&&session.missed.length===1,'Attempts and unique misses');
+const network=makeMC(VOCAB.find(x=>x.term==='Network layer'));
+const feedback=explanationHTML(network,network.answer);
+check(feedback.includes('destination IP address')&&!feedback.includes('Match a layer to the scope'),'Network explanation must explain the specific answer');
+check(layerJobCards().length===7,'All OSI layer jobs covered');
+check(readableText('One idea. Another idea.').match(/<p>/g).length===2,'Separate ideas visually');
+check(readableText('Value 1.5 Gbps. Next idea.').includes('1.5'),'Do not split decimal values');
+`,Object.assign(context,{window:{scrollTo(){}}}));
+console.log('PASS: delayed retries, repeated misses, completion gate, contextual explanations and layer matching.');

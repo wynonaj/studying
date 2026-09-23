@@ -59,7 +59,7 @@
       "a": "Application: Provides network services to applications/users\nTransport: End-to-end communication between applications\nNetwork/IP: IP addressing and routing\nData Link: Transfers frames on the local network; uses MAC addresses\nPhysical: Sends bits as electrical/light/radio signals\nIP address: Network layer\nMAC address: Data Link layer",
       "note": "Study guide",
       "practiceQ": "What are the primary functions of each layer in the TCP/ IP stack?",
-      "explain": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+      "explain": "Each TCP/IP layer has a different responsibility.\nApplication: provides network services to applications.\nTransport: connects application processes end to end.\nNetwork: uses IP addresses to route packets between networks.\nData Link: transfers frames over a local link using MAC addresses.\nPhysical: transmits bits as signals.",
       "quizAnswer": "Application: services; Transport: end-to-end processes; Network: IP routing; Data Link: local frames/MAC; Physical: signals.",
       "distractors": [
         "Application: services; Transport: IP routing; Network: end-to-end processes; Data Link: local frames/MAC; Physical: signals.",
@@ -842,7 +842,7 @@
     "Decapsulation": "Read the stack from the user toward the wire: the application creates data, transport connects processes, IP routes packets, the data-link layer delivers frames locally, and the physical layer carries the bits.",
     "Application layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
     "Transport layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
-    "Network layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
+    "Network layer": "Network: IP addresses and routing between networks.\nData Link: MAC addresses and frames on the local link.\nPhysical: signals that carry the bits.",
     "Data Link layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
     "Physical layer": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",
     "TCP": "Match a layer to the scope of its job: applications provide services, transport joins processes end to end, IP crosses networks, data link reaches the next device, and physical sends signals. IP addresses belong to Network; MAC addresses belong to Data Link.",

@@ -20,11 +20,12 @@ Use an HTTP server rather than opening `index.html` directly: the app loads its 
 
 ## Study modes
 
-- **Learn:** ten-item chapter sessions mixing original guide questions, relevant vocabulary and abbreviations, ordering exercises, and highlighted number drills where applicable.
+- **Learn:** ten-item quick reviews and full-chapter sessions mixing original guide questions, relevant vocabulary and abbreviations, ordering exercises, and highlighted number drills where applicable.
 - **Check understanding:** 54 additional applied questions in their own bank, each mapped to an original guide prompt through `sourceId`. These are guide-based practice, not actual or predicted exam questions.
 - **Flashcards, Terms & definitions, Abbreviations, Put it in order, Numbers lab, Practice exam, Full study guide:** separate dedicated sections remain available.
 - Multiple-choice alternatives are authored for each prompt/term. They are not answers sampled from unrelated questions.
-- Correct and incorrect answers receive explanations. No exercise requires a typed answer.
+- Missed practice items return after up to three intervening items, with shuffled choices or sorting order. Practice finishes only after every selected item has been answered correctly. Exams retain first-answer scoring.
+- Correct and incorrect answers receive spaced explanations; broader vocabulary comparisons are expandable. Layer-job matching is available in Put it in order. No exercise requires a typed answer.
 
 The full guide retains all 54 original prompts. Clarifications correct inconsistencies in the provided notes. The dictionary has 154 terms, including supplemental vocabulary; Learn uses an explicit list of guide-relevant terms. The new understanding bank is excluded from the original-question and exam banks.
 
