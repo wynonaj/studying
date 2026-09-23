@@ -66,3 +66,13 @@ check(clozeCards().some(x=>x.tokens.join('|')==='IEEE|IETF'),'IEEE/IETF sentence
 check(new Set(clozeCards().map(x=>x.ch)).size===5,'Sentences cover all chapters');
 `,context);
 console.log('PASS: fresh jumbled orders, complete word banks, repeated words, blank counts and chapter coverage.');
+vm.runInContext(`
+check(DATA.notes.length===25&&DATA.notesQuestions.length===32,'Added material coverage');
+check(!JSON.stringify(DATA.notes).includes('Summary Checklist'),'Checklist excluded');
+for(const q of DATA.questions){check(q.remember.startsWith('Remember:'),'Beginner reminder '+q.id);check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Guide lesson link '+q.id)}
+for(const q of DATA.notesQuestions){const mc=makeMC(q);check(new Set(mc.options).size===4&&mc.options.includes(mc.answer),'Notes answer options');check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Notes lesson link');check(explanationHTML(mc,mc.options.find(a=>a!==mc.answer)).includes('Let’s make it simple'),'Wrong-answer reminder');check(!all().some(x=>x.id===q.id)&&!learnPool().some(x=>x.id===q.id),'Separate notes bank')}
+check(!noteMarkdown('<script>alert(1)</script>').includes('<script>'),'Escape note HTML');
+check(noteMarkdown('| A | B |\\n| --- | --- |\\n| 1 | 2 |').includes('<table>'),'Render readable tables');
+check(DATA.notes.every(n=>!/[{}\\\\]/.test(n.body)),'No damaged pasted formulas');
+`,context);
+console.log('PASS: complete notes sections, beginner reminders, lesson links, separate banks and safe readable rendering.');

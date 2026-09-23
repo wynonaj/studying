@@ -20,6 +20,8 @@ Use an HTTP server rather than opening `index.html` directly: the app loads its 
 
 ## Study modes
 
+- **Easy explanations:** 25 chapter reading sections from the added notes (summary checklist excluded), with corrections and 32 separate practice questions. Added-note questions stay outside the original Learn and exam banks. Original guide questions link to relevant reading sections. Wrong-answer feedback starts with a beginner reminder and keeps further detail expandable.
+
 - **Learn:** ten-item quick reviews and full-chapter sessions mixing original guide questions, relevant vocabulary and abbreviations, ordering exercises, and highlighted number drills where applicable.
 - **Check understanding:** 54 additional applied questions in their own bank, each mapped to an original guide prompt through `sourceId`. These are guide-based practice, not actual or predicted exam questions.
 - **Flashcards, Terms & definitions, Abbreviations, Put it in order, Numbers lab, Practice exam, Full study guide:** separate dedicated sections remain available.
