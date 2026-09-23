@@ -44,3 +44,25 @@ check(!explanationHTML(physical,physical.answer).includes('Match a layer to the 
 assert(!app.includes("$('#export')")&&!app.includes("$('#import')"));
 assert(!/id="(?:export|import|file)"/.test(fs.readFileSync('dist/index.html','utf8')));
 console.log('PASS: model comparison grading, physical explanation, and removal of import/export.');
+vm.runInContext(`
+for(const original of [...ORDERS.map(x=>x.items),...wordBankCards(VOCAB).map(x=>x.exp.split(/\\s+/))]){
+ let prior=null;
+ for(let attempt=0;attempt<20;attempt++){
+  const order=shuffledOrder(original);
+  check(JSON.stringify([...order].sort())===JSON.stringify([...original].sort()),'Shuffle preserves all pieces');
+  check(JSON.stringify(order)!==JSON.stringify(original),'Exercise must begin jumbled');
+  if(new Set(original).size>=3)check(JSON.stringify(order)!==prior,'Avoid identical consecutive starting orders');
+  prior=JSON.stringify(order);
+ }
+}
+for(const card of [...wordBankCards(VOCAB),...clozeCards()]){
+ let x=prepareWordBank(card);
+ for(const word of x.words){let index=x.bank.findIndex((v,i)=>v===word&&!x.picked.includes(i));check(index>=0,'Every required token exists');x.picked.push(index)}
+ check(wordBankAnswer(x)===card.answer,'Reconstructed answer grades correctly');
+ check(prepareWordBank(x).picked.length===0,'Retry clears selected words');
+ if(card.cloze)check(card.q.split('____').length-1===card.tokens.length,'Blank count matches answers');
+}
+check(clozeCards().some(x=>x.tokens.join('|')==='IEEE|IETF'),'IEEE/IETF sentence included');
+check(new Set(clozeCards().map(x=>x.ch)).size===5,'Sentences cover all chapters');
+`,context);
+console.log('PASS: fresh jumbled orders, complete word banks, repeated words, blank counts and chapter coverage.');

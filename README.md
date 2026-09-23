@@ -25,6 +25,8 @@ Use an HTTP server rather than opening `index.html` directly: the app loads its 
 - **Flashcards, Terms & definitions, Abbreviations, Put it in order, Numbers lab, Practice exam, Full study guide:** separate dedicated sections remain available.
 - Multiple-choice alternatives are authored for each prompt/term. They are not answers sampled from unrelated questions.
 - Missed practice items return after up to three intervening items, with shuffled choices or sorting order. Practice finishes only after every selected item has been answered correctly. Exams retain first-answer scoring.
+- Word-bank abbreviation builders and 25 tap-to-fill sentences supplement the original questions in chapter practice. Abbreviations keeps its original multiple-choice mode alongside word builders and sentence practice.
+- All sorting attempts start shuffled, including retries, avoiding the solved order and consecutive identical starting orders where multiple jumbled arrangements exist.
 - Correct and incorrect answers receive spaced explanations; broader vocabulary comparisons are expandable. Layer-job matching and a side-by-side OSI/TCP/IP model builder are available in Put it in order. No exercise requires a typed answer.
 
 The full guide retains all 54 original prompts. Clarifications correct inconsistencies in the provided notes. The dictionary has 154 terms, including supplemental vocabulary; Learn uses an explicit list of guide-relevant terms. The new understanding bank is excluded from the original-question and exam banks.
