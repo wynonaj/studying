@@ -129,3 +129,27 @@ for(const previousChapter of [0,1,2,3,4,12]){
 }
 `,labContext);
 console.log('PASS: Numbers lab launches for every prior chapter and keeps its drill filter independent.');
+
+// Every selectable diagram part must resolve to an existing explanation/lesson.
+vm.runInContext(fs.readFileSync('dist/map.js','utf8'),context);
+vm.runInContext(`
+for(const [key,[title,body,lesson]] of Object.entries(MAP_PARTS)){
+ if(!title||!body||!DATA.notes.some(n=>n.id===lesson))throw Error('Broken map lesson '+key);
+}
+const mapElements=new Map();
+const document={querySelector:s=>{if(!mapElements.has(s))mapElements.set(s,{innerHTML:'',scrollIntoView(){}});return mapElements.get(s)},querySelectorAll:()=>[]};
+for(let tab=0;tab<6;tab++){
+ mapState.tab=tab;visualMapHome();
+ for(const match of $('#map-scene').innerHTML.matchAll(/data-map-part="([^"]+)"/g)){
+  if(!MAP_PARTS[match[1]])throw Error('Unknown map target '+match[1]);
+  showMapPart(match[1]);
+ }
+}
+for(let step=0;step<6;step++){
+ mapState.wrap=step;renderMapWrap();
+ const html=$('#map-scene').innerHTML.split('class="doll-wrap"')[1];
+ if(!html.includes('Application data · your message'))throw Error('Message lost');
+ if(step>=3&&!(html.indexOf('Ethernet header')<html.indexOf('IP header')&&html.indexOf('IP header')<html.indexOf('TCP header')&&html.indexOf('TCP header')<html.indexOf('Application data')&&html.indexOf('FCS trailer')>html.indexOf('Application data')))throw Error('Incorrect encapsulation order');
+}
+`,context);
+console.log('PASS: six map views render, explanations link to lessons, and wrappers preserve header/payload/trailer order.');
