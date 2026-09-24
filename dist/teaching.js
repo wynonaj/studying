@@ -1,6 +1,11 @@
 'use strict';
 const TEACH_CHAPTERS={1:'Introduction, layering & authorities',2:'Physical layer, cabling, modulation & Shannon’s law',3:'Data Link, Ethernet, MAC addresses & switching',4:'Network layer, IP addresses, CIDR & bits',12:'Network design, structured cabling & campus architecture'};
 const JARGON={
+'Shielded Twisted Pair':"Twisted copper wire pairs with metal shielding. Sometimes abbreviated STP in cabling. In the switching chapter, STP instead means Spanning Tree Protocol: always check the context.",
+'Baseband':"In the traditional cabling comparison, the information signal uses the channel directly rather than being shifted into separate carrier-frequency channels. Ethernet is the common course example. This does not mean only one user can use the network.",
+'Broadband':"In this course’s cabling comparison: several signals share one medium using separate frequency channels. Think of lanes on one road: different channels can carry signals at the same time. Cable TV is an example. In everyday speech, broadband Internet usually means high-speed Internet access instead.",
+'Unshielded cable':"A cable without that metal shield. It still has insulation around each wire and a protective outer jacket. Unshielded does not mean bare wire. UTP relies on its twisted-pair construction and balanced signaling to help reduce interference.",
+'Shielded cable':"A cable with a conductive metal barrier, usually foil or braided metal, around wire pairs, the group of pairs, or both. It helps reduce unwanted electromagnetic interference when correctly installed and bonded. Think of an extra protective barrier for the signal.",
 'Trailer':"Information placed after the carried data. Ethernet uses an FCS error-check field here. It helps detect damage; it does not repair the packet.",
 'Link-layer wrapper':"Extra local-delivery information added around a packet. For Ethernet, the header goes before the packet and the FCS trailer goes after it. Together with the packet inside, they form a frame. Picture an addressed envelope around a letter.",
 'TIA':"Telecommunications Industry Association. Develops standards including commercial-building cabling specifications. Think of shared rules for organizing and installing building network wiring.",

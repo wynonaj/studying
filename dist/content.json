@@ -2860,8 +2860,8 @@
       "id": "notes-2-2",
       "ch": 2,
       "title": "Copper Cabling: UTP Categories",
-      "body": "* **UTP (Unshielded Twisted Pair)**: Copper cabling containing pairs of insulated wires twisted around each other. \n  * **Why twist the wires?** Twisting helps reduce electromagnetic interference (EMI) and crosstalk between pairs. Cable performance depends on the complete cable design and installation, not only how tightly it is twisted.\n  * **STP (Shielded Twisted Pair)**: Includes an extra foil shield around wires for high-noise industrial environments.\n* **Twisted-pair cable categories and common Ethernet limits** (Cat 8 is shielded, not UTP):\n  * **Cat 5e (Enhanced)**: Up to **1 Gbps** (Gigabit Ethernet).\n  * **Cat 6**: Up to **1 Gbps** (and 10 Gbps over short distances up to 55m).\n  * **Cat 6a (Augmented)**: Full **10 Gbps** up to 100 meters.\n  * **Cat 8**: **25 Gbps to 40 Gbps** over short distances (30m, ideal for Data Centers).\n* **Baseband vs. Broadband**:\n  * **Baseband**: Uses the entire cable bandwidth to transmit **one single digital signal** at a time (e.g., Ethernet).\n  * **Broadband**: Divides cable bandwidth into multiple channels to send **multiple signals simultaneously** (e.g., Cable TV).",
-      "remember": "Remember: Twists reduce interference. Choose cable by the required speed and distance, not just its category number.",
+      "body": "#### Why cable construction matters\nChapter 2 explains how information travels as physical signals. Copper cables carry electrical signals. Nearby electrical equipment or other wires can disturb those signals. That unwanted disturbance is interference: think of background chatter making a conversation harder to hear.\n\n#### Shielded vs. unshielded: what is the shield?\nA shield is a metal barrier inside the cable, usually metal foil or braided metal. It can surround individual wire pairs, all the pairs together, or both. It helps reduce electromagnetic interference when correctly installed and bonded.\n\nShielded cable HAS this extra metal barrier. Unshielded cable does NOT. Both still have insulation around the wires and a protective outer jacket. Unshielded does not mean bare or unprotected wire.\n\n#### Why UTP still works without a shield\nUTP means Unshielded Twisted Pair. Two insulated copper wires are twisted around each other to form a pair. The twisting and balanced signaling help reduce the effect of interference and unwanted coupling between nearby pairs.\n\nTwisting and shielding are different features: a shielded cable can have twisted pairs too. Shielded does not automatically mean faster; the cable category, link standard, distance and installation all matter.\n\nIn cabling, STP can mean Shielded Twisted Pair. In Chapter 3 switching, STP means Spanning Tree Protocol. Those are different meanings of the same letters.\n\n#### Broadband: several frequency channels share a medium\nIn this cabling topic, broadband means using separate frequency channels to carry multiple signals through one medium at the same time. A frequency channel is a selected range of wave frequencies.\n\nPicture one road divided into lanes: the cable is the road; the frequency channels are the lanes. Cable TV can carry many channels through one cable, and your receiver selects the channel you want. The lanes are an analogy, not separate little tubes inside the cable.\n\n#### Baseband: a different way to use the channel\nBaseband signaling uses the channel directly rather than putting streams into separate carrier-frequency channels as in the traditional broadband comparison. Ethernet is the common course example.\n\nThis does NOT mean just one person can use an Ethernet network. Many users and messages can share network resources using their link’s communication rules.\n\nKeep the meanings separate: broadband in the cabling comparison describes frequency-channel sharing; broadband Internet in everyday conversation usually means high-speed Internet access.\n\n#### Put the ideas together\nAsk two different questions. Does the cable have a metal shield? That tells you shielded versus unshielded. How are signals carried on the channel? That is where baseband versus broadband belongs.\n\nCable category is another detail: Cat 5e commonly supports 1 Gbps over a 100 m channel; Cat 6a supports 10 Gbps over 100 m; Cat 8 is shielded and supports short 25/40 Gbps channels up to 30 m. These depend on suitable equipment and installation.",
+      "remember": "Remember: shield = metal barrier; twisted pair = two wires wound together; broadband channels share frequencies. These describe different features.",
       "sources": []
     },
     {
@@ -3297,8 +3297,8 @@
         "Signals must be carried through glass.",
         "Every signal must use a separate physical cable."
       ],
-      "explain": "In this traditional cabling comparison, broadband divides the available frequency range into separate channels. Different channels can carry signals simultaneously rather than all users taking turns in one channel.",
-      "remember": "Remember: Here broadband refers to frequency-channel sharing, not just the everyday phrase fast Internet.",
+      "explain": "In this cabling topic, broadband means using separate frequency channels to carry multiple signals through one medium at the same time. A frequency channel is a selected range of wave frequencies.\n\nPicture one road divided into lanes: the cable is the road; the frequency channels are the lanes. Cable TV can carry many channels through one cable, and your receiver selects the channel you want. The lanes are an analogy, not separate little tubes inside the cable.",
+      "remember": "Remember: one cable, several frequency channels at the same time—like several lanes on one road. Everyday broadband Internet is a different use of the word.",
       "lessonId": "notes-2-2",
       "note": "Added-notes practice"
     },
@@ -4002,13 +4002,44 @@
     },
     "notes-2-2": {
       "title": "Choosing and understanding copper cable",
-      "context": "UTP means Unshielded Twisted Pair. Pairs of copper wires are twisted to reduce interference between signals. Cable categories describe performance requirements; distance and installation matter too.",
+      "context": "Chapter 2 explains how information travels as physical signals. Copper cables carry electrical signals. Nearby electrical equipment or other wires can disturb those signals. That unwanted disturbance is interference: think of background chatter making a conversation harder to hear.",
       "analogy": "Two conversations in one room can interfere. Cable design helps a receiver distinguish its intended conversation.",
-      "example": "Common limits: Cat 5e supports 1 Gbps over 100 m; Cat 6a supports 10 Gbps over 100 m. Cat 8 supports 25/40 Gbps over shorter 30 m channels and is shielded. In the traditional cabling comparison, baseband uses an undivided signaling channel; broadband separates simultaneous signals into frequency channels.",
+      "example": "Ask two different questions. Does the cable have a metal shield? That tells you shielded versus unshielded. How are signals carried on the channel? That is where baseband versus broadband belongs.\n\nCable category is another detail: Cat 5e commonly supports 1 Gbps over a 100 m channel; Cat 6a supports 10 Gbps over 100 m; Cat 8 is shielded and supports short 25/40 Gbps channels up to 30 m. These depend on suitable equipment and installation.",
       "terms": [
         "UTP",
+        "Shielded cable",
+        "Unshielded cable",
+        "Shielded Twisted Pair",
         "Interference",
+        "Broadband",
+        "Baseband",
         "Gbps"
+      ],
+      "steps": [
+        {
+          "title": "Why cable construction matters",
+          "body": "Chapter 2 explains how information travels as physical signals. Copper cables carry electrical signals. Nearby electrical equipment or other wires can disturb those signals. That unwanted disturbance is interference: think of background chatter making a conversation harder to hear."
+        },
+        {
+          "title": "Shielded vs. unshielded: what is the shield?",
+          "body": "A shield is a metal barrier inside the cable, usually metal foil or braided metal. It can surround individual wire pairs, all the pairs together, or both. It helps reduce electromagnetic interference when correctly installed and bonded.\n\nShielded cable HAS this extra metal barrier. Unshielded cable does NOT. Both still have insulation around the wires and a protective outer jacket. Unshielded does not mean bare or unprotected wire."
+        },
+        {
+          "title": "Why UTP still works without a shield",
+          "body": "UTP means Unshielded Twisted Pair. Two insulated copper wires are twisted around each other to form a pair. The twisting and balanced signaling help reduce the effect of interference and unwanted coupling between nearby pairs.\n\nTwisting and shielding are different features: a shielded cable can have twisted pairs too. Shielded does not automatically mean faster; the cable category, link standard, distance and installation all matter.\n\nIn cabling, STP can mean Shielded Twisted Pair. In Chapter 3 switching, STP means Spanning Tree Protocol. Those are different meanings of the same letters."
+        },
+        {
+          "title": "Broadband: several frequency channels share a medium",
+          "body": "In this cabling topic, broadband means using separate frequency channels to carry multiple signals through one medium at the same time. A frequency channel is a selected range of wave frequencies.\n\nPicture one road divided into lanes: the cable is the road; the frequency channels are the lanes. Cable TV can carry many channels through one cable, and your receiver selects the channel you want. The lanes are an analogy, not separate little tubes inside the cable."
+        },
+        {
+          "title": "Baseband: a different way to use the channel",
+          "body": "Baseband signaling uses the channel directly rather than putting streams into separate carrier-frequency channels as in the traditional broadband comparison. Ethernet is the common course example.\n\nThis does NOT mean just one person can use an Ethernet network. Many users and messages can share network resources using their link’s communication rules.\n\nKeep the meanings separate: broadband in the cabling comparison describes frequency-channel sharing; broadband Internet in everyday conversation usually means high-speed Internet access."
+        },
+        {
+          "title": "Put the ideas together",
+          "body": "Ask two different questions. Does the cable have a metal shield? That tells you shielded versus unshielded. How are signals carried on the channel? That is where baseband versus broadband belongs.\n\nCable category is another detail: Cat 5e commonly supports 1 Gbps over a 100 m channel; Cat 6a supports 10 Gbps over 100 m; Cat 8 is shielded and supports short 25/40 Gbps channels up to 30 m. These depend on suitable equipment and installation."
+        }
       ]
     },
     "notes-2-3": {
