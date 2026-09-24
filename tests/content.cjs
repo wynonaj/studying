@@ -69,7 +69,7 @@ check(new Set(clozeCards().map(x=>x.ch)).size===5,'Sentences cover all chapters'
 `,context);
 console.log('PASS: fresh jumbled orders, complete word banks, repeated words, blank counts and chapter coverage.');
 vm.runInContext(`
-check(DATA.notes.length===25&&DATA.notesQuestions.length===32,'Added material coverage');
+check(DATA.notes.length===31&&DATA.notesQuestions.length===44,'Added material coverage');
 check(!JSON.stringify(DATA.notes).includes('Summary Checklist'),'Checklist excluded');
 for(const q of DATA.questions){check(q.remember.startsWith('Remember:'),'Beginner reminder '+q.id);check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Guide lesson link '+q.id)}
 for(const q of DATA.notesQuestions){const mc=makeMC(q);check(new Set(mc.options).size===4&&mc.options.includes(mc.answer),'Notes answer options');check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Notes lesson link');check(explanationHTML(mc,mc.options.find(a=>a!==mc.answer)).includes('Let’s make it simple'),'Wrong-answer reminder');check(!all().some(x=>x.id===q.id)&&!learnPool().some(x=>x.id===q.id),'Separate notes bank')}

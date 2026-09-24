@@ -26,7 +26,7 @@
       "id": "q2",
       "ch": 1,
       "q": "What is layering? Why is layering useful in computer networking?",
-      "a": "Layering means dividing networking into separate levels, where each layer has it\u2019s own job. \nIt is useful because:\nEach layer can work somewhat independently\nYou can change one layer without redesigning everything.\nIt makes networks easier to understand and troubleshoot.\nDivides one complicated network process into smaller jobs.",
+      "a": "Layering means dividing networking into separate levels, where each layer has it’s own job. \nIt is useful because:\nEach layer can work somewhat independently\nYou can change one layer without redesigning everything.\nIt makes networks easier to understand and troubleshoot.\nDivides one complicated network process into smaller jobs.",
       "note": "Study guide",
       "practiceQ": "What is layering? Why is layering useful in computer networking?",
       "explain": "Each layer hides details from the layer above it. For example, an application can keep using IP even if the local connection changes from copper Ethernet to Wi-Fi. This separation also lets you troubleshoot one responsibility at a time.",
@@ -47,11 +47,11 @@
       "note": "Study guide",
       "practiceQ": "What are the layers of the TCP/ IP stack?",
       "explain": "Read the stack from the user toward the wire: the application creates data, transport connects processes, IP routes packets, the data-link layer delivers frames locally, and the physical layer carries the bits.",
-      "quizAnswer": "Application \u2192 Transport \u2192 Network/IP \u2192 Data Link \u2192 Physical",
+      "quizAnswer": "Application → Transport → Network/IP → Data Link → Physical",
       "distractors": [
-        "Application \u2192 Network/IP \u2192 Transport \u2192 Data Link \u2192 Physical",
-        "Application \u2192 Transport \u2192 Data Link \u2192 Network/IP \u2192 Physical",
-        "Physical \u2192 Transport \u2192 Network/IP \u2192 Data Link \u2192 Application"
+        "Application → Network/IP → Transport → Data Link → Physical",
+        "Application → Transport → Data Link → Network/IP → Physical",
+        "Physical → Transport → Network/IP → Data Link → Application"
       ],
       "lessonId": "notes-1-2",
       "remember": "Remember: Start at the application and move toward the wire: Application, Transport, Network, Data Link, Physical."
@@ -98,11 +98,11 @@
       "note": "Study guide",
       "practiceQ": "What are the seven layers of the OSI model? What are the primary functions of each of the seven layers of the OSI model?",
       "explain": "The top three OSI layers separate application services, data representation and session management. The bottom four handle end-to-end delivery, routing, local frames and actual signals. Remember APSTNDP from top to bottom.",
-      "quizAnswer": "Application \u2192 Presentation \u2192 Session \u2192 Transport \u2192 Network \u2192 Data Link \u2192 Physical; representation belongs to Presentation and session management to Session.",
+      "quizAnswer": "Application → Presentation → Session → Transport → Network → Data Link → Physical; representation belongs to Presentation and session management to Session.",
       "distractors": [
-        "Application \u2192 Session \u2192 Presentation \u2192 Transport \u2192 Network \u2192 Data Link \u2192 Physical; representation belongs to Session.",
-        "Application \u2192 Presentation \u2192 Session \u2192 Network \u2192 Transport \u2192 Data Link \u2192 Physical; routing belongs to Transport.",
-        "Application \u2192 Presentation \u2192 Session \u2192 Transport \u2192 Data Link \u2192 Network \u2192 Physical; MAC frames belong to Network."
+        "Application → Session → Presentation → Transport → Network → Data Link → Physical; representation belongs to Session.",
+        "Application → Presentation → Session → Network → Transport → Data Link → Physical; routing belongs to Transport.",
+        "Application → Presentation → Session → Transport → Data Link → Network → Physical; MAC frames belong to Network."
       ],
       "lessonId": "notes-1-3",
       "remember": "Remember: The top three OSI layers are Application, Presentation and Session. The bottom four are Transport, Network, Data Link and Physical."
@@ -139,7 +139,7 @@
         "Provide end-to-end communication between application processes."
       ],
       "lessonId": "notes-2-1",
-      "remember": "Remember: A 0 or 1 must be carried by something real: an electrical signal, light or radio. That is the Physical layer\u2019s job."
+      "remember": "Remember: A 0 or 1 must be carried by something real: an electrical signal, light or radio. That is the Physical layer’s job."
     },
     {
       "id": "q47",
@@ -183,10 +183,10 @@
       "note": "Clarified / supplemented",
       "practiceQ": "What is UTP? What factors favor the use of optical fiber as a physical medium over copper? Categories of UTP and their speeds.",
       "explain": "Twisting copper pairs helps reduce interference. Fiber carries light, so it is immune to electromagnetic interference and supports longer links with suitable optics. Cable category, speed and maximum channel length must be considered together; Cat 8 is shielded.",
-      "quizAnswer": "UTP is Unshielded Twisted Pair; fiber favors distance, bandwidth and EMI resistance; Cat 5e \u2248 1 Gbps, Cat 6a \u2248 10 Gbps, Cat 8 \u2248 25\u201340 Gbps.",
+      "quizAnswer": "UTP is Unshielded Twisted Pair; fiber favors distance, bandwidth and EMI resistance; Cat 5e ≈ 1 Gbps, Cat 6a ≈ 10 Gbps, Cat 8 ≈ 25–40 Gbps.",
       "distractors": [
-        "UTP is Unshielded Twisted Pair; fiber is more vulnerable to EMI than copper; Cat 5e \u2248 1 Gbps, Cat 6a \u2248 10 Gbps.",
-        "UTP is Unshielded Transmission Pair; Cat 5e \u2248 10 Gbps, Cat 6a \u2248 1 Gbps, Cat 8 \u2248 25\u201340 Gbps.",
+        "UTP is Unshielded Twisted Pair; fiber is more vulnerable to EMI than copper; Cat 5e ≈ 1 Gbps, Cat 6a ≈ 10 Gbps.",
+        "UTP is Unshielded Transmission Pair; Cat 5e ≈ 10 Gbps, Cat 6a ≈ 1 Gbps, Cat 8 ≈ 25–40 Gbps.",
         "UTP is Unshielded Twisted Pair; Cat 6 always supports 10 Gbps at every distance; fiber has no distance advantage."
       ],
       "lessonId": "notes-2-2",
@@ -196,7 +196,7 @@
       "id": "q73",
       "ch": 2,
       "q": "What is total internal reflection? How does it help optical fiber transmit light signals efficiently?",
-      "a": "It is the process that keeps light bouncing inside the fiber\u2019s glass core instead of escaping.\nThat allows the light to signal to travel long distance efficiently.\nLight trapped inside the fiber.",
+      "a": "It is the process that keeps light bouncing inside the fiber’s glass core instead of escaping.\nThat allows the light to signal to travel long distance efficiently.\nLight trapped inside the fiber.",
       "note": "Study guide",
       "practiceQ": "What is total internal reflection? How does it help optical fiber transmit light signals efficiently?",
       "explain": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
@@ -213,18 +213,18 @@
       "id": "q77",
       "ch": 2,
       "q": "What are the two categories of optical fiber? Under what conditions is each category preferred? Their distance covered (and diameters of glass)",
-      "a": "Single-mode fiber: about 9 \u03bcm core, preferred for long distances; kilometer-scale links depend on optics (for example 10GBASE-LR supports 10 km). Multimode: 50 or 62.5 \u03bcm core, preferred for shorter building/data-center links; 10GBASE-SR supports 300 m on OM3 or 400 m on OM4. Reach is not one fixed distance per fiber type: it depends on fiber grade, wavelength, transceiver and data rate.",
+      "a": "Single-mode fiber: about 9 μm core, preferred for long distances; kilometer-scale links depend on optics (for example 10GBASE-LR supports 10 km). Multimode: 50 or 62.5 μm core, preferred for shorter building/data-center links; 10GBASE-SR supports 300 m on OM3 or 400 m on OM4. Reach is not one fixed distance per fiber type: it depends on fiber grade, wavelength, transceiver and data rate.",
       "note": "Clarified / supplemented",
       "practiceQ": "What are the two categories of optical fiber? Under what conditions is each category preferred? Their distance covered (and diameters of glass)",
-      "explain": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word \u201cfiber.\u201d",
-      "quizAnswer": "Single-mode: about 9 \u03bcm core, generally longer links; multimode: larger 50/62.5 \u03bcm core, generally shorter links; exact reach depends on optics.",
+      "explain": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word “fiber.”",
+      "quizAnswer": "Single-mode: about 9 μm core, generally longer links; multimode: larger 50/62.5 μm core, generally shorter links; exact reach depends on optics.",
       "distractors": [
-        "Single-mode: larger 50/62.5 \u03bcm core, generally shorter links; multimode: about 9 \u03bcm core, generally longer links.",
-        "Single-mode and multimode both have a 9 \u03bcm core and identical reach with every transceiver.",
+        "Single-mode: larger 50/62.5 μm core, generally shorter links; multimode: about 9 μm core, generally longer links.",
+        "Single-mode and multimode both have a 9 μm core and identical reach with every transceiver.",
         "Multimode always reaches farther because a larger core guarantees greater distance."
       ],
       "lessonId": "notes-2-3",
-      "remember": "Remember: Single-mode has a small core, about 9 \u00b5m. Multimode has a larger 50 or 62.5 \u00b5m core. Actual reach depends on the optics."
+      "remember": "Remember: Single-mode has a small core, about 9 µm. Multimode has a larger 50 or 62.5 µm core. Actual reach depends on the optics."
     },
     {
       "id": "q85",
@@ -264,7 +264,7 @@
       "id": "q96",
       "ch": 2,
       "q": "What are amplitude, frequency, phase, QAM modulations? Which one is better at what (bandwidth and noise resistance)?",
-      "a": "Amplitude Modulation: Changes the strength/height of the signal.\nFrequency modulation: changes how fast the wave cycles. \nPhase modulation: changes the position/phase of the wave. \nQAM \u2013 Quadrature Amplitude Modulation: combines changes in amplitude + phase to represent more bits.\nQAM can send more data efficiently using available bandwidth, but more complex/high-order QAM is generally more sensitive to noise.\nAM is vulnerable to amplitude noise. FM generally rejects amplitude noise better, often at the cost of greater bandwidth. Phase-based digital schemes can be power-efficient, but resistance depends on the particular scheme and order. High-order QAM improves spectral efficiency (bits per second per hertz) but requires a higher signal-to-noise ratio. No modulation is universally best.",
+      "a": "Amplitude Modulation: Changes the strength/height of the signal.\nFrequency modulation: changes how fast the wave cycles. \nPhase modulation: changes the position/phase of the wave. \nQAM – Quadrature Amplitude Modulation: combines changes in amplitude + phase to represent more bits.\nQAM can send more data efficiently using available bandwidth, but more complex/high-order QAM is generally more sensitive to noise.\nAM is vulnerable to amplitude noise. FM generally rejects amplitude noise better, often at the cost of greater bandwidth. Phase-based digital schemes can be power-efficient, but resistance depends on the particular scheme and order. High-order QAM improves spectral efficiency (bits per second per hertz) but requires a higher signal-to-noise ratio. No modulation is universally best.",
       "note": "Clarified / supplemented",
       "practiceQ": "What are amplitude, frequency, phase, QAM modulations? Which one is better at what (bandwidth and noise resistance)?",
       "explain": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
@@ -281,7 +281,7 @@
       "id": "q102",
       "ch": 2,
       "q": "What is multiplexing? What are the two categories of multiplexing?",
-      "a": "Multiplexing means allowing multiple signals/users to share the same communication medium. \nTwo major categories:\nFDM \u2013 Frequence Division Multiplexing: Different users get different frequency ranges\nTDM \u2013 Time Division Multiplexing: Different users get different time slots.\nRemember: \nFDM = Frequency\nTDM = Time",
+      "a": "Multiplexing means allowing multiple signals/users to share the same communication medium. \nTwo major categories:\nFDM – Frequence Division Multiplexing: Different users get different frequency ranges\nTDM – Time Division Multiplexing: Different users get different time slots.\nRemember: \nFDM = Frequency\nTDM = Time",
       "note": "Study guide",
       "practiceQ": "What is multiplexing? What are the two categories of multiplexing?",
       "explain": "FDM separates users by frequency, like different radio stations. TDM separates users by time, like people taking turns speaking. Both share one medium without assigning each user a separate cable.",
@@ -321,9 +321,9 @@
       "explain": "A cable supplies the signal path, while each NIC sends and receives on that path. The NIC gives the host a network interface; an Ethernet MAC address identifies an interface at the link layer.",
       "quizAnswer": "The cable carries signals; hosts use NICs to connect, and NICs have MAC addresses.",
       "distractors": [
-        "The NIC carries signals between buildings without a medium; the cable stores the host\u2019s MAC address.",
+        "The NIC carries signals between buildings without a medium; the cable stores the host’s MAC address.",
         "Hosts need cables but no network interfaces, because a cable performs all NIC functions.",
-        "The cable selects routes between IP networks; the NIC\u2019s only job is compressing application data."
+        "The cable selects routes between IP networks; the NIC’s only job is compressing application data."
       ],
       "lessonId": "notes-3-1",
       "remember": "Remember: A NIC connects a host to the network. The cable carries its signals; the host creates or uses the data."
@@ -332,7 +332,7 @@
       "id": "q122",
       "ch": 3,
       "q": "What is broadcast in the context of Ethernet? What are its advantages.",
-      "a": "A broadcast sends a frame to every device on the local Ethernet network.\nAdvantage: Useful when the sender doesn\u2019t know exactly which device needs to respond. Instead of it being sent only to one person, it\u2019s sent to everyone.",
+      "a": "A broadcast sends a frame to every device on the local Ethernet network.\nAdvantage: Useful when the sender doesn’t know exactly which device needs to respond. Instead of it being sent only to one person, it’s sent to everyone.",
       "note": "Study guide",
       "practiceQ": "What is broadcast in the context of Ethernet? What are its advantages.",
       "explain": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
@@ -403,7 +403,7 @@
       "a": "A MAC address has 48 bits, usually written as six hexadecimal octets (for example 00:1A:2B:3C:4D:5E). In the traditional universally administered format, the first 24 bits are the OUI (manufacturer allocation), and the final 24 identify the interface within that allocation. Locally administered/randomized addresses do not necessarily identify a manufacturer.",
       "note": "Clarified / supplemented",
       "practiceQ": "How is a traditional universally administered MAC address structured?",
-      "explain": "Each of the six hexadecimal octets contains 8 bits, so 6 \u00d7 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
+      "explain": "Each of the six hexadecimal octets contains 8 bits, so 6 × 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
       "quizAnswer": "48 bits total: traditionally 24-bit OUI + 24-bit interface identifier.",
       "distractors": [
         "48 bits total: 16-bit OUI + 32-bit interface identifier.",
@@ -411,7 +411,7 @@
         "64 bits total: 24-bit OUI + 40-bit interface identifier."
       ],
       "lessonId": "notes-3-4",
-      "remember": "Remember: A traditional MAC address is 48 bits: 24 bits for the manufacturer\u2019s OUI and 24 bits to distinguish its interfaces."
+      "remember": "Remember: A traditional MAC address is 48 bits: 24 bits for the manufacturer’s OUI and 24 bits to distinguish its interfaces."
     },
     {
       "id": "q151",
@@ -421,11 +421,11 @@
       "note": "Study guide",
       "practiceQ": "Know how to convert binary to decimal (vice versa); and binary to hex (vice versa)",
       "explain": "Binary place values double toward the left: 1, 2, 4, 8 and so on. Add only positions containing 1. Four bits have 16 combinations, so one hexadecimal digit exactly represents one four-bit group.",
-      "quizAnswer": "Binary place values are powers of 2; one hex digit represents 4 bits. 00001010\u2082 = 10\u2081\u2080 and 10101111\u2082 = AF\u2081\u2086.",
+      "quizAnswer": "Binary place values are powers of 2; one hex digit represents 4 bits. 00001010₂ = 10₁₀ and 10101111₂ = AF₁₆.",
       "distractors": [
-        "Binary place values are powers of 10; one hex digit represents 8 bits. 00001010\u2082 = 1010\u2081\u2080.",
-        "Binary place values are powers of 2, but 00001010\u2082 = 12\u2081\u2080 and 10101111\u2082 = FA\u2081\u2086.",
-        "Binary digits are added without place values, so 00001010\u2082 = 2\u2081\u2080 and 1111\u2082 = 4\u2081\u2086."
+        "Binary place values are powers of 10; one hex digit represents 8 bits. 00001010₂ = 1010₁₀.",
+        "Binary place values are powers of 2, but 00001010₂ = 12₁₀ and 10101111₂ = FA₁₆.",
+        "Binary digits are added without place values, so 00001010₂ = 2₁₀ and 1111₂ = 4₁₆."
       ],
       "lessonId": "notes-3-4",
       "remember": "Remember: For decimal, add the place values with a 1. For hexadecimal, split binary into four-bit groups."
@@ -451,7 +451,7 @@
       "id": "q166",
       "ch": 3,
       "q": "What is the spanning tree protocol? What is it used for?",
-      "a": "STP prevents network loops when switches have multiple paths between them.\nIt can temporarily block redundant paths so frames don\u2019t loop forever.\nSTP = prevents switching loops.",
+      "a": "STP prevents network loops when switches have multiple paths between them.\nIt can temporarily block redundant paths so frames don’t loop forever.\nSTP = prevents switching loops.",
       "note": "Study guide",
       "practiceQ": "What is the spanning tree protocol? What is it used for?",
       "explain": "Redundant links can create loops in which Ethernet frames keep circulating. STP creates a loop-free forwarding tree by blocking selected redundant paths while retaining alternatives for failures.",
@@ -488,12 +488,12 @@
       "a": "Routing selects the next hop/path for packets between networks. Routing tables contain destination prefixes and forwarding information (such as next hop, interface and metrics). They need not contain the complete network topology.",
       "note": "Clarified / supplemented",
       "practiceQ": "What is routing, and what information is stored in a routing table?",
-      "explain": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+      "explain": "A router looks up the packet’s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
       "quizAnswer": "Routing chooses packet paths/next hops between networks; routing tables contain destination routes and forwarding information.",
       "distractors": [
         "Routing delivers only local MAC frames; routing tables contain only manufacturer OUIs.",
         "Routing chooses cable signal amplitude; routing tables record only cable lengths.",
-        "Routing requires a complete list of every host and cable in the entire Internet in each router\u2019s table."
+        "Routing requires a complete list of every host and cable in the entire Internet in each router’s table."
       ],
       "lessonId": "notes-4-4",
       "remember": "Remember: A routing table tells a router where to send packets for destination networks. It is not a complete map of every router."
@@ -536,7 +536,7 @@
       "id": "q190",
       "ch": 4,
       "q": "Classless Inter Domain Routing (CIDR) notation and calculations: ex: 73.5.0.0/17 ; ",
-      "a": "/17 means 17 bits = network portion\nIPv4 has 32 total bits, so:\n32-17 = 15 host bits.\n Number of total addresses: 2^15 = 32,768 addresses\nFor traditional usable-host calculation:\n32,768 \u2013 2 = 32,766 usable hosts\nThe two traditionally reserved addresses are the network address and broadcast address.",
+      "a": "/17 means 17 bits = network portion\nIPv4 has 32 total bits, so:\n32-17 = 15 host bits.\n Number of total addresses: 2^15 = 32,768 addresses\nFor traditional usable-host calculation:\n32,768 – 2 = 32,766 usable hosts\nThe two traditionally reserved addresses are the network address and broadcast address.",
       "note": "Study guide",
       "practiceQ": "Classless Inter Domain Routing (CIDR) notation and calculations: ex: 73.5.0.0/17 ; ",
       "explain": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
@@ -552,12 +552,12 @@
     {
       "id": "q198",
       "ch": 4,
-      "q": "How many objects can be uniquely labeled with 10-bit address labels? Hint (210 ) . You wish to assign unique labels to 200 objects using binary numbers. What is the minimum number of bits needed? Hint \u2013 start from somewhere 27 =128 (too few); 210 1024 (too many); 28 (just right; should be little bit above the target)",
+      "q": "How many objects can be uniquely labeled with 10-bit address labels? Hint (210 ) . You wish to assign unique labels to 200 objects using binary numbers. What is the minimum number of bits needed? Hint – start from somewhere 27 =128 (too few); 210 1024 (too many); 28 (just right; should be little bit above the target)",
       "a": "Rule:\nWith n bits, you can create 2^n unique combinations.\nSo with 10 bits:\n2^10 = 1024\nTherefore, 10-bit labels can uniquely label 1,024 objects\nFor 200 objects, find the smallest power of 2 that reaches at least 200:\n2^7 = 128\n2^8 = 256\nAnswer = 8 bits.",
       "note": "Study guide",
       "practiceQ": "How many objects can 10-bit labels uniquely identify? What is the minimum number of bits needed to label 200 objects?",
       "explain": "Each additional bit doubles the number of possible labels. Ten bits give 1024 labels. For 200 objects, seven bits give only 128, while eight give 256, so eight is the minimum.",
-      "quizAnswer": "10 bits label 1024 objects; 200 objects need at least 8 bits because 2^7 < 200 \u2264 2^8.",
+      "quizAnswer": "10 bits label 1024 objects; 200 objects need at least 8 bits because 2^7 < 200 ≤ 2^8.",
       "distractors": [
         "10 bits label 1000 objects; 200 objects need 7 bits because 2^7 exceeds 200.",
         "10 bits label 1024 objects; 200 objects need 200 bits, one bit per object.",
@@ -569,10 +569,10 @@
     {
       "id": "q208",
       "ch": 4,
-      "q": "What are the disadvantages of using address classes (A, B, C\u2026)? How does CIDR overcome these disadvantages?",
+      "q": "What are the disadvantages of using address classes (A, B, C…)? How does CIDR overcome these disadvantages?",
       "a": "Old classful addressing used fixed sizes like Class A, B, and C.\nProblem: wasted IP addresses because organizations were forced into fixed network sizes.\nCIDR allows flexible prefix lengths like: /17, /20 /24, etc.\nThat lets networks receive an address block closer to the size they actually need.\nClasses = rigid\nCIDR = flexible",
       "note": "Study guide",
-      "practiceQ": "What are the disadvantages of using address classes (A, B, C\u2026)? How does CIDR overcome these disadvantages?",
+      "practiceQ": "What are the disadvantages of using address classes (A, B, C…)? How does CIDR overcome these disadvantages?",
       "explain": "Fixed address classes force organizations into large predefined block sizes. CIDR changes the prefix length so allocations can fit more closely, reducing wasted addresses and supporting route aggregation.",
       "quizAnswer": "Fixed class sizes waste addresses; CIDR uses flexible prefix lengths to fit allocations more closely.",
       "distractors": [
@@ -590,7 +590,7 @@
       "a": "IPv6 addresses are 128 bits, written as eight groups of up to four hexadecimal digits separated by colons. Leading zeros within groups may be omitted; one run of zero groups may be replaced by ::, at most once in an address. 2001:0db8:85a3:0000:0000:8a2e:0370:7334 compresses to 2001:db8:85a3::8a2e:370:7334. 2001:db8::1 is a separate valid example, not a shortening of that address.",
       "note": "Clarified / supplemented",
       "practiceQ": "What is the correct representation of an IPv6 address",
-      "explain": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+      "explain": "Eight groups × 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
       "quizAnswer": "128 bits in eight hexadecimal groups separated by colons; omit leading zeros and use :: once for a run of zero groups.",
       "distractors": [
         "32 bits in four decimal groups separated by dots; :: can appear anywhere repeatedly.",
@@ -621,7 +621,7 @@
       "id": "q227",
       "ch": 4,
       "q": "What are regional registries? What is the need for regional registries?",
-      "a": "Regional Internet Registries (RIRs) manage and distribution IP addresses within different regions of the world. \nThey\u2019re needed so IP address allocation is organized and unique, instead of different organizations accidentally assigning overlapping public address space.",
+      "a": "Regional Internet Registries (RIRs) manage and distribution IP addresses within different regions of the world. \nThey’re needed so IP address allocation is organized and unique, instead of different organizations accidentally assigning overlapping public address space.",
       "note": "Study guide",
       "practiceQ": "What are regional registries? What is the need for regional registries?",
       "explain": "Public addresses must be coordinated globally. Regional registries allocate and register blocks within regions, helping prevent different organizations from being given the same public address space.",
@@ -646,7 +646,7 @@
       "distractors": [
         "Minimize purchase price alone, even if users repeatedly cannot work.",
         "Maximize speed at any cost without considering user needs or constraints.",
-        "Meet only today\u2019s needs and exclude maintenance and future demand from planning."
+        "Meet only today’s needs and exclude maintenance and future demand from planning."
       ],
       "lessonId": "notes-12-1",
       "remember": "Remember: A good design meets user needs now and later while considering equipment, maintenance and downtime costs."
@@ -774,15 +774,15 @@
       "id": "q249",
       "ch": 12,
       "q": "What is a campus network? Multiple buildings with 3 layers (core, distribution, access)",
-      "a": "A campus network connects multiple nearby buildings. A common hierarchical design has Core \u2192 Distribution \u2192 Access layers.",
+      "a": "A campus network connects multiple nearby buildings. A common hierarchical design has Core → Distribution → Access layers.",
       "note": "Clarified / supplemented",
       "practiceQ": "What is a campus network, and what are its three hierarchical layers?",
       "explain": "A campus joins nearby buildings. The access layer connects devices, distribution aggregates and applies policy, and the core provides fast transport between distribution areas.",
-      "quizAnswer": "A campus connects multiple nearby buildings; a common hierarchy is Core \u2192 Distribution \u2192 Access.",
+      "quizAnswer": "A campus connects multiple nearby buildings; a common hierarchy is Core → Distribution → Access.",
       "distractors": [
-        "A campus connects a single workstation only; its hierarchy is Access \u2192 Core \u2192 Distribution.",
+        "A campus connects a single workstation only; its hierarchy is Access → Core → Distribution.",
         "A campus is always geographically scattered across distant cities with no nearby buildings.",
-        "A campus has the hierarchy Application \u2192 Presentation \u2192 Session instead of network-design tiers."
+        "A campus has the hierarchy Application → Presentation → Session instead of network-design tiers."
       ],
       "lessonId": "notes-12-3",
       "remember": "Remember: A campus joins nearby buildings. Its common three layers are Access, Distribution and Core."
@@ -791,7 +791,7 @@
       "id": "q251",
       "ch": 12,
       "q": "What is the role of the core layer? Connected to all parts (all traffic passes through), fast and reliable data transport, called backbone.",
-      "a": "The core is the network\u2019s backbone.\nIt provides\nFast transportation\nReliable transportation\nConnections between different parts of the network\nA lot of network traffic passes through it.\nCore = fast backbone.",
+      "a": "The core is the network’s backbone.\nIt provides\nFast transportation\nReliable transportation\nConnections between different parts of the network\nA lot of network traffic passes through it.\nCore = fast backbone.",
       "note": "Clarified / supplemented",
       "practiceQ": "What is the role of the core layer?",
       "explain": "The core prioritizes reliable, high-speed transport across the network. Think of it as the backbone that joins major network regions rather than the layer supplying individual user ports.",
@@ -833,7 +833,7 @@
       "distractors": [
         "Provide only the high-speed backbone between distribution regions.",
         "Allocate public address blocks to organizations throughout a region.",
-        "Choose the organization\u2019s standards approval procedure."
+        "Choose the organization’s standards approval procedure."
       ],
       "lessonId": "notes-12-3",
       "remember": "Remember: Access is where users plug in or connect wirelessly. It gives end devices entry to the network."
@@ -841,14 +841,14 @@
     {
       "id": "q261",
       "ch": 12,
-      "q": "What is an enterprise network? organization\u2019s geographically scattered network (ISPs provide WAN connectivity). An enterprise network connects and organization\u2019s networks across geographically separated locations.",
-      "a": "An enterprise network connects an organization\u2019s networks across geographically separated locations. ISPs can provide the WAN connectivity connection those locations.",
+      "q": "What is an enterprise network? organization’s geographically scattered network (ISPs provide WAN connectivity). An enterprise network connects and organization’s networks across geographically separated locations.",
+      "a": "An enterprise network connects an organization’s networks across geographically separated locations. ISPs can provide the WAN connectivity connection those locations.",
       "note": "Study guide",
       "practiceQ": "What is an enterprise network? How are its distant locations connected?",
-      "explain": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
-      "quizAnswer": "An organization\u2019s networks across geographically separated locations, often joined using provider WAN connectivity.",
+      "explain": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization’s broader network.",
+      "quizAnswer": "An organization’s networks across geographically separated locations, often joined using provider WAN connectivity.",
       "distractors": [
-        "Only one floor\u2019s horizontal cabling, with no connections beyond that floor.",
+        "Only one floor’s horizontal cabling, with no connections beyond that floor.",
         "Only nearby buildings on a single campus; distant sites are excluded by definition.",
         "A shared Ethernet frame format that does not describe organizational networks."
       ],
@@ -983,8 +983,8 @@
     "Total internal reflection": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
     "Core": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
     "Cladding": "The core has a higher refractive index than its cladding. Above the critical angle, light reflects back into the core rather than escaping, keeping the signal guided along the fiber.",
-    "Single-mode fiber": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word \u201cfiber.\u201d",
-    "Multimode fiber": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word \u201cfiber.\u201d",
+    "Single-mode fiber": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word “fiber.”",
+    "Multimode fiber": "A small single-mode core limits the number of light paths, reducing dispersion over long links. Multimode has a larger core and multiple paths, which can spread pulses out. Reach depends on the fiber grade and optics, not just the word “fiber.”",
     "Amplitude": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
     "Frequency": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
     "Phase": "Amplitude is wave height, frequency is cycle rate, and phase is position within a cycle. QAM changes amplitude and phase together. More QAM states encode more bits per symbol, but nearby states are easier for noise to confuse.",
@@ -1002,8 +1002,8 @@
     "Payload": "Do the addition: 14 bytes of header + 1500 bytes of payload + 4 bytes of FCS = 1518. The common confusion is calling the 1500-byte payload the whole frame. Preamble/SFD adds 8 bytes on the wire but is excluded from that frame count.",
     "MTU": "Do the addition: 14 bytes of header + 1500 bytes of payload + 4 bytes of FCS = 1518. The common confusion is calling the 1500-byte payload the whole frame. Preamble/SFD adds 8 bytes on the wire but is excluded from that frame count.",
     "NIC": "A cable supplies the signal path, while each NIC sends and receives on that path. The NIC gives the host a network interface; an Ethernet MAC address identifies an interface at the link layer.",
-    "MAC": "Each of the six hexadecimal octets contains 8 bits, so 6 \u00d7 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
-    "OUI": "Each of the six hexadecimal octets contains 8 bits, so 6 \u00d7 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
+    "MAC": "Each of the six hexadecimal octets contains 8 bits, so 6 × 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
+    "OUI": "Each of the six hexadecimal octets contains 8 bits, so 6 × 8 = 48. In the traditional universal format, the first three octets identify the manufacturer allocation and the last three identify the interface within it.",
     "Broadcast": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
     "Unicast": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
     "VLAN": "A broadcast reaches the whole local broadcast domain, which is helpful when a sender needs to discover an unknown participant. It does not mean sending to every computer on the Internet.",
@@ -1035,10 +1035,10 @@
     "Bus topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
     "Ring topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
     "Mesh topology": "Identify the shape: central connection means star; one shared cable means bus; a circle means ring; multiple interconnections mean mesh. A switched Ethernet LAN commonly has a physical star shape.",
-    "Router": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
-    "Routing": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
-    "Routing table": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
-    "Next hop": "A router looks up the packet\u2019s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "Router": "A router looks up the packet’s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "Routing": "A router looks up the packet’s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "Routing table": "A router looks up the packet’s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
+    "Next hop": "A router looks up the packet’s destination and chooses forwarding information for a matching prefix. The table needs routes and next hops; it does not have to store a complete map of every device.",
     "IPv4": "The prefix length determines which bits belong to the network. The remaining bits identify a host/interface within that subnet, so the split is not always at an octet boundary.",
     "Network portion": "The prefix length determines which bits belong to the network. The remaining bits identify a host/interface within that subnet, so the split is not always at an octet boundary.",
     "Host portion": "The prefix length determines which bits belong to the network. The remaining bits identify a host/interface within that subnet, so the split is not always at an octet boundary.",
@@ -1048,9 +1048,9 @@
     "Network address": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
     "Broadcast address": "IPv4 has 32 bits. /17 assigns 17 to the network, leaving 15 for hosts. That gives 2^15 = 32,768 total addresses; the traditional subnet calculation reserves two and leaves 32,766 usable hosts.",
     "Classful addressing": "Fixed address classes force organizations into large predefined block sizes. CIDR changes the prefix length so allocations can fit more closely, reducing wasted addresses and supporting route aggregation.",
-    "IPv6": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
-    "Hextet": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
-    "Zero compression": "Eight groups \u00d7 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+    "IPv6": "Eight groups × 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+    "Hextet": "Eight groups × 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
+    "Zero compression": "Eight groups × 16 bits = 128 bits. Leading zeros can disappear inside a group, and :: fills in enough all-zero groups to bring the total back to eight. Using :: twice would make that reconstruction ambiguous.",
     "ICMP": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
     "Ping": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
     "Traceroute": "Ping asks whether an echo reply comes back. Traceroute reveals successive hops by making probes expire farther along the path. Pathping adds measurements over time. Missing replies can result from filtering, not just a failed host.",
@@ -1083,9 +1083,9 @@
     "Firewall": "Distribution sits between access and core. It groups access networks and is a common place for inter-subnet routing and policy enforcement; the exact placement of firewalls and authentication varies by design.",
     "Authentication": "Distribution sits between access and core. It groups access networks and is a common place for inter-subnet routing and policy enforcement; the exact placement of firewalls and authentication varies by design.",
     "Access layer": "The access layer is where end devices enter the network. Switch ports and wireless access points provide this attachment; higher layers aggregate and transport the resulting traffic.",
-    "Enterprise network": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
-    "WAN": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
-    "ISP": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization\u2019s broader network.",
+    "Enterprise network": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization’s broader network.",
+    "WAN": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization’s broader network.",
+    "ISP": "Enterprise networks can span distant locations. WAN services supplied by providers connect those sites into the organization’s broader network.",
     "Network maintenance": "Maintenance combines prevention and response: inspect and test, monitor for changes, service equipment, protect configurations and keep hardware/software current. Waiting for a failure is only one part of the job.",
     "Downtime": "The cheapest purchase is not always the cheapest network. A design must account for future needs, maintenance and the cost of downtime as well as initial equipment and installation.",
     "SNMP": "SNMP separates the manager from agents on devices. The manager can poll values such as temperatures or interface counters, while device notifications can flag events that need attention.",
@@ -1105,19 +1105,19 @@
       "answer": "One layer can change while other layers keep their roles.",
       "options": [
         "One layer can change while other layers keep their roles.",
-        "Changing one layer requires every other layer to perform that layer\u2019s job.",
+        "Changing one layer requires every other layer to perform that layer’s job.",
         "The application must know every physical signaling detail.",
         "Layering works only when the physical medium never changes."
       ],
       "explain": "Separating responsibilities limits how much of the system must change when one part changes.",
       "sourceId": "q2",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u9",
       "ch": 1,
-      "q": "In the guide\u2019s five-layer TCP/IP stack, which layer lies directly between Transport and Data Link?",
+      "q": "In the guide’s five-layer TCP/IP stack, which layer lies directly between Transport and Data Link?",
       "answer": "Network / IP",
       "options": [
         "Network / IP",
@@ -1125,10 +1125,10 @@
         "Data Link",
         "Physical"
       ],
-      "explain": "Top to bottom is Application \u2192 Transport \u2192 Network/IP \u2192 Data Link \u2192 Physical. Presentation is part of the seven-layer OSI model.",
+      "explain": "Top to bottom is Application → Transport → Network/IP → Data Link → Physical. Presentation is part of the seven-layer OSI model.",
       "sourceId": "q9",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u17",
@@ -1144,7 +1144,7 @@
       "explain": "Data Link handles frames and local MAC addressing. Network/IP addresses the different problem of routing across networks.",
       "sourceId": "q17",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u25",
@@ -1160,7 +1160,7 @@
       "explain": "OSI provides a common description of networking functions, supporting interoperability among different vendors.",
       "sourceId": "q25",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u29",
@@ -1176,7 +1176,7 @@
       "explain": "Presentation concerns how data is represented, including formatting, encryption and compression. Session manages the communication session itself.",
       "sourceId": "q29",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u39",
@@ -1192,12 +1192,12 @@
       "explain": "The guide associates IEEE with LAN/WLAN standards such as Ethernet and Wi-Fi. It associates IETF with Internet protocols such as TCP/IP, DNS and HTTP.",
       "sourceId": "q39",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u44",
       "ch": 2,
-      "q": "A device turns a sequence of bits into light pulses on a cable. Which layer\u2019s main responsibility is being performed?",
+      "q": "A device turns a sequence of bits into light pulses on a cable. Which layer’s main responsibility is being performed?",
       "answer": "Physical",
       "options": [
         "Physical",
@@ -1208,7 +1208,7 @@
       "explain": "The physical layer transmits raw bits through a medium using physical signals. Light pulses are one way to represent those bits.",
       "sourceId": "q44",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u47",
@@ -1218,13 +1218,13 @@
       "options": [
         "Copper cable",
         "The frame structure that organizes the carried bits",
-        "The signal\u2019s frequency rather than its transmission path",
+        "The signal’s frequency rather than its transmission path",
         "The addressing scheme used by the endpoints"
       ],
-      "explain": "A physical medium carries a signal between devices. Copper, optical fiber and wireless/radio are the guide\u2019s examples.",
+      "explain": "A physical medium carries a signal between devices. Copper, optical fiber and wireless/radio are the guide’s examples.",
       "sourceId": "q47",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u53",
@@ -1240,12 +1240,12 @@
       "explain": "Suitability depends on the actual link requirements: speed, distance, interference resistance, reliability and installation practicality.",
       "sourceId": "q53",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u60",
       "ch": 2,
-      "q": "A link must cover a long distance through an area with strong electromagnetic interference. Which choice best fits the guide\u2019s comparison?",
+      "q": "A link must cover a long distance through an area with strong electromagnetic interference. Which choice best fits the guide’s comparison?",
       "answer": "Optical fiber",
       "options": [
         "Optical fiber",
@@ -1253,10 +1253,10 @@
         "Copper because fiber is useful only for shorter links than copper",
         "Either medium because distance and interference never affect the choice"
       ],
-      "explain": "Fiber is favored for long distances, high bandwidth and resistance to electromagnetic interference. Twisting helps copper, but does not give it fiber\u2019s immunity.",
+      "explain": "Fiber is favored for long distances, high bandwidth and resistance to electromagnetic interference. Twisting helps copper, but does not give it fiber’s immunity.",
       "sourceId": "q60",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u73",
@@ -1269,26 +1269,26 @@
         "Converting light into current at each reflection",
         "Absorbing the light at the core boundary"
       ],
-      "explain": "Total internal reflection keeps light guided within the fiber\u2019s core instead of escaping, allowing efficient transmission along the fiber.",
+      "explain": "Total internal reflection keeps light guided within the fiber’s core instead of escaping, allowing efficient transmission along the fiber.",
       "sourceId": "q73",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u77",
       "ch": 2,
-      "q": "One fiber has a very small core and another has a larger core. Which choice best matches the guide\u2019s long-distance preference?",
+      "q": "One fiber has a very small core and another has a larger core. Which choice best matches the guide’s long-distance preference?",
       "answer": "Single-mode fiber with the smaller core",
       "options": [
         "Single-mode fiber with the smaller core",
         "Multimode fiber because a larger core always means a longer reach",
         "Either type because core size can never affect light propagation",
-        "Single-mode because its core is larger than multimode\u2019s core"
+        "Single-mode because its core is larger than multimode’s core"
       ],
-      "explain": "The guide links single-mode\u2019s small core with longer distances and multimode\u2019s larger core with shorter distances. Actual reach also depends on the equipment.",
+      "explain": "The guide links single-mode’s small core with longer distances and multimode’s larger core with shorter distances. Actual reach also depends on the equipment.",
       "sourceId": "q77",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u85",
@@ -1304,7 +1304,7 @@
       "explain": "The receiver must detect a physical change, such as an electrical signal or light pulse, to recover the data values.",
       "sourceId": "q85",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u91",
@@ -1320,12 +1320,12 @@
       "explain": "Bandwidth efficiency alone is not enough. A good signal must also be detectable and resist noise so the receiver can recover the information.",
       "sourceId": "q91",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u96",
       "ch": 2,
-      "q": "A modulation method changes both a wave\u2019s amplitude and phase to carry more bits. Which method is it?",
+      "q": "A modulation method changes both a wave’s amplitude and phase to carry more bits. Which method is it?",
       "answer": "QAM",
       "options": [
         "QAM",
@@ -1336,7 +1336,7 @@
       "explain": "QAM combines amplitude and phase changes. Using more closely spaced signal states can improve bandwidth efficiency but makes noise more troublesome.",
       "sourceId": "q96",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u102",
@@ -1352,7 +1352,7 @@
       "explain": "TDM divides access by time. FDM divides the available frequency range so signals can occupy different bands.",
       "sourceId": "q102",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u111",
@@ -1368,7 +1368,7 @@
       "explain": "The data-link layer organizes communication over a local link. Physical sends the signals, while Network/IP handles addressing and routing across networks.",
       "sourceId": "q111",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u118",
@@ -1377,14 +1377,14 @@
       "answer": "A NIC",
       "options": [
         "A NIC",
-        "Only a cable, because the cable itself provides the host\u2019s MAC interface",
+        "Only a cable, because the cable itself provides the host’s MAC interface",
         "Only a switch port, with no interface hardware at the host",
-        "Only a routing table, which replaces the host\u2019s physical network interface"
+        "Only a routing table, which replaces the host’s physical network interface"
       ],
-      "explain": "The NIC is the host\u2019s network interface hardware. The cable carries the signal; it does not replace the host interface.",
+      "explain": "The NIC is the host’s network interface hardware. The cable carries the signal; it does not replace the host interface.",
       "sourceId": "q118",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u122",
@@ -1400,7 +1400,7 @@
       "explain": "A broadcast distributes the frame throughout the local broadcast domain, making it useful when the appropriate responder is not yet known.",
       "sourceId": "q122",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u125",
@@ -1416,7 +1416,7 @@
       "explain": "CSMA/CD includes collision detection and recovery. Stopping and waiting before retrying reduces the chance of immediately colliding again.",
       "sourceId": "q125",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u134",
@@ -1432,7 +1432,7 @@
       "explain": "1500 bytes is the payload. Adding 14 bytes of header and 4 bytes of FCS gives 1518 bytes. Preamble/SFD is excluded from that count.",
       "sourceId": "q134",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u136",
@@ -1448,12 +1448,12 @@
       "explain": "The Frame Check Sequence detects transmission errors. The address fields identify the sender and receiver; preamble/SFD helps synchronize and identify the start.",
       "sourceId": "q136",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u144",
       "ch": 3,
-      "q": "In the guide\u2019s traditional MAC-address structure, the first half identifies the manufacturer allocation. How many bits remain for the interface-specific half?",
+      "q": "In the guide’s traditional MAC-address structure, the first half identifies the manufacturer allocation. How many bits remain for the interface-specific half?",
       "answer": "24 bits",
       "options": [
         "24 bits",
@@ -1464,7 +1464,7 @@
       "explain": "A MAC address has 48 bits total. The traditional split is 24 bits for the OUI and 24 bits for the interface identifier within that allocation.",
       "sourceId": "q144",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u151",
@@ -1480,7 +1480,7 @@
       "explain": "The 1s are in the 8, 4 and 1 positions. Add them: 8 + 4 + 1 = 13. Do not read binary digits as a decimal number.",
       "sourceId": "q151",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u161",
@@ -1496,7 +1496,7 @@
       "explain": "Switches learn MAC address locations and selectively forward known unicast frames. Hubs repeat incoming signals to other ports.",
       "sourceId": "q161",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u166",
@@ -1512,7 +1512,7 @@
       "explain": "Spanning Tree Protocol prevents switching loops by blocking selected redundant forwarding paths. Redundancy can remain available without every path forwarding at once.",
       "sourceId": "q166",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u170",
@@ -1528,7 +1528,7 @@
       "explain": "A star has a central connection point. A bus uses one shared main cable, a ring forms a circle, and a mesh has multiple interconnections.",
       "sourceId": "q170",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u177",
@@ -1544,7 +1544,7 @@
       "explain": "Routing tables associate destination networks with forwarding information such as the next hop. Routing selects how to move a packet toward its destination.",
       "sourceId": "q177",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u180",
@@ -1560,7 +1560,7 @@
       "explain": "The two addresses serve different layers and scopes. This separation supports layering independence and communication beyond a single local link.",
       "sourceId": "q180",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u185",
@@ -1571,12 +1571,12 @@
         "Different hosts/interfaces",
         "Different subnets even though the network bits are identical",
         "Different manufacturer allocations within a MAC address",
-        "Different prefix lengths regardless of the address\u2019s stated mask"
+        "Different prefix lengths regardless of the address’s stated mask"
       ],
       "explain": "The network portion identifies the subnet; the host portion distinguishes hosts/interfaces within it.",
       "sourceId": "q185",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u190",
@@ -1589,10 +1589,10 @@
         "12 host bits and 4094 total addresses",
         "20 host bits and 1,048,576 total addresses"
       ],
-      "explain": "The same rule as the guide\u2019s /17 example applies: 32 \u2212 20 = 12, then 2^12 = 4096 total addresses. Subtracting two gives the traditional usable-host count, not the total.",
+      "explain": "The same rule as the guide’s /17 example applies: 32 − 20 = 12, then 2^12 = 4096 total addresses. Subtracting two gives the traditional usable-host count, not the total.",
       "sourceId": "q190",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u198",
@@ -1608,7 +1608,7 @@
       "explain": "Seven bits fall short. Eight bits provide 2^8 = 256 combinations, enough for 130 objects; always choose the smallest power of two that reaches the target.",
       "sourceId": "q198",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u208",
@@ -1624,7 +1624,7 @@
       "explain": "Classful addressing uses fixed sizes that can waste addresses. CIDR varies the number of network bits to make block sizes more flexible.",
       "sourceId": "q208",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u215",
@@ -1640,7 +1640,7 @@
       "explain": "IPv6 uses 128-bit addresses written with hexadecimal groups separated by colons. The double colon represents a run of zero groups; IPv4 uses dotted decimal notation.",
       "sourceId": "q215",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u222",
@@ -1653,10 +1653,10 @@
         "Pathping only as a cable test, without route discovery",
         "Traceroute only to change the route rather than display its hops"
       ],
-      "explain": "Traceroute discovers the path\u2019s hops. Ping checks reachability, while pathping combines route discovery with loss/latency measurement.",
+      "explain": "Traceroute discovers the path’s hops. Ping checks reachability, while pathping combines route discovery with loss/latency measurement.",
       "sourceId": "q222",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u227",
@@ -1667,17 +1667,17 @@
         "To keep allocation organized and avoid overlapping public address assignments",
         "To intentionally assign identical public blocks to unrelated organizations",
         "To make public allocations independent with no coordination or records",
-        "To allocate public IP addresses based only on a NIC\u2019s manufacturer"
+        "To allocate public IP addresses based only on a NIC’s manufacturer"
       ],
       "explain": "Regional Internet Registries manage allocations in geographic regions as part of a coordinated system, helping preserve uniqueness of public address space.",
       "sourceId": "q227",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u231",
       "ch": 12,
-      "q": "A cheap network repeatedly stops employees from working. Why might it fail the guide\u2019s design goals despite a low purchase price?",
+      "q": "A cheap network repeatedly stops employees from working. Why might it fail the guide’s design goals despite a low purchase price?",
       "answer": "Downtime and maintenance contribute to the total cost.",
       "options": [
         "Downtime and maintenance contribute to the total cost.",
@@ -1688,7 +1688,7 @@
       "explain": "The design goal includes current and foreseeable needs and cost over time. Unreliable service can create substantial costs from lost work.",
       "sourceId": "q231",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u233",
@@ -1704,7 +1704,7 @@
       "explain": "Requirements analysis identifies users, applications, locations and constraints so the design can provide capacity where it is needed.",
       "sourceId": "q233",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u235",
@@ -1720,7 +1720,7 @@
       "explain": "Logical design describes organization and addressing. The choice of actual media and equipment belongs to physical design.",
       "sourceId": "q235",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u237",
@@ -1736,7 +1736,7 @@
       "explain": "The guide asks for counts of desktops, servers, shared devices and devices with special needs in each area, so their requirements are included in planning.",
       "sourceId": "q237",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u239",
@@ -1752,12 +1752,12 @@
       "explain": "Physical design specifies the media, devices and link technologies that implement the logical design.",
       "sourceId": "q239",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u241",
       "ch": 12,
-      "q": "A network connects devices across several floors within one building. Which description fits the guide\u2019s scope categories?",
+      "q": "A network connects devices across several floors within one building. Which description fits the guide’s scope categories?",
       "answer": "Building network",
       "options": [
         "Building network",
@@ -1768,12 +1768,12 @@
       "explain": "A building network is defined by the single-building scope. Multiple nearby buildings form a campus network.",
       "sourceId": "q241",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u242",
       "ch": 12,
-      "q": "One cable run joins rooms on different floors, while another goes from a floor\u2019s network room to a desk. How are they classified?",
+      "q": "One cable run joins rooms on different floors, while another goes from a floor’s network room to a desk. How are they classified?",
       "answer": "Vertical/backbone first; horizontal second",
       "options": [
         "Vertical/backbone first; horizontal second",
@@ -1784,7 +1784,7 @@
       "explain": "Backbone/vertical cabling connects floors or telecommunications rooms. Horizontal cabling serves work areas from the room on a floor.",
       "sourceId": "q242",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u246",
@@ -1797,10 +1797,10 @@
         "Showing server locations without considering their communication paths",
         "Optimizing only individual desktop ports, not communication among servers"
       ],
-      "explain": "The guide\u2019s data-center topic concerns how equipment is interconnected to support fast and reliable server communication.",
+      "explain": "The guide’s data-center topic concerns how equipment is interconnected to support fast and reliable server communication.",
       "sourceId": "q246",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u249",
@@ -1816,7 +1816,7 @@
       "explain": "The guide defines a campus network as connecting multiple buildings and describes a three-layer hierarchical design.",
       "sourceId": "q249",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u251",
@@ -1832,7 +1832,7 @@
       "explain": "Core is the campus backbone. Access serves end devices, while Presentation and Session are OSI layers rather than campus design tiers.",
       "sourceId": "q251",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u259",
@@ -1848,7 +1848,7 @@
       "explain": "Distribution aggregates access networks and handles administrative functions and policies. The guide associates subnet organization and security controls with this layer.",
       "sourceId": "q259",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u260",
@@ -1864,7 +1864,7 @@
       "explain": "The access layer provides user/device connectivity. Core supplies fast transport between major network regions rather than individual user ports.",
       "sourceId": "q260",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u261",
@@ -1880,7 +1880,7 @@
       "explain": "The guide describes an enterprise network as connecting geographically scattered organizational networks, with ISPs providing WAN connectivity.",
       "sourceId": "q261",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u263",
@@ -1896,7 +1896,7 @@
       "explain": "Maintenance includes regular inspection, testing, servicing, monitoring and updates, helping keep the network reliable over time.",
       "sourceId": "q263",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u264",
@@ -1906,13 +1906,13 @@
       "options": [
         "SNMP",
         "STP, because it polls fan speeds and temperatures",
-        "ICMP, because it is the guide\u2019s device-management polling protocol",
+        "ICMP, because it is the guide’s device-management polling protocol",
         "SNMP, but only for changing signal amplitude rather than querying device information"
       ],
       "explain": "SNMP allows management software to obtain information from managed network devices. Regular polling can reveal abnormal values needing attention.",
       "sourceId": "q264",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u266",
@@ -1925,10 +1925,10 @@
         "A MAC-learning table containing only switch-port mappings",
         "An MIB containing only raw user payload, with no management objects"
       ],
-      "explain": "The Management Information Base contains structured management information. It provides information used for monitoring and fault management, rather than carrying a user\u2019s Ethernet payload.",
+      "explain": "The Management Information Base contains structured management information. It provides information used for monitoring and fault management, rather than carrying a user’s Ethernet payload.",
       "sourceId": "q266",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u267",
@@ -1944,7 +1944,7 @@
       "explain": "Standards provide agreed rules and guidelines. Following common specifications makes independent implementations more likely to work together.",
       "sourceId": "q267",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     },
     {
       "id": "u268",
@@ -1960,7 +1960,7 @@
       "explain": "Working groups develop requirements and evaluate proposals toward a shared standard. The exact approval process varies by organization.",
       "sourceId": "q268",
       "kind": "understanding",
-      "note": "Check your understanding \u00b7 Based on your guide"
+      "note": "Check your understanding · Based on your guide"
     }
   ],
   "vocabDistractors": {
@@ -2110,7 +2110,7 @@
       "The intentional sharing of time slots by users"
     ],
     "Bandwidth": [
-      "The elapsed delay for a packet\u2019s round trip",
+      "The elapsed delay for a packet’s round trip",
       "The number of bits in a MAC address",
       "The intensity of one signal at a single instant"
     ],
@@ -2137,7 +2137,7 @@
     "Cat 5e": [
       "Copper category commonly rated for 10 Gbps at 100 m",
       "Copper category intended for 40 Gbps at 100 m",
-      "A fiber category with an approximately 9 \u03bcm core"
+      "A fiber category with an approximately 9 μm core"
     ],
     "Cat 6": [
       "Copper category guaranteeing 10 Gbps over every 100 m installation",
@@ -2170,12 +2170,12 @@
       "A material with no role in keeping light within the core"
     ],
     "Single-mode fiber": [
-      "A large 50/62.5 \u03bcm core carrying many light paths",
-      "A 9 \u03bcm copper conductor carrying electrical signals",
+      "A large 50/62.5 μm core carrying many light paths",
+      "A 9 μm copper conductor carrying electrical signals",
       "A fiber type whose reach is always exactly one meter"
     ],
     "Multimode fiber": [
-      "A roughly 9 \u03bcm core intended for only one guided mode",
+      "A roughly 9 μm core intended for only one guided mode",
       "A copper cable containing multiple twisted pairs",
       "Fiber that must always reach farther than single-mode at the same rate"
     ],
@@ -2190,7 +2190,7 @@
       "The number of host bits in an address"
     ],
     "Phase": [
-      "The magnitude of a wave\u2019s height",
+      "The magnitude of a wave’s height",
       "The rate at which complete wave cycles occur",
       "The amount of packet payload in a frame"
     ],
@@ -2221,7 +2221,7 @@
     ],
     "Multiplexing": [
       "Giving every user a permanently separate physical medium",
-      "Sending one user\u2019s signal while forbidding all other users permanently",
+      "Sending one user’s signal while forbidding all other users permanently",
       "Converting a MAC address into an IP address"
     ],
     "FDM": [
@@ -2250,7 +2250,7 @@
       "A manufacturer identifier stored in the first half of a MAC address"
     ],
     "Payload": [
-      "Only the protocol\u2019s header and trailer overhead",
+      "Only the protocol’s header and trailer overhead",
       "Only the field used for error detection",
       "The synchronization pattern preceding the frame"
     ],
@@ -2306,7 +2306,7 @@
     ],
     "Preamble": [
       "The 4-byte field at the end that detects errors",
-      "The 6-byte field identifying the frame\u2019s receiver",
+      "The 6-byte field identifying the frame’s receiver",
       "The 2-byte field identifying the carried protocol"
     ],
     "SFD": [
@@ -2325,7 +2325,7 @@
       "The manufacturer identifier alone, excluding the rest of the MAC"
     ],
     "EtherType": [
-      "A field identifying only the sender\u2019s manufacturer",
+      "A field identifying only the sender’s manufacturer",
       "The checksum used to detect frame corruption",
       "The time slot assigned to an Ethernet transmitter"
     ],
@@ -2371,12 +2371,12 @@
     ],
     "Binary": [
       "Base-10 notation using the digits 0 through 9",
-      "Base-16 notation using digits and A\u2013F",
+      "Base-16 notation using digits and A–F",
       "Base-2 notation allowing digits 0, 1 and 2"
     ],
     "Decimal": [
       "Base-2 notation using only 0 and 1",
-      "Base-16 notation using 0\u20139 and A\u2013F",
+      "Base-16 notation using 0–9 and A–F",
       "Base-10 notation in which place values are powers of 2"
     ],
     "Hexadecimal": [
@@ -2437,7 +2437,7 @@
     "Routing": [
       "Repeating every Ethernet frame to all local ports",
       "Selecting a manufacturer OUI for a NIC",
-      "Choosing a signal\u2019s amplitude without considering a destination"
+      "Choosing a signal’s amplitude without considering a destination"
     ],
     "Routing table": [
       "A table containing only NIC manufacturer OUIs",
@@ -2481,7 +2481,7 @@
     ],
     "Subnet mask": [
       "A pattern with 0s for network bits and 1s for host bits",
-      "The MAC address of the subnet\u2019s default router",
+      "The MAC address of the subnet’s default router",
       "An arbitrary 48-bit identifier with no relation to the prefix length"
     ],
     "Network address": [
@@ -2555,9 +2555,9 @@
       "Address Registry for Internet Nodes"
     ],
     "RIPE NCC": [
-      "R\u00e9seaux IP Europ\u00e9ens Network Control Council",
+      "Réseaux IP Européens Network Control Council",
       "Regional IP Exchange Network Coordination Centre",
-      "R\u00e9seaux Internet Protocol Network Connection Committee"
+      "Réseaux Internet Protocol Network Connection Committee"
     ],
     "APNIC": [
       "Asia Pacific Network Internet Council",
@@ -2602,11 +2602,11 @@
     "Horizontal cabling": [
       "Backbone links joining telecommunications rooms on different floors",
       "WAN links joining distant cities",
-      "Only the cable inside a fiber\u2019s optical core"
+      "Only the cable inside a fiber’s optical core"
     ],
     "Vertical cabling": [
-      "Runs from a floor\u2019s network room to individual desks on that floor",
-      "Only short patch leads joining a user\u2019s keyboard and computer",
+      "Runs from a floor’s network room to individual desks on that floor",
+      "Only short patch leads joining a user’s keyboard and computer",
       "The logical network/host split in an IP address"
     ],
     "Patch panel": [
@@ -2615,7 +2615,7 @@
       "An application that assigns MAC addresses to remote servers"
     ],
     "Telecommunications room": [
-      "A user\u2019s desktop work area rather than a cable/network equipment space",
+      "A user’s desktop work area rather than a cable/network equipment space",
       "The logical host portion of an IP address",
       "A regional public-address registry serving many organizations"
     ],
@@ -2635,7 +2635,7 @@
       "Each spine connects only to one leaf with no shared spine connectivity"
     ],
     "Campus network": [
-      "An organization\u2019s sites distributed across distant cities only",
+      "An organization’s sites distributed across distant cities only",
       "A single host connected to one cable with no buildings involved",
       "A network restricted to one individual room by definition"
     ],
@@ -2661,8 +2661,8 @@
     ],
     "Enterprise network": [
       "Only a single Ethernet collision domain, never multiple locations",
-      "Only one building\u2019s horizontal cabling by definition",
-      "A regional registry\u2019s allocation rules, not an organization\u2019s network"
+      "Only one building’s horizontal cabling by definition",
+      "A regional registry’s allocation rules, not an organization’s network"
     ],
     "WAN": [
       "Wireless Access Node",
@@ -2710,14 +2710,14 @@
       "Object Index Directory"
     ],
     "Polling": [
-      "A device sending an unsolicited notification without a manager\u2019s request",
+      "A device sending an unsolicited notification without a manager’s request",
       "A manager permanently disabling all device measurements",
       "A switch learning MAC addresses solely from Ethernet frames"
     ],
     "SNMP agent": [
       "The central manager that sends every request to other devices",
       "The cable carrying raw bits between two hosts",
-      "An IP packet\u2019s network-prefix field"
+      "An IP packet’s network-prefix field"
     ],
     "SNMP trap": [
       "A scheduled request from the manager asking for a reading",
@@ -2748,7 +2748,7 @@
       "id": "notes-1-1",
       "ch": 1,
       "title": "What is Layering & Why is it Used?",
-      "body": "* **Layering** means dividing the complex task of networking into separate, stacked levels, where each level has one specific job.\n* **Why it\u2019s useful**:\n  1. **Modularity / Layer Independence**: You can upgrade or change one layer (e.g., changing the local connection from Wi-Fi to Ethernet, which changes Physical and Data Link details) without redesigning your web browser at the Application layer.\n  2. **Simplicity & Troubleshooting**: It breaks a massive problem into manageable parts, making it easy to isolate where a network failure is happening.\n  3. **Standardization**: Allows hardware and software from hundreds of different vendors to work together seamlessly.",
+      "body": "* **Layering** means dividing the complex task of networking into separate, stacked levels, where each level has one specific job.\n* **Why it’s useful**:\n  1. **Modularity / Layer Independence**: You can upgrade or change one layer (e.g., changing the local connection from Wi-Fi to Ethernet, which changes Physical and Data Link details) without redesigning your web browser at the Application layer.\n  2. **Simplicity & Troubleshooting**: It breaks a massive problem into manageable parts, making it easy to isolate where a network failure is happening.\n  3. **Standardization**: Allows hardware and software from hundreds of different vendors to work together seamlessly.",
       "remember": "Remember: Each layer has its own job. You can investigate one job without having to understand the whole network at once.",
       "sources": []
     },
@@ -2765,7 +2765,7 @@
       "ch": 1,
       "title": "The OSI Model (The Theoretical Blueprint)",
       "body": "* **OSI Model (Open Systems Interconnection)**: A 7-layer reference model developed to standardize networking so equipment from any vendor could interoperate. While TCP/IP is what we actually use, OSI is the standard theoretical blueprint.\n* **The 7 Layers (Top-to-Bottom)**:\n  1. **Application**: Network services for software.\n  2. **Presentation**: Data formatting, compression, and encryption/decryption.\n  3. **Session**: Establishes, manages, and terminates communication sessions between hosts.\n  4. **Transport**: End-to-end communication between application processes. TCP adds reliable delivery and flow control; not every transport protocol guarantees these.\n  5. **Network**: IP addressing and global routing.\n  6. **Data Link**: Local node-to-node framing and error detection.\n  7. **Physical**: Hardware signaling and bit transmission.\n* **Mnemonic to Remember 7 to 1**: **A**ll **P**eople **S**eem **T**o **N**eed **D**ata **P**rocessing.\n* **Mnemonic to Remember 1 to 7**: **P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way.",
-      "remember": "Remember: OSI separates seven jobs. Presentation changes the data\u2019s format; Session manages the conversation.",
+      "remember": "Remember: OSI separates seven jobs. Presentation changes the data’s format; Session manages the conversation.",
       "sources": []
     },
     {
@@ -2814,7 +2814,7 @@
       "id": "notes-2-3",
       "ch": 2,
       "title": "Fiber Optics: Single-Mode vs. Multi-Mode",
-      "body": "**Optical fiber** is a thin strand of glass that conducts light using **Total Internal Reflection**. Light strikes the boundary between the inner core and outer cladding at an angle greater than the critical angle, trapping the light inside the core so it travels vast distances without escaping.\n\nWhy is Fiber better than Copper? Fiber can support high bandwidth and long links and is immune to electromagnetic interference. Reach still depends on the fiber, optics and data rate; sufficiently long links need amplification or regeneration.\n\n| Feature | Single-Mode Fiber (SMF) | Multi-Mode Fiber (MMF) |\n| :--- | :--- | :--- |\n| **Core Diameter** | Very small (**9 \u00b5m**) | Larger (**50 \u2013 62.5 \u00b5m**) |\n| **Light Source** | Laser | LED or laser, including VCSELs in many modern links |\n| **Distance** | **Very Long Distances** (miles/km across cities/oceans) | **Short Distances** (inside a building or data center) |\n| **Cost** | More expensive optics/transceivers | Lower cost optics |",
+      "body": "**Optical fiber** is a thin strand of glass that conducts light using **Total Internal Reflection**. Light strikes the boundary between the inner core and outer cladding at an angle greater than the critical angle, trapping the light inside the core so it travels vast distances without escaping.\n\nWhy is Fiber better than Copper? Fiber can support high bandwidth and long links and is immune to electromagnetic interference. Reach still depends on the fiber, optics and data rate; sufficiently long links need amplification or regeneration.\n\n| Feature | Single-Mode Fiber (SMF) | Multi-Mode Fiber (MMF) |\n| :--- | :--- | :--- |\n| **Core Diameter** | Very small (**9 µm**) | Larger (**50 – 62.5 µm**) |\n| **Light Source** | Laser | LED or laser, including VCSELs in many modern links |\n| **Distance** | **Very Long Distances** (miles/km across cities/oceans) | **Short Distances** (inside a building or data center) |\n| **Cost** | More expensive optics/transceivers | Lower cost optics |",
       "remember": "Remember: A fiber guides light through its core. Single-mode usually suits longer links; multimode usually suits shorter ones.",
       "sources": [
         {
@@ -2835,7 +2835,7 @@
       "id": "notes-2-5",
       "ch": 2,
       "title": "Mathematical Limits & Multiplexing",
-      "body": "* **Shannon-Hartley Theorem**: Calculates the theoretical capacity for a bandwidth-limited channel with additive white Gaussian noise (Channel Capacity C in bits per second) over a noisy channel:\n**C = B \u00d7 log\u2082(1 + S/N)**\n  * B = Channel Bandwidth in Hertz (Hz).\n  * S/N = Signal-to-Noise Ratio (SNR), expressed as a linear power ratio, not decibels.\n  * *Takeaway*: Higher bandwidth (B) or cleaner signals (higher S/N) yield higher data capacity (C).\n\n* **Multiplexing**: Combining multiple separate signals onto a single shared physical medium to save cabling costs.\n  * **FDM (Frequency Division Multiplexing)**: Divides the channel into different **frequency bands** (like tuning radio stations or low/high pitches). Separates signals by frequency; those carriers can carry analog or digital information.\n  * **TDM (Time Division Multiplexing)**: Devices take **turns in time slots** to send data over the full frequency. Common in digital systems; its defining feature is division by time.",
+      "body": "* **Shannon-Hartley Theorem**: Calculates the theoretical capacity for a bandwidth-limited channel with additive white Gaussian noise (Channel Capacity C in bits per second) over a noisy channel:\n**C = B × log₂(1 + S/N)**\n  * B = Channel Bandwidth in Hertz (Hz).\n  * S/N = Signal-to-Noise Ratio (SNR), expressed as a linear power ratio, not decibels.\n  * *Takeaway*: Higher bandwidth (B) or cleaner signals (higher S/N) yield higher data capacity (C).\n\n* **Multiplexing**: Combining multiple separate signals onto a single shared physical medium to save cabling costs.\n  * **FDM (Frequency Division Multiplexing)**: Divides the channel into different **frequency bands** (like tuning radio stations or low/high pitches). Separates signals by frequency; those carriers can carry analog or digital information.\n  * **TDM (Time Division Multiplexing)**: Devices take **turns in time slots** to send data over the full frequency. Common in digital systems; its defining feature is division by time.",
       "remember": "Remember: Multiplexing lets several conversations share one medium. FDM separates frequencies; TDM separates turns in time.",
       "sources": []
     },
@@ -2872,7 +2872,7 @@
       "id": "notes-3-4",
       "ch": 3,
       "title": "MAC Address Structure & Hexadecimal Conversions",
-      "body": "A traditional Ethernet **MAC address** is 48 bits (6 bytes). Interfaces often have a factory-assigned address, but software can also set or randomize MAC addresses; they are not necessarily permanent.\n* **First 24 bits**: **OUI (Organizationally Unique Identifier)**\u2014assigned by IEEE to the manufacturer (e.g., Cisco, Broadcom).\n* **Last 24 bits**: Unique extension/serial number assigned by the manufacturer.\n\n#### Number Conversion Practice for the Exam:\n1. **Binary to Decimal**: Sum the positional powers of 2 (128, 64, 32, 16, 8, 4, 2, 1) where a 1 appears:\n**10101101\u2082 = 128 + 32 + 8 + 4 + 1 = 173\u2081\u2080**\n2. **Binary to Hexadecimal**: Group the 8 bits into two 4-bit nibbles (8, 4, 2, 1):\n**1010 1111\u2082 \u2192 1010 = A and 1111 = F \u2192 AF\u2081\u2086**",
+      "body": "A traditional Ethernet **MAC address** is 48 bits (6 bytes). Interfaces often have a factory-assigned address, but software can also set or randomize MAC addresses; they are not necessarily permanent.\n* **First 24 bits**: **OUI (Organizationally Unique Identifier)**—assigned by IEEE to the manufacturer (e.g., Cisco, Broadcom).\n* **Last 24 bits**: Unique extension/serial number assigned by the manufacturer.\n\n#### Number Conversion Practice for the Exam:\n1. **Binary to Decimal**: Sum the positional powers of 2 (128, 64, 32, 16, 8, 4, 2, 1) where a 1 appears:\n**10101101₂ = 128 + 32 + 8 + 4 + 1 = 173₁₀**\n2. **Binary to Hexadecimal**: Group the 8 bits into two 4-bit nibbles (8, 4, 2, 1):\n**1010 1111₂ → 1010 = A and 1111 = F → AF₁₆**",
       "remember": "Remember: A MAC address has six bytes. For number conversions, add binary place values or group bits into fours for hex.",
       "sources": []
     },
@@ -2880,7 +2880,7 @@
       "id": "notes-3-5",
       "ch": 3,
       "title": "Network Hardware & Topologies",
-      "body": "* **Hub vs. Switch**:\n  * **Hub (Layer 1)**: Dumb multiport repeater. A signal received on one port is repeated to the other ports. Creates a single large collision domain.\n  * **Switch (Layer 2)**: Intelligent device. Reads incoming Source MAC addresses to dynamically build a **MAC Address Table** (`[MAC Address \u2192 Switch Port]`). For a known unicast destination, forwards to the learned destination port. Broadcasts and unknown unicasts are flooded to other eligible ports in the same VLAN.\n* **Spanning Tree Protocol (STP)**:\n  * **Problem**: Redundant links between switches create switching **loops**, causing frames to circulate endlessly and crash the network.\n  * **Solution**: Invented by **Radia Perlman**, STP dynamically blocks redundant paths to create a single loop-free tree structure, automatically unblocking backup paths if a link fails.\n* **Topologies**:\n  * **Star**: All devices connect to a central switch. **Dominant topology today** because it offers superior fault tolerance, easy maintenance, and security.\n  * **Bus**: Single central backbone cable with terminators at both ends.\n  * **Ring**: Devices connected in a closed circle.\n  * **Mesh**: Devices have redundant connections to each other (Full Mesh or Partial Mesh).",
+      "body": "* **Hub vs. Switch**:\n  * **Hub (Layer 1)**: Dumb multiport repeater. A signal received on one port is repeated to the other ports. Creates a single large collision domain.\n  * **Switch (Layer 2)**: Intelligent device. Reads incoming Source MAC addresses to dynamically build a **MAC Address Table** (`[MAC Address → Switch Port]`). For a known unicast destination, forwards to the learned destination port. Broadcasts and unknown unicasts are flooded to other eligible ports in the same VLAN.\n* **Spanning Tree Protocol (STP)**:\n  * **Problem**: Redundant links between switches create switching **loops**, causing frames to circulate endlessly and crash the network.\n  * **Solution**: Invented by **Radia Perlman**, STP dynamically blocks redundant paths to create a single loop-free tree structure, automatically unblocking backup paths if a link fails.\n* **Topologies**:\n  * **Star**: All devices connect to a central switch. **Dominant topology today** because it offers superior fault tolerance, easy maintenance, and security.\n  * **Bus**: Single central backbone cable with terminators at both ends.\n  * **Ring**: Devices connected in a closed circle.\n  * **Mesh**: Devices have redundant connections to each other (Full Mesh or Partial Mesh).",
       "remember": "Remember: A hub repeats signals. A switch learns which MAC addresses are on which ports. STP prevents loops when switches have redundant links.",
       "sources": [
         {
@@ -2893,7 +2893,7 @@
       "id": "notes-4-1",
       "ch": 4,
       "title": "Why do we need IP Addresses when we already have MAC Addresses?",
-      "body": "* **MAC Address (Layer 2)**: Link-layer interface address; often factory-assigned but not necessarily permanent. It only works for **local hop-by-hop delivery** within a single network segment.\n* **IP Address (Layer 3)**: Logical, hierarchical address that identifies the device\u2019s network location for routing, not its physical geographic location across interconnected networks.\n* **Layering Independence**: Allows you to replace a network card (changing the MAC address) without changing the computer's logical IP address or server configurations.",
+      "body": "* **MAC Address (Layer 2)**: Link-layer interface address; often factory-assigned but not necessarily permanent. It only works for **local hop-by-hop delivery** within a single network segment.\n* **IP Address (Layer 3)**: Logical, hierarchical address that identifies the device’s network location for routing, not its physical geographic location across interconnected networks.\n* **Layering Independence**: Allows you to replace a network card (changing the MAC address) without changing the computer's logical IP address or server configurations.",
       "remember": "Remember: MAC helps with the next local delivery. IP helps routers choose a path across networks.",
       "sources": []
     },
@@ -2901,7 +2901,7 @@
       "id": "notes-4-2",
       "ch": 4,
       "title": "IP Address Structure & Math Rules",
-      "body": "An IPv4 address consists of **32 bits** divided into two parts: `[Network Portion | Host Portion]`.\n\n#### Exam Math Problems:\n1. **How many objects can be labeled with n bits?**\n**Number of unique labels = 2\u207f**\n   * *Example*: With 10 bits, 2^10 = 1,024 unique objects can be labeled.\n   * *Example*: To label 200 objects, find the smallest power of 2 that covers 200: 2^7 = 128 (too small), 2^8 = 256 (sufficient). Answer = **8 bits**.\n\n2. **CIDR Subnet Calculations (Classless Inter-Domain Routing)**:\n   * Classful addressing (Classes A, B, C) was rigid and wasted millions of addresses. CIDR replaced it by allowing variable prefix lengths using slash notation (e.g., `/17`).\n   * *Exam Problem*: For network `73.5.0.0/17`:\n     * Total IPv4 bits = 32.\n     * Network bits = 17.\n     * Host bits = 32 - 17 = **15 host bits**.\n     * **Total IP Addresses**: 2^15 = **32,768  addresses**.\n     * **Usable Host Addresses**: 2^15 - 2 = **32,766  usable hosts**.\n     * *(Why subtract 2? We reserve the first address as the Network ID and the last address as the Subnet Broadcast Address)*.\n\nThe subtract-two rule is for traditional IPv4 subnets; /31 point-to-point links and /32 host routes are exceptions.",
+      "body": "An IPv4 address consists of **32 bits** divided into two parts: `[Network Portion | Host Portion]`.\n\n#### Exam Math Problems:\n1. **How many objects can be labeled with n bits?**\n**Number of unique labels = 2ⁿ**\n   * *Example*: With 10 bits, 2^10 = 1,024 unique objects can be labeled.\n   * *Example*: To label 200 objects, find the smallest power of 2 that covers 200: 2^7 = 128 (too small), 2^8 = 256 (sufficient). Answer = **8 bits**.\n\n2. **CIDR Subnet Calculations (Classless Inter-Domain Routing)**:\n   * Classful addressing (Classes A, B, C) was rigid and wasted millions of addresses. CIDR replaced it by allowing variable prefix lengths using slash notation (e.g., `/17`).\n   * *Exam Problem*: For network `73.5.0.0/17`:\n     * Total IPv4 bits = 32.\n     * Network bits = 17.\n     * Host bits = 32 - 17 = **15 host bits**.\n     * **Total IP Addresses**: 2^15 = **32,768  addresses**.\n     * **Usable Host Addresses**: 2^15 - 2 = **32,766  usable hosts**.\n     * *(Why subtract 2? We reserve the first address as the Network ID and the last address as the Subnet Broadcast Address)*.\n\nThe subtract-two rule is for traditional IPv4 subnets; /31 point-to-point links and /32 host routes are exceptions.",
       "remember": "Remember: The slash number tells you how many bits are network bits. Subtract it from 32 to find the IPv4 host bits.",
       "sources": [
         {
@@ -2914,7 +2914,7 @@
       "id": "notes-4-3",
       "ch": 4,
       "title": "IPv4 vs. IPv6",
-      "body": "* **IPv4**: **32 bits** long, written in 4 dotted-decimal octets (e.g., `192.168.1.1`). Yields \u2248 4.3  billion addresses, The address space is limited, and new-address allocation is constrained.\n* **IPv6**: **128 bits** long, written in hexadecimal separated by colons. Yields 2^128 \u2248 3.4 \u00d7 10^38 addresses.\n  * **Shortening Rules**:\n    1. Omit leading zeros in any 16-bit block (`0011` \u2192 `11`, `0db8` \u2192 `db8`).\n    2. Replace continuous blocks of zeros with a single double-colon `::` **(can only be done ONCE in an address)**.\n    * *Example*: `2001:0db8:aaaa:0000:0000:0000:eeee:0001` shortens to `2001:db8:aaaa::eeee:1`.",
+      "body": "* **IPv4**: **32 bits** long, written in 4 dotted-decimal octets (e.g., `192.168.1.1`). Yields ≈ 4.3  billion addresses, The address space is limited, and new-address allocation is constrained.\n* **IPv6**: **128 bits** long, written in hexadecimal separated by colons. Yields 2^128 ≈ 3.4 × 10^38 addresses.\n  * **Shortening Rules**:\n    1. Omit leading zeros in any 16-bit block (`0011` → `11`, `0db8` → `db8`).\n    2. Replace continuous blocks of zeros with a single double-colon `::` **(can only be done ONCE in an address)**.\n    * *Example*: `2001:0db8:aaaa:0000:0000:0000:eeee:0001` shortens to `2001:db8:aaaa::eeee:1`.",
       "remember": "Remember: IPv4 is 32 bits; IPv6 is 128. In IPv6, :: is a shortcut for consecutive zero groups and can appear only once.",
       "sources": []
     },
@@ -2938,7 +2938,7 @@
       "id": "notes-12-2",
       "ch": 12,
       "title": "Structured Cabling Components",
-      "body": "Building cabling is organized into standardized facilities:\n* **Demarc (Demarcation Point)**: The exact physical point where the Telecom ISP\u2019s network ends and the customer\u2019s internal building network begins.\n* **MDF (Main Distribution Frame)**: The primary central telecommunications room housing core switches, main patch panels, and ISP handoffs.\n* **IDF (Intermediate Distribution Frame)**: Secondary wiring closets located on individual floors that connect local devices and uplink back to the MDF.\n* **Horizontal Cabling**: Cabling running from floor telecommunications rooms (IDFs) out to work area wall outlets. **For a typical structured copper channel: 90 meters of permanent cabling + 10 meters of patch cords = 100 meters. Specific standards, including Cat 8, have different limits**.\n* **Vertical / Backbone Cabling**: High-capacity backbone links (typically fiber) connecting the MDF across floors to IDFs or adjacent buildings.",
+      "body": "Building cabling is organized into standardized facilities:\n* **Demarc (Demarcation Point)**: The exact physical point where the Telecom ISP’s network ends and the customer’s internal building network begins.\n* **MDF (Main Distribution Frame)**: The primary central telecommunications room housing core switches, main patch panels, and ISP handoffs.\n* **IDF (Intermediate Distribution Frame)**: Secondary wiring closets located on individual floors that connect local devices and uplink back to the MDF.\n* **Horizontal Cabling**: Cabling running from floor telecommunications rooms (IDFs) out to work area wall outlets. **For a typical structured copper channel: 90 meters of permanent cabling + 10 meters of patch cords = 100 meters. Specific standards, including Cat 8, have different limits**.\n* **Vertical / Backbone Cabling**: High-capacity backbone links (typically fiber) connecting the MDF across floors to IDFs or adjacent buildings.",
       "remember": "Remember: Horizontal goes to work areas; backbone joins telecommunications spaces. MDF is the main distribution point and IDFs serve other areas.",
       "sources": []
     },
@@ -2975,6 +2975,54 @@
           "url": "https://www.ietf.org/process/process/"
         }
       ]
+    },
+    {
+      "id": "teach-convert-binary-decimal",
+      "ch": 3,
+      "title": "Binary → decimal · step by step",
+      "body": "#### Start with the names\nChapter 3 uses binary and hexadecimal to understand MAC addresses. Chapter 4 uses binary for IP addresses. Decimal is the ordinary counting system you already use: 0, 1, 2 … 10 … 173. Binary writes the same quantities using only 0 and 1. Converting changes how we write a number, not its size.\n\n#### Each position has a value\nA bit is one binary digit: either 0 or 1. In an eight-bit number, the positions are worth 128, 64, 32, 16, 8, 4, 2, 1 from left to right. Start at 1 on the RIGHT and double each time you move left. These values are fixed; do not rearrange them.\n\n#### Line up the digits\nExample: 10101101.\nPlace values: 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1\nBinary digits:     1 |  0 |  1 |  0 | 1 | 1 | 0 | 1\nA 1 means “include this value.” A 0 means “skip this value.” Think of each digit as an on/off switch for the value above it.\n\n#### Add only the switched-on values\nFor 10101101, include 128, skip 64, include 32, skip 16, include 8, include 4, skip 2, include 1.\n128 + 32 = 160\n160 + 8 = 168\n168 + 4 = 172\n172 + 1 = 173\nSo 10101101 in binary is 173 in decimal. Do not count the 1s; add their POSITION values.\n\n#### One smaller example\n00000101 means 4 + 1 = 5. The zeros at the beginning do not add anything. That is why 101 and 00000101 have the same value. In networking we often keep all eight bits to show one byte clearly.",
+      "remember": "Remember: 00000101 means 4 + 1 = 5. The zeros at the beginning do not add anything. That is why 101 and 00000101 have the same value. In networking we often keep all eight bits to show one byte clearly.",
+      "sources": []
+    },
+    {
+      "id": "teach-convert-decimal-binary",
+      "ch": 3,
+      "title": "Decimal → binary · step by step",
+      "body": "#### What are we trying to build?\nWe want to write the ordinary number 173 using only 0s and 1s. For a number from 0 through 255, use eight positions: 128, 64, 32, 16, 8, 4, 2, 1. Think of picking value cards that add up to 173.\n\n#### The rule: can this value fit?\nStart with a remaining amount of 173. Move from the biggest position to the smallest. If its value fits in the remaining amount, write 1 and subtract it. If it is too big, write 0 and keep the remaining amount. Write one digit for EVERY position.\n\n#### Build the first four digits\n128 fits in 173 → write 1; 173 − 128 = 45 left.\n64 is too big for 45 → write 0; still 45 left.\n32 fits in 45 → write 1; 45 − 32 = 13 left.\n16 is too big for 13 → write 0; still 13 left.\nSo far: 1010.\n\n#### Finish the last four digits\n8 fits in 13 → write 1; 13 − 8 = 5 left.\n4 fits in 5 → write 1; 5 − 4 = 1 left.\n2 is too big for 1 → write 0; still 1 left.\n1 fits in 1 → write 1; 1 − 1 = 0 left.\nLast four digits: 1101. Together: 10101101.\n\n#### Check your work\nRead the 1 positions back: 128 + 32 + 8 + 4 + 1 = 173. You got the starting number back, so your conversion works. If the remaining amount reaches zero early, fill every remaining position with 0.",
+      "remember": "Remember: Read the 1 positions back: 128 + 32 + 8 + 4 + 1 = 173. You got the starting number back, so your conversion works. If the remaining amount reaches zero early, fill every remaining position with 0.",
+      "sources": []
+    },
+    {
+      "id": "teach-convert-hex-binary",
+      "ch": 3,
+      "title": "Hexadecimal → binary · step by step",
+      "body": "#### Why are there letters in a number?\nHexadecimal, or hex, has 16 digit symbols. After 0–9 it uses A=10, B=11, C=12, D=13, E=14, F=15. These letters are number digits here. MAC addresses use hex because it is shorter to read than a long string of bits.\n\n#### One hex digit becomes four bits\nFour binary positions have values 8, 4, 2, 1. They can represent 0 through 15, exactly the values of one hex digit. So EVERY hex digit becomes exactly four bits, including zeros at the beginning.\n\n#### Convert A first\nExample: AF. Take A by itself. A means 10.\n8 fits in 10 → 1; 2 left.\n4 is too big → 0.\n2 fits → 1; 0 left.\n1 does not fit → 0.\nA becomes 1010.\n\n#### Convert F, then join\nF means 15. 8 + 4 + 2 + 1 = 15, so all four positions are on: 1111.\nA → 1010\nF → 1111\nKeep the original order and join: AF → 10101111. Do not add the two groups together.\n\n#### Keep all four bits for each digit\nFor 05: 0 becomes 0000 and 5 becomes 0101. Join them to get 00000101. Writing 5 as just 101 would lose the four-bit grouping that makes hex easy to read.",
+      "remember": "Remember: For 05: 0 becomes 0000 and 5 becomes 0101. Join them to get 00000101. Writing 5 as just 101 would lose the four-bit grouping that makes hex easy to read.",
+      "sources": []
+    },
+    {
+      "id": "teach-convert-binary-hex",
+      "ch": 3,
+      "title": "Binary → hexadecimal · step by step",
+      "body": "#### Make groups of four\nHex is a shorter way to write binary. Start at the RIGHT and split the bits into groups of four. Example: 10101111 becomes 1010 | 1111. Each group becomes ONE hex digit.\n\n#### Give each group its own values\nInside every four-bit group, the values are 8, 4, 2, 1. Start over with those values for the next group. Do not use 128, 64, 32, 16 for the first group when converting directly to hex.\n\n#### Convert the first group\n1010 uses the 8 position and the 2 position.\n8 + 2 = 10.\nHex uses A for 10, so 1010 becomes A.\nRemember the letter values: A=10, B=11, C=12, D=13, E=14, F=15.\n\n#### Convert the second group and join\n1111 uses all four positions.\n8 + 4 + 2 + 1 = 15 → F.\nFirst group A, second group F: the answer is AF. Preserve the order; AF and FA are different numbers.\n\n#### What if there are fewer than four bits?\nAdd zeros to the LEFT until the leftmost group has four bits. Example: 101 becomes 0101 → 4 + 1 = 5 → hex 5. Adding zeros to the right would change the number, so only pad on the left.",
+      "remember": "Remember: Add zeros to the LEFT until the leftmost group has four bits. Example: 101 becomes 0101 → 4 + 1 = 5 → hex 5. Adding zeros to the right would change the number, so only pad on the left.",
+      "sources": []
+    },
+    {
+      "id": "teach-convert-hex-decimal",
+      "ch": 3,
+      "title": "Hexadecimal → decimal · step by step",
+      "body": "#### Hex digits have positions too\nIn decimal, 23 means 2 tens plus 3 ones. In a two-digit hex number, the left digit counts groups of SIXTEEN and the right digit counts ones. Hex place values from right to left are 1, 16, 256, 4096. Each step left multiplies the place value by 16.\n\n#### Translate letters into values\nExample: AF. A means 10 and F means 15. Do not add 10 + 15 yet: the A is in the sixteens position, so its position matters.\n\n#### Multiply by the position, then add\nA in the sixteens position: 10 × 16 = 160.\nF in the ones position: 15 × 1 = 15.\n160 + 15 = 175.\nSo AF in hex is 175 in decimal.\n\n#### Try a number without letters\nHex 20 means 2 × 16 + 0 × 1 = 32 in decimal. It does NOT mean decimal twenty. Always check which number system the question names. You may also see hex written as 0x20; 0x is a label meaning hexadecimal.",
+      "remember": "Remember: Hex 20 means 2 × 16 + 0 × 1 = 32 in decimal. It does NOT mean decimal twenty. Always check which number system the question names. You may also see hex written as 0x20; 0x is a label meaning hexadecimal.",
+      "sources": []
+    },
+    {
+      "id": "teach-convert-decimal-hex",
+      "ch": 3,
+      "title": "Decimal → hexadecimal · step by step",
+      "body": "#### Use groups of sixteen\nFor the byte-sized values used here (0–255), ask: how many full groups of 16 fit in the decimal number, and how many ones are left over? The group count becomes the left hex digit. The leftover amount becomes the right digit.\n\n#### Find the full groups\nExample: 175.\n10 × 16 = 160 fits.\n11 × 16 = 176 is too much.\nSo 175 contains 10 full groups of 16.\n175 − 160 = 15 left over. This leftover is called the remainder.\n\n#### Turn both values into hex digits\nThe group count is 10 → A.\nThe remainder is 15 → F.\nWrite the group digit first, then the remainder digit: AF.\nCheck: 10 × 16 + 15 = 175.\n\n#### A smaller example and another route\nDecimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier.",
+      "remember": "Remember: Decimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier.",
+      "sources": []
     }
   ],
   "notesQuestions": [
@@ -3024,8 +3072,8 @@
         "Network",
         "Physical"
       ],
-      "explain": "OSI separates seven jobs. Presentation changes the data\u2019s format; Session manages the conversation.",
-      "remember": "Remember: OSI separates seven jobs. Presentation changes the data\u2019s format; Session manages the conversation.",
+      "explain": "OSI separates seven jobs. Presentation changes the data’s format; Session manages the conversation.",
+      "remember": "Remember: OSI separates seven jobs. Presentation changes the data’s format; Session manages the conversation.",
       "lessonId": "notes-1-3",
       "note": "Added-notes practice"
     },
@@ -3033,7 +3081,7 @@
       "id": "notes-quiz-3",
       "ch": 1,
       "kind": "notes",
-      "q": "What does a router do with a packet\u2019s link-layer wrapping?",
+      "q": "What does a router do with a packet’s link-layer wrapping?",
       "answer": "Removes the received frame and builds a frame for the next link.",
       "options": [
         "Removes the received frame and builds a frame for the next link.",
@@ -3088,8 +3136,8 @@
       "answer": "Coordinate Internet number resources and protocol-parameter registries.",
       "options": [
         "Coordinate Internet number resources and protocol-parameter registries.",
-        "Install every organization\u2019s switches.",
-        "Write every building\u2019s cabling plan.",
+        "Install every organization’s switches.",
+        "Write every building’s cabling plan.",
         "Operate every individual DNS server."
       ],
       "explain": "IANA coordinates shared number and parameter registries. Regional registries then handle regional IP allocations.",
@@ -3220,7 +3268,7 @@
       "id": "notes-quiz-14",
       "ch": 2,
       "kind": "notes",
-      "q": "In C = B \u00d7 log\u2082(1 + S/N), what does B represent?",
+      "q": "In C = B × log₂(1 + S/N), what does B represent?",
       "answer": "Channel bandwidth in hertz",
       "options": [
         "Channel bandwidth in hertz",
@@ -3343,7 +3391,7 @@
       "answer": "They support different scopes: routing across networks and local-link delivery.",
       "options": [
         "They support different scopes: routing across networks and local-link delivery.",
-        "Both describe a device\u2019s geographic street address.",
+        "Both describe a device’s geographic street address.",
         "Both are permanently fixed to the network card.",
         "MAC addresses replace the need for network prefixes."
       ],
@@ -3398,8 +3446,8 @@
         "The router must have no IP address.",
         "Every later router must be unreachable."
       ],
-      "explain": "Diagnostic probes depend on replies. Filtering or a router\u2019s response policy can hide a hop even when traffic still passes.",
-      "remember": "Remember: Diagnostic probes depend on replies. Filtering or a router\u2019s response policy can hide a hop even when traffic still passes.",
+      "explain": "Diagnostic probes depend on replies. Filtering or a router’s response policy can hide a hop even when traffic still passes.",
+      "remember": "Remember: Diagnostic probes depend on replies. Filtering or a router’s response policy can hide a hop even when traffic still passes.",
       "lessonId": "notes-4-4",
       "note": "Added-notes practice"
     },
@@ -3425,9 +3473,9 @@
       "ch": 12,
       "kind": "notes",
       "q": "What is the demarcation point?",
-      "answer": "The boundary between the provider\u2019s network and the customer\u2019s network",
+      "answer": "The boundary between the provider’s network and the customer’s network",
       "options": [
-        "The boundary between the provider\u2019s network and the customer\u2019s network",
+        "The boundary between the provider’s network and the customer’s network",
         "Every work-area wall socket",
         "The last byte of an Ethernet frame",
         "The boundary between host and network bits"
@@ -3483,8 +3531,8 @@
         "An Ethernet FCS check",
         "A spanning-tree port block"
       ],
-      "explain": "GET means ask for a value. The manager requests it and the device\u2019s agent replies.",
-      "remember": "Remember: GET means ask for a value. The manager requests it and the device\u2019s agent replies.",
+      "explain": "GET means ask for a value. The manager requests it and the device’s agent replies.",
+      "remember": "Remember: GET means ask for a value. The manager requests it and the device’s agent replies.",
       "lessonId": "notes-12-4",
       "note": "Added-notes practice"
     },
@@ -3497,7 +3545,7 @@
       "options": [
         "Requests a change to a supported writable managed object",
         "Reads a value without requesting any change",
-        "Replaces every device\u2019s MIB definitions",
+        "Replaces every device’s MIB definitions",
         "Always reboots every router"
       ],
       "explain": "SET asks the device to change something it allows you to write. Access permissions and object support still apply.",
@@ -3521,6 +3569,186 @@
       "remember": "Remember: A standard is a shared rule. Experts propose, discuss, revise and approve it so different products can work together.",
       "lessonId": "notes-12-5",
       "note": "Added-notes practice"
+    },
+    {
+      "id": "teach-convert-binary-decimal-check",
+      "ch": 3,
+      "lessonId": "teach-convert-binary-decimal",
+      "q": "Convert 10101101 from binary → decimal.",
+      "answer": "173",
+      "options": [
+        "173",
+        "171",
+        "175",
+        "181"
+      ],
+      "explain": "A bit is one binary digit: either 0 or 1. In an eight-bit number, the positions are worth 128, 64, 32, 16, 8, 4, 2, 1 from left to right. Start at 1 on the RIGHT and double each time you move left. These values are fixed; do not rearrange them.\n\nExample: 10101101.\nPlace values: 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1\nBinary digits:     1 |  0 |  1 |  0 | 1 | 1 | 0 | 1\nA 1 means “include this value.” A 0 means “skip this value.” Think of each digit as an on/off switch for the value above it.\n\nFor 10101101, include 128, skip 64, include 32, skip 16, include 8, include 4, skip 2, include 1.\n128 + 32 = 160\n160 + 8 = 168\n168 + 4 = 172\n172 + 1 = 173\nSo 10101101 in binary is 173 in decimal. Do not count the 1s; add their POSITION values.\n\n00000101 means 4 + 1 = 5. The zeros at the beginning do not add anything. That is why 101 and 00000101 have the same value. In networking we often keep all eight bits to show one byte clearly.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-decimal-binary-check",
+      "ch": 3,
+      "lessonId": "teach-convert-decimal-binary",
+      "q": "Convert 173 from decimal → binary.",
+      "answer": "10101101",
+      "options": [
+        "10101101",
+        "10101011",
+        "10110101",
+        "11001101"
+      ],
+      "explain": "Start with a remaining amount of 173. Move from the biggest position to the smallest. If its value fits in the remaining amount, write 1 and subtract it. If it is too big, write 0 and keep the remaining amount. Write one digit for EVERY position.\n\n128 fits in 173 → write 1; 173 − 128 = 45 left.\n64 is too big for 45 → write 0; still 45 left.\n32 fits in 45 → write 1; 45 − 32 = 13 left.\n16 is too big for 13 → write 0; still 13 left.\nSo far: 1010.\n\n8 fits in 13 → write 1; 13 − 8 = 5 left.\n4 fits in 5 → write 1; 5 − 4 = 1 left.\n2 is too big for 1 → write 0; still 1 left.\n1 fits in 1 → write 1; 1 − 1 = 0 left.\nLast four digits: 1101. Together: 10101101.\n\nRead the 1 positions back: 128 + 32 + 8 + 4 + 1 = 173. You got the starting number back, so your conversion works. If the remaining amount reaches zero early, fill every remaining position with 0.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-hex-binary-check",
+      "ch": 3,
+      "lessonId": "teach-convert-hex-binary",
+      "q": "Convert AF from hexadecimal → binary.",
+      "answer": "10101111",
+      "options": [
+        "10101111",
+        "10101110",
+        "11111010",
+        "10111111"
+      ],
+      "explain": "Four binary positions have values 8, 4, 2, 1. They can represent 0 through 15, exactly the values of one hex digit. So EVERY hex digit becomes exactly four bits, including zeros at the beginning.\n\nExample: AF. Take A by itself. A means 10.\n8 fits in 10 → 1; 2 left.\n4 is too big → 0.\n2 fits → 1; 0 left.\n1 does not fit → 0.\nA becomes 1010.\n\nF means 15. 8 + 4 + 2 + 1 = 15, so all four positions are on: 1111.\nA → 1010\nF → 1111\nKeep the original order and join: AF → 10101111. Do not add the two groups together.\n\nFor 05: 0 becomes 0000 and 5 becomes 0101. Join them to get 00000101. Writing 5 as just 101 would lose the four-bit grouping that makes hex easy to read.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-binary-hex-check",
+      "ch": 3,
+      "lessonId": "teach-convert-binary-hex",
+      "q": "Convert 10101111 from binary → hexadecimal.",
+      "answer": "AF",
+      "options": [
+        "AF",
+        "FA",
+        "AE",
+        "BF"
+      ],
+      "explain": "Inside every four-bit group, the values are 8, 4, 2, 1. Start over with those values for the next group. Do not use 128, 64, 32, 16 for the first group when converting directly to hex.\n\n1010 uses the 8 position and the 2 position.\n8 + 2 = 10.\nHex uses A for 10, so 1010 becomes A.\nRemember the letter values: A=10, B=11, C=12, D=13, E=14, F=15.\n\n1111 uses all four positions.\n8 + 4 + 2 + 1 = 15 → F.\nFirst group A, second group F: the answer is AF. Preserve the order; AF and FA are different numbers.\n\nAdd zeros to the LEFT until the leftmost group has four bits. Example: 101 becomes 0101 → 4 + 1 = 5 → hex 5. Adding zeros to the right would change the number, so only pad on the left.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-hex-decimal-check",
+      "ch": 3,
+      "lessonId": "teach-convert-hex-decimal",
+      "q": "Convert AF from hexadecimal → decimal.",
+      "answer": "175",
+      "options": [
+        "175",
+        "25",
+        "173",
+        "250"
+      ],
+      "explain": "Example: AF. A means 10 and F means 15. Do not add 10 + 15 yet: the A is in the sixteens position, so its position matters.\n\nA in the sixteens position: 10 × 16 = 160.\nF in the ones position: 15 × 1 = 15.\n160 + 15 = 175.\nSo AF in hex is 175 in decimal.\n\nHex 20 means 2 × 16 + 0 × 1 = 32 in decimal. It does NOT mean decimal twenty. Always check which number system the question names. You may also see hex written as 0x20; 0x is a label meaning hexadecimal.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-decimal-hex-check",
+      "ch": 3,
+      "lessonId": "teach-convert-decimal-hex",
+      "q": "Convert 175 from decimal → hexadecimal.",
+      "answer": "AF",
+      "options": [
+        "AF",
+        "FA",
+        "AD",
+        "A5"
+      ],
+      "explain": "Example: 175.\n10 × 16 = 160 fits.\n11 × 16 = 176 is too much.\nSo 175 contains 10 full groups of 16.\n175 − 160 = 15 left over. This leftover is called the remainder.\n\nThe group count is 10 → A.\nThe remainder is 15 → F.\nWrite the group digit first, then the remainder digit: AF.\nCheck: 10 × 16 + 15 = 175.\n\nDecimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-binary-decimal-transfer",
+      "ch": 3,
+      "lessonId": "teach-convert-binary-decimal",
+      "q": "Your turn with a new number: convert 00101010 from binary to decimal.",
+      "answer": "42",
+      "options": [
+        "42",
+        "40",
+        "21",
+        "44"
+      ],
+      "explain": "Remember: The 1s are at 32, 8 and 2. Add 32 + 8 + 2 = 42. The leading zeros contribute nothing.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-decimal-binary-transfer",
+      "ch": 3,
+      "lessonId": "teach-convert-decimal-binary",
+      "q": "Your turn with a new number: convert 42 from decimal to binary.",
+      "answer": "00101010",
+      "options": [
+        "00101010",
+        "00101100",
+        "01000010",
+        "00010101"
+      ],
+      "explain": "Remember: 128 and 64 are too big: write 00. Use 32: 10 left. Skip 16. Use 8: 2 left. Skip 4. Use 2: 0 left. Skip 1. The eight digits are 00101010.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-hex-binary-transfer",
+      "ch": 3,
+      "lessonId": "teach-convert-hex-binary",
+      "q": "Your turn with a new number: convert 2A from hex to binary.",
+      "answer": "00101010",
+      "options": [
+        "00101010",
+        "00101011",
+        "10100010",
+        "00100001"
+      ],
+      "explain": "Remember: 2 is 0010 using the 8, 4, 2, 1 positions. A means 10, which is 8 + 2, or 1010. Join the groups: 0010 1010.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-binary-hex-transfer",
+      "ch": 3,
+      "lessonId": "teach-convert-binary-hex",
+      "q": "Your turn with a new number: convert 00101010 from binary to hex.",
+      "answer": "2A",
+      "options": [
+        "2A",
+        "A2",
+        "2B",
+        "21"
+      ],
+      "explain": "Remember: Split from the right: 0010 | 1010. The first group is 2. The second is 8 + 2 = 10, written A in hex. Join them: 2A.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-hex-decimal-transfer",
+      "ch": 3,
+      "lessonId": "teach-convert-hex-decimal",
+      "q": "Your turn with a new number: convert 2A from hex to decimal.",
+      "answer": "42",
+      "options": [
+        "42",
+        "12",
+        "32",
+        "210"
+      ],
+      "explain": "Remember: 2 counts sixteens: 2 × 16 = 32. A counts ones: 10 × 1 = 10. Add 32 + 10 = 42.",
+      "kind": "notes"
+    },
+    {
+      "id": "teach-convert-decimal-hex-transfer",
+      "ch": 3,
+      "lessonId": "teach-convert-decimal-hex",
+      "q": "Your turn with a new number: convert 42 from decimal to hex.",
+      "answer": "2A",
+      "options": [
+        "2A",
+        "A2",
+        "42",
+        "2B"
+      ],
+      "explain": "Remember: Two groups of 16 fit: 2 × 16 = 32. Subtract 42 − 32 = 10 left over. The group count gives 2 and the remainder 10 gives A. Answer: 2A.",
+      "kind": "notes"
     }
   ],
   "teaching": {
@@ -3539,7 +3767,7 @@
       "title": "Why networking is divided into layers",
       "context": "In Chapter 1, a layer means one set of responsibilities in communication. The layers work together through defined interfaces. This makes a large system easier to build and troubleshoot.",
       "analogy": "A restaurant separates taking orders, cooking and delivery. A new delivery vehicle does not require rewriting the menu.",
-      "example": "A browser can still request the same page after you change from Wi-Fi to Ethernet. The local connection changes; the browser\u2019s network service can remain the same.",
+      "example": "A browser can still request the same page after you change from Wi-Fi to Ethernet. The local connection changes; the browser’s network service can remain the same.",
       "terms": [
         "Layer",
         "Protocol",
@@ -3583,7 +3811,7 @@
       "title": "Who writes the shared rules?",
       "context": "In Chapter 1, network authorities are organizations with different jobs. IEEE develops Ethernet and Wi-Fi standards. IETF develops Internet protocol standards. ICANN coordinates naming, and IANA coordinates shared number and parameter registries. TIA develops commercial building-cabling standards. ITU is the United Nations agency for international telecommunications.",
       "analogy": "People agree on road signs so drivers from different towns understand them. Standards help devices made by different companies understand one another.",
-      "example": "For the paired question: LAN/WLAN standards \u2192 IEEE; Internet protocol standards \u2192 IETF. These are groups of people and organizations, not routers.",
+      "example": "For the paired question: LAN/WLAN standards → IEEE; Internet protocol standards → IETF. These are groups of people and organizations, not routers.",
       "terms": [
         "Standard",
         "IEEE",
@@ -3616,7 +3844,7 @@
       "title": "How fiber guides light",
       "context": "Fiber carries light through a core surrounded by cladding. Total internal reflection keeps light guided in the core under the right conditions. Single-mode uses a smaller core; multimode allows multiple light paths.",
       "analogy": "Imagine light following a carefully designed tunnel. Different paths can arrive at slightly different times, spreading a pulse.",
-      "example": "Single-mode core: about 9 \u00b5m, commonly for long links. Multimode core: 50 or 62.5 \u00b5m, commonly for shorter links. Reach depends on the optics and data rate, not just the name.",
+      "example": "Single-mode core: about 9 µm, commonly for long links. Multimode core: 50 or 62.5 µm, commonly for shorter links. Reach depends on the optics and data rate, not just the name.",
       "terms": [
         "Core (fiber)",
         "Single-mode",
@@ -3636,9 +3864,9 @@
     },
     "notes-2-5": {
       "title": "Sharing a medium and understanding its limits",
-      "context": "Multiplexing lets several signals share one medium. FDM assigns frequency bands; TDM assigns time slots. Shannon\u2019s formula relates theoretical capacity to channel bandwidth and signal-to-noise ratio.",
+      "context": "Multiplexing lets several signals share one medium. FDM assigns frequency bands; TDM assigns time slots. Shannon’s formula relates theoretical capacity to channel bandwidth and signal-to-noise ratio.",
       "analogy": "FDM resembles different radio stations. TDM resembles people taking turns speaking into one microphone.",
-      "example": "For C = B \u00d7 log\u2082(1 + S/N), if B = 1000 Hz and S/N = 3, then 1 + 3 = 4, log\u2082(4) = 2, and C = 2000 bits/s. S/N here is a linear ratio.",
+      "example": "For C = B × log₂(1 + S/N), if B = 1000 Hz and S/N = 3, then 1 + 3 = 4, log₂(4) = 2, and C = 2000 bits/s. S/N here is a linear ratio.",
       "terms": [
         "Bandwidth",
         "Multiplexing",
@@ -3680,9 +3908,9 @@
     },
     "notes-3-4": {
       "title": "MAC addresses and number systems",
-      "context": "A traditional Ethernet MAC address is 48 bits, often written as six hexadecimal byte groups. Binary uses 0 and 1. Decimal uses 0\u20139. Hexadecimal uses 0\u20139 and A\u2013F.",
+      "context": "A traditional Ethernet MAC address is 48 bits, often written as six hexadecimal byte groups. Binary uses 0 and 1. Decimal uses 0–9. Hexadecimal uses 0–9 and A–F.",
       "analogy": "Different number systems are different ways of writing the same quantity, like writing twelve versus 12.",
-      "example": "10101101\u2082 has 1s at 128, 32, 8, 4 and 1: add them to get 173. For hex, 1010 = 10 = A and 1111 = 15 = F, so 1010 1111 = AF.",
+      "example": "10101101₂ has 1s at 128, 32, 8, 4 and 1: add them to get 173. For hex, 1010 = 10 = A and 1111 = 15 = F, so 1010 1111 = AF.",
       "terms": [
         "Binary",
         "Hexadecimal",
@@ -3702,7 +3930,7 @@
     },
     "notes-4-1": {
       "title": "Why a device needs IP as well as MAC",
-      "context": "Chapter 4 concerns delivery across interconnected networks. An IP address identifies a network location for routing. A MAC address identifies an interface for local-link delivery. Neither is a person\u2019s street address.",
+      "context": "Chapter 4 concerns delivery across interconnected networks. An IP address identifies a network location for routing. A MAC address identifies an interface for local-link delivery. Neither is a person’s street address.",
       "analogy": "An overall destination gets the package to the right area; each local delivery stage needs its own instructions.",
       "example": "When a router forwards to a new link, it builds a new local frame. Keeping local addressing separate lets the link technology change without redefining the whole IP system.",
       "terms": [
@@ -3715,7 +3943,7 @@
       "title": "A subnet is a group of addresses",
       "context": "An IPv4 address has 32 bits grouped into four 8-bit octets. A subnet groups addresses that share a starting set of bits. The number after / says how many bits are this shared network prefix. The remaining bits vary within the group.",
       "analogy": "Think of a street name shared by several houses and a house number that distinguishes them. The analogy helps explain shared versus varying parts.",
-      "example": "For /17: 8 bits in octet 1 + 8 in octet 2 + 1 in octet 3 = 17 network bits. There are 32 \u2212 17 = 15 host bits. Use the decoder to build this one bit at a time.",
+      "example": "For /17: 8 bits in octet 1 + 8 in octet 2 + 1 in octet 3 = 17 network bits. There are 32 − 17 = 15 host bits. Use the decoder to build this one bit at a time.",
       "terms": [
         "Bit",
         "Octet",
@@ -3749,7 +3977,7 @@
     },
     "notes-12-1": {
       "title": "Design starts with the people using the network",
-      "context": "Chapter 12 is about planning a real organization\u2019s network. First identify the end-users, applications, locations, traffic and security needs. Logical design plans the organization of the network. Physical design chooses actual equipment and cabling.",
+      "context": "Chapter 12 is about planning a real organization’s network. First identify the end-users, applications, locations, traffic and security needs. Logical design plans the organization of the network. Physical design chooses actual equipment and cabling.",
       "analogy": "Plan rooms and their purpose before buying the furniture. Otherwise you may buy equipment that does not fit the need.",
       "example": "A school estimates student devices and application traffic, plans subnets and services, then selects switches and cables. Costs include maintenance and downtime, not just purchase price.",
       "terms": [
@@ -3772,7 +4000,7 @@
     },
     "notes-12-3": {
       "title": "Where the campus Core layer fits",
-      "context": "In Chapter 12, Core means a role in a campus network design\u2014not an OSI layer or the glass core of a fiber. The three campus roles are Access, Distribution and Core. Access connects users; Distribution groups access networks; Core links major network regions quickly and reliably.",
+      "context": "In Chapter 12, Core means a role in a campus network design—not an OSI layer or the glass core of a fiber. The three campus roles are Access, Distribution and Core. Access connects users; Distribution groups access networks; Core links major network regions quickly and reliably.",
       "analogy": "Access resembles neighborhood streets, Distribution resembles roads connecting neighborhoods, and Core resembles the main highway between larger areas.",
       "example": "A campus has buildings A and B. Each has access switches for users and distribution switches for aggregation. Core connections carry traffic between those distribution areas. A data center uses another common design called leaf-spine: servers attach to leaf switches, and each leaf connects to every spine switch. This is different from the campus three-tier pattern.",
       "terms": [
@@ -3797,7 +4025,7 @@
     },
     "notes-12-5": {
       "title": "Working groups are people making shared rules",
-      "context": "In Chapter 12, standards are written technical specifications that help products work together. A working group is a group of people\u2014such as engineers and technical experts\u2014who develop and review a specification. It is not a group of computers.",
+      "context": "In Chapter 12, standards are written technical specifications that help products work together. A working group is a group of people—such as engineers and technical experts—who develop and review a specification. It is not a group of computers.",
       "analogy": "People agree on the size and shape of a plug so independently made plugs and sockets can fit together.",
       "example": "A group identifies a need, discusses requirements and proposals, revises a draft and seeks approval. IEEE uses ballots; IETF working groups seek rough consensus through discussion.",
       "terms": [
@@ -3805,6 +4033,190 @@
         "Standard",
         "Specification",
         "Interoperability"
+      ]
+    },
+    "teach-convert-binary-decimal": {
+      "title": "Binary → decimal · from zero",
+      "context": "Chapter 3 uses binary and hexadecimal to understand MAC addresses. Chapter 4 uses binary for IP addresses. Decimal is the ordinary counting system you already use: 0, 1, 2 … 10 … 173. Binary writes the same quantities using only 0 and 1. Converting changes how we write a number, not its size.",
+      "analogy": "The quantity stays the same. Only the way we write it changes.",
+      "example": "00000101 means 4 + 1 = 5. The zeros at the beginning do not add anything. That is why 101 and 00000101 have the same value. In networking we often keep all eight bits to show one byte clearly.",
+      "terms": [
+        "Binary",
+        "Hexadecimal"
+      ],
+      "steps": [
+        {
+          "title": "Start with the names",
+          "body": "Chapter 3 uses binary and hexadecimal to understand MAC addresses. Chapter 4 uses binary for IP addresses. Decimal is the ordinary counting system you already use: 0, 1, 2 … 10 … 173. Binary writes the same quantities using only 0 and 1. Converting changes how we write a number, not its size."
+        },
+        {
+          "title": "Each position has a value",
+          "body": "A bit is one binary digit: either 0 or 1. In an eight-bit number, the positions are worth 128, 64, 32, 16, 8, 4, 2, 1 from left to right. Start at 1 on the RIGHT and double each time you move left. These values are fixed; do not rearrange them."
+        },
+        {
+          "title": "Line up the digits",
+          "body": "Example: 10101101.\nPlace values: 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1\nBinary digits:     1 |  0 |  1 |  0 | 1 | 1 | 0 | 1\nA 1 means “include this value.” A 0 means “skip this value.” Think of each digit as an on/off switch for the value above it."
+        },
+        {
+          "title": "Add only the switched-on values",
+          "body": "For 10101101, include 128, skip 64, include 32, skip 16, include 8, include 4, skip 2, include 1.\n128 + 32 = 160\n160 + 8 = 168\n168 + 4 = 172\n172 + 1 = 173\nSo 10101101 in binary is 173 in decimal. Do not count the 1s; add their POSITION values."
+        },
+        {
+          "title": "One smaller example",
+          "body": "00000101 means 4 + 1 = 5. The zeros at the beginning do not add anything. That is why 101 and 00000101 have the same value. In networking we often keep all eight bits to show one byte clearly."
+        }
+      ]
+    },
+    "teach-convert-decimal-binary": {
+      "title": "Decimal → binary · from zero",
+      "context": "We want to write the ordinary number 173 using only 0s and 1s. For a number from 0 through 255, use eight positions: 128, 64, 32, 16, 8, 4, 2, 1. Think of picking value cards that add up to 173.",
+      "analogy": "The quantity stays the same. Only the way we write it changes.",
+      "example": "Read the 1 positions back: 128 + 32 + 8 + 4 + 1 = 173. You got the starting number back, so your conversion works. If the remaining amount reaches zero early, fill every remaining position with 0.",
+      "terms": [
+        "Binary",
+        "Hexadecimal"
+      ],
+      "steps": [
+        {
+          "title": "What are we trying to build?",
+          "body": "We want to write the ordinary number 173 using only 0s and 1s. For a number from 0 through 255, use eight positions: 128, 64, 32, 16, 8, 4, 2, 1. Think of picking value cards that add up to 173."
+        },
+        {
+          "title": "The rule: can this value fit?",
+          "body": "Start with a remaining amount of 173. Move from the biggest position to the smallest. If its value fits in the remaining amount, write 1 and subtract it. If it is too big, write 0 and keep the remaining amount. Write one digit for EVERY position."
+        },
+        {
+          "title": "Build the first four digits",
+          "body": "128 fits in 173 → write 1; 173 − 128 = 45 left.\n64 is too big for 45 → write 0; still 45 left.\n32 fits in 45 → write 1; 45 − 32 = 13 left.\n16 is too big for 13 → write 0; still 13 left.\nSo far: 1010."
+        },
+        {
+          "title": "Finish the last four digits",
+          "body": "8 fits in 13 → write 1; 13 − 8 = 5 left.\n4 fits in 5 → write 1; 5 − 4 = 1 left.\n2 is too big for 1 → write 0; still 1 left.\n1 fits in 1 → write 1; 1 − 1 = 0 left.\nLast four digits: 1101. Together: 10101101."
+        },
+        {
+          "title": "Check your work",
+          "body": "Read the 1 positions back: 128 + 32 + 8 + 4 + 1 = 173. You got the starting number back, so your conversion works. If the remaining amount reaches zero early, fill every remaining position with 0."
+        }
+      ]
+    },
+    "teach-convert-hex-binary": {
+      "title": "Hexadecimal → binary · from zero",
+      "context": "Hexadecimal, or hex, has 16 digit symbols. After 0–9 it uses A=10, B=11, C=12, D=13, E=14, F=15. These letters are number digits here. MAC addresses use hex because it is shorter to read than a long string of bits.",
+      "analogy": "The quantity stays the same. Only the way we write it changes.",
+      "example": "For 05: 0 becomes 0000 and 5 becomes 0101. Join them to get 00000101. Writing 5 as just 101 would lose the four-bit grouping that makes hex easy to read.",
+      "terms": [
+        "Binary",
+        "Hexadecimal"
+      ],
+      "steps": [
+        {
+          "title": "Why are there letters in a number?",
+          "body": "Hexadecimal, or hex, has 16 digit symbols. After 0–9 it uses A=10, B=11, C=12, D=13, E=14, F=15. These letters are number digits here. MAC addresses use hex because it is shorter to read than a long string of bits."
+        },
+        {
+          "title": "One hex digit becomes four bits",
+          "body": "Four binary positions have values 8, 4, 2, 1. They can represent 0 through 15, exactly the values of one hex digit. So EVERY hex digit becomes exactly four bits, including zeros at the beginning."
+        },
+        {
+          "title": "Convert A first",
+          "body": "Example: AF. Take A by itself. A means 10.\n8 fits in 10 → 1; 2 left.\n4 is too big → 0.\n2 fits → 1; 0 left.\n1 does not fit → 0.\nA becomes 1010."
+        },
+        {
+          "title": "Convert F, then join",
+          "body": "F means 15. 8 + 4 + 2 + 1 = 15, so all four positions are on: 1111.\nA → 1010\nF → 1111\nKeep the original order and join: AF → 10101111. Do not add the two groups together."
+        },
+        {
+          "title": "Keep all four bits for each digit",
+          "body": "For 05: 0 becomes 0000 and 5 becomes 0101. Join them to get 00000101. Writing 5 as just 101 would lose the four-bit grouping that makes hex easy to read."
+        }
+      ]
+    },
+    "teach-convert-binary-hex": {
+      "title": "Binary → hexadecimal · from zero",
+      "context": "Hex is a shorter way to write binary. Start at the RIGHT and split the bits into groups of four. Example: 10101111 becomes 1010 | 1111. Each group becomes ONE hex digit.",
+      "analogy": "The quantity stays the same. Only the way we write it changes.",
+      "example": "Add zeros to the LEFT until the leftmost group has four bits. Example: 101 becomes 0101 → 4 + 1 = 5 → hex 5. Adding zeros to the right would change the number, so only pad on the left.",
+      "terms": [
+        "Binary",
+        "Hexadecimal"
+      ],
+      "steps": [
+        {
+          "title": "Make groups of four",
+          "body": "Hex is a shorter way to write binary. Start at the RIGHT and split the bits into groups of four. Example: 10101111 becomes 1010 | 1111. Each group becomes ONE hex digit."
+        },
+        {
+          "title": "Give each group its own values",
+          "body": "Inside every four-bit group, the values are 8, 4, 2, 1. Start over with those values for the next group. Do not use 128, 64, 32, 16 for the first group when converting directly to hex."
+        },
+        {
+          "title": "Convert the first group",
+          "body": "1010 uses the 8 position and the 2 position.\n8 + 2 = 10.\nHex uses A for 10, so 1010 becomes A.\nRemember the letter values: A=10, B=11, C=12, D=13, E=14, F=15."
+        },
+        {
+          "title": "Convert the second group and join",
+          "body": "1111 uses all four positions.\n8 + 4 + 2 + 1 = 15 → F.\nFirst group A, second group F: the answer is AF. Preserve the order; AF and FA are different numbers."
+        },
+        {
+          "title": "What if there are fewer than four bits?",
+          "body": "Add zeros to the LEFT until the leftmost group has four bits. Example: 101 becomes 0101 → 4 + 1 = 5 → hex 5. Adding zeros to the right would change the number, so only pad on the left."
+        }
+      ]
+    },
+    "teach-convert-hex-decimal": {
+      "title": "Hexadecimal → decimal · from zero",
+      "context": "In decimal, 23 means 2 tens plus 3 ones. In a two-digit hex number, the left digit counts groups of SIXTEEN and the right digit counts ones. Hex place values from right to left are 1, 16, 256, 4096. Each step left multiplies the place value by 16.",
+      "analogy": "The quantity stays the same. Only the way we write it changes.",
+      "example": "Hex 20 means 2 × 16 + 0 × 1 = 32 in decimal. It does NOT mean decimal twenty. Always check which number system the question names. You may also see hex written as 0x20; 0x is a label meaning hexadecimal.",
+      "terms": [
+        "Binary",
+        "Hexadecimal"
+      ],
+      "steps": [
+        {
+          "title": "Hex digits have positions too",
+          "body": "In decimal, 23 means 2 tens plus 3 ones. In a two-digit hex number, the left digit counts groups of SIXTEEN and the right digit counts ones. Hex place values from right to left are 1, 16, 256, 4096. Each step left multiplies the place value by 16."
+        },
+        {
+          "title": "Translate letters into values",
+          "body": "Example: AF. A means 10 and F means 15. Do not add 10 + 15 yet: the A is in the sixteens position, so its position matters."
+        },
+        {
+          "title": "Multiply by the position, then add",
+          "body": "A in the sixteens position: 10 × 16 = 160.\nF in the ones position: 15 × 1 = 15.\n160 + 15 = 175.\nSo AF in hex is 175 in decimal."
+        },
+        {
+          "title": "Try a number without letters",
+          "body": "Hex 20 means 2 × 16 + 0 × 1 = 32 in decimal. It does NOT mean decimal twenty. Always check which number system the question names. You may also see hex written as 0x20; 0x is a label meaning hexadecimal."
+        }
+      ]
+    },
+    "teach-convert-decimal-hex": {
+      "title": "Decimal → hexadecimal · from zero",
+      "context": "For the byte-sized values used here (0–255), ask: how many full groups of 16 fit in the decimal number, and how many ones are left over? The group count becomes the left hex digit. The leftover amount becomes the right digit.",
+      "analogy": "The quantity stays the same. Only the way we write it changes.",
+      "example": "Decimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier.",
+      "terms": [
+        "Binary",
+        "Hexadecimal"
+      ],
+      "steps": [
+        {
+          "title": "Use groups of sixteen",
+          "body": "For the byte-sized values used here (0–255), ask: how many full groups of 16 fit in the decimal number, and how many ones are left over? The group count becomes the left hex digit. The leftover amount becomes the right digit."
+        },
+        {
+          "title": "Find the full groups",
+          "body": "Example: 175.\n10 × 16 = 160 fits.\n11 × 16 = 176 is too much.\nSo 175 contains 10 full groups of 16.\n175 − 160 = 15 left over. This leftover is called the remainder."
+        },
+        {
+          "title": "Turn both values into hex digits",
+          "body": "The group count is 10 → A.\nThe remainder is 15 → F.\nWrite the group digit first, then the remainder digit: AF.\nCheck: 10 × 16 + 15 = 175."
+        },
+        {
+          "title": "A smaller example and another route",
+          "body": "Decimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier."
+        }
       ]
     }
   }
