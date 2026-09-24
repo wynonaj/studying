@@ -107,3 +107,25 @@ check(completedOnce({id:'completion-test'})&&progress.cards['completion-test'].f
 check(progress.cards['completion-test'].level===0&&progress.xp===12,'Spaced review and XP unchanged');
 `,context);
 console.log('PASS: /0–/32 math, binary input, validation, random practice, teaching coverage and once-complete progress.');
+
+// Numbers lab must launch even after studying a chapter with no number drills.
+const labContext=vm.createContext({localStorage:{getItem:()=>null},console});
+vm.runInContext(app.split("document.addEventListener('click'")[0],labContext);
+labContext.data=context.data;
+vm.runInContext(`
+DATA=data;
+const elements=new Map();
+const document={querySelector:s=>{if(!elements.has(s))elements.set(s,{});return elements.get(s)}};
+renderLab=()=>{};
+for(const previousChapter of [0,1,2,3,4,12]){
+ chapter=previousChapter;numbersChapter=0;numbersHome();
+ if($('#app').innerHTML.includes('id="chapter"'))throw Error('Global chapter filter leaked into Numbers lab');
+ for(const selection of [0,3,4]){
+  $('#numbers-chapter').onchange({target:{value:String(selection)}});
+  $('#addressstart').onclick();
+  if(!lab.items.length||lab.items.some(x=>selection&&x.ch!==selection))throw Error('Numbers lab cannot launch selected drills');
+  if(chapter!==previousChapter)throw Error('Numbers lab changed the study chapter');
+ }
+}
+`,labContext);
+console.log('PASS: Numbers lab launches for every prior chapter and keeps its drill filter independent.');
