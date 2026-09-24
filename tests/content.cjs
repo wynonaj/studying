@@ -41,7 +41,7 @@ check(!modelIsCorrect('tcpip'),'Reject separate Presentation layer in course TCP
 modelBuild.slots.osi[0]=null;
 check(!modelIsCorrect('osi'),'Reject incomplete model');
 const physical=makeMC(VOCAB.find(x=>x.term==='Physical layer'));
-check(explanationHTML(physical,physical.answer).includes('copper carries electrical signals'),'Physical answer has a concrete explanation');
+check(explanationHTML(physical,physical.answer).toLowerCase().includes('copper carries electrical signals'),'Physical answer has a concrete explanation');
 check(!explanationHTML(physical,physical.answer).includes('Match a layer to the scope'),'No generic layer paragraph in Physical feedback');
 `,context);
 assert(!app.includes("$('#export')")&&!app.includes("$('#import')"));
@@ -178,3 +178,33 @@ if(!$('#app').innerHTML.includes('New round · fresh numbers'))throw Error('Miss
 $('#fresh-round').onclick();
 if(lab.index!==0||lab.items.length!==17||!$('#app').innerHTML.includes('Numbers memory sheet'))throw Error('New round did not start');
 `,context);
+
+vm.runInContext(`
+const normalizeFeedback=s=>String(s||'').replace(/^Remember:\\s*/i,'').replace(/[^a-z0-9]/gi,'').toLowerCase();
+for(const v of VOCAB){
+ const f=DATA.vocabFeedback[v.term];
+ check(f&&f.why.length>75&&f.hint.length>35,'Missing authored vocabulary feedback '+v.term);
+ check(normalizeFeedback(f.why)!==normalizeFeedback(v.a),'Definition repeated as explanation '+v.term);
+ check(normalizeFeedback(f.why)!==normalizeFeedback(f.hint),'Duplicate easy and detailed feedback '+v.term);
+ for(const x of [makeMC(v),...wordBankCards([v])]){
+  check(feedbackReason(x)===f.why,'Authored feedback bypassed '+v.term);
+  const html=explanationHTML(x,'wrong');
+  check(html.includes(esc(f.why.split('. ')[0])),'Wrong feedback omits reasoning '+v.term);
+ }
+}
+for(const x of [...DATA.questions,...DATA.understanding,...DATA.notesQuestions,...clozeCards(),...labItems(),...conversionCards(),...layerJobCards()]){
+ check(feedbackReason(x)&&normalizeFeedback(feedbackReason(x))!==normalizeFeedback(x.answer||x.quizAnswer),'Answer-only feedback '+x.id);
+ const hint=beginnerReminder(x);
+ if(hint)check(normalizeFeedback(hint)!==normalizeFeedback(feedbackReason(x)),'Repeated feedback '+x.id);
+}
+check(DATA.notesQuestions.find(x=>x.id==='notes-quiz-28').explain.includes('spine'),'Spine-leaf explanation');
+check(!DATA.notesQuestions.find(x=>x.id==='notes-quiz-28').explain.includes('Distribution'),'Unrelated campus tiers leaked');
+check(!beginnerReminder(DATA.understanding.find(x=>x.id==='u190')).includes('/17'),'Unrelated source example leaked');
+const savedXP=progress.xp;let resumed=0;
+showNumberReminder(()=>resumed++,0);
+check($('#app').innerHTML.includes('256 − 2 = 254'),'Reminder demonstrates usable count');
+check($('#app').innerHTML.includes('Host bits')&&$('#app').innerHTML.includes('Total addresses'),'Reminder distinguishes units');
+$('#reminder-continue').onclick();
+check(resumed===1&&progress.xp===savedXP,'Reminder must resume without scoring');
+`,context);
+console.log('PASS: all vocabulary and question feedback has reasoning; no duplicate hints or inherited wrong-number examples; reminders are unscored.');
