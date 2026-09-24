@@ -996,7 +996,7 @@
     "Multiplexing": "Sharing a physical medium means using the same transmission resource to carry more than one stream of information, instead of giving each stream its own separate resource. For example, many cable-TV channels can travel through one cable using different frequency ranges. Another way is to take turns: one stream uses a time slot, then another does. Sharing does not mean mixing messages into an unreadable mess; rules keep the streams distinguishable.",
     "FDM": "Separate frequency bands let streams occupy the same medium simultaneously. A receiver selects the appropriate band, like tuning a radio station.",
     "TDM": "Streams use assigned time intervals on the same resource. Taking turns separates them even when the same frequency range is reused.",
-    "Ethernet": "Ethernet defines wired link behavior including frames and MAC addressing. IP can be carried inside Ethernet, but Ethernet and IP solve different delivery jobs.",
+    "Ethernet": "Ethernet is a family of rules and technologies for sending data over a wired network, commonly using copper cables and sometimes optical fiber. The cable is the physical path; Ethernet specifies how devices communicate over that path. Wi-Fi is a different technology that uses radio instead of a cable to your device.\n\nBoth can connect your laptop to a local network and help it reach the Internet. Ethernet is not the Internet itself, and it is not literally Wi-Fi inside a wire.",
     "Frame": "A local-link receiver needs addressing and error-check information around the carried data. That header/payload/trailer unit is the frame.",
     "Packet": "IP adds a network-layer header around the transport data. A link then carries this whole unit as its payload.",
     "Payload": "What counts as payload depends on which wrapper you are discussing. A full IP packet is Ethernet payload, including the IP header.",
@@ -2905,7 +2905,7 @@
       "id": "notes-3-2",
       "ch": 3,
       "title": "Ethernet Operation & CSMA/CD",
-      "body": "On traditional shared Ethernet, other connected interfaces can hear a transmission. A unicast frame is addressed to one interface; an Ethernet broadcast frame is addressed to all interfaces in the broadcast domain. Modern switched Ethernet does not send every known unicast frame to every workstation.\n\nWhen multiple devices share a medium, they can transmit at the same time, causing a **Collision**. This applies to shared half-duplex Ethernet; modern full-duplex switched links do not use CSMA/CD. Shared Ethernet resolves this using **CSMA/CD (Carrier Sense Multiple Access with Collision Detection)**:\n1. **Carrier Sense**: Listen to the wire first (\"listen before speaking\").\n2. **Multiple Access**: If the wire is quiet, transmit.\n3. **Collision Detect**: If two devices transmit simultaneously, they detect the voltage spike collision.\n4. **Backoff**: Both devices immediately stop, send a jam signal, wait a random fraction of a second (exponential backoff), and retransmit.",
+      "body": "#### Ethernet is wired networking—not Wi-Fi\nEthernet is a family of rules and technologies for sending data over a wired network, commonly using copper cables and sometimes optical fiber. The cable is the physical path; Ethernet specifies how devices communicate over that path. Wi-Fi is a different technology that uses radio instead of a cable to your device.\n\nBoth can connect your laptop to a local network and help it reach the Internet. Ethernet is not the Internet itself, and it is not literally Wi-Fi inside a wire.\n\n#### What action is taking place?\nImagine your laptop is plugged into a network switch with an Ethernet cable. You press Send on a message. The computer prepares data, including delivery information, and puts some of it into an Ethernet frame. A frame is one local-delivery package of bits. A long message may require many frames.\n\nYour laptop’s network interface sends electrical signal changes along the copper cable to represent those bits. The device at the other end reads the signals. THAT sending action is a transmission. It is not signing in, joining Wi-Fi, or merely plugging in the cable.\n\n#### What does successful transmission mean here?\nHere, we are talking about one frame being sent across the local Ethernet link without a collision corrupting it. The receiver must be able to read the frame and check it for errors. Ethernet’s FCS is an error check that helps detect damaged frames.\n\nThis does not mean the whole message has reached the faraway person or that someone has read it. It also does not mean the computer has successfully connected to Wi-Fi. A local frame delivery is only one step of a longer communication.\n\n#### Now imagine an older network with a shared hub\nOlder shared half-duplex Ethernet could connect several computers through a hub. The hub repeats received signals to other ports, so those computers share a transmission resource. Only one sender can use that shared resource successfully at a time.\n\nSuppose Computer A is sending a frame and Computer B starts sending a different frame at nearly the same time. Their electrical transmissions interfere on the shared medium. That is a collision—not two physical computers crashing together. It is overlapping data transmissions.\n\n#### CSMA/CD: exactly what the device does\n1. Listen: the interface checks whether the shared medium already has a transmission.\n2. If idle, begin sending its frame. Idle means nobody is currently transmitting on that shared resource.\n3. While transmitting, check for a collision. Two devices can start together even if both initially heard silence.\n4. If a collision is detected, send a jam signal so the collision is noticed, then stop the attempted frame transmission.\n5. Wait a randomly chosen backoff interval, then try the listening/sending process again. Different waits reduce the chance that both devices restart together.\n\nThe purpose is to let devices take turns sending frames on older shared Ethernet.\n\n#### Why full-duplex switched Ethernet is different\nOn a full-duplex Ethernet link between a device and a switch, sending and receiving can happen at the same time. It is not the old hub-style shared collision situation, so CSMA/CD is not used on that full-duplex link.\n\nRemember the question’s conditions: shared half-duplex Ethernet → collision detection and random retry. Full-duplex switched Ethernet → simultaneous sending and receiving without that collision procedure. Wi-Fi has its own channel-access rules; do not apply Ethernet’s CSMA/CD procedure to Wi-Fi.",
       "remember": "Remember: Listen first. If a collision happens on a shared half-duplex link, stop, signal the collision, wait a random time and retry.",
       "sources": [
         {
@@ -4120,13 +4120,42 @@
     },
     "notes-3-2": {
       "title": "Taking turns on shared Ethernet",
-      "context": "Older shared half-duplex Ethernet allows only one successful transmission at a time. CSMA/CD means listen first, transmit when idle, detect a collision, stop and back off randomly. Full-duplex switched Ethernet does not use collision detection.",
-      "analogy": "Two people start talking at once. They stop and wait different lengths of time so they do not immediately interrupt again.",
-      "example": "After a collision, devices send a jam signal and stop transmitting, then wait a random backoff interval before retrying.",
+      "context": "Ethernet is a family of rules and technologies for sending data over a wired network, commonly using copper cables and sometimes optical fiber. The cable is the physical path; Ethernet specifies how devices communicate over that path. Wi-Fi is a different technology that uses radio instead of a cable to your device.\n\nBoth can connect your laptop to a local network and help it reach the Internet. Ethernet is not the Internet itself, and it is not literally Wi-Fi inside a wire.",
+      "analogy": "A transmission is like speaking a sentence over a shared intercom. A collision is two speakers talking over one another. The actual Ethernet action is sending signals representing a frame, not making a phone call or joining Wi-Fi.",
+      "example": "Older shared half-duplex Ethernet could connect several computers through a hub. The hub repeats received signals to other ports, so those computers share a transmission resource. Only one sender can use that shared resource successfully at a time.\n\nSuppose Computer A is sending a frame and Computer B starts sending a different frame at nearly the same time. Their electrical transmissions interfere on the shared medium. That is a collision—not two physical computers crashing together. It is overlapping data transmissions.",
       "terms": [
+        "Ethernet",
+        "Transmission",
+        "Frame",
         "Half-duplex",
         "Collision",
         "Backoff"
+      ],
+      "steps": [
+        {
+          "title": "Ethernet is wired networking—not Wi-Fi",
+          "body": "Ethernet is a family of rules and technologies for sending data over a wired network, commonly using copper cables and sometimes optical fiber. The cable is the physical path; Ethernet specifies how devices communicate over that path. Wi-Fi is a different technology that uses radio instead of a cable to your device.\n\nBoth can connect your laptop to a local network and help it reach the Internet. Ethernet is not the Internet itself, and it is not literally Wi-Fi inside a wire."
+        },
+        {
+          "title": "What action is taking place?",
+          "body": "Imagine your laptop is plugged into a network switch with an Ethernet cable. You press Send on a message. The computer prepares data, including delivery information, and puts some of it into an Ethernet frame. A frame is one local-delivery package of bits. A long message may require many frames.\n\nYour laptop’s network interface sends electrical signal changes along the copper cable to represent those bits. The device at the other end reads the signals. THAT sending action is a transmission. It is not signing in, joining Wi-Fi, or merely plugging in the cable."
+        },
+        {
+          "title": "What does successful transmission mean here?",
+          "body": "Here, we are talking about one frame being sent across the local Ethernet link without a collision corrupting it. The receiver must be able to read the frame and check it for errors. Ethernet’s FCS is an error check that helps detect damaged frames.\n\nThis does not mean the whole message has reached the faraway person or that someone has read it. It also does not mean the computer has successfully connected to Wi-Fi. A local frame delivery is only one step of a longer communication."
+        },
+        {
+          "title": "Now imagine an older network with a shared hub",
+          "body": "Older shared half-duplex Ethernet could connect several computers through a hub. The hub repeats received signals to other ports, so those computers share a transmission resource. Only one sender can use that shared resource successfully at a time.\n\nSuppose Computer A is sending a frame and Computer B starts sending a different frame at nearly the same time. Their electrical transmissions interfere on the shared medium. That is a collision—not two physical computers crashing together. It is overlapping data transmissions."
+        },
+        {
+          "title": "CSMA/CD: exactly what the device does",
+          "body": "1. Listen: the interface checks whether the shared medium already has a transmission.\n2. If idle, begin sending its frame. Idle means nobody is currently transmitting on that shared resource.\n3. While transmitting, check for a collision. Two devices can start together even if both initially heard silence.\n4. If a collision is detected, send a jam signal so the collision is noticed, then stop the attempted frame transmission.\n5. Wait a randomly chosen backoff interval, then try the listening/sending process again. Different waits reduce the chance that both devices restart together.\n\nThe purpose is to let devices take turns sending frames on older shared Ethernet."
+        },
+        {
+          "title": "Why full-duplex switched Ethernet is different",
+          "body": "On a full-duplex Ethernet link between a device and a switch, sending and receiving can happen at the same time. It is not the old hub-style shared collision situation, so CSMA/CD is not used on that full-duplex link.\n\nRemember the question’s conditions: shared half-duplex Ethernet → collision detection and random retry. Full-duplex switched Ethernet → simultaneous sending and receiving without that collision procedure. Wi-Fi has its own channel-access rules; do not apply Ethernet’s CSMA/CD procedure to Wi-Fi."
+        }
       ]
     },
     "notes-3-3": {
@@ -4729,8 +4758,8 @@
       "hint": "Remember: Different turns on the same resource."
     },
     "Ethernet": {
-      "why": "Ethernet defines wired link behavior including frames and MAC addressing. IP can be carried inside Ethernet, but Ethernet and IP solve different delivery jobs.",
-      "hint": "Remember: Ethernet handles the local link; IP handles network addressing beyond it."
+      "why": "Ethernet is a family of rules and technologies for sending data over a wired network, commonly using copper cables and sometimes optical fiber. The cable is the physical path; Ethernet specifies how devices communicate over that path. Wi-Fi is a different technology that uses radio instead of a cable to your device.\n\nBoth can connect your laptop to a local network and help it reach the Internet. Ethernet is not the Internet itself, and it is not literally Wi-Fi inside a wire.",
+      "hint": "Remember: Ethernet = wired local networking; Wi-Fi = wireless local networking. Both can carry your data toward the Internet."
     },
     "Frame": {
       "why": "A local-link receiver needs addressing and error-check information around the carried data. That header/payload/trailer unit is the frame.",
