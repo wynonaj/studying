@@ -3085,6 +3085,16 @@
       "body": "A **bit** is a position that can be 0 or 1. With one bit you have two labels: 0 and 1. With two bits you have four: 00, 01, 10, 11. Each extra bit doubles the number of choices.\n\n**2ⁿ** means multiply n factors of 2. The raised n is the exponent. Here n is the number of bits, while the result is the number of different labels.\n\nFor 3 bits: 2³ = 2 × 2 × 2 = 8 labels. For 10 bits: 2¹⁰ = 1,024 labels. This is not 2 × 10.\n\nTo label 200 objects, choose the smallest bit count with enough combinations: 2⁷ = 128 is too few; 2⁸ = 256 works. You need 8 bits.\n\nDo not subtract 2 for this task. Reserving network and broadcast addresses is a separate IPv4 subnet rule.",
       "remember": "Each extra bit doubles the choices. Bits are positions; labels are combinations.",
       "sources": []
+    },
+    {
+      "id": "notes-hop-delivery",
+      "ch": 4,
+      "title": "Hop-by-hop vs. end-to-end delivery",
+      "body": "#### One journey, two delivery scopes\nChapter 3 explains local frames; Chapter 4 explains IP delivery across networks; Chapter 1 places Transport above IP. Imagine sending a package through several delivery stops. The final destination stays on the inner address label, while each local handoff needs its own outer label.\n\n#### Local-link delivery: the outer frame\nOn an Ethernet link, the frame has source and destination MAC addresses. For a remote server, your laptop first addresses the frame to its local router, not to the remote server’s MAC address. A local switch can forward that frame without changing its source and destination MAC addresses.\n\n#### At the router: use a new local wrapper\nThe router removes the incoming link-layer wrapper, examines the packet’s destination IP address, and chooses the next hop. It then builds a frame for the outgoing link. On Ethernet, the new source MAC is the router’s outgoing interface and the destination MAC is the next-hop interface. Not every kind of link uses Ethernet or MAC addresses.\n\n#### Follow the same message across three links\nAssume Ethernet links and ordinary routing with no NAT. Laptop → Router A → Router B → Server. Each routed link uses a different source/destination MAC pair. The source/destination IP addresses still identify the laptop and server. TCP/UDP ports identify their application endpoints. Click each link in the diagram to see which labels change.\n\n#### What end-to-end does—and does not—mean\nTransport is process-to-process: it connects application endpoints. IP supplies addressing across networks, but routers still make hop-by-hop forwarding decisions. “Same endpoints” does not mean the whole IP header stays unchanged: routers reduce TTL (IPv4) or Hop Limit (IPv6). NAT may translate IP addresses and, with port translation, ports. For the basic example, assume no NAT.\n\n#### Keep the scope straight\nA switch forwarding within one LAN is not the same as a router forwarding onto another IP link. In this lesson, hop-by-hop means local delivery between successive IP forwarding endpoints, not necessarily every physical cable segment. Remember: local MAC label for this leg, IP destination for the wider journey, port for the receiving program.",
+      "remember": "Local MAC label → this link. IP endpoint → network journey. Port → application endpoint.",
+      "sources": [
+        "https://www.rfc-editor.org/info/rfc3022/"
+      ]
     }
   ],
   "notesQuestions": [
@@ -3839,6 +3849,70 @@
       "explain": "Three bits give 2³ = 8 choices, one too few. Four bits give 2⁴ = 16 choices, enough for all 9 objects. Choose the smallest count that is sufficient.",
       "remember": "Remember: Count combinations with powers of 2. Do not subtract network and broadcast reservations from general-purpose labels.",
       "kind": "notes"
+    },
+    {
+      "id": "hop-check-0",
+      "ch": 4,
+      "lessonId": "notes-hop-delivery",
+      "kind": "notes",
+      "q": "A laptop sends to a server on a different IP network. On the first Ethernet link, whose MAC is the destination?",
+      "answer": "The local router’s interface MAC",
+      "options": [
+        "The local router’s interface MAC",
+        "The remote server’s MAC",
+        "Every router’s MAC combined",
+        "The laptop’s own MAC"
+      ],
+      "explain": "The laptop first needs to deliver the packet to a router reachable on its local link. The IP destination remains the remote server, while the Ethernet destination identifies that first local router.",
+      "remember": "Remember: first identify whether the action is local switching, routing to another link, or address translation."
+    },
+    {
+      "id": "hop-check-1",
+      "ch": 4,
+      "lessonId": "notes-hop-delivery",
+      "kind": "notes",
+      "q": "With ordinary routing and no NAT, what changes when a router sends a packet onto the next Ethernet link?",
+      "answer": "The source and destination MAC labels for the new link",
+      "options": [
+        "The source and destination MAC labels for the new link",
+        "The final destination IP becomes the router’s IP",
+        "The destination application port changes at every router",
+        "The application message must name every switch"
+      ],
+      "explain": "The incoming frame has finished its local delivery. A new frame uses the outgoing router interface as source and the next-hop interface as destination; the IP endpoints normally remain the same.",
+      "remember": "Remember: first identify whether the action is local switching, routing to another link, or address translation."
+    },
+    {
+      "id": "hop-check-2",
+      "ch": 4,
+      "lessonId": "notes-hop-delivery",
+      "kind": "notes",
+      "q": "A Layer-2 switch forwards a frame within the same LAN. Must it replace the source and destination MAC addresses with its own?",
+      "answer": "No; ordinary Layer-2 forwarding preserves those addresses",
+      "options": [
+        "No; ordinary Layer-2 forwarding preserves those addresses",
+        "Yes; every physical cable segment requires the switch’s MAC",
+        "Yes; it replaces both MACs with the server’s IP",
+        "No; because switches forward only IP headers"
+      ],
+      "explain": "The switch selects an outgoing port for the existing local delivery. This is different from a router removing one link wrapper and building another for a new IP link.",
+      "remember": "Remember: first identify whether the action is local switching, routing to another link, or address translation."
+    },
+    {
+      "id": "hop-check-3",
+      "ch": 4,
+      "lessonId": "notes-hop-delivery",
+      "kind": "notes",
+      "q": "Why is “IP addresses and ports always stay unchanged” too strong?",
+      "answer": "NAT can translate addresses, and port translation can change ports",
+      "options": [
+        "NAT can translate addresses, and port translation can change ports",
+        "Every Layer-2 switch changes TCP ports",
+        "Ethernet always removes IP addresses permanently",
+        "TTL is another name for the source TCP port"
+      ],
+      "explain": "Ordinary routing preserves the endpoint addresses and ports in this example. Address/port translation is a separate function that can change them; even ordinary routers still update TTL or Hop Limit.",
+      "remember": "Remember: first identify whether the action is local switching, routing to another link, or address translation."
     }
   ],
   "teaching": {
@@ -4318,6 +4392,44 @@
       ],
       "analogy": "One on/off switch has two choices. Two switches have four combinations. A third switch doubles that to eight.",
       "example": "For 10 bits, multiply ten factors of 2 to get 1,024 labels. For 200 objects, 128 choices are too few but 256 work, so 8 bits are enough."
+    },
+    "notes-hop-delivery": {
+      "title": "Hop-by-hop vs. end-to-end delivery",
+      "context": "Chapter 3 explains local frames; Chapter 4 explains IP delivery across networks; Chapter 1 places Transport above IP. Imagine sending a package through several delivery stops. The final destination stays on the inner address label, while each local handoff needs its own outer label.",
+      "analogy": "The inner destination label stays with the package; each local delivery service adds its own next-stop label.",
+      "example": "Assume Ethernet links and ordinary routing with no NAT. Laptop → Router A → Router B → Server. Each routed link uses a different source/destination MAC pair. The source/destination IP addresses still identify the laptop and server. TCP/UDP ports identify their application endpoints. Click each link in the diagram to see which labels change.",
+      "terms": [
+        "Frame",
+        "Packet",
+        "Next hop",
+        "Router"
+      ],
+      "steps": [
+        {
+          "title": "One journey, two delivery scopes",
+          "body": "Chapter 3 explains local frames; Chapter 4 explains IP delivery across networks; Chapter 1 places Transport above IP. Imagine sending a package through several delivery stops. The final destination stays on the inner address label, while each local handoff needs its own outer label."
+        },
+        {
+          "title": "Local-link delivery: the outer frame",
+          "body": "On an Ethernet link, the frame has source and destination MAC addresses. For a remote server, your laptop first addresses the frame to its local router, not to the remote server’s MAC address. A local switch can forward that frame without changing its source and destination MAC addresses."
+        },
+        {
+          "title": "At the router: use a new local wrapper",
+          "body": "The router removes the incoming link-layer wrapper, examines the packet’s destination IP address, and chooses the next hop. It then builds a frame for the outgoing link. On Ethernet, the new source MAC is the router’s outgoing interface and the destination MAC is the next-hop interface. Not every kind of link uses Ethernet or MAC addresses."
+        },
+        {
+          "title": "Follow the same message across three links",
+          "body": "Assume Ethernet links and ordinary routing with no NAT. Laptop → Router A → Router B → Server. Each routed link uses a different source/destination MAC pair. The source/destination IP addresses still identify the laptop and server. TCP/UDP ports identify their application endpoints. Click each link in the diagram to see which labels change."
+        },
+        {
+          "title": "What end-to-end does—and does not—mean",
+          "body": "Transport is process-to-process: it connects application endpoints. IP supplies addressing across networks, but routers still make hop-by-hop forwarding decisions. “Same endpoints” does not mean the whole IP header stays unchanged: routers reduce TTL (IPv4) or Hop Limit (IPv6). NAT may translate IP addresses and, with port translation, ports. For the basic example, assume no NAT."
+        },
+        {
+          "title": "Keep the scope straight",
+          "body": "A switch forwarding within one LAN is not the same as a router forwarding onto another IP link. In this lesson, hop-by-hop means local delivery between successive IP forwarding endpoints, not necessarily every physical cable segment. Remember: local MAC label for this leg, IP destination for the wider journey, port for the receiving program."
+        }
+      ]
     }
   },
   "vocabFeedback": {

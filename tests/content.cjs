@@ -1,7 +1,7 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const context=vm.createContext({localStorage:{getItem:()=>null},console});
 vm.runInContext(fs.readFileSync('dist/vocab.js','utf8'),context);
-vm.runInContext(fs.readFileSync('dist/teaching.js','utf8'),context);
+vm.runInContext(fs.readFileSync('dist/teaching.js','utf8').split("document.addEventListener('click'")[0],context);
 vm.runInContext(fs.readFileSync('dist/subnet.js','utf8'),context);
 vm.runInContext(fs.readFileSync('dist/numbers.js','utf8'),context);
 let app=fs.readFileSync('dist/app.js','utf8');vm.runInContext(app.split("document.addEventListener('click'")[0],context);
@@ -70,7 +70,7 @@ check(new Set(clozeCards().map(x=>x.ch)).size===5,'Sentences cover all chapters'
 `,context);
 console.log('PASS: fresh jumbled orders, complete word banks, repeated words, blank counts and chapter coverage.');
 vm.runInContext(`
-check(DATA.notes.length===32&&DATA.notesQuestions.length===45,'Added material coverage');
+check(DATA.notes.length===33&&DATA.notesQuestions.length===49,'Added material coverage');
 check(!JSON.stringify(DATA.notes).includes('Summary Checklist'),'Checklist excluded');
 for(const q of DATA.questions){check(q.remember.startsWith('Remember:'),'Beginner reminder '+q.id);check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Guide lesson link '+q.id)}
 for(const q of DATA.notesQuestions){const mc=makeMC(q);check(new Set(mc.options).size===4&&mc.options.includes(mc.answer),'Notes answer options');check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Notes lesson link');check(explanationHTML(mc,mc.options.find(a=>a!==mc.answer)).includes('Let’s make it simple'),'Wrong-answer reminder');check(!all().some(x=>x.id===q.id)&&!learnPool().some(x=>x.id===q.id),'Separate notes bank')}
@@ -227,3 +227,13 @@ renderStudyNav();
 check($('#nav').innerHTML.includes('Focused practice')&&$('#nav').innerHTML.includes('Reference library'),'Group navigation');
 `,context);
 console.log('PASS: label rules and lesson links match; flashcards flip in both directions without leaking answers.');
+vm.runInContext(`
+const hopLesson=DATA.teaching['notes-hop-delivery'];
+check(hopLesson.steps.some(s=>s.body.includes('NAT')),'Explain translation exception');
+check(hopLesson.steps.some(s=>s.body.includes('hop-by-hop forwarding')),'IP routing still uses hops');
+check(hopLesson.steps.some(s=>s.body.includes('switch')&&s.body.includes('without changing')),'Switch versus router distinction');
+for(let i=0;i<3;i++)check(hopDetail(i).includes('client port 51000 → service port 443')&&hopDetail(i).includes('laptop → server'),'Endpoint labels remain fixed');
+check(hopDetail(0).includes('Laptop NIC')&&hopDetail(1).includes('Router A · outgoing')&&hopDetail(2).includes('Server NIC'),'Local interface labels change');
+check(DATA.notesQuestions.filter(q=>q.lessonId==='notes-hop-delivery').length===4,'Delivery comprehension checks');
+`,context);
+console.log('PASS: delivery lesson distinguishes local switching, IP routing and translation; visual endpoint labels stay consistent.');
