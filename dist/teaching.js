@@ -1,6 +1,7 @@
 'use strict';
 const TEACH_CHAPTERS={1:'Introduction, layering & authorities',2:'Physical layer, cabling, modulation & Shannon’s law',3:'Data Link, Ethernet, MAC addresses & switching',4:'Network layer, IP addresses, CIDR & bits',12:'Network design, structured cabling & campus architecture'};
 const JARGON={
+'Cladding':"Cladding is the glass layer directly around an optical fiber’s core. The core is the center where the light signal is guided. The cladding has different optical properties that help keep that light guided along the core. Think of a boundary that helps light stay on its path—not a metal shield or the outer plastic jacket.",
 'Shielded Twisted Pair':"Twisted copper wire pairs with metal shielding. Sometimes abbreviated STP in cabling. In the switching chapter, STP instead means Spanning Tree Protocol: always check the context.",
 'Baseband':"In the traditional cabling comparison, the information signal uses the channel directly rather than being shifted into separate carrier-frequency channels. Ethernet is the common course example. This does not mean only one user can use the network.",
 'Broadband':"In this course’s cabling comparison: several signals share one medium using separate frequency channels. Think of lanes on one road: different channels can carry signals at the same time. Cable TV is an example. In everyday speech, broadband Internet usually means high-speed Internet access instead.",

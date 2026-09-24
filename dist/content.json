@@ -982,7 +982,7 @@
     "Cat 8": "Cat 8 uses shielding and supports short 25/40-gigabit copper channels up to 30 m. Calling it unshielded or assigning it the usual 100 m reach would miss its key limits.",
     "Total internal reflection": "At a suitable angle, light traveling in the higher-index core reflects at the lower-index cladding boundary instead of escaping. That helps guide it along the fiber.",
     "Core": "In fiber, the central optical region guides the light. This is a material part of a cable, unrelated to the campus design tier also called Core.",
-    "Cladding": "Its lower refractive index creates the boundary that helps confine light to the core. It is an optical part, unlike the outer protective jacket.",
+    "Cladding": "Cladding is the glass layer directly around an optical fiber’s core. The core is the center where the light signal is guided. The cladding has different optical properties that help keep that light guided along the core. Think of a boundary that helps light stay on its path—not a metal shield or the outer plastic jacket.",
     "Single-mode fiber": "A small core supports one spatial propagation mode, avoiding the multiple-path spreading associated with multimode fiber. Suitable optics make long links possible.",
     "Multimode fiber": "Different modes can take different paths and arrival times, spreading a pulse. The larger core supports these modes, and the optics and fiber grade determine usable reach.",
     "Amplitude": "Amplitude describes how far a signal moves from its reference level. Raising a wave's height changes amplitude without necessarily changing its cycles per second.",
@@ -2868,7 +2868,7 @@
       "id": "notes-2-3",
       "ch": 2,
       "title": "Fiber Optics: Single-Mode vs. Multi-Mode",
-      "body": "**Optical fiber** is a thin strand of glass that conducts light using **Total Internal Reflection**. Light strikes the boundary between the inner core and outer cladding at an angle greater than the critical angle, trapping the light inside the core so it travels vast distances without escaping.\n\nWhy is Fiber better than Copper? Fiber can support high bandwidth and long links and is immune to electromagnetic interference. Reach still depends on the fiber, optics and data rate; sufficiently long links need amplification or regeneration.\n\n| Feature | Single-Mode Fiber (SMF) | Multi-Mode Fiber (MMF) |\n| :--- | :--- | :--- |\n| **Core Diameter** | Very small (**9 µm**) | Larger (**50 – 62.5 µm**) |\n| **Light Source** | Laser | LED or laser, including VCSELs in many modern links |\n| **Distance** | **Very Long Distances** (miles/km across cities/oceans) | **Short Distances** (inside a building or data center) |\n| **Cost** | More expensive optics/transceivers | Lower cost optics |",
+      "body": "#### Start here: what is cladding?\nCladding is the glass layer directly around an optical fiber’s core. The core is the center where the light signal is guided. The cladding has different optical properties that help keep that light guided along the core. Think of a boundary that helps light stay on its path—not a metal shield or the outer plastic jacket.\n\n#### Read the fiber from inside to outside\n1. **Core**: the center that guides the light signal.\n2. **Cladding**: glass immediately around the core that helps keep light guided.\n3. **Protective coating**: protects the fragile glass.\n4. **Cable jacket**: protects the cable assembly.\n\nCore and cladding are regions of the same glass strand. Cladding is not the removable outer plastic jacket.\n\n#### Why does it work?\nThe core and cladding affect light differently. Under the right conditions, light reflects at their boundary instead of escaping. This is called **total internal reflection**. The technical term **refractive index** describes how light travels in a material; cladding has a lower refractive index than the core.\n\n**Optical fiber** is a thin strand of glass that conducts light using **Total Internal Reflection**. Light strikes the boundary between the inner core and outer cladding at an angle greater than the critical angle, trapping the light inside the core so it travels vast distances without escaping.\n\nWhy is Fiber better than Copper? Fiber can support high bandwidth and long links and is immune to electromagnetic interference. Reach still depends on the fiber, optics and data rate; sufficiently long links need amplification or regeneration.\n\n| Feature | Single-Mode Fiber (SMF) | Multi-Mode Fiber (MMF) |\n| :--- | :--- | :--- |\n| **Core Diameter** | Very small (**9 µm**) | Larger (**50 – 62.5 µm**) |\n| **Light Source** | Laser | LED or laser, including VCSELs in many modern links |\n| **Distance** | **Very Long Distances** (miles/km across cities/oceans) | **Short Distances** (inside a building or data center) |\n| **Cost** | More expensive optics/transceivers | Lower cost optics |",
       "remember": "Remember: A fiber guides light through its core. Single-mode usually suits longer links; multimode usually suits shorter ones.",
       "sources": [
         {
@@ -4044,11 +4044,12 @@
     },
     "notes-2-3": {
       "title": "How fiber guides light",
-      "context": "Fiber carries light through a core surrounded by cladding. Total internal reflection keeps light guided in the core under the right conditions. Single-mode uses a smaller core; multimode allows multiple light paths.",
-      "analogy": "Imagine light following a carefully designed tunnel. Different paths can arrive at slightly different times, spreading a pulse.",
-      "example": "Single-mode core: about 9 µm, commonly for long links. Multimode core: 50 or 62.5 µm, commonly for shorter links. Reach depends on the optics and data rate, not just the name.",
+      "context": "Picture an optical fiber from the center outward. First is the core: the central glass region that guides the light signal. Directly around it is cladding: another glass region whose optical properties help keep the light guided in the core. Outside those are protective coatings and the cable jacket.",
+      "analogy": "Think of a path with a boundary that helps keep a traveler on the path. The core is the light’s path; the core–cladding boundary helps guide it. This is a memory aid: cladding is glass with different optical properties, not a painted mirror or metal wall.",
+      "example": "From inside outward: CORE → CLADDING → PROTECTIVE COATING → CABLE JACKET. Core and cladding guide the light; coating and jacket protect against physical damage. The glass core and cladding form one continuous fiber strand. Single-mode has a smaller core than multimode; both have cladding.",
       "terms": [
         "Core (fiber)",
+        "Cladding",
         "Single-mode",
         "Multimode"
       ]
@@ -4640,8 +4641,8 @@
       "hint": "Remember: First check context: fiber core carries light; campus core connects network regions."
     },
     "Cladding": {
-      "why": "Its lower refractive index creates the boundary that helps confine light to the core. It is an optical part, unlike the outer protective jacket.",
-      "hint": "Remember: Core carries the light; cladding helps keep it guided; jacket protects the cable."
+      "why": "Cladding is the glass layer directly around an optical fiber’s core. The core is the center where the light signal is guided. The cladding has different optical properties that help keep that light guided along the core. Think of a boundary that helps light stay on its path—not a metal shield or the outer plastic jacket.",
+      "hint": "Remember: core = light’s path; cladding = optical boundary around it; coating/jacket = physical protection."
     },
     "Single-mode fiber": {
       "why": "A small core supports one spatial propagation mode, avoiding the multiple-path spreading associated with multimode fiber. Suitable optics make long links possible.",
