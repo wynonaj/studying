@@ -3,6 +3,7 @@ const context=vm.createContext({localStorage:{getItem:()=>null},console});
 vm.runInContext(fs.readFileSync('dist/vocab.js','utf8'),context);
 vm.runInContext(fs.readFileSync('dist/teaching.js','utf8'),context);
 vm.runInContext(fs.readFileSync('dist/subnet.js','utf8'),context);
+vm.runInContext(fs.readFileSync('dist/numbers.js','utf8'),context);
 let app=fs.readFileSync('dist/app.js','utf8');vm.runInContext(app.split("document.addEventListener('click'")[0],context);
 context.data=JSON.parse(fs.readFileSync('dist/content.json'));
 vm.runInContext('DATA=data',context);
@@ -111,6 +112,8 @@ console.log('PASS: /0–/32 math, binary input, validation, random practice, tea
 // Numbers lab must launch even after studying a chapter with no number drills.
 const labContext=vm.createContext({localStorage:{getItem:()=>null},console});
 vm.runInContext(app.split("document.addEventListener('click'")[0],labContext);
+vm.runInContext(fs.readFileSync('dist/subnet.js','utf8'),labContext);
+vm.runInContext(fs.readFileSync('dist/numbers.js','utf8'),labContext);
 labContext.data=context.data;
 vm.runInContext(`
 DATA=data;
@@ -153,3 +156,25 @@ for(let step=0;step<6;step++){
 }
 `,context);
 console.log('PASS: six map views render, explanations link to lessons, and wrappers preserve header/payload/trailer order.');
+
+vm.runInContext(`
+let previousDisplay='';
+for(let i=0;i<300;i++){
+ const cards=freshDetectiveItems();
+ if(cards.length!==17)throw Error('Missing detective skill');
+ for(const x of cards)if(x.options.length!==4||new Set(x.options).size!==4||!x.options.includes(x.answer))throw Error('Bad generated choices '+x.id);
+ const prefix=cards.find(x=>x.id==='cidr-prefix');
+ if(prefix.display===previousDisplay)throw Error('Repeated subnet');previousDisplay=prefix.display;
+ const total=cards.find(x=>x.id==='cidr-total');
+ const host=cards.find(x=>x.id==='cidr-host');
+ if(Number(total.answer.replaceAll(',',''))!==2**Number(host.answer))throw Error('Generated math mismatch');
+}
+`,context);
+console.log('PASS: 300 fresh detective rounds retain all skills, distinct choices and correct subnet math.');
+vm.runInContext(`
+lab={items:freshDetectiveItems(),index:17,right:17};
+renderLab();
+if(!$('#app').innerHTML.includes('New round · fresh numbers'))throw Error('Missing next round');
+$('#fresh-round').onclick();
+if(lab.index!==0||lab.items.length!==17||!$('#app').innerHTML.includes('Numbers memory sheet'))throw Error('New round did not start');
+`,context);

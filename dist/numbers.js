@@ -1,0 +1,41 @@
+'use strict';
+let previousDetective={};
+const detectiveInt=(min,max)=>min+Math.floor(Math.random()*(max-min+1));
+function freshDetectiveItems(){
+ // Keep original chapter question banks stable; generate only standalone lab rounds.
+ let prefix=detectiveInt(17,29);if(prefix===previousDetective.prefix)prefix=prefix===29?17:prefix+1;
+ let seed=detectiveInt(0,65535);if(seed===previousDetective.seed)seed=(seed+1)%65536;
+ previousDetective={prefix,seed};
+ const d=dissectCIDR(`10.${seed>>8}.${seed%256}.0/${prefix}`),address=numberIP(d.network),display=`${address}<mark>/${prefix}</mark>`;
+ const cards=labItems().map(x=>({...x,options:[...x.options]}));
+ const set=(id,changes)=>Object.assign(cards.find(x=>x.id===id),changes);
+ for(const x of cards){x.kind='number';x.lessonId=x.ch===4?'notes-4-2':'notes-3-4'}
+ const mc=(answer,wrong)=>[...new Set([String(answer),...wrong.map(String)])].slice(0,4);
+ const math=subnetQuestions(d);
+ for(const [id,index] of [['cidr-host',0],['cidr-total',1],['cidr-usable',2],['broadcast',3]]){const q=math[index];set(id,{...q,id,display})}
+ set('cidr-prefix',{display,answer:`${prefix} network bits`,options:mc(`${prefix} network bits`,[`${prefix} host bits`,`${prefix} network bytes`,`${prefix-1} network bits`]),explain:`Remember: the slash number counts network bits. /${prefix} means ${prefix} network bits; 32 − ${prefix} = ${d.host} host bits.`});
+ const dotBits=(start,end)=>Array.from({length:32},(_,i)=>(i&&i%8===0?'.':'')+(i===start?'<mark>':'')+d.networkBits[i]+(i===end-1?'</mark>':'')).join('');
+ set('partial-octet',{display:dotBits(prefix-1,prefix)+` /${prefix}`,explain:`Count from the left. The highlighted bit is number ${prefix}, so it is the last network bit in /${prefix}. Bits ${prefix+1} through 32 are host bits.`});
+ set('host-binary',{display:dotBits(prefix,32)+` /${prefix}`,answer:`The ${d.host} host bits`,options:mc(`The ${d.host} host bits`,[`The ${prefix} network bits`,`The ${d.host+1} host bits`,'The complete 32-bit address']),explain:`Remember: 32 − ${prefix} = ${d.host}. These last ${d.host} bits belong to the host portion. They are all zero in this network address.`});
+ set('mask',{display,answer:numberIP(d.mask),options:mc(numberIP(d.mask),[prefix-1,prefix+1,prefix-2].map(p=>numberIP(2**32-2**(32-p)))),explain:`Write ${prefix} ones, then ${d.host} zeros: ${binaryIP(d.mask).join('.')}. Convert each eight-bit group to decimal: ${numberIP(d.mask)}.`});
+ const octet=seed%256,host=detectiveInt(1,254);
+ set('octet',{display:`192.168.<mark>${octet}</mark>.${host} /24`,explain:'An octet always contains 8 bits, whatever its decimal value. Values range from 0 to 255.'});
+ set('host24',{display:`192.168.${octet}.<mark>${host}</mark> /24`});
+ const hex=detectiveInt(1,65535).toString(16),zeros=detectiveInt(2,5),groups=['2001','db8',hex,...Array.from({length:5-zeros},()=>detectiveInt(1,65535).toString(16))];
+ const ipv6=groups.slice(0,3).join(':')+'::'+groups.slice(3).join(':');
+ set('ipv6group',{display:`2001:db8:<mark>${hex.padStart(4,'0')}</mark>::1`,lessonId:'notes-4-3'});
+ set('ipv6zero',{display:ipv6.replace('::','<mark>::</mark>'),answer:`${zeros} groups`,options:mc(`${zeros} groups`,[1,2,3,4,5,6].filter(n=>n!==zeros).slice(0,3).map(n=>`${n} groups`)),explain:`There are ${8-zeros} written groups. IPv6 needs 8 groups total. 8 − ${8-zeros} = ${zeros}, so :: replaces ${zeros} all-zero groups.`,lessonId:'notes-4-3'});
+ const mac=Array.from({length:3},()=>detectiveInt(0,255).toString(16).padStart(2,'0').toUpperCase()).join(':');
+ set('macoui',{display:`<mark>00:1A:2B</mark>:${mac}`});set('macdevice',{display:`00:1A:2B:<mark>${mac}</mark>`});
+ const payload=detectiveInt(46,1500);
+ set('framebytes',{display:`14 + <mark>${payload}</mark> + 4 bytes`,q:'What is the total size of this untagged Ethernet frame?',answer:`${payload+18} bytes`,options:mc(`${payload+18} bytes`,[payload,payload+14,payload+26].map(v=>`${v} bytes`)),explain:`Remember: header + payload + trailer. 14 + ${payload} + 4 = ${payload+18} bytes. Preamble and SFD are outside this frame-size count.`,lessonId:'notes-3-3'});
+ const bits=detectiveInt(3,12),objects=detectiveInt(2**(bits-1)+1,2**bits);
+ set('labels10',{display:`2<sup><mark>${bits}</mark></sup> = ${numberFormat(2**bits)}`,explain:`${bits} bits can form 2^${bits} = ${numberFormat(2**bits)} different labels.`});
+ set('labels200',{display:`<mark>${objects}</mark> objects`,answer:`${bits} bits`,options:mc(`${bits} bits`,[bits-1,bits+1,bits+2].map(v=>`${v} bits`)),explain:`Find the smallest power of 2 that is large enough. 2^${bits-1} = ${2**(bits-1)} is too small. 2^${bits} = ${2**bits} is enough. Use ${bits} bits.`});
+ return cards;
+}
+function startDetectiveRound(){lab={items:shuffle(freshDetectiveItems().filter(x=>!numbersChapter||x.ch===numbersChapter)),index:0,right:0};renderLab()}
+function numberReferenceHTML(){return `<details class="teach-before"><summary>Numbers memory sheet · formulas & examples</summary><p>You can open this before answering. Start with the type of number in the question.</p>
+<h3>IPv4 & CIDR · Chapter 4</h3><p><b>IPv4 = 32 bits. One octet = 8 bits.</b><br>The number after / is the number of network bits.</p><ol><li><b>Host bits = 32 − prefix.</b> /24 → 32 − 24 = 8.</li><li><b>Total addresses = 2 raised to the host-bit count.</b> 2⁸ = 256. This means doubling eight times, not 2 × 8.</li><li><b>Usable hosts = total − 2</b> for ordinary /0–/30 subnets. 256 − 2 = 254. Reserve the network and broadcast addresses. /31 point-to-point uses both addresses; /32 identifies one address.</li><li><b>Mask:</b> network bits become 1, host bits become 0. /24 → 11111111.11111111.11111111.00000000 → 255.255.255.0.</li><li><b>Network address:</b> keep network bits, set host bits to 0.</li><li><b>Broadcast:</b> keep network bits, set host bits to 1. For 192.168.5.34/24: network = 192.168.5.0; broadcast = 192.168.5.255.</li></ol><button data-open-decoder="192.168.5.34/24">Show me these bits step by step</button>
+<h3>Binary, decimal & hex · Chapter 3</h3><p><b>Binary place values:</b> 128 · 64 · 32 · 16 · 8 · 4 · 2 · 1.</p><p><b>Binary → decimal:</b> add the values with a 1. 00001010 → 8 + 2 = 10.</p><p><b>Decimal → binary:</b> go left to right. If a value fits, write 1 and subtract; otherwise write 0. 10 uses 8 and 2 → 00001010.</p><p><b>Hex digit = 4 bits.</b> A=10, B=11, C=12, D=13, E=14, F=15.</p><p><b>Binary → hex:</b> group into fours from the right. Each group uses 8 · 4 · 2 · 1. 0010 1010 → 2 A.</p><p><b>Hex → binary:</b> make every digit four bits, then join. 2A → 0010 1010.</p><p><b>Two-digit hex → decimal:</b> left digit × 16 + right digit. 2A → 2 × 16 + 10 = 42.</p><p><b>Decimal byte → hex:</b> divide into full groups of 16 and a remainder. 42 = 2 × 16 + 10 → 2A.</p>
+<h3>Sizes & counting · Chapters 3–4</h3><p><b>Byte = 8 bits. MAC = 6 bytes = 48 bits.</b> Three MAC byte pairs = 24 bits.</p><p><b>IPv6 = 8 groups × 16 bits = 128 bits.</b> Missing zero groups = 8 − written groups. One :: can replace consecutive zero groups.</p><p><b>Untagged Ethernet frame = 14 + payload/padding + 4 bytes.</b> Payload/padding is 46–1500 bytes; total is 64–1518. Preamble/SFD are excluded.</p><p><b>n bits give 2ⁿ labels.</b> To label 200 objects, find the first power of 2 big enough: 128 is too small; 256 works → 8 bits.</p><p><b>Powers to recognize:</b> 2⁴=16 · 2⁵=32 · 2⁶=64 · 2⁷=128 · 2⁸=256 · 2⁹=512 · 2¹⁰=1,024.</p></details>`}

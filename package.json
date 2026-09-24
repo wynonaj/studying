@@ -5,7 +5,7 @@
   "description": "Chapter-based CIS 320 study practice with flashcards, applied questions and mixed exercises",
   "scripts": {
     "start": "node scripts/serve.mjs",
-    "check": "node --check dist/app.js && node --check dist/vocab.js && node --check dist/teaching.js && node --check dist/subnet.js && node --check dist/map.js",
+    "check": "node --check dist/app.js && node --check dist/vocab.js && node --check dist/teaching.js && node --check dist/subnet.js && node --check dist/map.js && node --check dist/numbers.js",
     "test": "node tests/content.cjs",
     "package": "node scripts/package.mjs"
   },
