@@ -3090,7 +3090,7 @@
       "id": "notes-hop-delivery",
       "ch": 4,
       "title": "Hop-by-hop vs. end-to-end delivery",
-      "body": "#### One journey, two delivery scopes\nChapter 3 explains local frames; Chapter 4 explains IP delivery across networks; Chapter 1 places Transport above IP. Imagine sending a package through several delivery stops. The final destination stays on the inner address label, while each local handoff needs its own outer label.\n\n#### Local-link delivery: the outer frame\nOn an Ethernet link, the frame has source and destination MAC addresses. For a remote server, your laptop first addresses the frame to its local router, not to the remote server’s MAC address. A local switch can forward that frame without changing its source and destination MAC addresses.\n\n#### At the router: use a new local wrapper\nThe router removes the incoming link-layer wrapper, examines the packet’s destination IP address, and chooses the next hop. It then builds a frame for the outgoing link. On Ethernet, the new source MAC is the router’s outgoing interface and the destination MAC is the next-hop interface. Not every kind of link uses Ethernet or MAC addresses.\n\n#### Follow the same message across three links\nAssume Ethernet links and ordinary routing with no NAT. Laptop → Router A → Router B → Server. Each routed link uses a different source/destination MAC pair. The source/destination IP addresses still identify the laptop and server. TCP/UDP ports identify their application endpoints. Click each link in the diagram to see which labels change.\n\n#### What end-to-end does—and does not—mean\nTransport is process-to-process: it connects application endpoints. IP supplies addressing across networks, but routers still make hop-by-hop forwarding decisions. “Same endpoints” does not mean the whole IP header stays unchanged: routers reduce TTL (IPv4) or Hop Limit (IPv6). NAT may translate IP addresses and, with port translation, ports. For the basic example, assume no NAT.\n\n#### Keep the scope straight\nA switch forwarding within one LAN is not the same as a router forwarding onto another IP link. In this lesson, hop-by-hop means local delivery between successive IP forwarding endpoints, not necessarily every physical cable segment. Remember: local MAC label for this leg, IP destination for the wider journey, port for the receiving program.",
+      "body": "#### One journey, two delivery scopes\nChapter 3 explains local frames; Chapter 4 explains IP delivery across networks; Chapter 1 places Transport above IP. Imagine sending a package through several delivery stops. The final destination stays on the inner address label, while each local handoff needs its own outer label.\n\n#### What does “link-layer wrapper” actually mean?\nStart with the message you want to send, such as a request for a web page. Your computer prepares an IP packet: a bundle of data that includes the final destination’s IP address.\n\nTo carry that packet across a local Ethernet connection, the computer adds information BEFORE it and AFTER it. Think of putting a letter into an envelope. This is only a picture to help you remember: the real envelope is extra bits, not paper.\n\nHEADER = information before the packet. For Ethernet, it includes the source MAC (who sent this local frame), destination MAC (who receives this local frame), and type (what kind of packet is inside).\n\nPAYLOAD = what is inside. In this example, it is the whole IP packet.\n\nTRAILER = information after the packet. Ethernet puts the FCS error check here, helping the receiver detect damage.\n\nFRAME = the whole thing: header + packet inside + trailer. “Link-layer wrapper” means that outer delivery information around the packet. It is another way of describing what the Data Link layer adds.\n\n#### Local-link delivery: the outer frame\nOn an Ethernet link, the frame has source and destination MAC addresses. For a remote server, your laptop first addresses the frame to its local router, not to the remote server’s MAC address. A local switch can forward that frame without changing its source and destination MAC addresses.\n\n#### At the router: open one envelope, make the next\nImagine your laptop sending a letter to a faraway server. The IP packet inside names that server as the final destination. The first Ethernet envelope is addressed to your local router because that is the next place the laptop can deliver it.\n\nThe router receives the frame, checks and removes its local delivery information, and reads the IP destination to choose the next connection. This is what “removes the link-layer wrapper” means: open the current local-delivery envelope and take out the packet.\n\nThe router then builds the next link’s frame. On Ethernet, it adds a new header and error-check trailer. The new source MAC belongs to the router’s outgoing interface; the new destination MAC belongs to the next receiver.\n\nThe final server is still the IP destination in this example. The outer local label changes because the next delivery stop changes. Assume no NAT here. Other link technologies may use a different frame format.\n\n#### Follow the same message across three links\nAssume Ethernet links and ordinary routing with no NAT. Laptop → Router A → Router B → Server. Each routed link uses a different source/destination MAC pair. The source/destination IP addresses still identify the laptop and server. TCP/UDP ports identify their application endpoints. Click each link in the diagram to see which labels change.\n\n#### What end-to-end does—and does not—mean\nTransport is process-to-process: it connects application endpoints. IP supplies addressing across networks, but routers still make hop-by-hop forwarding decisions. “Same endpoints” does not mean the whole IP header stays unchanged: routers reduce TTL (IPv4) or Hop Limit (IPv6). NAT may translate IP addresses and, with port translation, ports. For the basic example, assume no NAT.\n\n#### Keep the scope straight\nA switch forwarding within one LAN is not the same as a router forwarding onto another IP link. In this lesson, hop-by-hop means local delivery between successive IP forwarding endpoints, not necessarily every physical cable segment. Remember: local MAC label for this leg, IP destination for the wider journey, port for the receiving program.",
       "remember": "Local MAC label → this link. IP endpoint → network journey. Port → application endpoint.",
       "sources": [
         "https://www.rfc-editor.org/info/rfc3022/"
@@ -3968,18 +3968,25 @@
       "terms": [
         "Encapsulation",
         "Header",
-        "Packet"
+        "Packet",
+        "Link-layer wrapper",
+        "Payload",
+        "Trailer"
       ]
     },
     "notes-1-5": {
       "title": "Who writes the shared rules?",
       "context": "In Chapter 1, network authorities are organizations with different jobs. IEEE develops Ethernet and Wi-Fi standards. IETF develops Internet protocol standards. ICANN coordinates naming, and IANA coordinates shared number and parameter registries. TIA develops commercial building-cabling standards. ITU is the United Nations agency for international telecommunications.",
       "analogy": "People agree on road signs so drivers from different towns understand them. Standards help devices made by different companies understand one another.",
-      "example": "For the paired question: LAN/WLAN standards → IEEE; Internet protocol standards → IETF. These are groups of people and organizations, not routers.",
+      "example": "Choose the job first: Ethernet or Wi-Fi rules → IEEE. Internet protocol rules → IETF. Coordinating Internet names and numbers → ICANN. Global identifier registries → IANA. International telecommunications → ITU. Building cabling standards → TIA. These are organizations or coordinating functions, not devices forwarding your packets.",
       "terms": [
         "Standard",
         "IEEE",
-        "IETF"
+        "IETF",
+        "ICANN",
+        "IANA",
+        "ITU",
+        "TIA"
       ]
     },
     "notes-2-1": {
@@ -4399,6 +4406,10 @@
       "analogy": "The inner destination label stays with the package; each local delivery service adds its own next-stop label.",
       "example": "Assume Ethernet links and ordinary routing with no NAT. Laptop → Router A → Router B → Server. Each routed link uses a different source/destination MAC pair. The source/destination IP addresses still identify the laptop and server. TCP/UDP ports identify their application endpoints. Click each link in the diagram to see which labels change.",
       "terms": [
+        "Link-layer wrapper",
+        "Header",
+        "Payload",
+        "Trailer",
         "Frame",
         "Packet",
         "Next hop",
@@ -4410,12 +4421,16 @@
           "body": "Chapter 3 explains local frames; Chapter 4 explains IP delivery across networks; Chapter 1 places Transport above IP. Imagine sending a package through several delivery stops. The final destination stays on the inner address label, while each local handoff needs its own outer label."
         },
         {
+          "title": "What does “link-layer wrapper” actually mean?",
+          "body": "Start with the message you want to send, such as a request for a web page. Your computer prepares an IP packet: a bundle of data that includes the final destination’s IP address.\n\nTo carry that packet across a local Ethernet connection, the computer adds information BEFORE it and AFTER it. Think of putting a letter into an envelope. This is only a picture to help you remember: the real envelope is extra bits, not paper.\n\nHEADER = information before the packet. For Ethernet, it includes the source MAC (who sent this local frame), destination MAC (who receives this local frame), and type (what kind of packet is inside).\n\nPAYLOAD = what is inside. In this example, it is the whole IP packet.\n\nTRAILER = information after the packet. Ethernet puts the FCS error check here, helping the receiver detect damage.\n\nFRAME = the whole thing: header + packet inside + trailer. “Link-layer wrapper” means that outer delivery information around the packet. It is another way of describing what the Data Link layer adds."
+        },
+        {
           "title": "Local-link delivery: the outer frame",
           "body": "On an Ethernet link, the frame has source and destination MAC addresses. For a remote server, your laptop first addresses the frame to its local router, not to the remote server’s MAC address. A local switch can forward that frame without changing its source and destination MAC addresses."
         },
         {
-          "title": "At the router: use a new local wrapper",
-          "body": "The router removes the incoming link-layer wrapper, examines the packet’s destination IP address, and chooses the next hop. It then builds a frame for the outgoing link. On Ethernet, the new source MAC is the router’s outgoing interface and the destination MAC is the next-hop interface. Not every kind of link uses Ethernet or MAC addresses."
+          "title": "At the router: open one envelope, make the next",
+          "body": "Imagine your laptop sending a letter to a faraway server. The IP packet inside names that server as the final destination. The first Ethernet envelope is addressed to your local router because that is the next place the laptop can deliver it.\n\nThe router receives the frame, checks and removes its local delivery information, and reads the IP destination to choose the next connection. This is what “removes the link-layer wrapper” means: open the current local-delivery envelope and take out the packet.\n\nThe router then builds the next link’s frame. On Ethernet, it adds a new header and error-check trailer. The new source MAC belongs to the router’s outgoing interface; the new destination MAC belongs to the next receiver.\n\nThe final server is still the IP destination in this example. The outer local label changes because the next delivery stop changes. Assume no NAT here. Other link technologies may use a different frame format."
         },
         {
           "title": "Follow the same message across three links",
