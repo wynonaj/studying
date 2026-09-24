@@ -20,6 +20,10 @@ Use an HTTP server rather than opening `index.html` directly: the app loads its 
 
 ## Study modes
 
+- **Learn First:** five-step contextual lessons, plain-language glossary, analogies, worked examples, then practice. Lessons are marked complete after their checkpoint questions are answered correctly.
+- **Subnet decoder:** decimal or binary IPv4 input with prefixes /0–/32; clickable network/host bits, live prefix slider, six worked calculation steps, and repeatable randomized practice. /31 and /32 use their special address counts.
+- **Practice Quiz:** all existing study sections remain. Optional teaching cards explain the rule before answering. Chapter progress now counts each item answered correctly once, independently of spaced-retention levels and XP.
+
 - **Easy explanations:** 25 chapter reading sections from the added notes (summary checklist excluded), with corrections and 32 separate practice questions. Added-note questions stay outside the original Learn and exam banks. Original guide questions link to relevant reading sections. Wrong-answer feedback starts with a beginner reminder and keeps further detail expandable.
 
 - **Learn:** ten-item quick reviews and full-chapter sessions mixing original guide questions, relevant vocabulary and abbreviations, ordering exercises, and highlighted number drills where applicable.
@@ -37,6 +41,8 @@ The full guide retains all 54 original prompts. Clarifications correct inconsist
 
 - `dist/index.html`: page shell and script loading.
 - `dist/style.css`: responsive styling (Google Fonts with system fallbacks).
+- `dist/teaching.js`: teaching flow, chapter context and jargon translator.
+- `dist/subnet.js`: validated subnet calculations, visual decoder and practice generation.
 - `dist/app.js`: UI, mixed session selection, ordering/number exercises, grading and progress.
 - `dist/vocab.js`: vocabulary and abbreviation definitions.
 - `dist/content.json`: original questions, study answers, quiz answers, authored distractors, explanations, and the separate understanding bank.
@@ -73,3 +79,7 @@ This creates `artifacts/cis320-recall-lab.tar.gz` and requires the standard `tar
 ## Progress
 
 Progress, XP, and review dates are stored in the current browser under localStorage key `cis320-v1`. There is no account synchronization or server-side progress database. Changing the site origin uses a different browser storage area. Retained status estimates practice performance and does not guarantee exam results.
+
+## Vercel publication
+
+The current Vercel deployment is https://studying-gamma.vercel.app/ and uses the GitHub repository `wynonaj/studying`. Publish source changes to `main` with `dist` as the static output directory. The existing Sites manifest is retained for compatibility; Vercel does not require it.

@@ -2990,7 +2990,7 @@
         "The browser must use the same radio signals as Ethernet.",
         "Layering removes the need for physical signals."
       ],
-      "explain": "Layering separates application services from local-link details..",
+      "explain": "Each layer has its own job. You can investigate one job without having to understand the whole network at once.",
       "remember": "Remember: Each layer has its own job. You can investigate one job without having to understand the whole network at once.",
       "lessonId": "notes-1-1",
       "note": "Added-notes practice"
@@ -3007,7 +3007,7 @@
         "IPv4 network prefix",
         "Ethernet FCS"
       ],
-      "explain": "Port number.",
+      "explain": "The network delivers to a device, but the receiving device also needs to know which application process should get the data. Transport port numbers help identify that endpoint.",
       "remember": "Remember: The network delivers to a device, but the receiving device also needs to know which application process should get the data. Transport port numbers help identify that endpoint.",
       "lessonId": "notes-1-2",
       "note": "Added-notes practice"
@@ -3024,7 +3024,7 @@
         "Network",
         "Physical"
       ],
-      "explain": "Presentation.",
+      "explain": "OSI separates seven jobs. Presentation changes the data\u2019s format; Session manages the conversation.",
       "remember": "Remember: OSI separates seven jobs. Presentation changes the data\u2019s format; Session manages the conversation.",
       "lessonId": "notes-1-3",
       "note": "Added-notes practice"
@@ -3041,7 +3041,7 @@
         "Removes the IP destination permanently.",
         "Turns the Transport header into a MAC address."
       ],
-      "explain": "Removes the received frame and builds a frame for the next link..",
+      "explain": "Sending adds wrapping; receiving removes it. A router builds new link-layer wrapping for the next link.",
       "remember": "Remember: Sending adds wrapping; receiving removes it. A router builds new link-layer wrapping for the next link.",
       "lessonId": "notes-1-4",
       "note": "Added-notes practice"
@@ -3058,7 +3058,7 @@
         "IANA",
         "ICANN"
       ],
-      "explain": "IEEE.",
+      "explain": "IEEE is the Ethernet/Wi-Fi standards group; IETF is the Internet-protocol standards group.",
       "remember": "Remember: IEEE is the Ethernet/Wi-Fi standards group; IETF is the Internet-protocol standards group.",
       "lessonId": "notes-1-5",
       "note": "Added-notes practice"
@@ -3075,7 +3075,7 @@
         "TIA",
         "ITU"
       ],
-      "explain": "ICANN.",
+      "explain": "ICANN coordinates the naming system. A domain name is a readable name, not the Ethernet address of your computer.",
       "remember": "Remember: ICANN coordinates the naming system. A domain name is a readable name, not the Ethernet address of your computer.",
       "lessonId": "notes-1-5",
       "note": "Added-notes practice"
@@ -3092,7 +3092,7 @@
         "Write every building\u2019s cabling plan.",
         "Operate every individual DNS server."
       ],
-      "explain": "Coordinate Internet number resources and protocol-parameter registries..",
+      "explain": "IANA coordinates shared number and parameter registries. Regional registries then handle regional IP allocations.",
       "remember": "Remember: IANA coordinates shared number and parameter registries. Regional registries then handle regional IP allocations.",
       "lessonId": "notes-1-5",
       "note": "Added-notes practice"
@@ -3109,7 +3109,7 @@
         "IANA",
         "ICANN"
       ],
-      "explain": "TIA.",
+      "explain": "TIA is the building-cabling association. Think of standards for organizing and installing the wiring.",
       "remember": "Remember: TIA is the building-cabling association. Think of standards for organizing and installing the wiring.",
       "lessonId": "notes-1-5",
       "note": "Added-notes practice"
@@ -3126,7 +3126,7 @@
         "IEEE",
         "ARIN"
       ],
-      "explain": "ITU.",
+      "explain": "ITU focuses on international telecommunications. IEEE and IETF have different networking standards roles.",
       "remember": "Remember: ITU focuses on international telecommunications. IEEE and IETF have different networking standards roles.",
       "lessonId": "notes-1-5",
       "note": "Added-notes practice"
@@ -3143,7 +3143,7 @@
         "Adding a domain name alone",
         "Recording it in a routing table alone"
       ],
-      "explain": "Representing it as a physical signal.",
+      "explain": "Bits are information. Signals are the physical form that lets those bits travel.",
       "remember": "Remember: Bits are information. Signals are the physical form that lets those bits travel.",
       "lessonId": "notes-2-1",
       "note": "Added-notes practice"
@@ -3160,7 +3160,7 @@
         "To turn electrical signals into light",
         "To guarantee the same speed over every distance"
       ],
-      "explain": "To help reduce interference and crosstalk.",
+      "explain": "Twists reduce interference. Choose cable by the required speed and distance, not just its category number.",
       "remember": "Remember: Twists reduce interference. Choose cable by the required speed and distance, not just its category number.",
       "lessonId": "notes-2-2",
       "note": "Added-notes practice"
@@ -3177,7 +3177,7 @@
         "Signals must be carried through glass.",
         "Every signal must use a separate physical cable."
       ],
-      "explain": "Different frequency channels carry simultaneous signals..",
+      "explain": "Broadband separates the medium into frequency channels so several signals can share it at once.",
       "remember": "Remember: Broadband separates the medium into frequency channels so several signals can share it at once.",
       "lessonId": "notes-2-2",
       "note": "Added-notes practice"
@@ -3194,7 +3194,7 @@
         "It always has a smaller core than single-mode fiber.",
         "Its reach never depends on the transceiver."
       ],
-      "explain": "It may use LEDs or lasers, depending on the technology..",
+      "explain": "A fiber guides light through its core. Single-mode usually suits longer links; multimode usually suits shorter ones.",
       "remember": "Remember: A fiber guides light through its core. Single-mode usually suits longer links; multimode usually suits shorter ones.",
       "lessonId": "notes-2-3",
       "note": "Added-notes practice"
@@ -3211,7 +3211,7 @@
         "Phase and core diameter",
         "Amplitude and IP prefix"
       ],
-      "explain": "Amplitude and phase.",
+      "explain": "Amplitude means wave strength, frequency means cycles per second, and phase means position in the cycle. QAM changes amplitude and phase together.",
       "remember": "Remember: Amplitude means wave strength, frequency means cycles per second, and phase means position in the cycle. QAM changes amplitude and phase together.",
       "lessonId": "notes-2-4",
       "note": "Added-notes practice"
@@ -3228,7 +3228,7 @@
         "Signal power divided by noise power",
         "Channel capacity in bits per second"
       ],
-      "explain": "Channel bandwidth in hertz.",
+      "explain": "B is how much frequency range the channel has available. C is the resulting capacity, measured in bits per second.",
       "remember": "Remember: B is how much frequency range the channel has available. C is the resulting capacity, measured in bits per second.",
       "lessonId": "notes-2-5",
       "note": "Added-notes practice"
@@ -3245,7 +3245,7 @@
         "Leaves it unchanged",
         "Makes it exactly equal to the frame size"
       ],
-      "explain": "Increases it.",
+      "explain": "A cleaner signal is easier to distinguish from noise. With the same bandwidth, that raises the theoretical capacity.",
       "remember": "Remember: A cleaner signal is easier to distinguish from noise. With the same bandwidth, that raises the theoretical capacity.",
       "lessonId": "notes-2-5",
       "note": "Added-notes practice"
@@ -3262,7 +3262,7 @@
         "Application message",
         "Routing-table entry"
       ],
-      "explain": "Frame.",
+      "explain": "Data Link organizes local delivery into frames. Physical carries the signals underneath those frames.",
       "remember": "Remember: Data Link organizes local delivery into frames. Physical carries the signals underneath those frames.",
       "lessonId": "notes-3-1",
       "note": "Added-notes practice"
@@ -3279,7 +3279,7 @@
         "Every fiber link regardless of duplex",
         "Every IP router regardless of link type"
       ],
-      "explain": "Shared half-duplex Ethernet.",
+      "explain": "Listen first. If a collision happens on a shared half-duplex link, stop, signal the collision, wait a random time and retry.",
       "remember": "Remember: Listen first. If a collision happens on a shared half-duplex link, stop, signal the collision, wait a random time and retry.",
       "lessonId": "notes-3-2",
       "note": "Added-notes practice"
@@ -3296,7 +3296,7 @@
         "The destination application has processed the data.",
         "The routing table is correct."
       ],
-      "explain": "No corruption was detected by that check..",
+      "explain": "An error check can detect corruption, but passing the check is not an absolute guarantee that no error exists.",
       "remember": "Remember: An error check can detect corruption, but passing the check is not an absolute guarantee that no error exists.",
       "lessonId": "notes-3-3",
       "note": "Added-notes practice"
@@ -3313,7 +3313,7 @@
         "175",
         "181"
       ],
-      "explain": "173.",
+      "explain": "Add only the positions containing 1: 128 + 32 + 8 + 4 + 1 = 173.",
       "remember": "Remember: Add only the positions containing 1: 128 + 32 + 8 + 4 + 1 = 173.",
       "lessonId": "notes-3-4",
       "note": "Added-notes practice"
@@ -3330,7 +3330,7 @@
         "It sends the frame only back to the incoming port.",
         "It changes the destination into its own MAC address."
       ],
-      "explain": "It floods the frame to other eligible ports in the same VLAN..",
+      "explain": "The switch cannot choose one destination port until it has learned where that MAC address is. It floods an unknown unicast within the VLAN.",
       "remember": "Remember: The switch cannot choose one destination port until it has learned where that MAC address is. It floods an unknown unicast within the VLAN.",
       "lessonId": "notes-3-5",
       "note": "Added-notes practice"
@@ -3347,7 +3347,7 @@
         "Both are permanently fixed to the network card.",
         "MAC addresses replace the need for network prefixes."
       ],
-      "explain": "They support different scopes: routing across networks and local-link delivery..",
+      "explain": "MAC helps with the next local delivery. IP helps routers choose a path across networks.",
       "remember": "Remember: MAC helps with the next local delivery. IP helps routers choose a path across networks.",
       "lessonId": "notes-4-1",
       "note": "Added-notes practice"
@@ -3364,7 +3364,7 @@
         "16",
         "32"
       ],
-      "explain": "15.",
+      "explain": "The slash number tells you how many bits are network bits. Subtract it from 32 to find the IPv4 host bits.",
       "remember": "Remember: The slash number tells you how many bits are network bits. Subtract it from 32 to find the IPv4 host bits.",
       "lessonId": "notes-4-2",
       "note": "Added-notes practice"
@@ -3381,7 +3381,7 @@
         "Once per hextet",
         "Any number of times"
       ],
-      "explain": "Once.",
+      "explain": "IPv4 is 32 bits; IPv6 is 128. In IPv6, :: is a shortcut for consecutive zero groups and can appear only once.",
       "remember": "Remember: IPv4 is 32 bits; IPv6 is 128. In IPv6, :: is a shortcut for consecutive zero groups and can appear only once.",
       "lessonId": "notes-4-3",
       "note": "Added-notes practice"
@@ -3398,7 +3398,7 @@
         "The router must have no IP address.",
         "Every later router must be unreachable."
       ],
-      "explain": "The router might not reply; the result alone does not prove a broken path..",
+      "explain": "Diagnostic probes depend on replies. Filtering or a router\u2019s response policy can hide a hop even when traffic still passes.",
       "remember": "Remember: Diagnostic probes depend on replies. Filtering or a router\u2019s response policy can hide a hop even when traffic still passes.",
       "lessonId": "notes-4-4",
       "note": "Added-notes practice"
@@ -3415,7 +3415,7 @@
         "Deciding the logical subnet organization alone",
         "Defining application traffic requirements alone"
       ],
-      "explain": "Choosing specific switch hardware and cable types.",
+      "explain": "First learn what users need. Then plan the network, choose equipment and account for ongoing costs.",
       "remember": "Remember: First learn what users need. Then plan the network, choose equipment and account for ongoing costs.",
       "lessonId": "notes-12-1",
       "note": "Added-notes practice"
@@ -3432,7 +3432,7 @@
         "The last byte of an Ethernet frame",
         "The boundary between host and network bits"
       ],
-      "explain": "The boundary between the provider\u2019s network and the customer\u2019s network.",
+      "explain": "Demarc means the boundary where provider responsibility meets customer responsibility.",
       "remember": "Remember: Demarc means the boundary where provider responsibility meets customer responsibility.",
       "lessonId": "notes-12-2",
       "note": "Added-notes practice"
@@ -3449,7 +3449,7 @@
         "An MDF is a MAC-address field inside an IDF.",
         "They are names for two different modulation methods."
       ],
-      "explain": "The main distribution point connects secondary distribution areas..",
+      "explain": "Main means the central distribution point. Intermediate points serve other floors or areas and connect back through the backbone.",
       "remember": "Remember: Main means the central distribution point. Intermediate points serve other floors or areas and connect back through the backbone.",
       "lessonId": "notes-12-2",
       "note": "Added-notes practice"
@@ -3466,7 +3466,7 @@
         "Only the physically nearest spine",
         "Every end user without any spine connection"
       ],
-      "explain": "Every spine in that fabric.",
+      "explain": "Access connects users, Distribution brings access networks together, and Core provides the fast backbone.",
       "remember": "Remember: Access connects users, Distribution brings access networks together, and Core provides the fast backbone.",
       "lessonId": "notes-12-3",
       "note": "Added-notes practice"
@@ -3483,7 +3483,7 @@
         "An Ethernet FCS check",
         "A spanning-tree port block"
       ],
-      "explain": "GET.",
+      "explain": "GET means ask for a value. The manager requests it and the device\u2019s agent replies.",
       "remember": "Remember: GET means ask for a value. The manager requests it and the device\u2019s agent replies.",
       "lessonId": "notes-12-4",
       "note": "Added-notes practice"
@@ -3500,7 +3500,7 @@
         "Replaces every device\u2019s MIB definitions",
         "Always reboots every router"
       ],
-      "explain": "Requests a change to a supported writable managed object.",
+      "explain": "SET asks the device to change something it allows you to write. Access permissions and object support still apply.",
       "remember": "Remember: SET asks the device to change something it allows you to write. Access permissions and object support still apply.",
       "lessonId": "notes-12-4",
       "note": "Added-notes practice"
@@ -3517,10 +3517,295 @@
         "One vendor chooses without review",
         "Every proposal becomes a standard immediately"
       ],
-      "explain": "Rough consensus developed through discussion and review.",
+      "explain": "A standard is a shared rule. Experts propose, discuss, revise and approve it so different products can work together.",
       "remember": "Remember: A standard is a shared rule. Experts propose, discuss, revise and approve it so different products can work together.",
       "lessonId": "notes-12-5",
       "note": "Added-notes practice"
     }
-  ]
+  ],
+  "teaching": {
+    "notes-big-picture": {
+      "title": "Following one message",
+      "context": "A network lets devices exchange information. Sending a message needs several jobs: prepare the data, identify the receiving application, find the destination network, cross the next local link, and transmit signals.",
+      "analogy": "Like a delivery service: the letter, recipient, route, local delivery vehicle and road each play a different part.",
+      "example": "You open a web page. Application protocols request it; Transport communicates between processes; IP routes packets; Data Link carries local frames; Physical transmits signals.",
+      "terms": [
+        "End-user",
+        "Layer",
+        "Packet"
+      ]
+    },
+    "notes-1-1": {
+      "title": "Why networking is divided into layers",
+      "context": "In Chapter 1, a layer means one set of responsibilities in communication. The layers work together through defined interfaces. This makes a large system easier to build and troubleshoot.",
+      "analogy": "A restaurant separates taking orders, cooking and delivery. A new delivery vehicle does not require rewriting the menu.",
+      "example": "A browser can still request the same page after you change from Wi-Fi to Ethernet. The local connection changes; the browser\u2019s network service can remain the same.",
+      "terms": [
+        "Layer",
+        "Protocol",
+        "End-user"
+      ]
+    },
+    "notes-1-2": {
+      "title": "The five jobs in your TCP/IP model",
+      "context": "Your course uses five layers. Application supplies network services. Transport connects application processes. Network chooses routes using IP. Data Link handles a local frame. Physical carries bits as signals.",
+      "analogy": "Think of delivery instructions: what to send, which recipient process, which network, the next local delivery, and the physical journey.",
+      "example": "A packet crossing several routers needs IP routing. Each individual local link uses a frame and physical signals. The five-layer course model separates those jobs. A Transport port number identifies the receiving application endpoint; for example, HTTP commonly uses port 80.",
+      "terms": [
+        "Layer",
+        "Packet",
+        "Frame"
+      ]
+    },
+    "notes-1-3": {
+      "title": "Why OSI has seven layers",
+      "context": "Chapter 1 compares two ways of organizing network functions. OSI has seven layers. Its Presentation layer handles representation, such as formatting and encryption; Session manages conversations. TCP/IP groups these upper responsibilities under Application.",
+      "analogy": "OSI gives three separate desks to application services, formatting and conversation management. TCP/IP groups those desks into one upper department.",
+      "example": "OSI top to bottom: Application, Presentation, Session, Transport, Network, Data Link, Physical. Your five-layer TCP/IP list omits separate Presentation and Session entries.",
+      "terms": [
+        "OSI",
+        "Layer",
+        "Session"
+      ]
+    },
+    "notes-1-4": {
+      "title": "Wrapping and unwrapping data",
+      "context": "Encapsulation means adding control information around data as it travels down the sending stack. Decapsulation removes that wrapping as the receiver processes it up the stack.",
+      "analogy": "A letter goes into an addressed envelope, then into a local delivery container. Each wrapper helps with a different part of delivery.",
+      "example": "A router takes a packet out of its incoming frame, updates forwarding-related IP information, then builds a frame for the next link. The IP header is not completely unchanged.",
+      "terms": [
+        "Encapsulation",
+        "Header",
+        "Packet"
+      ]
+    },
+    "notes-1-5": {
+      "title": "Who writes the shared rules?",
+      "context": "In Chapter 1, network authorities are organizations with different jobs. IEEE develops Ethernet and Wi-Fi standards. IETF develops Internet protocol standards. ICANN coordinates naming, and IANA coordinates shared number and parameter registries. TIA develops commercial building-cabling standards. ITU is the United Nations agency for international telecommunications.",
+      "analogy": "People agree on road signs so drivers from different towns understand them. Standards help devices made by different companies understand one another.",
+      "example": "For the paired question: LAN/WLAN standards \u2192 IEEE; Internet protocol standards \u2192 IETF. These are groups of people and organizations, not routers.",
+      "terms": [
+        "Standard",
+        "IEEE",
+        "IETF"
+      ]
+    },
+    "notes-2-1": {
+      "title": "Turning information into something that travels",
+      "context": "In Chapter 2, bits are the 0s and 1s that represent information. A signal is a physical change that carries those bits. The medium is the path: copper wire, optical fiber or radio through space.",
+      "analogy": "A spoken word is an idea carried by vibrations in air. Network data also needs a physical carrier.",
+      "example": "Copper uses electrical signals; fiber uses light; wireless uses radio. Choosing a medium means checking speed, distance, interference and cost.",
+      "terms": [
+        "Bit",
+        "Medium",
+        "Signal"
+      ]
+    },
+    "notes-2-2": {
+      "title": "Choosing and understanding copper cable",
+      "context": "UTP means Unshielded Twisted Pair. Pairs of copper wires are twisted to reduce interference between signals. Cable categories describe performance requirements; distance and installation matter too.",
+      "analogy": "Two conversations in one room can interfere. Cable design helps a receiver distinguish its intended conversation.",
+      "example": "Common limits: Cat 5e supports 1 Gbps over 100 m; Cat 6a supports 10 Gbps over 100 m. Cat 8 supports 25/40 Gbps over shorter 30 m channels and is shielded. In the traditional cabling comparison, baseband uses an undivided signaling channel; broadband separates simultaneous signals into frequency channels.",
+      "terms": [
+        "UTP",
+        "Interference",
+        "Gbps"
+      ]
+    },
+    "notes-2-3": {
+      "title": "How fiber guides light",
+      "context": "Fiber carries light through a core surrounded by cladding. Total internal reflection keeps light guided in the core under the right conditions. Single-mode uses a smaller core; multimode allows multiple light paths.",
+      "analogy": "Imagine light following a carefully designed tunnel. Different paths can arrive at slightly different times, spreading a pulse.",
+      "example": "Single-mode core: about 9 \u00b5m, commonly for long links. Multimode core: 50 or 62.5 \u00b5m, commonly for shorter links. Reach depends on the optics and data rate, not just the name.",
+      "terms": [
+        "Core (fiber)",
+        "Single-mode",
+        "Multimode"
+      ]
+    },
+    "notes-2-4": {
+      "title": "How a wave carries different values",
+      "context": "Modulation changes a signal property to represent information. Amplitude is its strength; frequency is how often it repeats; phase is its position in a cycle. QAM changes amplitude and phase together.",
+      "analogy": "You could signal with a flashlight by changing its brightness or timing. The receiver needs to distinguish the changes.",
+      "example": "AM changes amplitude; FM changes frequency; PM changes phase. More QAM states can encode more bits per symbol, but closely spaced states are harder to distinguish in noise.",
+      "terms": [
+        "Amplitude",
+        "Frequency",
+        "Phase"
+      ]
+    },
+    "notes-2-5": {
+      "title": "Sharing a medium and understanding its limits",
+      "context": "Multiplexing lets several signals share one medium. FDM assigns frequency bands; TDM assigns time slots. Shannon\u2019s formula relates theoretical capacity to channel bandwidth and signal-to-noise ratio.",
+      "analogy": "FDM resembles different radio stations. TDM resembles people taking turns speaking into one microphone.",
+      "example": "For C = B \u00d7 log\u2082(1 + S/N), if B = 1000 Hz and S/N = 3, then 1 + 3 = 4, log\u2082(4) = 2, and C = 2000 bits/s. S/N here is a linear ratio.",
+      "terms": [
+        "Bandwidth",
+        "Multiplexing",
+        "Signal-to-noise ratio"
+      ]
+    },
+    "notes-3-1": {
+      "title": "Local delivery has its own wrapper",
+      "context": "In Chapter 3, Data Link handles communication over one local link. It organizes bits into a frame, uses link-layer addresses, manages access to the medium and detects errors.",
+      "analogy": "A local delivery label helps the next delivery step. It is different from the overall route across cities.",
+      "example": "An Ethernet frame includes destination and source MAC addresses, its payload and an error check. Physical sends the signals that carry the frame.",
+      "terms": [
+        "Frame",
+        "MAC address",
+        "Payload"
+      ]
+    },
+    "notes-3-2": {
+      "title": "Taking turns on shared Ethernet",
+      "context": "Older shared half-duplex Ethernet allows only one successful transmission at a time. CSMA/CD means listen first, transmit when idle, detect a collision, stop and back off randomly. Full-duplex switched Ethernet does not use collision detection.",
+      "analogy": "Two people start talking at once. They stop and wait different lengths of time so they do not immediately interrupt again.",
+      "example": "After a collision, devices send a jam signal and stop transmitting, then wait a random backoff interval before retrying.",
+      "terms": [
+        "Half-duplex",
+        "Collision",
+        "Backoff"
+      ]
+    },
+    "notes-3-3": {
+      "title": "Reading an Ethernet frame",
+      "context": "A frame is a structured package with fields in a defined order. The addresses say who it is for and who sent it. The payload carries data. FCS is an error-detection value.",
+      "analogy": "An envelope has address fields and contents; the receiver needs to know which part is which.",
+      "example": "For an ordinary untagged maximum: 14-byte header + 1500-byte payload + 4-byte FCS = 1518 bytes. The 8-byte preamble/SFD is outside that total. A passing FCS check means no corruption was detected; it is not an absolute guarantee that every bit is correct.",
+      "terms": [
+        "Byte",
+        "Payload",
+        "FCS"
+      ]
+    },
+    "notes-3-4": {
+      "title": "MAC addresses and number systems",
+      "context": "A traditional Ethernet MAC address is 48 bits, often written as six hexadecimal byte groups. Binary uses 0 and 1. Decimal uses 0\u20139. Hexadecimal uses 0\u20139 and A\u2013F.",
+      "analogy": "Different number systems are different ways of writing the same quantity, like writing twelve versus 12.",
+      "example": "10101101\u2082 has 1s at 128, 32, 8, 4 and 1: add them to get 173. For hex, 1010 = 10 = A and 1111 = 15 = F, so 1010 1111 = AF.",
+      "terms": [
+        "Binary",
+        "Hexadecimal",
+        "OUI"
+      ]
+    },
+    "notes-3-5": {
+      "title": "Hubs, switches and network shapes",
+      "context": "A hub repeats incoming signals to other ports. A switch learns which MAC address is reachable through which port. Redundant switch links can create loops; STP blocks selected paths to prevent this.",
+      "analogy": "A hub resembles shouting to a room. A switch resembles a receptionist who knows which desk to contact; if it does not know, it asks more widely.",
+      "example": "Star has a central device; bus uses a shared cable; ring forms a circle; mesh has multiple interconnections. A switch floods unknown unicasts within the VLAN.",
+      "terms": [
+        "Switch",
+        "Port",
+        "Topology"
+      ]
+    },
+    "notes-4-1": {
+      "title": "Why a device needs IP as well as MAC",
+      "context": "Chapter 4 concerns delivery across interconnected networks. An IP address identifies a network location for routing. A MAC address identifies an interface for local-link delivery. Neither is a person\u2019s street address.",
+      "analogy": "An overall destination gets the package to the right area; each local delivery stage needs its own instructions.",
+      "example": "When a router forwards to a new link, it builds a new local frame. Keeping local addressing separate lets the link technology change without redefining the whole IP system.",
+      "terms": [
+        "IP address",
+        "MAC address",
+        "Router"
+      ]
+    },
+    "notes-4-2": {
+      "title": "A subnet is a group of addresses",
+      "context": "An IPv4 address has 32 bits grouped into four 8-bit octets. A subnet groups addresses that share a starting set of bits. The number after / says how many bits are this shared network prefix. The remaining bits vary within the group.",
+      "analogy": "Think of a street name shared by several houses and a house number that distinguishes them. The analogy helps explain shared versus varying parts.",
+      "example": "For /17: 8 bits in octet 1 + 8 in octet 2 + 1 in octet 3 = 17 network bits. There are 32 \u2212 17 = 15 host bits. Use the decoder to build this one bit at a time.",
+      "terms": [
+        "Bit",
+        "Octet",
+        "Subnet",
+        "Prefix",
+        "Host"
+      ]
+    },
+    "notes-4-3": {
+      "title": "Reading IPv6 without getting lost",
+      "context": "IPv4 has 32 bits. IPv6 has 128 bits, normally eight groups of 16 bits written in hexadecimal. Leading zeros within a group can be omitted. One :: can stand for consecutive all-zero groups.",
+      "analogy": "The double colon is a space-saving placeholder. You must still be able to work out exactly how many groups it replaces.",
+      "example": "2001:0db8:aaaa:0000:0000:0000:eeee:0001 becomes 2001:db8:aaaa::eeee:1. Five groups remain visible, so :: represents three zero groups.",
+      "terms": [
+        "IPv6",
+        "Hexadecimal",
+        "Hextet"
+      ]
+    },
+    "notes-4-4": {
+      "title": "Routes, diagnostic tools and address registries",
+      "context": "Chapter 4 asks how packets find networks and who organizes public addresses. A router uses a routing table as a list of destination networks and forwarding directions. RIRs are organizations that register and distribute Internet-number resources in regions.",
+      "analogy": "A routing table is a signpost list. A registry is more like the office keeping address assignments organized; it is not a delivery vehicle.",
+      "example": "Allocation means giving an organization a block of addresses to manage or distribute. An ISP can receive a block and assign addresses to customers. RIR coordination helps prevent conflicting public allocations. For diagnostics, Ping asks for an echo reply, Traceroute explores successive hops, and Pathping measures loss and timing over time. A missing reply may be caused by filtering; it does not prove that traffic cannot pass.",
+      "terms": [
+        "Allocation",
+        "Public IP",
+        "RIR",
+        "ISP"
+      ]
+    },
+    "notes-12-1": {
+      "title": "Design starts with the people using the network",
+      "context": "Chapter 12 is about planning a real organization\u2019s network. First identify the end-users, applications, locations, traffic and security needs. Logical design plans the organization of the network. Physical design chooses actual equipment and cabling.",
+      "analogy": "Plan rooms and their purpose before buying the furniture. Otherwise you may buy equipment that does not fit the need.",
+      "example": "A school estimates student devices and application traffic, plans subnets and services, then selects switches and cables. Costs include maintenance and downtime, not just purchase price.",
+      "terms": [
+        "End-user",
+        "Logical design",
+        "Physical design"
+      ]
+    },
+    "notes-12-2": {
+      "title": "How building wiring is organized",
+      "context": "Structured cabling organizes permanent wiring and connection points. The demarc is the provider/customer boundary. An MDF is a main distribution point; IDFs serve other areas. Horizontal cabling reaches work areas; backbone cabling joins telecommunications spaces.",
+      "analogy": "A main hallway connects smaller hallways, and those lead to rooms. This is an analogy for main distribution, intermediate areas and work-area connections.",
+      "example": "A desk connects through a wall outlet to a floor telecommunications room. Backbone cabling links that room to other distribution areas. A typical copper channel allows 90 m permanent cable plus 10 m patch cords.",
+      "terms": [
+        "Demarc",
+        "MDF",
+        "IDF",
+        "End-user"
+      ]
+    },
+    "notes-12-3": {
+      "title": "Where the campus Core layer fits",
+      "context": "In Chapter 12, Core means a role in a campus network design\u2014not an OSI layer or the glass core of a fiber. The three campus roles are Access, Distribution and Core. Access connects users; Distribution groups access networks; Core links major network regions quickly and reliably.",
+      "analogy": "Access resembles neighborhood streets, Distribution resembles roads connecting neighborhoods, and Core resembles the main highway between larger areas.",
+      "example": "A campus has buildings A and B. Each has access switches for users and distribution switches for aggregation. Core connections carry traffic between those distribution areas. A data center uses another common design called leaf-spine: servers attach to leaf switches, and each leaf connects to every spine switch. This is different from the campus three-tier pattern.",
+      "terms": [
+        "Campus",
+        "Core layer",
+        "Distribution layer",
+        "Access layer",
+        "Backbone"
+      ]
+    },
+    "notes-12-4": {
+      "title": "How an administrator checks devices remotely",
+      "context": "In Chapter 12, network maintenance means keeping service working. SNMP lets management software communicate with agents running on devices. A MIB describes the managed objects, such as an interface counter or temperature value.",
+      "analogy": "A manager asks a local assistant for a reading. A labeled form tells both of them what each field means.",
+      "example": "GET asks for a value. SET requests a change to an authorized writable object. The MIB is the definition of the objects, not a person doing the monitoring.",
+      "terms": [
+        "SNMP",
+        "Agent",
+        "MIB",
+        "Polling"
+      ]
+    },
+    "notes-12-5": {
+      "title": "Working groups are people making shared rules",
+      "context": "In Chapter 12, standards are written technical specifications that help products work together. A working group is a group of people\u2014such as engineers and technical experts\u2014who develop and review a specification. It is not a group of computers.",
+      "analogy": "People agree on the size and shape of a plug so independently made plugs and sockets can fit together.",
+      "example": "A group identifies a need, discusses requirements and proposals, revises a draft and seeks approval. IEEE uses ballots; IETF working groups seek rough consensus through discussion.",
+      "terms": [
+        "Working group",
+        "Standard",
+        "Specification",
+        "Interoperability"
+      ]
+    }
+  }
 }

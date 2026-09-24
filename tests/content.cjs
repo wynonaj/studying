@@ -1,6 +1,8 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const context=vm.createContext({localStorage:{getItem:()=>null},console});
 vm.runInContext(fs.readFileSync('dist/vocab.js','utf8'),context);
+vm.runInContext(fs.readFileSync('dist/teaching.js','utf8'),context);
+vm.runInContext(fs.readFileSync('dist/subnet.js','utf8'),context);
 let app=fs.readFileSync('dist/app.js','utf8');vm.runInContext(app.split("document.addEventListener('click'")[0],context);
 context.data=JSON.parse(fs.readFileSync('dist/content.json'));
 vm.runInContext('DATA=data',context);
@@ -9,7 +11,7 @@ assert.equal(context.data.questions.length,54);assert.equal(new Set(context.data
 assert(!app.includes('id="response"')&&!app.includes('<textarea'));
 console.log(JSON.stringify(result,null,2));console.log('PASS: 54 original prompts present, authored choices unique, sources valid, 500 chapter mixtures correctly scoped, no typed answers.');
 vm.runInContext(`
-record=()=>{};renderSession=()=>{};
+const originalRecord=record;record=()=>{};renderSession=()=>{};
 function check(value,message){if(!value)throw Error(message)}
 const cards=[1,2,3,4].map(id=>({id:'test-'+id,answer:'yes',options:['yes','no']}));
 session={mode:'mixed',items:cards,index:0,total:4,cleared:new Set(),attempts:0,right:0,missed:[]};
@@ -76,3 +78,32 @@ check(noteMarkdown('| A | B |\\n| --- | --- |\\n| 1 | 2 |').includes('<table>'),
 check(DATA.notes.every(n=>!/[{}\\\\]/.test(n.body)),'No damaged pasted formulas');
 `,context);
 console.log('PASS: complete notes sections, beginner reminders, lesson links, separate banks and safe readable rendering.');
+vm.runInContext(`
+const sample=dissectCIDR('73.5.0.0/17');
+check(sample.host===15&&sample.total===32768&&sample.usable===32766,'Guide subnet arithmetic');
+check(numberIP(sample.mask)==='255.255.128.0'&&numberIP(sample.last)==='73.5.127.255','Mask and broadcast');
+check(dissectCIDR('01001001.00000101.00000000.00000000 /17').value===sample.value,'Binary input');
+check(numberIP(dissectCIDR('192.168.12.34/24').network)==='192.168.12.0','Normalize host input');
+for(let prefix=0;prefix<=32;prefix++){
+ const d=dissectCIDR('255.255.255.255/'+prefix);
+ check(d.total===2**(32-prefix)&&d.network+d.total-1===d.last,'Unsigned block arithmetic');
+ check(d.bits.slice(0,prefix)===d.networkBits.slice(0,prefix),'Network prefix unchanged');
+ check(d.networkBits.slice(prefix).split('').every(b=>b==='0'),'Network clears host bits');
+ check(d.lastBits.slice(prefix).split('').every(b=>b==='1'),'Last address sets host bits');
+ for(const q of subnetQuestions(d))check(new Set(q.options).size===4&&q.options.includes(q.answer),'Generated unique answers /'+prefix);
+}
+check(dissectCIDR('10.0.0.0/31').usable===2&&dissectCIDR('10.0.0.1/32').usable===1,'Special usable counts');
+for(const input of ['1.2.3.4/33','256.1.2.3/24','1.2.3/24','-1.2.3.4/8','1.2.3.4/-1','1.2.3.4/2.5','hello']){let threw=false;try{dissectCIDR(input)}catch(e){threw=true}check(threw,'Reject bad input '+input)}
+let prev='';for(let i=0;i<100;i++){const text=randomSubnet(),d=dissectCIDR(text);check(text!==prev&&d.value===d.network&&d.octets[0]===10,'Random canonical private subnet');prev=text}
+for(const n of DATA.notes){const teaching=DATA.teaching[n.id];check(teaching&&teaching.context&&teaching.analogy&&teaching.example,'Teaching coverage '+n.id);for(const term of teaching.terms)check(JARGON[term],'Plain definition '+term)}
+check(JARGON['Working group'].includes('people')&&JARGON['End-user'].includes('person'),'Human terms explained');
+check(preTeachHTML({ch:4,term:'RIR'}).includes('Allocation'),'Registry question explains allocation');
+check(questionContext({ch:12,term:'Core layer'}).includes('campus'),'Campus context distinct from OSI');
+record=originalRecord;save=()=>{};stats=()=>{};
+progress={cards:{},xp:0,days:[]};record({id:'completion-test'},true);
+check(completedOnce({id:'completion-test'}),'First correct response completes item');
+const first=progress.cards['completion-test'].firstCorrectAt;record({id:'completion-test'},false);
+check(completedOnce({id:'completion-test'})&&progress.cards['completion-test'].firstCorrectAt===first,'Later mistakes preserve completion');
+check(progress.cards['completion-test'].level===0&&progress.xp===12,'Spaced review and XP unchanged');
+`,context);
+console.log('PASS: /0–/32 math, binary input, validation, random practice, teaching coverage and once-complete progress.');
