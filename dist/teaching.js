@@ -1,6 +1,7 @@
 'use strict';
 const TEACH_CHAPTERS={1:'Introduction, layering & authorities',2:'Physical layer, cabling, modulation & Shannon’s law',3:'Data Link, Ethernet, MAC addresses & switching',4:'Network layer, IP addresses, CIDR & bits',12:'Network design, structured cabling & campus architecture'};
 const JARGON={
+'Shared medium':"Sharing a physical medium means using the same transmission resource to carry more than one stream of information, instead of giving each stream its own separate resource. For example, many cable-TV channels can travel through one cable using different frequency ranges. Another way is to take turns: one stream uses a time slot, then another does. Sharing does not mean mixing messages into an unreadable mess; rules keep the streams distinguishable.",
 'Link':"A link is a connection that lets network devices exchange data. It may use a cable or wireless radio. For example, the Ethernet connection from your laptop to a switch is a link. A route to a faraway server can cross several links. A local data-link network can also contain switches, so a new IP hop is not the same as every individual cable segment.",
 'Signal property':"Property just means a feature you can describe or measure. A signal is a physical change carrying information, such as an electrical wave. A signal property is a feature of that wave: its strength (amplitude), how often it repeats (frequency), or its position compared with a reference wave (phase).",
 'Cladding':"Cladding is the glass layer directly around an optical fiber’s core. The core is the center where the light signal is guided. The cladding has different optical properties that help keep that light guided along the core. Think of a boundary that helps light stay on its path—not a metal shield or the outer plastic jacket.",
@@ -51,7 +52,7 @@ const JARGON={
 'MAC address':'A link-layer interface address used for local delivery. Traditional Ethernet MAC addresses contain 48 bits. They can be factory-assigned or set in software.',
 'Router':'A device that forwards IP packets between networks using routing information.',
 'ISP':'Internet service provider: an organization that supplies Internet connectivity to customers.',
-'Medium':'The path carrying a signal, such as copper cable, optical fiber or radio through space.',
+'Medium':"A medium is the material or space through which a signal travels. Copper wire carries electrical signals. Optical fiber guides light. Wireless radio travels through space without a cable. “Media” is simply the plural of “medium.”",
 'Signal':'A physical change that carries information, such as electrical voltage, light or a radio wave.',
 'UTP':'Unshielded Twisted Pair: copper wire pairs twisted to help reduce interference, without shielding.',
 'Interference':'Unwanted signals or noise that make the intended signal harder to distinguish.',

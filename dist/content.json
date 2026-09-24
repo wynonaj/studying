@@ -964,7 +964,7 @@
     "DNS": "People use readable names, while network software needs records such as an IP address. DNS queries obtain those records from a distributed naming system.",
     "HTTP": "A browser sends a request for a resource, and a server responds with a status and content. HTTP defines the meaning and format of that exchange.",
     "Interoperability": "A computer and switch from different vendors can communicate when both implement compatible rules. Matching the shared specification matters more than matching the logo.",
-    "Physical medium": "A signal needs somewhere to travel. Copper, optical fiber and radio space provide different paths with different distance and interference limits.",
+    "Physical medium": "A medium is the material or space through which a signal travels. Copper wire carries electrical signals. Optical fiber guides light. Wireless radio travels through space without a cable. “Media” is simply the plural of “medium.”",
     "Copper cable": "Copper conductors allow electrical signal changes to travel between interfaces. Noise and signal loss affect how well the receiver can distinguish the changes.",
     "Fiber-optic cable": "A transmitter launches light into fiber and a receiver detects it. Because information is carried optically, electromagnetic interference does not induce electrical noise in the glass.",
     "Wireless": "An antenna sends and receives electromagnetic signals through space. A cable is not needed between the radio endpoints, but interference and obstacles still affect reception.",
@@ -993,7 +993,7 @@
     "FM": "Information is represented by changes in cycle rate. Amplitude disturbances are less directly confused with the encoded quantity, though performance depends on the system.",
     "PM": "Information is represented by shifts in the carrier's phase relative to a reference. A phase shift differs from simply making the wave taller.",
     "QAM": "Combining amplitude and phase creates multiple distinguishable symbol states. More states can carry more bits per symbol, but closer states require cleaner reception.",
-    "Multiplexing": "Several streams share a resource by separating their use, such as into frequency bands or time slots. They do not each need a dedicated physical cable.",
+    "Multiplexing": "Sharing a physical medium means using the same transmission resource to carry more than one stream of information, instead of giving each stream its own separate resource. For example, many cable-TV channels can travel through one cable using different frequency ranges. Another way is to take turns: one stream uses a time slot, then another does. Sharing does not mean mixing messages into an unreadable mess; rules keep the streams distinguishable.",
     "FDM": "Separate frequency bands let streams occupy the same medium simultaneously. A receiver selects the appropriate band, like tuning a radio station.",
     "TDM": "Streams use assigned time intervals on the same resource. Taking turns separates them even when the same frequency range is reused.",
     "Ethernet": "Ethernet defines wired link behavior including frames and MAC addressing. IP can be carried inside Ethernet, but Ethernet and IP solve different delivery jobs.",
@@ -2852,7 +2852,7 @@
       "id": "notes-2-1",
       "ch": 2,
       "title": "Primary Responsibility & Physical Media",
-      "body": "#### What does “link” mean?\nA link is a connection that lets network devices exchange data. It may use a cable or wireless radio. For example, the Ethernet connection from your laptop to a switch is a link. A route to a faraway server can cross several links. A local data-link network can also contain switches, so a new IP hop is not the same as every individual cable segment.\n\n* **Primary Function**: To convert raw binary bits (0s and 1s) into physical signals (electricity, light, radio waves) and send them through a medium.\n* **Physical Medium**: The physical path that carries a signal between devices.\n* **Required Properties of a Good Medium**: Must effectively conduct signals, support required data rates (bandwidth), transmit over desired distances, resist environmental noise/interference, and be cost-effective to install.",
+      "body": "#### What is a medium?\nA medium is the material or space through which a signal travels. Copper wire carries electrical signals. Optical fiber guides light. Wireless radio travels through space without a cable. “Media” is simply the plural of “medium.”\n\n#### What are we sharing?\nSharing a physical medium means using the same transmission resource to carry more than one stream of information, instead of giving each stream its own separate resource. For example, many cable-TV channels can travel through one cable using different frequency ranges. Another way is to take turns: one stream uses a time slot, then another does. Sharing does not mean mixing messages into an unreadable mess; rules keep the streams distinguishable.\n\n#### Keep these three ideas separate\n* **Data**: the information, such as a message or video.\n* **Signal**: the electrical, light or radio changes representing that information.\n* **Medium**: what those signals travel through.\n\n#### A road picture\nThink of the medium as a road and the information streams as different deliveries. They can use separate lanes or take turns. The road is shared, but the deliveries are still separate. The lanes are only an analogy: frequency channels are not separate tubes inside the cable.\n\n#### What does “link” mean?\nA link is a connection that lets network devices exchange data. It may use a cable or wireless radio. For example, the Ethernet connection from your laptop to a switch is a link. A route to a faraway server can cross several links. A local data-link network can also contain switches, so a new IP hop is not the same as every individual cable segment.\n\n* **Primary Function**: To convert raw binary bits (0s and 1s) into physical signals (electricity, light, radio waves) and send them through a medium.\n* **Physical Medium**: The physical path that carries a signal between devices.\n* **Required Properties of a Good Medium**: Must effectively conduct signals, support required data rates (bandwidth), transmit over desired distances, resist environmental noise/interference, and be cost-effective to install.",
       "remember": "Remember: Bits are information. Signals are the physical form that lets those bits travel.",
       "sources": []
     },
@@ -2889,7 +2889,7 @@
       "id": "notes-2-5",
       "ch": 2,
       "title": "Mathematical Limits & Multiplexing",
-      "body": "* **Shannon-Hartley Theorem**: Calculates the theoretical capacity for a bandwidth-limited channel with additive white Gaussian noise (Channel Capacity C in bits per second) over a noisy channel:\n**C = B × log₂(1 + S/N)**\n  * B = Channel Bandwidth in Hertz (Hz).\n  * S/N = Signal-to-Noise Ratio (SNR), expressed as a linear power ratio, not decibels.\n  * *Takeaway*: Higher bandwidth (B) or cleaner signals (higher S/N) yield higher data capacity (C).\n\n* **Multiplexing**: Combining multiple separate signals onto a single shared physical medium to save cabling costs.\n  * **FDM (Frequency Division Multiplexing)**: Divides the channel into different **frequency bands** (like tuning radio stations or low/high pitches). Separates signals by frequency; those carriers can carry analog or digital information.\n  * **TDM (Time Division Multiplexing)**: Devices take **turns in time slots** to send data over the full frequency. Common in digital systems; its defining feature is division by time.",
+      "body": "#### What is a medium?\nA medium is the material or space through which a signal travels. Copper wire carries electrical signals. Optical fiber guides light. Wireless radio travels through space without a cable. “Media” is simply the plural of “medium.”\n\n#### What are we sharing?\nSharing a physical medium means using the same transmission resource to carry more than one stream of information, instead of giving each stream its own separate resource. For example, many cable-TV channels can travel through one cable using different frequency ranges. Another way is to take turns: one stream uses a time slot, then another does. Sharing does not mean mixing messages into an unreadable mess; rules keep the streams distinguishable.\n\n#### Keep these three ideas separate\n* **Data**: the information, such as a message or video.\n* **Signal**: the electrical, light or radio changes representing that information.\n* **Medium**: what those signals travel through.\n\n#### A road picture\nThink of the medium as a road and the information streams as different deliveries. They can use separate lanes or take turns. The road is shared, but the deliveries are still separate. The lanes are only an analogy: frequency channels are not separate tubes inside the cable.\n\n* **Shannon-Hartley Theorem**: Calculates the theoretical capacity for a bandwidth-limited channel with additive white Gaussian noise (Channel Capacity C in bits per second) over a noisy channel:\n**C = B × log₂(1 + S/N)**\n  * B = Channel Bandwidth in Hertz (Hz).\n  * S/N = Signal-to-Noise Ratio (SNR), expressed as a linear power ratio, not decibels.\n  * *Takeaway*: Higher bandwidth (B) or cleaner signals (higher S/N) yield higher data capacity (C).\n\n* **Multiplexing**: Combining multiple separate signals onto a single shared physical medium to save cabling costs.\n  * **FDM (Frequency Division Multiplexing)**: Divides the channel into different **frequency bands** (like tuning radio stations or low/high pitches). Separates signals by frequency; those carriers can carry analog or digital information.\n  * **TDM (Time Division Multiplexing)**: Devices take **turns in time slots** to send data over the full frequency. Common in digital systems; its defining feature is division by time.",
       "remember": "Remember: Multiplexing lets several conversations share one medium. FDM separates frequencies; TDM separates turns in time.",
       "sources": []
     },
@@ -3996,10 +3996,11 @@
       "analogy": "A spoken word is an idea carried by vibrations in air. Network data also needs a physical carrier.",
       "example": "Copper uses electrical signals; fiber uses light; wireless uses radio. Choosing a medium means checking speed, distance, interference and cost.",
       "terms": [
-        "Link",
-        "Bit",
         "Medium",
-        "Signal"
+        "Shared medium",
+        "Signal",
+        "Link",
+        "Bit"
       ]
     },
     "notes-2-2": {
@@ -4071,13 +4072,38 @@
     },
     "notes-2-5": {
       "title": "Sharing a medium and understanding its limits",
-      "context": "Multiplexing lets several signals share one medium. FDM assigns frequency bands; TDM assigns time slots. Shannon’s formula relates theoretical capacity to channel bandwidth and signal-to-noise ratio.",
-      "analogy": "FDM resembles different radio stations. TDM resembles people taking turns speaking into one microphone.",
-      "example": "For C = B × log₂(1 + S/N), if B = 1000 Hz and S/N = 3, then 1 + 3 = 4, log₂(4) = 2, and C = 2000 bits/s. S/N here is a linear ratio.",
+      "context": "A medium is what carries a signal: copper wire, optical fiber or the space used by wireless radio. Sharing it means several information streams use the same transmission resource. Multiplexing is a way to organize that sharing so the receiver can separate the streams.",
+      "analogy": "Picture several deliveries using one road. Different lanes resemble different frequency channels (FDM). Taking turns resembles different time slots (TDM). Neither method requires the messages to become mixed up.",
+      "example": "One cable can carry several cable-TV channels at once using different frequency ranges: this illustrates FDM. With TDM, streams use assigned turns: stream A, then B, then C, then A again. A receiver uses the channel or time slot to separate the streams.",
       "terms": [
+        "Medium",
+        "Shared medium",
+        "Signal",
         "Bandwidth",
         "Multiplexing",
         "Signal-to-noise ratio"
+      ],
+      "steps": [
+        {
+          "title": "Start here: what travels through what?",
+          "body": "A medium is the material or space through which a signal travels. Copper wire carries electrical signals. Optical fiber guides light. Wireless radio travels through space without a cable. “Media” is simply the plural of “medium.”\n\nData is the information. A signal represents the information as a physical change. The medium is what that signal travels through."
+        },
+        {
+          "title": "What does sharing actually mean?",
+          "body": "Sharing a physical medium means using the same transmission resource to carry more than one stream of information, instead of giving each stream its own separate resource. For example, many cable-TV channels can travel through one cable using different frequency ranges. Another way is to take turns: one stream uses a time slot, then another does. Sharing does not mean mixing messages into an unreadable mess; rules keep the streams distinguishable."
+        },
+        {
+          "title": "Two ways to keep the streams separate",
+          "body": "FDM means Frequency Division Multiplexing. Give streams different frequency ranges so they can travel at the same time, like different cable-TV channels.\n\nTDM means Time Division Multiplexing. Give streams different time slots so they take turns on the shared resource.\n\nDifferent frequencies versus different times: that is the distinction to remember."
+        },
+        {
+          "title": "Sharing still has limits",
+          "body": "Sharing does not create unlimited capacity. All the streams depend on the available transmission resource. Bandwidth and noise affect how much information can be carried reliably. A particular network technology determines how resources are shared; this does not mean every Ethernet cable is one shared collision domain."
+        },
+        {
+          "title": "Then connect it to Shannon’s formula",
+          "body": "C = B × log₂(1 + S/N). C is the theoretical capacity in bits per second; B is the frequency bandwidth in hertz; S/N is the signal-to-noise power ratio as an ordinary linear number.\n\nExample: B = 1000 Hz and S/N = 3. First 1 + 3 = 4. Then log₂(4) = 2 because 2² = 4. Finally 1000 × 2 = 2000 bits per second. This is a theoretical limit, not a promise of actual application speed."
+        }
       ]
     },
     "notes-3-1": {
@@ -4575,8 +4601,8 @@
       "hint": "Remember: Different makers, compatible behavior."
     },
     "Physical medium": {
-      "why": "A signal needs somewhere to travel. Copper, optical fiber and radio space provide different paths with different distance and interference limits.",
-      "hint": "Remember: Separate the path from the message: a cable is the medium; voltage changes are the signal."
+      "why": "A medium is the material or space through which a signal travels. Copper wire carries electrical signals. Optical fiber guides light. Wireless radio travels through space without a cable. “Media” is simply the plural of “medium.”",
+      "hint": "Remember: information is the message, a signal carries the message, and the medium carries the signal."
     },
     "Copper cable": {
       "why": "Copper conductors allow electrical signal changes to travel between interfaces. Noise and signal loss affect how well the receiver can distinguish the changes.",
@@ -4691,8 +4717,8 @@
       "hint": "Remember: More choices per symbol give more information, but make neighboring choices easier for noise to confuse."
     },
     "Multiplexing": {
-      "why": "Several streams share a resource by separating their use, such as into frequency bands or time slots. They do not each need a dedicated physical cable.",
-      "hint": "Remember: One road can serve several travelers if there is a rule for sharing it."
+      "why": "Sharing a physical medium means using the same transmission resource to carry more than one stream of information, instead of giving each stream its own separate resource. For example, many cable-TV channels can travel through one cable using different frequency ranges. Another way is to take turns: one stream uses a time slot, then another does. Sharing does not mean mixing messages into an unreadable mess; rules keep the streams distinguishable.",
+      "hint": "Remember: several streams, one shared resource, with a rule to keep the streams separate."
     },
     "FDM": {
       "why": "Separate frequency bands let streams occupy the same medium simultaneously. A receiver selects the appropriate band, like tuning a radio station.",
