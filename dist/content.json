@@ -3077,6 +3077,14 @@
       "body": "#### Use groups of sixteen\nFor the byte-sized values used here (0–255), ask: how many full groups of 16 fit in the decimal number, and how many ones are left over? The group count becomes the left hex digit. The leftover amount becomes the right digit.\n\n#### Find the full groups\nExample: 175.\n10 × 16 = 160 fits.\n11 × 16 = 176 is too much.\nSo 175 contains 10 full groups of 16.\n175 − 160 = 15 left over. This leftover is called the remainder.\n\n#### Turn both values into hex digits\nThe group count is 10 → A.\nThe remainder is 15 → F.\nWrite the group digit first, then the remainder digit: AF.\nCheck: 10 × 16 + 15 = 175.\n\n#### A smaller example and another route\nDecimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier.",
       "remember": "Remember: Decimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier.",
       "sources": []
+    },
+    {
+      "id": "notes-number-labels",
+      "ch": 4,
+      "title": "Bits, exponents & counting unique labels",
+      "body": "A **bit** is a position that can be 0 or 1. With one bit you have two labels: 0 and 1. With two bits you have four: 00, 01, 10, 11. Each extra bit doubles the number of choices.\n\n**2ⁿ** means multiply n factors of 2. The raised n is the exponent. Here n is the number of bits, while the result is the number of different labels.\n\nFor 3 bits: 2³ = 2 × 2 × 2 = 8 labels. For 10 bits: 2¹⁰ = 1,024 labels. This is not 2 × 10.\n\nTo label 200 objects, choose the smallest bit count with enough combinations: 2⁷ = 128 is too few; 2⁸ = 256 works. You need 8 bits.\n\nDo not subtract 2 for this task. Reserving network and broadcast addresses is a separate IPv4 subnet rule.",
+      "remember": "Each extra bit doubles the choices. Bits are positions; labels are combinations.",
+      "sources": []
     }
   ],
   "notesQuestions": [
@@ -3815,6 +3823,22 @@
       "explain": "Two groups of 16 fit: 2 × 16 = 32. Subtract 42 − 32 = 10 left over. The group count gives 2 and the remainder 10 gives A. Answer: 2A.",
       "kind": "notes",
       "remember": "Remember: For a byte, find full groups of 16 and the leftover. Translate 10–15 into A–F."
+    },
+    {
+      "id": "notes-labels-check",
+      "ch": 4,
+      "lessonId": "notes-number-labels",
+      "q": "You need unique labels for 9 objects. What is the smallest bit count that works?",
+      "answer": "4 bits",
+      "options": [
+        "4 bits",
+        "3 bits",
+        "9 bits",
+        "2 bits"
+      ],
+      "explain": "Three bits give 2³ = 8 choices, one too few. Four bits give 2⁴ = 16 choices, enough for all 9 objects. Choose the smallest count that is sufficient.",
+      "remember": "Remember: Count combinations with powers of 2. Do not subtract network and broadcast reservations from general-purpose labels.",
+      "kind": "notes"
     }
   ],
   "teaching": {
@@ -4284,6 +4308,16 @@
           "body": "Decimal 35 contains 2 groups of 16, with 3 left over: 35 − 32 = 3. So it becomes hex 23. For a full byte, decimal 5 is hex 05. You can also convert decimal → eight-bit binary → two four-bit groups → hex if that method feels easier."
         }
       ]
+    },
+    "notes-number-labels": {
+      "title": "Bits, exponents & unique labels",
+      "context": "Chapter 4 uses binary labels to give different objects different identifiers. Count how many choices the bits can make; this question does not ask how IP and MAC addresses route a packet.",
+      "terms": [
+        "Bit",
+        "Binary"
+      ],
+      "analogy": "One on/off switch has two choices. Two switches have four combinations. A third switch doubles that to eight.",
+      "example": "For 10 bits, multiply ten factors of 2 to get 1,024 labels. For 200 objects, 128 choices are too few but 256 work, so 8 bits are enough."
     }
   },
   "vocabFeedback": {

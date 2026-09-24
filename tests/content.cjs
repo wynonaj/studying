@@ -70,7 +70,7 @@ check(new Set(clozeCards().map(x=>x.ch)).size===5,'Sentences cover all chapters'
 `,context);
 console.log('PASS: fresh jumbled orders, complete word banks, repeated words, blank counts and chapter coverage.');
 vm.runInContext(`
-check(DATA.notes.length===31&&DATA.notesQuestions.length===44,'Added material coverage');
+check(DATA.notes.length===32&&DATA.notesQuestions.length===45,'Added material coverage');
 check(!JSON.stringify(DATA.notes).includes('Summary Checklist'),'Checklist excluded');
 for(const q of DATA.questions){check(q.remember.startsWith('Remember:'),'Beginner reminder '+q.id);check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Guide lesson link '+q.id)}
 for(const q of DATA.notesQuestions){const mc=makeMC(q);check(new Set(mc.options).size===4&&mc.options.includes(mc.answer),'Notes answer options');check(DATA.notes.some(n=>n.id===q.lessonId&&n.ch===q.ch),'Notes lesson link');check(explanationHTML(mc,mc.options.find(a=>a!==mc.answer)).includes('Let’s make it simple'),'Wrong-answer reminder');check(!all().some(x=>x.id===q.id)&&!learnPool().some(x=>x.id===q.id),'Separate notes bank')}
@@ -208,3 +208,22 @@ $('#reminder-continue').onclick();
 check(resumed===1&&progress.xp===savedXP,'Reminder must resume without scoring');
 `,context);
 console.log('PASS: all vocabulary and question feedback has reasoning; no duplicate hints or inherited wrong-number examples; reminders are unscored.');
+vm.runInContext(`
+for(const item of [labItems().find(x=>x.id==='labels10'),...freshDetectiveItems().filter(x=>x.id.startsWith('labels')),learnPool().find(x=>x.id==='lab-labels10')]){
+ const html=preTeachHTML(item);
+ check(html.includes('exponent')&&!html.includes('MAC address'),'Counting labels must teach powers of two');
+ check(lessonFor(item)==='notes-number-labels','Counting labels must link to correct lesson');
+ check(explanationHTML(item,item.answer).includes('data-lesson="notes-number-labels"'),'Feedback link must match rule');
+}
+session={mode:'flash',items:[VOCAB.find(x=>x.term==='IEEE')],index:0,total:1,cleared:new Set(),revealed:false};
+renderFlashCard();
+check(!$('#app').innerHTML.includes('Institute of Electrical'),'Front must not reveal expansion');
+$('#flip-card').onclick();
+check($('#app').innerHTML.includes('Institute of Electrical and Electronics Engineers'),'Back must show full name');
+check($('#app').innerHTML.includes('Still learning'),'Back must provide recall ratings');
+$('#flip-card').onclick();
+check(!$('#app').innerHTML.includes('Institute of Electrical'),'Flip back must hide answer');
+renderStudyNav();
+check($('#nav').innerHTML.includes('Focused practice')&&$('#nav').innerHTML.includes('Reference library'),'Group navigation');
+`,context);
+console.log('PASS: label rules and lesson links match; flashcards flip in both directions without leaking answers.');
