@@ -100,3 +100,23 @@ CIS 304 includes all **51 original study-guide prompts**, organized into Foundat
 To regenerate the authored content, run `python3 scripts/review/cis304/build_content.py` followed by `python3 scripts/review/cis304/enrich_content.py`. JSON is fetched without caching. After changing JS or CSS, update the SHA-256 first-12-character version in the HTML pages. `npm test` runs both class suites; `npm run check` checks both class scripts. Static deployment still uses the entire `dist` directory, so both class pages deploy together.
 
 Source notes: questions follow the supplied Fall 2026 study guide, supplemented by the Module I slides and linked references. The EA-properties answer explicitly identifies a synthesis of slides 33–36, because a separate fixed list was not supplied. SOA retains the course’s cloud association while explaining that reusable services need not be cloud-hosted. Linked videos are not represented as verified transcripts. Content is a study aid, not an instructor-issued answer key.
+
+## CIS 464 Project Management
+
+The third class tab opens `cis464.html`, covering Schwalbe Chapters **1, 2, 3, and 10**. Its content and progress are separate from both other classes; storage key: `cis464-chapters-v1`.
+
+Includes 71 three-step lessons with chapter/source labels, 75 vocabulary terms, 30 applied checks, seven cloze checks, seven sorting activities, acronym word banks, flip flashcards, exams, and delayed retries. Interactive views explain project constraints, project/program/portfolio relationships, documents, AI agents, and the stakeholder power–interest grid.
+
+The financial lab teaches PV, NPV, ROI, payback, and weighted scoring. It includes the Chapter 2 slide 28 exercise, slide 29 worked figure, and fresh practice numbers. Timing and discount-factor rounding are explicit; the worked figure's rounded factors reproduce its $272,800 NPV. Financial practice uses its scenario values in saved IDs.
+
+All 183 slides have an entry in the source library, including extracted text, SmartArt text, speaker notes, and supported embedded images. Lessons synthesize the concepts; they are not a claim that each slide is a separate quiz question or that the original PowerPoint layout was reconstructed. Dated forecasts and environmental estimates retain their context. Clarifications link to PMI, Scrum, Agile Manifesto, and IBM sources.
+
+- `dist/cis464-content.json`: authored learning and practice content.
+- `dist/cis464-slides.json` and `dist/cis464-media/`: supplied slide reference material.
+- `dist/cis464.js`: isolated class UI and activities.
+- `scripts/review/cis464/`: extraction and content/app builders.
+- `tests/cis464.cjs`: content coverage, 1,500 randomized financial checks, rendering, retries, flashcards, and storage isolation.
+
+Regenerate content with `build_content.py` then `enrich_content.py`; regenerate the UI with `build_app.py` (which reuses the CIS 304 UI structure and replaces class-specific content/activities). Run these with Python from the repository. The extraction script needs the original four decks at their specified Downloads paths; runtime deployment needs only `dist/`. Update HTML asset hashes after changing scripts or styles.
+
+`npm test` and `npm run check` now cover all three classes. Deploy the entire `dist/` directory.

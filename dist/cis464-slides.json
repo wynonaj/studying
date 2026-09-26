@@ -1,0 +1,1472 @@
+{
+  "1": [
+    {
+      "slide": 1,
+      "text": "Introduction to Project Management\nReading: Schwalbe Ch 1",
+      "diagram": "",
+      "notes": "Last updated 8/21/2026\n1",
+      "images": [
+        "cis464-media/ch1-image1.jpg"
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Objectives",
+      "diagram": "List benefits of project management and why it’s important\nDefine what a project is and give one example of an IT project\nExplain the difference between project and operations\nList roles on a project, including: Team member, leader/\nProj\n \nmgr\n, sponsor, customer/client, stakeholder\nDescribe the relationship between project, program and portfolio \nCompare and contrast predictive and adaptive project management\nList 5 PM focus areas and 7 performance domains\nDraw, label and explain the iron triangle",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 3,
+      "text": "Make yourself a note\nList 2 reasons why you picked this elective versus your other choices (beyond that it fit in your schedule)\nList 2 benefits you hope to get out of this class\nList 1 concern, fear or worry you have about taking this class and 1 thing you might do to mitigate it",
+      "diagram": "",
+      "notes": "We’re going to share some of these ideas with a small group\n3",
+      "images": [
+        "cis464-media/ch1-image10.png"
+      ]
+    },
+    {
+      "slide": 4,
+      "text": "Obj 1: Benefits and Importance of Project Management\nWhy bother?",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 5,
+      "text": "Why study project management?\n\n\n\n“the whole purpose for project management … is to execute work that provides increased “value” to the business or customer”",
+      "diagram": "",
+      "notes": "https://www.pmi.org/learning/library/delivering-business-value-9378\n5",
+      "images": []
+    },
+    {
+      "slide": 6,
+      "text": "Increased value to the organization\n\n\nStay competitive\nReduce excess waste\nIncreased success rates\nLess risk\nInnovate faster and more strategically\nMeet customer demand\nIncreased productivity",
+      "diagram": "",
+      "notes": "The Value of Project Management (2010).\nhttps://www.pmi.org/business-solutions/white-papers/value-project-management#:~:text=Organizations%20turn%20to%20project%20management,business%20value%20and%20competitive%20advantage.\nhttps://www.teamwork.com/blog/how-to-calculate-how-much-time-and-money-big-picture-project-management-could-save-your-team/\n6",
+      "images": [
+        "cis464-media/ch1-image11.jpeg"
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Increased value to you\nHigher salaries\nIncreased job security and job satisfaction\nChallenging, continually improving\nIncreased productivity \nPersonal growth\nIncreased value to the organization",
+      "diagram": "",
+      "notes": "Local job search on 1/22/2024 for entry level Project Manager jobs posted to LinkedIn. High salaries, full benefits, competitive market even in an economic downturn in the middle of a pandemic.\nRemote jobs are especially plentiful too.\n7",
+      "images": [
+        "cis464-media/ch1-image12.png"
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Entry level Project Manager in ITSalary.com",
+      "diagram": "",
+      "notes": "Source: Salary.com Updated 8/21/2026\n8",
+      "images": [
+        "cis464-media/ch1-image13.png"
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "What is going wrong here?",
+      "diagram": "The healthcare.gov website crashed within 2 hours of launch\nLarge federal IT projects in the US continue to fail despite spending billions of dollars\nOver half delayed, over budget or didn’t meet expectations\n‘Many still classified as “high-risk” without meaningful improvement’",
+      "notes": "https://rctom.hbs.org/submission/the-failed-launch-of-www-healthcare-gov/\nhttps://ideas.darden.virginia.edu/2018/01/project-management-lessons-from-the-healthcare-gov-launch/\nhttps://marylandreporter.com/2026/04/02/failed-government-programs/\n9",
+      "images": []
+    },
+    {
+      "slide": 10,
+      "text": "PMI Reports on Project Management",
+      "diagram": "Globally organizations waste $97 million for every $1 billion spent on projects, or almost 10%\nSuccess rates are slowly improving because: \nPlanning and prioritization: Increased \nalignment of IT with business\n, has led to scaling back rather than over-stretching budgets\nIncreased focus on \nproject management talent \nand use of\n agile approaches\nUp to 80% or more of AI projects fail due to roadblocks or they don’t deliver enough value to justify further investment",
+      "notes": "https://www.cio.com/article/3174516/project-management/it-project-success-rates-finally-improving.html\n10",
+      "images": []
+    },
+    {
+      "slide": 11,
+      "text": "“It takes as much energy to wish as it does to plan.” – Eleanor Roosevelt",
+      "diagram": "",
+      "notes": "https://www.projectmanager.com/blog/planning-quotes\n11",
+      "images": [
+        "cis464-media/ch1-image14.jpeg"
+      ]
+    },
+    {
+      "slide": 12,
+      "text": "Project management is messy and fun",
+      "diagram": "",
+      "notes": "12",
+      "images": [
+        "cis464-media/ch1-image15.jpg"
+      ]
+    },
+    {
+      "slide": 13,
+      "text": "Is this the right career for you? \nAre you comfortable with change? \nDo you like solving problems? \nCan you make decisions with and for a team?\nDo you want to gain leadership experience? \nHow well do you listen and communicate? \nCan you stick to timelines?",
+      "diagram": "",
+      "notes": "Source: https://youtu.be/0YxWSShyH_4\nAdditional video: https://youtu.be/9CZ16TYN30g\n13",
+      "images": [
+        "cis464-media/ch1-image16.jpeg"
+      ]
+    },
+    {
+      "slide": 14,
+      "text": "Obj 2: What is a project?",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image16.jpeg"
+      ]
+    },
+    {
+      "slide": 15,
+      "text": "A project is…",
+      "diagram": "A temporary endeavor\n (specific time frame or finite life span)\nto accomplish a \nspecific objective\n (unique or one-time endeavor)\nthrough a unique set of interrelated and interdependent \nactivities\n and\nthe effective \nuse of resources\n (people, organizations, equipment)",
+      "notes": "Formal definition\n15",
+      "images": []
+    },
+    {
+      "slide": 16,
+      "text": "Reminds me of vampires\n\n\n\nClear objective\nInterdependent tasks\nUses resources\nTemporary life span\nUnique or one-time\nDegree of uncertainty\nCustomer, sponsor, stakeholders (more on this later)",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image17.jpg"
+      ]
+    },
+    {
+      "slide": 17,
+      "text": "Progressive Elaboration means “We’ll figure it out as we go”\n\n\n\nBeginning == “Fuzzy” front end\nDegree of uncertainty is higher towards the beginning versus the end\nIn the beginning, everyone acts like a peach or like everything is peachy, whether or not it is",
+      "diagram": "",
+      "notes": "17",
+      "images": [
+        "cis464-media/ch1-image18.jpg"
+      ]
+    },
+    {
+      "slide": 18,
+      "text": "Projects are about People\nPeople are messy and they don’t like change",
+      "diagram": "",
+      "notes": "18",
+      "images": [
+        "cis464-media/ch1-image19.jpeg"
+      ]
+    },
+    {
+      "slide": 19,
+      "text": "Alpha project managers (top 2%)\nSpend 2x more time planning and less time performing the project",
+      "diagram": "",
+      "notes": "Do you buy it?\n19",
+      "images": []
+    },
+    {
+      "slide": 20,
+      "text": "Project management is",
+      "diagram": "The art and science of managing a project\n“You can’t manage what you don’t measure” Peter Drucker",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 21,
+      "text": "What is Project Management?",
+      "diagram": "“using hardware, software and networks to create a product, service, or result” Schwalbe, p. 3\nDesigning and building a project according to a plan\n“No battle plan survives contact with the enemy” -Helmuth von Moltke the Elder\n“Hope for the best, prepare for the worst” -Unknown",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 22,
+      "text": "Projects involve juggling",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image22.png"
+      ]
+    },
+    {
+      "slide": 23,
+      "text": "When can we say a project was successful?",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image23.svg"
+      ]
+    },
+    {
+      "slide": 24,
+      "text": "Triple Constraint\nScope\nTime\nCost\nQuality\n4th hiddendimension\nThe triple/quadruple constraint",
+      "diagram": "",
+      "notes": "These are the overall measures of “success” on a project.\n24",
+      "images": []
+    },
+    {
+      "slide": 25,
+      "text": "Other considerations",
+      "diagram": "Compliance/regulatory\nResources\nRisk",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 26,
+      "text": "Balancing Act",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image27.jpg"
+      ]
+    },
+    {
+      "slide": 27,
+      "text": "Figure 1-1. Typical Project Constraints\n\nScope\nSchedule\nCompliance\nResource\nQuality\nCost\nRisk\n\nTypical\nProject\nConstraints",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 28,
+      "text": "Pink singing “Glitter” upside down",
+      "diagram": "",
+      "notes": "This is extremely difficult to do. Do not try this at home.\nDid you know she has worked in an actual live circus? \nThis example is here because it’s an impressive balancing act.\n28",
+      "images": [
+        "cis464-media/ch1-image28.jpg"
+      ]
+    },
+    {
+      "slide": 29,
+      "text": "2024 PMI MORE Framework\n\nManage perceptions: For a project to be considered successful, the key stakeholders should perceive that the project's outputs provide sufficient value relative to the perceived investment of resources. \nOwn success: Take ownership of the entire breadth of a project, moving beyond mostly execution focus to take accountability for delivering tangible and perceived value while minimizing waste. \nRelentlessly reassess: Recognize the reality of inevitable and ongoing change and, in collaboration with stakeholders, continuously reassess the perception of value and adjust plans. \nExpand perspective: All projects have impacts beyond just the scope of the project itself.",
+      "diagram": "",
+      "notes": "Schwalbe text p. 12.\n29",
+      "images": []
+    },
+    {
+      "slide": 30,
+      "text": "Obj 3: Project vs Operations",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 31,
+      "text": "Project vs Operations\nTemporary and unique\nStages or life cycles\nProgressive elaboration\nMakes major changes or responds to external pressure\nContinuous and ongoing\nVaries by time of year or industry\nDay to day functions to stay in business",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 32,
+      "text": "Project, operations, DevOps",
+      "diagram": "Project: 1x, unique purpose, out of the ordinary\nStart and end date\nOften used to improve or change operations\nOperations: Daily activities of the company\nNo end date in sight (hopefully)\nDevOps: Philosophy of building software (projects) for rapid deployment in operations",
+      "notes": "https://www.atlassian.com/devops\n32",
+      "images": [
+        "cis464-media/ch1-image29.jpeg"
+      ]
+    },
+    {
+      "slide": 33,
+      "text": "DevOps Feedback Loop",
+      "diagram": "",
+      "notes": "Source: \nhttps://www.atlassian.com/devops/what-is-devops\n33",
+      "images": [
+        "cis464-media/ch1-image30.png"
+      ]
+    },
+    {
+      "slide": 34,
+      "text": "Reasons for building a project\nHow many examples can you think of?",
+      "diagram": "",
+      "notes": "Industry pressure – keep up or get ahead\nRegulatory pressure\nInnovate\nUpdate\nJust because\n34",
+      "images": []
+    },
+    {
+      "slide": 35,
+      "text": "Obj 4: Identify stakeholders and their roles",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image31.jpeg"
+      ]
+    },
+    {
+      "slide": 36,
+      "text": "Common roles on a project (may overlap)",
+      "diagram": "Stakeholder\nProject manager or Scrum master\nProject champion\nProject sponsor\nProject team\nCustomer or client or product owner\nSteering committee\nProject Management Office (PMO)",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 37,
+      "text": "Project managers\n\nMost important traits: Flexibility and adaptability\n\nEvery project is unique\n\nMust be comfortable with ambiguity and increasingly, complexity",
+      "diagram": "",
+      "notes": "We will later do an exercise that is highly ambiguous.\n37",
+      "images": [
+        "cis464-media/ch1-image32.jpg"
+      ]
+    },
+    {
+      "slide": 38,
+      "text": "Project manager skillset\n\nPM knowledge\nSubject matter expertise\nGeneral business\nHuman relations\nCritical thinking\nDigital fluency",
+      "diagram": "",
+      "notes": "Notice anything missing from this list? \n38",
+      "images": []
+    },
+    {
+      "slide": 39,
+      "text": "Project manager is",
+      "diagram": "Both a leader and a manager\nManagers do things right and leaders do the right things\nLeaders determine the vision and managers achieve the vision\nLead people and manage things\nMore on this later",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 40,
+      "text": "Finding a team\nExpertise\nExperience\nAvailable\nWilling",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image33.jpg"
+      ]
+    },
+    {
+      "slide": 41,
+      "text": "Why must a project manager develop their team?",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 42,
+      "text": "Team Development",
+      "diagram": "Pay\nFor your team, pay attention to dynamics\nTake\nTake time to listen and respect each other\nCreate\nCreate a set of rules at the outset, test whether everyone understands what they mean, and then assign someone to keep the team accountable for the rules",
+      "notes": "42",
+      "images": [
+        "cis464-media/ch1-image34.jpeg"
+      ]
+    },
+    {
+      "slide": 43,
+      "text": "Cavender\n“It may seem like common sense to have a set of norms, but unless they are written down and specifically addressed, they can be easily forgotten.”",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 44,
+      "text": "Figure 1-3. Project Management Growth Mindset\n44",
+      "diagram": "",
+      "notes": "Textbook p. 13\n44",
+      "images": [
+        "cis464-media/ch1-image35.png"
+      ]
+    },
+    {
+      "slide": 45,
+      "text": "Team Operating Principles\n\nReduce conflict by making expectations clear\nBuild ownership \nIncrease accountability and engagement\nApply “SMART” principles",
+      "diagram": "",
+      "notes": "https://leading-resources.com/team-building/team-operating-principles/\n45",
+      "images": [
+        "cis464-media/ch1-image36.jpeg"
+      ]
+    },
+    {
+      "slide": 46,
+      "text": "Tuckman’s Model of Team Formation",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image37.png"
+      ]
+    },
+    {
+      "slide": 47,
+      "text": "Team Work Roles",
+      "diagram": "Select a different role for yourself before every group encounter and see how it affects team dynamics\nExamples: recorder, time keeper, devil’s advocate/questioner, facilitator (keeps team on task), strategy analyst (monitors group dynamics and guides solution building)\nFor more examples, see Group Work Roles on Canvas",
+      "notes": "Note: Group work roles are intended to be a daily theme rather than a job title. For example, a data analyst on one day might play devil’s advocate but another day, the same analyst might be a recorder or timekeeper. \n47",
+      "images": []
+    },
+    {
+      "slide": 48,
+      "text": "Obj 5: Project, Program, Portfolio",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image38.jpeg"
+      ]
+    },
+    {
+      "slide": 49,
+      "text": "Why manage projects as a “portfolio”?",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 50,
+      "text": "Programs and Megaprojects\n\n\n50",
+      "diagram": "A \nprogram\n is a group of related projects and program activities managed in a coordinated manner to obtain benefits not available from managing them individually.\nA \nprogram manager\n provides leadership and direction for the project managers heading the projects within the program\nA megaproject\n is a very large project that typically costs over US $1 billion, affects over one million people, and lasts several years. ",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 51,
+      "text": "How many metaphors can you think of?",
+      "diagram": "Relationship between project, program and portfolio\nUse words or pictures\nDraw a diagram of the relationship",
+      "notes": "51",
+      "images": [
+        "cis464-media/ch1-image42.jpeg"
+      ]
+    },
+    {
+      "slide": 52,
+      "text": "Here’s mine: a book\nPages, Chapters, Book",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image43.jpg"
+      ]
+    },
+    {
+      "slide": 53,
+      "text": "Portfolio and the CIO",
+      "diagram": "CIO (Chief Information Officer) is a long-term strategic position who oversees a company’s IT\nA portfolio of projects helps the company act strategically\nWhat are the benefits of managing projects as a portfolio? ",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image44.jpeg"
+      ]
+    },
+    {
+      "slide": 54,
+      "text": "Obj 6: Focus Areas and Performance Domains",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 55,
+      "text": "Figure 1-2. Project Management Framework\n55",
+      "diagram": "",
+      "notes": "Textbook p. 8\n55",
+      "images": [
+        "cis464-media/ch1-image45.jpg",
+        "cis464-media/ch1-image46.jpeg"
+      ]
+    },
+    {
+      "slide": 56,
+      "text": "Obj 7: Predictive vs adaptive project management",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 57,
+      "text": "Predictive or traditional project management",
+      "diagram": "Waterfall or spiral lifecycle\nAssumes we can know everything at the beginning of the project\nRequires significant planning before doing majority of the work\nCan take years\nHighly structured",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 58,
+      "text": "Adaptive or agile techniques",
+      "diagram": "Focus on the customer’s needs or outcomes\nIdea is to get a working product completed quickly, even without all the functionality\nRelies on iterative, constructive feedback\nWork must be divisible into separate parts\nShorter time frame\nDon’t need to know everything at the beginning",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 59,
+      "text": "How to choose a lifecycle method?",
+      "diagram": "Org standard: some companies use the same one for every project because it works for them\nProject needs: \nHow much are requirements likely to change during the project?\nHow well do we know requirements at the beginning (“a priori”)?  \nHow frequently do we need to deliver results? ",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 60,
+      "text": "How to choose amongst different methods?",
+      "diagram": "Project size, complexity, duration, industry\nOrganizational culture, project management maturity, \nRequirements fixed or fluctuating, known or unknown a priori",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 61,
+      "text": "Development lifecycles",
+      "diagram": "Predictive, iterative, incremental, adaptive, or hybrid\nPredictive examples: waterfall, spiral, prototyping, RAD\nDifferences in how much requirements change and how often deliverables required",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image57.png"
+      ]
+    },
+    {
+      "slide": 62,
+      "text": "Agile",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image58.png"
+      ]
+    },
+    {
+      "slide": 63,
+      "text": "Agile Project Management\nInformation Technology Project Management, Eighth Edition\n63",
+      "diagram": "Agile means being able to move quickly and easily, but some people feel that project management, as they have seen it used, does not allow people to work quickly or easily.\nEarly software development projects often used a waterfall approach, as defined earlier in this chapter. As technology and businesses became more complex, the approach was often difficult to use because requirements were unknown or continuously changing. \nAgile today means using a method based on iterative and incremental development, in which requirements and solutions evolve through collaboration.\nSee the Resources tab from \nwww.pmtexts.com\n for more info",
+      "notes": "63",
+      "images": []
+    },
+    {
+      "slide": 64,
+      "text": "Many seasoned experts in project management warn people not to fall for the hype associated with Agile. \nFor example, J. Leroy Ward, Executive Vice President at ESI International, said that “Agile will be seen for what it is … and isn’t….Project management organizations embracing Agile software and product development approaches will continue to grow while being faced with the challenge of demonstrating ROI through Agile adoption.”*\nAgile Makes Sense for Some Projects, But Not All\nInformation Technology Project Management, Eighth Edition\n64\n*J. Leroy Ward, “The Top Ten Project Management Trends for 2011,” projecttimes.com\n(January 24, 2011).",
+      "diagram": "",
+      "notes": "64",
+      "images": []
+    },
+    {
+      "slide": 65,
+      "text": "Manifesto for Agile Software Development\nInformation Technology Project Management, Eighth Edition\n65\n*Agile Manifesto, www.agilemanifesto.org.",
+      "diagram": "In February 2001, a group of 17 people that called itself the Agile Alliance developed and agreed on the Manifesto for Agile Software Development, as follows:\n“We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:\nIndividuals and interactions over processes and tools\nWorking software over comprehensive documentation\nCustomer collaboration over contract negotiation\nResponding to change over following a plan”*",
+      "notes": "65",
+      "images": []
+    },
+    {
+      "slide": 66,
+      "text": "Scrum\nInformation Technology Project Management, Eighth Edition\nAccording to the Scrum Alliance, Scrum is the leading agile development method for completing projects with a complex, innovative scope of work.\nThe term was coined in 1986 in a Harvard Business Review study that compared high-performing, cross-functional teams to the scrum formation used by rugby teams.\n66",
+      "diagram": "",
+      "notes": "66",
+      "images": []
+    },
+    {
+      "slide": 67,
+      "text": "Figure 2-6. Scrum Framework\nInformation Technology Project Management, Eighth Edition\n67",
+      "diagram": "",
+      "notes": "67",
+      "images": [
+        "cis464-media/ch1-image65.png"
+      ]
+    },
+    {
+      "slide": 68,
+      "text": "Hybrid Project Management",
+      "diagram": "Mixture or combination of the other two\nTailoring: adapt your approach deliberately to match needs of the project",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image66.jpeg"
+      ]
+    },
+    {
+      "slide": 69,
+      "text": "And: Certification",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image67.jpeg"
+      ]
+    },
+    {
+      "slide": 70,
+      "text": "www.pmi.org/membership/types",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch1-image69.png",
+        "cis464-media/ch1-image68.png"
+      ]
+    },
+    {
+      "slide": 71,
+      "text": "CAPM Certification (Beginner)",
+      "diagram": "",
+      "notes": "https://www.pmi.org/certifications/certified-associate-capm\n71",
+      "images": [
+        "cis464-media/ch1-image70.png"
+      ]
+    },
+    {
+      "slide": 72,
+      "text": "PMP Certification (Advanced)",
+      "diagram": "",
+      "notes": "https://www.pmi.org/certifications/project-management-pmp\n72",
+      "images": [
+        "cis464-media/ch1-image71.png"
+      ]
+    },
+    {
+      "slide": 73,
+      "text": "Study sources",
+      "diagram": "You will need to study for these exams\nPlenty of resources on Google, YouTube, LinkedInLearning.com, etc.\nUse your skills and make a plan for your studying\nEach hour sitting in this class counts towards the 23 contact hours of education in project management",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 74,
+      "text": "Other Certifications in Project Management\nPRINCE2\nScrum.org\nScaled Agile Framework (SAFe)\nInternational PM Association (IPMA)\nCompTIA Project+",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 75,
+      "text": "Reminders",
+      "diagram": "Work styles survey \nInstall MS Project",
+      "notes": "If you have a Mac and don’t have access to a PC, you can use Project Libre, but recognize that it doesn’t have all the bells and whistles that MS Project has.\n75",
+      "images": []
+    }
+  ],
+  "2": [
+    {
+      "slide": 1,
+      "text": "Project Selection\nReading: Schwalbe Ch 2",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image2.jpeg"
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Objectives\n\nExplain why project managers need to take a systems approach\nDefine IT alignment and governance and their impact on projects\nCompare potential projects based on different methods (balanced, weighted, priority, etc.)\nPerform financial analysis related to a project (NPV, ROI)\nDiscuss some common issues that may affect projects\nExplain what makes IT projects more difficult",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 3,
+      "text": "Obj 1: Projects and Systems\n“An information system consists of a person who faces a problem within an organizational context” (Mason & Mitroff 1973)",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 4,
+      "text": "If you like making work processes better…",
+      "diagram": "…even when everyone else thinks they’re fine. \nThen \nyou might be a systems analyst!\nSurprisingly, not everyone \nlikes to change stuff",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 5,
+      "text": "Why use a systems approach?",
+      "diagram": "",
+      "notes": "As a project manager, need to see how project affects the company as a whole and understand the impacts it will make, and foresee or prevent issues. https://www.mbaskool.com/business-concepts/marketing-and-strategy-terms/18238-systems-approach.html\n5",
+      "images": [
+        "cis464-media/ch2-image3.svg"
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "Systems Approach\n\n\n\nHolistic way of approaching a problem\nYou’ve been trained to think in a systems way in CIS\nWhat’s wrong with this picture?",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image4.gif"
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "That’s better",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image5.jpg"
+      ]
+    },
+    {
+      "slide": 8,
+      "text": "Systems thinking is strategic thinking – why?",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image6.svg"
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Obj 2: Strategic Alignment",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 10,
+      "text": "4 frames to look at the organization",
+      "diagram": "Structural (formal power, org chart)\nHR (needs of org vs needs of people)\nPolitical (who likes to work with who)\nSymbolic (culture)",
+      "notes": "10",
+      "images": [
+        "cis464-media/ch2-image7.jpeg"
+      ]
+    },
+    {
+      "slide": 11,
+      "text": "IT Schwalbe, Fig 2-3, p. 54",
+      "diagram": "",
+      "notes": "https://deeprojectmanager.com/functional-vs-matrix-vs-projectized-organizations/\n11",
+      "images": [
+        "cis464-media/ch2-image8.jpeg"
+      ]
+    },
+    {
+      "slide": 12,
+      "text": "How might the org structure affect a project?",
+      "diagram": "",
+      "notes": "Hint: The formal structure affects how much formal power a project manager has, as well as how many managers a team member may report to.\n12",
+      "images": [
+        "cis464-media/ch2-image9.svg"
+      ]
+    },
+    {
+      "slide": 13,
+      "text": "13\nFigure 2-3. Pyramid for a Traditional Project Planning Process",
+      "diagram": "Senior executives develop the strategic plan\nDepartment managers analyze needs in their areas\nVarious manager and stakeholders propose projects\nAuthorized managers allocate resources to selected projects",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image10.png"
+      ]
+    },
+    {
+      "slide": 14,
+      "text": "IT alignment and governance\n\n\n\nEnsuring IT is aligned with and serves the business’ strategic mission and objectives\nIT Governance is a structure for ensuring IT alignment\nPart of strategicplanning",
+      "diagram": "",
+      "notes": "https://www.cio.com/article/2438931/governance/governanceit-governance-definition-and-solutions.html\n14",
+      "images": [
+        "cis464-media/ch2-image11.png"
+      ]
+    },
+    {
+      "slide": 15,
+      "text": "15\nFigure 2-4. Strategy Implementation Circle\nIterative approach focusing on value, feedback, and benefits\nSource: Peter Monkhouse and Joanna Tivig, “Projects deliver Products, Products deliver Strategy (March 12, 2020).",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image12.png"
+      ]
+    },
+    {
+      "slide": 16,
+      "text": "Figure 2-13. Projects drive value",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image13.jpeg"
+      ]
+    },
+    {
+      "slide": 17,
+      "text": "17\nFigure 2-14. Sample Project Portfolio Approach\n\nIT categories\nAll project portfolio categories",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image15.png",
+        "cis464-media/ch2-image14.png"
+      ]
+    },
+    {
+      "slide": 18,
+      "text": "Obj 3: Selecting Projects",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 19,
+      "text": "Some Methods of Selecting Projects",
+      "diagram": "SWOT analysis\nCompetitive strategy and broad org needs\nWeighted score card, balanced score card\nNPV, ROI and other financial analysis\nNeed, want or must? Will to do it?",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 20,
+      "text": "20\nFigure 2-1. Sample SWOT Analysis (Nemours)",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image16.png"
+      ]
+    },
+    {
+      "slide": 21,
+      "text": "21\nFigure 2-2. Mind Map of a SWOT Analysis to Help Identify Potential Projects (Created with MatchWare’s MindView Business Edition)",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image17.png"
+      ]
+    },
+    {
+      "slide": 22,
+      "text": "Balanced Score Card\nBalanced score card: strategic management system www.balancedscorecard.org",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image18.jpg"
+      ]
+    },
+    {
+      "slide": 23,
+      "text": "Figure 2-12. Sample Balanced Scorecard Strategy Map (Nemours)",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image19.png"
+      ]
+    },
+    {
+      "slide": 24,
+      "text": "Agile tools weighted score card\nIn a group of 3-5 students, research 3 agile tools you might consider using for your team project\nTo qualify, at a minimum, the tool must be freely available to students, advertised for agile projects, and must include Kanban boards\nCreate a list of 3 criteria by which you will evaluate each of the tools, such as usability or ease of use and give each criteria a weight\nAssess each tool based on your criteria (H, M or L) and develop a weighted score card to recommend the best tool \nD. Rush\n24",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image20.jpeg"
+      ]
+    },
+    {
+      "slide": 25,
+      "text": "Sample weighted score card\n\n\nProduct A\n\nProduct B\n\nProduct C\n\nCriteria\nWeight\nRank\nScore\nRank\nScore\nRank\nScore\n1.\n0.10\nL (1)\n0.10\n\n\n\n\n2.\n0.60\nH (10)\n6\n\n\n\n\n3.\n0.30\nM (5)\n1.5\n\n\n\n\nTotals\n1.00\n\n7.6",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image21.png"
+      ]
+    },
+    {
+      "slide": 26,
+      "text": "Financial analysis\n\nThis is what goes at the end of your business case\nSee Excel template on Canvas\nNeed to understand financial terms to manage projects well",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image22.jpeg"
+      ]
+    },
+    {
+      "slide": 27,
+      "text": "Payback analysis",
+      "diagram": "When costs equal benefits\nVital for IT projects – why? \nDraw a chart in Excel with 2 lines: Costs and benefits – where do they intersect? That’s your payback point ",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 28,
+      "text": "Practice Financial Analysis Ex 4, p. 195",
+      "diagram": "4 year project\nCosts: Y1 $300k, Y2-Y4 $40k/year\nBenefits: Y1 $0, Y2-Y4 $120k/year\nDiscount rate: 7%, round 2 decimal places (dollars and cents)\nCalculate NPV, ROI and payback chart\nShould the company invest in this project? Why or why not? ",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 29,
+      "text": "",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image26.jpeg"
+      ]
+    },
+    {
+      "slide": 30,
+      "text": "Practice PMP Question",
+      "diagram": "9. You must select one and only one project to take on for your company. The net present value (NPV) for each project is as follows: Project A’s NPV is $10K, Project B’s NPV is $20K, and Project C’s NPV is $30K.\nA. Project A\nB. Project B\nC. Project C\nD. This problem cannot be solved without knowing the interest rate for each project.",
+      "notes": "https://magoosh.com/pmp/10-pmp-math-questions/\n30",
+      "images": []
+    },
+    {
+      "slide": 31,
+      "text": "Here’s the answer to that\n\nC. Project C – For project evaluation dealing with internal rate of return (IRR), return on investment (ROI), and net present value (NPV), simply pick the greatest value. Easy!",
+      "diagram": "",
+      "notes": "https://magoosh.com/pmp/10-pmp-math-questions/\n31",
+      "images": []
+    },
+    {
+      "slide": 32,
+      "text": "Obj 4: Issues that may affect projects",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch2-image27.jpeg"
+      ]
+    },
+    {
+      "slide": 33,
+      "text": "Kill points?",
+      "diagram": "Why might a company kill a project midway through? \nShould companies have kill points or gate reviews on a project? Why or why not? ",
+      "notes": "This is Spock from Star Trek using a Vulcan neck pinch to subdue Captain Kirk. \n33",
+      "images": []
+    },
+    {
+      "slide": 34,
+      "text": "Projects are complex and ambiguous\nHow do you feel about those?",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 35,
+      "text": "Trends affecting projects\nDiversity in projects, people, and technology\nGlobalization\nOutsourcing\nVirtual teams",
+      "diagram": "",
+      "notes": "Encanto family, Disney movie\n35",
+      "images": [
+        "cis464-media/ch2-image28.jpg"
+      ]
+    },
+    {
+      "slide": 36,
+      "text": "Virtual teams",
+      "diagram": "More flexibility\nLimited physical interaction\nDependent on internet connections to work\nGreener\nSafe from COVID",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 37,
+      "text": "Globalization",
+      "diagram": "",
+      "notes": "37",
+      "images": [
+        "cis464-media/ch2-image34.jpg"
+      ]
+    },
+    {
+      "slide": 38,
+      "text": "Be mindful of aggressive agreement",
+      "diagram": "",
+      "notes": "Neither person is right or wrong here. It’s an optical illusion\n38",
+      "images": [
+        "cis464-media/ch2-image35.jpeg"
+      ]
+    },
+    {
+      "slide": 39,
+      "text": "Obj 5: IT projects",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 40,
+      "text": "What makes IT projects especially difficult?",
+      "diagram": "Vast\nDiverse\nComplicated\nAmorphous\nDynamic\nUnknown\nMulti-layered\nHighly Skilled\nLearned As You Go",
+      "notes": "Versus building a bridge, for example.\n40",
+      "images": [
+        "cis464-media/ch2-image36.jpeg"
+      ]
+    },
+    {
+      "slide": 41,
+      "text": "Outsourcing",
+      "diagram": "Many IT projects use outsourcing\nSome IT professionals are only hired as contractors\nMore in later chapters",
+      "notes": "41",
+      "images": []
+    },
+    {
+      "slide": 42,
+      "text": "Please explain\nIt is better to have a moderate or even a small amount of success on an important project than huge success on a project that is unimportant",
+      "diagram": "",
+      "notes": "Quote, p. 96\n42",
+      "images": [
+        "cis464-media/ch2-image37.jpeg"
+      ]
+    }
+  ],
+  "3": [
+    {
+      "slide": 1,
+      "text": "Project Initiation\nReading: Schwalbe Ch 3",
+      "diagram": "",
+      "notes": "Created August 2026\n1",
+      "images": [
+        "cis464-media/ch3-image2.jpeg"
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Objectives\n\nDifferentiate between product and project life cycles\nList responsibilities of a PMO\nDefine what a baseline is and what it’s for\nDevelop deliverables: project business case, charter, kickoff meeting agenda, PM Plan, stakeholder register and analysis, P-I grid",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image3.jpeg"
+      ]
+    },
+    {
+      "slide": 3,
+      "text": "Obj 1: Project vs Product Life Cycles",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 4,
+      "text": "Definitions\n\nDevelopment approach: means to create and evolve a product, service, or result during the project life cycle\nCadence: regular, rhythmic pattern of work\nProject life cycle: series of activities or phases a project passes through from start to end",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image4.jpeg"
+      ]
+    },
+    {
+      "slide": 5,
+      "text": "5\nFigure 3-3. Project Life Cycles\nSource: Project Management Institute, Inc., A Guide to the Project Management Body of Knowledge (PMBOK Guide) – Eighth Edition (2025), Figures 4-5, 4-6, and 4-7, pp. 62-63.",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image5.jpeg"
+      ]
+    },
+    {
+      "slide": 6,
+      "text": "6\nFigure 3-4. Sample Product Life Cycle\nSource: Project Management Institute, Inc., The Standard for Project Management, Eighth Edition (2025), Figure 2-5, p. 23.",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image6.png"
+      ]
+    },
+    {
+      "slide": 7,
+      "text": "Obj 2: PMO",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 8,
+      "text": "Project Management Office (PMO)\nA project management office (PMO) is an organizational entity created to assist project managers in achieving project goals\nMost PMOs (82%) report to a vice president or higher.\nMost PMOs (77%) focus on using the PMBOK® Guide.\nThe average age of the PMO is 6 years.\nThe average annual budget is $500K per year, and staff size is 8.\nMost project managers (79%) report to the PMO.\nMore than 60% of organizations use agile, and over 61% use predictive or waterfall methodologies.\nMost high-performing PMOs (61%) use AI-supported practices to help them meet their goals, and they are far more likely than low performers to have an established project management career path (64% vs. 29%)\n8",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 9,
+      "text": "Figure 3-8 Percentage of Organizations with PMOs\nSource: Project Management Solutions, Inc., “The 2025 State of the Project Management Office (PMO)” (2025).",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image7.png"
+      ]
+    },
+    {
+      "slide": 10,
+      "text": "Reporting performance to key stakeholders\nEnabling consistent use of policies, procedures, and templates\nSupporting effective project initiating and planning\nInterfacing with functional areas like human resources, finance, and IT \nStandardizing project-related governance processes \nAligning work with strategic goals \nFacilitating sharing of resources, tools, methodologies, and techniques \nCommunicating strategic work/progress\n10\nMain Activities of a Good PMO",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 11,
+      "text": "Obj 3: Baseline",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 12,
+      "text": "Baseline",
+      "diagram": "Where we started or intended to be – the plan as it currently stands\nIn MS Project, once plan is final, you can save it as a baseline – why might we want to do this? ",
+      "notes": "Hint: If we know where we’re supposed to be and where we are, we can measure the difference\n12",
+      "images": []
+    },
+    {
+      "slide": 13,
+      "text": "Obj 4: Deliverables",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 14,
+      "text": "Business Case",
+      "diagram": "At start: establishes the business need for the project\nDuring: Lists the goals and directives to keep the project on-track\nAt end: Assess whether project met its objectives",
+      "notes": "https://www.pmi.org/learning/library/need-business-case-6730\nSee Book p. 102-104 for example business case with financial analysis\n14",
+      "images": []
+    },
+    {
+      "slide": 15,
+      "text": "Elements of the Business Case\nIntroduction / Background\nBusiness objective\nCurrent situation and problem/opportunity statement\nCritical assumptions and constraints\nAnalysis of option and recommendation\nPreliminary project requirements\nBudget estimate and financial analysis\nSchedule estimate\nPotential risks",
+      "diagram": "",
+      "notes": "May be more or less complicated than this.\n15",
+      "images": [
+        "cis464-media/ch3-image11.svg"
+      ]
+    },
+    {
+      "slide": 16,
+      "text": "Project Charter",
+      "diagram": "Formally recognizes the project exists in the company\nCommits financial and capital resources to complete the project\nRequires sign off by an authorized person\nCreated \nafter\n the business case, but may contain duplicate information\nBusiness case justifies the project, charter approves it",
+      "notes": "See book p. 111-112 for example charter\n16",
+      "images": []
+    },
+    {
+      "slide": 17,
+      "text": "Project management plan",
+      "diagram": "Document that sets the project baselines and guides execution\nA “how to” document\nDynamic, flexible and receptive to change\nCompanies often use guidelines and/or templates for developing the PM Plan – look for a document repository",
+      "notes": "Schwalbe pgs. 174-176\n17",
+      "images": []
+    },
+    {
+      "slide": 18,
+      "text": "Who am I?",
+      "diagram": "Who is a stakeholder? \nWho’s not? \nWhat is “engagement”?",
+      "notes": "See Schwalbe p. 541\nYou should be an expert on the term “engagement” by now. It’s in the mission! \n18",
+      "images": []
+    },
+    {
+      "slide": 19,
+      "text": "Why do stakeholders matter on a project? \n\nDo they all matter? Why or why not?",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 20,
+      "text": "Identify Stakeholders",
+      "diagram": "",
+      "notes": "This is a Where’s Waldo picture. Can you find him? Neither can I.\n20",
+      "images": [
+        "cis464-media/ch3-image16.jpg"
+      ]
+    },
+    {
+      "slide": 21,
+      "text": "Categorize stakeholders\n\n\nInternal / external to the company not to the project\nSupportive/resistant, Interested/disinterested\nHow many stakeholders can you list for each of these projects: \nUpgrade EHR system in a hospital\nReplace LMS in a university\nChange desktops to laptops for a sales force team",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 22,
+      "text": "Stakeholder register lists the stakeholders\nID info, assessment (reqs and expectations), influence, phase when most interested, classification (internal/ external, supportive or resistant), etc.\nThis deliverable is a precursor for the stakeholder engagement plan, which is a different but related document",
+      "diagram": "",
+      "notes": "See Schwalbe p. 543\n22",
+      "images": []
+    },
+    {
+      "slide": 23,
+      "text": "Stakeholder engagement plan:",
+      "diagram": "Current and desired engagement levels\nInterrelationships among stakeholders (their networks)\nCommunication requirements\nPotential strategies for managing the stakeholder\nProcess to update the stakeholder management plan",
+      "notes": "See Schwalbe p. 294.\n23",
+      "images": []
+    },
+    {
+      "slide": 24,
+      "text": "Power, interest, and engagement",
+      "diagram": "Level of authority vs concern or interest in a project\nRated high, low or medium\nEngagement categories (low to high): unaware, resistant, neutral, supportive, leading",
+      "notes": "See Schwalbe pgs. 544-545.\n24",
+      "images": []
+    },
+    {
+      "slide": 25,
+      "text": "Stakeholder Power/ Interest Grid",
+      "diagram": "",
+      "notes": "Schwalbe p. 545.\n25",
+      "images": [
+        "cis464-media/ch3-image25.jpeg"
+      ]
+    },
+    {
+      "slide": 26,
+      "text": "Expectations management matrix",
+      "diagram": "Key requirements\nSpreadsheet/table format showing stakeholders’ major expectations and how to manage them\nBig expectations identified and ranked by multiple stakeholders",
+      "notes": "See Schwalbe p. 548-549 for examples.\n26",
+      "images": []
+    },
+    {
+      "slide": 27,
+      "text": "Kickoff Meeting Agenda",
+      "diagram": "Meeting at beginning of project for everyone to meet, review goals, and discuss plans\nAddress change management issues such as integrated change control",
+      "notes": "See book p. 114 for example kickoff meeting agenda\n27",
+      "images": []
+    },
+    {
+      "slide": 28,
+      "text": "Integrated Change Control",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image29.png"
+      ]
+    },
+    {
+      "slide": 29,
+      "text": "3 main objectives:",
+      "diagram": "Influence factors that create change to ensure changes are beneficial\nDetermine whether a change has occurred, and if so, communicate them to stakeholders\nManage changes as they occur",
+      "notes": "Schwalbe p. 184\n29",
+      "images": []
+    },
+    {
+      "slide": 30,
+      "text": "List examples of changes on a project\nExplain why not all change is bad",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 31,
+      "text": "Tools in integrated change control",
+      "diagram": "Change control system: process for properly changing official project documents, who can do it, paperwork required, etc.\nChange Control Board (CCB): Formal group who approves or rejects changes to projects",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 32,
+      "text": "Tools in integrated change control",
+      "diagram": "Configuration management: process of checking the functional and physical designs against reality, record and report changes, and audit products conform to requirements\nCommunication: what happens if everyone is not on the same page",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 33,
+      "text": "And lastly\n\n“Those who do the work should help plan the work”",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image32.png"
+      ]
+    },
+    {
+      "slide": 34,
+      "text": "",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch3-image33.png"
+      ]
+    }
+  ],
+  "10": [
+    {
+      "slide": 1,
+      "text": "Ethics and Use of AI in Project Management\nReading: Schwalbe Ch 10",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch10-image1.jpeg"
+      ]
+    },
+    {
+      "slide": 2,
+      "text": "Objectives\n\nLocate the PMI Code of Ethics and Professional Conduct\nCategorize commonly used forms of “AI”\nAddress ethical and unethical uses of AI in project management\nIdentify additional difficulties in managing “AI projects” versus traditional IT projects",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 3,
+      "text": "Obj 1: PMI Code of Ethics",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 4,
+      "text": "PMI Code of Ethics and Professional Conduct \n\nEvery professional organization has a code of ethics and professional conduct to guide members actions\n“Doing what is right and honorable … in all aspects of our lives – at work, at home, and in service to our profession”",
+      "diagram": "",
+      "notes": "https://www.pmi.org/-/media/pmi/documents/public/pdf/ethics/pmi-code-of-ethics.pdf\n4",
+      "images": []
+    },
+    {
+      "slide": 5,
+      "text": "Obj 2: Forms of “AI”",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 6,
+      "text": "Definitions",
+      "diagram": "Machine Learning (ML) – trained algorithm to predict based on data, e.g., neural network\nUses: spam filtering, facial recognition, voice assistants\nDeep Learning – Subset of ML, complex neural networks \nUses: Natural language processing (NLP)",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 7,
+      "text": "Definitions",
+      "diagram": "Generative AI (genAI) – Deep learning models that can regurgitate content in the form of text, images, video and audio in response to prompts\nLarge Language Models (LLM) – models trained on vast amounts of data\nAI Agents – Can act autonomously on simple to complex workflows, using LLMs and NLP",
+      "notes": "https://www.ibm.com/think/topics/ai-agents\n7",
+      "images": []
+    },
+    {
+      "slide": 8,
+      "text": "genAI vs Agentic AI (Source: IBM)\n\ngenAI focuses on generating content based on an input such as a prompt or question; have less autonomy\nAgentic AI focuses on achieving a goal, including determining the steps needed and selecting among possible actions; have more autonomy",
+      "diagram": "",
+      "notes": "https://www.ibm.com/think/topics/agentic-ai-vs-generative-ai#7281538\n8",
+      "images": [
+        "cis464-media/ch10-image2.svg"
+      ]
+    },
+    {
+      "slide": 9,
+      "text": "Five Types of AI Agents",
+      "diagram": "Simple Reflex\nModel-Based Reflex\nGoal-Based\nUtility-Based\nLearning",
+      "notes": "https://www.ibm.com/think/topics/ai-agent-types#72820454\n9",
+      "images": []
+    },
+    {
+      "slide": 10,
+      "text": "Simple Reflex: predefined or fixed condition-action rules often through sensors",
+      "diagram": "",
+      "notes": "https://www.ibm.com/think/topics/ai-agent-types#72820454\n10",
+      "images": [
+        "cis464-media/ch10-image3.jpeg"
+      ]
+    },
+    {
+      "slide": 11,
+      "text": "Model-Based Reflex: Similar to simple but it can learn",
+      "diagram": "",
+      "notes": "https://www.ibm.com/think/topics/ai-agent-types#72820454\n11",
+      "images": [
+        "cis464-media/ch10-image4.jpeg"
+      ]
+    },
+    {
+      "slide": 12,
+      "text": "Goal-Based: Actions guided by a simple goal",
+      "diagram": "",
+      "notes": "https://www.ibm.com/think/topics/ai-agent-types#72820454\n12",
+      "images": [
+        "cis464-media/ch10-image5.jpeg"
+      ]
+    },
+    {
+      "slide": 13,
+      "text": "Utility-Based: Considers a range of actions to reach optimal course of action",
+      "diagram": "",
+      "notes": "https://www.ibm.com/think/topics/ai-agent-types#72820454\n13",
+      "images": [
+        "cis464-media/ch10-image6.jpeg"
+      ]
+    },
+    {
+      "slide": 14,
+      "text": "Learning agents: improves performance over time by adapting to new information",
+      "diagram": "",
+      "notes": "https://www.ibm.com/think/topics/ai-agent-types#72820454\n14",
+      "images": [
+        "cis464-media/ch10-image7.jpeg"
+      ]
+    },
+    {
+      "slide": 15,
+      "text": "Obj 3: Ethics in using AI for project management\nFacts & Figures",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 16,
+      "text": "What’s New for Infrastructure?",
+      "diagram": "Traditional data centers stored data – hard drives\nAI data centers train models – processors ",
+      "notes": "https://www.datacenters.com/news/inside-the-ai-data-center-what-makes-it-different-from-traditional-facilities\n16",
+      "images": []
+    },
+    {
+      "slide": 17,
+      "text": "",
+      "diagram": "",
+      "notes": "https://www.netforchoice.com/blog/traditional-data-center-vs-ai-data-center-whats-the-real-difference/\nNote: The authors of this article used ChatGPT to create this image, and even named the file “ChatGPT-Image-April-22-2026”\n17",
+      "images": [
+        "cis464-media/ch10-image8.png"
+      ]
+    },
+    {
+      "slide": 18,
+      "text": "Growing environmental impacts a concern",
+      "diagram": "Google Gemini states one text query uses 5 drops of water\n750 million monthly users\n10 billion tokens per minute\nFree version – 5 queries per day; 100 for Pro; 500 for Ultra",
+      "notes": "https://gpusmith.com/articles/en/how-much-water-do-data-centers-use\nhttps://www.demandsage.com/google-gemini-statistics/\nhttps://teknotum.net/2025/09/finally-these-are-the-official-usage-limits-on-googles-gemini/\nhttps://www.unitconverters.net/volume/drop-to-gallon-us.htm\nhttps://thriveagency.com/news/google-gemini-usage-stats/\n18",
+      "images": []
+    },
+    {
+      "slide": 19,
+      "text": "Some napkin math",
+      "diagram": "Free users 60%, Pro 30%, Ultra 10% using their max queries per day for a month\n5 drops per text query\nEquivalent to water use of 8,222 households of 4\nHarrisonburg, VA had 17,360 households in 2025",
+      "notes": "https://gethomeutilities.com/blog/average-water-usage/\nhttps://www.point2homes.com/US/Neighborhood/VA/Harrisonburg-City-Demographics.html#households\n19",
+      "images": [
+        "cis464-media/ch10-image13.jpeg"
+      ]
+    },
+    {
+      "slide": 20,
+      "text": "Myth versus Fact (GPU Smith)\n\n\n\n“The per-query cost is genuinely small, but multiplied across the billions of daily queries served by the major AI platforms, plus the far larger water and energy cost of training frontier models in the first place, the totals reported in the Hyperscaler Water Disclosures section above are real, are growing, and are concentrated geographically in ways that create acute local risk even when they remain a rounding error nationally. The distinction that matters for policy and for individual decision-making is between the marginal cost of one more query, which is small, and the infrastructure buildout required to serve hundreds of millions of users at scale, which is not.”",
+      "diagram": "",
+      "notes": "https://gpusmith.com/articles/en/how-much-water-do-data-centers-use\n20",
+      "images": []
+    },
+    {
+      "slide": 21,
+      "text": "Impacts are Localized and Severe\n\nBrown water in Georgia, Texas, Arizona, Louisiana\nNoise pollution: Loudoun County data center measured at 90 decibels\n“data centers may pose significant health risks, including diseases associated with air pollution from fossil fuel combustion, waterborne illnesses resulting from excessive water usage, and both mental and neurological health concerns related to noise pollution” (Gour et al. 2026)",
+      "diagram": "",
+      "notes": "https://moneywise.com/news/top-stories/meta-data-center-georgia-water-contamination-aoc-epa\nhttps://www.nbcwashington.com/news/local/northern-virginia/neighbors-raise-concerns-about-noisy-data-center-in-loudoun/4080249/\nhttps://environmentwriting.com/2026/03/25/data-center-alley-the-construction-boom-of-ai-data-centers-and-its-effects-on-noise-pollution/\nhttps://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2026.1648912/full\nhttps://www.nytimes.com/2025/07/14/technology/meta-data-center-water.html\n21",
+      "images": []
+    },
+    {
+      "slide": 22,
+      "text": "LLMs Lead to Wider Risk Exposure (Lasso Security)",
+      "diagram": "Feb 2025: Security researchers found a training dataset used for LLM development contained nearly 12,000 live API keys and passwords\nA carefully crafted instruction like “ignore all previous rules” can override guardrails, or extract hidden system prompts. The danger lies in how easily a model’s behavior can be hijacked without breaching infrastructure.\nThe same architectures that make these models powerful also make them porous, capable of leaking, memorizing, or misusing the very data that fuels them.\nApr 2025: LLMs found to produce vulnerable code by default",
+      "notes": "https://www.lasso.security/blog/llm-data-privacy\nhttps://tech.yahoo.com/cybersecurity/articles/top-ai-tools-including-claude-120500469.html\nhttps://www.infosecurity-magazine.com/news/llms-vulnerable-code-default/\nhttps://arxiv.org/abs/2401.05566\n22",
+      "images": []
+    },
+    {
+      "slide": 23,
+      "text": "Stats from Gartner\n\n80% Task Automation by 2030\n15% of day to day work decisions shifted to agentic AI by 2028\nUp to 40% of agentic AI projects will be canceled next year (2027) due to escalating costs, unclear business value, or inadequate risk controls",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 24,
+      "text": "Caveats to Using AI to Manage Projects",
+      "diagram": "Hallucinations – don’t trust and always verify – these are a feature, not a bug\nSome tools use a limited training set to reduce hallucinations as well as require citing sources\nEven sources are being tainted however\nSometimes same or similar requests can give widely different answers",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 25,
+      "text": "Potential for Cognitive Decline\n\nIf you always use the calculator, do you remember your times tables? Or PEMDAS? How fast can you alphabetize or find files on your computer?\nPeople who rely on LLMs to write end up with atrophied writing muscles (their brains)",
+      "diagram": "",
+      "notes": "https://futurism.com/future-society/llms-acting-as-cognitive-virus-among-humans\n25",
+      "images": [
+        "cis464-media/ch10-image14.jpg"
+      ]
+    },
+    {
+      "slide": 26,
+      "text": "Laundry List of Ethical Concerns\n\nBias\nPrivacy\nAccountability\nReliability\nSafety\nTransparency\nCopyright\nSustainability (unrealized financial benefits)",
+      "diagram": "",
+      "notes": "",
+      "images": [
+        "cis464-media/ch10-image15.jpeg"
+      ]
+    },
+    {
+      "slide": 27,
+      "text": "Privacy",
+      "diagram": "",
+      "notes": "https://www.pcmag.com/news/your-ai-prompts-arent-private-the-13-most-and-least-invasive-chatbots-ranked\n27",
+      "images": [
+        "cis464-media/ch10-image16.png"
+      ]
+    },
+    {
+      "slide": 28,
+      "text": "Privacy",
+      "diagram": "Your data is used to train the models\nAfter you opt-out you cannot retrieve your data",
+      "notes": "https://www.pcmag.com/news/your-ai-prompts-arent-private-the-13-most-and-least-invasive-chatbots-ranked\n28",
+      "images": []
+    },
+    {
+      "slide": 29,
+      "text": "Obj 4: Managing AI Projects",
+      "diagram": "",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 30,
+      "text": "What is an AI Project?",
+      "diagram": "Using AI to manage a project is still managing a regular project\nAn AI project is a specific type of project to manage",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 31,
+      "text": "PMI Certification PMI-CPMAI",
+      "diagram": "New cert specifically for managing AI projects\nNo education or experience required to take the test\nFocuses on managing data-driven, iterative AI projects while ensuring responsible, ethical and trustworthy implementation practices",
+      "notes": "",
+      "images": []
+    },
+    {
+      "slide": 32,
+      "text": "Examples of Project Management Tasks where companies use AI",
+      "diagram": "Track\nTrack issues and workflows\nGenerate and revise\nGenerate and revise documents such as reports, charts, graphs\nGenerate\nGenerate source code\nSummarize\nSummarize content\nDraft\nDraft meeting minutes",
+      "notes": "https://thedigitalprojectmanager.com/project-management/ai-use-cases-in-project-management/\n32",
+      "images": []
+    }
+  ]
+}

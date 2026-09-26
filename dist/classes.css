@@ -2,3 +2,4 @@
 @media(max-width:850px){header{height:auto;min-height:94px;flex-wrap:wrap;padding:16px 4%;gap:14px}.class-switch{order:3;width:100%}.class-switch a{flex:1}.cis304 .formula-grid{grid-template-columns:1fr}.cis304 .flashcard{padding:24px}.cis304 .lesson-list button{padding:14px}.cis304 .flow304{flex-direction:column;align-items:stretch}}
 
 .cis304 #math-work{display:grid;gap:14px}
+.class-switch{flex-wrap:wrap}.cis464 .source-figure{margin:18px 0;padding:12px;background:white;border:1px solid var(--line);border-radius:10px}.cis464 .source-figure img{max-width:100%;height:auto;display:block;margin:auto}.cis464 .source-figure figcaption{font-size:12px;color:#66786d;margin-top:10px}.cis464 .power-grid button{min-height:140px;text-align:left;padding:22px}.cis464 .note-table td,.cis464 .note-table th{white-space:nowrap}.cis464 .formula-steps{margin-top:24px}.cis464 .question-source button{margin-top:12px}

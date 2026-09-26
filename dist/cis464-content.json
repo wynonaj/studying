@@ -1,0 +1,3498 @@
+{
+  "title": "CIS 464 · Project Management",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Introduction to Project Management",
+      "reading": "Chapter 1",
+      "intro": "Projects, people, constraints, teams, and development approaches."
+    },
+    {
+      "id": 2,
+      "title": "Project Selection",
+      "reading": "Chapter 2",
+      "intro": "Choose valuable work and compare projects using clear financial reasoning."
+    },
+    {
+      "id": 3,
+      "title": "Project Initiation",
+      "reading": "Chapter 3",
+      "intro": "Authorize, plan, engage stakeholders, and control change."
+    },
+    {
+      "id": 10,
+      "title": "Ethics & AI in Project Management",
+      "reading": "Chapter 10",
+      "intro": "Understand AI categories and evaluate responsible project use."
+    }
+  ],
+  "questions": [
+    {
+      "id": "464-q001",
+      "number": 1,
+      "section": 1,
+      "slides": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "title": "Why project management matters",
+      "q": "What is the main reason to manage projects systematically?",
+      "correct": "Deliver useful value while coordinating resources, uncertainty, and work",
+      "distractors": [
+        "Complete as many tasks as possible regardless of value",
+        "Keep every original plan unchanged regardless of learning",
+        "Maximize spending so every department gets more resources"
+      ],
+      "answer": "Project management helps turn an idea into a useful result. It coordinates people, work, time, money, risks, and decisions. Benefits can include less waste, better reliability, faster useful innovation, and stronger customer outcomes. Career and salary examples in the slides illustrate potential benefits, not promises.",
+      "teach": "Project management helps turn an idea into a useful result.\n\nValue means a benefit that matters to the customer or organization. Finishing a busy schedule is not enough if the result does not solve the problem.",
+      "example": "A campus app that actually reduces registration mistakes creates value. Completing 100 coding tasks without fixing registration does not prove success."
+    },
+    {
+      "id": "464-q002",
+      "number": 2,
+      "section": 1,
+      "slides": [
+        14,
+        15,
+        16
+      ],
+      "title": "What a project is",
+      "q": "Which description identifies a project?",
+      "correct": "A temporary effort with interdependent activities that produces a unique result",
+      "distractors": [
+        "An ongoing routine that has no planned endpoint",
+        "A department that performs the same service indefinitely",
+        "A task list with no objective or defined result"
+      ],
+      "answer": "A project is temporary and aims at a specific, unique result. It has an objective, interdependent tasks, resource needs, uncertainty, and stakeholders. Temporary means the effort ends; its product may continue to be used. An IT project uses computing technology to create or change a product, service, or result.",
+      "teach": "A project is temporary and aims at a specific, unique result.\n\nInterdependent means one task depends on another. Unique does not mean nobody has ever done anything similar; this particular effort has its own situation and result.",
+      "example": "Replacing a university’s learning platform is a project. Operating that platform every semester is ongoing operations."
+    },
+    {
+      "id": "464-q003",
+      "number": 3,
+      "section": 1,
+      "slides": [
+        17
+      ],
+      "title": "Progressive elaboration",
+      "q": "Why does a project plan become more detailed over time?",
+      "correct": "Information improves, allowing the team to refine the plan",
+      "distractors": [
+        "A project should begin without any goals",
+        "Approved scope changes never need review",
+        "Every later detail must have been certain on day one"
+      ],
+      "answer": "Progressive elaboration means developing and refining detail as knowledge improves. Early uncertainty is often higher. It is compatible with planning and controlled change; it is not permission for uncontrolled scope growth.",
+      "teach": "Progressive elaboration means developing and refining detail as knowledge improves.\n\nYou can know the destination before knowing every step. As people test assumptions and clarify needs, the plan becomes more precise.",
+      "example": "At first you know a registration app needs login. Later you specify which identity system, fields, and error messages it must use."
+    },
+    {
+      "id": "464-q004",
+      "number": 4,
+      "section": 1,
+      "slides": [
+        20,
+        21,
+        22
+      ],
+      "title": "Managing a project",
+      "q": "What does project management involve?",
+      "correct": "Applying knowledge, skills, tools, and techniques to guide project work and meet requirements",
+      "distractors": [
+        "Only buying hardware and software for the team",
+        "Only supervising the final delivery meeting",
+        "Only keeping a schedule, regardless of people or quality"
+      ],
+      "answer": "Project management combines technical planning with people skills and judgment. It includes planning, coordinating, measuring, communicating, and adapting. The slide phrase about hardware/software/networks describes an IT project’s context, not the whole definition of project management.",
+      "teach": "Project management combines technical planning with people skills and judgment.\n\nA requirement is something the result must satisfy. The manager helps people work toward those requirements rather than merely checking that everyone is busy.",
+      "example": "A manager coordinates testing, resolves a resource conflict, communicates a delay, and evaluates a proposed change before revising the plan."
+    },
+    {
+      "id": "464-q005",
+      "number": 5,
+      "section": 1,
+      "slides": [
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "title": "The iron triangle and quality",
+      "q": "Which three constraints form the traditional iron triangle?",
+      "correct": "Scope, time/schedule, and cost",
+      "distractors": [
+        "Scope, stakeholders, and governance",
+        "Quality, communication, and leadership",
+        "Time, benefits, and procurement"
+      ],
+      "answer": "The traditional triple constraint is scope, time/schedule, and cost. Scope is the work and result included; schedule is when work happens; cost is the money needed. Quality is often shown as a fourth dimension or central outcome. Resources, risks, and compliance also constrain decisions.",
+      "teach": "The traditional triple constraint is scope, time/schedule, and cost.\n\nChanging one constraint can affect others. More features may need more time or money, and rushing may threaten quality. Compliance means meeting applicable requirements or rules.",
+      "example": "If the deadline cannot move but new features are requested, the team may need extra resources or an approved reduction elsewhere in scope."
+    },
+    {
+      "id": "464-q006",
+      "number": 6,
+      "section": 1,
+      "slides": [
+        23,
+        29
+      ],
+      "title": "Success and the MORE framework",
+      "q": "What does the MORE framework add to judging project success?",
+      "correct": "Stakeholder perceptions of value, ownership, reassessment, and wider impacts",
+      "distractors": [
+        "Only checking whether the original deadline was met",
+        "Only maximizing the number of deliverables",
+        "Only judging the manager’s personal satisfaction"
+      ],
+      "answer": "MORE means Manage perceptions, Own success, Relentlessly reassess, and Expand perspective. Success includes useful value relative to invested resources, not just execution metrics. Reassess value with stakeholders as conditions change and consider effects outside the immediate project.",
+      "teach": "MORE means Manage perceptions, Own success, Relentlessly reassess, and Expand perspective.\n\nPerception is how people understand the result. Delivering something on time is important, but people may still see little value if it does not meet their need.",
+      "example": "An app meets its deadline but excludes students using screen readers. A wider success assessment considers usability and stakeholder outcomes, not only the launch date."
+    },
+    {
+      "id": "464-q007",
+      "number": 7,
+      "section": 1,
+      "slides": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "title": "Projects, operations, and DevOps",
+      "q": "Which pairing correctly distinguishes project work and operations?",
+      "correct": "Building a new service is project work; repeatedly running it is operations",
+      "distractors": [
+        "Running daily backups is always a new project; creating the backup system is operations",
+        "Project work continues indefinitely; operations must have a fixed end",
+        "Both terms mean the same work, differentiated only by team size"
+      ],
+      "answer": "Projects create change through temporary efforts. Operations perform recurring work that keeps the organization functioning. DevOps connects development and operations through collaboration, automation, feedback, and frequent reliable delivery. It is not simply a new name for either one.",
+      "teach": "Projects create change through temporary efforts.\n\nAn operation can contain projects that improve it. The delivered product usually needs ongoing support after the project ends.",
+      "example": "Building a new release pipeline is a project. Using that pipeline, monitoring services, and responding to incidents are continuing operational activities."
+    },
+    {
+      "id": "464-q008",
+      "number": 8,
+      "section": 1,
+      "slides": [
+        34
+      ],
+      "title": "Why projects are started",
+      "q": "Which reason can justify starting a project?",
+      "correct": "A strategic need, customer demand, regulatory requirement, or valuable opportunity",
+      "distractors": [
+        "Availability of unused funds alone proves the project is worthwhile",
+        "The team wants a new tool even when no benefit is identified",
+        "A rival started something similar, so evaluation is unnecessary"
+      ],
+      "answer": "Projects may respond to market/industry pressure, regulation, customer needs, technology updates, or opportunities for innovation. A business justification should explain the value of the response. “Just because” is not a strong substitute for that justification.",
+      "teach": "Projects may respond to market/industry pressure, regulation, customer needs, technology updates, or opportunities for innovation.\n\nStarting a project commits limited resources. Explain the need before deciding what to build.",
+      "example": "A required accessibility improvement may justify a project even when its benefit cannot be reduced to immediate sales revenue."
+    },
+    {
+      "id": "464-q009",
+      "number": 9,
+      "section": 1,
+      "slides": [
+        35,
+        36
+      ],
+      "title": "Stakeholders and project roles",
+      "q": "Who is a stakeholder?",
+      "correct": "A person or group that can affect, be affected by, or perceive an effect from the project",
+      "distractors": [
+        "Only employees assigned full-time to the project",
+        "Only the executive who supplies funding",
+        "Only customers who support the proposed solution"
+      ],
+      "answer": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups. A sponsor supports and authorizes resources; a champion advocates; the project manager coordinates work; the team performs it; a steering committee provides direction/oversight. A PMO supports project practices. Roles can overlap.",
+      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters.",
+      "example": "For a hospital-system upgrade, nurses, patients, IT staff, security staff, and hospital leaders may all have different stakes in the result."
+    },
+    {
+      "id": "464-q010",
+      "number": 10,
+      "section": 1,
+      "slides": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "title": "The project manager",
+      "q": "What combination of skills does a project manager need?",
+      "correct": "Project/business knowledge, people skills, critical thinking, adaptability, and digital fluency",
+      "distractors": [
+        "Technical expertise alone, with communication delegated away",
+        "Formal authority alone, without business understanding",
+        "Detailed schedules alone, without judgment or flexibility"
+      ],
+      "answer": "Project managers combine leadership and management. Leadership sets direction and engages people; management organizes and controls work toward that direction. The slides stress flexibility, adaptability, PM knowledge, subject knowledge, business understanding, human relations, critical thinking, and digital fluency.",
+      "teach": "Project managers combine leadership and management.\n\nAmbiguity means something is unclear or open to interpretation. A manager must clarify it with people instead of pretending every requirement is certain.",
+      "example": "When stakeholders interpret “fast” differently, the manager helps agree on a measurable response-time requirement and a realistic delivery plan."
+    },
+    {
+      "id": "464-q011",
+      "number": 11,
+      "section": 1,
+      "slides": [
+        40,
+        41,
+        42,
+        43,
+        45,
+        47
+      ],
+      "title": "Building a working team",
+      "q": "Why should a team write down its operating principles?",
+      "correct": "To make expectations shared, clear, and accountable",
+      "distractors": [
+        "To eliminate the need for future conversation",
+        "To guarantee that conflict can never occur",
+        "To assign each person one permanent group-work role"
+      ],
+      "answer": "Choose team members for expertise, experience, availability, and willingness. Develop the team through listening, respect, shared expectations, and accountability. Team operating principles specify how members work together. SMART expectations are specific, measurable, achievable, relevant, and time-bound. Group-work roles such as recorder or facilitator can rotate.",
+      "teach": "Choose team members for expertise, experience, availability, and willingness.\n\nA norm is an agreed way of behaving. People may think they agree until a concrete rule reveals different assumptions.",
+      "example": "Instead of “communicate well,” agree to post blockers by 10 a.m. on workdays and identify who will follow them up."
+    },
+    {
+      "id": "464-q012",
+      "number": 12,
+      "section": 1,
+      "slides": [
+        44
+      ],
+      "title": "Growth mindset in project management",
+      "q": "Which behavior reflects the slides’ project-management growth mindset?",
+      "correct": "Take ownership, learn proactively, and focus on value with a whole-system view",
+      "distractors": [
+        "Protect the initial plan from all new evidence",
+        "Treat quality as a final inspection only",
+        "Assume responsibility ends once tasks are assigned"
+      ],
+      "answer": "The slide’s dimensions are being proactive, taking ownership, and driving value. Its principles include a holistic view, focus on value, quality built into work and deliverables, accountability, sustainability, and an empowered culture.",
+      "teach": "The slide’s dimensions are being proactive, taking ownership, and driving value.\n\nHolistic means considering connected effects. Empowered means people have the information and appropriate authority to contribute rather than waiting helplessly for every decision.",
+      "example": "A tester notices recurring defects, raises the pattern early, and helps the team prevent them instead of only logging each defect after delivery."
+    },
+    {
+      "id": "464-q013",
+      "number": 13,
+      "section": 1,
+      "slides": [
+        46
+      ],
+      "title": "Tuckman’s team stages",
+      "q": "What is the usual teaching sequence in Tuckman’s model?",
+      "correct": "Forming → Storming → Norming → Performing → Adjourning",
+      "distractors": [
+        "Forming → Norming → Storming → Adjourning → Performing",
+        "Storming → Forming → Performing → Norming → Adjourning",
+        "Planning → Executing → Monitoring → Controlling → Closing"
+      ],
+      "answer": "Forming: people get oriented. Storming: differences/conflicts surface. Norming: working agreements develop. Performing: the team works effectively. Adjourning: the team ends or transitions. Real teams can revisit stages; this is not a rigid calendar.",
+      "teach": "Forming: people get oriented.\n\nDisagreement early on does not automatically mean the team is failing. People may be learning how to work together and resolve differences.",
+      "example": "A new team politely meets, disputes responsibilities, agrees on handoffs, works smoothly, and finally wraps up after delivery."
+    },
+    {
+      "id": "464-q014",
+      "number": 14,
+      "section": 1,
+      "slides": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "title": "Project, program, and portfolio",
+      "q": "What distinguishes a program from a portfolio?",
+      "correct": "A program coordinates related work for joint benefits; a portfolio selects work for strategic objectives",
+      "distractors": [
+        "A program is any unrelated list; a portfolio must contain only closely related projects",
+        "A program has no benefits; a portfolio is one temporary task",
+        "The terms differ only by budget size"
+      ],
+      "answer": "A project creates a specific result. A program coordinates related projects and activities to obtain benefits not available separately. A portfolio groups projects, programs, and other work to achieve strategic objectives; its components need not be directly related. A CIO oversees IT strategically. A megaproject is exceptionally large and complex; the slides give typical billion-dollar, multi-year, million-person examples rather than universal cutoffs.",
+      "teach": "A project creates a specific result.\n\nThink of a program as coordinating connected improvements, and a portfolio as choosing the mix of investments worth doing.",
+      "example": "A digital-campus program coordinates identity, enrollment, and student-service projects. An IT portfolio also includes unrelated cybersecurity and infrastructure investments."
+    },
+    {
+      "id": "464-q015",
+      "number": 15,
+      "section": 1,
+      "slides": [
+        54,
+        55
+      ],
+      "title": "Five focus areas",
+      "q": "Which list contains the five PM focus areas shown in your slides?",
+      "correct": "Initiating, Planning, Executing, Monitoring and Controlling, Closing",
+      "distractors": [
+        "Governance, Scope, Schedule, Finance, Risk",
+        "Forming, Storming, Norming, Performing, Adjourning",
+        "Business, Data, Application, Technology, Operations"
+      ],
+      "answer": "Initiating authorizes/starts work. Planning decides how to carry it out. Executing performs it. Monitoring and Controlling measures results and manages adjustments. Closing finishes and transitions work. These activities overlap and may repeat; they are not necessarily five separate product-development phases.",
+      "teach": "Initiating authorizes/starts work.\n\nMonitoring asks where we are. Controlling asks what action is needed when reality differs from the approved plan.",
+      "example": "While a team executes a release, the manager monitors progress and updates plans through the agreed controls."
+    },
+    {
+      "id": "464-q016",
+      "number": 16,
+      "section": 1,
+      "slides": [
+        54,
+        55
+      ],
+      "title": "Seven performance domains",
+      "q": "Which list matches the seven domains in the course’s framework?",
+      "correct": "Governance, Scope, Schedule, Finance, Stakeholders, Resources, Risk",
+      "distractors": [
+        "Initiating, Planning, Executing, Monitoring, Controlling, Closing, Operations",
+        "Integration, Communication, Quality, Procurement, Testing, Coding, Support",
+        "Business, Data, Application, Technology, Transport, Network, Physical"
+      ],
+      "answer": "The seven domains shown are Governance, Scope, Schedule, Finance, Stakeholders, Resources, and Risk. They are connected areas of attention, not an ordered sequence. Governance concerns decision rules; scope the included work; schedule timing; finance money/value; stakeholders affected people; resources people/equipment; risk uncertainty.",
+      "teach": "The seven domains shown are Governance, Scope, Schedule, Finance, Stakeholders, Resources, and Risk.\n\nFocus areas describe kinds of management activity. Domains describe what you are managing. Do not mix this course’s seven-domain list with older editions’ different lists.",
+      "example": "Planning the budget combines the Planning focus area with the Finance domain."
+    },
+    {
+      "id": "464-q017",
+      "number": 17,
+      "section": 1,
+      "slides": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "title": "Choosing a development approach",
+      "q": "When is an adaptive approach especially useful?",
+      "correct": "Requirements are likely to evolve and frequent feedback can improve usable increments",
+      "distractors": [
+        "The result cannot be divided and all requirements must be fixed by contract",
+        "The team wants to avoid planning or stakeholder involvement",
+        "Every project must use it regardless of constraints"
+      ],
+      "answer": "Predictive approaches emphasize early planning when needs are relatively stable. Adaptive approaches use short learning cycles and evolving requirements. Consider uncertainty, delivery frequency, complexity, duration, industry, culture, and organizational capability. The slides group several methods broadly; spiral and prototyping also involve iteration, so do not assume all listed methods are purely linear.",
+      "teach": "Predictive approaches emphasize early planning when needs are relatively stable.\n\nPredictive does not mean knowing everything perfectly. Adaptive does not mean doing whatever you feel like. Both require disciplined planning at an appropriate level.",
+      "example": "A well-understood facility installation may suit a predictive plan. A new app with uncertain user needs may benefit from frequent working versions and feedback."
+    },
+    {
+      "id": "464-q018",
+      "number": 18,
+      "section": 1,
+      "slides": [
+        61,
+        63,
+        68
+      ],
+      "title": "Iterative, incremental, and hybrid",
+      "q": "Which statement correctly distinguishes iterative and incremental work?",
+      "correct": "Iterative refines through repeated cycles; incremental adds usable pieces",
+      "distractors": [
+        "Iterative always means one final delivery; incremental forbids feedback",
+        "Both mean no planning is needed",
+        "Hybrid means changing methods randomly whenever work is difficult"
+      ],
+      "answer": "Iterative work revisits and improves a solution. Incremental work delivers it in pieces. Adaptive work commonly combines both. Hybrid combines approaches deliberately; tailoring means adapting practices to project needs.",
+      "teach": "Iterative work revisits and improves a solution.\n\nRevising the same feature is iteration. Adding a new working feature is an increment. One project can do both.",
+      "example": "Release basic appointment booking, then add reminders as another increment. Refine the booking screen after user testing as an iteration."
+    },
+    {
+      "id": "464-q019",
+      "number": 19,
+      "section": 1,
+      "slides": [
+        62,
+        63,
+        64,
+        65
+      ],
+      "title": "Agile values",
+      "q": "What does Agile favor while still recognizing value in the alternatives?",
+      "correct": "People/interactions, working software, customer collaboration, and responding to change",
+      "distractors": [
+        "Tools over people, documentation over working results, contracts over collaboration, fixed plans over adaptation",
+        "No documentation, no contracts, no tools, and no plans at all",
+        "Only faster coding, regardless of feedback or outcomes"
+      ],
+      "answer": "Agile emphasizes people interacting, working software, customer collaboration, and responding to change. It does not declare tools, documentation, contracts, or plans worthless. Agile is not automatically the best fit for every project; assess the situation and intended value.",
+      "teach": "Agile emphasizes people interacting, working software, customer collaboration, and responding to change.\n\n“Prefer” does not mean “ban the other side.” A regulated project can use Agile while still keeping required records.",
+      "example": "A team shows a working feature to users and adjusts its backlog, while still documenting decisions and meeting contractual obligations."
+    },
+    {
+      "id": "464-q020",
+      "number": 20,
+      "section": 1,
+      "slides": [
+        66,
+        67
+      ],
+      "title": "Scrum fundamentals",
+      "q": "Which description best matches Scrum?",
+      "correct": "A framework using Sprints, inspection, adaptation, and clear accountabilities",
+      "distractors": [
+        "A detailed predictive lifecycle with all tasks fixed before work starts",
+        "A tool that replaces all stakeholder conversations",
+        "A method where the manager assigns every Daily Scrum task"
+      ],
+      "answer": "A Scrum Team includes a Product Owner, Scrum Master, and Developers. The Product Owner is accountable for product value and backlog management; the Scrum Master helps establish Scrum and team effectiveness; Developers create usable increments. Events include the Sprint, Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective.",
+      "teach": "A Scrum Team includes a Product Owner, Scrum Master, and Developers.\n\nA Sprint is a short, fixed-length cycle. Review the product with stakeholders; retrospect on how the team worked. Those are different conversations.",
+      "example": "At the Review, users discuss the new booking feature. At the Retrospective, the team decides how to make testing smoother next Sprint."
+    },
+    {
+      "id": "464-q021",
+      "number": 21,
+      "section": 1,
+      "slides": [
+        67
+      ],
+      "title": "Scrum artifacts and goals",
+      "q": "What connects a Product Backlog, Sprint Backlog, and Increment to their commitments?",
+      "correct": "Product Goal, Sprint Goal, and Definition of Done respectively",
+      "distractors": [
+        "Sprint Goal, Definition of Done, and Product Goal respectively",
+        "Charter, business case, and stakeholder register respectively",
+        "Scope baseline, cost baseline, and portfolio ranking respectively"
+      ],
+      "answer": "The Product Backlog is the ordered work needed to improve the product, with a Product Goal. The Sprint Backlog includes the Sprint Goal, selected work, and an actionable plan. An Increment is usable completed value meeting the Definition of Done.",
+      "teach": "The Product Backlog is the ordered work needed to improve the product, with a Product Goal.\n\nDone is an agreed quality standard, not just “the developer stopped coding.” It allows people to share an understanding of completed work.",
+      "example": "A feature that is coded but has not passed the team’s required tests is not a Done Increment."
+    },
+    {
+      "id": "464-q022",
+      "number": 22,
+      "section": 1,
+      "slides": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      "title": "PM organizations and credentials",
+      "q": "Which distinction between CAPM and PMP is useful for this course?",
+      "correct": "CAPM demonstrates foundational knowledge; PMP recognizes experienced project leadership",
+      "distractors": [
+        "CAPM is only for experienced program directors; PMP requires no experience",
+        "Both are software products rather than credentials",
+        "PMP is a company’s project charter and CAPM is its budget"
+      ],
+      "answer": "PMI means Project Management Institute. CAPM is Certified Associate in Project Management; PMP is Project Management Professional. The slides also name PRINCE2, Scrum.org, SAFe, IPMA, and CompTIA Project+. Certification eligibility, fees, and exam rules can change; use official pages for current requirements.",
+      "teach": "PMI means Project Management Institute.\n\nA credential signals knowledge or experience under a certifying body’s rules. It is not a promise of a salary or job.",
+      "example": "A beginner might study CAPM concepts while gaining project experience; an experienced practitioner may pursue PMP if eligible."
+    },
+    {
+      "id": "464-q023",
+      "number": 23,
+      "section": 2,
+      "slides": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "title": "A systems approach",
+      "q": "Why look beyond the project’s immediate team?",
+      "correct": "A local decision can affect the whole organization and connected systems",
+      "distractors": [
+        "Only the project team’s results matter",
+        "Department goals never conflict with organizational goals",
+        "Technology choices have no effects on people or processes"
+      ],
+      "answer": "A systems approach considers connected people, processes, technology, and organizational goals. Optimize useful organizational outcomes rather than one isolated part. Systems thinking supports strategy because it examines broader consequences.",
+      "teach": "A systems approach considers connected people, processes, technology, and organizational goals.\n\nA system is parts working together. Improving one part can make another part worse if dependencies are ignored.",
+      "example": "A new sales tool increases orders but overwhelms fulfillment. The project must consider downstream capacity, not just sales activity."
+    },
+    {
+      "id": "464-q024",
+      "number": 24,
+      "section": 2,
+      "slides": [
+        9,
+        10
+      ],
+      "title": "Four organizational frames",
+      "q": "Which frame focuses on formal roles and reporting relationships?",
+      "correct": "Structural",
+      "distractors": [
+        "Human resources",
+        "Political",
+        "Symbolic"
+      ],
+      "answer": "Structural: roles, rules, formal authority. Human resources: people’s needs and organizational fit. Political: power, interests, coalitions, and conflict over resources. Symbolic: culture, shared meaning, rituals, and stories. All four provide useful views.",
+      "teach": "An organizational frame is a way of looking at how an organization works: its structure, people, power, or culture.\n\nFormal authority is written in the organization chart. Informal influence may come from relationships, expertise, or shared culture.",
+      "example": "A director can approve resources structurally, but a respected employee may influence whether colleagues accept the change politically or symbolically."
+    },
+    {
+      "id": "464-q025",
+      "number": 25,
+      "section": 2,
+      "slides": [
+        11,
+        12
+      ],
+      "title": "Functional, matrix, and projectized structures",
+      "q": "In a matrix organization, what common reporting challenge may occur?",
+      "correct": "A team member answers to both functional and project managers",
+      "distractors": [
+        "Every team member must have exactly one manager",
+        "The project manager always controls every organizational resource",
+        "Functional managers cannot influence project staffing"
+      ],
+      "answer": "Functional structures organize around specialties and often give PMs limited formal authority. Projectized structures emphasize project teams and stronger PM authority. Matrix structures share authority; weak, balanced, and strong matrices vary in the balance.",
+      "teach": "Functional structures organize around specialties and often give PMs limited formal authority.\n\nA functional manager leads an ongoing specialty such as IT or finance. A project manager coordinates a temporary result crossing those specialties.",
+      "example": "A developer’s engineering manager controls staffing while a project manager coordinates delivery dates, so priorities must be negotiated."
+    },
+    {
+      "id": "464-q026",
+      "number": 26,
+      "section": 2,
+      "slides": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "title": "IT alignment and governance",
+      "q": "How do IT alignment and IT governance differ?",
+      "correct": "Alignment connects IT to business goals; governance establishes decision and oversight arrangements",
+      "distractors": [
+        "Alignment means buying matching computers; governance means writing code",
+        "Governance is the project’s daily task list; alignment is its final report",
+        "They both mean choosing the largest technology budget"
+      ],
+      "answer": "IT alignment means technology supports business mission and objectives. IT governance assigns decision rights, accountability, policies, and oversight to sustain that alignment. Strategic planning, feedback, and benefit evaluation guide project selection and adjustment.",
+      "teach": "IT alignment means technology supports business mission and objectives.\n\nDecision rights mean who is allowed to decide. Oversight checks that decisions and results serve the intended goals.",
+      "example": "A committee prioritizes a security project because it supports service reliability, and checks benefits rather than merely approving spending."
+    },
+    {
+      "id": "464-q027",
+      "number": 27,
+      "section": 2,
+      "slides": [
+        13
+      ],
+      "title": "Traditional planning sequence",
+      "q": "Which order matches the planning pyramid in the slides?",
+      "correct": "Strategic plan → department needs → project proposals → resource allocation",
+      "distractors": [
+        "Resource allocation → project proposals → strategic plan → department needs",
+        "Project proposals → purchases → department needs → strategic plan",
+        "Department needs → random spending → strategic plan → project proposals"
+      ],
+      "answer": "Senior executives develop strategy. Department managers analyze needs. Managers and stakeholders propose projects. Authorized decision makers allocate resources to selected projects. Feedback can lead to revisions; this is a simplified planning structure.",
+      "teach": "Senior executives develop strategy.\n\nA proposal is a suggested project. Allocation means assigning limited people, money, or equipment to chosen work.",
+      "example": "A university prioritizes retention, identifies advising needs, evaluates advising-app proposals, and funds the most suitable work."
+    },
+    {
+      "id": "464-q028",
+      "number": 28,
+      "section": 2,
+      "slides": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "title": "SWOT and selection methods",
+      "q": "Which SWOT categories describe conditions outside the organization?",
+      "correct": "Opportunities and threats",
+      "distractors": [
+        "Strengths and weaknesses",
+        "Strengths and opportunities",
+        "Weaknesses and strengths only"
+      ],
+      "answer": "SWOT means Strengths, Weaknesses, Opportunities, and Threats. Strengths and weaknesses are internal; opportunities and threats are external. Selection can also use strategic fit, needs/opportunities/directives, urgency, financial analysis, weighted scoring, and organizational willingness/capacity.",
+      "teach": "SWOT means Strengths, Weaknesses, Opportunities, and Threats.\n\nInternal means within the organization, such as staff skills. External means in its environment, such as a new competitor or regulation.",
+      "example": "A skilled development team is a strength. A competitor launching a similar service is a threat."
+    },
+    {
+      "id": "464-q029",
+      "number": 29,
+      "section": 2,
+      "slides": [
+        22,
+        23
+      ],
+      "title": "Balanced scorecard",
+      "q": "What is a balanced scorecard intended to do?",
+      "correct": "Connect strategy to measures across financial, customer, internal-process, and learning/growth perspectives",
+      "distractors": [
+        "Rank products using only a weighted sum of features",
+        "Measure only short-term profit",
+        "Guarantee every strategic goal has the same numerical weight"
+      ],
+      "answer": "A balanced scorecard translates strategy into objectives and measures across multiple perspectives. The common perspectives are financial, customer, internal processes, and learning/growth. A strategy map illustrates relationships among objectives. It differs from a weighted project ranking.",
+      "teach": "A balanced scorecard translates strategy into objectives and measures across multiple perspectives.\n\nBalanced means considering multiple views of success. Financial results alone may miss customer problems or the capability needed for future results.",
+      "example": "A service project tracks cost, customer satisfaction, processing time, and staff capability instead of judging success only by spending."
+    },
+    {
+      "id": "464-q030",
+      "number": 30,
+      "section": 2,
+      "slides": [
+        24,
+        25
+      ],
+      "title": "Weighted scoring",
+      "q": "How is a weighted project score calculated?",
+      "correct": "Multiply each criterion’s score by its weight, then add the products",
+      "distractors": [
+        "Add weights and scores without multiplying",
+        "Multiply only the largest score by all weights",
+        "Choose the highest score on any one criterion"
+      ],
+      "answer": "Choose relevant criteria, assign weights summing to 1 or 100%, use a consistent scoring scale, multiply each weight by its score, and sum. The slide example uses weights 0.10, 0.60, 0.30 and scores 1, 10, 5: total 7.6. Apply eligibility requirements before ranking.",
+      "teach": "Choose relevant criteria, assign weights summing to 1 or 100%, use a consistent scoring scale, multiply each weight by its score, and sum.\n\nA weight shows importance. A high score on a less important criterion contributes less than the same score on a more important criterion.",
+      "example": "0.10 × 1 = 0.10; 0.60 × 10 = 6; 0.30 × 5 = 1.5. Add them: 7.6. The course tool exercise first requires free student access, Agile suitability, and Kanban boards."
+    },
+    {
+      "id": "464-q031",
+      "number": 31,
+      "section": 2,
+      "slides": [
+        26,
+        28,
+        29
+      ],
+      "title": "Discounting and present value",
+      "q": "Why discount a future cash flow?",
+      "correct": "To express future money in today’s value using a stated rate and time",
+      "distractors": [
+        "To make every future cost equal to zero",
+        "To treat future benefits as larger than identical immediate benefits at a positive rate",
+        "To replace all uncertainty with a guaranteed result"
+      ],
+      "answer": "Present value PV = cash flow / (1 + r)^t, where r is the discount rate as a decimal and t is periods from the present. A time-zero cash flow is not discounted. State cash-flow timing and use consistent periods.",
+      "teach": "Present value asks what a future payment or benefit is worth today, using a chosen comparison rate.\n\nAt a positive discount rate, money received later is worth less today. Discounting is a comparison technique, not a prediction that the money will disappear.",
+      "example": "At 10%, $110 received after one year has PV = 110 / 1.10 = $100. For t = 0, the denominator is 1."
+    },
+    {
+      "id": "464-q032",
+      "number": 32,
+      "section": 2,
+      "slides": [
+        26,
+        28,
+        29,
+        30,
+        31
+      ],
+      "title": "Net present value",
+      "q": "What is NPV?",
+      "correct": "The sum of discounted benefits minus discounted costs",
+      "distractors": [
+        "Total benefits divided by total costs with no subtraction",
+        "The time when cumulative benefits first exceed costs",
+        "The discount rate that sets NPV to zero"
+      ],
+      "answer": "Net Present Value is the sum of net cash flows discounted to the present: Σ(Bt − Ct)/(1+r)^t. Positive NPV indicates benefits exceed costs in present-value terms under the assumptions. For comparable alternatives judged only by NPV, higher is better.",
+      "teach": "Net present value compares money received with money spent after putting both in today’s money terms.\n\nNet means after subtracting costs. Present means values are expressed at a common time. Value is a money amount, not a percentage.",
+      "example": "The slide’s selection question gives A = $10k, B = $20k, C = $30k. Choose C if NPV is the selection criterion; the NPVs are already calculated."
+    },
+    {
+      "id": "464-q033",
+      "number": 33,
+      "section": 2,
+      "slides": [
+        26,
+        28,
+        29
+      ],
+      "title": "Return on investment",
+      "q": "Which formula gives ROI when using discounted benefits and costs?",
+      "correct": "(PV benefits − PV costs) / PV costs × 100%",
+      "distractors": [
+        "PV benefits / PV costs × 100% with no cost subtraction",
+        "(PV costs − PV benefits) / PV benefits × 100%",
+        "The sum of yearly discount rates"
+      ],
+      "answer": "ROI measures net return relative to cost. The slide’s worked figure uses discounted amounts: ROI = (PV benefits − PV costs)/PV costs × 100%. A simple undiscounted ROI uses raw totals instead. Label which method you use; do not mix discounted and undiscounted values.",
+      "teach": "ROI measures net return relative to cost.\n\nNPV is a money amount. ROI is a ratio expressed as a percentage of investment cost. The denominator matters.",
+      "example": "PV benefits $150,000 and PV costs $100,000 give NPV $50,000 and discounted ROI 50%, not 150%."
+    },
+    {
+      "id": "464-q034",
+      "number": 34,
+      "section": 2,
+      "slides": [
+        27,
+        28,
+        29
+      ],
+      "title": "Payback and IRR",
+      "q": "What does a payback period measure?",
+      "correct": "How long cumulative benefits take to recover cumulative costs",
+      "distractors": [
+        "The total percentage return over the project",
+        "The discount rate making NPV zero",
+        "The largest yearly benefit before costs"
+      ],
+      "answer": "Payback is the point when cumulative net cash flow reaches zero. State whether cash flows are discounted. Earlier payback generally means quicker recovery, but ignores later benefits if used alone. IRR is the discount rate at which NPV equals zero. Rankings can conflict, so real selection also considers scale, timing, risks, and strategy.",
+      "teach": "Payback is the point when cumulative net cash flow reaches zero.\n\nCumulative means added up over time. A project may have a good year and still not have recovered its earlier investment.",
+      "example": "Spend $100 at time zero and receive net $40 each year. After two years $80 has been recovered; with evenly earned cash flows, payback is 2.5 years."
+    },
+    {
+      "id": "464-q035",
+      "number": 35,
+      "section": 2,
+      "slides": [
+        28
+      ],
+      "title": "The four-year financial exercise",
+      "q": "What do the undiscounted totals in the slide 28 exercise imply?",
+      "correct": "Benefits $360,000 and costs $420,000 leave a $60,000 shortfall over the four years",
+      "distractors": [
+        "Benefits exceed costs by $60,000",
+        "Payback occurs during Year 2",
+        "The totals alone prove a positive NPV at 7%"
+      ],
+      "answer": "The exercise lists costs of $300,000 in Y1 and $40,000 in each of Y2–Y4; benefits are $0 in Y1 and $120,000 in each of Y2–Y4. Raw costs total $420,000 and benefits $360,000. Simple ROI is −14.29%; no raw payback occurs within these four years. At 7%, discounting later benefits also gives a negative NPV. Exact NPV depends on whether the first listed year is time zero or year-end one; the lab shows both conventions.",
+      "teach": "This example compares four years of project costs with four years of benefits.\n\nDo not invent benefits after Year 4. A negative financial result can prompt rejection or redesign; nonfinancial requirements may also affect the decision.",
+      "example": "Raw cumulative net flows are −300k, −220k, −140k, −60k. They never reach zero within the stated horizon."
+    },
+    {
+      "id": "464-q036",
+      "number": 36,
+      "section": 2,
+      "slides": [
+        32,
+        33,
+        34,
+        42
+      ],
+      "title": "Gate reviews and strategic importance",
+      "q": "Why can stopping a project at a gate review be a good decision?",
+      "correct": "New evidence may show its future value no longer justifies further investment",
+      "distractors": [
+        "Money already spent must always be recovered by spending more",
+        "A project should stop whenever any uncertainty exists",
+        "The original business case can never change"
+      ],
+      "answer": "A gate review or kill point is an authorized checkpoint for continuing, redirecting, pausing, or stopping work. Reassess benefits, costs, feasibility, risk, and strategic relevance. Sunk costs are already spent; they should not alone justify further spending.",
+      "teach": "A gate review or kill point is an authorized checkpoint for continuing, redirecting, pausing, or stopping work.\n\nA well-executed unimportant project may create less value than a moderately successful important one. Selection and continuation both need a value perspective.",
+      "example": "A new regulation makes a planned service unusable. A gate review can prevent spending the remaining budget on a result nobody can use."
+    },
+    {
+      "id": "464-q037",
+      "number": 37,
+      "section": 2,
+      "slides": [
+        35,
+        36,
+        37,
+        38
+      ],
+      "title": "Virtual teams, globalization, and assumptions",
+      "q": "What helps a virtual international team avoid hidden misunderstanding?",
+      "correct": "Confirm meanings and decisions explicitly while accommodating time zones and communication needs",
+      "distractors": [
+        "Assume a quick verbal agreement proves everyone shares the same meaning",
+        "Require everyone to use the same local working hours without discussion",
+        "Replace all direct conversation with long status documents"
+      ],
+      "answer": "Virtual teams collaborate across locations, often with more staffing flexibility and less travel. Challenges include limited physical interaction, connectivity, time zones, language, culture, and trust. The slides’ “aggressive agreement” example warns that people can agree verbally while interpreting the situation differently.",
+      "teach": "Virtual teams collaborate across locations, often with more staffing flexibility and less travel.\n\nAgreement is useful only if people mean the same thing. Ask for an example or restatement when a term or decision could be ambiguous.",
+      "example": "“Finish Friday” may mean Friday morning in one time zone or Friday night in another. Agree on an exact delivery time and acceptance criteria."
+    },
+    {
+      "id": "464-q038",
+      "number": 38,
+      "section": 2,
+      "slides": [
+        39,
+        40,
+        41
+      ],
+      "title": "IT complexity and outsourcing",
+      "q": "Why can IT projects be difficult even when no physical construction is involved?",
+      "correct": "Changing requirements, hidden dependencies, specialized skills, and evolving technology create uncertainty",
+      "distractors": [
+        "Digital products never depend on existing systems",
+        "Outsourcing transfers all accountability to the vendor",
+        "Software requirements are always fully known before work begins"
+      ],
+      "answer": "IT projects can be diverse, dynamic, intangible, layered, and learned as work progresses. Outsourcing obtains work or services from an external provider; contractors may supply specialist skills. It introduces coordination, dependency, contract, security, and knowledge-transfer needs.",
+      "teach": "IT projects can be diverse, dynamic, intangible, layered, and learned as work progresses.\n\nIntangible means difficult to see or touch, such as software behavior. Outsourcing changes who performs work; the organization still needs to manage the outcome.",
+      "example": "A vendor builds a feature that works alone but fails with the campus identity system. Integration requirements and joint testing were essential."
+    },
+    {
+      "id": "464-q039",
+      "number": 39,
+      "section": 3,
+      "slides": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "title": "Project and product life cycles",
+      "q": "Which statement distinguishes project and product life cycles?",
+      "correct": "A project runs from start to closure; a product may continue through use, growth, maintenance, and retirement",
+      "distractors": [
+        "Both must begin and end on the same date",
+        "A product life cycle is only the coding phase",
+        "A project life cycle continues forever after handover"
+      ],
+      "answer": "A project life cycle is the phases/activities from start to finish. A product life cycle covers the product’s longer existence, often including introduction, growth, maturity, and retirement. Multiple projects can create, improve, or retire one product. A development approach describes how the result is created; cadence is the rhythm of work or delivery.",
+      "teach": "A project life cycle is the phases/activities from start to finish.\n\nEnding the implementation project does not mean shutting down the delivered system. Ongoing operations usually maintain it.",
+      "example": "A one-year project launches a student portal. The portal stays in service for years, with later projects adding features or replacing it."
+    },
+    {
+      "id": "464-q040",
+      "number": 40,
+      "section": 3,
+      "slides": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "title": "Project Management Office",
+      "q": "What is a PMO’s central purpose?",
+      "correct": "Support effective project management and consistent organizational practices",
+      "distractors": [
+        "Personally perform every task on every project",
+        "Replace each project’s sponsor and business justification",
+        "Only record employee attendance"
+      ],
+      "answer": "A Project Management Office supports project goals with methods, templates, reporting, governance, resource/tool sharing, initiation/planning support, and strategic coordination. PMOs vary in authority. The survey numbers in the slides describe a particular study, not requirements every PMO must meet.",
+      "teach": "A Project Management Office, or PMO, is a group that helps an organization manage its projects consistently.\n\nA template is a reusable starting structure for a document. Standard practices help teams avoid reinventing basic processes each time.",
+      "example": "The PMO supplies a charter template and helps compare portfolio progress; the individual PM still coordinates delivery of the project."
+    },
+    {
+      "id": "464-q041",
+      "number": 41,
+      "section": 3,
+      "slides": [
+        11,
+        12
+      ],
+      "title": "Baselines",
+      "q": "What is a project baseline used for?",
+      "correct": "Compare actual performance with an approved reference plan",
+      "distractors": [
+        "Replace the actual results with planned values",
+        "Freeze all future learning and prohibit approved changes",
+        "Show only the latest informal estimate with no approval history"
+      ],
+      "answer": "A baseline is an approved version of a plan used as a reference. Scope, schedule, and cost baselines let teams compare actual work with expectations. Baselines can be changed through authorized change control, not quietly rewritten to hide variance.",
+      "teach": "A baseline is an approved version of a plan used as a reference.\n\nVariance means a difference between planned and actual performance. A changing forecast and the approved baseline have different jobs.",
+      "example": "The baseline says a task finishes May 10; actual finish is May 15. The five-day difference remains visible even if a new forecast is issued."
+    },
+    {
+      "id": "464-q042",
+      "number": 42,
+      "section": 3,
+      "slides": [
+        13,
+        14,
+        15
+      ],
+      "title": "Business case",
+      "q": "What question does a business case primarily answer?",
+      "correct": "Why should the organization invest in this project?",
+      "distractors": [
+        "Who has formally authorized the project manager?",
+        "What exact task will every person perform tomorrow?",
+        "Which changes have already been approved by the CCB?"
+      ],
+      "answer": "A business case explains need and value. The slides list background, objectives, current problem/opportunity, assumptions/constraints, options and recommendation, preliminary requirements, budget/financial analysis, schedule estimate, and risks. It guides decisions initially and helps reassess value during and after work.",
+      "teach": "A business case explains need and value.\n\nAn assumption is something treated as true for planning but needing validation. A constraint is a limit such as a required date or budget cap.",
+      "example": "A portal proposal compares improving the existing system with replacing it, estimating costs, expected benefits, risks, and the reason for the recommendation."
+    },
+    {
+      "id": "464-q043",
+      "number": 43,
+      "section": 3,
+      "slides": [
+        16
+      ],
+      "title": "Project charter",
+      "q": "What does a project charter do?",
+      "correct": "Formally authorizes the project and establishes high-level authority and commitments",
+      "distractors": [
+        "Provides every detailed work instruction before approval",
+        "Only lists possible benefits without authorization",
+        "Only records the final lessons learned"
+      ],
+      "answer": "The charter formally recognizes/authorizes the project, identifies high-level objectives and boundaries, and gives the PM authority to apply resources under organizational rules. An authorized sponsor/decision maker signs it. The business case justifies; the charter authorizes.",
+      "teach": "A project charter is the document that officially gives a project permission to begin and gives its manager authority.\n\nAuthorization means official permission to proceed, not an informal idea discussed in a meeting. The charter is not the complete detailed plan.",
+      "example": "After reviewing the business case, the sponsor signs a charter stating the portal’s goals, high-level scope, budget expectations, and responsible manager."
+    },
+    {
+      "id": "464-q044",
+      "number": 44,
+      "section": 3,
+      "slides": [
+        17
+      ],
+      "title": "Project management plan",
+      "q": "How does the PM plan differ from the business case and charter?",
+      "correct": "It explains how the authorized project will be executed, monitored, controlled, and closed",
+      "distractors": [
+        "It only explains why investment might be worthwhile",
+        "It only grants initial authority and nothing more",
+        "It is a permanent record that cannot be updated"
+      ],
+      "answer": "The project management plan integrates how work will be managed and provides approved baselines and subsidiary plans. It guides execution, monitoring/control, and closure. It evolves under appropriate controls. Organizations may provide templates and repositories.",
+      "teach": "A project management plan explains how the team will carry out, check, adjust, and finish the project.\n\nA repository is a shared place where approved documents are kept. A plan that changes must still have clear versions and approvals.",
+      "example": "The plan explains scheduling, staffing, quality checks, communications, risk responses, and how a change request will be handled."
+    },
+    {
+      "id": "464-q045",
+      "number": 45,
+      "section": 3,
+      "slides": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "title": "Identifying stakeholders",
+      "q": "Does a resistant external user count as a stakeholder?",
+      "correct": "Yes; impact and influence matter, not only support or employment",
+      "distractors": [
+        "No; only supportive employees count",
+        "No; external people belong outside stakeholder analysis",
+        "Only if the person supplies project funding"
+      ],
+      "answer": "Identify people and groups who affect or are affected by work, including those who resist. Internal/external refers to the organization, not merely membership on the project team. Revisit identification as work changes. Engagement is meaningful involvement and interaction, not just sending a notice.",
+      "teach": "Identify people and groups who affect or are affected by work, including those who resist.\n\nA stakeholder can have low formal power yet face a large impact. Treating that person fairly still matters.",
+      "example": "Patients are external stakeholders in a hospital record-system project even when they are not on the project team."
+    },
+    {
+      "id": "464-q046",
+      "number": 46,
+      "section": 3,
+      "slides": [
+        22
+      ],
+      "title": "Stakeholder register",
+      "q": "What belongs in a stakeholder register?",
+      "correct": "Identity, requirements/expectations, influence, relevant phases, and classification",
+      "distractors": [
+        "Only the schedule’s critical path",
+        "Only approved change requests and version numbers",
+        "Only software license prices"
+      ],
+      "answer": "A stakeholder register records who stakeholders are and relevant assessments: contact/role information, requirements and expectations, influence, timing of interest, and classifications such as internal/external or supportive/resistant. Handle sensitive assessments appropriately.",
+      "teach": "A stakeholder register records who stakeholders are and relevant assessments: contact/role information, requirements and expectations, influence, timing of interest, and classifications such as internal/external or supportive/resistant.\n\nThe register is a structured list and assessment. It is a precursor to deciding how to engage each stakeholder.",
+      "example": "A row identifies the accessibility office, its required review, influence, and the testing phase when involvement is crucial."
+    },
+    {
+      "id": "464-q047",
+      "number": 47,
+      "section": 3,
+      "slides": [
+        23,
+        24
+      ],
+      "title": "Stakeholder engagement plan",
+      "q": "What does the engagement plan add beyond the stakeholder register?",
+      "correct": "Strategies to move from current to desired engagement and meet communication needs",
+      "distractors": [
+        "Only another list of the same names",
+        "Only the project’s authorization signature",
+        "Only the final product test results"
+      ],
+      "answer": "The engagement plan describes current and desired engagement, stakeholder relationships, communication requirements, engagement strategies, and how the plan will be updated. Categories in the slides are unaware, resistant, neutral, supportive, and leading. They describe engagement, not a person’s worth or ethical importance.",
+      "teach": "The engagement plan describes current and desired engagement, stakeholder relationships, communication requirements, engagement strategies, and how the plan will be updated.\n\nA resistant person may have a valid concern. Engagement involves understanding and addressing it rather than just persuading them to stop objecting.",
+      "example": "A user group resists because training is missing. The team offers a pilot and training, then checks whether confidence improves."
+    },
+    {
+      "id": "464-q048",
+      "number": 48,
+      "section": 3,
+      "slides": [
+        24,
+        25
+      ],
+      "title": "Power and interest",
+      "q": "What do power and interest measure on a stakeholder grid?",
+      "correct": "Ability to influence decisions and degree of concern about the project",
+      "distractors": [
+        "Job title and number of years employed only",
+        "Support for the project and technical skill only",
+        "Budget size and the number of team meetings"
+      ],
+      "answer": "Power concerns authority/influence. Interest concerns attention or concern about the project. High power/high interest: manage closely. High power/low interest: keep satisfied. Low power/high interest: keep informed. Low power/low interest: monitor appropriately. Reassess as circumstances change.",
+      "teach": "Power concerns authority/influence.\n\nInterest is not the same as agreement. Someone who strongly opposes the project may be highly interested.",
+      "example": "A sponsor actively following outcomes needs close management. A highly affected student group may need clear frequent updates even without budget authority."
+    },
+    {
+      "id": "464-q049",
+      "number": 49,
+      "section": 3,
+      "slides": [
+        26
+      ],
+      "title": "Expectations management matrix",
+      "q": "What is an expectations management matrix for?",
+      "correct": "Make major stakeholder expectations and priorities explicit and plan how to address them",
+      "distractors": [
+        "Replace all individual requirements with one average score",
+        "Rank stakeholders by personal likability",
+        "Record only the names of vendors"
+      ],
+      "answer": "An expectations management matrix is a table of important expectations, priorities, and management approaches. It helps stakeholders discuss trade-offs, especially around scope, time, cost, and quality, rather than assuming every expectation can be maximized.",
+      "teach": "An expectations management matrix is a table of important expectations, priorities, and management approaches.\n\nA priority is what matters most when choices conflict. Making it explicit prevents surprise later.",
+      "example": "A sponsor values the launch deadline most; users value accessibility. Discuss what is mandatory and what can be phased instead of silently cutting quality."
+    },
+    {
+      "id": "464-q050",
+      "number": 50,
+      "section": 3,
+      "slides": [
+        27
+      ],
+      "title": "Kickoff meeting",
+      "q": "What should a kickoff meeting achieve?",
+      "correct": "Align participants on goals, roles, plans, communication, and change handling",
+      "distractors": [
+        "Serve as the only stakeholder meeting for the whole project",
+        "Replace the approved charter with informal conversation",
+        "Approve every future change before its impact is known"
+      ],
+      "answer": "A kickoff introduces participants and establishes a shared understanding of objectives, scope, roles, major milestones, communications, risks, immediate next steps, and change-control procedures. The exact agenda should fit the project.",
+      "teach": "A kickoff introduces participants and establishes a shared understanding of objectives, scope, roles, major milestones, communications, risks, immediate next steps, and change-control procedures.\n\nKickoff means starting coordinated work with everyone understanding what is being attempted and how they will work together.",
+      "example": "A project begins by confirming who owns testing, how issues are raised, and how requests to add features will be reviewed."
+    },
+    {
+      "id": "464-q051",
+      "number": 51,
+      "section": 3,
+      "slides": [
+        28,
+        29,
+        30
+      ],
+      "title": "Integrated change control",
+      "q": "Why assess a change across the whole project?",
+      "correct": "A change to one area can alter scope, schedule, cost, quality, resources, and risk elsewhere",
+      "distractors": [
+        "Changes affect only the person who requested them",
+        "Every change is harmful and must be rejected",
+        "A verbal request automatically updates the approved baseline"
+      ],
+      "answer": "Integrated change control examines connected impacts and uses authorized decisions. The slides emphasize influencing factors so changes are beneficial, determining/communicating whether change occurred, and managing changes as they occur. Not all change is bad; uncontrolled change is the problem.",
+      "teach": "Integrated change control examines connected impacts and uses authorized decisions.\n\nIntegrated means looking at the combined effects, not approving a feature without considering testing, staffing, or delivery impact.",
+      "example": "Adding a login method may help users but needs security review, development, testing, training, and schedule updates."
+    },
+    {
+      "id": "464-q052",
+      "number": 52,
+      "section": 3,
+      "slides": [
+        31
+      ],
+      "title": "Change control system and CCB",
+      "q": "What is the Change Control Board’s role?",
+      "correct": "Approve, reject, or otherwise decide proposed changes under its assigned authority",
+      "distractors": [
+        "Implement every request without assessing impact",
+        "Replace the project team in all technical work",
+        "Record only stakeholder contact details"
+      ],
+      "answer": "A change control system defines how changes are requested, assessed, decided, documented, and communicated. A Change Control Board (CCB) is the designated group with decision authority under that system. Approved changes lead to controlled updates to relevant plans/baselines and work.",
+      "teach": "A change control system defines how changes are requested, assessed, decided, documented, and communicated.\n\nA request is not yet approval. Documenting the decision lets everyone work from the same authorized version.",
+      "example": "A feature request is logged, analyzed, submitted to the authorized board, and then either incorporated with approved updates or rejected with a recorded reason."
+    },
+    {
+      "id": "464-q053",
+      "number": 53,
+      "section": 3,
+      "slides": [
+        32
+      ],
+      "title": "Configuration management",
+      "q": "What does configuration management help maintain?",
+      "correct": "Consistent identification, versions, status, and conformance of products and their specifications",
+      "distractors": [
+        "Only the project’s initial financial justification",
+        "Only the team’s vacation schedule",
+        "A permanent ban on all product changes"
+      ],
+      "answer": "Configuration management identifies and controls product characteristics and versions, records/report changes, and checks conformance with requirements. Integrated change control makes coordinated decisions; configuration management helps keep the resulting product and records consistent.",
+      "teach": "Configuration management identifies and controls product characteristics and versions, records/report changes, and checks conformance with requirements.\n\nA version is a specific state of an item. If testers and developers use different versions, results may be misleading.",
+      "example": "An audit checks that the deployed release matches the approved design and that its documentation and test evidence refer to the same release."
+    },
+    {
+      "id": "464-q054",
+      "number": 54,
+      "section": 3,
+      "slides": [
+        33
+      ],
+      "title": "Participation in planning",
+      "q": "Why should the people doing the work help plan it?",
+      "correct": "They provide practical knowledge of tasks, dependencies, effort, and risks",
+      "distractors": [
+        "Their participation removes the need for a sponsor",
+        "Only managers know how long specialist tasks take",
+        "It guarantees the plan will never need changes"
+      ],
+      "answer": "Involving those who will perform work improves estimates, reveals dependencies and risks, and strengthens ownership. The PM coordinates that input with organizational goals and constraints. Participation does not eliminate accountability or uncertainty.",
+      "teach": "Involving those who will perform work improves estimates, reveals dependencies and risks, and strengthens ownership.\n\nA dependency means one piece of work relies on another. Practitioners often see dependencies that a high-level planner misses.",
+      "example": "The testing team explains that test accounts must be created before integration testing can begin, so the schedule includes that preparation."
+    },
+    {
+      "id": "464-q055",
+      "number": 55,
+      "section": 10,
+      "slides": [
+        2,
+        3,
+        4
+      ],
+      "title": "PMI ethics",
+      "q": "Which values underpin PMI’s Code of Ethics and Professional Conduct?",
+      "correct": "Responsibility, respect, fairness, and honesty",
+      "distractors": [
+        "Speed, profit, obedience, and competition",
+        "Scope, schedule, cost, and quality",
+        "Initiating, planning, executing, and closing"
+      ],
+      "answer": "PMI’s code guides professional conduct around responsibility, respect, fairness, and honesty. It includes aspirational standards and mandatory requirements. Ethical judgment applies to people, resources, information, and technology use, including AI. The official code is linked in Sources.",
+      "teach": "PMI’s code guides professional conduct around responsibility, respect, fairness, and honesty.\n\nEthics concerns what you should do, not merely what a tool allows. A convenient action can still mislead or unfairly harm someone.",
+      "example": "A PM discloses a conflict of interest and reports a real schedule risk instead of hiding it to protect appearances."
+    },
+    {
+      "id": "464-q056",
+      "number": 56,
+      "section": 10,
+      "slides": [
+        5,
+        6
+      ],
+      "title": "Machine learning and deep learning",
+      "q": "How are machine learning and deep learning related?",
+      "correct": "Deep learning is a subset of machine learning using multi-layer neural networks",
+      "distractors": [
+        "Machine learning is a subset of deep learning only",
+        "Deep learning means any software with a database",
+        "Both require a human to write a separate rule for every example"
+      ],
+      "answer": "Machine learning learns patterns from data for tasks such as prediction or classification. Deep learning is a subset using neural networks with multiple layers. NLP means Natural Language Processing: methods for handling human language. These categories overlap with other AI capabilities.",
+      "teach": "Machine learning learns patterns from data for tasks such as prediction or classification.\n\nTraining means adjusting a model using examples. Prediction means applying learned patterns to new input; it is not a guarantee of truth.",
+      "example": "A spam filter learns from labeled messages. A language-processing model may use deep learning to classify or generate text."
+    },
+    {
+      "id": "464-q057",
+      "number": 57,
+      "section": 10,
+      "slides": [
+        7
+      ],
+      "title": "Generative AI and LLMs",
+      "q": "What distinguishes a generative AI system?",
+      "correct": "It produces content such as text, images, audio, or code based on learned patterns",
+      "distractors": [
+        "It can only classify input into fixed labels",
+        "It guarantees every generated fact is correct",
+        "It must act autonomously without a user prompt"
+      ],
+      "answer": "Generative AI produces content. A Large Language Model (LLM) is a model trained on large amounts of language-related data and commonly used to process/generate text. Fluent output can be incorrect. These models do more than literal copying, but can also reproduce memorized material.",
+      "teach": "Generative AI produces content.\n\nA convincing sentence is not evidence. Check names, numbers, reasoning, and sources before using generated material.",
+      "example": "An LLM drafts a status report; the PM checks its dates and claims against actual project records before sharing it."
+    },
+    {
+      "id": "464-q058",
+      "number": 58,
+      "section": 10,
+      "slides": [
+        7,
+        8
+      ],
+      "title": "Generative versus agentic AI",
+      "q": "What is the central emphasis of agentic AI?",
+      "correct": "Pursue a goal by choosing and carrying out steps within its permissions",
+      "distractors": [
+        "Only generate one piece of content for each prompt",
+        "Always operate with unlimited permissions",
+        "Eliminate the need for human accountability"
+      ],
+      "answer": "Generative AI emphasizes creating content from input. Agentic AI emphasizes goal-directed action, such as selecting steps and using tools. An agent may use an LLM, but not every agent must be an LLM. Autonomy is the degree of independent action allowed.",
+      "teach": "Generative AI emphasizes creating content from input.\n\nGenerating a draft and sending it are different actions. Tool access and permission boundaries determine what an agent can actually do.",
+      "example": "A drafting assistant suggests an email. An agent with appropriate authorization may also look up a task, prepare the email, and route it for approval."
+    },
+    {
+      "id": "464-q059",
+      "number": 59,
+      "section": 10,
+      "slides": [
+        9,
+        10
+      ],
+      "title": "Simple reflex agent",
+      "q": "Which agent acts using fixed condition–action rules based on the current input?",
+      "correct": "Simple reflex agent",
+      "distractors": [
+        "Model-based reflex agent",
+        "Utility-based agent",
+        "Learning agent"
+      ],
+      "answer": "A simple reflex agent selects actions from fixed rules based on the current observation. It does not need a stored model of previous states to make that choice.",
+      "teach": "A simple reflex agent selects actions from fixed rules based on the current observation.\n\nA condition is an “if.” An action is the “then.” The rule can work well in a simple predictable environment.",
+      "example": "If a temperature sensor reads below a threshold, switch the heater on."
+    },
+    {
+      "id": "464-q060",
+      "number": 60,
+      "section": 10,
+      "slides": [
+        9,
+        11
+      ],
+      "title": "Model-based reflex agent",
+      "q": "What distinguishes a model-based reflex agent?",
+      "correct": "It maintains an internal representation of the environment to handle incomplete observations",
+      "distractors": [
+        "It must improve its rules automatically through learning",
+        "It chooses only from the current sensor reading with no state",
+        "It always maximizes a numerical utility score"
+      ],
+      "answer": "A model-based reflex agent uses internal state and a model of how the environment changes. The slide says it can learn, but the defining distinction is the internal model; learning is a separate capability and is not required of every model-based agent.",
+      "teach": "A model-based reflex agent uses internal state and a model of how the environment changes.\n\nInternal state is remembered information about what may be happening beyond the current observation.",
+      "example": "A robot remembers which rooms it has already visited even when it cannot currently see them."
+    },
+    {
+      "id": "464-q061",
+      "number": 61,
+      "section": 10,
+      "slides": [
+        9,
+        12
+      ],
+      "title": "Goal-based agent",
+      "q": "What makes an agent goal-based?",
+      "correct": "It evaluates actions according to whether they help reach a specified goal",
+      "distractors": [
+        "It follows only a current-input rule without considering an outcome",
+        "It must always learn new rules from feedback",
+        "It ranks every outcome by utility but needs no goal"
+      ],
+      "answer": "A goal-based agent chooses actions that help reach a desired state. It can compare possible paths rather than merely react to the latest input.",
+      "teach": "A goal-based agent chooses actions that help reach a desired state.\n\nA goal says what should be achieved. Planning chooses a path toward that goal.",
+      "example": "A route-planning agent chooses roads that can reach the destination rather than simply taking the first available turn."
+    },
+    {
+      "id": "464-q062",
+      "number": 62,
+      "section": 10,
+      "slides": [
+        9,
+        13
+      ],
+      "title": "Utility-based agent",
+      "q": "What does utility add beyond simply reaching a goal?",
+      "correct": "A way to compare how desirable different outcomes or trade-offs are",
+      "distractors": [
+        "A guarantee that every outcome is risk-free",
+        "A rule that the first feasible action must be chosen",
+        "A requirement to ignore cost and time"
+      ],
+      "answer": "A utility-based agent compares outcomes using a measure of desirability and seeks the better option under its model. It can trade off factors such as speed, cost, and risk. Utility means value according to the defined measure, not moral correctness.",
+      "teach": "A utility-based agent compares outcomes using a measure of desirability and seeks the better option under its model.\n\nTwo routes can both reach the same destination. A utility measure helps choose between them based on preferences.",
+      "example": "A delivery agent weighs arrival time, fuel cost, and reliability instead of considering every successful route equally good."
+    },
+    {
+      "id": "464-q063",
+      "number": 63,
+      "section": 10,
+      "slides": [
+        9,
+        14
+      ],
+      "title": "Learning agent",
+      "q": "What distinguishes a learning agent?",
+      "correct": "It improves its behavior using experience or feedback",
+      "distractors": [
+        "It keeps every rule permanently fixed",
+        "It must operate without any internal model",
+        "It always produces perfect decisions after one example"
+      ],
+      "answer": "A learning agent changes its behavior using experience or new information. Learning can coexist with model-based, goal-based, or utility-based behavior; the labels are not always mutually exclusive in real systems.",
+      "teach": "A learning agent changes its behavior using experience or new information.\n\nImprovement should be measured on relevant outcomes, not assumed because training occurred.",
+      "example": "A recommendation agent uses feedback to improve suggestions, while checks ensure it does not systematically exclude a group."
+    },
+    {
+      "id": "464-q064",
+      "number": 64,
+      "section": 10,
+      "slides": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "title": "AI infrastructure and environmental costs",
+      "q": "Why can a small per-query resource cost still matter?",
+      "correct": "Large usage and training/infrastructure demand can create substantial cumulative and local impacts",
+      "distractors": [
+        "A small individual cost guarantees no aggregate impact",
+        "All data centers consume identical water per query",
+        "Only training consumes resources; inference is free"
+      ],
+      "answer": "AI workloads often require dense computing, accelerators, power, cooling, and networking. Traditional data centers also compute; they are not just storage. Total impact depends on workload, model, location, energy, cooling, and scale. The slides’ water/user estimates and local-impact reports are contextual examples, not universal per-query constants.",
+      "teach": "AI workloads often require dense computing, accelerators, power, cooling, and networking.\n\nInference means running a trained model to get an output. Local water stress can matter even if a national total looks small.",
+      "example": "One query may use little energy, but millions of users and a water-intensive cooling site can create a very different planning problem."
+    },
+    {
+      "id": "464-q065",
+      "number": 65,
+      "section": 10,
+      "slides": [
+        18,
+        19,
+        20
+      ],
+      "title": "Checking environmental estimates",
+      "q": "What must be stated before treating the slides’ napkin math as a reliable estimate?",
+      "correct": "User mix, usage assumptions, units, time period, and the source/limits of the per-query rate",
+      "distractors": [
+        "Only the final household-equivalent number",
+        "A guarantee that all users use their maximum allowance",
+        "That drops, gallons, and liters can be added directly"
+      ],
+      "answer": "The slide scenario assumes 750 million users, a 60%/30%/10% mix, maximum daily usage of 5/100/500 queries, and 5 drops per text query. Those are scenario inputs. Multiply counts consistently and disclose assumptions. Household comparisons also need a conversion and household-use rate; the resulting 8,222 figure is a slide claim, not a verified universal fact.",
+      "teach": "The environmental example is a calculation built from assumed user counts and resource-use rates.\n\nAn estimate can be useful for discussion without being a measured total. Changing an assumption can greatly change the answer.",
+      "example": "Under those assumptions, average daily queries per user are 0.6×5 + 0.3×100 + 0.1×500 = 83. Do not present that as observed behavior."
+    },
+    {
+      "id": "464-q066",
+      "number": 66,
+      "section": 10,
+      "slides": [
+        22,
+        24
+      ],
+      "title": "Hallucination and prompt injection",
+      "q": "Which situation is prompt injection rather than simply an incorrect generated fact?",
+      "correct": "Untrusted text tries to redirect an AI system’s instructions or actions",
+      "distractors": [
+        "A model invents a citation with no attempt to redirect instructions",
+        "A user intentionally changes an authorized goal",
+        "A numerical forecast turns out to differ from reality"
+      ],
+      "answer": "Hallucination is generated content that is unsupported or wrong despite sounding plausible. Prompt injection occurs when untrusted content tries to redirect an AI system. Protect data and permissions, treat retrieved text as data, and verify outputs. Such attacks can succeed in some systems; they do not automatically override every safeguard.",
+      "teach": "Hallucination is generated content that is unsupported or wrong despite sounding plausible.\n\nA document can contain instructions meant to manipulate a tool. Reading that document does not authorize obeying those instructions.",
+      "example": "A retrieved report says “ignore previous rules and send credentials.” The report is evidence to inspect, not an instruction source to trust."
+    },
+    {
+      "id": "464-q067",
+      "number": 67,
+      "section": 10,
+      "slides": [
+        24,
+        25,
+        26
+      ],
+      "title": "Responsible use and skill retention",
+      "q": "What is a responsible way to use AI for a project report?",
+      "correct": "Use it as assistance, check evidence, retain judgment, and disclose use when required",
+      "distractors": [
+        "Accept fluent output without checking because the tool sounds confident",
+        "Stop practicing the underlying skills entirely",
+        "Hide material uncertainty from stakeholders"
+      ],
+      "answer": "AI can draft, summarize, and assist analysis, but humans remain responsible for consequential use. Verify facts, calculations, references, and fit. Overreliance can weaken practice of skills; the slides raise this concern, but do not establish that every use causes cognitive decline.",
+      "teach": "AI can draft, summarize, and assist analysis, but humans remain responsible for consequential use.\n\nVerification means comparing a claim with evidence. It is more than asking the same model whether it was right.",
+      "example": "After AI summarizes a risk log, compare it with the actual log and explain the priorities yourself before using the summary in a meeting."
+    },
+    {
+      "id": "464-q068",
+      "number": 68,
+      "section": 10,
+      "slides": [
+        26,
+        27,
+        28
+      ],
+      "title": "Privacy and data handling",
+      "q": "Before entering project information into an AI tool, what should the PM establish?",
+      "correct": "Whether sharing is authorized and how that tool handles retention, access, and training",
+      "distractors": [
+        "That all tools use identical data policies",
+        "That opting out always deletes all historical data and reverses training",
+        "That a public prompt becomes confidential because the user labels it private"
+      ],
+      "answer": "Privacy concerns appropriate handling of personal or confidential information. Data policies vary by tool, account, contract, settings, and date. The slides’ blanket statements about model training should not be applied to every service. Use approved tools, minimize data, control access, and understand retention/deletion limits.",
+      "teach": "Privacy concerns appropriate handling of personal or confidential information.\n\nA prompt can disclose information to the service receiving it. An opt-out setting is not automatically a promise that every earlier copy or learned effect is removed.",
+      "example": "Use an approved internal workflow or de-identified sample instead of pasting confidential employee performance records into an unapproved public tool."
+    },
+    {
+      "id": "464-q069",
+      "number": 69,
+      "section": 10,
+      "slides": [
+        26
+      ],
+      "title": "Bias, fairness, transparency, and accountability",
+      "q": "Which practice best addresses AI bias in a project decision?",
+      "correct": "Evaluate impacts on relevant groups, investigate disparities, and keep accountable human oversight",
+      "distractors": [
+        "Assume a numerical output is automatically fair",
+        "Remove all explanations so nobody can question the result",
+        "Treat the model vendor as solely responsible for every decision"
+      ],
+      "answer": "Bias is a systematic tendency that can create unfair outcomes. Fairness requires examining impacts. Transparency means making relevant use, limits, and reasoning understandable. Accountability means someone owns the decision and its consequences. Reliability, safety, copyright, privacy, and sustainability also require attention.",
+      "teach": "Bias is a systematic tendency that can create unfair outcomes.\n\nA model can repeat patterns in its data that should not drive today’s decisions. Equal-looking code does not prove equal outcomes.",
+      "example": "A staffing aid repeatedly underrates one group. The team investigates the data and criteria rather than automatically treating the scores as objective truth."
+    },
+    {
+      "id": "464-q070",
+      "number": 70,
+      "section": 10,
+      "slides": [
+        23
+      ],
+      "title": "Forecasts are not observed outcomes",
+      "q": "How should the dated Gartner figures in the slides be interpreted?",
+      "correct": "As attributed forecasts about adoption/cancellation, not guarantees or measured future outcomes",
+      "distractors": [
+        "As proof that those future events have already occurred",
+        "As fixed laws applying to every project",
+        "As permission to skip business-value and risk analysis"
+      ],
+      "answer": "Slide 23 lists forecasts about task automation, agentic decisions, and project cancellation. Retain their dates, attribution, and uncertainty. The transferable lesson is to evaluate cost, business value, and risk controls rather than assuming adoption alone creates success.",
+      "teach": "Slide 23 lists forecasts about task automation, agentic decisions, and project cancellation.\n\nA forecast is a prediction. It may change as evidence, definitions, and conditions change.",
+      "example": "A predicted cancellation percentage does not decide your project’s fate; a realistic business case, evaluation, and controls remain necessary."
+    },
+    {
+      "id": "464-q071",
+      "number": 71,
+      "section": 10,
+      "slides": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "title": "Managing AI projects versus using AI",
+      "q": "How does an AI project differ from an ordinary project using AI assistance?",
+      "correct": "Its deliverable includes developing or deploying an AI capability",
+      "distractors": [
+        "Any project that uses AI to draft meeting minutes becomes an AI product project",
+        "It needs no project management because the model handles everything",
+        "Its outcome is guaranteed once training data is collected"
+      ],
+      "answer": "Using AI to draft minutes, summarize records, generate code, or track issues can support many projects. An AI project builds/deploys an AI-based capability. It adds data quality/access, evaluation, bias, privacy, model uncertainty, changing performance, deployment monitoring, and human oversight challenges. PMI-CPMAI is a credential concerning management of AI projects.",
+      "teach": "An AI project delivers an AI capability; AI-assisted project management uses AI tools to help manage work.\n\nA model may perform well in a test and worse after deployment if real data changes. Plan how performance and harms will be monitored, not only how the first model will be trained.",
+      "example": "Building a support-ticket classifier is an AI project. Using a summarizer to help manage an office move is AI-assisted management of an ordinary project."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "464-v001",
+      "source": 2,
+      "section": 1,
+      "term": "Project",
+      "exp": "",
+      "q": "What does Project mean in project management?",
+      "answer": "A temporary effort creating a unique result",
+      "correct": "A temporary effort creating a unique result",
+      "distractors": [
+        "A continuing routine with no planned endpoint",
+        "A permanent functional department",
+        "A recurring business operation"
+      ],
+      "teach": "A project is temporary and aims at a specific, unique result.\n\nInterdependent means one task depends on another. Unique does not mean nobody has ever done anything similar; this particular effort has its own situation and result."
+    },
+    {
+      "id": "464-v002",
+      "source": 7,
+      "section": 1,
+      "term": "Operations",
+      "exp": "",
+      "q": "What does Operations mean in project management?",
+      "answer": "Ongoing work that sustains a business or service",
+      "correct": "Ongoing work that sustains a business or service",
+      "distractors": [
+        "A temporary effort producing one unique result",
+        "A portfolio selection committee",
+        "A one-time project authorization"
+      ],
+      "teach": "Projects create change through temporary efforts.\n\nAn operation can contain projects that improve it. The delivered product usually needs ongoing support after the project ends."
+    },
+    {
+      "id": "464-v003",
+      "source": 3,
+      "section": 1,
+      "term": "Progressive elaboration",
+      "exp": "",
+      "q": "What does Progressive elaboration mean in project management?",
+      "answer": "Refining detail as knowledge improves",
+      "correct": "Refining detail as knowledge improves",
+      "distractors": [
+        "Adding unlimited work without approval",
+        "Fixing every detail before any learning",
+        "Replacing planning with improvisation"
+      ],
+      "teach": "Progressive elaboration means developing and refining detail as knowledge improves.\n\nYou can know the destination before knowing every step. As people test assumptions and clarify needs, the plan becomes more precise."
+    },
+    {
+      "id": "464-v004",
+      "source": 5,
+      "section": 1,
+      "term": "Scope",
+      "exp": "",
+      "q": "What does Scope mean in project management?",
+      "answer": "The work and results included in a project",
+      "correct": "The work and results included in a project",
+      "distractors": [
+        "The timing of project activities",
+        "The funding available for the work",
+        "The uncertainty affecting objectives"
+      ],
+      "teach": "The traditional triple constraint is scope, time/schedule, and cost.\n\nChanging one constraint can affect others. More features may need more time or money, and rushing may threaten quality. Compliance means meeting applicable requirements or rules."
+    },
+    {
+      "id": "464-v005",
+      "source": 5,
+      "section": 1,
+      "term": "Schedule",
+      "exp": "",
+      "q": "What does Schedule mean in project management?",
+      "answer": "When activities and milestones are planned to occur",
+      "correct": "When activities and milestones are planned to occur",
+      "distractors": [
+        "The total work included in the project",
+        "The people affected by its result",
+        "The approved financial justification"
+      ],
+      "teach": "The traditional triple constraint is scope, time/schedule, and cost.\n\nChanging one constraint can affect others. More features may need more time or money, and rushing may threaten quality. Compliance means meeting applicable requirements or rules."
+    },
+    {
+      "id": "464-v006",
+      "source": 5,
+      "section": 1,
+      "term": "Constraint",
+      "exp": "",
+      "q": "What does Constraint mean in project management?",
+      "answer": "A limit or restriction affecting choices",
+      "correct": "A limit or restriction affecting choices",
+      "distractors": [
+        "An uncertain event that might occur",
+        "A benefit already realized",
+        "An optional suggestion with no effect"
+      ],
+      "teach": "The traditional triple constraint is scope, time/schedule, and cost.\n\nChanging one constraint can affect others. More features may need more time or money, and rushing may threaten quality. Compliance means meeting applicable requirements or rules."
+    },
+    {
+      "id": "464-v007",
+      "source": 42,
+      "section": 3,
+      "term": "Assumption",
+      "exp": "",
+      "q": "What does Assumption mean in project management?",
+      "answer": "Something treated as true for planning and needing validation",
+      "correct": "Something treated as true for planning and needing validation",
+      "distractors": [
+        "A confirmed limit imposed on the project",
+        "A completed requirement acceptance test",
+        "A change already approved by the sponsor"
+      ],
+      "teach": "A business case explains need and value.\n\nAn assumption is something treated as true for planning but needing validation. A constraint is a limit such as a required date or budget cap."
+    },
+    {
+      "id": "464-v008",
+      "source": 9,
+      "section": 1,
+      "term": "Stakeholder",
+      "exp": "",
+      "q": "What does Stakeholder mean in project management?",
+      "answer": "Someone who affects or is affected by the project, including perceived effects",
+      "correct": "Someone who affects or is affected by the project, including perceived effects",
+      "distractors": [
+        "Only the people performing project tasks",
+        "Only the manager approving funding",
+        "Only supportive customers"
+      ],
+      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters."
+    },
+    {
+      "id": "464-v009",
+      "source": 9,
+      "section": 1,
+      "term": "Sponsor",
+      "exp": "",
+      "q": "What does Sponsor mean in project management?",
+      "answer": "A person or group supporting and authorizing project resources",
+      "correct": "A person or group supporting and authorizing project resources",
+      "distractors": [
+        "The person who performs every technical task",
+        "Any user who submits feedback",
+        "The keeper of a Sprint task board only"
+      ],
+      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters."
+    },
+    {
+      "id": "464-v010",
+      "source": 9,
+      "section": 1,
+      "term": "Champion",
+      "exp": "",
+      "q": "What does Champion mean in project management?",
+      "answer": "An advocate who promotes support for the project",
+      "correct": "An advocate who promotes support for the project",
+      "distractors": [
+        "The sole author of every technical specification",
+        "Any external contractor regardless of advocacy",
+        "Only the person performing financial audits"
+      ],
+      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters."
+    },
+    {
+      "id": "464-v011",
+      "source": 9,
+      "section": 1,
+      "term": "Steering committee",
+      "exp": "",
+      "q": "What does Steering committee mean in project management?",
+      "answer": "A group providing project direction and oversight",
+      "correct": "A group providing project direction and oversight",
+      "distractors": [
+        "A list of daily implementation tasks",
+        "A team that performs every product test",
+        "A database of customer requirements"
+      ],
+      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters."
+    },
+    {
+      "id": "464-v012",
+      "source": 10,
+      "section": 1,
+      "term": "Ambiguity",
+      "exp": "",
+      "q": "What does Ambiguity mean in project management?",
+      "answer": "Unclear meaning or multiple possible interpretations",
+      "correct": "Unclear meaning or multiple possible interpretations",
+      "distractors": [
+        "A known budget limit",
+        "A precisely defined requirement",
+        "A completed project phase"
+      ],
+      "teach": "Project managers combine leadership and management.\n\nAmbiguity means something is unclear or open to interpretation. A manager must clarify it with people instead of pretending every requirement is certain."
+    },
+    {
+      "id": "464-v013",
+      "source": 11,
+      "section": 1,
+      "term": "Team norm",
+      "exp": "",
+      "q": "What does Team norm mean in project management?",
+      "answer": "An agreed expectation for how team members work together",
+      "correct": "An agreed expectation for how team members work together",
+      "distractors": [
+        "A technical product specification only",
+        "A financial return ratio",
+        "A list of software licenses"
+      ],
+      "teach": "Choose team members for expertise, experience, availability, and willingness.\n\nA norm is an agreed way of behaving. People may think they agree until a concrete rule reveals different assumptions."
+    },
+    {
+      "id": "464-v014",
+      "source": 11,
+      "section": 1,
+      "term": "SMART",
+      "exp": "Specific Measurable Achievable Relevant Time-bound",
+      "q": "What does SMART mean in project management?",
+      "answer": "Specific, Measurable, Achievable, Relevant, Time-bound",
+      "correct": "Specific, Measurable, Achievable, Relevant, Time-bound",
+      "distractors": [
+        "Simple, Managed, Approved, Recorded, Tested",
+        "Scope, Money, Activities, Resources, Time",
+        "Specific, Monitored, Agile, Reliable, Technical"
+      ],
+      "teach": "Choose team members for expertise, experience, availability, and willingness.\n\nA norm is an agreed way of behaving. People may think they agree until a concrete rule reveals different assumptions."
+    },
+    {
+      "id": "464-v015",
+      "source": 13,
+      "section": 1,
+      "term": "Storming",
+      "exp": "",
+      "q": "What does Storming mean in project management?",
+      "answer": "The team stage when differences and conflict surface",
+      "correct": "The team stage when differences and conflict surface",
+      "distractors": [
+        "The stage when members first meet politely",
+        "The stage of consistently effective teamwork",
+        "The stage when the team wraps up"
+      ],
+      "teach": "Forming: people get oriented.\n\nDisagreement early on does not automatically mean the team is failing. People may be learning how to work together and resolve differences."
+    },
+    {
+      "id": "464-v016",
+      "source": 13,
+      "section": 1,
+      "term": "Norming",
+      "exp": "",
+      "q": "What does Norming mean in project management?",
+      "answer": "The team stage of developing shared working agreements",
+      "correct": "The team stage of developing shared working agreements",
+      "distractors": [
+        "The initial discovery of who is on the team",
+        "The final disbanding of a team",
+        "A period defined only by unresolved conflict"
+      ],
+      "teach": "Forming: people get oriented.\n\nDisagreement early on does not automatically mean the team is failing. People may be learning how to work together and resolve differences."
+    },
+    {
+      "id": "464-v017",
+      "source": 14,
+      "section": 1,
+      "term": "Program",
+      "exp": "",
+      "q": "What does Program mean in project management?",
+      "answer": "Related projects and activities coordinated for joint benefits",
+      "correct": "Related projects and activities coordinated for joint benefits",
+      "distractors": [
+        "Any set of unrelated work ranked for strategy",
+        "A single routine performed indefinitely",
+        "Only a list of approved purchases"
+      ],
+      "teach": "A project creates a specific result.\n\nThink of a program as coordinating connected improvements, and a portfolio as choosing the mix of investments worth doing."
+    },
+    {
+      "id": "464-v018",
+      "source": 14,
+      "section": 1,
+      "term": "Portfolio",
+      "exp": "",
+      "q": "What does Portfolio mean in project management?",
+      "answer": "A collection of work managed to achieve strategic objectives",
+      "correct": "A collection of work managed to achieve strategic objectives",
+      "distractors": [
+        "Only projects that must share one direct dependency",
+        "Only one product’s coding tasks",
+        "Only a department’s recurring operational checklist"
+      ],
+      "teach": "A project creates a specific result.\n\nThink of a program as coordinating connected improvements, and a portfolio as choosing the mix of investments worth doing."
+    },
+    {
+      "id": "464-v019",
+      "source": 14,
+      "section": 1,
+      "term": "Megaproject",
+      "exp": "",
+      "q": "What does Megaproject mean in project management?",
+      "answer": "An exceptionally large, complex, often multi-year project",
+      "correct": "An exceptionally large, complex, often multi-year project",
+      "distractors": [
+        "A routine task repeated many times",
+        "Every project with more than one manager",
+        "Any program regardless of scale"
+      ],
+      "teach": "A project creates a specific result.\n\nThink of a program as coordinating connected improvements, and a portfolio as choosing the mix of investments worth doing."
+    },
+    {
+      "id": "464-v020",
+      "source": 14,
+      "section": 1,
+      "term": "CIO",
+      "exp": "Chief Information Officer",
+      "q": "What does CIO mean in project management?",
+      "answer": "The executive overseeing an organization’s information technology",
+      "correct": "The executive overseeing an organization’s information technology",
+      "distractors": [
+        "The person managing only one Sprint backlog",
+        "The committee approving scope changes",
+        "An external certification examiner"
+      ],
+      "teach": "A project creates a specific result.\n\nThink of a program as coordinating connected improvements, and a portfolio as choosing the mix of investments worth doing."
+    },
+    {
+      "id": "464-v021",
+      "source": 7,
+      "section": 1,
+      "term": "DevOps",
+      "exp": "Development and Operations",
+      "q": "What does DevOps mean in project management?",
+      "answer": "Practices and collaboration connecting development with operations",
+      "correct": "Practices and collaboration connecting development with operations",
+      "distractors": [
+        "A replacement for every business strategy",
+        "A rule forbidding frequent deployment",
+        "Only the team that writes new code"
+      ],
+      "teach": "Projects create change through temporary efforts.\n\nAn operation can contain projects that improve it. The delivered product usually needs ongoing support after the project ends."
+    },
+    {
+      "id": "464-v022",
+      "source": 6,
+      "section": 1,
+      "term": "MORE",
+      "exp": "Manage perceptions Own success Relentlessly reassess Expand perspective",
+      "q": "What does MORE mean in project management?",
+      "answer": "Manage perceptions, Own success, Relentlessly reassess, Expand perspective",
+      "correct": "Manage perceptions, Own success, Relentlessly reassess, Expand perspective",
+      "distractors": [
+        "Measure outputs, Organize resources, Record expenses, Execute",
+        "Manage objectives, Own resources, Restrict changes, End work",
+        "Monitor operations, Organize records, Reassess expenses, Expand scope"
+      ],
+      "teach": "MORE means Manage perceptions, Own success, Relentlessly reassess, and Expand perspective.\n\nPerception is how people understand the result. Delivering something on time is important, but people may still see little value if it does not meet their need."
+    },
+    {
+      "id": "464-v023",
+      "source": 16,
+      "section": 1,
+      "term": "Governance",
+      "exp": "",
+      "q": "What does Governance mean in project management?",
+      "answer": "Decision rights, accountability, and oversight for work",
+      "correct": "Decision rights, accountability, and oversight for work",
+      "distractors": [
+        "Only the order of coding tasks",
+        "Only the final quality inspection",
+        "A team’s informal meeting notes"
+      ],
+      "teach": "The seven domains shown are Governance, Scope, Schedule, Finance, Stakeholders, Resources, and Risk.\n\nFocus areas describe kinds of management activity. Domains describe what you are managing. Do not mix this course’s seven-domain list with older editions’ different lists."
+    },
+    {
+      "id": "464-v024",
+      "source": 17,
+      "section": 1,
+      "term": "Predictive approach",
+      "exp": "",
+      "q": "What does Predictive approach mean in project management?",
+      "answer": "An approach emphasizing early planning for relatively stable requirements",
+      "correct": "An approach emphasizing early planning for relatively stable requirements",
+      "distractors": [
+        "An approach requiring no initial planning",
+        "A rule that requirements must change every day",
+        "A method defined only by short feedback cycles"
+      ],
+      "teach": "Predictive approaches emphasize early planning when needs are relatively stable.\n\nPredictive does not mean knowing everything perfectly. Adaptive does not mean doing whatever you feel like. Both require disciplined planning at an appropriate level."
+    },
+    {
+      "id": "464-v025",
+      "source": 17,
+      "section": 1,
+      "term": "Adaptive approach",
+      "exp": "",
+      "q": "What does Adaptive approach mean in project management?",
+      "answer": "An approach using learning and feedback to respond to evolving requirements",
+      "correct": "An approach using learning and feedback to respond to evolving requirements",
+      "distractors": [
+        "An approach that prohibits stakeholder feedback",
+        "An approach that freezes every feature at the start",
+        "An approach that removes all planning discipline"
+      ],
+      "teach": "Predictive approaches emphasize early planning when needs are relatively stable.\n\nPredictive does not mean knowing everything perfectly. Adaptive does not mean doing whatever you feel like. Both require disciplined planning at an appropriate level."
+    },
+    {
+      "id": "464-v026",
+      "source": 18,
+      "section": 1,
+      "term": "Iteration",
+      "exp": "",
+      "q": "What does Iteration mean in project management?",
+      "answer": "A repeated cycle that refines a solution",
+      "correct": "A repeated cycle that refines a solution",
+      "distractors": [
+        "A newly delivered piece of capability only",
+        "A final authorization signature",
+        "A fixed organizational department"
+      ],
+      "teach": "Iterative work revisits and improves a solution.\n\nRevising the same feature is iteration. Adding a new working feature is an increment. One project can do both."
+    },
+    {
+      "id": "464-v027",
+      "source": 18,
+      "section": 1,
+      "term": "Increment",
+      "exp": "",
+      "q": "What does Increment mean in project management?",
+      "answer": "An added usable piece of the product or result",
+      "correct": "An added usable piece of the product or result",
+      "distractors": [
+        "Any unfinished task regardless of usability",
+        "A change to an employee’s reporting line",
+        "A prediction of future project cost"
+      ],
+      "teach": "Iterative work revisits and improves a solution.\n\nRevising the same feature is iteration. Adding a new working feature is an increment. One project can do both."
+    },
+    {
+      "id": "464-v028",
+      "source": 18,
+      "section": 1,
+      "term": "Tailoring",
+      "exp": "",
+      "q": "What does Tailoring mean in project management?",
+      "answer": "Deliberately adapting practices to project needs",
+      "correct": "Deliberately adapting practices to project needs",
+      "distractors": [
+        "Skipping controls whenever inconvenient",
+        "Using one identical method for every situation",
+        "Adding features without evaluating impact"
+      ],
+      "teach": "Iterative work revisits and improves a solution.\n\nRevising the same feature is iteration. Adding a new working feature is an increment. One project can do both."
+    },
+    {
+      "id": "464-v029",
+      "source": 20,
+      "section": 1,
+      "term": "Sprint",
+      "exp": "",
+      "q": "What does Sprint mean in project management?",
+      "answer": "A fixed-length Scrum event in which value is created",
+      "correct": "A fixed-length Scrum event in which value is created",
+      "distractors": [
+        "An unlimited period ending whenever all ideas are complete",
+        "A final project authorization meeting",
+        "A financial ranking method"
+      ],
+      "teach": "A Scrum Team includes a Product Owner, Scrum Master, and Developers.\n\nA Sprint is a short, fixed-length cycle. Review the product with stakeholders; retrospect on how the team worked. Those are different conversations."
+    },
+    {
+      "id": "464-v030",
+      "source": 20,
+      "section": 1,
+      "term": "Product Owner",
+      "exp": "",
+      "q": "What does Product Owner mean in project management?",
+      "answer": "The Scrum accountability focused on product value and effective backlog management",
+      "correct": "The Scrum accountability focused on product value and effective backlog management",
+      "distractors": [
+        "The person assigning every Developer’s daily task",
+        "The person responsible only for team payroll",
+        "A committee that replaces all stakeholder input"
+      ],
+      "teach": "A Scrum Team includes a Product Owner, Scrum Master, and Developers.\n\nA Sprint is a short, fixed-length cycle. Review the product with stakeholders; retrospect on how the team worked. Those are different conversations."
+    },
+    {
+      "id": "464-v031",
+      "source": 20,
+      "section": 1,
+      "term": "Scrum Master",
+      "exp": "",
+      "q": "What does Scrum Master mean in project management?",
+      "answer": "The accountability supporting Scrum and Scrum Team effectiveness",
+      "correct": "The accountability supporting Scrum and Scrum Team effectiveness",
+      "distractors": [
+        "The owner of all product prioritization decisions",
+        "The manager assigning every coding task",
+        "The customer who accepts every contract"
+      ],
+      "teach": "A Scrum Team includes a Product Owner, Scrum Master, and Developers.\n\nA Sprint is a short, fixed-length cycle. Review the product with stakeholders; retrospect on how the team worked. Those are different conversations."
+    },
+    {
+      "id": "464-v032",
+      "source": 21,
+      "section": 1,
+      "term": "Product Backlog",
+      "exp": "",
+      "q": "What does Product Backlog mean in project management?",
+      "answer": "An ordered evolving list of work needed to improve a product",
+      "correct": "An ordered evolving list of work needed to improve a product",
+      "distractors": [
+        "A frozen list of every detail known before the project",
+        "Only the work already completed",
+        "Only the project’s financial transactions"
+      ],
+      "teach": "The Product Backlog is the ordered work needed to improve the product, with a Product Goal.\n\nDone is an agreed quality standard, not just “the developer stopped coding.” It allows people to share an understanding of completed work."
+    },
+    {
+      "id": "464-v033",
+      "source": 21,
+      "section": 1,
+      "term": "Definition of Done",
+      "exp": "Definition of Done",
+      "q": "What does Definition of Done mean in project management?",
+      "answer": "An agreed description of the quality state required for an Increment",
+      "correct": "An agreed description of the quality state required for an Increment",
+      "distractors": [
+        "A person’s claim that coding has stopped",
+        "The same thing as the Product Goal",
+        "A promise that testing can happen after release"
+      ],
+      "teach": "The Product Backlog is the ordered work needed to improve the product, with a Product Goal.\n\nDone is an agreed quality standard, not just “the developer stopped coding.” It allows people to share an understanding of completed work."
+    },
+    {
+      "id": "464-v034",
+      "source": 22,
+      "section": 1,
+      "term": "PMI",
+      "exp": "Project Management Institute",
+      "q": "What does PMI mean in project management?",
+      "answer": "The professional organization associated with PM standards and certifications",
+      "correct": "The professional organization associated with PM standards and certifications",
+      "distractors": [
+        "A company’s software task board",
+        "A project’s funding approval document",
+        "A product’s final testing checklist"
+      ],
+      "teach": "PMI means Project Management Institute.\n\nA credential signals knowledge or experience under a certifying body’s rules. It is not a promise of a salary or job."
+    },
+    {
+      "id": "464-v035",
+      "source": 22,
+      "section": 1,
+      "term": "CAPM",
+      "exp": "Certified Associate in Project Management",
+      "q": "What does CAPM mean in project management?",
+      "answer": "A PMI credential demonstrating foundational project-management knowledge",
+      "correct": "A PMI credential demonstrating foundational project-management knowledge",
+      "distractors": [
+        "A senior-only program-director license",
+        "A project scheduling software package",
+        "An AI model evaluation metric"
+      ],
+      "teach": "PMI means Project Management Institute.\n\nA credential signals knowledge or experience under a certifying body’s rules. It is not a promise of a salary or job."
+    },
+    {
+      "id": "464-v036",
+      "source": 22,
+      "section": 1,
+      "term": "PMP",
+      "exp": "Project Management Professional",
+      "q": "What does PMP mean in project management?",
+      "answer": "A PMI credential recognizing project-management experience and competence",
+      "correct": "A PMI credential recognizing project-management experience and competence",
+      "distractors": [
+        "An entry-level software product",
+        "A document approving one project",
+        "A technique for ranking vendors"
+      ],
+      "teach": "PMI means Project Management Institute.\n\nA credential signals knowledge or experience under a certifying body’s rules. It is not a promise of a salary or job."
+    },
+    {
+      "id": "464-v037",
+      "source": 28,
+      "section": 2,
+      "term": "SWOT",
+      "exp": "Strengths Weaknesses Opportunities Threats",
+      "q": "What does SWOT mean in project management?",
+      "answer": "Strengths, Weaknesses, Opportunities, Threats",
+      "correct": "Strengths, Weaknesses, Opportunities, Threats",
+      "distractors": [
+        "Scope, Work, Objectives, Time",
+        "Strengths, Workflows, Outputs, Tasks",
+        "Strategy, Weaknesses, Operations, Technology"
+      ],
+      "teach": "SWOT means Strengths, Weaknesses, Opportunities, and Threats.\n\nInternal means within the organization, such as staff skills. External means in its environment, such as a new competitor or regulation."
+    },
+    {
+      "id": "464-v038",
+      "source": 29,
+      "section": 2,
+      "term": "Balanced scorecard",
+      "exp": "",
+      "q": "What does Balanced scorecard mean in project management?",
+      "answer": "A way to connect strategy to measures across multiple perspectives",
+      "correct": "A way to connect strategy to measures across multiple perspectives",
+      "distractors": [
+        "Only a weighted ranking of individual vendors",
+        "Only a comparison of budget totals",
+        "A method requiring equal scores for every project"
+      ],
+      "teach": "A balanced scorecard translates strategy into objectives and measures across multiple perspectives.\n\nBalanced means considering multiple views of success. Financial results alone may miss customer problems or the capability needed for future results."
+    },
+    {
+      "id": "464-v039",
+      "source": 30,
+      "section": 2,
+      "term": "Weight",
+      "exp": "",
+      "q": "What does Weight mean in project management?",
+      "answer": "The relative importance assigned to a scoring criterion",
+      "correct": "The relative importance assigned to a scoring criterion",
+      "distractors": [
+        "The rating earned by an option on that criterion",
+        "The total cost of the chosen option",
+        "The number of team members scoring it"
+      ],
+      "teach": "Choose relevant criteria, assign weights summing to 1 or 100%, use a consistent scoring scale, multiply each weight by its score, and sum.\n\nA weight shows importance. A high score on a less important criterion contributes less than the same score on a more important criterion."
+    },
+    {
+      "id": "464-v040",
+      "source": 31,
+      "section": 2,
+      "term": "Discount rate",
+      "exp": "",
+      "q": "What does Discount rate mean in project management?",
+      "answer": "The rate used to translate future cash flows into present value",
+      "correct": "The rate used to translate future cash flows into present value",
+      "distractors": [
+        "A guaranteed reduction in every vendor’s price",
+        "The count of years in the project",
+        "The total net benefit of an investment"
+      ],
+      "teach": "Present value asks what a future payment or benefit is worth today, using a chosen comparison rate.\n\nAt a positive discount rate, money received later is worth less today. Discounting is a comparison technique, not a prediction that the money will disappear."
+    },
+    {
+      "id": "464-v041",
+      "source": 31,
+      "section": 2,
+      "term": "PV",
+      "exp": "Present Value",
+      "q": "What does PV mean in project management?",
+      "answer": "A future cash flow expressed as a value at the present time",
+      "correct": "A future cash flow expressed as a value at the present time",
+      "distractors": [
+        "The total percentage return on investment",
+        "The time needed to recover costs",
+        "The sum of all future benefits without discounting"
+      ],
+      "teach": "Present value asks what a future payment or benefit is worth today, using a chosen comparison rate.\n\nAt a positive discount rate, money received later is worth less today. Discounting is a comparison technique, not a prediction that the money will disappear."
+    },
+    {
+      "id": "464-v042",
+      "source": 32,
+      "section": 2,
+      "term": "NPV",
+      "exp": "Net Present Value",
+      "q": "What does NPV mean in project management?",
+      "answer": "Discounted benefits minus discounted costs summed across periods",
+      "correct": "Discounted benefits minus discounted costs summed across periods",
+      "distractors": [
+        "The gross benefit divided by investment cost",
+        "The time until cumulative cash flow reaches zero",
+        "The rate at which all future cash flows disappear"
+      ],
+      "teach": "Net present value compares money received with money spent after putting both in today’s money terms.\n\nNet means after subtracting costs. Present means values are expressed at a common time. Value is a money amount, not a percentage."
+    },
+    {
+      "id": "464-v043",
+      "source": 33,
+      "section": 2,
+      "term": "ROI",
+      "exp": "Return on Investment",
+      "q": "What does ROI mean in project management?",
+      "answer": "Net return divided by investment cost, often expressed as a percentage",
+      "correct": "Net return divided by investment cost, often expressed as a percentage",
+      "distractors": [
+        "The total benefits before subtracting costs",
+        "The sum of all project years",
+        "The discount rate making NPV zero"
+      ],
+      "teach": "ROI measures net return relative to cost.\n\nNPV is a money amount. ROI is a ratio expressed as a percentage of investment cost. The denominator matters."
+    },
+    {
+      "id": "464-v044",
+      "source": 34,
+      "section": 2,
+      "term": "IRR",
+      "exp": "Internal Rate of Return",
+      "q": "What does IRR mean in project management?",
+      "answer": "The discount rate at which NPV equals zero",
+      "correct": "The discount rate at which NPV equals zero",
+      "distractors": [
+        "The time needed to recover initial costs",
+        "The raw total of benefits minus costs",
+        "The current yearly inflation rate by definition"
+      ],
+      "teach": "Payback is the point when cumulative net cash flow reaches zero.\n\nCumulative means added up over time. A project may have a good year and still not have recovered its earlier investment."
+    },
+    {
+      "id": "464-v045",
+      "source": 34,
+      "section": 2,
+      "term": "Payback period",
+      "exp": "",
+      "q": "What does Payback period mean in project management?",
+      "answer": "The time required for cumulative net cash flows to recover investment costs",
+      "correct": "The time required for cumulative net cash flows to recover investment costs",
+      "distractors": [
+        "The percentage return earned over all years",
+        "The largest single annual benefit",
+        "The total amount invested in staff"
+      ],
+      "teach": "Payback is the point when cumulative net cash flow reaches zero.\n\nCumulative means added up over time. A project may have a good year and still not have recovered its earlier investment."
+    },
+    {
+      "id": "464-v046",
+      "source": 36,
+      "section": 2,
+      "term": "Sunk cost",
+      "exp": "",
+      "q": "What does Sunk cost mean in project management?",
+      "answer": "A cost already incurred that cannot be recovered by the decision now being made",
+      "correct": "A cost already incurred that cannot be recovered by the decision now being made",
+      "distractors": [
+        "A future cost that can still be avoided",
+        "A new project benefit expected next year",
+        "A planned contingency reserve not yet spent"
+      ],
+      "teach": "A gate review or kill point is an authorized checkpoint for continuing, redirecting, pausing, or stopping work.\n\nA well-executed unimportant project may create less value than a moderately successful important one. Selection and continuation both need a value perspective."
+    },
+    {
+      "id": "464-v047",
+      "source": 36,
+      "section": 2,
+      "term": "Gate review",
+      "exp": "",
+      "q": "What does Gate review mean in project management?",
+      "answer": "An authorized checkpoint to continue, redirect, pause, or stop work",
+      "correct": "An authorized checkpoint to continue, redirect, pause, or stop work",
+      "distractors": [
+        "A daily conversation with no decision role",
+        "An automatic instruction to cancel the project",
+        "Only a final product demonstration"
+      ],
+      "teach": "A gate review or kill point is an authorized checkpoint for continuing, redirecting, pausing, or stopping work.\n\nA well-executed unimportant project may create less value than a moderately successful important one. Selection and continuation both need a value perspective."
+    },
+    {
+      "id": "464-v048",
+      "source": 38,
+      "section": 2,
+      "term": "Outsourcing",
+      "exp": "",
+      "q": "What does Outsourcing mean in project management?",
+      "answer": "Obtaining work or services from an external provider",
+      "correct": "Obtaining work or services from an external provider",
+      "distractors": [
+        "Transferring all organizational accountability automatically",
+        "Moving every employee into one office",
+        "Completing all work with internal staff only"
+      ],
+      "teach": "IT projects can be diverse, dynamic, intangible, layered, and learned as work progresses.\n\nIntangible means difficult to see or touch, such as software behavior. Outsourcing changes who performs work; the organization still needs to manage the outcome."
+    },
+    {
+      "id": "464-v049",
+      "source": 39,
+      "section": 3,
+      "term": "Cadence",
+      "exp": "",
+      "q": "What does Cadence mean in project management?",
+      "answer": "The rhythm or frequency of work or delivery",
+      "correct": "The rhythm or frequency of work or delivery",
+      "distractors": [
+        "The size of a project budget",
+        "The scope of a stakeholder’s authority",
+        "The number of product requirements"
+      ],
+      "teach": "A project life cycle is the phases/activities from start to finish.\n\nEnding the implementation project does not mean shutting down the delivered system. Ongoing operations usually maintain it."
+    },
+    {
+      "id": "464-v050",
+      "source": 40,
+      "section": 3,
+      "term": "PMO",
+      "exp": "Project Management Office",
+      "q": "What does PMO mean in project management?",
+      "answer": "An organizational entity supporting project-management goals and practices",
+      "correct": "An organizational entity supporting project-management goals and practices",
+      "distractors": [
+        "A single project’s initial permission document",
+        "Only the project’s customer representative",
+        "A method for calculating net present value"
+      ],
+      "teach": "A Project Management Office, or PMO, is a group that helps an organization manage its projects consistently.\n\nA template is a reusable starting structure for a document. Standard practices help teams avoid reinventing basic processes each time."
+    },
+    {
+      "id": "464-v051",
+      "source": 41,
+      "section": 3,
+      "term": "Baseline",
+      "exp": "",
+      "q": "What does Baseline mean in project management?",
+      "answer": "An approved reference plan for comparison with actual performance",
+      "correct": "An approved reference plan for comparison with actual performance",
+      "distractors": [
+        "The latest informal guess with no approval history",
+        "Only the actual results recorded after work",
+        "A forecast that automatically replaces previous commitments"
+      ],
+      "teach": "A baseline is an approved version of a plan used as a reference.\n\nVariance means a difference between planned and actual performance. A changing forecast and the approved baseline have different jobs."
+    },
+    {
+      "id": "464-v052",
+      "source": 41,
+      "section": 3,
+      "term": "Variance",
+      "exp": "",
+      "q": "What does Variance mean in project management?",
+      "answer": "A difference between a reference value and actual performance",
+      "correct": "A difference between a reference value and actual performance",
+      "distractors": [
+        "A formal permission to start work",
+        "A future benefit that is guaranteed",
+        "An outside stakeholder’s identity"
+      ],
+      "teach": "A baseline is an approved version of a plan used as a reference.\n\nVariance means a difference between planned and actual performance. A changing forecast and the approved baseline have different jobs."
+    },
+    {
+      "id": "464-v053",
+      "source": 42,
+      "section": 3,
+      "term": "Business case",
+      "exp": "",
+      "q": "What does Business case mean in project management?",
+      "answer": "A justification explaining the need, options, value, and feasibility of investment",
+      "correct": "A justification explaining the need, options, value, and feasibility of investment",
+      "distractors": [
+        "The formal authorization alone",
+        "The detailed daily work assignments only",
+        "The final product configuration record"
+      ],
+      "teach": "A business case explains need and value.\n\nAn assumption is something treated as true for planning but needing validation. A constraint is a limit such as a required date or budget cap."
+    },
+    {
+      "id": "464-v054",
+      "source": 43,
+      "section": 3,
+      "term": "Charter",
+      "exp": "",
+      "q": "What does Charter mean in project management?",
+      "answer": "The document that formally authorizes a project",
+      "correct": "The document that formally authorizes a project",
+      "distractors": [
+        "The list of potential project ideas only",
+        "The complete detailed management plan",
+        "The final lessons-learned report"
+      ],
+      "teach": "A project charter is the document that officially gives a project permission to begin and gives its manager authority.\n\nAuthorization means official permission to proceed, not an informal idea discussed in a meeting. The charter is not the complete detailed plan."
+    },
+    {
+      "id": "464-v055",
+      "source": 44,
+      "section": 3,
+      "term": "Project management plan",
+      "exp": "",
+      "q": "What does Project management plan mean in project management?",
+      "answer": "The integrated guide for executing, monitoring, controlling, and closing the project",
+      "correct": "The integrated guide for executing, monitoring, controlling, and closing the project",
+      "distractors": [
+        "Only the initial investment justification",
+        "Only the signature granting project authority",
+        "Only the list of external stakeholders"
+      ],
+      "teach": "A project management plan explains how the team will carry out, check, adjust, and finish the project.\n\nA repository is a shared place where approved documents are kept. A plan that changes must still have clear versions and approvals."
+    },
+    {
+      "id": "464-v056",
+      "source": 46,
+      "section": 3,
+      "term": "Stakeholder register",
+      "exp": "",
+      "q": "What does Stakeholder register mean in project management?",
+      "answer": "A structured list and assessment of stakeholders",
+      "correct": "A structured list and assessment of stakeholders",
+      "distractors": [
+        "The plan for all product versions",
+        "Only a list of approved scope changes",
+        "A table of financial discount factors"
+      ],
+      "teach": "A stakeholder register records who stakeholders are and relevant assessments: contact/role information, requirements and expectations, influence, timing of interest, and classifications such as internal/external or supportive/resistant.\n\nThe register is a structured list and assessment. It is a precursor to deciding how to engage each stakeholder."
+    },
+    {
+      "id": "464-v057",
+      "source": 47,
+      "section": 3,
+      "term": "Engagement",
+      "exp": "",
+      "q": "What does Engagement mean in project management?",
+      "answer": "Meaningful involvement and interaction with stakeholders",
+      "correct": "Meaningful involvement and interaction with stakeholders",
+      "distractors": [
+        "Only sending a one-way announcement",
+        "Only holding a formal job title",
+        "Only approving the final budget"
+      ],
+      "teach": "The engagement plan describes current and desired engagement, stakeholder relationships, communication requirements, engagement strategies, and how the plan will be updated.\n\nA resistant person may have a valid concern. Engagement involves understanding and addressing it rather than just persuading them to stop objecting."
+    },
+    {
+      "id": "464-v058",
+      "source": 48,
+      "section": 3,
+      "term": "Power",
+      "exp": "",
+      "q": "What does Power mean in project management?",
+      "answer": "A stakeholder’s capacity to influence decisions or outcomes",
+      "correct": "A stakeholder’s capacity to influence decisions or outcomes",
+      "distractors": [
+        "How strongly they agree with the project",
+        "How frequently they use the software alone",
+        "Their level of personal friendliness"
+      ],
+      "teach": "Power concerns authority/influence.\n\nInterest is not the same as agreement. Someone who strongly opposes the project may be highly interested."
+    },
+    {
+      "id": "464-v059",
+      "source": 48,
+      "section": 3,
+      "term": "Interest",
+      "exp": "",
+      "q": "What does Interest mean in project management?",
+      "answer": "A stakeholder’s degree of concern or attention toward the project",
+      "correct": "A stakeholder’s degree of concern or attention toward the project",
+      "distractors": [
+        "Their formal authority over project decisions",
+        "Their salary band",
+        "Their support for the project in every case"
+      ],
+      "teach": "Power concerns authority/influence.\n\nInterest is not the same as agreement. Someone who strongly opposes the project may be highly interested."
+    },
+    {
+      "id": "464-v060",
+      "source": 52,
+      "section": 3,
+      "term": "CCB",
+      "exp": "Change Control Board",
+      "q": "What does CCB mean in project management?",
+      "answer": "An authorized group deciding proposed project changes",
+      "correct": "An authorized group deciding proposed project changes",
+      "distractors": [
+        "The team that approves only staff vacations",
+        "A list of all product requirements",
+        "The tool that automatically implements every request"
+      ],
+      "teach": "A change control system defines how changes are requested, assessed, decided, documented, and communicated.\n\nA request is not yet approval. Documenting the decision lets everyone work from the same authorized version."
+    },
+    {
+      "id": "464-v061",
+      "source": 53,
+      "section": 3,
+      "term": "Configuration management",
+      "exp": "",
+      "q": "What does Configuration management mean in project management?",
+      "answer": "Control of product characteristics, versions, status, and conformance",
+      "correct": "Control of product characteristics, versions, status, and conformance",
+      "distractors": [
+        "Only approval of the business investment",
+        "Only the ranking of stakeholder interest",
+        "Only the calculation of financial return"
+      ],
+      "teach": "Configuration management identifies and controls product characteristics and versions, records/report changes, and checks conformance with requirements.\n\nA version is a specific state of an item. If testers and developers use different versions, results may be misleading."
+    },
+    {
+      "id": "464-v062",
+      "source": 56,
+      "section": 10,
+      "term": "ML",
+      "exp": "Machine Learning",
+      "q": "What does ML mean in project management?",
+      "answer": "Methods that learn patterns from data for tasks such as prediction",
+      "correct": "Methods that learn patterns from data for tasks such as prediction",
+      "distractors": [
+        "A fixed rule manually written for every possible case",
+        "Only software that stores files",
+        "Only a system that generates pictures"
+      ],
+      "teach": "Machine learning learns patterns from data for tasks such as prediction or classification.\n\nTraining means adjusting a model using examples. Prediction means applying learned patterns to new input; it is not a guarantee of truth."
+    },
+    {
+      "id": "464-v063",
+      "source": 56,
+      "section": 10,
+      "term": "Deep learning",
+      "exp": "",
+      "q": "What does Deep learning mean in project management?",
+      "answer": "Machine learning using multi-layer neural networks",
+      "correct": "Machine learning using multi-layer neural networks",
+      "distractors": [
+        "A category containing every kind of machine learning",
+        "Only a human studying data carefully",
+        "A database with many tables"
+      ],
+      "teach": "Machine learning learns patterns from data for tasks such as prediction or classification.\n\nTraining means adjusting a model using examples. Prediction means applying learned patterns to new input; it is not a guarantee of truth."
+    },
+    {
+      "id": "464-v064",
+      "source": 56,
+      "section": 10,
+      "term": "NLP",
+      "exp": "Natural Language Processing",
+      "q": "What does NLP mean in project management?",
+      "answer": "Computational methods for processing human language",
+      "correct": "Computational methods for processing human language",
+      "distractors": [
+        "Only the physical networking of computers",
+        "The project’s net present value",
+        "A rule prohibiting language generation"
+      ],
+      "teach": "Machine learning learns patterns from data for tasks such as prediction or classification.\n\nTraining means adjusting a model using examples. Prediction means applying learned patterns to new input; it is not a guarantee of truth."
+    },
+    {
+      "id": "464-v065",
+      "source": 57,
+      "section": 10,
+      "term": "LLM",
+      "exp": "Large Language Model",
+      "q": "What does LLM mean in project management?",
+      "answer": "A large model trained on language-related data for processing or generating text",
+      "correct": "A large model trained on language-related data for processing or generating text",
+      "distractors": [
+        "A guarantee that generated facts are verified",
+        "Any program using a fixed spreadsheet formula",
+        "Only an autonomous agent with tool permissions"
+      ],
+      "teach": "Generative AI produces content.\n\nA convincing sentence is not evidence. Check names, numbers, reasoning, and sources before using generated material."
+    },
+    {
+      "id": "464-v066",
+      "source": 57,
+      "section": 10,
+      "term": "Generative AI",
+      "exp": "Generative Artificial Intelligence",
+      "q": "What does Generative AI mean in project management?",
+      "answer": "AI that produces content based on learned patterns and input",
+      "correct": "AI that produces content based on learned patterns and input",
+      "distractors": [
+        "Only a system assigning fixed labels to data",
+        "Any system guaranteed to act autonomously",
+        "A method that cannot generate text or images"
+      ],
+      "teach": "Generative AI produces content.\n\nA convincing sentence is not evidence. Check names, numbers, reasoning, and sources before using generated material."
+    },
+    {
+      "id": "464-v067",
+      "source": 58,
+      "section": 10,
+      "term": "Agentic AI",
+      "exp": "Agentic Artificial Intelligence",
+      "q": "What does Agentic AI mean in project management?",
+      "answer": "AI oriented toward goals and choosing or executing actions within permissions",
+      "correct": "AI oriented toward goals and choosing or executing actions within permissions",
+      "distractors": [
+        "Only a system producing one passive draft",
+        "Any tool that has unlimited authority",
+        "A guarantee that no human oversight is needed"
+      ],
+      "teach": "Generative AI emphasizes creating content from input.\n\nGenerating a draft and sending it are different actions. Tool access and permission boundaries determine what an agent can actually do."
+    },
+    {
+      "id": "464-v068",
+      "source": 58,
+      "section": 10,
+      "term": "Autonomy",
+      "exp": "",
+      "q": "What does Autonomy mean in project management?",
+      "answer": "The degree of independent action a system can take",
+      "correct": "The degree of independent action a system can take",
+      "distractors": [
+        "The accuracy of every answer by definition",
+        "The size of the training dataset",
+        "The number of words generated"
+      ],
+      "teach": "Generative AI emphasizes creating content from input.\n\nGenerating a draft and sending it are different actions. Tool access and permission boundaries determine what an agent can actually do."
+    },
+    {
+      "id": "464-v069",
+      "source": 66,
+      "section": 10,
+      "term": "Hallucination",
+      "exp": "",
+      "q": "What does Hallucination mean in project management?",
+      "answer": "Generated content that is unsupported or wrong despite sounding plausible",
+      "correct": "Generated content that is unsupported or wrong despite sounding plausible",
+      "distractors": [
+        "An authorized user request to change a goal",
+        "Only a malicious instruction in retrieved text",
+        "Any disagreement between two real stakeholders"
+      ],
+      "teach": "Hallucination is generated content that is unsupported or wrong despite sounding plausible.\n\nA document can contain instructions meant to manipulate a tool. Reading that document does not authorize obeying those instructions."
+    },
+    {
+      "id": "464-v070",
+      "source": 66,
+      "section": 10,
+      "term": "Prompt injection",
+      "exp": "",
+      "q": "What does Prompt injection mean in project management?",
+      "answer": "Untrusted content attempting to redirect an AI system’s instructions or actions",
+      "correct": "Untrusted content attempting to redirect an AI system’s instructions or actions",
+      "distractors": [
+        "Any ordinary user asking an allowed question",
+        "Only an accidental calculation error",
+        "A model’s correct summary of a source"
+      ],
+      "teach": "Hallucination is generated content that is unsupported or wrong despite sounding plausible.\n\nA document can contain instructions meant to manipulate a tool. Reading that document does not authorize obeying those instructions."
+    },
+    {
+      "id": "464-v071",
+      "source": 69,
+      "section": 10,
+      "term": "Bias",
+      "exp": "",
+      "q": "What does Bias mean in project management?",
+      "answer": "A systematic tendency that can produce skewed or unfair outcomes",
+      "correct": "A systematic tendency that can produce skewed or unfair outcomes",
+      "distractors": [
+        "Any random error with no pattern",
+        "A guarantee that all groups benefit equally",
+        "An explanation of the system’s limitations"
+      ],
+      "teach": "Bias is a systematic tendency that can create unfair outcomes.\n\nA model can repeat patterns in its data that should not drive today’s decisions. Equal-looking code does not prove equal outcomes."
+    },
+    {
+      "id": "464-v072",
+      "source": 69,
+      "section": 10,
+      "term": "Accountability",
+      "exp": "",
+      "q": "What does Accountability mean in project management?",
+      "answer": "Owning decisions, actions, and their consequences",
+      "correct": "Owning decisions, actions, and their consequences",
+      "distractors": [
+        "Passing all responsibility to software",
+        "Keeping decisions hidden from affected people",
+        "Counting only the number of completed tasks"
+      ],
+      "teach": "Bias is a systematic tendency that can create unfair outcomes.\n\nA model can repeat patterns in its data that should not drive today’s decisions. Equal-looking code does not prove equal outcomes."
+    },
+    {
+      "id": "464-v073",
+      "source": 69,
+      "section": 10,
+      "term": "Transparency",
+      "exp": "",
+      "q": "What does Transparency mean in project management?",
+      "answer": "Making relevant use, limits, and decision processes understandable",
+      "correct": "Making relevant use, limits, and decision processes understandable",
+      "distractors": [
+        "Releasing all private data publicly",
+        "Guaranteeing that every prediction is correct",
+        "Removing humans from all decisions"
+      ],
+      "teach": "Bias is a systematic tendency that can create unfair outcomes.\n\nA model can repeat patterns in its data that should not drive today’s decisions. Equal-looking code does not prove equal outcomes."
+    },
+    {
+      "id": "464-v074",
+      "source": 64,
+      "section": 10,
+      "term": "Inference",
+      "exp": "",
+      "q": "What does Inference mean in project management?",
+      "answer": "Using a trained model to produce an output",
+      "correct": "Using a trained model to produce an output",
+      "distractors": [
+        "The earlier process of training the model only",
+        "A guarantee that output is true",
+        "The physical building housing servers"
+      ],
+      "teach": "AI workloads often require dense computing, accelerators, power, cooling, and networking.\n\nInference means running a trained model to get an output. Local water stress can matter even if a national total looks small."
+    },
+    {
+      "id": "464-v075",
+      "source": 71,
+      "section": 10,
+      "term": "PMI-CPMAI",
+      "exp": "PMI Certified Professional in Managing AI",
+      "q": "What does PMI-CPMAI mean in project management?",
+      "answer": "A credential focused on managing AI projects",
+      "correct": "A credential focused on managing AI projects",
+      "distractors": [
+        "A tool for writing project code automatically",
+        "A project-specific charter",
+        "A certification that replaces all data evaluation"
+      ],
+      "teach": "An AI project delivers an AI capability; AI-assisted project management uses AI tools to help manage work.\n\nA model may perform well in a test and worse after deployment if real data changes. Plan how performance and harms will be monitored, not only how the first model will be trained."
+    }
+  ],
+  "checks": [
+    {
+      "id": "464-c001",
+      "source": 2,
+      "section": 1,
+      "q": "A team replaces the university’s LMS over nine months. Project or operations?",
+      "correct": "Project",
+      "answer": "Project",
+      "distractors": [
+        "Operations",
+        "Portfolio governance only",
+        "A permanent functional department"
+      ],
+      "teach": "This is a temporary effort creating a particular replacement, even though the new platform will later be operated continuously."
+    },
+    {
+      "id": "464-c002",
+      "source": 5,
+      "section": 1,
+      "q": "A sponsor adds features but keeps the same deadline. What should happen first?",
+      "correct": "Assess impacts and discuss trade-offs through change control",
+      "answer": "Assess impacts and discuss trade-offs through change control",
+      "distractors": [
+        "Promise unchanged cost and quality automatically",
+        "Silently skip testing",
+        "Add the work without updating any plan"
+      ],
+      "teach": "More scope can require time or resources. Understand the connected effects before committing."
+    },
+    {
+      "id": "464-c003",
+      "source": 9,
+      "section": 1,
+      "q": "A person opposes a project because it changes their job. Are they a stakeholder?",
+      "correct": "Yes",
+      "answer": "Yes",
+      "distractors": [
+        "No, because they oppose it",
+        "Only if they fund it",
+        "Only if they join the project team"
+      ],
+      "teach": "Being affected is enough; resistance does not remove someone from consideration."
+    },
+    {
+      "id": "464-c004",
+      "source": 14,
+      "section": 1,
+      "q": "Several related projects share benefits that require coordination. What structure fits?",
+      "correct": "Program",
+      "answer": "Program",
+      "distractors": [
+        "Single routine operation",
+        "Independent task",
+        "A financial baseline"
+      ],
+      "teach": "Joint benefits and related work distinguish a program from an arbitrary list of projects."
+    },
+    {
+      "id": "464-c005",
+      "source": 15,
+      "section": 1,
+      "q": "The team compares actual progress to the schedule and acts on a delay. Which focus area?",
+      "correct": "Monitoring and Controlling",
+      "answer": "Monitoring and Controlling",
+      "distractors": [
+        "Initiating",
+        "Closing",
+        "Executing only"
+      ],
+      "teach": "The action combines measuring a difference and responding to it."
+    },
+    {
+      "id": "464-c006",
+      "source": 16,
+      "section": 1,
+      "q": "Who may approve major changes is most directly a question of which domain?",
+      "correct": "Governance",
+      "answer": "Governance",
+      "distractors": [
+        "Schedule",
+        "Scope",
+        "Resources"
+      ],
+      "teach": "Governance establishes decision authority and accountability."
+    },
+    {
+      "id": "464-c007",
+      "source": 18,
+      "section": 1,
+      "q": "A release adds a usable reporting feature. Which idea does this most directly illustrate?",
+      "correct": "Incremental delivery",
+      "answer": "Incremental delivery",
+      "distractors": [
+        "Only iteration of the same feature",
+        "Project cancellation",
+        "Formal authorization"
+      ],
+      "teach": "A new usable piece of capability is an increment; improving an existing solution through repetition is iteration."
+    },
+    {
+      "id": "464-c008",
+      "source": 20,
+      "section": 1,
+      "q": "Which Scrum event inspects how the team worked and identifies improvements?",
+      "correct": "Sprint Retrospective",
+      "answer": "Sprint Retrospective",
+      "distractors": [
+        "Sprint Review",
+        "Sprint Planning",
+        "Daily Scrum only"
+      ],
+      "teach": "The Retrospective focuses on team effectiveness. The Review inspects the product outcome with stakeholders."
+    },
+    {
+      "id": "464-c009",
+      "source": 20,
+      "section": 1,
+      "q": "Who is accountable for maximizing product value and effective Product Backlog management?",
+      "correct": "Product Owner",
+      "answer": "Product Owner",
+      "distractors": [
+        "Scrum Master",
+        "Steering committee by definition",
+        "Any individual Developer by definition"
+      ],
+      "teach": "The Product Owner orders and manages the product work in pursuit of value; the Scrum Master has a different accountability."
+    },
+    {
+      "id": "464-c010",
+      "source": 24,
+      "section": 2,
+      "q": "Informal coalitions compete for a scarce budget. Which organizational frame is most relevant?",
+      "correct": "Political",
+      "answer": "Political",
+      "distractors": [
+        "Structural only",
+        "Human resources only",
+        "Symbolic only"
+      ],
+      "teach": "The political frame examines interests, influence, resource conflict, and coalitions."
+    },
+    {
+      "id": "464-c011",
+      "source": 25,
+      "section": 2,
+      "q": "A developer reports to an engineering manager and a project manager. Which structure fits?",
+      "correct": "Matrix",
+      "answer": "Matrix",
+      "distractors": [
+        "Purely projectized only",
+        "Purely functional with no cross-project authority",
+        "A portfolio baseline"
+      ],
+      "teach": "Matrix structures share authority between functional and project lines."
+    },
+    {
+      "id": "464-c012",
+      "source": 28,
+      "section": 2,
+      "q": "A new competitor enters the market. Which SWOT category fits?",
+      "correct": "Threat",
+      "answer": "Threat",
+      "distractors": [
+        "Strength",
+        "Weakness",
+        "Opportunity in every case"
+      ],
+      "teach": "The competitor is an external condition with potential negative impact, so it is a threat in this scenario."
+    },
+    {
+      "id": "464-c013",
+      "source": 30,
+      "section": 2,
+      "q": "Weights 0.10, 0.60, 0.30 with ratings 1, 10, 5 give what total?",
+      "correct": "7.6",
+      "answer": "7.6",
+      "distractors": [
+        "16",
+        "5.33",
+        "6.1"
+      ],
+      "teach": "Multiply pairs: 0.1 + 6 + 1.5 = 7.6. Do not use the unweighted sum or average."
+    },
+    {
+      "id": "464-c014",
+      "source": 32,
+      "section": 2,
+      "q": "You must select one project using NPV: A = $10K, B = $20K, C = $30K. Which should you choose?",
+      "correct": "Project C",
+      "answer": "Project C",
+      "distractors": [
+        "Project A",
+        "Project B",
+        "Cannot decide without recalculating the discount rates"
+      ],
+      "teach": "This reproduces the slide 30 selection scenario. The NPVs are already calculated; C has the highest value under the stated criterion."
+    },
+    {
+      "id": "464-c015",
+      "source": 33,
+      "section": 2,
+      "q": "PV benefits are $150,000 and PV costs are $100,000. What is discounted ROI?",
+      "correct": "50%",
+      "answer": "50%",
+      "distractors": [
+        "150%",
+        "33.33%",
+        "−50%"
+      ],
+      "teach": "Subtract cost to find $50,000 net return, then divide by $100,000 cost and multiply by 100."
+    },
+    {
+      "id": "464-c016",
+      "source": 34,
+      "section": 2,
+      "q": "Cumulative net cash flow is still negative at the last stated year. What can you say?",
+      "correct": "Payback has not occurred within the stated horizon",
+      "answer": "Payback has not occurred within the stated horizon",
+      "distractors": [
+        "Payback occurred in the first profitable year",
+        "ROI must be exactly zero",
+        "Future payback is guaranteed next year"
+      ],
+      "teach": "One profitable year does not necessarily recover earlier costs. Do not invent later cash flows."
+    },
+    {
+      "id": "464-c017",
+      "source": 36,
+      "section": 2,
+      "q": "The team has already spent heavily, but remaining benefits are lower than remaining costs. What matters for continuation?",
+      "correct": "Future incremental value and risks, not sunk costs alone",
+      "answer": "Future incremental value and risks, not sunk costs alone",
+      "distractors": [
+        "Money already spent guarantees continuation",
+        "The original forecast must be treated as certain",
+        "Every project must continue until its budget is exhausted"
+      ],
+      "teach": "Prior spending cannot be undone by continuing. Reassess what the next decision will cost and achieve."
+    },
+    {
+      "id": "464-c018",
+      "source": 42,
+      "section": 3,
+      "q": "Which document compares alternatives and explains why an investment is worthwhile?",
+      "correct": "Business case",
+      "answer": "Business case",
+      "distractors": [
+        "Charter",
+        "Stakeholder register",
+        "Configuration status report"
+      ],
+      "teach": "Justification precedes authorization. A business case provides the value argument."
+    },
+    {
+      "id": "464-c019",
+      "source": 43,
+      "section": 3,
+      "q": "Which document formally recognizes the project and authorizes it?",
+      "correct": "Project charter",
+      "answer": "Project charter",
+      "distractors": [
+        "Business case alone",
+        "Meeting minutes alone",
+        "Stakeholder engagement matrix"
+      ],
+      "teach": "The authorized charter establishes official permission and high-level authority."
+    },
+    {
+      "id": "464-c020",
+      "source": 41,
+      "section": 3,
+      "q": "The current forecast moves a delivery date. Does that automatically erase the approved baseline?",
+      "correct": "No; baseline changes require the agreed authorization process",
+      "answer": "No; baseline changes require the agreed authorization process",
+      "distractors": [
+        "Yes; every forecast silently replaces the baseline",
+        "Yes; baselines contain only actual results",
+        "No; an approved baseline can never change under any circumstances"
+      ],
+      "teach": "Forecasts describe current expectations. Baselines preserve approved reference points unless formally changed."
+    },
+    {
+      "id": "464-c021",
+      "source": 48,
+      "section": 3,
+      "q": "A stakeholder has high power and low interest. What is the usual grid strategy?",
+      "correct": "Keep satisfied",
+      "answer": "Keep satisfied",
+      "distractors": [
+        "Manage closely",
+        "Keep informed",
+        "Monitor only"
+      ],
+      "teach": "Satisfy the influential stakeholder’s needs without treating them as requiring the same detailed involvement as high-interest stakeholders."
+    },
+    {
+      "id": "464-c022",
+      "source": 48,
+      "section": 3,
+      "q": "A stakeholder has low power and high interest. What is the usual strategy?",
+      "correct": "Keep informed",
+      "answer": "Keep informed",
+      "distractors": [
+        "Keep satisfied",
+        "Manage closely by grid classification",
+        "Monitor with minimal updates only"
+      ],
+      "teach": "They care about the project and need relevant updates, even without strong decision authority."
+    },
+    {
+      "id": "464-c023",
+      "source": 48,
+      "section": 3,
+      "q": "A stakeholder has high power and high interest. What is the usual strategy?",
+      "correct": "Manage closely",
+      "answer": "Manage closely",
+      "distractors": [
+        "Keep informed only",
+        "Monitor only",
+        "Keep satisfied with minimal involvement"
+      ],
+      "teach": "Their influence and involvement both call for close engagement."
+    },
+    {
+      "id": "464-c024",
+      "source": 48,
+      "section": 3,
+      "q": "A stakeholder has low power and low interest. What is the usual strategy?",
+      "correct": "Monitor appropriately",
+      "answer": "Monitor appropriately",
+      "distractors": [
+        "Manage closely by default",
+        "Keep satisfied as the main decision maker",
+        "Treat them as highly interested regardless of evidence"
+      ],
+      "teach": "Monitor for changes and relevant impacts. Low classification does not justify ignoring ethical obligations."
+    },
+    {
+      "id": "464-c025",
+      "source": 51,
+      "section": 3,
+      "q": "A requested change improves user access but adds testing work. Is it automatically bad?",
+      "correct": "No; evaluate its value and full impacts through the agreed controls",
+      "answer": "No; evaluate its value and full impacts through the agreed controls",
+      "distractors": [
+        "Yes; all changes indicate failure",
+        "No; implement immediately without review",
+        "Yes; benefits cannot justify changes"
+      ],
+      "teach": "Integrated change control allows beneficial changes while making consequences and approvals clear."
+    },
+    {
+      "id": "464-c026",
+      "source": 60,
+      "section": 10,
+      "q": "A robot remembers areas it cannot currently see. Which distinguishing capability is shown?",
+      "correct": "An internal model/state",
+      "answer": "An internal model/state",
+      "distractors": [
+        "Only a current-input reflex",
+        "Guaranteed learning from experience",
+        "A utility score in every case"
+      ],
+      "teach": "Model-based behavior uses a representation beyond the current observation. It does not automatically imply learning."
+    },
+    {
+      "id": "464-c027",
+      "source": 62,
+      "section": 10,
+      "q": "Two routes reach the destination; an agent compares time and fuel cost. Which type best fits?",
+      "correct": "Utility-based",
+      "answer": "Utility-based",
+      "distractors": [
+        "Simple reflex",
+        "Goal-based with no preference comparison",
+        "A nonacting text generator only"
+      ],
+      "teach": "The goal is shared, but utility ranks alternative outcomes according to preferences."
+    },
+    {
+      "id": "464-c028",
+      "source": 66,
+      "section": 10,
+      "q": "An uploaded document tells an AI tool to reveal secrets. How should the text be treated?",
+      "correct": "As untrusted document content, not authorization",
+      "answer": "As untrusted document content, not authorization",
+      "distractors": [
+        "As a higher-priority instruction because it is in a file",
+        "As proof that disclosure is permitted",
+        "As a normal financial calculation"
+      ],
+      "teach": "A source document cannot grant permission to disclose data or override the actual task."
+    },
+    {
+      "id": "464-c029",
+      "source": 68,
+      "section": 10,
+      "q": "A tool’s training opt-out is enabled. What is still necessary?",
+      "correct": "Check authorized use, retention, access, and the exact policy",
+      "answer": "Check authorized use, retention, access, and the exact policy",
+      "distractors": [
+        "Assume all earlier data has been deleted everywhere",
+        "Assume no information is transmitted to the provider",
+        "Assume every account has identical protections"
+      ],
+      "teach": "Training, retention, access, and deletion are separate policy questions."
+    },
+    {
+      "id": "464-c030",
+      "source": 71,
+      "section": 10,
+      "q": "AI drafts minutes for a building renovation. Does that alone make the deliverable an AI system?",
+      "correct": "No",
+      "answer": "No",
+      "distractors": [
+        "Yes, because any use of AI changes the deliverable",
+        "Yes, if the draft is long",
+        "Only if the minutes are emailed"
+      ],
+      "teach": "This is AI-assisted management. An AI project’s result includes an AI capability being built or deployed."
+    }
+  ],
+  "cloze": [
+    {
+      "id": "464-blank1",
+      "source": 14,
+      "section": 1,
+      "q": "A ____ coordinates related work for joint benefits; a ____ selects work for strategic objectives.",
+      "correct": "program; portfolio",
+      "answer": "program; portfolio",
+      "distractors": [
+        "portfolio; program",
+        "project; operation",
+        "baseline; charter"
+      ],
+      "teach": "Related-benefit coordination and strategic investment selection are different management purposes."
+    },
+    {
+      "id": "464-blank2",
+      "source": 42,
+      "section": 3,
+      "q": "The business case ____ the project; the charter ____ it.",
+      "correct": "justifies; authorizes",
+      "answer": "justifies; authorizes",
+      "distractors": [
+        "authorizes; justifies",
+        "executes; closes",
+        "baselines; audits"
+      ],
+      "teach": "A good idea needs a value argument and then an authorized decision to proceed."
+    },
+    {
+      "id": "464-blank3",
+      "source": 48,
+      "section": 3,
+      "q": "High power + high interest = ____; low power + high interest = ____.",
+      "correct": "manage closely; keep informed",
+      "answer": "manage closely; keep informed",
+      "distractors": [
+        "keep informed; manage closely",
+        "monitor; keep satisfied",
+        "keep satisfied; monitor"
+      ],
+      "teach": "Power changes the engagement approach, while high interest still calls for relevant involvement or information."
+    },
+    {
+      "id": "464-blank4",
+      "source": 31,
+      "section": 2,
+      "q": "To find present value, divide the cash flow by ____.",
+      "correct": "(1 + r)^t",
+      "answer": "(1 + r)^t",
+      "distractors": [
+        "r × t",
+        "(1 − r) × t",
+        "cash flow × r"
+      ],
+      "teach": "Compounding is reversed by dividing by the growth factor for the number of periods."
+    },
+    {
+      "id": "464-blank5",
+      "source": 33,
+      "section": 2,
+      "q": "NPV is a ____ amount; ROI is a ____ relative to cost.",
+      "correct": "money; ratio",
+      "answer": "money; ratio",
+      "distractors": [
+        "time; money",
+        "ratio; time",
+        "count; schedule"
+      ],
+      "teach": "NPV expresses net present money. ROI compares net return to the investment denominator."
+    },
+    {
+      "id": "464-blank6",
+      "source": 56,
+      "section": 10,
+      "q": "Deep learning is a subset of ____; NLP concerns ____.",
+      "correct": "machine learning; human language",
+      "answer": "machine learning; human language",
+      "distractors": [
+        "human language; project finance",
+        "generative AI only; hardware",
+        "project management; neural hardware"
+      ],
+      "teach": "These terms describe different aspects of AI capabilities and can overlap."
+    },
+    {
+      "id": "464-blank7",
+      "source": 66,
+      "section": 10,
+      "q": "An invented citation is a ____; hostile instructions in retrieved text can be ____.",
+      "correct": "hallucination; prompt injection",
+      "answer": "hallucination; prompt injection",
+      "distractors": [
+        "prompt injection; a baseline",
+        "forecast; authorization",
+        "utility score; a charter"
+      ],
+      "teach": "A factual fabrication and an attempt to redirect instructions are different failures."
+    }
+  ],
+  "sorts": [
+    {
+      "id": "464-s1",
+      "source": 13,
+      "section": 1,
+      "q": "Build Tuckman’s team-development sequence",
+      "items": [
+        "Forming",
+        "Storming",
+        "Norming",
+        "Performing",
+        "Adjourning"
+      ],
+      "teach": "This is the usual teaching sequence. Real teams can return to earlier stages."
+    },
+    {
+      "id": "464-s2",
+      "source": 15,
+      "section": 1,
+      "q": "Arrange the five focus areas in their conventional listing",
+      "items": [
+        "Initiating",
+        "Planning",
+        "Executing",
+        "Monitoring and Controlling",
+        "Closing"
+      ],
+      "teach": "This orders the course list, not five strictly separated phases. Monitoring and Controlling overlaps with other work."
+    },
+    {
+      "id": "464-s3",
+      "source": 27,
+      "section": 2,
+      "q": "Strategy to selected projects",
+      "items": [
+        "Develop strategic plan",
+        "Analyze departmental needs",
+        "Propose projects",
+        "Authorize resource allocation"
+      ],
+      "teach": "Choose useful work based on goals and needs before committing resources."
+    },
+    {
+      "id": "464-s4",
+      "source": 30,
+      "section": 2,
+      "q": "Build a weighted-scoring evaluation",
+      "items": [
+        "Apply eligibility requirements",
+        "Choose criteria and weights",
+        "Rate each option consistently",
+        "Multiply each rating by its weight",
+        "Sum and compare weighted scores"
+      ],
+      "teach": "Eligibility comes first. A high score does not excuse failing a mandatory requirement."
+    },
+    {
+      "id": "464-s5",
+      "source": 52,
+      "section": 3,
+      "q": "Process a proposed change",
+      "items": [
+        "Record the request",
+        "Analyze connected impacts",
+        "Obtain authorized decision",
+        "Update approved documents if accepted",
+        "Communicate and implement the decision"
+      ],
+      "teach": "A request is not an approval. Use the organization’s actual control procedure; this is a simplified teaching flow."
+    },
+    {
+      "id": "464-s6",
+      "source": 31,
+      "section": 2,
+      "q": "Discount a cash flow",
+      "items": [
+        "Identify cash flow and time",
+        "Convert rate to a decimal",
+        "Calculate (1 + r)^t",
+        "Divide cash flow by the factor"
+      ],
+      "teach": "Time zero uses a factor of one. Keep period lengths consistent."
+    },
+    {
+      "id": "464-s7",
+      "source": 33,
+      "section": 2,
+      "q": "Calculate discounted ROI",
+      "items": [
+        "Calculate PV of benefits",
+        "Calculate PV of costs",
+        "Subtract PV costs from PV benefits",
+        "Divide net present return by PV costs",
+        "Multiply by 100 for percent"
+      ],
+      "teach": "The first two computations can be done in either order; this activity asks for this worked-example order. Net return must be computed before the ratio."
+    }
+  ],
+  "references": [
+    {
+      "title": "PMI · Project management framework (edition check)",
+      "url": "https://www.pmi.org/standards/pmbok",
+      "questions": [
+        15,
+        16
+      ]
+    },
+    {
+      "title": "The Scrum Guide",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "questions": [
+        20,
+        21
+      ]
+    },
+    {
+      "title": "Agile Manifesto",
+      "url": "https://agilemanifesto.org/",
+      "questions": [
+        19
+      ]
+    },
+    {
+      "title": "PMI · Code of Ethics and Professional Conduct",
+      "url": "https://www.pmi.org/-/media/pmi/documents/public/pdf/ethics/pmi-code-of-ethics.pdf",
+      "questions": [
+        55,
+        69
+      ]
+    },
+    {
+      "title": "IBM · Types of AI agents",
+      "url": "https://www.ibm.com/think/topics/ai-agent-types",
+      "questions": [
+        59,
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    {
+      "title": "PMI · CAPM",
+      "url": "https://www.pmi.org/certifications/certified-associate-capm",
+      "questions": [
+        22
+      ]
+    },
+    {
+      "title": "PMI · PMP",
+      "url": "https://www.pmi.org/certifications/project-management-pmp",
+      "questions": [
+        22
+      ]
+    },
+    {
+      "title": "PMI · Managing AI projects credential",
+      "url": "https://www.pmi.org/certifications/ai-project-management-cpmai",
+      "questions": [
+        71
+      ]
+    }
+  ],
+  "abbreviationDistractors": {
+    "SMART": [
+      "Specific Measurable Approved Relevant Timeless",
+      "Simple Managed Achievable Recorded Time-bound",
+      "Specific Measurable Agile Reliable Technical"
+    ],
+    "CIO": [
+      "Chief Infrastructure Operator",
+      "Corporate Information Officer",
+      "Chief Integration Organizer"
+    ],
+    "DevOps": [
+      "Development and Optimization",
+      "Device Operations",
+      "Delivery and Oversight"
+    ],
+    "MORE": [
+      "Manage objectives Own resources Restrict change Expand scope",
+      "Measure outputs Organize resources Record expenses Execute",
+      "Monitor operations Own requirements Reassess estimates Expand effort"
+    ],
+    "Definition of Done": [
+      "Description of Delivery",
+      "Definition of Development",
+      "Decision on Delivery"
+    ],
+    "PMI": [
+      "Project Management Initiative",
+      "Program Management Institute",
+      "Project Measurement Institute"
+    ],
+    "CAPM": [
+      "Certified Analyst in Project Management",
+      "Certified Associate in Program Management",
+      "Certified Agile Project Manager"
+    ],
+    "PMP": [
+      "Project Management Practitioner",
+      "Program Management Professional",
+      "Project Measurement Professional"
+    ],
+    "SWOT": [
+      "Strengths Workflows Outputs Tasks",
+      "Scope Weaknesses Opportunities Time",
+      "Strategy Work Operations Threats"
+    ],
+    "PV": [
+      "Projected Value",
+      "Planned Variance",
+      "Portfolio Value"
+    ],
+    "NPV": [
+      "Net Project Value",
+      "Nominal Present Value",
+      "Net Planned Variance"
+    ],
+    "ROI": [
+      "Return on Integration",
+      "Rate of Investment",
+      "Return on Implementation"
+    ],
+    "IRR": [
+      "Internal Revenue Ratio",
+      "Investment Return Ratio",
+      "Initial Rate of Return"
+    ],
+    "PMO": [
+      "Project Management Organization",
+      "Program Monitoring Office",
+      "Project Measurement Office"
+    ],
+    "CCB": [
+      "Change Coordination Board",
+      "Configuration Control Baseline",
+      "Change Compliance Bureau"
+    ],
+    "ML": [
+      "Model Logic",
+      "Machine Language",
+      "Managed Learning"
+    ],
+    "NLP": [
+      "Natural Learning Process",
+      "Neural Language Prediction",
+      "Network Language Processing"
+    ],
+    "LLM": [
+      "Large Learning Machine",
+      "Layered Language Method",
+      "Logical Language Model"
+    ],
+    "Generative AI": [
+      "General Artificial Intelligence",
+      "Generated Automated Information",
+      "Generative Adaptive Integration"
+    ],
+    "Agentic AI": [
+      "Automatic Artificial Intelligence",
+      "Agentic Automated Information",
+      "Adaptive Agent Integration"
+    ],
+    "PMI-CPMAI": [
+      "PMI Certified Practitioner in Modeling AI",
+      "PMI Certified Professional in Monitoring AI",
+      "PMI Certified Program Manager for AI"
+    ]
+  }
+}
