@@ -83,3 +83,20 @@ Progress, XP, and review dates are stored in the current browser under localStor
 ## Vercel publication
 
 The current Vercel deployment is https://studying-gamma.vercel.app/ and uses the GitHub repository `wynonaj/studying`. Publish source changes to `main` with `dist` as the static output directory. The existing Sites manifest is retained for compatibility; Vercel does not require it.
+
+## CIS 304 Module I
+
+The header now switches between CIS 320 (`index.html`) and CIS 304 (`cis304.html`). The new class follows the same visual theme but has its own script, content, activities, and `cis304-module1-v1` browser storage. CIS 320 retains `cis320-v1` unchanged.
+
+CIS 304 includes all **51 original study-guide prompts**, organized into Foundations (10), Business Processes (16), Architecture & Infrastructure (11), and Enterprise Systems (14). Every prompt has a complete answer, three-step teaching flow, concrete example, flashcard, and multiple-choice practice. Additional banks contain 64 terms, 31 focused checks, 11 choice-based cloze cards, 20 abbreviation word banks, and six sorting sequences. The formula lab generates new scenarios and teaches the slide 20 equations: PI/AI, AO/PO, AO/AI. The reading library preserves all 40 assigned/extra links.
+
+- `dist/cis304-content.json`: all authored content and reading/reference links.
+- `dist/cis304.js`: lessons, quizzes, retries, exams, flashcards, formula engine, and interactive concept views.
+- `dist/classes.css`: class switch and scoped CIS 304 styling.
+- `scripts/review/cis304/guide-prompts.json`: exact source prompt checklist.
+- `scripts/review/cis304/slides-text.txt`: slide text plus embedded SmartArt text (including formulas).
+- `tests/cis304.cjs`: coverage, choice integrity, formulas, retry/scoring, flash flips, rendering, asset hashes, and progress isolation checks.
+
+To regenerate the authored content, run `python3 scripts/review/cis304/build_content.py` followed by `python3 scripts/review/cis304/enrich_content.py`. JSON is fetched without caching. After changing JS or CSS, update the SHA-256 first-12-character version in the HTML pages. `npm test` runs both class suites; `npm run check` checks both class scripts. Static deployment still uses the entire `dist` directory, so both class pages deploy together.
+
+Source notes: questions follow the supplied Fall 2026 study guide, supplemented by the Module I slides and linked references. The EA-properties answer explicitly identifies a synthesis of slides 33–36, because a separate fixed list was not supplied. SOA retains the course’s cloud association while explaining that reusable services need not be cloud-hosted. Linked videos are not represented as verified transcripts. Content is a study aid, not an instructor-issued answer key.

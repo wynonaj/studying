@@ -1,0 +1,561 @@
+SLIDE 1
+Module I
+ Architecture, Infrastructure, Business Processes
+
+SLIDE 2
+CIS 304 Module I Slide Set
+Use this slide to help guide you through the assigned readings as you create your study guide.
+2
+
+SLIDE 3
+Objectives: Module I
+Describe, compare, and contrast the notions of and relationships between strategy, architecture, and infrastructure.
+Describe, compare, and contrast the notion of business process and its key components: Actors, Inputs, Outputs, Actions / activities / subprocesses, and Decisions
+Analyze and model as-is business processes at high (subprocess) and low (activity/action) levels
+Understand syntax and semantics of business process models
+Apply appropriate visualizations (activity diagrams)
+Propose and justify business process improvement or redesign
+Model to-be process at high (subprocess) and low (activity/action) levels
+3
+
+SLIDE 4
+Readings 0: Refresher Content
+4
+
+SLIDE 5
+The DIKW Model Explains the Relationship Among Data, Information, Knowledge, and  Wisdom
+Data: individual facts, figures, statistics, etc.
+Information: processed data (sort, categorize, organize, analyze, etc.)
+Knowledge: ability to apply information
+Wisdom: ability to assess situations, make decisions, and solve problems
+5
+https://en.wikipedia.org/wiki/DIKW_pyramid
+By Matthew.viel - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=110373265
+
+SLIDE 6
+All Information Systems (IS) have Five Components
+A discrete set of resources organized for the collection, processing, maintenance, use, sharing, dissemination, or disposition of informationhttps://csrc.nist.gov/glossary/term/information_system
+6
+This Photo by Unknown Author is licensed under CC BY-NC
+This Photo by Unknown Author is licensed under CC BY-ND
+Hardware
+Software
+Data
+People
+Processes
+
+SLIDE 7
+A Business Strategy is …
+Big picture plans
+Long-term goals
+Broad set of planned actions
+Why?
+To achieve and maintain competitive advantage
+7
+This Photo by Unknown Author is licensed under CC BY-SA-NC
+the "...broad formula for how a business is going to compete, what its goals should be, and what policies will be needed to carry out those goals" and the "...combination of the ends (goals) for which the firm is striving and the means (policies) by which it is seeking to get there."
+--Michael Porter
+
+SLIDE 8
+Porter’s Common Strategies
+Two Common Strategies:
+Cost leadership
+Differentiation
+8
+https://www.toolshero.com/strategy/porters-generic-strategies/
+
+SLIDE 9
+How Does IS Enable Competitive Advantage?
+9
+Strategy
+IS Enables
+Cost leadership
+More efficient business processes, cutting costs
+Differentiation
+New/innovative/different products & services
+
+SLIDE 10
+A Business Model is the Way an Organization Conducts Business
+Business models are:
+An element of the business strategy
+A method to describe and classify the business
+The approach the business uses to create and deliver value
+Emerging technologies enable new and innovative models
+When choosing the technology infrastructure for a business model:
+Consider standardizations and/or integrations of Data, processes, decisions
+Ensure alignment with the business model
+10
+https://en.wikipedia.org/wiki/Business_model
+
+SLIDE 11
+A Few Business Model Examples
+11
+(see https://en.wikipedia.org/wiki/Business_model)
+
+SLIDE 12
+Readings 1: Documenting Business Processes
+12
+
+SLIDE 13
+Systems Thinking
+DSRP: Four simple components of our thinking
+We make Distinctions about things based on what they are and what they are not
+We organize things into Systems, each made of parts and of wholes
+We recognize Relationships among things by how they interact
+We look at things from different Perspectives, from varying points of view depending on the context
+13
+https://www.youtube.com/watch?v=-sfiReUu3o0
+
+SLIDE 14
+Distinctions, Systems, Relationships, Perspectives
+14
+
+SLIDE 15
+Input-Process-Output (IPO)Inputs are Processed to Produce Outputs
+Data – raw facts, figures, statistics, etc.
+Information – the result of an action on the data, e.g., sorting, categorizing, organizing, analyzing, etc.
+Data that is Input into a Process is Output as Information
+15
+
+SLIDE 16
+Business Processes
+A set of tasks or activities that process inputs to produce desired outputs
+“Work” that is done by an entity (human or information system)
+“A collection of related, structured activities or tasks by people or equipment in which a specific sequence produces a service or product (serves a particular business goal) for a particular customer or customers.”
+“A business process may often be visualized (modeled) as a flowchart of a sequence of activities with interleaving decision points or as a process matrix of a sequence of activities with relevance rules based on data in the process.”https://en.wikipedia.org/wiki/Business_process
+16
+
+SLIDE 17
+Why Model Business Processes?
+Visually shows how work gets done
+Pictures are a common language to all stakeholders
+Maps the steps needed, choices made, actors and roles participating, responsibilities, and  information flows
+Helps to identify areas where there are problems and where to make improvements
+17
+https://www.6sigma.us/business-process-management-articles/process-modeling/
+
+SLIDE 18
+UML Activity Diagrams
+“The Unified Modeling Language (UML) was created to forge a common, semantically and syntactically rich visual modeling language”
+UML Activity Diagrams can be used to model processes
+A UML Activity Diagram shows the activities performed by the participants of a process
+High-level models show the “big picture” of the process
+Low-level models show the details including actors, sequence, decisions, etc.
+18
+https://www.lucidchart.com/pages/tutorial/uml
+
+SLIDE 19
+How to Measure Processes
+Common definitions:
+Process efficiency – doing things well
+Output costs don’t surpass the input costs
+Process effectiveness – doing the right things
+Processes support/are aligned with organizational objectives
+BUT processes change over time
+Processes are designed with certain expectations
+Ideally, they get better, or maybe they don’t
+How do you know? How is that measured?
+19
+
+SLIDE 20
+Equations to Measure Efficiency, Effectiveness, and Productivity
+20
+PI
+PO
+AI
+AO
+
+SLIDE 21
+Interrelated Processes Common to all Businesses
+21
+Procurement
+Fulfillment
+Production
+Accounting
+
+SLIDE 22
+What Does Fulfillment Include?
+Purpose is to exchange things of value – provide goods or services and receive payment
+List of activities often included:
+Receive customer order
+Market products
+Create a Sales Order
+Pick, Pack, and Ship
+Select and inspect products to be delivered
+Prepare goods for delivery
+Deliver goods or services
+Receive payment for goods
+22
+Customer
+Seller
+
+SLIDE 23
+What is the Purpose of a Sales Order?
+A data record documenting the management of delivering goods / services to a customer / client
+23
+
+SLIDE 24
+What Does Procurement Include?
+Purpose is to exchange things of value – provide payment and receive goods or services
+List of activities often included:
+Monitor resources to identify needs
+If applicable, internally request resources (after identifying valid need)
+Create Purchase Order with selected vendor
+Send Purchase Order
+Receive and inspect resources; if  applicable, store and/or maintain resources
+Provide payment for resources
+24
+Buyer
+Vendor
+
+SLIDE 25
+What is the difference between a Purchase Requisition and a Purchase Order?
+A data record documenting the internal request for goods / services to be ordered
+A data record documenting the management of receiving goods / services from a vendor
+25
+
+SLIDE 26
+Fulfillment vs Procurement Invoices: How to they Differ?
+Sales Invoice – term used in the Fulfillment process
+A Sales Invoice is “sent” to the customer
+It is a data record documenting the request for and receipt of payments from customers / clients
+Can serve as proof of purchase
+Vendor Invoice – term used in the Procurement process
+A Vendor Invoice is “received” from the vendor
+It is a request for payment to the vendor
+Can serve as proof of purchase
+26
+
+SLIDE 27
+27
+
+SLIDE 28
+Business Process Management (BPM)
+Managing processes
+Build and execute
+Monitor and evaluate
+Update and improve
+28
+Vector Illustration Business Process Management Life Cycle. Business Management Concept Stock Vector - Illustration of vector, life: 204805509 (dreamstime.com)
+
+SLIDE 29
+Business Process Reengineering
+Term coined by Hammer and Champy in “Reengineering the Corporation”
+Improving time management, lowering costs, and increasing quality of service requires organizations to rethink and streamline their work processes
+Radical redesigning and reorganizing of business processes is necessary
+Information technology is a key enabler
+29
+
+SLIDE 30
+BPI vs BPR
+30
+
+SLIDE 31
+Readings 2: Enterprise Architecture and Infrastructure
+31
+
+SLIDE 32
+Enterprise
+A single (or a collection of) businesses / organizations that:
+Share common goals
+Work together to produce products and services
+32
+https://en.wikipedia.org/wiki/Enterprise_architecture
+https://www.cleo.com/blog/knowledge-base-enterprise-integration
+
+SLIDE 33
+What is Enterprise Architecture?
+Broad design, plan or blueprint for a business, applications, data, technologies, enterprise, etc.
+Supports optimal design and re-design of organizational structures
+Enforces business process standardization and integration
+Prevents “hairball architecture” from resulting
+33
+
+SLIDE 34
+The “Layers” of Enterprise Architecture
+Business Architecture – The business strategy, governance, organization, and key business processes.
+Data Architecture – The structure of an organization’s logical and physical data assets and data management resources.
+Application Architecture – A blueprint for the individual applications to be deployed, their interactions, and their relationships to the core business processes of the organization.
+Technology Architecture – The logical software and hardware capabilities that are required to support the deployment of business, data, and application services. This includes IT infrastructure, middleware, networks, communications, processing, and standards.
+34
+https://en.wikipedia.org/wiki/Enterprise_architecture_framework
+
+SLIDE 35
+Big Picture: Strategy drives Architecture which drives Infrastructure
+35
+
+SLIDE 36
+Strategy Drives Architecture
+Strategy is an Abstract Plan
+Goals are extracted fromstrategy
+Goals are aligned with business requirements
+Business requirements lead to Architectural  requirements
+Architectural requirements ARE the Architecture
+Architecture is the blueprint for the organization
+36
+
+SLIDE 37
+IT Architecture
+The organization and management of infrastructure requires an appropriate architecture
+Think of architecture as a “blueprint”
+Common  types of IT Architecture include:
+Centralized
+Decentralized
+SOA
+37
+
+SLIDE 38
+Centralized Architecture
+AKA Mainframe Architecture
+Central computer system
+Runs all applications and stores all data for entire company
+Usually housed in a data center, managed by IT department
+Management and standardization are easier
+Users access the system via a network
+38
+Server
+Workstations
+
+SLIDE 39
+Decentralized Architecture
+AKA Server-based Architecture
+Computing power spread across multiple servers/devices
+May be in various places
+Processing and functionality are distributed through the arrangement of the hardware, software, networking, and data
+Device and data asset management is distributed
+Can be more costly to manage
+Standardization may be more challenging
+Network is critical for connections
+The Internet is an example of decentralized architecture
+39
+Email server
+Canvas
+Servers
+Clients
+(PCs)
+Clients
+(Mobile
+Devices)
+Library
+Servers
+Clients
+(laptops)
+My Madison
+Servers
+
+SLIDE 40
+Service-oriented architecture (SOA)
+AKA Cloud-based architecture
+Software is broken down into reusable services connected to each other
+An application for an entire process is formed by the services
+The services may be those offered by vendors via the Internet
+Software-as-a-service (SaaS) and other Web services are examples of SOA
+40
+ID 65691156
+© Bakhtiar Zein
+| Dreamstime.com
+
+SLIDE 41
+Architecture to Infrastructure
+Architecture is the blueprint
+Need details, starting withfunctional specifications
+These are then translated into the component specifications i.e., HW,  SW, Data, Networking, etc.
+Decisions are then made about the specific infrastructure, i.e., specific HW, platform, network, etc.
+41
+
+SLIDE 42
+Information Technology (IT) Infrastructure
+“. . . typically, physical components (computer and networking hardware and facilities), but also various software and network components.”https://en.wikipedia.org/wiki/IT_infrastructure
+“the composite hardware, software, network resources and services required for the existence, operation and management of an enterprise IT environment” https://www.techopedia.com/definition/29199/it-infrastructure
+“the basis for managing business processes, which directly affects the efficiency and competitiveness of the organization” https://gartsolutions.com/it-infrastructure-the-key-to-business-growth-and-success/
+42
+https://gartsolutions.com/it-infrastructure-the-key-to-business-growth-and-success/
+
+SLIDE 43
+Summary: Strategy drives Architecture which drives Infrastructure
+43
+
+SLIDE 44
+Readings 3: Enterprise Information Systems (IS)
+44
+
+SLIDE 45
+Functional Silo Perspective
+When the organizational mindset of departments, teams, individuals, etc. is to operate in isolation, placing greater focus on their goals and objectives over those of the organization.
+Isolation can lead to the Silo Effect
+They lose sight of organizational goals in favor of their own
+Increase likelihood of task duplication across functional groups
+Delays and varying perceptions of quality are possible
+Ineffective inter-functional coordination and communication
+45
+This Photo by Unknown Author is licensed under CC BY
+https://change.walkme.com/silo-mentality/
+
+SLIDE 46
+Business Process Perspective
+46
+When departments, teams, and individuals are unified and share organizational goals
+When there are cross-functional processes, teams, ideas, etc.
+When there is technology used that supports company-wide communications, data sharing, processes,  collaboration, etc.
+Breaking Down Silos: What It Means & How to Do It at Work (betterup.com)
+
+SLIDE 47
+Functional vs Business Process
+Functional Perspective
+Silos – self-contained units
+Enable optimization of expertise
+Good when that’s the goal, but can be bad if its not
+May result unintended competition among functional units
+May also cause a loss of  focus on the “Big Picture”
+Business Process Perspective
+Recognize that process are cross-functional
+Keeps the focus on the work
+Enables optimization of value creation
+No loss of “Big Picture” focus
+47
+
+SLIDE 48
+https://kissflow.com/workflow/bpm/business-process-standardization/
+Process Standardization
+Performing processes based on uniform procedures and guidelines
+Processes must be clearly defined
+Processes must be documented and maintained
+Advantages include:
+Consistency
+Regulatory compliance
+Quality control
+Improved efficiency
+And more …
+48
+https://www.6sigma.us/business-process-management-articles/process-standardization-for-operational-excellence/
+
+SLIDE 49
+Process Integration
+Streamlining operations by connecting the organization’s data, processes, applications, and people
+Increases process efficiency and effectiveness
+Enables cross-functional processes
+Provides an end-to-end view of operations
+Business processes across the enterprise working together to meet shared goals (cross-functional processes)
+Breaking down functional silos and fostering collaboration across the enterprise
+49
+Business Process Integration with SAP ERP (eBook) https://store.epistemypress.com/books/bpi.html
+https://cio-wiki.org/wiki/Business_Process_Integration
+https://www.teamly.com/blog/business-process-integration/
+
+SLIDE 50
+50
+Enterprise Systems  is a term used to describe
+systems that enabled an intraorganizational focus
+that allowed companies to integrate information across
+operations on a company-wide basis.
+Information System Evolution Categories
+Interorganizational Systems (IOS) are systems that
+communicate across organizational boundaries with the
+goal to streamline information flows from one company
+to another.
+Stand-alone (Legacy) systems is a term used to describe
+systems, typically based on older technologies, that did
+not support integration.
+
+SLIDE 51
+The Evolution of IS: Functional IS to Enterprise IS
+Functional IS –supports just the functional area
+Enterprise IS (EIS) – enables cross-functional processes by integrating the functional area processes within the enterprise
+51
+Vasilecas, O., & Bugaite, D. (2006). Business Rules Elicitation in the Process of Enterprise Information System Development. ICEIS.
+https://en.wikipedia.org/wiki/Enterprise_information_system
+
+SLIDE 52
+Enterprise Resource Planning (ERP)
+A type of EIS that supports cross-functional processes
+ERP I (first version)
+Can support all processes, but organization purchases only the “modules” for the processes it has
+Includes a common database that supports enterprise processes (single version of the “truth”)
+ERP II (second version)
+ERP I features along with
+Real-time system access
+Web-based applications
+Support for interorganizational processes
+52
+https://en.wikipedia.org/wiki/Enterprise_resource_planning
+
+SLIDE 53
+Customer Relationship Management (CRM)
+A type of EIS that supports cross-functional & interorganizational processes
+Focuses specifically on the customer-facing processes
+Goal is to enhance the overall customer experience and provide more value to the customers.
+53
+https://www.econposts.com/business-management/customer-relationship-management-2/
+
+SLIDE 54
+Supply Chain Management (SCM)
+A type of EIS that supports cross-functional & interorganizational processes
+Focuses on managing the flow of goods, data, and finances related to a product or service, from the procurement of raw materials to the delivery of the product.
+54
+What is Supply Chain Management? | Oracle
+
+SMARTART TEXT (embedded diagram data)
+
+ppt/diagrams/data1.xml
+Bricks and Clicks
+Integration of both offline (physical) and online (web)
+Barnes and Noble – started out just bricks, and Amazon – started out just clicks
+Cutting out the Middleman
+Customer deals directly with company
+Dell developed a famous and successful direct sales model
+Franchise
+Business purchases the rights to use another firm’s successful business model
+McDonald’s, Domino’s,
+U-haul
+, and many others
+Value-Added Reseller (VAR)
+Reseller sells others’ products that have been modified and/or are bundled with additional products/services
+Numerous computer retailers/servicers, auto dealerships, furniture stores, etc.; A VAR sells pre-configured restaurant point of sale (POS) systems, sets up on site, and includes two weeks of training and support for staff
+
+ppt/diagrams/data2.xml
+Data
+(input)
+Perform an action on the data
+(Process)
+Information
+(output)
+
+ppt/diagrams/data3.xml
+Inputs & Outputs:
+Initial Planned Input (PI)
+Actual Input (AI)
+Initial Planned Output (PO)
+Actual Output (AO)
+Measures
+Efficiency = PI/AI
+Effectiveness = AO/PO
+Productivity = AO/AI
+
+ppt/diagrams/data4.xml
+Always need to improve the efficiency and effectiveness of business processes
+Two common techniques:
+Incremental change
+Continuous improvement through small, incremental “tweaks”
+AKA
+Business Process Improvement (BPI)
+People respond better when change is gradual
+Less risky
+Radical change
+Rapid, aggressive improvements
+AKA
+Business Process Re-engineering (BPR)
+Often used for cross-functional processes
+May be necessary when company migrates to an ERP system
+
+ppt/diagrams/data5.xml
+Sales Process
+Marketing Dept:
+Markets to Customer
+Sales Dept:
+Makes the Sale
+Production:
+Manufactures the Goods
+Accounting:
+Receives Payment
+Warehouse:
+Ships the Order
