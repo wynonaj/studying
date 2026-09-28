@@ -153,6 +153,7 @@ for n,title,items,why in [
 (31,'Discount a cash flow',['Identify cash flow and time','Convert rate to a decimal','Calculate (1 + r)^t','Divide cash flow by the factor'],'Time zero uses a factor of one. Keep period lengths consistent.'),
 (33,'Calculate discounted ROI',['Calculate PV of benefits','Calculate PV of costs','Subtract PV costs from PV benefits','Divide net present return by PV costs','Multiply by 100 for percent'],'The first two computations can be done in either order; this activity asks for this worked-example order. Net return must be computed before the ratio.')]:
  d['sorts'].append(dict(id=f'464-s{len(d["sorts"])+1}',source=n,section=d['questions'][n-1]['section'],q=title,items=items,teach=why))
+d['sorts'].append(dict(id='464-s8',source=6,lessonNumbers=[6,77],section=1,mainPractice=True,q='Build MORE: put the phrases in M → O → R → E order',items=['Manage perceptions','Own success','Relentlessly reassess','Expand perspective'],teach='This is the order of the letters in MORE, not a timeline of steps. All four ideas can apply throughout a project.\n\nM — Manage perceptions: check whether stakeholders see the result as worth the time, money, and effort invested.\n\nO — Own success: take responsibility for useful results, not just finishing assigned tasks.\n\nR — Relentlessly reassess: keep checking whether the work is still valuable as needs change.\n\nE — Expand perspective: consider effects beyond the immediate project, including other people and teams.',example='A campus app launches on time but confuses students. Ask how students judge its value (M), take responsibility for improving the result (O), keep checking what they need (R), and consider the extra work it creates for support staff (E).'))
 d['references']=[
 {'title':'PMI · Project management framework (edition check)','url':'https://www.pmi.org/standards/pmbok','questions':[15,16]},
 {'title':'The Scrum Guide','url':'https://scrumguides.org/scrum-guide.html','questions':[20,21]},
@@ -167,3 +168,5 @@ p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n');print({k:len(d[k]) 
 # Keep every named vocabulary concept available in the main practice bank.
 import runpy
 runpy.run_path(str(Path(__file__).with_name("term_coverage.py")))
+
+runpy.run_path(str(Path(__file__).with_name("document_comparisons.py")))

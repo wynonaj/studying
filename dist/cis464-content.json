@@ -913,7 +913,7 @@
         "What exact task will every person perform tomorrow?",
         "Which changes have already been approved by the CCB?"
       ],
-      "answer": "A business case explains need and value. The slides list background, objectives, current problem/opportunity, assumptions/constraints, options and recommendation, preliminary requirements, budget/financial analysis, schedule estimate, and risks. It guides decisions initially and helps reassess value during and after work.",
+      "answer": "A business case explains need and value. The slides list background, objectives, current problem/opportunity, assumptions/constraints, options and recommendation, preliminary requirements, budget/financial analysis, schedule estimate, and risks. It guides decisions initially and helps reassess value during and after work.\n\nCompare the names:\nBusiness case = WHY this project is worth doing.\nProject charter = official approval and authority to begin.\nProject management plan = HOW this project will be carried out and managed.\nBusiness plan = how a BUSINESS will operate and grow; this is not another name for a project management plan.\nStakeholder register = WHO is involved or affected and what we know about them.\nStakeholder engagement plan = HOW we will involve and work with those people.\nBaseline = an approved reference used to compare planned and actual performance.\n\nYour Chapter 3 slides name the project documents above. Business plan is an extra terminology clarification requested by you, not a separately identified exam requirement in these slides.",
       "teach": "A business case explains need and value.\n\nAn assumption is something treated as true for planning but needing validation. A constraint is a limit such as a required date or budget cap.",
       "example": "A portal proposal compares improving the existing system with replacing it, estimating costs, expected benefits, risks, and the reason for the recommendation."
     },
@@ -932,7 +932,7 @@
         "Only lists possible benefits without authorization",
         "Only records the final lessons learned"
       ],
-      "answer": "The charter formally recognizes/authorizes the project, identifies high-level objectives and boundaries, and gives the PM authority to apply resources under organizational rules. An authorized sponsor/decision maker signs it. The business case justifies; the charter authorizes.",
+      "answer": "The charter formally recognizes/authorizes the project, identifies high-level objectives and boundaries, and gives the PM authority to apply resources under organizational rules. An authorized sponsor/decision maker signs it. The business case justifies; the charter authorizes.\n\nCompare the names:\nBusiness case = WHY this project is worth doing.\nProject charter = official approval and authority to begin.\nProject management plan = HOW this project will be carried out and managed.\nBusiness plan = how a BUSINESS will operate and grow; this is not another name for a project management plan.\nStakeholder register = WHO is involved or affected and what we know about them.\nStakeholder engagement plan = HOW we will involve and work with those people.\nBaseline = an approved reference used to compare planned and actual performance.\n\nYour Chapter 3 slides name the project documents above. Business plan is an extra terminology clarification requested by you, not a separately identified exam requirement in these slides.",
       "teach": "A project charter is the document that officially gives a project permission to begin and gives its manager authority.\n\nAuthorization means official permission to proceed, not an informal idea discussed in a meeting. The charter is not the complete detailed plan.",
       "example": "After reviewing the business case, the sponsor signs a charter stating the portal’s goals, high-level scope, budget expectations, and responsible manager."
     },
@@ -951,7 +951,7 @@
         "It only grants initial authority and nothing more",
         "It is a permanent record that cannot be updated"
       ],
-      "answer": "The project management plan integrates how work will be managed and provides approved baselines and subsidiary plans. It guides execution, monitoring/control, and closure. It evolves under appropriate controls. Organizations may provide templates and repositories.",
+      "answer": "The project management plan integrates how work will be managed and provides approved baselines and subsidiary plans. It guides execution, monitoring/control, and closure. It evolves under appropriate controls. Organizations may provide templates and repositories.\n\nCompare the names:\nBusiness case = WHY this project is worth doing.\nProject charter = official approval and authority to begin.\nProject management plan = HOW this project will be carried out and managed.\nBusiness plan = how a BUSINESS will operate and grow; this is not another name for a project management plan.\nStakeholder register = WHO is involved or affected and what we know about them.\nStakeholder engagement plan = HOW we will involve and work with those people.\nBaseline = an approved reference used to compare planned and actual performance.\n\nYour Chapter 3 slides name the project documents above. Business plan is an extra terminology clarification requested by you, not a separately identified exam requirement in these slides.",
       "teach": "A project management plan explains how the team will carry out, check, adjust, and finish the project.\n\nA repository is a shared place where approved documents are kept. A plan that changes must still have clear versions and approvals.",
       "example": "The plan explains scheduling, staffing, quality checks, communications, risk responses, and how a change request will be handled."
     },
@@ -1757,15 +1757,16 @@
       "section": 1,
       "term": "Sponsor",
       "exp": "",
-      "q": "What does Sponsor mean in project management?",
-      "answer": "A person or group supporting and authorizing project resources",
-      "correct": "A person or group supporting and authorizing project resources",
+      "q": "What is the role of the sponsor?",
+      "answer": "Supports the project and secures or authorizes resources",
+      "correct": "Supports the project and secures or authorizes resources",
       "distractors": [
-        "The person who performs every technical task",
-        "Any user who submits feedback",
-        "The keeper of a Sprint task board only"
+        "Primarily coordinates the team’s day-to-day project work",
+        "Primarily carries out the tasks that produce the deliverables",
+        "Primarily advocates for the project without necessarily having resource authority"
       ],
-      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters."
+      "teach": "Remember: resources include money, people, and equipment. A sponsor helps the project obtain organizational backing and resources, and can help resolve issues beyond the project manager’s authority. Sponsoring is different from coordinating every daily task.",
+      "example": "A university leader backs a new registration system and authorizes its budget and staff support. That is the sponsor role."
     },
     {
       "id": "464-v010",
@@ -1773,15 +1774,16 @@
       "section": 1,
       "term": "Champion",
       "exp": "",
-      "q": "What does Champion mean in project management?",
-      "answer": "An advocate who promotes support for the project",
-      "correct": "An advocate who promotes support for the project",
+      "q": "What is the role of the champion?",
+      "answer": "Actively advocates for the project and builds support for it",
+      "correct": "Actively advocates for the project and builds support for it",
       "distractors": [
-        "The sole author of every technical specification",
-        "Any external contractor regardless of advocacy",
-        "Only the person performing financial audits"
+        "Must be the person with formal authority to approve the budget",
+        "Must perform all tasks that create the project’s result",
+        "Must chair the group overseeing the project"
       ],
-      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters."
+      "teach": "Remember: an advocate speaks up for an idea and helps others see its value. A champion promotes the project but does not necessarily have formal budget authority. One person can sometimes be both champion and sponsor.",
+      "example": "A professor explains why the new registration system will help students and persuades departments to support it. That is championing the project."
     },
     {
       "id": "464-v011",
@@ -1789,15 +1791,16 @@
       "section": 1,
       "term": "Steering committee",
       "exp": "",
-      "q": "What does Steering committee mean in project management?",
-      "answer": "A group providing project direction and oversight",
-      "correct": "A group providing project direction and oversight",
+      "q": "What is the role of the steering committee?",
+      "answer": "Provides high-level direction, oversight, and major decisions within its authority",
+      "correct": "Provides high-level direction, oversight, and major decisions within its authority",
       "distractors": [
-        "A list of daily implementation tasks",
-        "A team that performs every product test",
-        "A database of customer requirements"
+        "Primarily performs the daily design, coding, and testing tasks",
+        "Primarily coordinates every team member’s daily task as one project manager",
+        "Primarily acts as an informal advocate without a governance role"
       ],
-      "teach": "Stakeholders include sponsors, customers, users, managers, team members, and affected groups.\n\nA stakeholder need not support the project. Someone who expects harm or disruption still matters."
+      "teach": "Remember: a committee is a group of people. Steering means guiding the overall direction; oversight means checking that the project stays aligned with organizational goals. Its exact decision authority depends on the organization.",
+      "example": "Leaders from several departments review major project issues and decide which priorities should guide the work. The project manager then coordinates the agreed direction."
     },
     {
       "id": "464-v012",
@@ -3502,6 +3505,40 @@
       ],
       "teach": "Remember: an agent connects observations to actions. Its capabilities and allowed actions depend on its design and permissions.",
       "example": "A support agent reads a ticket, identifies the needed category, and routes it using an allowed tool."
+    },
+    {
+      "id": "464-v116",
+      "source": 9,
+      "section": 1,
+      "term": "Project manager",
+      "exp": "",
+      "q": "What is the role of the project manager?",
+      "correct": "Coordinates the project’s people, work, plans, and decisions to meet its objectives",
+      "answer": "Coordinates the project’s people, work, plans, and decisions to meet its objectives",
+      "distractors": [
+        "Primarily advocates for an idea without coordinating its delivery",
+        "Primarily provides organizational funding rather than managing daily work",
+        "Primarily serves as the committee giving high-level oversight"
+      ],
+      "teach": "Remember: coordinating means making sure connected pieces of work fit together. The project manager organizes planning, communication, dependencies, risks, and progress; they do not personally perform every specialist task.",
+      "example": "The project manager checks that design is ready before coding begins, resolves a staffing conflict, and keeps everyone informed about the deadline."
+    },
+    {
+      "id": "464-v117",
+      "source": 9,
+      "section": 1,
+      "term": "Project team",
+      "exp": "",
+      "q": "What is the role of the project team?",
+      "correct": "Performs the work needed to produce the project’s deliverables",
+      "answer": "Performs the work needed to produce the project’s deliverables",
+      "distractors": [
+        "Primarily authorizes organizational funding for the project",
+        "Primarily supplies high-level oversight as a governing committee",
+        "Primarily promotes the project without carrying out its delivery work"
+      ],
+      "teach": "Remember: a deliverable is a result the project must produce, such as a working system or training materials. Team members contribute the skills and tasks that create those results. The manager coordinates their work.",
+      "example": "Designers plan the screens, developers build them, testers check them, and trainers prepare users. Together they perform the project work."
     }
   ],
   "checks": [
@@ -3924,6 +3961,134 @@
         "Only if the minutes are emailed"
       ],
       "teach": "This is AI-assisted management. An AI project’s result includes an AI capability being built or deployed."
+    },
+    {
+      "id": "464-doc-1",
+      "source": 42,
+      "section": 3,
+      "q": "A university is deciding whether replacing its registration system is worth the cost. Which document compares the problem, options, benefits, costs, and risks?",
+      "correct": "Business case",
+      "answer": "Business case",
+      "distractors": [
+        "Project charter",
+        "Project management plan",
+        "Stakeholder register"
+      ],
+      "teach": "Remember: the decision here is WHY the investment makes sense. The business case justifies it. A charter provides formal authorization; the management plan explains how approved work will be managed.",
+      "example": "The case compares keeping the old system with replacing it, estimates the costs and benefits, and recommends an option.",
+      "mainPractice": true
+    },
+    {
+      "id": "464-doc-2",
+      "source": 43,
+      "section": 3,
+      "q": "The university has accepted the justification. Which document formally authorizes the project and establishes the manager’s authority?",
+      "correct": "Project charter",
+      "answer": "Project charter",
+      "distractors": [
+        "Business case",
+        "Project management plan",
+        "Stakeholder engagement plan"
+      ],
+      "teach": "Remember: convincing people that work is worthwhile is different from officially approving it. The charter is the authorization document; the business case is the justification.",
+      "example": "An authorized sponsor signs the charter for the registration-system project so the manager can apply resources under the organization’s rules.",
+      "mainPractice": true
+    },
+    {
+      "id": "464-doc-3",
+      "source": 44,
+      "section": 3,
+      "q": "The project is approved. Which document guides how it will be executed, monitored, controlled, and closed?",
+      "correct": "Project management plan",
+      "answer": "Project management plan",
+      "distractors": [
+        "Business case",
+        "Project charter",
+        "Business plan"
+      ],
+      "teach": "Remember: this question asks HOW one project will be managed. The plan coordinates the work and management approach; it is broader than just a calendar of dates.",
+      "example": "The team’s management plan explains its approach to scope, schedule, costs, risks, changes, and delivery of the registration system.",
+      "mainPractice": true
+    },
+    {
+      "id": "464-doc-4",
+      "source": 42,
+      "section": 3,
+      "q": "Which distinction between a business case and a business plan is correct?",
+      "correct": "A business case justifies a proposed investment; a business plan describes how a business will operate and grow",
+      "answer": "A business case justifies a proposed investment; a business plan describes how a business will operate and grow",
+      "distractors": [
+        "A business case formally authorizes a project; a business plan is its stakeholder list",
+        "A business case and business plan are interchangeable names for the same document",
+        "A business case is the daily task schedule; a business plan records only project approvals"
+      ],
+      "teach": "Remember: a CASE argues for a particular investment or decision. A business PLAN describes the business itself. Both can discuss money, but their purpose and scope differ. Your Chapter 3 slides name the project documents above. Business plan is an extra terminology clarification requested by you, not a separately identified exam requirement in these slides.",
+      "example": "A café’s business plan describes its customers, operations, and finances. A business case evaluates whether that café should invest in a new ordering system.",
+      "mainPractice": true
+    },
+    {
+      "id": "464-doc-5",
+      "source": 44,
+      "section": 3,
+      "q": "Are a business plan and a project management plan the same thing?",
+      "correct": "No: one guides a business; the other guides management of a particular project",
+      "answer": "No: one guides a business; the other guides management of a particular project",
+      "distractors": [
+        "Yes: both names mean the document that authorizes a project",
+        "No: a business plan lists stakeholders; a project management plan only names the sponsor",
+        "Yes: both names mean only the approved project budget"
+      ],
+      "teach": "Remember: identify what is being planned. An ongoing business and a temporary project are different things. Your Chapter 3 slides name the project documents above. Business plan is an extra terminology clarification requested by you, not a separately identified exam requirement in these slides.",
+      "example": "The café’s business plan concerns running the café. The project management plan concerns organizing the temporary work to install its new ordering system.",
+      "mainPractice": true
+    },
+    {
+      "id": "464-doc-6",
+      "source": 46,
+      "section": 3,
+      "q": "You need a structured record of stakeholders and their interests, influence, and relevant details. Which document should you use?",
+      "correct": "Stakeholder register",
+      "answer": "Stakeholder register",
+      "distractors": [
+        "Stakeholder engagement plan",
+        "Project charter",
+        "Business case"
+      ],
+      "teach": "Remember: a REGISTER records WHO the stakeholders are and what you know about them. An engagement plan uses that information to decide how to work with them.",
+      "example": "The register records students, advisers, and support staff, including their concerns and influence over the registration-system project.",
+      "mainPractice": true
+    },
+    {
+      "id": "464-doc-7",
+      "source": 47,
+      "section": 3,
+      "q": "You already know who the stakeholders are. Which document sets strategies for involving them and addressing their communication needs?",
+      "correct": "Stakeholder engagement plan",
+      "answer": "Stakeholder engagement plan",
+      "distractors": [
+        "Stakeholder register",
+        "Business case",
+        "Project charter"
+      ],
+      "teach": "Remember: the register identifies and assesses people; the engagement plan turns that knowledge into an approach for involving them. Engagement means meaningful participation and interaction.",
+      "example": "Because advisers are worried about the new workflow, the plan includes demonstrations, feedback sessions, and updates suited to their needs.",
+      "mainPractice": true
+    },
+    {
+      "id": "464-doc-8",
+      "source": 41,
+      "section": 3,
+      "q": "Which distinction between a project management plan and a baseline is correct?",
+      "correct": "The plan guides project management; a baseline is an approved reference for measuring performance",
+      "answer": "The plan guides project management; a baseline is an approved reference for measuring performance",
+      "distractors": [
+        "The plan is only a list of stakeholders; the baseline authorizes the project",
+        "Both are forecasts that can be overwritten whenever actual results differ",
+        "The baseline explains the whole business strategy; the plan only justifies funding"
+      ],
+      "teach": "Remember: a baseline is a comparison point, not merely the latest prediction. The management plan incorporates approved baselines along with how the work is managed. Changes to baselines follow appropriate approval procedures.",
+      "example": "The approved schedule says testing should finish Friday. A forecast now says Monday. Comparing them reveals a delay; rewriting the baseline just to hide it would erase the useful comparison.",
+      "mainPractice": true
     }
   ],
   "cloze": [
@@ -4122,6 +4287,25 @@
         "Multiply by 100 for percent"
       ],
       "teach": "The first two computations can be done in either order; this activity asks for this worked-example order. Net return must be computed before the ratio."
+    },
+    {
+      "id": "464-s8",
+      "source": 6,
+      "lessonNumbers": [
+        6,
+        77
+      ],
+      "section": 1,
+      "mainPractice": true,
+      "q": "Build MORE: put the phrases in M → O → R → E order",
+      "items": [
+        "Manage perceptions",
+        "Own success",
+        "Relentlessly reassess",
+        "Expand perspective"
+      ],
+      "teach": "This is the order of the letters in MORE, not a timeline of steps. All four ideas can apply throughout a project.\n\nM — Manage perceptions: check whether stakeholders see the result as worth the time, money, and effort invested.\n\nO — Own success: take responsibility for useful results, not just finishing assigned tasks.\n\nR — Relentlessly reassess: keep checking whether the work is still valuable as needs change.\n\nE — Expand perspective: consider effects beyond the immediate project, including other people and teams.",
+      "example": "A campus app launches on time but confuses students. Ask how students judge its value (M), take responsibility for improving the result (O), keep checking what they need (R), and consider the extra work it creates for support staff (E)."
     }
   ],
   "references": [
@@ -4189,6 +4373,14 @@
       "url": "https://www.pmi.org/certifications/ai-project-management-cpmai",
       "questions": [
         71
+      ]
+    },
+    {
+      "title": "SBA · Business plans (requested terminology clarification)",
+      "url": "https://www.sba.gov/counseling/plan-your-business/",
+      "questions": [
+        42,
+        44
       ]
     }
   ],
@@ -4989,6 +5181,18 @@
       "id": "464-v115",
       "section": 10,
       "source": 58
+    },
+    {
+      "term": "Project manager",
+      "id": "464-v116",
+      "section": 1,
+      "source": 9
+    },
+    {
+      "term": "Project team",
+      "id": "464-v117",
+      "section": 1,
+      "source": 9
     }
   ]
 }

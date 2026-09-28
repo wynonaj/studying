@@ -52,6 +52,35 @@ for n,term,correct,wrong,why,example in rows:
  if term in existing:continue
  q=next(q for q in d['questions'] if q['number']==n)
  d['vocab'].append(dict(id=f'464-v{len(d["vocab"])+1:03}',source=n,section=q['section'],term=term,exp='',q=f'What is {term} in this chapter?',correct=correct,answer=correct,distractors=wrong.split('|'),teach=why,example=example))
+# Give each project role its own explanation, rather than generic stakeholder feedback.
+role_rows=[
+('Sponsor','Supports the project and secures or authorizes resources',
+'Primarily coordinates the team’s day-to-day project work|Primarily carries out the tasks that produce the deliverables|Primarily advocates for the project without necessarily having resource authority',
+'Remember: resources include money, people, and equipment. A sponsor helps the project obtain organizational backing and resources, and can help resolve issues beyond the project manager’s authority. Sponsoring is different from coordinating every daily task.',
+'A university leader backs a new registration system and authorizes its budget and staff support. That is the sponsor role.'),
+('Champion','Actively advocates for the project and builds support for it',
+'Must be the person with formal authority to approve the budget|Must perform all tasks that create the project’s result|Must chair the group overseeing the project',
+'Remember: an advocate speaks up for an idea and helps others see its value. A champion promotes the project but does not necessarily have formal budget authority. One person can sometimes be both champion and sponsor.',
+'A professor explains why the new registration system will help students and persuades departments to support it. That is championing the project.'),
+('Project manager','Coordinates the project’s people, work, plans, and decisions to meet its objectives',
+'Primarily advocates for an idea without coordinating its delivery|Primarily provides organizational funding rather than managing daily work|Primarily serves as the committee giving high-level oversight',
+'Remember: coordinating means making sure connected pieces of work fit together. The project manager organizes planning, communication, dependencies, risks, and progress; they do not personally perform every specialist task.',
+'The project manager checks that design is ready before coding begins, resolves a staffing conflict, and keeps everyone informed about the deadline.'),
+('Project team','Performs the work needed to produce the project’s deliverables',
+'Primarily authorizes organizational funding for the project|Primarily supplies high-level oversight as a governing committee|Primarily promotes the project without carrying out its delivery work',
+'Remember: a deliverable is a result the project must produce, such as a working system or training materials. Team members contribute the skills and tasks that create those results. The manager coordinates their work.',
+'Designers plan the screens, developers build them, testers check them, and trainers prepare users. Together they perform the project work.'),
+('Steering committee','Provides high-level direction, oversight, and major decisions within its authority',
+'Primarily performs the daily design, coding, and testing tasks|Primarily coordinates every team member’s daily task as one project manager|Primarily acts as an informal advocate without a governance role',
+'Remember: a committee is a group of people. Steering means guiding the overall direction; oversight means checking that the project stays aligned with organizational goals. Its exact decision authority depends on the organization.',
+'Leaders from several departments review major project issues and decide which priorities should guide the work. The project manager then coordinates the agreed direction.')
+]
+for term,correct,wrong,why,example in role_rows:
+ v=next((v for v in d['vocab'] if v['term']==term),None)
+ if v is None:
+  v=dict(id=f'464-v{len(d["vocab"])+1:03}',source=9,section=1,term=term,exp='')
+  d['vocab'].append(v)
+ v.update(q=f'What is the role of the {term.lower()}?',correct=correct,answer=correct,distractors=wrong.split('|'),teach=why,example=example)
 d['termCoverage']=[dict(term=v['term'],id=v['id'],section=v['section'],source=v['source']) for v in d['vocab']]
 p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
 print('Direct term checks:',len(d['vocab']))

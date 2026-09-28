@@ -35,10 +35,20 @@ s=s[:start]+'''Promise.all([fetch('cis464-content.json',{cache:'no-store'}),fetc
 (ROOT/'dist/cis464.js').write_text(s)
 
 # Main chapter practice includes direct term checks as well as broad lesson questions.
-s=s.replace("function sectionCards(){", "function chapterPracticePool(){return [...D.questions,...D.vocab]}\nfunction sectionCards(){")
+s=s.replace("function sectionCards(){", "function chapterPracticePool(){return [...D.questions,...D.vocab,...D.sorts.filter(x=>x.mainPractice).map(x=>({...x,kind:'sort'}))]}\nfunction sectionCards(){")
 s=s.replace("const qs=D.questions.filter(q=>q.section===s.id),done=qs.filter(completed).length", "const qs=chapterPracticePool().filter(q=>q.section===s.id),done=qs.filter(completed).length")
 s=s.replace("function practiceHome(){const pool=filtered(D.questions)", "function practiceHome(){const pool=filtered(chapterPracticePool())")
 s=s.replace("view='practice';start('practice',shuffle(filtered(D.questions)))", "view='practice';start('practice',shuffle(filtered(chapterPracticePool())))")
 s=s.replace("lesson checks answered correctly", "lesson and term questions answered correctly").replace("lesson checks completed", "lesson and term questions completed")
 s=s.replace("One correct answer fills that prompt’s completion credit. Extra practice and vocabulary are tracked separately.", "Includes direct questions on every vocabulary term in this class. Correct answers earn completion credit; missed items return for another try.")
+(ROOT/'dist/cis464.js').write_text(s)
+
+s=s.replace("[q,...D.checks.filter(c=>c.source===number)]", "[q,...D.checks.filter(c=>c.source===number),...D.sorts.filter(x=>x.lessonNumbers?.includes(number)).map(x=>({...x,kind:'sort'}))]")
+(ROOT/'dist/cis464.js').write_text(s)
+
+s=s.replace("[q,...D.checks.filter(c=>c.source===number),", "[q,...D.checks.filter(c=>c.source===number),...D.vocab.filter(v=>number===9?['Sponsor','Champion','Project manager','Project team','Steering committee'].includes(v.term):number===10&&v.term==='Project manager'),")
+(ROOT/'dist/cis464.js').write_text(s)
+
+s=s.replace("function chapterPracticePool(){return [...D.questions,...D.vocab,", "function chapterPracticePool(){return [...D.questions,...D.vocab,...D.checks.filter(x=>x.mainPractice),")
+s=s.replace("function mixedPool(){return [...D.questions,...D.vocab,", "function mixedPool(){return [...D.questions,...D.vocab,...D.checks.filter(x=>x.mainPractice),")
 (ROOT/'dist/cis464.js').write_text(s)

@@ -51,8 +51,8 @@ console.log('PASS CIS 464: 77 lessons, 183 source slides/assets, choice and chap
 
 for(const n of [72,73,74,75,76,77]){assert.ok(data.questions.some(q=>q.number===n&&q.section===1));}
 
-assert.equal(data.vocab.length,115);
-assert.equal(run('chapterPracticePool().length'),192);
+assert.equal(data.vocab.length,117);
+assert.equal(run('chapterPracticePool().length'),203);
 for(const v of data.vocab)assert.ok(run('chapterPracticePool().some(x=>x.id==='+JSON.stringify(v.id)+')'));
 for(const term of ['Simple reflex agent','Model-based reflex agent','Goal-based agent','Utility-based agent','Learning agent']){
  const v=data.vocab.find(v=>v.term===term);assert.ok(v,term);assert.ok(v.example.length>50);assert.ok(v.teach.includes('Remember:'));
@@ -61,7 +61,7 @@ run('section=10;navigate("practice")');element('#all-guide').onclick();
 assert.ok(run('session.items.every(x=>x.section===10)'));
 for(const v of data.vocab.filter(v=>v.section===10))assert.ok(run('session.items.some(x=>x.id==='+JSON.stringify(v.id)+')'));
 assert.equal(data.termCoverage.length,data.vocab.length);
-console.log('PASS: all 115 terms participate in main chapter practice; AI agent definitions have specific reasoning and examples.');
+console.log('PASS: all 117 terms participate in main chapter practice; AI agent definitions have specific reasoning and examples.');
 
 run('section=0;progress.lessons={};openLesson(D.questions[0].number,2)');
 assert.ok(element('#app').innerHTML.includes('Next lesson'));
@@ -79,3 +79,36 @@ assert.ok(run('D.questions.filter(q=>q.section!==section).every(q=>!progress.les
 run('section=0;start("practice",[D.questions[0]],D.questions[0].number);grade(session.items[0],true,"correct");advance()');
 assert.ok(element('#app').innerHTML.includes('Next lesson'));
 console.log('PASS: next lesson after reading and quiz, chapter-scoped sequence, persisted progress, and honest completion with skipped lessons.');
+
+const more=data.sorts.find(x=>x.id==='464-s8');
+assert.deepEqual(more.items,['Manage perceptions','Own success','Relentlessly reassess','Expand perspective']);
+assert.equal(more.section,1);
+assert.ok(run('chapterPracticePool().some(x=>x.id==="464-s8"&&x.kind==="sort")'));
+for(const n of [6,77]){
+ run('openLesson('+n+',2)');element('#lesson-practice').onclick();
+ assert.ok(run('session.items.some(x=>x.id==="464-s8"&&x.kind==="sort")'));
+}
+console.log('PASS: MORE phrase sorting included in both MORE lessons, main practice, and shuffled sorting bank.');
+
+const roles=['Sponsor','Champion','Project manager','Project team','Steering committee'];
+run('openLesson(9,2)');element('#lesson-practice').onclick();
+for(const term of roles){
+ const v=data.vocab.find(v=>v.term===term);
+ assert.ok(v.teach.startsWith('Remember:'));
+ assert.ok(v.example.length>60);
+ assert.ok(run('session.items.some(x=>x.id==='+JSON.stringify(v.id)+')'));
+ assert.ok(run('chapterPracticePool().some(x=>x.id==='+JSON.stringify(v.id)+')'));
+}
+assert.equal(new Set(roles.map(t=>data.vocab.find(v=>v.term===t).teach)).size,5);
+console.log('PASS: five distinct role questions in main practice and the stakeholder lesson, with tailored explanations.');
+
+const docs=data.checks.filter(x=>x.id.startsWith('464-doc-'));
+assert.equal(docs.length,8);
+for(const x of docs){
+ assert.equal(x.section,3);
+ assert.ok(run('chapterPracticePool().some(x=>x.id==='+JSON.stringify(x.id)+')'));
+ run('openLesson('+x.source+',2)');element('#lesson-practice').onclick();
+ assert.ok(run('session.items.some(x=>x.id==='+JSON.stringify(x.id)+')'));
+}
+assert.match(data.questions.find(q=>q.number===42).answer,/not a separately identified exam requirement/);
+console.log('PASS: eight document comparisons in chapter practice and relevant lessons, with explicit business-plan scope.');
