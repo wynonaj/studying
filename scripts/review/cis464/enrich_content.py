@@ -156,10 +156,14 @@ for n,title,items,why in [
 d['references']=[
 {'title':'PMI · Project management framework (edition check)','url':'https://www.pmi.org/standards/pmbok','questions':[15,16]},
 {'title':'The Scrum Guide','url':'https://scrumguides.org/scrum-guide.html','questions':[20,21]},
-{'title':'Agile Manifesto','url':'https://agilemanifesto.org/','questions':[19]},
+{'title':'Agile Manifesto','url':'https://agilemanifesto.org/','questions':[19,72]},
 {'title':'PMI · Code of Ethics and Professional Conduct','url':'https://www.pmi.org/-/media/pmi/documents/public/pdf/ethics/pmi-code-of-ethics.pdf','questions':[55,69]},
 {'title':'IBM · Types of AI agents','url':'https://www.ibm.com/think/topics/ai-agent-types','questions':[59,60,61,62,63]},
-{'title':'PMI · CAPM','url':'https://www.pmi.org/certifications/certified-associate-capm','questions':[22]},
-{'title':'PMI · PMP','url':'https://www.pmi.org/certifications/project-management-pmp','questions':[22]},
+{'title':'PMI · CAPM','url':'https://www.pmi.org/certifications/certified-associate-capm','questions':[22,74]},
+{'title':'PMI · PMP','url':'https://www.pmi.org/certifications/project-management-pmp','questions':[22,75]},
 {'title':'PMI · Managing AI projects credential','url':'https://www.pmi.org/certifications/ai-project-management-cpmai','questions':[71]}]
 p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n');print({k:len(d[k]) for k in ['questions','vocab','checks','cloze','sorts']})
+
+# Keep every named vocabulary concept available in the main practice bank.
+import runpy
+runpy.run_path(str(Path(__file__).with_name("term_coverage.py")))

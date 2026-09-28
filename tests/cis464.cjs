@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const data=JSON.parse(read('dist/cis464-content.json')),slides=JSON.parse(read('dist/cis464-slides.json'));
 assert.deepEqual(data.sections.map(s=>s.id),[1,2,3,10]);
-assert.deepEqual(data.sections.map(s=>data.questions.filter(q=>q.section===s.id).length),[22,16,16,17]);
+assert.deepEqual(data.sections.map(s=>data.questions.filter(q=>q.section===s.id).length),[28,16,16,17]);
 assert.deepEqual([1,2,3,10].map(n=>slides[n].length),[75,42,34,32]);
 for(const [ch,ss] of Object.entries(slides))for(const [i,s] of ss.entries()){assert.equal(s.slide,i+1);for(const image of s.images)assert.ok(fs.existsSync(path.join(root,'dist',image)),image)}
 const all=[...data.questions,...data.vocab,...data.checks,...data.cloze];
@@ -47,4 +47,35 @@ for(const file of ['index.html','cis304.html','cis464.html']){
  for(const match of page.matchAll(/(?:src|href)="([\w.-]+\.(?:js|css))\?v=([a-f0-9]+)"/g))assert.equal(require('node:crypto').createHash('sha256').update(read('dist/'+match[1])).digest('hex').slice(0,12),match[2],match[1]);
 }
 assert.ok(!read('dist/cis464.js').includes('D.readings'));
-console.log('PASS CIS 464: 71 lessons, 183 source slides/assets, choice and chapter integrity, 1,500 financial rounds, all views/lessons, shuffled sorts, retries, exam scoring, flashcards, and three-class progress isolation.');
+console.log('PASS CIS 464: 77 lessons, 183 source slides/assets, choice and chapter integrity, 1,500 financial rounds, all views/lessons, shuffled sorts, retries, exam scoring, flashcards, and three-class progress isolation.');
+
+for(const n of [72,73,74,75,76,77]){assert.ok(data.questions.some(q=>q.number===n&&q.section===1));}
+
+assert.equal(data.vocab.length,115);
+assert.equal(run('chapterPracticePool().length'),192);
+for(const v of data.vocab)assert.ok(run('chapterPracticePool().some(x=>x.id==='+JSON.stringify(v.id)+')'));
+for(const term of ['Simple reflex agent','Model-based reflex agent','Goal-based agent','Utility-based agent','Learning agent']){
+ const v=data.vocab.find(v=>v.term===term);assert.ok(v,term);assert.ok(v.example.length>50);assert.ok(v.teach.includes('Remember:'));
+}
+run('section=10;navigate("practice")');element('#all-guide').onclick();
+assert.ok(run('session.items.every(x=>x.section===10)'));
+for(const v of data.vocab.filter(v=>v.section===10))assert.ok(run('session.items.some(x=>x.id==='+JSON.stringify(v.id)+')'));
+assert.equal(data.termCoverage.length,data.vocab.length);
+console.log('PASS: all 115 terms participate in main chapter practice; AI agent definitions have specific reasoning and examples.');
+
+run('section=0;progress.lessons={};openLesson(D.questions[0].number,2)');
+assert.ok(element('#app').innerHTML.includes('Next lesson'));
+run('continueLearning(D.questions[0].number)');
+assert.equal(run('lesson.number'),2);
+assert.equal(run('progress.lessons[D.questions[0].id]'),true);
+run('continueLearning(learningSequence().at(-1).number)');
+assert.ok(element('#app').innerHTML.includes('You reached the last lesson'));
+assert.ok(!element('#app').innerHTML.includes('All lessons complete ✓'));
+run('learningSequence().forEach(q=>progress.lessons[q.id]=true);continueLearning(learningSequence().at(-1).number)');
+assert.ok(element('#app').innerHTML.includes('All lessons complete ✓'));
+run('section=D.sections[0].id;progress.lessons={};learningSequence().forEach(q=>progress.lessons[q.id]=true);continueLearning(learningSequence().at(-1).number)');
+assert.ok(element('#app').innerHTML.includes('All lessons complete ✓'));
+assert.ok(run('D.questions.filter(q=>q.section!==section).every(q=>!progress.lessons[q.id])'));
+run('section=0;start("practice",[D.questions[0]],D.questions[0].number);grade(session.items[0],true,"correct");advance()');
+assert.ok(element('#app').innerHTML.includes('Next lesson'));
+console.log('PASS: next lesson after reading and quiz, chapter-scoped sequence, persisted progress, and honest completion with skipped lessons.');

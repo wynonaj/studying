@@ -33,3 +33,12 @@ s=s.replace("else if(b.dataset.lesson)openLesson", "else if(b.dataset.sourceChap
 start=s.index("fetch('cis464-content.json'")
 s=s[:start]+'''Promise.all([fetch('cis464-content.json',{cache:'no-store'}),fetch('cis464-slides.json',{cache:'no-store'})].map(async r=>{const response=await r;if(!response.ok)throw Error('Content unavailable');return response.json()})).then(([data,slides])=>{D=data;SLIDES=slides;render()}).catch(()=>{$('#app').innerHTML='<section class="card"><h1>Study content could not load</h1><p>Refresh to retry loading the CIS 464 chapter content and slides.</p><button onclick="location.reload()">Try again</button></section>'});\n'''
 (ROOT/'dist/cis464.js').write_text(s)
+
+# Main chapter practice includes direct term checks as well as broad lesson questions.
+s=s.replace("function sectionCards(){", "function chapterPracticePool(){return [...D.questions,...D.vocab]}\nfunction sectionCards(){")
+s=s.replace("const qs=D.questions.filter(q=>q.section===s.id),done=qs.filter(completed).length", "const qs=chapterPracticePool().filter(q=>q.section===s.id),done=qs.filter(completed).length")
+s=s.replace("function practiceHome(){const pool=filtered(D.questions)", "function practiceHome(){const pool=filtered(chapterPracticePool())")
+s=s.replace("view='practice';start('practice',shuffle(filtered(D.questions)))", "view='practice';start('practice',shuffle(filtered(chapterPracticePool())))")
+s=s.replace("lesson checks answered correctly", "lesson and term questions answered correctly").replace("lesson checks completed", "lesson and term questions completed")
+s=s.replace("One correct answer fills that prompt’s completion credit. Extra practice and vocabulary are tracked separately.", "Includes direct questions on every vocabulary term in this class. Correct answers earn completion credit; missed items return for another try.")
+(ROOT/'dist/cis464.js').write_text(s)

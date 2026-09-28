@@ -31,3 +31,20 @@ run('section=3');assert.ok(run('filtered(mixedPool()).every(x=>x.section===3)'))
 const page320=read('dist/index.html'),page304=read('dist/cis304.html');assert.match(page320,/href="cis304.html"/);assert.match(page304,/href="index.html"/);assert.ok(!page304.includes('src="app.js'));assert.ok(!read('dist/cis304.js').includes("setItem('cis320"));
 for(const page of [page320,page304])for(const match of page.matchAll(/(?:src|href)="([\w.-]+\.(?:js|css))\?v=([a-f0-9]+)"/g)){assert.equal(require('node:crypto').createHash('sha256').update(read('dist/'+match[1])).digest('hex').slice(0,12),match[2],match[1]+' cache hash')}
 console.log('PASS: all 51 original prompts, 64 terms, 31 checks, 11 cloze cards, 40 links, source coverage, distinct choices, 300 formula rounds, shuffled sorts, all views/lessons, retry completion, exam scoring, flash flips, and isolated class progress.');
+
+run('section=0;progress.lessons={};openLesson(D.questions[0].number,2)');
+assert.ok(element('#app').innerHTML.includes('Next lesson'));
+run('continueLearning(D.questions[0].number)');
+assert.equal(run('lesson.number'),2);
+assert.equal(run('progress.lessons[D.questions[0].id]'),true);
+run('continueLearning(learningSequence().at(-1).number)');
+assert.ok(element('#app').innerHTML.includes('You reached the last lesson'));
+assert.ok(!element('#app').innerHTML.includes('All lessons complete ✓'));
+run('learningSequence().forEach(q=>progress.lessons[q.id]=true);continueLearning(learningSequence().at(-1).number)');
+assert.ok(element('#app').innerHTML.includes('All lessons complete ✓'));
+run('section=D.sections[0].id;progress.lessons={};learningSequence().forEach(q=>progress.lessons[q.id]=true);continueLearning(learningSequence().at(-1).number)');
+assert.ok(element('#app').innerHTML.includes('All lessons complete ✓'));
+assert.ok(run('D.questions.filter(q=>q.section!==section).every(q=>!progress.lessons[q.id])'));
+run('section=0;start("practice",[D.questions[0]],D.questions[0].number);grade(session.items[0],true,"correct");advance()');
+assert.ok(element('#app').innerHTML.includes('Next lesson'));
+console.log('PASS: next lesson after reading and quiz, chapter-scoped sequence, persisted progress, and honest completion with skipped lessons.');

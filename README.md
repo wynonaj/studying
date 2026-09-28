@@ -105,7 +105,7 @@ Source notes: questions follow the supplied Fall 2026 study guide, supplemented 
 
 The third class tab opens `cis464.html`, covering Schwalbe Chapters **1, 2, 3, and 10**. Its content and progress are separate from both other classes; storage key: `cis464-chapters-v1`.
 
-Includes 71 three-step lessons with chapter/source labels, 75 vocabulary terms, 30 applied checks, seven cloze checks, seven sorting activities, acronym word banks, flip flashcards, exams, and delayed retries. Interactive views explain project constraints, project/program/portfolio relationships, documents, AI agents, and the stakeholder power–interest grid.
+Includes 77 three-step lessons with chapter/source labels, 115 vocabulary terms, 30 applied checks, seven cloze checks, seven sorting activities, acronym word banks, flip flashcards, exams, and delayed retries. Interactive views explain project constraints, project/program/portfolio relationships, documents, AI agents, and the stakeholder power–interest grid.
 
 The financial lab teaches PV, NPV, ROI, payback, and weighted scoring. It includes the Chapter 2 slide 28 exercise, slide 29 worked figure, and fresh practice numbers. Timing and discount-factor rounding are explicit; the worked figure's rounded factors reproduce its $272,800 NPV. Financial practice uses its scenario values in saved IDs.
 
@@ -120,3 +120,5 @@ All 183 slides have an entry in the source library, including extracted text, Sm
 Regenerate content with `build_content.py` then `enrich_content.py`; regenerate the UI with `build_app.py` (which reuses the CIS 304 UI structure and replaces class-specific content/activities). Run these with Python from the repository. The extraction script needs the original four decks at their specified Downloads paths; runtime deployment needs only `dist/`. Update HTML asset hashes after changing scripts or styles.
 
 `npm test` and `npm run check` now cover all three classes. Deploy the entire `dist/` directory.
+
+CIS 464 main Practice includes all 77 lesson questions and all 115 direct term checks (192 total), filtered by chapter. Vocabulary progress uses the same stable card IDs in Practice and the vocabulary section. The 40 expanded terms have specific explanations and examples in scripts/review/cis464/term_coverage.py, called by the enrichment builder.

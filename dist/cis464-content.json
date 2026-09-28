@@ -1499,6 +1499,127 @@
       "answer": "Using AI to draft minutes, summarize records, generate code, or track issues can support many projects. An AI project builds/deploys an AI-based capability. It adds data quality/access, evaluation, bias, privacy, model uncertainty, changing performance, deployment monitoring, and human oversight challenges. PMI-CPMAI is a credential concerning management of AI projects.",
       "teach": "An AI project delivers an AI capability; AI-assisted project management uses AI tools to help manage work.\n\nA model may perform well in a test and worse after deployment if real data changes. Plan how performance and harms will be monitored, not only how the first model will be trained.",
       "example": "Building a support-ticket classifier is an AI project. Using a summarizer to help manage an office move is AI-assisted management of an ordinary project."
+    },
+    {
+      "id": "464-q072",
+      "number": 72,
+      "section": 1,
+      "slides": [
+        58,
+        62,
+        63,
+        65
+      ],
+      "title": "What Agile means",
+      "q": "What is Agile in project management?",
+      "correct": "An approach that delivers work in small steps, uses feedback, and adapts as needs become clearer",
+      "distractors": [
+        "A method that fixes every detail at the start and avoids later changes",
+        "A method that removes planning and lets each person choose unrelated work",
+        "A method that delays customer feedback until the entire product is finished"
+      ],
+      "answer": "Agile is a way of working that favors small deliveries, collaboration, feedback, and adapting to change. A team builds something useful, asks people to try it, and uses what it learns to decide what to improve next. Scrum is one framework used to work in an Agile way; Agile and Scrum are not identical.",
+      "teach": "Agile is a way of working that favors small deliveries, collaboration, feedback, and adapting to change.\n\nRemember: build a little, get feedback, and improve. The team still plans, but updates its plans as it learns instead of assuming it knows every detail on day one.",
+      "example": "A team first builds a working course-search screen. Students try it and explain what is confusing. The team improves it before adding registration features."
+    },
+    {
+      "id": "464-q073",
+      "number": 73,
+      "section": 1,
+      "slides": [
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "title": "The triangle’s nickname",
+      "q": "What nickname is commonly used for the project-management triangle of scope, schedule, and cost?",
+      "correct": "The iron triangle, also called the triple constraint",
+      "distractors": [
+        "The quality triangle, consisting of testing, inspection, and approval",
+        "The stakeholder triangle, consisting of sponsor, customer, and manager",
+        "The value triangle, consisting of benefits, revenue, and profit"
+      ],
+      "answer": "The iron triangle is also called the triple constraint. Its three connected limits are scope (what work is included), schedule or time (when it must be finished), and cost (the money available). Changing one can put pressure on the others.",
+      "teach": "The iron triangle is also called the triple constraint.\n\nRemember: what, when, and how much. It is called a constraint because it limits your choices. Adding work without more time or money can force tradeoffs and may hurt quality.",
+      "example": "If a team must add online payments to an app, that extra scope may need a later deadline or a larger budget. The three sides are connected."
+    },
+    {
+      "id": "464-q074",
+      "number": 74,
+      "section": 1,
+      "slides": [
+        71
+      ],
+      "title": "CAPM: name and meaning",
+      "q": "What is CAPM, and what does the abbreviation stand for?",
+      "correct": "Certified Associate in Project Management — a PMI credential focused on foundational project-management knowledge",
+      "distractors": [
+        "Certified Advanced Project Manager — a PMI credential focused only on directing large portfolios",
+        "Certified Associate in Program Management — a credential for coordinating programs rather than project foundations",
+        "Certified Agile Project Manager — a credential covering only Scrum teams"
+      ],
+      "answer": "CAPM stands for Certified Associate in Project Management. It is a certification from the Project Management Institute (PMI). A certification is a credential showing that someone has met an organization’s requirements. CAPM focuses on foundational project-management knowledge and is commonly associated with people starting in the field.",
+      "teach": "CAPM stands for Certified Associate in Project Management.\n\nRemember: Associate points to the foundational level. CAPM is a professional credential a person can earn, not a project document or a way of organizing a team.",
+      "example": "A student learning project-management basics might consider CAPM as a way to demonstrate that knowledge. Earning it does not automatically give them a job or make them the manager of a project."
+    },
+    {
+      "id": "464-q075",
+      "number": 75,
+      "section": 1,
+      "slides": [
+        72
+      ],
+      "title": "PMP: name and meaning",
+      "q": "What is PMP, and what does the abbreviation stand for?",
+      "correct": "Project Management Professional — a PMI credential associated with experienced project professionals",
+      "distractors": [
+        "Project Management Plan — the document describing how a particular project will be managed",
+        "Project Monitoring Process — a method for measuring schedule progress",
+        "Professional Management Portfolio — a list of the organization’s selected investments"
+      ],
+      "answer": "PMP stands for Project Management Professional. It is a professional certification from PMI, associated with experience and competence in leading and managing projects. In your slides, CAPM is introduced as beginner-level and PMP as advanced. PMP is a credential held by a person; a project management plan is a document.",
+      "teach": "PMP stands for Project Management Professional.\n\nRemember: the last P means Professional. Compare CAPM as foundational knowledge with PMP as a credential for experienced project professionals.",
+      "example": "A project manager may put PMP after their name to identify their credential. The written instructions for managing their current project are the project management plan, not the PMP certification."
+    },
+    {
+      "id": "464-q076",
+      "number": 76,
+      "section": 1,
+      "slides": [
+        46
+      ],
+      "title": "What Tuckman’s model explains",
+      "q": "What is Tuckman’s model about?",
+      "correct": "How a team develops as people get to know one another, handle conflict, cooperate, and finish their work",
+      "distractors": [
+        "How a project moves through authorization, budgeting, purchasing, and financial closure",
+        "How a product moves through introduction, growth, maturity, and decline",
+        "How a manager ranks projects by cost, benefit, risk, and strategic value"
+      ],
+      "answer": "Tuckman’s model describes team development: forming, storming, norming, performing, and adjourning. Forming means getting oriented. Storming involves disagreements about roles or work. Norming means developing shared expectations. Performing means working effectively together. Adjourning means finishing and separating.",
+      "teach": "Tuckman’s model describes team development: forming, storming, norming, performing, and adjourning.\n\nRemember: this model is about the people becoming a team. It does not describe the technical steps for building the product. Teams can revisit stages, especially when membership or circumstances change.",
+      "example": "New classmates first introduce themselves, then disagree about responsibilities, agree on rules, work together effectively, and finally finish the assignment. That is the kind of team journey the model helps explain."
+    },
+    {
+      "id": "464-q077",
+      "number": 77,
+      "section": 1,
+      "slides": [
+        29
+      ],
+      "title": "What MORE stands for",
+      "q": "In the project-success framework, what does MORE stand for?",
+      "correct": "Manage perceptions, Own success, Relentlessly reassess, Expand perspective",
+      "distractors": [
+        "Measure performance, Organize schedules, Reduce spending, Execute plans",
+        "Manage perceptions, Own schedules, Review expenses, Expand scope",
+        "Monitor progress, Organize resources, Reassess deadlines, Eliminate risk"
+      ],
+      "answer": "MORE stands for Manage perceptions, Own success, Relentlessly reassess, and Expand perspective. Manage perceptions means understanding whether stakeholders see the result as worth the investment. Own success means taking responsibility for useful value. Relentlessly reassess means checking value again as things change. Expand perspective means considering effects beyond the immediate project.",
+      "teach": "MORE stands for Manage perceptions, Own success, Relentlessly reassess, and Expand perspective.\n\nRemember: success means more than finishing on time. Ask whether people find the result useful, take responsibility for that outcome, keep checking as conditions change, and consider the wider effects.",
+      "example": "A campus app launches on schedule, but students cannot use it easily. MORE encourages the team to notice that problem, take responsibility, reconsider the design, and look at its effect on student support staff."
     }
   ],
   "vocab": [
@@ -2701,6 +2822,686 @@
         "A certification that replaces all data evaluation"
       ],
       "teach": "An AI project delivers an AI capability; AI-assisted project management uses AI tools to help manage work.\n\nA model may perform well in a test and worse after deployment if real data changes. Plan how performance and harms will be monitored, not only how the first model will be trained."
+    },
+    {
+      "id": "464-v076",
+      "source": 59,
+      "section": 10,
+      "term": "Simple reflex agent",
+      "exp": "",
+      "q": "What is Simple reflex agent in this chapter?",
+      "correct": "An agent that follows condition–action rules using the current observation",
+      "answer": "An agent that follows condition–action rules using the current observation",
+      "distractors": [
+        "An agent that remembers hidden environmental state",
+        "An agent that compares outcomes using a utility score",
+        "An agent defined by improving its rules from experience"
+      ],
+      "teach": "Remember: IF a condition is true, THEN take its assigned action. Current input triggers the rule; learning from experience is not required.",
+      "example": "A thermostat switches the heater on when the current temperature is below a fixed threshold."
+    },
+    {
+      "id": "464-v077",
+      "source": 60,
+      "section": 10,
+      "term": "Model-based reflex agent",
+      "exp": "",
+      "q": "What is Model-based reflex agent in this chapter?",
+      "correct": "An agent that uses an internal model and remembered state to interpret current observations",
+      "answer": "An agent that uses an internal model and remembered state to interpret current observations",
+      "distractors": [
+        "An agent that uses only the current input with no remembered state",
+        "An agent defined only by generating text",
+        "An agent that must always retrain itself after each action"
+      ],
+      "teach": "Remember: it keeps a picture of what may be happening even when it cannot see everything right now. Having a model does not automatically mean it learns.",
+      "example": "A robot remembers a wall behind it even when its current sensor is pointed forward."
+    },
+    {
+      "id": "464-v078",
+      "source": 61,
+      "section": 10,
+      "term": "Goal-based agent",
+      "exp": "",
+      "q": "What is Goal-based agent in this chapter?",
+      "correct": "An agent that selects actions by considering whether they help reach a desired outcome",
+      "answer": "An agent that selects actions by considering whether they help reach a desired outcome",
+      "distractors": [
+        "An agent that only reacts to current input using fixed rules",
+        "An agent that must rank outcomes by a numeric preference score",
+        "An agent that stores observations but never considers future results"
+      ],
+      "teach": "Remember: a goal describes the result it is trying to reach. The agent considers possible actions or paths that could get it there.",
+      "example": "A route planner searches for a sequence of roads that will reach the requested destination."
+    },
+    {
+      "id": "464-v079",
+      "source": 62,
+      "section": 10,
+      "term": "Utility-based agent",
+      "exp": "",
+      "q": "What is Utility-based agent in this chapter?",
+      "correct": "An agent that compares possible outcomes using a measure of how desirable they are",
+      "answer": "An agent that compares possible outcomes using a measure of how desirable they are",
+      "distractors": [
+        "An agent that treats every goal-reaching outcome as equally desirable",
+        "An agent that reacts without comparing alternatives",
+        "An agent defined only by storing its previous observations"
+      ],
+      "teach": "Remember: several choices may reach the goal, but some fit your preferences better. Utility means how desirable an outcome is according to the chosen measure.",
+      "example": "Two routes reach campus. The agent weighs travel time, tolls, and fuel to choose the preferred route."
+    },
+    {
+      "id": "464-v080",
+      "source": 63,
+      "section": 10,
+      "term": "Learning agent",
+      "exp": "",
+      "q": "What is Learning agent in this chapter?",
+      "correct": "An agent that changes its behavior using experience or feedback",
+      "answer": "An agent that changes its behavior using experience or feedback",
+      "distractors": [
+        "An agent whose rules must remain unchanged after feedback",
+        "An agent defined only by remembering an unseen object",
+        "An agent that must choose the shortest route regardless of feedback"
+      ],
+      "teach": "Remember: feedback changes how it acts next time. Learning can be combined with goals, an internal model, or utility; these categories can overlap.",
+      "example": "After repeated corrections, a ticket-routing agent improves which department it chooses for new tickets."
+    },
+    {
+      "id": "464-v081",
+      "source": 13,
+      "section": 1,
+      "term": "Forming",
+      "exp": "",
+      "q": "What is Forming in this chapter?",
+      "correct": "The team-development stage when members get oriented and explore roles",
+      "answer": "The team-development stage when members get oriented and explore roles",
+      "distractors": [
+        "The stage when members end their work together",
+        "The stage when an established team works effectively",
+        "The stage defined by disagreements over roles"
+      ],
+      "teach": "Remember: people are just becoming a team. They may be polite and uncertain while trying to understand the purpose and expectations.",
+      "example": "New group members introduce themselves and ask what the assignment requires."
+    },
+    {
+      "id": "464-v082",
+      "source": 13,
+      "section": 1,
+      "term": "Performing",
+      "exp": "",
+      "q": "What is Performing in this chapter?",
+      "correct": "The team-development stage when members work effectively toward shared goals",
+      "answer": "The team-development stage when members work effectively toward shared goals",
+      "distractors": [
+        "The stage when members first get acquainted",
+        "The stage when the team separates after finishing",
+        "The stage when unresolved role conflict first surfaces"
+      ],
+      "teach": "Remember: the team can coordinate its effort and solve work problems together. This describes how people work, not a guarantee that every project result is successful.",
+      "example": "Members know their responsibilities and help each other resolve obstacles while building the deliverable."
+    },
+    {
+      "id": "464-v083",
+      "source": 13,
+      "section": 1,
+      "term": "Adjourning",
+      "exp": "",
+      "q": "What is Adjourning in this chapter?",
+      "correct": "The team-development stage when work ends and the team closes or separates",
+      "answer": "The team-development stage when work ends and the team closes or separates",
+      "distractors": [
+        "The stage of first introductions",
+        "The stage of establishing working norms",
+        "The stage of sustained coordinated performance"
+      ],
+      "teach": "Remember: temporary teams eventually finish. People review the experience, hand off results, and move to other work.",
+      "example": "After submitting the project, classmates review lessons learned and end their project group."
+    },
+    {
+      "id": "464-v084",
+      "source": 15,
+      "section": 1,
+      "term": "Initiating",
+      "exp": "",
+      "q": "What is Initiating in this chapter?",
+      "correct": "Management activity that establishes and authorizes a project or phase",
+      "answer": "Management activity that establishes and authorizes a project or phase",
+      "distractors": [
+        "Doing the planned work to create deliverables",
+        "Comparing actual performance with the plan",
+        "Completing the formal ending and handoff"
+      ],
+      "teach": "Remember: this establishes why the effort should exist and who authorizes it. It is different from carrying out the detailed work.",
+      "example": "A sponsor approves a charter for a new registration-system project."
+    },
+    {
+      "id": "464-v085",
+      "source": 15,
+      "section": 1,
+      "term": "Planning",
+      "exp": "",
+      "q": "What is Planning in this chapter?",
+      "correct": "Management activity that works out objectives and how to achieve them",
+      "answer": "Management activity that works out objectives and how to achieve them",
+      "distractors": [
+        "Only formally authorizing the project",
+        "Only performing the approved tasks",
+        "Only closing completed contracts"
+      ],
+      "teach": "Remember: planning connects the desired result to scope, tasks, timing, resources, risks, and other decisions. Plans can be refined as knowledge improves.",
+      "example": "A team identifies the tasks, dependencies, budget, and testing needed before a campus app can launch."
+    },
+    {
+      "id": "464-v086",
+      "source": 15,
+      "section": 1,
+      "term": "Executing",
+      "exp": "",
+      "q": "What is Executing in this chapter?",
+      "correct": "Management activity that carries out planned work to create results",
+      "answer": "Management activity that carries out planned work to create results",
+      "distractors": [
+        "Only selecting which projects to fund",
+        "Only comparing planned and actual progress",
+        "Only archiving a completed project"
+      ],
+      "teach": "Remember: executing means doing and coordinating the work. It does not mean that monitoring or planning has stopped.",
+      "example": "Developers build the agreed features while the manager coordinates the team and resources."
+    },
+    {
+      "id": "464-v087",
+      "source": 15,
+      "section": 1,
+      "term": "Monitoring and controlling",
+      "exp": "",
+      "q": "What is Monitoring and controlling in this chapter?",
+      "correct": "Tracking performance and taking appropriate action when changes or differences require it",
+      "answer": "Tracking performance and taking appropriate action when changes or differences require it",
+      "distractors": [
+        "Doing all work without checking its results",
+        "Creating a charter as the only management action",
+        "Closing a project immediately whenever a task is late"
+      ],
+      "teach": "Remember: monitoring asks how things are going; controlling decides what adjustment or approved change is needed.",
+      "example": "The manager notices testing is behind schedule, investigates why, and evaluates a recovery plan."
+    },
+    {
+      "id": "464-v088",
+      "source": 15,
+      "section": 1,
+      "term": "Closing",
+      "exp": "",
+      "q": "What is Closing in this chapter?",
+      "correct": "Management activity that completes a project or phase and arranges its ending",
+      "answer": "Management activity that completes a project or phase and arranges its ending",
+      "distractors": [
+        "Starting an effort without authorization",
+        "Continuously adding new scope",
+        "Measuring progress without finishing the effort"
+      ],
+      "teach": "Remember: finishing includes acceptance, handoff, records, and lessons as appropriate. Ending the project does not necessarily end use of its product.",
+      "example": "The customer accepts the system, support staff receive it, and the project team records lessons learned."
+    },
+    {
+      "id": "464-v089",
+      "source": 16,
+      "section": 1,
+      "term": "Risk",
+      "exp": "",
+      "q": "What is Risk in this chapter?",
+      "correct": "An uncertain event or condition that could affect objectives",
+      "answer": "An uncertain event or condition that could affect objectives",
+      "distractors": [
+        "A difference already measured between planned and actual cost",
+        "An approved reference plan",
+        "A guaranteed requirement that must be included"
+      ],
+      "teach": "Remember: uncertain means it may or may not happen. Risks can involve threats or opportunities; an event that has already happened needs handling as a current issue.",
+      "example": "A supplier might deliver equipment late, which could delay testing. The team plans a response before it happens."
+    },
+    {
+      "id": "464-v090",
+      "source": 16,
+      "section": 1,
+      "term": "Resources",
+      "exp": "",
+      "q": "What is Resources in this chapter?",
+      "correct": "People, equipment, materials, or other assets needed to do the work",
+      "answer": "People, equipment, materials, or other assets needed to do the work",
+      "distractors": [
+        "Only the features promised to the customer",
+        "Only the order of tasks on the calendar",
+        "Only the authority to approve changes"
+      ],
+      "teach": "Remember: resources are what you need to perform work. Money helps obtain resources, but resources also include people and equipment.",
+      "example": "Testing requires a tester, test devices, and access to a suitable environment."
+    },
+    {
+      "id": "464-v091",
+      "source": 16,
+      "section": 1,
+      "term": "Finance",
+      "exp": "",
+      "q": "What is Finance in this chapter?",
+      "correct": "Managing the money side of a project, including costs and funding",
+      "answer": "Managing the money side of a project, including costs and funding",
+      "distractors": [
+        "Managing only stakeholder communication",
+        "Managing only the order of technical tasks",
+        "Managing only the product feature list"
+      ],
+      "teach": "Remember: funding is money made available; cost is what the work uses or requires. Financial decisions check whether the work can be paid for and is worthwhile.",
+      "example": "A manager checks the available budget before approving additional equipment."
+    },
+    {
+      "id": "464-v092",
+      "source": 18,
+      "section": 1,
+      "term": "Hybrid approach",
+      "exp": "",
+      "q": "What is Hybrid approach in this chapter?",
+      "correct": "An approach combining predictive and adaptive practices as appropriate",
+      "answer": "An approach combining predictive and adaptive practices as appropriate",
+      "distractors": [
+        "An approach that forbids all changes after the start",
+        "An approach that eliminates all planning",
+        "An approach that means every team must use Scrum"
+      ],
+      "teach": "Remember: hybrid means combining approaches for a reason. Different parts of the same project can need different levels of upfront definition and adaptation.",
+      "example": "The team plans a fixed hardware installation while improving the app interface through short feedback cycles."
+    },
+    {
+      "id": "464-v093",
+      "source": 24,
+      "section": 2,
+      "term": "Structural frame",
+      "exp": "",
+      "q": "What is Structural frame in this chapter?",
+      "correct": "A view of an organization emphasizing roles, rules, and formal reporting",
+      "answer": "A view of an organization emphasizing roles, rules, and formal reporting",
+      "distractors": [
+        "A view emphasizing symbols and shared meaning",
+        "A view emphasizing competing interests and power",
+        "A view emphasizing people’s needs and fit"
+      ],
+      "teach": "Remember: structure is the official arrangement of work and authority. An organization chart helps show who reports to whom.",
+      "example": "To learn who formally approves a purchase, you examine the reporting structure and purchasing rules."
+    },
+    {
+      "id": "464-v094",
+      "source": 24,
+      "section": 2,
+      "term": "Human resources frame",
+      "exp": "",
+      "q": "What is Human resources frame in this chapter?",
+      "correct": "A view emphasizing people’s needs, skills, and fit with the organization",
+      "answer": "A view emphasizing people’s needs, skills, and fit with the organization",
+      "distractors": [
+        "A view focused on rituals and symbols",
+        "A view focused on formal reporting alone",
+        "A view focused on competition for power alone"
+      ],
+      "teach": "Remember: this frame asks how the organization and its people can work well together. It is broader than merely the HR department.",
+      "example": "A manager considers whether employees have the training and support needed for a new system."
+    },
+    {
+      "id": "464-v095",
+      "source": 24,
+      "section": 2,
+      "term": "Political frame",
+      "exp": "",
+      "q": "What is Political frame in this chapter?",
+      "correct": "A view emphasizing power, interests, negotiation, and competition for resources",
+      "answer": "A view emphasizing power, interests, negotiation, and competition for resources",
+      "distractors": [
+        "A view focused only on official reporting lines",
+        "A view focused only on shared ceremonies",
+        "A view focused only on individual training needs"
+      ],
+      "teach": "Remember: political here means different groups have different interests and influence. It does not necessarily mean party politics or dishonest behavior.",
+      "example": "Two departments want the same limited budget, so leaders negotiate priorities."
+    },
+    {
+      "id": "464-v096",
+      "source": 24,
+      "section": 2,
+      "term": "Symbolic frame",
+      "exp": "",
+      "q": "What is Symbolic frame in this chapter?",
+      "correct": "A view emphasizing culture, shared meanings, stories, and rituals",
+      "answer": "A view emphasizing culture, shared meanings, stories, and rituals",
+      "distractors": [
+        "A view focused only on reporting lines",
+        "A view focused only on budget competition",
+        "A view focused only on staffing skill gaps"
+      ],
+      "teach": "Remember: symbols and stories influence what people believe matters. A practice can carry meaning beyond its literal action.",
+      "example": "A company’s celebration of customer-service successes signals that helping customers is valued."
+    },
+    {
+      "id": "464-v097",
+      "source": 25,
+      "section": 2,
+      "term": "Functional organization",
+      "exp": "",
+      "q": "What is Functional organization in this chapter?",
+      "correct": "An organization grouped by specialties such as finance, marketing, and IT",
+      "answer": "An organization grouped by specialties such as finance, marketing, and IT",
+      "distractors": [
+        "An organization primarily arranged around dedicated project teams",
+        "An organization where project and functional authority are combined",
+        "An organization with no continuing specialty departments"
+      ],
+      "teach": "Remember: functional means grouped by kind of work. Projects may need coordination across those department boundaries.",
+      "example": "A developer reports to the IT department manager while contributing technical work to a business project."
+    },
+    {
+      "id": "464-v098",
+      "source": 25,
+      "section": 2,
+      "term": "Matrix organization",
+      "exp": "",
+      "q": "What is Matrix organization in this chapter?",
+      "correct": "An organization combining functional and project authority",
+      "answer": "An organization combining functional and project authority",
+      "distractors": [
+        "An organization arranged only around functional departments",
+        "An organization arranged only around dedicated projects",
+        "An organization in which nobody has formal authority"
+      ],
+      "teach": "Remember: the two directions of authority must be coordinated. The balance varies between weak, balanced, and strong matrices.",
+      "example": "An analyst receives specialty guidance from a functional manager and project priorities from a project manager."
+    },
+    {
+      "id": "464-v099",
+      "source": 25,
+      "section": 2,
+      "term": "Projectized organization",
+      "exp": "",
+      "q": "What is Projectized organization in this chapter?",
+      "correct": "An organization structured primarily around projects and their teams",
+      "answer": "An organization structured primarily around projects and their teams",
+      "distractors": [
+        "An organization structured only by ongoing specialties",
+        "An organization defined by two balanced reporting directions",
+        "An organization that handles only ongoing operations"
+      ],
+      "teach": "Remember: projects are a main organizing unit, and project managers usually have substantial authority over their teams.",
+      "example": "A consulting firm assembles a dedicated team around a client project and its project manager."
+    },
+    {
+      "id": "464-v100",
+      "source": 20,
+      "section": 1,
+      "term": "Developers in Scrum",
+      "exp": "",
+      "q": "What is Developers in Scrum in this chapter?",
+      "correct": "The Scrum Team members who create the usable Increment",
+      "answer": "The Scrum Team members who create the usable Increment",
+      "distractors": [
+        "The single accountability for maximizing product value",
+        "The accountability for establishing Scrum and helping team effectiveness",
+        "A separate board that authorizes all project changes"
+      ],
+      "teach": "Remember: Developers is a Scrum accountability, not a requirement that everyone write software code. The skills needed depend on the product.",
+      "example": "Designers, testers, and programmers collaborate to produce a usable improvement during a Sprint."
+    },
+    {
+      "id": "464-v101",
+      "source": 20,
+      "section": 1,
+      "term": "Sprint Planning",
+      "exp": "",
+      "q": "What is Sprint Planning in this chapter?",
+      "correct": "The Scrum event for deciding why the Sprint is valuable, what can be done, and how to approach it",
+      "answer": "The Scrum event for deciding why the Sprint is valuable, what can be done, and how to approach it",
+      "distractors": [
+        "The event for inspecting the completed outcome with stakeholders",
+        "The event for improving how the team works after reflection",
+        "The daily event for inspecting progress toward the Sprint Goal"
+      ],
+      "teach": "Remember: planning connects a short-term goal to selected work and a plan. The team does not simply accept an unlimited task list.",
+      "example": "The team selects work that supports a Sprint Goal and discusses how it can deliver it."
+    },
+    {
+      "id": "464-v102",
+      "source": 20,
+      "section": 1,
+      "term": "Daily Scrum",
+      "exp": "",
+      "q": "What is Daily Scrum in this chapter?",
+      "correct": "A short event for Developers to inspect progress toward the Sprint Goal and adapt their plan",
+      "answer": "A short event for Developers to inspect progress toward the Sprint Goal and adapt their plan",
+      "distractors": [
+        "A meeting whose main purpose is to present the finished product to customers",
+        "A meeting whose main purpose is to authorize the entire project",
+        "A meeting whose main purpose is to evaluate company portfolios"
+      ],
+      "teach": "Remember: this is for coordinating progress toward the goal. It is not primarily a status report to a boss.",
+      "example": "Developers notice a blocked test and adjust today’s work to keep the Sprint Goal achievable."
+    },
+    {
+      "id": "464-v103",
+      "source": 20,
+      "section": 1,
+      "term": "Sprint Review",
+      "exp": "",
+      "q": "What is Sprint Review in this chapter?",
+      "correct": "An event to inspect the Sprint outcome with stakeholders and consider what to do next",
+      "answer": "An event to inspect the Sprint outcome with stakeholders and consider what to do next",
+      "distractors": [
+        "An event focused mainly on improving the team’s working process",
+        "An event that starts the Sprint by selecting its goal and work",
+        "A daily event focused on the Developers’ immediate plan"
+      ],
+      "teach": "Remember: the Review looks at the product and what was learned with stakeholders. The Retrospective focuses on improving how the team works.",
+      "example": "Users try the new search feature and discuss what changes would make the next improvement more useful."
+    },
+    {
+      "id": "464-v104",
+      "source": 20,
+      "section": 1,
+      "term": "Sprint Retrospective",
+      "exp": "",
+      "q": "What is Sprint Retrospective in this chapter?",
+      "correct": "An event for the Scrum Team to inspect and improve how it works",
+      "answer": "An event for the Scrum Team to inspect and improve how it works",
+      "distractors": [
+        "An event primarily for stakeholder feedback on product outcomes",
+        "An event primarily for approving the initial project charter",
+        "An event primarily for ranking all company investments"
+      ],
+      "teach": "Remember: retrospect means look back to learn. The team identifies ways to improve effectiveness and quality.",
+      "example": "The team notices that late testing caused rework and agrees to test earlier next Sprint."
+    },
+    {
+      "id": "464-v105",
+      "source": 21,
+      "section": 1,
+      "term": "Sprint Backlog",
+      "exp": "",
+      "q": "What is Sprint Backlog in this chapter?",
+      "correct": "The Sprint Goal, selected Product Backlog items, and the actionable plan for delivering them",
+      "answer": "The Sprint Goal, selected Product Backlog items, and the actionable plan for delivering them",
+      "distractors": [
+        "The complete ordered list of all future product improvements",
+        "The agreed quality standard that defines a completed Increment",
+        "The long-term objective describing the product’s future state"
+      ],
+      "teach": "Remember: this belongs to the current Sprint and is adapted by Developers as they learn. It is not the whole product’s wish list.",
+      "example": "For this Sprint, Developers track the chosen checkout work and their plan for achieving the Sprint Goal."
+    },
+    {
+      "id": "464-v106",
+      "source": 21,
+      "section": 1,
+      "term": "Product Goal",
+      "exp": "",
+      "q": "What is Product Goal in this chapter?",
+      "correct": "A longer-term objective describing a future state of the product",
+      "answer": "A longer-term objective describing a future state of the product",
+      "distractors": [
+        "The quality standard for calling an Increment done",
+        "The single objective for one Sprint",
+        "The list of day-to-day tasks for the current Sprint"
+      ],
+      "teach": "Remember: this gives direction to the Product Backlog. A Sprint Goal is a smaller, nearer-term objective.",
+      "example": "The product aims to let students complete registration online without visiting an office."
+    },
+    {
+      "id": "464-v107",
+      "source": 21,
+      "section": 1,
+      "term": "Sprint Goal",
+      "exp": "",
+      "q": "What is Sprint Goal in this chapter?",
+      "correct": "The single objective for a Sprint that gives its work a shared purpose",
+      "answer": "The single objective for a Sprint that gives its work a shared purpose",
+      "distractors": [
+        "The complete list of every desired product feature",
+        "The organization’s full portfolio investment strategy",
+        "The permanent quality standard for every Increment"
+      ],
+      "teach": "Remember: the goal explains why the selected work matters. The detailed plan can change while the team keeps that purpose in view.",
+      "example": "This Sprint’s goal is to let a student find available courses by department."
+    },
+    {
+      "id": "464-v108",
+      "source": 21,
+      "section": 1,
+      "term": "Increment in Scrum",
+      "exp": "",
+      "q": "What is Increment in Scrum in this chapter?",
+      "correct": "A usable addition to the product that meets the Definition of Done and works with earlier increments",
+      "answer": "A usable addition to the product that meets the Definition of Done and works with earlier increments",
+      "distractors": [
+        "An unfinished task that has merely been started",
+        "A future feature request that has not been built",
+        "A schedule estimate without a usable result"
+      ],
+      "teach": "Remember: it is usable, integrated work, not just a percentage of tasks completed. Done gives everyone a shared quality standard.",
+      "example": "A tested search improvement works with the existing app and meets the team’s agreed quality requirements."
+    },
+    {
+      "id": "464-v109",
+      "source": 28,
+      "section": 2,
+      "term": "Strength in SWOT",
+      "exp": "",
+      "q": "What is Strength in SWOT in this chapter?",
+      "correct": "An internal capability or advantage that supports the organization",
+      "answer": "An internal capability or advantage that supports the organization",
+      "distractors": [
+        "An internal limitation that holds the organization back",
+        "An external condition that could help the organization",
+        "An external condition that could harm the organization"
+      ],
+      "teach": "Remember: ask two questions: is it inside or outside, and does it help or hurt? A strength is inside and helpful.",
+      "example": "Experienced staff who already know the technology are a strength the organization can use."
+    },
+    {
+      "id": "464-v110",
+      "source": 28,
+      "section": 2,
+      "term": "Weakness in SWOT",
+      "exp": "",
+      "q": "What is Weakness in SWOT in this chapter?",
+      "correct": "An internal limitation or disadvantage",
+      "answer": "An internal limitation or disadvantage",
+      "distractors": [
+        "An external favorable change",
+        "An internal capability that helps",
+        "An external danger to success"
+      ],
+      "teach": "Remember: a weakness is inside the organization and makes success harder. This separates it from an external threat.",
+      "example": "A lack of staff training is an internal weakness that can slow the project."
+    },
+    {
+      "id": "464-v111",
+      "source": 28,
+      "section": 2,
+      "term": "Opportunity in SWOT",
+      "exp": "",
+      "q": "What is Opportunity in SWOT in this chapter?",
+      "correct": "An external condition the organization could benefit from",
+      "answer": "An external condition the organization could benefit from",
+      "distractors": [
+        "An internal skill the organization already has",
+        "An internal limitation that needs improvement",
+        "An external condition likely to cause harm"
+      ],
+      "teach": "Remember: an opportunity comes from the environment outside the organization and could help if acted on.",
+      "example": "A new grant program creates a chance to fund a useful campus technology project."
+    },
+    {
+      "id": "464-v112",
+      "source": 28,
+      "section": 2,
+      "term": "Threat in SWOT",
+      "exp": "",
+      "q": "What is Threat in SWOT in this chapter?",
+      "correct": "An external condition that could harm the organization",
+      "answer": "An external condition that could harm the organization",
+      "distractors": [
+        "An internal advantage the organization already has",
+        "An external chance to gain benefits",
+        "An internal lack of skills"
+      ],
+      "teach": "Remember: a threat is outside and potentially harmful. An internal weakness may make the organization more vulnerable to it.",
+      "example": "A new competitor offering a better service could draw customers away."
+    },
+    {
+      "id": "464-v113",
+      "source": 69,
+      "section": 10,
+      "term": "Fairness",
+      "exp": "",
+      "q": "What is Fairness in this chapter?",
+      "correct": "Considering whether decisions and treatment are impartial and avoid unjust disadvantage",
+      "answer": "Considering whether decisions and treatment are impartial and avoid unjust disadvantage",
+      "distractors": [
+        "Hiding decision criteria so nobody can question them",
+        "Taking ownership of a decision without examining its effects",
+        "Explaining a process while ignoring unequal harm"
+      ],
+      "teach": "Remember: being transparent about a decision does not by itself make the decision fair. You must examine how people are treated and affected.",
+      "example": "A manager reviews whether an AI-assisted assignment process consistently disadvantages one group without a relevant reason."
+    },
+    {
+      "id": "464-v114",
+      "source": 56,
+      "section": 10,
+      "term": "Training an AI model",
+      "exp": "",
+      "q": "What is Training an AI model in this chapter?",
+      "correct": "Adjusting a model using data so it learns patterns",
+      "answer": "Adjusting a model using data so it learns patterns",
+      "distractors": [
+        "Applying an already trained model to a new input",
+        "Approving a project charter for an AI system",
+        "Giving every generated answer a guarantee of accuracy"
+      ],
+      "teach": "Remember: training changes the model through examples. Inference uses the trained model to produce a result; the two are different activities.",
+      "example": "Examples of correctly labeled tickets are used to adjust a model before it classifies new tickets."
+    },
+    {
+      "id": "464-v115",
+      "source": 58,
+      "section": 10,
+      "term": "AI agent",
+      "exp": "",
+      "q": "What is AI agent in this chapter?",
+      "correct": "A system that observes information and selects or performs actions toward objectives",
+      "answer": "A system that observes information and selects or performs actions toward objectives",
+      "distractors": [
+        "Any stored document that mentions artificial intelligence",
+        "A model that is guaranteed to be correct",
+        "A system that must act without any limits or human oversight"
+      ],
+      "teach": "Remember: an agent connects observations to actions. Its capabilities and allowed actions depend on its design and permissions.",
+      "example": "A support agent reads a ticket, identifies the needed category, and routes it using an allowed tool."
     }
   ],
   "checks": [
@@ -3344,7 +4145,8 @@
       "title": "Agile Manifesto",
       "url": "https://agilemanifesto.org/",
       "questions": [
-        19
+        19,
+        72
       ]
     },
     {
@@ -3370,14 +4172,16 @@
       "title": "PMI · CAPM",
       "url": "https://www.pmi.org/certifications/certified-associate-capm",
       "questions": [
-        22
+        22,
+        74
       ]
     },
     {
       "title": "PMI · PMP",
       "url": "https://www.pmi.org/certifications/project-management-pmp",
       "questions": [
-        22
+        22,
+        75
       ]
     },
     {
@@ -3494,5 +4298,697 @@
       "PMI Certified Professional in Monitoring AI",
       "PMI Certified Program Manager for AI"
     ]
-  }
+  },
+  "termCoverage": [
+    {
+      "term": "Project",
+      "id": "464-v001",
+      "section": 1,
+      "source": 2
+    },
+    {
+      "term": "Operations",
+      "id": "464-v002",
+      "section": 1,
+      "source": 7
+    },
+    {
+      "term": "Progressive elaboration",
+      "id": "464-v003",
+      "section": 1,
+      "source": 3
+    },
+    {
+      "term": "Scope",
+      "id": "464-v004",
+      "section": 1,
+      "source": 5
+    },
+    {
+      "term": "Schedule",
+      "id": "464-v005",
+      "section": 1,
+      "source": 5
+    },
+    {
+      "term": "Constraint",
+      "id": "464-v006",
+      "section": 1,
+      "source": 5
+    },
+    {
+      "term": "Assumption",
+      "id": "464-v007",
+      "section": 3,
+      "source": 42
+    },
+    {
+      "term": "Stakeholder",
+      "id": "464-v008",
+      "section": 1,
+      "source": 9
+    },
+    {
+      "term": "Sponsor",
+      "id": "464-v009",
+      "section": 1,
+      "source": 9
+    },
+    {
+      "term": "Champion",
+      "id": "464-v010",
+      "section": 1,
+      "source": 9
+    },
+    {
+      "term": "Steering committee",
+      "id": "464-v011",
+      "section": 1,
+      "source": 9
+    },
+    {
+      "term": "Ambiguity",
+      "id": "464-v012",
+      "section": 1,
+      "source": 10
+    },
+    {
+      "term": "Team norm",
+      "id": "464-v013",
+      "section": 1,
+      "source": 11
+    },
+    {
+      "term": "SMART",
+      "id": "464-v014",
+      "section": 1,
+      "source": 11
+    },
+    {
+      "term": "Storming",
+      "id": "464-v015",
+      "section": 1,
+      "source": 13
+    },
+    {
+      "term": "Norming",
+      "id": "464-v016",
+      "section": 1,
+      "source": 13
+    },
+    {
+      "term": "Program",
+      "id": "464-v017",
+      "section": 1,
+      "source": 14
+    },
+    {
+      "term": "Portfolio",
+      "id": "464-v018",
+      "section": 1,
+      "source": 14
+    },
+    {
+      "term": "Megaproject",
+      "id": "464-v019",
+      "section": 1,
+      "source": 14
+    },
+    {
+      "term": "CIO",
+      "id": "464-v020",
+      "section": 1,
+      "source": 14
+    },
+    {
+      "term": "DevOps",
+      "id": "464-v021",
+      "section": 1,
+      "source": 7
+    },
+    {
+      "term": "MORE",
+      "id": "464-v022",
+      "section": 1,
+      "source": 6
+    },
+    {
+      "term": "Governance",
+      "id": "464-v023",
+      "section": 1,
+      "source": 16
+    },
+    {
+      "term": "Predictive approach",
+      "id": "464-v024",
+      "section": 1,
+      "source": 17
+    },
+    {
+      "term": "Adaptive approach",
+      "id": "464-v025",
+      "section": 1,
+      "source": 17
+    },
+    {
+      "term": "Iteration",
+      "id": "464-v026",
+      "section": 1,
+      "source": 18
+    },
+    {
+      "term": "Increment",
+      "id": "464-v027",
+      "section": 1,
+      "source": 18
+    },
+    {
+      "term": "Tailoring",
+      "id": "464-v028",
+      "section": 1,
+      "source": 18
+    },
+    {
+      "term": "Sprint",
+      "id": "464-v029",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Product Owner",
+      "id": "464-v030",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Scrum Master",
+      "id": "464-v031",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Product Backlog",
+      "id": "464-v032",
+      "section": 1,
+      "source": 21
+    },
+    {
+      "term": "Definition of Done",
+      "id": "464-v033",
+      "section": 1,
+      "source": 21
+    },
+    {
+      "term": "PMI",
+      "id": "464-v034",
+      "section": 1,
+      "source": 22
+    },
+    {
+      "term": "CAPM",
+      "id": "464-v035",
+      "section": 1,
+      "source": 22
+    },
+    {
+      "term": "PMP",
+      "id": "464-v036",
+      "section": 1,
+      "source": 22
+    },
+    {
+      "term": "SWOT",
+      "id": "464-v037",
+      "section": 2,
+      "source": 28
+    },
+    {
+      "term": "Balanced scorecard",
+      "id": "464-v038",
+      "section": 2,
+      "source": 29
+    },
+    {
+      "term": "Weight",
+      "id": "464-v039",
+      "section": 2,
+      "source": 30
+    },
+    {
+      "term": "Discount rate",
+      "id": "464-v040",
+      "section": 2,
+      "source": 31
+    },
+    {
+      "term": "PV",
+      "id": "464-v041",
+      "section": 2,
+      "source": 31
+    },
+    {
+      "term": "NPV",
+      "id": "464-v042",
+      "section": 2,
+      "source": 32
+    },
+    {
+      "term": "ROI",
+      "id": "464-v043",
+      "section": 2,
+      "source": 33
+    },
+    {
+      "term": "IRR",
+      "id": "464-v044",
+      "section": 2,
+      "source": 34
+    },
+    {
+      "term": "Payback period",
+      "id": "464-v045",
+      "section": 2,
+      "source": 34
+    },
+    {
+      "term": "Sunk cost",
+      "id": "464-v046",
+      "section": 2,
+      "source": 36
+    },
+    {
+      "term": "Gate review",
+      "id": "464-v047",
+      "section": 2,
+      "source": 36
+    },
+    {
+      "term": "Outsourcing",
+      "id": "464-v048",
+      "section": 2,
+      "source": 38
+    },
+    {
+      "term": "Cadence",
+      "id": "464-v049",
+      "section": 3,
+      "source": 39
+    },
+    {
+      "term": "PMO",
+      "id": "464-v050",
+      "section": 3,
+      "source": 40
+    },
+    {
+      "term": "Baseline",
+      "id": "464-v051",
+      "section": 3,
+      "source": 41
+    },
+    {
+      "term": "Variance",
+      "id": "464-v052",
+      "section": 3,
+      "source": 41
+    },
+    {
+      "term": "Business case",
+      "id": "464-v053",
+      "section": 3,
+      "source": 42
+    },
+    {
+      "term": "Charter",
+      "id": "464-v054",
+      "section": 3,
+      "source": 43
+    },
+    {
+      "term": "Project management plan",
+      "id": "464-v055",
+      "section": 3,
+      "source": 44
+    },
+    {
+      "term": "Stakeholder register",
+      "id": "464-v056",
+      "section": 3,
+      "source": 46
+    },
+    {
+      "term": "Engagement",
+      "id": "464-v057",
+      "section": 3,
+      "source": 47
+    },
+    {
+      "term": "Power",
+      "id": "464-v058",
+      "section": 3,
+      "source": 48
+    },
+    {
+      "term": "Interest",
+      "id": "464-v059",
+      "section": 3,
+      "source": 48
+    },
+    {
+      "term": "CCB",
+      "id": "464-v060",
+      "section": 3,
+      "source": 52
+    },
+    {
+      "term": "Configuration management",
+      "id": "464-v061",
+      "section": 3,
+      "source": 53
+    },
+    {
+      "term": "ML",
+      "id": "464-v062",
+      "section": 10,
+      "source": 56
+    },
+    {
+      "term": "Deep learning",
+      "id": "464-v063",
+      "section": 10,
+      "source": 56
+    },
+    {
+      "term": "NLP",
+      "id": "464-v064",
+      "section": 10,
+      "source": 56
+    },
+    {
+      "term": "LLM",
+      "id": "464-v065",
+      "section": 10,
+      "source": 57
+    },
+    {
+      "term": "Generative AI",
+      "id": "464-v066",
+      "section": 10,
+      "source": 57
+    },
+    {
+      "term": "Agentic AI",
+      "id": "464-v067",
+      "section": 10,
+      "source": 58
+    },
+    {
+      "term": "Autonomy",
+      "id": "464-v068",
+      "section": 10,
+      "source": 58
+    },
+    {
+      "term": "Hallucination",
+      "id": "464-v069",
+      "section": 10,
+      "source": 66
+    },
+    {
+      "term": "Prompt injection",
+      "id": "464-v070",
+      "section": 10,
+      "source": 66
+    },
+    {
+      "term": "Bias",
+      "id": "464-v071",
+      "section": 10,
+      "source": 69
+    },
+    {
+      "term": "Accountability",
+      "id": "464-v072",
+      "section": 10,
+      "source": 69
+    },
+    {
+      "term": "Transparency",
+      "id": "464-v073",
+      "section": 10,
+      "source": 69
+    },
+    {
+      "term": "Inference",
+      "id": "464-v074",
+      "section": 10,
+      "source": 64
+    },
+    {
+      "term": "PMI-CPMAI",
+      "id": "464-v075",
+      "section": 10,
+      "source": 71
+    },
+    {
+      "term": "Simple reflex agent",
+      "id": "464-v076",
+      "section": 10,
+      "source": 59
+    },
+    {
+      "term": "Model-based reflex agent",
+      "id": "464-v077",
+      "section": 10,
+      "source": 60
+    },
+    {
+      "term": "Goal-based agent",
+      "id": "464-v078",
+      "section": 10,
+      "source": 61
+    },
+    {
+      "term": "Utility-based agent",
+      "id": "464-v079",
+      "section": 10,
+      "source": 62
+    },
+    {
+      "term": "Learning agent",
+      "id": "464-v080",
+      "section": 10,
+      "source": 63
+    },
+    {
+      "term": "Forming",
+      "id": "464-v081",
+      "section": 1,
+      "source": 13
+    },
+    {
+      "term": "Performing",
+      "id": "464-v082",
+      "section": 1,
+      "source": 13
+    },
+    {
+      "term": "Adjourning",
+      "id": "464-v083",
+      "section": 1,
+      "source": 13
+    },
+    {
+      "term": "Initiating",
+      "id": "464-v084",
+      "section": 1,
+      "source": 15
+    },
+    {
+      "term": "Planning",
+      "id": "464-v085",
+      "section": 1,
+      "source": 15
+    },
+    {
+      "term": "Executing",
+      "id": "464-v086",
+      "section": 1,
+      "source": 15
+    },
+    {
+      "term": "Monitoring and controlling",
+      "id": "464-v087",
+      "section": 1,
+      "source": 15
+    },
+    {
+      "term": "Closing",
+      "id": "464-v088",
+      "section": 1,
+      "source": 15
+    },
+    {
+      "term": "Risk",
+      "id": "464-v089",
+      "section": 1,
+      "source": 16
+    },
+    {
+      "term": "Resources",
+      "id": "464-v090",
+      "section": 1,
+      "source": 16
+    },
+    {
+      "term": "Finance",
+      "id": "464-v091",
+      "section": 1,
+      "source": 16
+    },
+    {
+      "term": "Hybrid approach",
+      "id": "464-v092",
+      "section": 1,
+      "source": 18
+    },
+    {
+      "term": "Structural frame",
+      "id": "464-v093",
+      "section": 2,
+      "source": 24
+    },
+    {
+      "term": "Human resources frame",
+      "id": "464-v094",
+      "section": 2,
+      "source": 24
+    },
+    {
+      "term": "Political frame",
+      "id": "464-v095",
+      "section": 2,
+      "source": 24
+    },
+    {
+      "term": "Symbolic frame",
+      "id": "464-v096",
+      "section": 2,
+      "source": 24
+    },
+    {
+      "term": "Functional organization",
+      "id": "464-v097",
+      "section": 2,
+      "source": 25
+    },
+    {
+      "term": "Matrix organization",
+      "id": "464-v098",
+      "section": 2,
+      "source": 25
+    },
+    {
+      "term": "Projectized organization",
+      "id": "464-v099",
+      "section": 2,
+      "source": 25
+    },
+    {
+      "term": "Developers in Scrum",
+      "id": "464-v100",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Sprint Planning",
+      "id": "464-v101",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Daily Scrum",
+      "id": "464-v102",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Sprint Review",
+      "id": "464-v103",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Sprint Retrospective",
+      "id": "464-v104",
+      "section": 1,
+      "source": 20
+    },
+    {
+      "term": "Sprint Backlog",
+      "id": "464-v105",
+      "section": 1,
+      "source": 21
+    },
+    {
+      "term": "Product Goal",
+      "id": "464-v106",
+      "section": 1,
+      "source": 21
+    },
+    {
+      "term": "Sprint Goal",
+      "id": "464-v107",
+      "section": 1,
+      "source": 21
+    },
+    {
+      "term": "Increment in Scrum",
+      "id": "464-v108",
+      "section": 1,
+      "source": 21
+    },
+    {
+      "term": "Strength in SWOT",
+      "id": "464-v109",
+      "section": 2,
+      "source": 28
+    },
+    {
+      "term": "Weakness in SWOT",
+      "id": "464-v110",
+      "section": 2,
+      "source": 28
+    },
+    {
+      "term": "Opportunity in SWOT",
+      "id": "464-v111",
+      "section": 2,
+      "source": 28
+    },
+    {
+      "term": "Threat in SWOT",
+      "id": "464-v112",
+      "section": 2,
+      "source": 28
+    },
+    {
+      "term": "Fairness",
+      "id": "464-v113",
+      "section": 10,
+      "source": 69
+    },
+    {
+      "term": "Training an AI model",
+      "id": "464-v114",
+      "section": 10,
+      "source": 56
+    },
+    {
+      "term": "AI agent",
+      "id": "464-v115",
+      "section": 10,
+      "source": 58
+    }
+  ]
 }
