@@ -49,7 +49,7 @@ run('section=0;start("practice",[D.questions[0]],D.questions[0].number);grade(se
 assert.ok(element('#app').innerHTML.includes('Next lesson'));
 console.log('PASS: next lesson after reading and quiz, chapter-scoped sequence, persisted progress, and honest completion with skipped lessons.');
 
-const tapCards=data.cloze.filter(x=>x.kind==='cloze');assert.equal(tapCards.length,27);
+const tapCards=data.cloze.filter(x=>x.kind==='cloze');assert.equal(tapCards.length,31);
 for(const x of tapCards){
  assert.equal((x.q.match(/____/g)||[]).length,x.blanks.length);
  assert.equal(x.blanks.join('; '),x.correct);
@@ -71,11 +71,11 @@ run('section=0;navigate("practice")');element('#sort-practice').onclick();assert
 run('openLesson(29,2)');element('#lesson-practice').onclick();assert.ok(run('session.items.some(x=>x.id==="304-s7")'));
 console.log('PASS: architecture layers and sequence launcher are available in CIS 304 practice and relevant lessons.');
 
-assert.equal(data.foundations.length,4);
-for(const f of data.foundations){assert.equal(new Set([f.correct,...f.distractors]).size,4);assert.equal((f.q.match(/____/g)||[]).length,f.blanks.length)}
-run('start("practice",[D.questions.find(q=>q.number===46)])');
-assert.equal(run('session.items[0].id'),'304-foundation-1');assert.equal(run('session.items[4].number'),46);
-assert.ok(element('#app').innerHTML.includes('Functional Area Information System'));
-run('grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items[session.index].id'),'304-foundation-1');
-run('start("exam",[D.questions.find(q=>q.number===46)])');assert.equal(run('session.total'),1);
-console.log('PASS: FAIS/EIS definitions precede dependent practice, wrong foundations retry before advancing, exams unchanged.');
+
+const termCards=data.cloze.filter(x=>x.id.startsWith('304-foundation-'));assert.equal(termCards.length,4);
+for(const f of termCards){assert.equal(new Set([f.correct,...f.distractors]).size,4);assert.equal((f.q.match(/____/g)||[]).length,f.blanks.length);assert.ok(!f.foundation)}
+run('start("practice",[D.questions.find(q=>q.number===46)])');assert.equal(run('session.total'),1);assert.equal(run('session.items[0].number'),46);
+run('openLesson(44,2)');element('#lesson-practice').onclick();assert.equal(run('session.items[0].number'),44);assert.ok(run('session.items.some(x=>x.id==="304-foundation-1")'));
+run('start("practice",D.cloze.filter(x=>x.id.startsWith("304-foundation-")))');assert.ok(!element('#app').innerHTML.includes('Learn the term first'));assert.ok(!element('#app').innerHTML.includes('Start here'));
+run('grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items[1].id'),'304-foundation-2');assert.equal(run('session.items[4].id'),'304-foundation-1');
+console.log('PASS: term cards flow through regular cloze and lessons, with optional explanations and delayed retries; no forced warm-up.');

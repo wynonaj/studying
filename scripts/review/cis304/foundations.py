@@ -11,4 +11,9 @@ rows=[
 d['foundations']=[]
 for i,(n,q,a,w,intro,why) in enumerate(rows,1):
  d['foundations'].append(dict(id=f'304-foundation-{i}',source=n,section=4,kind='cloze',foundation=True,foundationIntro=intro,q=q,correct=a,answer=a,distractors=w.split('|'),blanks=a.split('; '),teach=why,example=intro))
+# Keep these as ordinary cloze practice, not a prerequisite interruption.
+for card in d.pop('foundations'):
+ card['teach']=card.pop('foundationIntro')+'\n\n'+card['teach']
+ card.pop('foundation',None)
+ d['cloze'].append(card)
 p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')

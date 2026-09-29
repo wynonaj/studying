@@ -3715,16 +3715,12 @@
       "blanks": [
         "partners"
       ]
-    }
-  ],
-  "foundations": [
+    },
     {
       "id": "304-foundation-1",
       "source": 44,
       "section": 4,
       "kind": "cloze",
-      "foundation": true,
-      "foundationIntro": "FAIS = Functional Area Information System. A functional area is one department or type of work, such as accounting, human resources, or sales. An information system combines people, processes, data, and technology to handle information.",
       "q": "FAIS stands for ____ ____ ____ ____.",
       "correct": "Functional; Area; Information; System",
       "answer": "Functional; Area; Information; System",
@@ -3739,7 +3735,7 @@
         "Information",
         "System"
       ],
-      "teach": "Remember: Functional Area tells you its scope—one part of the business. For example, a payroll system supports the human-resources function.",
+      "teach": "FAIS = Functional Area Information System. A functional area is one department or type of work, such as accounting, human resources, or sales. An information system combines people, processes, data, and technology to handle information.\n\nRemember: Functional Area tells you its scope—one part of the business. For example, a payroll system supports the human-resources function.",
       "example": "FAIS = Functional Area Information System. A functional area is one department or type of work, such as accounting, human resources, or sales. An information system combines people, processes, data, and technology to handle information."
     },
     {
@@ -3747,8 +3743,6 @@
       "source": 44,
       "section": 4,
       "kind": "cloze",
-      "foundation": true,
-      "foundationIntro": "A FAIS focuses on the information needs of one business function. A function is a type of work, such as accounting or sales. A FAIS can connect to other systems, but its primary focus is still that function.",
       "q": "A FAIS primarily supports ____ in a business.",
       "correct": "one functional area",
       "answer": "one functional area",
@@ -3760,7 +3754,7 @@
       "blanks": [
         "one functional area"
       ],
-      "teach": "Remember: ask whose work the system mainly supports. An accounting system focused on accounting is a functional-area system; being connected to something else does not automatically change that focus.",
+      "teach": "A FAIS focuses on the information needs of one business function. A function is a type of work, such as accounting or sales. A FAIS can connect to other systems, but its primary focus is still that function.\n\nRemember: ask whose work the system mainly supports. An accounting system focused on accounting is a functional-area system; being connected to something else does not automatically change that focus.",
       "example": "A FAIS focuses on the information needs of one business function. A function is a type of work, such as accounting or sales. A FAIS can connect to other systems, but its primary focus is still that function."
     },
     {
@@ -3768,8 +3762,6 @@
       "source": 45,
       "section": 4,
       "kind": "cloze",
-      "foundation": true,
-      "foundationIntro": "EIS = Enterprise Information System in this course. Enterprise means the organization as a whole. An EIS supports information and processes across business functions.",
       "q": "In CIS 304, EIS stands for ____ ____ ____.",
       "correct": "Enterprise; Information; System",
       "answer": "Enterprise; Information; System",
@@ -3783,7 +3775,7 @@
         "Information",
         "System"
       ],
-      "teach": "Remember: the E here is Enterprise. Think across departments, rather than one department’s information needs. Other contexts can use EIS differently; use your course’s meaning.",
+      "teach": "EIS = Enterprise Information System in this course. Enterprise means the organization as a whole. An EIS supports information and processes across business functions.\n\nRemember: the E here is Enterprise. Think across departments, rather than one department’s information needs. Other contexts can use EIS differently; use your course’s meaning.",
       "example": "EIS = Enterprise Information System in this course. Enterprise means the organization as a whole. An EIS supports information and processes across business functions."
     },
     {
@@ -3791,8 +3783,6 @@
       "source": 45,
       "section": 4,
       "kind": "cloze",
-      "foundation": true,
-      "foundationIntro": "An enterprise system helps parts of the organization work together. For example, a customer order may need sales, inventory, shipping, and accounting to share consistent information.",
       "q": "An EIS helps connect information and work ____.",
       "correct": "across business functions",
       "answer": "across business functions",
@@ -3804,7 +3794,7 @@
       "blanks": [
         "across business functions"
       ],
-      "teach": "Remember: sales records the order, inventory checks availability, shipping delivers it, and accounting tracks payment. The key idea is supporting that cross-functional flow.",
+      "teach": "An enterprise system helps parts of the organization work together. For example, a customer order may need sales, inventory, shipping, and accounting to share consistent information.\n\nRemember: sales records the order, inventory checks availability, shipping delivers it, and accounting tracks payment. The key idea is supporting that cross-functional flow.",
       "example": "An enterprise system helps parts of the organization work together. For example, a customer order may need sales, inventory, shipping, and accounting to share consistent information."
     }
   ]
