@@ -162,3 +162,5 @@ runpy.run_path(str(Path(__file__).with_name("fill_blanks.py")))
 runpy.run_path(str(Path(__file__).resolve().parents[1]/"add_sorting.py"),run_name="__main__",init_globals={"only_course":"304"})
 
 runpy.run_path(str(Path(__file__).with_name("foundations.py")))
+
+runpy.run_path(str(Path(__file__).with_name("clarify_prompts.py")))

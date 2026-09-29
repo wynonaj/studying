@@ -486,7 +486,7 @@
       "id": "304-q24",
       "number": 24,
       "section": 2,
-      "q": "How are they similar?",
+      "q": "What do Business Process Management (BPM), Business Process Improvement (BPI), and Business Process Re-engineering (BPR) have in common?",
       "title": "How BPM, BPI, and BPR are similar",
       "answer": "All focus on business processes and better organizational outcomes. They involve understanding work, considering customer value, and evaluating results. BPI and BPR are ways to change processes within the broader discipline of BPM.",
       "teach": "Do not memorize these as three unrelated software products. BPM is the continuing management effort. Improvement and re-engineering are approaches that effort can use.",
@@ -501,13 +501,14 @@
         28,
         29,
         30
-      ]
+      ],
+      "originalPrompt": "How are they similar?"
     },
     {
       "id": "304-q25",
       "number": 25,
       "section": 2,
-      "q": "How are they different?",
+      "q": "How do Business Process Management (BPM), Business Process Improvement (BPI), and Business Process Re-engineering (BPR) differ?",
       "title": "How BPM, BPI, and BPR differ",
       "answer": "BPM is ongoing process management. BPI improves the existing process through smaller changes. BPR fundamentally redesigns it for larger change. BPI usually begins with the current process; BPR challenges its assumptions and may replace much of it.",
       "teach": "Think about scope: managing the cycle, adjusting the current design, or replacing the design. The choice depends on the problem and the level of improvement required.",
@@ -522,13 +523,14 @@
         28,
         29,
         30
-      ]
+      ],
+      "originalPrompt": "How are they different?"
     },
     {
       "id": "304-q26",
       "number": 26,
       "section": 2,
-      "q": "What is the major trade-off of choosing one over another?",
+      "q": "What is the major trade-off between Business Process Improvement (BPI) and Business Process Re-engineering (BPR)?",
       "title": "The BPI–BPR trade-off",
       "answer": "BPI tends to offer smaller gains with less disruption, risk, and resistance. BPR can offer larger gains but often requires greater investment, organizational change, and implementation risk. Large gains are possible, not guaranteed.",
       "teach": "Disruption means normal work is disturbed during the change. Resistance means people may struggle with or oppose unfamiliar work. Choose an approach based on the size of the problem, not just a fashionable label.",
@@ -541,7 +543,8 @@
       ],
       "slides": [
         30
-      ]
+      ],
+      "originalPrompt": "What is the major trade-off of choosing one over another?"
     },
     {
       "id": "304-q27",
@@ -928,7 +931,7 @@
       "id": "304-q46",
       "number": 46,
       "section": 4,
-      "q": "What is the difference between these two types of systems?",
+      "q": "What is the difference between a Functional Area Information System (FAIS) and an Enterprise Information System (EIS)?",
       "title": "FAIS versus EIS",
       "answer": "FAIS focuses on one functional area. EIS connects functions to support enterprise-wide processes and information sharing. The difference is the scope and integration of business work, not simply the number of users or computers.",
       "teach": "A large payroll system can still be functional. A smaller system connecting sales, inventory, and accounting can be enterprise-oriented. Count the connected business activities, not the machines.",
@@ -941,7 +944,8 @@
       ],
       "slides": [
         51
-      ]
+      ],
+      "originalPrompt": "What is the difference between these two types of systems?"
     },
     {
       "id": "304-q47",
@@ -966,7 +970,7 @@
       "id": "304-q48",
       "number": 48,
       "section": 4,
-      "q": "How does it help a business organization?",
+      "q": "How does an Enterprise Resource Planning (ERP) system help a business organization?",
       "title": "How ERP helps",
       "answer": "ERP coordinates work across functions, reduces duplicate data entry, improves access to consistent information, supports standardized processes, and gives a company-wide view for decisions. These benefits depend on good configuration, data quality, and people using the system properly.",
       "teach": "Duplicate entry means typing the same facts into several systems. Each new copy is a chance for a typo or an outdated value. A shared record can reduce that problem.",
@@ -979,7 +983,8 @@
       ],
       "slides": [
         52
-      ]
+      ],
+      "originalPrompt": "How does it help a business organization?"
     },
     {
       "id": "304-q49",

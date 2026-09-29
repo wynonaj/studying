@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const data=JSON.parse(read('dist/cis304-content.json')),prompts=JSON.parse(read('scripts/review/cis304/guide-prompts.json'));
-assert.equal(data.questions.length,51);assert.deepEqual(data.questions.map(q=>q.q),prompts);
+assert.equal(data.questions.length,51);assert.deepEqual(data.questions.map(q=>q.originalPrompt||q.q),prompts);
 assert.deepEqual(data.sections.map(s=>data.questions.filter(q=>q.section===s.id).length),[10,16,11,14]);
 const all=[...data.questions,...data.vocab,...data.checks,...data.cloze];
 assert.equal(new Set(all.map(x=>x.id)).size,all.length);
@@ -79,3 +79,9 @@ run('openLesson(44,2)');element('#lesson-practice').onclick();assert.equal(run('
 run('start("practice",D.cloze.filter(x=>x.id.startsWith("304-foundation-")))');assert.ok(!element('#app').innerHTML.includes('Learn the term first'));assert.ok(!element('#app').innerHTML.includes('Start here'));
 run('grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items[1].id'),'304-foundation-2');assert.equal(run('session.items[4].id'),'304-foundation-1');
 console.log('PASS: term cards flow through regular cloze and lessons, with optional explanations and delayed retries; no forced warm-up.');
+
+for(const n of [24,25,26,46,48])assert.ok(data.questions[n-1].originalPrompt);
+assert.match(data.questions[45].q,/Functional Area Information System \(FAIS\).*Enterprise Information System \(EIS\)/);
+assert.match(data.questions[47].q,/Enterprise Resource Planning \(ERP\)/);
+assert.ok(!data.questions.some(q=>/^How are they|^What is the difference between these|^How does it help/.test(q.q)));
+console.log('PASS: standalone comparison wording names the actual concepts, while retaining original guide prompts.');
