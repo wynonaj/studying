@@ -1,0 +1,2790 @@
+{
+  "version": 1,
+  "reviewed": "2026-09-28",
+  "audience": "U.S. entry-level / May 2027 graduate",
+  "sources": [
+    {
+      "id": "onet",
+      "title": "O*NET: Computer Systems Analysts",
+      "url": "https://www.onetonline.org/link/summary/15-1211.00",
+      "kind": "Occupation evidence",
+      "note": "Requirements, systems integration, troubleshooting, testing and user support appear across this occupation. Individual postings vary."
+    },
+    {
+      "id": "support",
+      "title": "O*NET: Computer User Support Specialists",
+      "url": "https://www.onetonline.org/link/summary/15-1232.00",
+      "kind": "Occupation evidence",
+      "note": "Useful for support-oriented IT analyst roles; not every analyst job is help desk work."
+    },
+    {
+      "id": "deloitte",
+      "title": "Deloitte: Case and scenario interview tips",
+      "url": "https://www.deloitte.com/us/en/careers/join-deloitte/recruiting-tips/case-and-scenario-interview-tips.html",
+      "kind": "Employer interview guidance",
+      "note": "Explains reasoning, assumptions, recommendations and next steps. Does not promise a particular question or round for your vacancy."
+    },
+    {
+      "id": "capital",
+      "title": "Capital One: Student and graduate interviews",
+      "url": "https://www.capitalonecareers.com/en/student-and-grad-application-questions-answered-students-cdev",
+      "kind": "Employer interview guidance",
+      "note": "Describes behavioral, case, job-fit and technical formats by program. Confirm your specific process with the recruiter."
+    },
+    {
+      "id": "tdp",
+      "title": "Capital One: Technology Development Program",
+      "url": "https://www.capitalonecareers.com/elevate-your-tech-career-with-the-tdp-students-tech",
+      "kind": "Employer role example",
+      "note": "This TDP includes software engineering rotations. A technology-program title alone does not mean a noncoding role."
+    },
+    {
+      "id": "epic",
+      "title": "Epic: Technical Solutions Engineering",
+      "url": "https://careers.epic.com/jobs/technical-solutions-engineer/",
+      "kind": "Employer role example",
+      "note": "Emphasizes troubleshooting and customer relationships; says specific programming expertise is not required for this role. This is not a rule for other employers."
+    },
+    {
+      "id": "sc",
+      "title": "ServiceNow: Associate Solution Consultant",
+      "url": "https://careers.servicenow.com/jobs/744000063545800/associate-solution-consultant/",
+      "kind": "Employer role example",
+      "note": "An early-career role example involving customer discovery and product demonstrations. Presales helps a customer evaluate a solution before purchasing it; postings and availability change."
+    },
+    {
+      "id": "amazon",
+      "title": "Amazon: Business Intelligence Engineer interview preparation",
+      "url": "https://www.amazon.jobs/content/en/how-we-hire/bie-interview-prep",
+      "kind": "Employer interview guidance",
+      "note": "SQL, analytics and behavioral preparation for BIE roles specifically. An adjacent data-heavy example, not the required interview for all business systems analysts."
+    },
+    {
+      "id": "iiba",
+      "title": "IIBA: Understanding requirements and designs",
+      "url": "https://www.iiba.org/knowledgehub/the-business-analysis-standard/4-implementing-business-analysis/4-4-understanding-requirements-and-designs/",
+      "kind": "Professional standard",
+      "note": "Requirements express needs; designs describe solutions. Provides a basis for our original business-analysis exercises."
+    },
+    {
+      "id": "audit",
+      "title": "ISACA: IT Audit Fundamentals",
+      "url": "https://www.isaca.org/credentialing/it-audit-fundamentals-certificate",
+      "kind": "Professional curriculum",
+      "note": "Covers auditing, controls, risk and IT environments. A knowledge reference, not a statement that you must buy a certification."
+    },
+    {
+      "id": "nist",
+      "title": "NIST: Cybersecurity Framework 2.0",
+      "url": "https://www.nist.gov/cyberframework",
+      "kind": "Technical reference",
+      "note": "Risk-management outcomes across Govern, Identify, Protect, Detect, Respond and Recover; not a one-time linear checklist."
+    },
+    {
+      "id": "cloud",
+      "title": "Microsoft: Shared responsibility in the cloud",
+      "url": "https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility",
+      "kind": "Technical reference",
+      "note": "Responsibility changes across cloud services. Customers still manage their data and identities."
+    },
+    {
+      "id": "web",
+      "title": "MDN: How the web works",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works",
+      "kind": "Technical reference",
+      "note": "Supports the client, server, DNS and web-request foundations. Our scenarios are original."
+    },
+    {
+      "id": "http",
+      "title": "MDN: Overview of HTTP",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "kind": "Technical reference",
+      "note": "Web requests and responses, including methods, headers and response status."
+    },
+    {
+      "id": "sql",
+      "title": "PostgreSQL: Joins between tables",
+      "url": "https://www.postgresql.org/docs/current/tutorial-join.html",
+      "kind": "Technical reference",
+      "note": "Relational joins; our small customer/order tables and practice queries are original."
+    },
+    {
+      "id": "sqlagg",
+      "title": "PostgreSQL: Aggregate functions",
+      "url": "https://www.postgresql.org/docs/current/tutorial-agg.html",
+      "kind": "Technical reference",
+      "note": "COUNT, grouping and the difference between row filtering and group filtering."
+    },
+    {
+      "id": "scrum",
+      "title": "The Scrum Guide",
+      "url": "https://scrumguides.org/scrum-guide.html",
+      "kind": "Technical reference",
+      "note": "Scrum roles, events and incremental work. Scrum is one framework, not a synonym for all agile work."
+    },
+    {
+      "id": "security",
+      "title": "CISA: Secure Our World",
+      "url": "https://www.cisa.gov/secure-our-world",
+      "kind": "Technical reference",
+      "note": "Basic security habits including multifactor authentication, phishing awareness and software updates."
+    }
+  ],
+  "tracks": [
+    {
+      "id": "all",
+      "title": "Explore all paths",
+      "roles": [],
+      "modules": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "about": "Start with shared foundations; then compare the role paths. Coding is conditional, not a universal requirement."
+    },
+    {
+      "id": "it",
+      "title": "IT & systems",
+      "roles": [
+        "Technology Analyst",
+        "IT Analyst",
+        "Systems Analyst"
+      ],
+      "modules": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "about": "Prioritize troubleshooting, networks, accounts, systems, data and clear support communication. Some systems analyst jobs also require coding."
+    },
+    {
+      "id": "ba",
+      "title": "Business & technical analysis",
+      "roles": [
+        "Business Systems Analyst",
+        "Technical Business Analyst"
+      ],
+      "modules": [
+        1,
+        3,
+        4,
+        5,
+        8
+      ],
+      "about": "Prioritize business needs, workflows, data, requirements, integrations and acceptance testing. Check the posting for SQL and tool depth."
+    },
+    {
+      "id": "consult",
+      "title": "Technology consulting",
+      "roles": [
+        "Technology Consultant",
+        "IT Consultant",
+        "Associate Technology Consultant",
+        "Technical Consultant"
+      ],
+      "modules": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "about": "Prioritize structured problem solving, technical foundations, recommendations, delivery and client communication. Technical consultant can also mean a specialist coding role."
+    },
+    {
+      "id": "solution",
+      "title": "Solutions & implementation",
+      "roles": [
+        "Solutions Consultant",
+        "Implementation Consultant"
+      ],
+      "modules": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "about": "Solutions consulting may mean presales discovery and demos. Implementation usually means configuring, testing, moving data and helping users adopt a purchased system."
+    },
+    {
+      "id": "risk",
+      "title": "Technology risk & audit",
+      "roles": [
+        "Technology Risk Analyst",
+        "IT Risk Analyst",
+        "IT Auditor"
+      ],
+      "modules": [
+        1,
+        2,
+        3,
+        7,
+        8
+      ],
+      "about": "Prioritize risk, access, changes, evidence, controls and explaining findings. Audit evaluates controls; risk roles may help manage them."
+    },
+    {
+      "id": "rotation",
+      "title": "Technology programs",
+      "roles": [
+        "Technology Rotational Program / Technology Development Program"
+      ],
+      "modules": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "about": "Read the actual rotations. Some programs rotate across IT/business functions; others are software-engineering programs with coding assessments."
+    }
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "title": "Start here: how workplace technology fits together",
+      "why": "Understand what the people, software, devices and data actually do."
+    },
+    {
+      "id": 2,
+      "title": "Troubleshoot without guessing",
+      "why": "Narrow a problem using evidence, communicate impact and verify the fix."
+    },
+    {
+      "id": 3,
+      "title": "Security, accounts & cloud",
+      "why": "Explain who can access what, how to reduce risk and what cloud changes."
+    },
+    {
+      "id": 4,
+      "title": "Data, SQL & useful numbers",
+      "why": "Read tables, reason about joins and explain what a metric really measures."
+    },
+    {
+      "id": 5,
+      "title": "Business needs → working systems",
+      "why": "Turn a vague request into a testable change that users can adopt."
+    },
+    {
+      "id": 6,
+      "title": "Consulting, demos & implementation",
+      "why": "Understand a customer problem, compare options and recommend a practical next step."
+    },
+    {
+      "id": 7,
+      "title": "Risk & IT audit",
+      "why": "Connect a risk to a control, evidence and a defensible conclusion."
+    },
+    {
+      "id": 8,
+      "title": "Tell your story & interview clearly",
+      "why": "Practice truthful examples from class, jobs, clubs and everyday teamwork."
+    },
+    {
+      "id": 9,
+      "title": "Coding track: only when the posting needs it",
+      "why": "An introduction to coding-interview thinking for software-oriented programs; further coding practice is required."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "system",
+      "module": 1,
+      "title": "What is an IT system?",
+      "terms": [
+        {
+          "term": "IT",
+          "definition": "Information technology: using computers and related systems to store, process and share information."
+        },
+        {
+          "term": "End user",
+          "definition": "The person using a tool to do their work, such as a cashier using checkout software."
+        },
+        {
+          "term": "System",
+          "definition": "Connected parts working together to do a job."
+        }
+      ],
+      "teach": [
+        "A company needs to get work done: sell an item, pay an employee or answer a customer. An IT system helps people do that work. It includes more than a computer: people follow steps, software follows instructions, and data records what happened.",
+        "Imagine a cashier selling a shirt. The scanner reads an item code; the checkout application finds a price; a database stores the sale; a network carries messages between devices. A problem in any part can stop checkout.",
+        "An analyst asks what business task failed and who is affected before naming a technology fix. That prevents solving the wrong problem."
+      ],
+      "example": "A store says “IT is broken.” Ask: can staff log in, scan items, accept payment, or print receipts? Each is a different action and points to different parts.",
+      "sources": [
+        "onet"
+      ]
+    },
+    {
+      "id": "hardware",
+      "module": 1,
+      "title": "Hardware, operating system & application",
+      "terms": [
+        {
+          "term": "Hardware",
+          "definition": "Physical equipment you can touch."
+        },
+        {
+          "term": "Operating system (OS)",
+          "definition": "Software that manages the device and lets applications use its resources."
+        },
+        {
+          "term": "Application",
+          "definition": "Software for a particular task, such as a browser or spreadsheet."
+        },
+        {
+          "term": "RAM",
+          "definition": "Random access memory: working space for active programs; not the same as long-term storage."
+        }
+      ],
+      "teach": [
+        "The laptop is hardware. Windows or macOS is its operating system. Excel and your browser are applications that run on that operating system.",
+        "Think of a kitchen: equipment is hardware, the organizer coordinating access is like the operating system, and individual recipes are like applications. The analogy is limited, but it helps separate the jobs.",
+        "Storage keeps files when the device is turned off. RAM holds active working data. A slow laptop could have limited RAM, a busy processor, a nearly full drive or a slow network; “slow” alone does not identify the cause."
+      ],
+      "example": "If a spreadsheet is slow but other applications work, investigate that file/application before concluding the whole laptop needs replacement.",
+      "sources": [
+        "support"
+      ]
+    },
+    {
+      "id": "web",
+      "module": 1,
+      "title": "What happens when you open a website?",
+      "terms": [
+        {
+          "term": "Client",
+          "definition": "A program requesting a service; your browser acts as a client."
+        },
+        {
+          "term": "Server",
+          "definition": "A system that responds to requests."
+        },
+        {
+          "term": "DNS",
+          "definition": "Domain Name System: finds address information associated with names."
+        },
+        {
+          "term": "HTTPS",
+          "definition": "HTTP carried over an encrypted TLS connection."
+        }
+      ],
+      "teach": [
+        "You type a website name into a browser. The browser needs to find where to send its request. DNS helps resolve the name to an address. The browser then communicates with the service and asks for content.",
+        "The server responds with content or an error. Your browser uses the response to display the page. A page may require many requests for images, scripts and other resources.",
+        "This is a simplified path: caches and reused connections can skip some steps. “The website does not work” could mean name lookup failed, connection failed, login failed or the application returned an error."
+      ],
+      "example": "A name-lookup error and a “403 Forbidden” response point to different stages. A 403 means a server responded but refused that request; it is not evidence that DNS failed.",
+      "sources": [
+        "web",
+        "http"
+      ]
+    },
+    {
+      "id": "integration",
+      "module": 1,
+      "title": "APIs & systems talking to each other",
+      "terms": [
+        {
+          "term": "API",
+          "definition": "Application Programming Interface: a defined way for software to request data or actions from other software."
+        },
+        {
+          "term": "Integration",
+          "definition": "Connecting systems so they can exchange data or coordinate work."
+        },
+        {
+          "term": "JSON",
+          "definition": "JavaScript Object Notation: a common text format for structured data."
+        }
+      ],
+      "teach": [
+        "An employee can click a screen. Software needs its own agreed way to ask another system for something. That is what an API provides: rules for what to send and what the response means.",
+        "For example, a store website asks an inventory service how many shirts remain. An API request identifies the item, and the response contains a quantity. JSON might represent it as {\"item\":\"shirt\",\"quantity\":4}.",
+        "An integration must also handle missing fields, access permissions, timeouts and errors. Repeating a request that creates an order might create two orders unless the design prevents duplicates."
+      ],
+      "example": "A successful network connection does not prove the order was accepted. Check the response and the resulting order record.",
+      "sources": [
+        "http",
+        "onet"
+      ]
+    },
+    {
+      "id": "triage",
+      "module": 2,
+      "title": "A repeatable troubleshooting approach",
+      "terms": [
+        {
+          "term": "Symptom",
+          "definition": "What you can observe going wrong."
+        },
+        {
+          "term": "Hypothesis",
+          "definition": "A possible explanation you can test."
+        },
+        {
+          "term": "Root cause",
+          "definition": "The underlying reason a problem occurred."
+        },
+        {
+          "term": "Escalate",
+          "definition": "Bring a problem to someone with the authority or expertise needed."
+        }
+      ],
+      "teach": [
+        "Troubleshooting means narrowing possibilities with evidence. First learn the expected action, the actual result, the error, when it started and who is affected.",
+        "Next propose a cause and choose a low-risk test that could support or weaken that idea. Change one thing at a time when practical. Get authorization before disruptive changes and preserve useful evidence.",
+        "After an approved fix, repeat the original task with the user. Record the symptoms, tests and result. Restoring service can come before finding a deeper root cause; urgent incidents may require immediate escalation."
+      ],
+      "example": "One person cannot print, but coworkers can. Check that person’s selected printer and queue before restarting the shared print server.",
+      "sources": [
+        "support",
+        "epic"
+      ]
+    },
+    {
+      "id": "network",
+      "module": 2,
+      "title": "IP, DHCP, DNS & the default gateway",
+      "terms": [
+        {
+          "term": "IP address",
+          "definition": "An address used to deliver data across IP networks."
+        },
+        {
+          "term": "DHCP",
+          "definition": "Dynamic Host Configuration Protocol: can give a device its network settings automatically."
+        },
+        {
+          "term": "Default gateway",
+          "definition": "A router a device can use to reach destinations outside its local network."
+        },
+        {
+          "term": "Wi-Fi",
+          "definition": "A way to connect wirelessly to a local network; it does not itself guarantee internet access."
+        }
+      ],
+      "teach": [
+        "A laptop needs network settings to communicate. Its IP address identifies its network interface, a subnet prefix helps identify local destinations, and a gateway helps reach other networks. DHCP often supplies these settings.",
+        "DNS answers name questions. These are different jobs: having an IP address does not prove DNS works, and being connected to Wi-Fi does not prove the router has internet service.",
+        "Ask whether one device, one website or all users are affected. Compare working and failing devices. A failed ping alone is not proof a server is down: some systems block ping."
+      ],
+      "example": "A laptop is connected to office Wi-Fi but cannot open the intranet by name. Check its settings and name resolution; do not assume the wireless connection is the cause.",
+      "sources": [
+        "web",
+        "support"
+      ]
+    },
+    {
+      "id": "incident",
+      "module": 2,
+      "title": "Priorities, tickets & clear updates",
+      "terms": [
+        {
+          "term": "Incident",
+          "definition": "An unplanned interruption or reduction in service quality."
+        },
+        {
+          "term": "Ticket",
+          "definition": "A recorded request or problem, including its status and history."
+        },
+        {
+          "term": "Impact",
+          "definition": "How much business work or how many people are affected."
+        },
+        {
+          "term": "Urgency",
+          "definition": "How quickly action is needed before consequences become serious."
+        }
+      ],
+      "teach": [
+        "An incident is something failing now. A request might be routine work, such as asking for an approved software installation. A ticket records either so the work is not lost.",
+        "Prioritization considers both impact and urgency, using the organization’s rules. A payroll deadline may make a small number of affected users especially important. A loud complaint alone does not define the priority.",
+        "An update should say what is affected, what is known, what is being done and when the next update will arrive. Do not promise a repair time you cannot support."
+      ],
+      "example": "“Checkout is failing in three stores. We are checking the payment service and have escalated to the on-call team. Next update in 15 minutes.”",
+      "sources": [
+        "support",
+        "onet"
+      ]
+    },
+    {
+      "id": "logs",
+      "module": 2,
+      "title": "Logs, changes & evidence",
+      "terms": [
+        {
+          "term": "Log",
+          "definition": "A record of events produced by a system."
+        },
+        {
+          "term": "Timestamp",
+          "definition": "The date and time attached to an event."
+        },
+        {
+          "term": "Rollback",
+          "definition": "Returning to an earlier version or configuration using an approved plan."
+        }
+      ],
+      "teach": [
+        "A log is like a written history of what a system observed. It may record failed logins, application errors or service restarts. Look at the relevant time and timezone, affected request and exact message.",
+        "A change shortly before a failure is a clue, not proof. Compare what changed with the symptoms, test the hypothesis and consider other causes.",
+        "A rollback can restore a previous version, but it can also affect data or other changes. Follow the approved plan, coordinate with the owner and check recovery. Do not paste passwords or sensitive customer records into a ticket."
+      ],
+      "example": "An application began failing at 10:02 after a release at 10:00. Check the release changes and matching error logs; do not declare the developer responsible based only on timing.",
+      "sources": [
+        "support",
+        "epic"
+      ]
+    },
+    {
+      "id": "identity",
+      "module": 3,
+      "title": "Authentication vs authorization",
+      "terms": [
+        {
+          "term": "Authentication",
+          "definition": "Checking who an account holder is."
+        },
+        {
+          "term": "Authorization",
+          "definition": "Deciding what that account may do."
+        },
+        {
+          "term": "MFA",
+          "definition": "Multifactor authentication: using different categories of proof, such as a password and a security key."
+        },
+        {
+          "term": "Least privilege",
+          "definition": "Giving only the access needed for an approved job."
+        }
+      ],
+      "teach": [
+        "Logging in and having permission are different. Authentication checks identity; authorization checks whether the identified account may perform an action.",
+        "Picture an employee entering an office with a badge. Being recognized as an employee does not mean every locked room is open to them. A payroll system should restrict who can see salary information.",
+        "MFA adds another category of identity evidence. It does not automatically give permission or make every attack impossible. When someone leaves or changes jobs, review and remove access that is no longer needed."
+      ],
+      "example": "You can sign in to the company portal but cannot edit payroll. Login may be working correctly while payroll editing is appropriately restricted.",
+      "sources": [
+        "security",
+        "cloud"
+      ]
+    },
+    {
+      "id": "security",
+      "module": 3,
+      "title": "Risk, threats & everyday protection",
+      "terms": [
+        {
+          "term": "Threat",
+          "definition": "Something that could cause harm, such as a malicious attacker."
+        },
+        {
+          "term": "Vulnerability",
+          "definition": "A weakness that could be exploited."
+        },
+        {
+          "term": "Risk",
+          "definition": "The possibility of harm, considered with its likelihood and impact."
+        },
+        {
+          "term": "Phishing",
+          "definition": "A deceptive message intended to trick someone into sharing information or taking an unsafe action."
+        }
+      ],
+      "teach": [
+        "An attacker is a possible threat. An unpatched software flaw is a vulnerability. Losing customer information is a possible harmful outcome. Risk connects the possibility of that outcome with how serious it would be.",
+        "A control is an action or safeguard that reduces risk. Updating vulnerable software, restricting access and using MFA address different problems. No single safeguard removes all risk.",
+        "For a suspicious message, use the organization’s reporting process and verify unexpected requests through a trusted channel. Do not use contact details supplied only by the suspicious message."
+      ],
+      "example": "A message says “Your manager needs gift cards immediately.” Verify with the manager using a known contact method instead of replying to the message.",
+      "sources": [
+        "security",
+        "nist"
+      ]
+    },
+    {
+      "id": "cloud",
+      "module": 3,
+      "title": "Cloud services & shared responsibility",
+      "terms": [
+        {
+          "term": "Cloud computing",
+          "definition": "Using computing resources provided as a service over a network."
+        },
+        {
+          "term": "IaaS",
+          "definition": "Infrastructure as a Service: renting basic compute, storage and network resources."
+        },
+        {
+          "term": "PaaS",
+          "definition": "Platform as a Service: a managed platform for building/running applications."
+        },
+        {
+          "term": "SaaS",
+          "definition": "Software as a Service: using a provider-managed application."
+        }
+      ],
+      "teach": [
+        "Cloud means another organization provides computing services you can use. It is still powered by physical computers; you are changing how those resources are provided and managed.",
+        "With IaaS, you often manage the operating system on rented virtual machines. PaaS manages more of the platform. SaaS gives you a finished application. Exact responsibilities depend on the service.",
+        "The provider does not automatically decide which of your employees should see confidential files. You still need to manage identities, data and the settings under your control. Compare cost, reliability, security and business fit rather than saying cloud is always cheaper."
+      ],
+      "example": "A company buys an online HR application. The vendor runs the application, but the company still decides who may view employee records.",
+      "sources": [
+        "cloud"
+      ]
+    },
+    {
+      "id": "recovery",
+      "module": 3,
+      "title": "Backups, recovery & resilience",
+      "terms": [
+        {
+          "term": "Backup",
+          "definition": "A separate recoverable copy of data."
+        },
+        {
+          "term": "RPO",
+          "definition": "Recovery Point Objective: the maximum targeted amount of data loss measured in time."
+        },
+        {
+          "term": "RTO",
+          "definition": "Recovery Time Objective: the targeted time to restore service."
+        },
+        {
+          "term": "Availability",
+          "definition": "Whether a service can be used when needed."
+        }
+      ],
+      "teach": [
+        "A backup is useful only if you can restore what the business needs. A “backup succeeded” message is not the same as a successful recovery test.",
+        "RPO asks how far back recovered data may be. If the target is one hour, losing a full day of records misses the target. RTO asks how long the service may take to come back.",
+        "These are targets chosen for business needs, not guarantees. Restoring data, rebuilding systems and checking that users can work may all take time. Replication and backups serve different purposes: a bad deletion can be copied to a replica."
+      ],
+      "example": "A store wants service restored within two hours and at most 15 minutes of lost orders. RTO is two hours; RPO is 15 minutes.",
+      "sources": [
+        "nist",
+        "audit"
+      ]
+    },
+    {
+      "id": "tables",
+      "module": 4,
+      "title": "Tables, keys & clean data",
+      "terms": [
+        {
+          "term": "Database",
+          "definition": "An organized collection of data managed so it can be stored and retrieved."
+        },
+        {
+          "term": "Row",
+          "definition": "One record in a table."
+        },
+        {
+          "term": "Primary key",
+          "definition": "A value or set of values that uniquely identifies a row."
+        },
+        {
+          "term": "Foreign key",
+          "definition": "A field or fields referencing a key in another or the same table."
+        }
+      ],
+      "teach": [
+        "A customer table can contain one row per customer. A primary key such as customer_id distinguishes customers even when two people have the same name.",
+        "An order table can store customer_id to connect each order to a customer. This relationship avoids copying every customer detail into every order.",
+        "Before trusting a report, check what each row represents. Missing identifiers, duplicates and inconsistent dates can change the result. Two orders from the same customer are not necessarily duplicate orders."
+      ],
+      "example": "Customers: 1 = Ana, 2 = Bo. Orders: 101 belongs to 1; 102 also belongs to 1. Ana made two orders; she is still one customer.",
+      "sources": [
+        "sql",
+        "onet"
+      ]
+    },
+    {
+      "id": "join",
+      "module": 4,
+      "title": "SQL joins: matching related records",
+      "terms": [
+        {
+          "term": "SQL",
+          "definition": "Structured Query Language: a language for working with relational data."
+        },
+        {
+          "term": "INNER JOIN",
+          "definition": "Produces matching combinations of rows from both sides."
+        },
+        {
+          "term": "LEFT JOIN",
+          "definition": "Keeps every left-side row, with matching right-side rows or missing right-side values."
+        }
+      ],
+      "teach": [
+        "A join connects records using a condition. With customers on the left and orders on the right, an inner join can show customers with matching orders. A left join can also keep customers who have no orders.",
+        "One customer with two matching orders produces two joined rows. That is expected when the relationship is one customer to many orders.",
+        "Choose the join based on the question. “Show every customer, even without an order” needs to preserve unmatched customers. A later filter can accidentally remove them, so read the whole query."
+      ],
+      "example": "Customers Ana and Bo; two orders belong to Ana, none to Bo. An inner join gives two rows for Ana. A left join gives those two plus a row for Bo with NULL order fields.",
+      "sources": [
+        "sql"
+      ]
+    },
+    {
+      "id": "aggregate",
+      "module": 4,
+      "title": "SQL filtering & counting",
+      "terms": [
+        {
+          "term": "WHERE",
+          "definition": "Filters individual rows before grouping in a typical aggregate query."
+        },
+        {
+          "term": "GROUP BY",
+          "definition": "Collects rows into groups for calculations."
+        },
+        {
+          "term": "HAVING",
+          "definition": "Filters groups after aggregation."
+        },
+        {
+          "term": "NULL",
+          "definition": "A marker for missing or unknown data; not the same as zero."
+        }
+      ],
+      "teach": [
+        "Use WHERE to keep relevant records, such as paid orders. GROUP BY customer_id then collects each customer’s records. COUNT can calculate a result per group. HAVING can keep only groups with at least two orders.",
+        "COUNT(*) counts rows. COUNT(column) counts non-NULL values in that column. This matters when a left join preserves a customer without an order.",
+        "Explain the business meaning of your query. A technically valid query can answer the wrong question if “paid,” the date range or the unit being counted is unclear."
+      ],
+      "example": "For a left-joined row where Bo has NULL order_id, COUNT(*) counts that row but COUNT(order_id) is zero for Bo’s group.",
+      "sources": [
+        "sqlagg"
+      ]
+    },
+    {
+      "id": "metrics",
+      "module": 4,
+      "title": "Metrics, spreadsheets & percentages",
+      "terms": [
+        {
+          "term": "Metric",
+          "definition": "A defined measurement used to understand something."
+        },
+        {
+          "term": "KPI",
+          "definition": "Key Performance Indicator: a metric chosen to track an important goal."
+        },
+        {
+          "term": "Denominator",
+          "definition": "The number you divide by in a fraction or rate."
+        },
+        {
+          "term": "Pivot table",
+          "definition": "A spreadsheet tool that groups and summarizes records."
+        }
+      ],
+      "teach": [
+        "A number needs a meaning. “Ten failures” could be terrible out of ten attempts or rare out of ten thousand. A failure rate divides failed attempts by all relevant attempts.",
+        "Write the time period, included records and unit before calculating. In a spreadsheet, check data types, blanks and duplicates; a pivot table can summarize by team or month, and a lookup can match a key to another table.",
+        "Percentage points and percent change differ. Moving from 80% to 90% is a rise of 10 percentage points. Relative growth is (90 − 80) / 80 = 12.5%."
+      ],
+      "example": "Out of 200 requests, 10 failed: 10 / 200 × 100 = 5%. Dividing by only the failed requests would answer a different question.",
+      "sources": [
+        "amazon",
+        "onet"
+      ]
+    },
+    {
+      "id": "requirements",
+      "module": 5,
+      "title": "Turn “make it better” into a requirement",
+      "terms": [
+        {
+          "term": "Stakeholder",
+          "definition": "A person or group affected by, interested in or able to influence the work."
+        },
+        {
+          "term": "Requirement",
+          "definition": "A statement of a need or capability to be satisfied."
+        },
+        {
+          "term": "Functional requirement",
+          "definition": "What a system must do."
+        },
+        {
+          "term": "Nonfunctional requirement",
+          "definition": "A quality or constraint, such as measurable response time or availability."
+        }
+      ],
+      "teach": [
+        "“The app should be better” does not tell a team what to build or how to check it. Ask who uses it, what they are trying to do, what goes wrong and what improvement matters.",
+        "“A clerk can search orders by order number” describes a function. “Search returns within two seconds under an agreed workload” describes a measurable quality. Both need context.",
+        "A requirement describes a need. A design describes how a solution could meet it. Jumping straight to “buy this tool” may ignore a simpler process change."
+      ],
+      "example": "Ask a support team to show the slow task. You may learn that copying order numbers between screens, rather than server speed, causes most delay.",
+      "sources": [
+        "iiba"
+      ]
+    },
+    {
+      "id": "process",
+      "module": 5,
+      "title": "Map the process before changing software",
+      "terms": [
+        {
+          "term": "Process",
+          "definition": "Related steps people or systems perform to produce an outcome."
+        },
+        {
+          "term": "As-is",
+          "definition": "How the work happens now."
+        },
+        {
+          "term": "To-be",
+          "definition": "How you propose the work should happen."
+        },
+        {
+          "term": "Handoff",
+          "definition": "Work or information passing from one person or system to another."
+        }
+      ],
+      "teach": [
+        "A business process is the actual work: receive an order, check stock, pack it and ship it. A process map makes steps, decisions and handoffs visible.",
+        "First document the as-is process with the people who do it. Include exceptions, waiting and repeated entry, not only the ideal path. Then propose a to-be process that addresses an observed problem.",
+        "A software purchase does not automatically fix unclear ownership. Define who handles each step and how you will measure improvement."
+      ],
+      "example": "Orders wait a day because nobody owns approval. A faster computer would not fix the missing approval responsibility.",
+      "sources": [
+        "iiba",
+        "onet"
+      ]
+    },
+    {
+      "id": "uat",
+      "module": 5,
+      "title": "Acceptance criteria, testing & UAT",
+      "terms": [
+        {
+          "term": "Acceptance criteria",
+          "definition": "Specific conditions used to decide whether a change meets a need."
+        },
+        {
+          "term": "UAT",
+          "definition": "User Acceptance Testing: intended users or their representatives check whether the solution meets business needs."
+        },
+        {
+          "term": "Test case",
+          "definition": "Inputs, actions and expected results for checking behavior."
+        },
+        {
+          "term": "Defect",
+          "definition": "A mismatch between expected and actual behavior."
+        }
+      ],
+      "teach": [
+        "Before building, agree on what success looks like. For an order search, criteria might cover a valid order, an unknown number and a user who lacks permission.",
+        "Developers test code and teams test integrations. UAT adds the business perspective: can intended users carry out realistic work correctly? It does not replace all other testing.",
+        "Record what you tried, expected and observed. When a test fails, describe the evidence and severity. “Looks good” without criteria is weak evidence."
+      ],
+      "example": "Criterion: an unknown order number displays “No order found” without exposing another customer’s information. Test with a known nonexistent number and check the result.",
+      "sources": [
+        "iiba",
+        "onet"
+      ]
+    },
+    {
+      "id": "delivery",
+      "module": 5,
+      "title": "Agile, releases & controlled changes",
+      "terms": [
+        {
+          "term": "Agile",
+          "definition": "An approach emphasizing adaptation, collaboration and frequent delivery of useful outcomes."
+        },
+        {
+          "term": "Sprint",
+          "definition": "In Scrum, a fixed-length period of one month or less for producing progress toward goals."
+        },
+        {
+          "term": "Release",
+          "definition": "Making a version available to its intended users."
+        },
+        {
+          "term": "Change management",
+          "definition": "A controlled way to assess, approve, implement and review changes; context matters."
+        }
+      ],
+      "teach": [
+        "Building a system usually involves understanding needs, designing, creating/configuring, testing, releasing and maintaining it. These activities can repeat rather than happen only once.",
+        "Agile work uses feedback to adjust. Scrum is one framework for that work. Agile does not mean no planning, documentation or controls.",
+        "A release still needs suitable testing, approval, communication and a recovery plan. When a stakeholder requests new scope, clarify its value and impact, then have the responsible people reprioritize."
+      ],
+      "example": "A team can work in short iterations while still requiring review and testing before changes reach a payroll system.",
+      "sources": [
+        "scrum",
+        "onet"
+      ]
+    },
+    {
+      "id": "discovery",
+      "module": 6,
+      "title": "Consulting starts with discovery",
+      "terms": [
+        {
+          "term": "Client",
+          "definition": "The person or organization receiving your service."
+        },
+        {
+          "term": "Discovery",
+          "definition": "Learning the customer’s problem, context and needs before proposing a solution."
+        },
+        {
+          "term": "Constraint",
+          "definition": "A limit you must work within, such as time, budget or policy."
+        }
+      ],
+      "teach": [
+        "A consultant helps a client understand or solve a problem. Starting with a product pitch can miss what the client actually needs.",
+        "Ask what outcome matters, who is affected, how the work happens today and what constraints apply. State assumptions rather than quietly treating guesses as facts.",
+        "Organize your thinking, compare options, make a recommendation and explain how you would validate it. Interview cases often assess this reasoning, not a memorized perfect answer."
+      ],
+      "example": "A retailer asks for an AI chatbot. Discover whether the goal is shorter wait times, fewer repeat contacts or lower cost. Different goals may suggest different solutions.",
+      "sources": [
+        "deloitte",
+        "epic"
+      ]
+    },
+    {
+      "id": "value",
+      "module": 6,
+      "title": "Compare options with numbers and tradeoffs",
+      "terms": [
+        {
+          "term": "Benefit",
+          "definition": "An improvement the organization expects from a change."
+        },
+        {
+          "term": "Cost",
+          "definition": "Resources spent, including implementation and ongoing operation."
+        },
+        {
+          "term": "ROI",
+          "definition": "Return on Investment: in a simple model, net benefit divided by cost."
+        },
+        {
+          "term": "Assumption",
+          "definition": "Something treated as true for analysis that needs validation."
+        }
+      ],
+      "teach": [
+        "Compare options against the same business goal. Include implementation effort, recurring costs, benefits, risks and the option of making a smaller change.",
+        "For a simple one-year example, suppose benefits are $60,000 and total costs are $40,000. Net benefit is $20,000, and simple ROI is $20,000 / $40,000 = 50%. State the time period and assumptions.",
+        "Time saved is not automatically cash saved. Staff might use freed time on other work without reducing payroll. A strong recommendation explains the mechanism, uncertainty and what you would measure in a pilot."
+      ],
+      "example": "A tool saves estimated staff time but requires training and integration. Include those costs and validate the time savings with real users.",
+      "sources": [
+        "deloitte",
+        "onet"
+      ]
+    },
+    {
+      "id": "demo",
+      "module": 6,
+      "title": "Solutions consulting: show a useful workflow",
+      "terms": [
+        {
+          "term": "Presales",
+          "definition": "Helping a potential customer evaluate a solution before a purchase."
+        },
+        {
+          "term": "Demo",
+          "definition": "A demonstration of how a product handles a relevant task."
+        },
+        {
+          "term": "Objection",
+          "definition": "A customer’s concern or reason a proposed choice may not fit."
+        }
+      ],
+      "teach": [
+        "A solutions consultant may help a sales team explain and demonstrate a technical product. This is different from promising every feature or only installing software after purchase.",
+        "Begin with the customer’s situation. Demonstrate a short workflow that addresses the need, explain the business result and ask whether it fits. A list of every feature can hide the value.",
+        "If asked about a capability you cannot verify, say what you know, record the question and follow up with a reliable answer. Do not invent a feature to keep the demo moving."
+      ],
+      "example": "For a support manager worried about lost requests, show one request being captured, assigned and tracked to resolution.",
+      "sources": [
+        "sc"
+      ]
+    },
+    {
+      "id": "implementation",
+      "module": 6,
+      "title": "Implementation, migration & adoption",
+      "terms": [
+        {
+          "term": "Configuration",
+          "definition": "Choosing supported settings to adapt a system."
+        },
+        {
+          "term": "Customization",
+          "definition": "Changing or extending behavior beyond standard settings."
+        },
+        {
+          "term": "Migration",
+          "definition": "Moving data or functionality from an old environment to a new one."
+        },
+        {
+          "term": "Adoption",
+          "definition": "People actually using the new approach effectively."
+        }
+      ],
+      "teach": [
+        "Implementation turns an agreed solution into something users can work with. It can involve configuration, integrations, moving data, testing, training and support.",
+        "For data migration, map old fields to new fields, check quality, rehearse with a copy, compare results and plan the cutover. Cutover is the switch from old to new. Keep an approved recovery plan.",
+        "A live system is not automatically a successful change. Users need to know how to do their jobs, and the team should check adoption and business results after launch."
+      ],
+      "example": "Before moving customer records, compare record counts, required fields and sample values. Matching counts alone will not catch names placed in the wrong field.",
+      "sources": [
+        "onet",
+        "epic"
+      ]
+    },
+    {
+      "id": "controls",
+      "module": 7,
+      "title": "Risks & controls: what could go wrong?",
+      "terms": [
+        {
+          "term": "Control",
+          "definition": "A safeguard or activity intended to reduce risk."
+        },
+        {
+          "term": "Preventive control",
+          "definition": "A control intended to stop a problem before it occurs."
+        },
+        {
+          "term": "Detective control",
+          "definition": "A control intended to identify a problem or deviation."
+        },
+        {
+          "term": "Residual risk",
+          "definition": "Risk remaining after controls are applied."
+        }
+      ],
+      "teach": [
+        "A risk statement should connect a cause to a possible event and business impact. For example: unreviewed access could allow an ex-employee to view confidential records.",
+        "A control addresses that possibility. Removing access on departure helps prevent misuse. Reviewing access logs may help detect misuse. Controls have owners and should leave useful evidence.",
+        "Risk management helps decide and monitor responses. Audit evaluates evidence about whether controls are designed and operating as intended. A checklist tick without support is not the same as a justified conclusion."
+      ],
+      "example": "A locked door reduces unauthorized entry, while an access-log review can help identify unusual entry. Different controls work at different points.",
+      "sources": [
+        "audit",
+        "nist"
+      ]
+    },
+    {
+      "id": "accessaudit",
+      "module": 7,
+      "title": "Access reviews & separation of duties",
+      "terms": [
+        {
+          "term": "Access review",
+          "definition": "Checking that users still have appropriate permissions."
+        },
+        {
+          "term": "Segregation of duties (SoD)",
+          "definition": "Separating incompatible responsibilities to reduce error or abuse."
+        },
+        {
+          "term": "Population",
+          "definition": "The full set of items in scope for a test."
+        },
+        {
+          "term": "Evidence",
+          "definition": "Information supporting a conclusion."
+        }
+      ],
+      "teach": [
+        "An access review asks whether the right people have the right permissions now. Compare accounts to current roles, approvals and departures. A list of names alone does not show that someone reviewed it.",
+        "Separating duties can prevent one person from both creating a vendor and approving payment to that vendor. It reduces a conflict, although exceptions need assessment and other controls.",
+        "For an audit test, define the period and complete population, choose a justified sample when appropriate, inspect evidence and document exceptions. A few convenient examples do not prove every account is correct."
+      ],
+      "example": "To test removal of leavers’ accounts, connect departure dates to account-disable timestamps and the policy’s required timing.",
+      "sources": [
+        "audit"
+      ]
+    },
+    {
+      "id": "changeaudit",
+      "module": 7,
+      "title": "IT general controls & application controls",
+      "terms": [
+        {
+          "term": "ITGC",
+          "definition": "IT General Controls: controls over the wider IT environment, often including access, changes and operations."
+        },
+        {
+          "term": "Application control",
+          "definition": "A control built into or around a particular business application or transaction."
+        },
+        {
+          "term": "Change approval",
+          "definition": "Authorization for a planned system change."
+        }
+      ],
+      "teach": [
+        "General IT controls help support a reliable environment. Examples include access administration, controlled software changes and operational recovery procedures.",
+        "Application controls target particular processing. A system refusing an invoice without required fields is an application control. These categories connect: a good application check can be undermined if unauthorized people can alter it.",
+        "For a change, examine whether relevant approval, testing and deployment evidence match the actual release. An approval dated after deployment may need investigation; follow the organization’s emergency-change rules rather than assuming all exceptions are identical."
+      ],
+      "example": "A tested release with appropriate approval supports controlled change. A ticket title saying “approved” without a dated decision is weaker evidence.",
+      "sources": [
+        "audit"
+      ]
+    },
+    {
+      "id": "findings",
+      "module": 7,
+      "title": "Explain an audit finding without exaggeration",
+      "terms": [
+        {
+          "term": "Criteria",
+          "definition": "The rule or expectation used for evaluation."
+        },
+        {
+          "term": "Condition",
+          "definition": "What the evidence shows actually happened."
+        },
+        {
+          "term": "Remediation",
+          "definition": "Action to correct a problem or reduce its risk."
+        },
+        {
+          "term": "Governance",
+          "definition": "How responsibilities, direction and oversight are established."
+        }
+      ],
+      "teach": [
+        "A useful finding separates the expected rule from observed facts. Explain the gap, why it matters and a practical response. Do not turn one exception into a claim that every system failed.",
+        "For example, the policy requires access removal within a defined time, but one sampled account remained active longer. Investigate the cause and scope. State what your testing supports and what it does not.",
+        "NIST CSF 2.0 organizes cybersecurity outcomes into Govern, Identify, Protect, Detect, Respond and Recover. These functions work together continuously; they are not six tasks completed once in order."
+      ],
+      "example": "A finding can recommend a named owner, a due date and a later check that the fix works. Management owns the remediation; audit evaluates evidence.",
+      "sources": [
+        "audit",
+        "nist"
+      ]
+    },
+    {
+      "id": "intro",
+      "module": 8,
+      "title": "Tell me about yourself: a relevant introduction",
+      "terms": [
+        {
+          "term": "Evidence",
+          "definition": "A concrete example that supports a claim about your skills."
+        },
+        {
+          "term": "Role fit",
+          "definition": "How your interests and demonstrated abilities connect to the job."
+        }
+      ],
+      "teach": [
+        "For an entry-level introduction, connect where you are now, an example of what you can do and why this role interests you. You do not need a long life story.",
+        "As a May 2027 graduate, you can use a class project, part-time job, club or personal project. Name your actual contribution. “We built an app” becomes more useful when you explain what you designed, tested or investigated.",
+        "Adapt the connection to the role: a support job values troubleshooting and user communication; a business analyst job values clarifying needs. Be specific without pretending student work was paid client work."
+      ],
+      "example": "Outline: “I graduate in May 2027. In [real project], I was responsible for [specific action]. I learned [relevant skill], and I’m interested in this role because [reason tied to the work].”",
+      "sources": [
+        "capital",
+        "amazon"
+      ]
+    },
+    {
+      "id": "star",
+      "module": 8,
+      "title": "Behavioral answers with STAR",
+      "terms": [
+        {
+          "term": "STAR",
+          "definition": "Situation, Task, Action, Result: a structure for explaining a real experience."
+        },
+        {
+          "term": "Behavioral interview",
+          "definition": "An interview asking about how you handled past situations."
+        }
+      ],
+      "teach": [
+        "A behavioral question might ask about a disagreement, mistake or difficult deadline. Pick one real event. Situation gives the setting; Task explains your responsibility; Action describes what you personally did; Result explains the outcome.",
+        "Spend most of the answer on your actions and reasoning. Say “we” for team outcomes and “I” for your contribution. Use numbers only if you actually measured or can honestly support them.",
+        "A result can include a lesson and a change in how you work. A story does not have to end perfectly to show responsibility and growth."
+      ],
+      "example": "A group missed a milestone. Explain how you identified dependencies, agreed owners and updated the plan; then state the real outcome and what you would change next time.",
+      "sources": [
+        "amazon",
+        "capital"
+      ]
+    },
+    {
+      "id": "unknown",
+      "module": 8,
+      "title": "Answer when you do not know",
+      "terms": [
+        {
+          "term": "Clarifying question",
+          "definition": "A question that resolves missing information or ambiguity."
+        },
+        {
+          "term": "Assumption",
+          "definition": "A stated condition used while reasoning when information is missing."
+        }
+      ],
+      "teach": [
+        "An interview is not only a memory test. When you do not know, separate what you understand from what you need to verify. Ask a focused question and reason through a safe next step.",
+        "For example: “I haven’t configured that product. I would first check the exact error and scope, then use the vendor documentation and ask the appropriate owner before making a change.”",
+        "Do not invent a command or claim certainty. Explaining how you would learn and validate can show judgment, especially in entry-level roles."
+      ],
+      "example": "If asked about an unfamiliar tool, connect to a real related skill without claiming hands-on experience you do not have.",
+      "sources": [
+        "deloitte",
+        "epic"
+      ]
+    },
+    {
+      "id": "jobplan",
+      "module": 8,
+      "title": "Read the posting & prepare your evidence",
+      "terms": [
+        {
+          "term": "Required qualification",
+          "definition": "A condition the employer says candidates must meet."
+        },
+        {
+          "term": "Preferred qualification",
+          "definition": "An additional characteristic the employer would like."
+        },
+        {
+          "term": "Portfolio",
+          "definition": "Examples of your actual work that you can explain."
+        }
+      ],
+      "teach": [
+        "A title does not define the full job. Read the work, qualifications, tools, location and start-date requirements. A “technology analyst” may focus on support, data or software depending on the employer.",
+        "For each important responsibility, match one real example or identify a learning gap. Prepare to explain the goal, your work, a challenge, testing and what you learned. Do not memorize a story disconnected from the posting.",
+        "For a May 2027 start, monitor graduate openings during fall 2026 and continue through spring; schedules vary. Confirm eligibility and start dates on each posting. Ask the recruiter about interview formats rather than assuming all firms use the same process."
+      ],
+      "example": "If a posting asks for SQL, prepare a small dataset and explain a query. If it emphasizes audit, prepare a risk/control/evidence example instead.",
+      "sources": [
+        "capital",
+        "tdp",
+        "onet"
+      ]
+    },
+    {
+      "id": "code",
+      "module": 9,
+      "title": "Coding interviews: explain before you type",
+      "terms": [
+        {
+          "term": "Algorithm",
+          "definition": "A sequence of steps for solving a problem."
+        },
+        {
+          "term": "Input",
+          "definition": "Information a program receives."
+        },
+        {
+          "term": "Output",
+          "definition": "The result a program produces."
+        },
+        {
+          "term": "Edge case",
+          "definition": "An unusual or boundary input that may expose a flaw."
+        }
+      ],
+      "teach": [
+        "For a software-oriented program, you may need to write and test code. This introduction helps you reason, but multiple-choice practice is not a substitute for actually coding.",
+        "Start by clarifying the input and expected output. Work a small example by hand. Explain a simple approach, implement it, then test ordinary and boundary cases.",
+        "For finding duplicate identifiers, ask whether you should return all repeated values or merely say that a duplicate exists. That changes the required output."
+      ],
+      "example": "Input [2, 5, 2]. If the task is “does any value repeat?”, the answer is true. If the task is “list repeated values once,” the answer is [2].",
+      "sources": [
+        "tdp"
+      ]
+    },
+    {
+      "id": "complexity",
+      "module": 9,
+      "title": "Efficiency & testing basics",
+      "terms": [
+        {
+          "term": "Time complexity",
+          "definition": "How the amount of work grows as input size grows."
+        },
+        {
+          "term": "O(n)",
+          "definition": "Work growing roughly in proportion to input size."
+        },
+        {
+          "term": "O(n²)",
+          "definition": "Work growing roughly with the square of input size."
+        },
+        {
+          "term": "Unit test",
+          "definition": "A focused check of a small piece of behavior."
+        }
+      ],
+      "teach": [
+        "If you scan a list once, doubling the list roughly doubles the work: linear growth, often written O(n). Comparing every item with every other item can grow quadratically, O(n²). These describe growth, not exact seconds.",
+        "A set of previously seen values can often find duplicates in expected linear time, using extra memory. The tradeoff matters: faster approaches may store more information.",
+        "Test empty input, a single item, no duplicates and repeated values. Explain why each test matters. Actual complexity depends on the operations and data structures used."
+      ],
+      "example": "For a duplicate detector, [] should not report a duplicate; [7,7] should. Those two tests check different behaviors.",
+      "sources": [
+        "tdp"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "system-mc",
+      "lesson": "system",
+      "kind": "mc",
+      "prompt": "A cashier can log in but every card payment fails. What is the most useful first clarification?",
+      "answer": "Which payment action fails, for whom, and since when?",
+      "options": [
+        "Which payment action fails, for whom, and since when?",
+        "Which replacement laptop should we order?",
+        "Which programming language should we switch to?",
+        "Which new database product should we buy?"
+      ],
+      "why": "You need to locate the failed business action before choosing equipment or software. A successful login already tells you that at least part of the system works."
+    },
+    {
+      "id": "hardware-mc",
+      "lesson": "hardware",
+      "kind": "mc",
+      "prompt": "Which comparison correctly separates RAM from storage?",
+      "answer": "RAM supports active work; storage keeps saved files.",
+      "options": [
+        "RAM supports active work; storage keeps saved files.",
+        "RAM keeps saved files; storage only runs active programs.",
+        "RAM is the operating system; storage is an application.",
+        "RAM and storage are two names for internet bandwidth."
+      ],
+      "why": "Opening a file brings data into working memory. Saving writes data to persistent storage. A memory shortage and a full disk are different problems."
+    },
+    {
+      "id": "web-mc",
+      "lesson": "web",
+      "kind": "mc",
+      "prompt": "What is DNS doing when your browser resolves a website name?",
+      "answer": "Finding address information for the name.",
+      "options": [
+        "Finding address information for the name.",
+        "Checking whether your password is correct.",
+        "Rendering the page design on your display.",
+        "Giving your account permission to edit the site."
+      ],
+      "why": "A name such as a company website is convenient for humans. Address information lets software direct traffic. DNS does not decide what your signed-in account may do."
+    },
+    {
+      "id": "integration-mc",
+      "lesson": "integration",
+      "kind": "mc",
+      "prompt": "An order-creation request times out. What should you consider before retrying?",
+      "answer": "Whether the first request created an order and how duplicates are prevented.",
+      "options": [
+        "Whether the first request created an order and how duplicates are prevented.",
+        "Whether a timeout always means no order was created.",
+        "Whether every retry automatically replaces the previous order.",
+        "Whether JSON guarantees exactly one order will exist."
+      ],
+      "why": "The server may finish creating the order even if the response never reaches the client. A unique request identifier or a status check can help avoid duplicate work."
+    },
+    {
+      "id": "triage-mc",
+      "lesson": "triage",
+      "kind": "mc",
+      "prompt": "Why test one hypothesis with a controlled change?",
+      "answer": "It helps connect the observed result to the thing you changed.",
+      "options": [
+        "It helps connect the observed result to the thing you changed.",
+        "It proves every similar device has the same root cause.",
+        "It eliminates the need to verify with the affected user.",
+        "It makes permission unnecessary for a disruptive change."
+      ],
+      "why": "If you change five settings at once, you may not know which mattered or which caused a new fault. A controlled test produces more useful evidence."
+    },
+    {
+      "id": "network-mc",
+      "lesson": "network",
+      "kind": "mc",
+      "prompt": "Which service usually supplies a laptop with network settings automatically?",
+      "answer": "DHCP",
+      "options": [
+        "DHCP",
+        "DNS",
+        "HTTPS",
+        "An application login service"
+      ],
+      "why": "DHCP can supply address, gateway and DNS-server settings. DNS then helps resolve names. They cooperate but perform different jobs."
+    },
+    {
+      "id": "incident-mc",
+      "lesson": "incident",
+      "kind": "mc",
+      "prompt": "Two issues compete: one user wants a cosmetic change; all stores cannot accept payments. What drives priority?",
+      "answer": "Business impact and urgency under the incident process.",
+      "options": [
+        "Business impact and urgency under the incident process.",
+        "The order in which the messages appeared only.",
+        "Which requester knows the most technical vocabulary.",
+        "Which issue can be closed with the shortest reply."
+      ],
+      "why": "Payment failure blocks business activity for many users. A cosmetic change usually has a different consequence and time sensitivity."
+    },
+    {
+      "id": "logs-mc",
+      "lesson": "logs",
+      "kind": "mc",
+      "prompt": "What does a failure occurring soon after a release establish?",
+      "answer": "A useful lead that needs more evidence.",
+      "options": [
+        "A useful lead that needs more evidence.",
+        "Proof that the release caused every error.",
+        "Proof that the database lost all its records.",
+        "Proof that rollback has no possible side effects."
+      ],
+      "why": "Events close in time may be connected, but correlation does not establish the mechanism. Relevant error messages and comparisons strengthen or weaken the hypothesis."
+    },
+    {
+      "id": "identity-mc",
+      "lesson": "identity",
+      "kind": "mc",
+      "prompt": "A signed-in intern cannot edit payroll. Which concept controls the edit permission?",
+      "answer": "Authorization",
+      "options": [
+        "Authorization",
+        "Authentication",
+        "DNS resolution",
+        "Storage capacity"
+      ],
+      "why": "The question is what an already identified account is allowed to do. Giving administrator access just to remove an error would bypass the intended access rules."
+    },
+    {
+      "id": "security-mc",
+      "lesson": "security",
+      "kind": "mc",
+      "prompt": "Which is the vulnerability in this scenario: an attacker uses an unpatched software flaw to steal files?",
+      "answer": "The unpatched software flaw.",
+      "options": [
+        "The unpatched software flaw.",
+        "The attacker attempting the theft.",
+        "The loss of confidential files.",
+        "The estimate of likelihood and impact."
+      ],
+      "why": "The flaw is the weakness. The attacker is a threat actor, the theft is an adverse event, and risk concerns its possibility and consequences."
+    },
+    {
+      "id": "cloud-mc",
+      "lesson": "cloud",
+      "kind": "mc",
+      "prompt": "In a SaaS HR application, which responsibility commonly remains with the customer?",
+      "answer": "Assigning appropriate employee access to its data.",
+      "options": [
+        "Assigning appropriate employee access to its data.",
+        "Maintaining every physical server in the vendor facility.",
+        "Replacing the vendor’s building power equipment.",
+        "Designing all chips used by the cloud provider."
+      ],
+      "why": "The customer knows employees’ roles and data needs. Outsourcing infrastructure does not outsource all access decisions."
+    },
+    {
+      "id": "recovery-mc",
+      "lesson": "recovery",
+      "kind": "mc",
+      "prompt": "Which target limits how much recent data can be lost, measured in time?",
+      "answer": "RPO",
+      "options": [
+        "RPO",
+        "RTO",
+        "The display refresh rate",
+        "The number of user accounts"
+      ],
+      "why": "Recovery point refers to the point in time your recovered records reach. Recovery time concerns the duration of the outage."
+    },
+    {
+      "id": "tables-mc",
+      "lesson": "tables",
+      "kind": "mc",
+      "prompt": "Why join orders to customers by customer_id rather than customer name?",
+      "answer": "An identifier avoids ambiguity when names repeat or change.",
+      "options": [
+        "An identifier avoids ambiguity when names repeat or change.",
+        "A customer name is always guaranteed unique.",
+        "An identifier makes all missing values disappear.",
+        "Joining by an identifier automatically removes every duplicate order."
+      ],
+      "why": "Names are labels people can share or change. A stable unique key makes the intended relationship explicit, though data quality still needs checking."
+    },
+    {
+      "id": "join-mc",
+      "lesson": "join",
+      "kind": "mc",
+      "prompt": "For Ana (two orders) and Bo (no orders), how many rows does the described LEFT JOIN return?",
+      "answer": "3",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "why": "Ana contributes two matching pairs. Bo contributes one preserved row with missing order values. Count joined records, not just distinct people."
+    },
+    {
+      "id": "aggregate-mc",
+      "lesson": "aggregate",
+      "kind": "mc",
+      "prompt": "After a LEFT JOIN, why use COUNT(order_id) to count actual orders for each customer?",
+      "answer": "It excludes the NULL order_id on an unmatched customer row.",
+      "options": [
+        "It excludes the NULL order_id on an unmatched customer row.",
+        "It removes customers with no orders from every result.",
+        "It counts each customer name only once regardless of orders.",
+        "It turns missing order identifiers into a real order."
+      ],
+      "why": "Preserving a customer row does not create an order. Counting nonmissing order identifiers avoids treating that placeholder row as an order."
+    },
+    {
+      "id": "metrics-mc",
+      "lesson": "metrics",
+      "kind": "mc",
+      "prompt": "A success rate rises from 80% to 90%. What is the percentage-point increase?",
+      "answer": "10 percentage points",
+      "options": [
+        "10 percentage points",
+        "12.5 percentage points",
+        "90 percentage points",
+        "1.125 percentage points"
+      ],
+      "why": "Percentage points subtract the two percentages directly. The 12.5% calculation is relative growth compared with the original 80%, a different measure."
+    },
+    {
+      "id": "requirements-mc",
+      "lesson": "requirements",
+      "kind": "mc",
+      "prompt": "Which is the clearest testable quality requirement?",
+      "answer": "Search returns within two seconds for the agreed test workload.",
+      "options": [
+        "Search returns within two seconds for the agreed test workload.",
+        "Search feels modern to everyone.",
+        "The application uses a popular technology brand.",
+        "The team should try to make search reasonably fast."
+      ],
+      "why": "A time threshold and stated conditions make the expected outcome checkable. Words like modern or fast require clarification."
+    },
+    {
+      "id": "process-mc",
+      "lesson": "process",
+      "kind": "mc",
+      "prompt": "Why observe the current process before recommending a new tool?",
+      "answer": "To find the actual bottleneck and avoid automating a misunderstood process.",
+      "options": [
+        "To find the actual bottleneck and avoid automating a misunderstood process.",
+        "To guarantee the current process never needs to change.",
+        "To remove the need to involve people doing the work.",
+        "To prove every delay is caused by old hardware."
+      ],
+      "why": "A delay may come from a decision, handoff or missing information. Observing the work helps match the solution to the cause."
+    },
+    {
+      "id": "uat-mc",
+      "lesson": "uat",
+      "kind": "mc",
+      "prompt": "What is UAT primarily checking?",
+      "answer": "Whether the solution supports the agreed business needs for intended users.",
+      "options": [
+        "Whether the solution supports the agreed business needs for intended users.",
+        "Whether the development team attended every meeting.",
+        "Whether the product has more screens than the old tool.",
+        "Whether all future software defects are impossible."
+      ],
+      "why": "Business users test meaningful tasks and acceptance criteria. Passing UAT is evidence of fit for those tested needs, not proof of perfection."
+    },
+    {
+      "id": "delivery-mc",
+      "lesson": "delivery",
+      "kind": "mc",
+      "prompt": "A stakeholder adds a major request halfway through a delivery. What is a sound response?",
+      "answer": "Clarify its value and impact, then agree on priorities and tradeoffs.",
+      "options": [
+        "Clarify its value and impact, then agree on priorities and tradeoffs.",
+        "Accept it without changing dates or scope expectations.",
+        "Reject it because iterative projects never change.",
+        "Skip testing so the original deadline cannot move."
+      ],
+      "why": "New work uses time and resources. Making the tradeoff visible helps stakeholders choose deliberately instead of silently reducing quality."
+    },
+    {
+      "id": "discovery-mc",
+      "lesson": "discovery",
+      "kind": "mc",
+      "prompt": "What should you clarify first when a client requests a new tool?",
+      "answer": "The business problem and desired outcome.",
+      "options": [
+        "The business problem and desired outcome.",
+        "The color of every screen before discussing the task.",
+        "The largest package the vendor is willing to sell.",
+        "The final implementation date before learning the scope."
+      ],
+      "why": "A tool is a possible solution, not the problem itself. Knowing the intended outcome lets you evaluate whether it will help."
+    },
+    {
+      "id": "value-mc",
+      "lesson": "value",
+      "kind": "mc",
+      "prompt": "One-year benefits are $60,000 and costs are $40,000. What is simple net ROI?",
+      "answer": "50%",
+      "options": [
+        "50%",
+        "150%",
+        "66.7%",
+        "20%"
+      ],
+      "why": "First subtract costs: 60,000 − 40,000 = 20,000. Divide net benefit by cost: 20,000 / 40,000 = 0.5. Multiply by 100 for 50%."
+    },
+    {
+      "id": "demo-mc",
+      "lesson": "demo",
+      "kind": "mc",
+      "prompt": "A customer asks for an integration you have not verified. What should you say?",
+      "answer": "Explain the uncertainty and confirm the capability with the appropriate source.",
+      "options": [
+        "Explain the uncertainty and confirm the capability with the appropriate source.",
+        "Promise support because most modern systems probably connect.",
+        "Say the feature exists if the demo audience seems interested.",
+        "Treat a planned feature as already available to every customer."
+      ],
+      "why": "A buying decision may depend on the answer. Clear uncertainty and a concrete follow-up protect the customer from a false expectation."
+    },
+    {
+      "id": "implementation-mc",
+      "lesson": "implementation",
+      "kind": "mc",
+      "prompt": "Why is matching record counts insufficient to validate a migration?",
+      "answer": "The records could still contain wrong or misplaced values.",
+      "options": [
+        "The records could still contain wrong or misplaced values.",
+        "Equal counts prove all permissions and workflows work.",
+        "Equal counts guarantee no duplicate customer identifiers.",
+        "Counts determine whether every user understands the system."
+      ],
+      "why": "Counts check quantity, not the meaning or correctness of each field. Use field checks, reconciliation and realistic workflow tests too."
+    },
+    {
+      "id": "controls-mc",
+      "lesson": "controls",
+      "kind": "mc",
+      "prompt": "Which is a detective control?",
+      "answer": "Reviewing access logs for unexpected activity.",
+      "options": [
+        "Reviewing access logs for unexpected activity.",
+        "Blocking access until approval is granted.",
+        "Requiring permission before a payment is released.",
+        "Disabling a departed employee’s account promptly."
+      ],
+      "why": "The log review looks for events that have occurred. Approval gates and timely account removal are intended to prevent unauthorized actions."
+    },
+    {
+      "id": "accessaudit-mc",
+      "lesson": "accessaudit",
+      "kind": "mc",
+      "prompt": "What is stronger evidence of timely account removal?",
+      "answer": "Departure dates linked to disable timestamps and the applicable timing rule.",
+      "options": [
+        "Departure dates linked to disable timestamps and the applicable timing rule.",
+        "A manager saying access is generally handled carefully.",
+        "A screenshot of one active employee’s desktop.",
+        "A list of software licenses without employee status."
+      ],
+      "why": "The dates and rule let you compare what should have happened with what actually happened. A general assurance does not establish timing."
+    },
+    {
+      "id": "changeaudit-mc",
+      "lesson": "changeaudit",
+      "kind": "mc",
+      "prompt": "Which example is an application control rather than a general change-management control?",
+      "answer": "An invoice form rejects a missing required supplier identifier.",
+      "options": [
+        "An invoice form rejects a missing required supplier identifier.",
+        "Software releases require approval before deployment.",
+        "Production code changes have documented test results.",
+        "Only approved staff can deploy production releases."
+      ],
+      "why": "The invoice check validates a particular transaction. The other choices govern the process for changing systems more broadly."
+    },
+    {
+      "id": "findings-mc",
+      "lesson": "findings",
+      "kind": "mc",
+      "prompt": "What makes an audit finding defensible?",
+      "answer": "It links the rule, observed evidence, risk and recommended action.",
+      "options": [
+        "It links the rule, observed evidence, risk and recommended action.",
+        "It uses the strongest possible wording regardless of sample size.",
+        "It assumes one exception proves every account is compromised.",
+        "It omits the criterion so the report stays short."
+      ],
+      "why": "Readers need to see why an observed gap matters and how the conclusion follows from evidence. Unsupported certainty weakens the finding."
+    },
+    {
+      "id": "intro-mc",
+      "lesson": "intro",
+      "kind": "mc",
+      "prompt": "Which is the strongest entry-level claim?",
+      "answer": "A specific contribution you can explain and demonstrate from a real project.",
+      "options": [
+        "A specific contribution you can explain and demonstrate from a real project.",
+        "A title you did not hold that sounds closer to the vacancy.",
+        "A list of tools you have never used but recognize.",
+        "A claim that your group’s entire result was your individual work."
+      ],
+      "why": "Interviewers can ask follow-ups. A concrete, truthful example gives you details to discuss and shows how you work."
+    },
+    {
+      "id": "star-mc",
+      "lesson": "star",
+      "kind": "mc",
+      "prompt": "Which part of STAR should explain what you personally did?",
+      "answer": "Action",
+      "options": [
+        "Action",
+        "Situation",
+        "Task",
+        "Result"
+      ],
+      "why": "The setting and assignment provide context. The action section is where the interviewer can evaluate your decisions and behavior."
+    },
+    {
+      "id": "unknown-mc",
+      "lesson": "unknown",
+      "kind": "mc",
+      "prompt": "What is a strong response to an unfamiliar technical problem?",
+      "answer": "State the gap, clarify the problem and explain a safe way to investigate.",
+      "options": [
+        "State the gap, clarify the problem and explain a safe way to investigate.",
+        "Invent a command so you appear decisive.",
+        "Claim you used the product because you read its name.",
+        "Change production settings immediately to discover what happens."
+      ],
+      "why": "Clear limits plus a reasoned investigation show trustworthiness and problem-solving. Guessing confidently can create real risk."
+    },
+    {
+      "id": "jobplan-mc",
+      "lesson": "jobplan",
+      "kind": "mc",
+      "prompt": "What should determine how much coding preparation a rotational-program applicant needs?",
+      "answer": "The actual program responsibilities and assessment requirements.",
+      "options": [
+        "The actual program responsibilities and assessment requirements.",
+        "The word technology in the title by itself.",
+        "The assumption that every rotation is software engineering.",
+        "The assumption that graduate programs never assess coding."
+      ],
+      "why": "Programs can have very different rotations. The posting and recruiter provide the relevant evidence; a broad label is not enough."
+    },
+    {
+      "id": "code-mc",
+      "lesson": "code",
+      "kind": "mc",
+      "prompt": "What should you clarify before solving “find duplicates”?",
+      "answer": "What result is required and how duplicates should be represented.",
+      "options": [
+        "What result is required and how duplicates should be represented.",
+        "Which variable name will impress the interviewer most.",
+        "Whether testing can be skipped for short inputs.",
+        "Whether every input is guaranteed nonempty without asking."
+      ],
+      "why": "A correct algorithm must match the requested behavior. Two sensible interpretations can produce different valid-looking outputs."
+    },
+    {
+      "id": "complexity-mc",
+      "lesson": "complexity",
+      "kind": "mc",
+      "prompt": "What does O(n) describe?",
+      "answer": "How work grows with input size, not an exact runtime in seconds.",
+      "options": [
+        "How work grows with input size, not an exact runtime in seconds.",
+        "A promise that code finishes in one second.",
+        "The exact memory address of every element.",
+        "A guarantee that all programming languages run equally fast."
+      ],
+      "why": "Growth notation abstracts away many machine details. It helps compare approaches as inputs become larger, but does not predict an exact clock time."
+    },
+    {
+      "id": "identity-fill",
+      "lesson": "identity",
+      "kind": "blank",
+      "prompt": "____ checks who you are; ____ controls what you may do.",
+      "answer": [
+        "Authentication",
+        "Authorization"
+      ],
+      "bank": [
+        "Authentication",
+        "Authorization",
+        "DNS",
+        "Migration"
+      ],
+      "why": "Identity verification and permission decisions answer different questions. A valid login does not grant every permission."
+    },
+    {
+      "id": "network-fill",
+      "lesson": "network",
+      "kind": "blank",
+      "prompt": "____ supplies network settings; ____ resolves names; a ____ helps reach other networks.",
+      "answer": [
+        "DHCP",
+        "DNS",
+        "default gateway"
+      ],
+      "bank": [
+        "DHCP",
+        "DNS",
+        "default gateway",
+        "web browser",
+        "spreadsheet"
+      ],
+      "why": "These three jobs cooperate. An automatically assigned address does not prove that name resolution or routing works."
+    },
+    {
+      "id": "recovery-fill",
+      "lesson": "recovery",
+      "kind": "blank",
+      "prompt": "____ is the target for restoration time; ____ is the target for data loss measured in time.",
+      "answer": [
+        "RTO",
+        "RPO"
+      ],
+      "bank": [
+        "RTO",
+        "RPO",
+        "ROI",
+        "API"
+      ],
+      "why": "Remember time-to-return for RTO and recovered point in time for RPO. Both targets come from business needs."
+    },
+    {
+      "id": "risk-fill",
+      "lesson": "security",
+      "kind": "blank",
+      "prompt": "A weakness is a ____; something that could exploit it is a ____.",
+      "answer": [
+        "vulnerability",
+        "threat"
+      ],
+      "bank": [
+        "vulnerability",
+        "threat",
+        "backup",
+        "metric"
+      ],
+      "why": "A flaw and a possible source of harm are different. Risk considers the possibility and consequences of harm."
+    },
+    {
+      "id": "join-fill",
+      "lesson": "join",
+      "kind": "blank",
+      "prompt": "Keep customers without orders with a ____; keep only matching pairs with an ____.",
+      "answer": [
+        "LEFT JOIN",
+        "INNER JOIN"
+      ],
+      "bank": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "GROUP BY",
+        "ORDER BY"
+      ],
+      "why": "A left join preserves unmatched left-side rows. An inner join needs a match on both sides."
+    },
+    {
+      "id": "sql-fill",
+      "lesson": "aggregate",
+      "kind": "blank",
+      "prompt": "Filter rows with ____; collect groups with ____; filter calculated groups with ____.",
+      "answer": [
+        "WHERE",
+        "GROUP BY",
+        "HAVING"
+      ],
+      "bank": [
+        "WHERE",
+        "GROUP BY",
+        "HAVING",
+        "ORDER BY",
+        "LEFT JOIN"
+      ],
+      "why": "Rows and groups are different levels. A group count is available after the grouping calculation."
+    },
+    {
+      "id": "process-fill",
+      "lesson": "process",
+      "kind": "blank",
+      "prompt": "The current workflow is ____; the proposed future workflow is ____.",
+      "answer": [
+        "as-is",
+        "to-be"
+      ],
+      "bank": [
+        "as-is",
+        "to-be",
+        "UAT",
+        "SaaS"
+      ],
+      "why": "Describe real current work first, then compare the proposed change to its actual problems."
+    },
+    {
+      "id": "controls-fill",
+      "lesson": "controls",
+      "kind": "blank",
+      "prompt": "An approval gate is usually ____; reviewing a log for suspicious activity is ____.",
+      "answer": [
+        "preventive",
+        "detective"
+      ],
+      "bank": [
+        "preventive",
+        "detective",
+        "a database key",
+        "a release"
+      ],
+      "why": "An approval gate tries to stop an unauthorized action. A review looks for evidence of activity that occurred."
+    },
+    {
+      "id": "value-fill",
+      "lesson": "value",
+      "kind": "blank",
+      "prompt": "Simple ROI = (____ − ____) ÷ cost × 100.",
+      "answer": [
+        "benefits",
+        "costs"
+      ],
+      "bank": [
+        "benefits",
+        "costs",
+        "users",
+        "hours"
+      ],
+      "why": "Subtract costs to get net benefit, then divide by the investment cost. Use the same time period for the amounts."
+    },
+    {
+      "id": "hardware-fill",
+      "lesson": "hardware",
+      "kind": "blank",
+      "prompt": "Physical equipment is ____; a device manager such as Windows is an ____; Excel is an ____.",
+      "answer": [
+        "hardware",
+        "operating system",
+        "application"
+      ],
+      "bank": [
+        "hardware",
+        "operating system",
+        "application",
+        "API",
+        "metric"
+      ],
+      "why": "The physical device, resource-managing software and task-specific software are different parts of the same working system."
+    },
+    {
+      "id": "web-order",
+      "lesson": "web",
+      "kind": "sort",
+      "prompt": "Build this simplified first visit to an HTTPS website (assume no cached address or open connection).",
+      "answer": [
+        "Resolve the name",
+        "Establish a secure connection",
+        "Send the HTTP request",
+        "Receive the response",
+        "Display the content"
+      ],
+      "bank": [
+        "Resolve the name",
+        "Establish a secure connection",
+        "Send the HTTP request",
+        "Receive the response",
+        "Display the content"
+      ],
+      "why": "The browser first needs an address and connection before sending the request. Real pages can reuse connections and make many requests."
+    },
+    {
+      "id": "trouble-order",
+      "lesson": "triage",
+      "kind": "sort",
+      "prompt": "Order this ordinary troubleshooting workflow (urgent escalation may happen sooner).",
+      "answer": [
+        "Clarify impact and symptoms",
+        "Form and test a hypothesis",
+        "Plan an approved fix",
+        "Apply the fix",
+        "Verify and document"
+      ],
+      "bank": [
+        "Clarify impact and symptoms",
+        "Form and test a hypothesis",
+        "Plan an approved fix",
+        "Apply the fix",
+        "Verify and document"
+      ],
+      "why": "Evidence guides the fix. Approval and impact review come before a disruptive action; verification confirms the original task works."
+    },
+    {
+      "id": "star-order",
+      "lesson": "star",
+      "kind": "sort",
+      "prompt": "Build the STAR answer structure.",
+      "answer": [
+        "Situation",
+        "Task",
+        "Action",
+        "Result"
+      ],
+      "bank": [
+        "Situation",
+        "Task",
+        "Action",
+        "Result"
+      ],
+      "why": "Give just enough context, identify your responsibility, explain your own actions, then state the true outcome and lesson."
+    },
+    {
+      "id": "migration-order",
+      "lesson": "implementation",
+      "kind": "sort",
+      "prompt": "Arrange this simplified planned data migration.",
+      "answer": [
+        "Map fields and inspect data",
+        "Rehearse the migration",
+        "Validate rehearsal results",
+        "Perform approved cutover",
+        "Verify and support users"
+      ],
+      "bank": [
+        "Map fields and inspect data",
+        "Rehearse the migration",
+        "Validate rehearsal results",
+        "Perform approved cutover",
+        "Verify and support users"
+      ],
+      "why": "A rehearsal and validation expose problems before the live switch. Verification and user support continue after cutover."
+    },
+    {
+      "id": "case-order",
+      "lesson": "discovery",
+      "kind": "sort",
+      "prompt": "Build a clear recommendation for a case interview.",
+      "answer": [
+        "Clarify the goal",
+        "State assumptions and analyze",
+        "Compare practical options",
+        "Recommend with tradeoffs",
+        "Propose validation and next steps"
+      ],
+      "bank": [
+        "Clarify the goal",
+        "State assumptions and analyze",
+        "Compare practical options",
+        "Recommend with tradeoffs",
+        "Propose validation and next steps"
+      ],
+      "why": "Analysis needs a goal. A recommendation should follow evidence and lead to an actionable next step; real conversations can loop back."
+    },
+    {
+      "id": "expand-dns",
+      "lesson": "web",
+      "kind": "sort",
+      "prompt": "Build what DNS stands for.",
+      "answer": [
+        "Domain",
+        "Name",
+        "System"
+      ],
+      "bank": [
+        "Domain",
+        "Name",
+        "System"
+      ],
+      "why": "Domain Name System: finds address information associated with names."
+    },
+    {
+      "id": "expand-api",
+      "lesson": "integration",
+      "kind": "sort",
+      "prompt": "Build what API stands for.",
+      "answer": [
+        "Application",
+        "Programming",
+        "Interface"
+      ],
+      "bank": [
+        "Application",
+        "Programming",
+        "Interface"
+      ],
+      "why": "Application Programming Interface: a defined way for software to request data or actions from other software."
+    },
+    {
+      "id": "expand-json",
+      "lesson": "integration",
+      "kind": "sort",
+      "prompt": "Build what JSON stands for.",
+      "answer": [
+        "JavaScript",
+        "Object",
+        "Notation"
+      ],
+      "bank": [
+        "JavaScript",
+        "Object",
+        "Notation"
+      ],
+      "why": "JavaScript Object Notation: a common text format for structured data."
+    },
+    {
+      "id": "expand-dhcp",
+      "lesson": "network",
+      "kind": "sort",
+      "prompt": "Build what DHCP stands for.",
+      "answer": [
+        "Dynamic",
+        "Host",
+        "Configuration",
+        "Protocol"
+      ],
+      "bank": [
+        "Dynamic",
+        "Host",
+        "Configuration",
+        "Protocol"
+      ],
+      "why": "Dynamic Host Configuration Protocol: can give a device its network settings automatically."
+    },
+    {
+      "id": "expand-mfa",
+      "lesson": "identity",
+      "kind": "sort",
+      "prompt": "Build what MFA stands for.",
+      "answer": [
+        "Multifactor",
+        "Authentication"
+      ],
+      "bank": [
+        "Multifactor",
+        "Authentication"
+      ],
+      "why": "Multifactor authentication: using different categories of proof, such as a password and a security key."
+    },
+    {
+      "id": "expand-iaas",
+      "lesson": "cloud",
+      "kind": "sort",
+      "prompt": "Build what IaaS stands for.",
+      "answer": [
+        "Infrastructure",
+        "as",
+        "a",
+        "Service"
+      ],
+      "bank": [
+        "Infrastructure",
+        "as",
+        "a",
+        "Service"
+      ],
+      "why": "Infrastructure as a Service: renting basic compute, storage and network resources."
+    },
+    {
+      "id": "expand-paas",
+      "lesson": "cloud",
+      "kind": "sort",
+      "prompt": "Build what PaaS stands for.",
+      "answer": [
+        "Platform",
+        "as",
+        "a",
+        "Service"
+      ],
+      "bank": [
+        "Platform",
+        "as",
+        "a",
+        "Service"
+      ],
+      "why": "Platform as a Service: a managed platform for building/running applications."
+    },
+    {
+      "id": "expand-saas",
+      "lesson": "cloud",
+      "kind": "sort",
+      "prompt": "Build what SaaS stands for.",
+      "answer": [
+        "Software",
+        "as",
+        "a",
+        "Service"
+      ],
+      "bank": [
+        "Software",
+        "as",
+        "a",
+        "Service"
+      ],
+      "why": "Software as a Service: using a provider-managed application."
+    },
+    {
+      "id": "expand-rpo",
+      "lesson": "recovery",
+      "kind": "sort",
+      "prompt": "Build what RPO stands for.",
+      "answer": [
+        "Recovery",
+        "Point",
+        "Objective"
+      ],
+      "bank": [
+        "Recovery",
+        "Point",
+        "Objective"
+      ],
+      "why": "Recovery Point Objective: the maximum targeted amount of data loss measured in time."
+    },
+    {
+      "id": "expand-rto",
+      "lesson": "recovery",
+      "kind": "sort",
+      "prompt": "Build what RTO stands for.",
+      "answer": [
+        "Recovery",
+        "Time",
+        "Objective"
+      ],
+      "bank": [
+        "Recovery",
+        "Time",
+        "Objective"
+      ],
+      "why": "Recovery Time Objective: the targeted time to restore service."
+    },
+    {
+      "id": "expand-sql",
+      "lesson": "join",
+      "kind": "sort",
+      "prompt": "Build what SQL stands for.",
+      "answer": [
+        "Structured",
+        "Query",
+        "Language"
+      ],
+      "bank": [
+        "Structured",
+        "Query",
+        "Language"
+      ],
+      "why": "Structured Query Language: a language for working with relational data."
+    },
+    {
+      "id": "expand-kpi",
+      "lesson": "metrics",
+      "kind": "sort",
+      "prompt": "Build what KPI stands for.",
+      "answer": [
+        "Key",
+        "Performance",
+        "Indicator"
+      ],
+      "bank": [
+        "Key",
+        "Performance",
+        "Indicator"
+      ],
+      "why": "Key Performance Indicator: a metric chosen to track an important goal."
+    },
+    {
+      "id": "expand-uat",
+      "lesson": "uat",
+      "kind": "sort",
+      "prompt": "Build what UAT stands for.",
+      "answer": [
+        "User",
+        "Acceptance",
+        "Testing"
+      ],
+      "bank": [
+        "User",
+        "Acceptance",
+        "Testing"
+      ],
+      "why": "User Acceptance Testing: intended users or their representatives check whether the solution meets business needs."
+    },
+    {
+      "id": "expand-roi",
+      "lesson": "value",
+      "kind": "sort",
+      "prompt": "Build what ROI stands for.",
+      "answer": [
+        "Return",
+        "on",
+        "Investment"
+      ],
+      "bank": [
+        "Return",
+        "on",
+        "Investment"
+      ],
+      "why": "Return on Investment: in a simple model, net benefit divided by cost."
+    },
+    {
+      "id": "expand-itgc",
+      "lesson": "changeaudit",
+      "kind": "sort",
+      "prompt": "Build what ITGC stands for.",
+      "answer": [
+        "IT",
+        "General",
+        "Controls"
+      ],
+      "bank": [
+        "IT",
+        "General",
+        "Controls"
+      ],
+      "why": "IT General Controls: controls over the wider IT environment, often including access, changes and operations."
+    }
+  ],
+  "interviews": [
+    {
+      "id": "system-talk",
+      "lesson": "system",
+      "prompt": "Explain an IT system to a store manager who does not work in technology.",
+      "outline": [
+        "Start with a business task such as a sale.",
+        "Connect people, steps, software, devices and data.",
+        "Explain one failure and its effect without blaming a user."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "hardware-talk",
+      "lesson": "hardware",
+      "prompt": "A user says their computer is slow. How would you narrow that down?",
+      "outline": [
+        "Ask which task, when it began and whether others are affected.",
+        "Compare applications and observe CPU, memory, disk and network usage.",
+        "Use evidence to choose a safe next test and verify with the user."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "web-talk",
+      "lesson": "web",
+      "prompt": "Walk me through opening a website, and name two places a failure can happen.",
+      "outline": [
+        "Describe name lookup, connection and request/response.",
+        "Separate a lookup failure from an application response.",
+        "Acknowledge caching and avoid assuming every failure is the internet connection."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "integration-talk",
+      "lesson": "integration",
+      "prompt": "Explain an API integration and one failure you would plan for.",
+      "outline": [
+        "Use two named systems and a specific exchange.",
+        "Describe required fields and access.",
+        "Discuss response checks, retries and duplicate prevention."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "triage-talk",
+      "lesson": "triage",
+      "prompt": "How would you troubleshoot an issue you have never seen?",
+      "outline": [
+        "Clarify scope and collect the exact symptoms.",
+        "Explain a testable hypothesis and a safe test.",
+        "Escalate with evidence, then verify and document the outcome."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "network-talk",
+      "lesson": "network",
+      "prompt": "A device connects to Wi-Fi but cannot reach a company site. What do you check?",
+      "outline": [
+        "Compare scope: one device, one site or many users.",
+        "Inspect address, gateway and DNS configuration and relevant errors.",
+        "Separate connectivity, name resolution and application access."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "incident-talk",
+      "lesson": "incident",
+      "prompt": "How would you communicate during an outage when you do not know the fix?",
+      "outline": [
+        "State verified impact and distinguish unknowns.",
+        "Name the current action and owner or escalation.",
+        "Commit to a next update rather than an invented fix time."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "logs-talk",
+      "lesson": "logs",
+      "prompt": "What information would you include when escalating a technical incident?",
+      "outline": [
+        "Impact, start time/timezone and exact symptoms.",
+        "Tests already performed, their results and relevant recent changes.",
+        "Sanitized evidence, current status and the help needed."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "identity-talk",
+      "lesson": "identity",
+      "prompt": "Explain authentication, authorization and least privilege with one example.",
+      "outline": [
+        "Separate identity checking from permission decisions.",
+        "Use a specific action such as viewing versus editing payroll.",
+        "Explain why access should match the job and be reviewed."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "security-talk",
+      "lesson": "security",
+      "prompt": "How would you explain a security risk to a nontechnical manager?",
+      "outline": [
+        "Name the business asset and plausible harm.",
+        "Separate the weakness from the threat and impact.",
+        "Recommend a proportionate control and explain remaining risk."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "cloud-talk",
+      "lesson": "cloud",
+      "prompt": "What changes, and what stays your responsibility, when a company uses cloud software?",
+      "outline": [
+        "Explain provider-managed services without saying computers disappear.",
+        "Identify customer data, accounts and configuration responsibilities.",
+        "Say the boundary depends on the service and agreement."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "recovery-talk",
+      "lesson": "recovery",
+      "prompt": "How would you check whether a backup process meets a business need?",
+      "outline": [
+        "Ask for recovery time and data-loss targets.",
+        "Review backup scope and protection, then test a restore.",
+        "Verify usable service and data rather than relying only on a success message."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "tables-talk",
+      "lesson": "tables",
+      "prompt": "How would you investigate duplicate customer records?",
+      "outline": [
+        "Define what counts as the same customer with the business owner.",
+        "Inspect identifiers, names and other relevant fields safely.",
+        "Do not delete records until dependencies and a correction plan are understood."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "join-talk",
+      "lesson": "join",
+      "prompt": "Explain INNER JOIN versus LEFT JOIN using customers and orders.",
+      "outline": [
+        "Say which unmatched customers remain.",
+        "Explain why a customer can appear more than once.",
+        "Match the choice to the business question."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "aggregate-talk",
+      "lesson": "aggregate",
+      "prompt": "How would you find customers with at least two paid orders?",
+      "outline": [
+        "Filter to paid orders and define the relevant time range.",
+        "Group by customer identifier and count orders.",
+        "Filter groups to two or more; check duplicates and missing data."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "metrics-talk",
+      "lesson": "metrics",
+      "prompt": "A manager asks for a dashboard. What do you clarify before building it?",
+      "outline": [
+        "Ask what decision or goal the dashboard supports.",
+        "Define each metric, population, date range and source.",
+        "Check quality and explain limitations before presenting conclusions."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "requirements-talk",
+      "lesson": "requirements",
+      "prompt": "A stakeholder says “we need a better system.” How do you respond?",
+      "outline": [
+        "Ask about the user, task, pain and desired outcome.",
+        "Observe the current process and check constraints.",
+        "Agree on specific, testable needs before selecting a design."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "process-talk",
+      "lesson": "process",
+      "prompt": "How would you investigate a slow order-fulfillment process?",
+      "outline": [
+        "Map steps, actors, waits and exceptions with users.",
+        "Measure where time is spent and validate the cause.",
+        "Propose a change and compare results against a baseline."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "uat-talk",
+      "lesson": "uat",
+      "prompt": "Write acceptance criteria aloud for a password-reset feature.",
+      "outline": [
+        "Identify the user and successful path.",
+        "Include an invalid/expired request and privacy or access concerns.",
+        "Describe observable outcomes that a tester can verify."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "delivery-talk",
+      "lesson": "delivery",
+      "prompt": "What does agile mean, and how would you handle a changing requirement?",
+      "outline": [
+        "Explain adaptation and feedback in ordinary language.",
+        "Distinguish agile from a specific framework such as Scrum.",
+        "Assess impact and agree priorities while keeping appropriate quality controls."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "discovery-talk",
+      "lesson": "discovery",
+      "prompt": "A client wants to modernize its technology. How would you structure the first conversation?",
+      "outline": [
+        "Clarify the goal and current pain with examples.",
+        "Identify users, constraints, risks and success measures.",
+        "Summarize assumptions and propose the next discovery step."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "value-talk",
+      "lesson": "value",
+      "prompt": "How would you decide whether to buy or build a solution?",
+      "outline": [
+        "Compare needs, time, total cost, security and integration.",
+        "State assumptions and consider vendor dependence or maintenance.",
+        "Recommend a choice with a validation step and explicit tradeoffs."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "demo-talk",
+      "lesson": "demo",
+      "prompt": "Give a two-minute demo plan for a support-ticket tool.",
+      "outline": [
+        "Name the customer problem and one relevant workflow.",
+        "Show the workflow and connect it to an outcome.",
+        "Check understanding and record unanswered questions honestly."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "implementation-talk",
+      "lesson": "implementation",
+      "prompt": "How would you help roll out a new business application?",
+      "outline": [
+        "Plan requirements, settings, integrations and migration validation.",
+        "Test with users and prepare training, cutover and recovery.",
+        "Monitor adoption and issues after launch."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "controls-talk",
+      "lesson": "controls",
+      "prompt": "Describe a risk and a control in plain language.",
+      "outline": [
+        "Name what could happen and why it matters.",
+        "Explain how a specific control reduces that possibility or impact.",
+        "Describe ownership, evidence and risk that remains."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "accessaudit-talk",
+      "lesson": "accessaudit",
+      "prompt": "How would you test whether departed employees lose access on time?",
+      "outline": [
+        "Define the policy, systems and period in scope.",
+        "Obtain a complete leaver population and reliable disable records.",
+        "Compare timing, investigate exceptions and document the conclusion."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "changeaudit-talk",
+      "lesson": "changeaudit",
+      "prompt": "What evidence would you inspect for a production change?",
+      "outline": [
+        "Identify the change, policy and relevant period.",
+        "Link approvals and testing to the deployed version and timing.",
+        "Investigate exceptions, including any emergency-change process."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "findings-talk",
+      "lesson": "findings",
+      "prompt": "How would you explain an access-control exception to management?",
+      "outline": [
+        "State the rule and exactly what was observed.",
+        "Explain the business risk without claiming unproven harm.",
+        "Agree on ownership and corrective action, then plan verification."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "intro-talk",
+      "lesson": "intro",
+      "prompt": "Tell me about yourself and why you want this role.",
+      "outline": [
+        "State your May 2027 graduation and relevant direction briefly.",
+        "Give one true example with your own contribution.",
+        "Connect that evidence to the actual role rather than every technology job."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "star-talk",
+      "lesson": "star",
+      "prompt": "Tell me about a time you disagreed with a teammate.",
+      "outline": [
+        "Describe one real disagreement and the shared goal.",
+        "Explain how you listened, used evidence and acted respectfully.",
+        "State the actual outcome and a lesson without blaming or inventing numbers."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "unknown-talk",
+      "lesson": "unknown",
+      "prompt": "What would you do if a client asked a question you could not answer?",
+      "outline": [
+        "Be clear about what you know and do not know.",
+        "Clarify the need and identify a reliable source or expert.",
+        "Set a realistic follow-up and validate the answer before giving it."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "jobplan-talk",
+      "lesson": "jobplan",
+      "prompt": "Why this company and this role?",
+      "outline": [
+        "Identify a specific responsibility or business problem that interests you.",
+        "Connect it to truthful evidence of your skills and learning.",
+        "Ask an informed question about work, support or success in the role."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "code-talk",
+      "lesson": "code",
+      "prompt": "Explain how you would find repeated values in a list.",
+      "outline": [
+        "Clarify the expected output and constraints.",
+        "Walk through a simple approach with an example.",
+        "Discuss tests and how time and memory grow; practice implementing it separately."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    },
+    {
+      "id": "complexity-talk",
+      "lesson": "complexity",
+      "prompt": "How would you test and improve a simple duplicate detector?",
+      "outline": [
+        "Test empty, single, unique and repeated inputs.",
+        "Explain a straightforward comparison approach.",
+        "Compare a set-based approach and its memory tradeoff."
+      ],
+      "followup": "What information would change your answer?",
+      "kind": "Original practice prompt"
+    }
+  ]
+}

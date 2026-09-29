@@ -1,4 +1,9 @@
-# CIS 320 Recall Lab
+# Recall Lab
+
+The app has two separate workspaces:
+
+- **Classes** — CIS 320, CIS 304, and CIS 464, with separate progress for each class.
+- **Career** — entry-level technology interview preparation for a May 2027 graduate, with role-specific learning paths, tap-based practice, spoken mock interviews, applied cases, flashcards, and research notes.
 
 A static study app covering Chapters 1, 2, 3, 4, and 12 from the supplied CIS 320 Test 1 guide.
 

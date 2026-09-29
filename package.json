@@ -2,11 +2,11 @@
   "name": "cis320-recall-lab",
   "version": "1.0.0",
   "private": true,
-  "description": "Chapter-based CIS 320 study practice with flashcards, applied questions and mixed exercises",
+  "description": "Separate class study labs and entry-level technology interview preparation",
   "scripts": {
     "start": "node scripts/serve.mjs",
-    "check": "node --check dist/app.js && node --check dist/vocab.js && node --check dist/teaching.js && node --check dist/subnet.js && node --check dist/map.js && node --check dist/numbers.js && node --check dist/cis304.js && node --check dist/cis464.js",
-    "test": "node tests/content.cjs && node tests/cis304.cjs && node tests/cis464.cjs",
+    "check": "node --check dist/app.js && node --check dist/vocab.js && node --check dist/teaching.js && node --check dist/subnet.js && node --check dist/map.js && node --check dist/numbers.js && node --check dist/cis304.js && node --check dist/cis464.js && node --check dist/career.js",
+    "test": "node tests/content.cjs && node tests/cis304.cjs && node tests/cis464.cjs && node tests/career.cjs",
     "package": "node scripts/package.mjs"
   },
   "engines": {
