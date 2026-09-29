@@ -52,7 +52,7 @@ console.log('PASS CIS 464: 77 lessons, 183 source slides/assets, choice and chap
 for(const n of [72,73,74,75,76,77]){assert.ok(data.questions.some(q=>q.number===n&&q.section===1));}
 
 assert.equal(data.vocab.length,117);
-assert.equal(run('chapterPracticePool().length'),203);
+assert.equal(run('chapterPracticePool().length'),213);
 for(const v of data.vocab)assert.ok(run('chapterPracticePool().some(x=>x.id==='+JSON.stringify(v.id)+')'));
 for(const term of ['Simple reflex agent','Model-based reflex agent','Goal-based agent','Utility-based agent','Learning agent']){
  const v=data.vocab.find(v=>v.term===term);assert.ok(v,term);assert.ok(v.example.length>50);assert.ok(v.teach.includes('Remember:'));
@@ -112,3 +112,6 @@ for(const x of docs){
 }
 assert.match(data.questions.find(q=>q.number===42).answer,/not a separately identified exam requirement/);
 console.log('PASS: eight document comparisons in chapter practice and relevant lessons, with explicit business-plan scope.');
+
+for(const x of data.sorts)assert.ok(run('chapterPracticePool().some(x=>x.id==='+JSON.stringify(x.id)+')'));
+assert.equal(data.sorts.length,11);

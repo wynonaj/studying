@@ -4306,6 +4306,43 @@
       ],
       "teach": "This is the order of the letters in MORE, not a timeline of steps. All four ideas can apply throughout a project.\n\nM — Manage perceptions: check whether stakeholders see the result as worth the time, money, and effort invested.\n\nO — Own success: take responsibility for useful results, not just finishing assigned tasks.\n\nR — Relentlessly reassess: keep checking whether the work is still valuable as needs change.\n\nE — Expand perspective: consider effects beyond the immediate project, including other people and teams.",
       "example": "A campus app launches on time but confuses students. Ask how students judge its value (M), take responsibility for improving the result (O), keep checking what they need (R), and consider the extra work it creates for support staff (E)."
+    },
+    {
+      "id": "464-s9",
+      "source": 14,
+      "section": 1,
+      "q": "Build this nested example: broadest collection to individual work effort",
+      "items": [
+        "Portfolio containing a program",
+        "Program coordinating related projects",
+        "One project within that program"
+      ],
+      "teach": "In this example the portfolio selects a strategic mix, the program coordinates related benefits, and the project delivers a particular result. Portfolios can also contain projects directly, and not every project belongs to a program."
+    },
+    {
+      "id": "464-s10",
+      "source": 43,
+      "section": 3,
+      "q": "Follow the course’s project-document progression",
+      "items": [
+        "Business case: justify the investment",
+        "Project charter: authorize the project",
+        "Project management plan: guide how it will be managed"
+      ],
+      "teach": "First explain why the project is worthwhile, then obtain formal authorization, then develop the integrated management plan. Early planning can help the case and charter; the documents can later be revisited. A business plan is not an interchangeable name for any of these."
+    },
+    {
+      "id": "464-s11",
+      "source": 47,
+      "section": 3,
+      "q": "Turn stakeholder knowledge into an engagement approach",
+      "items": [
+        "Identify relevant stakeholders",
+        "Record and assess them in the stakeholder register",
+        "Plan how to engage them",
+        "Carry out engagement and review feedback"
+      ],
+      "teach": "First learn who matters and how they are affected. Use that knowledge to plan involvement and communication, then listen to feedback. This repeats as stakeholders or project conditions change."
     }
   ],
   "references": [

@@ -26,7 +26,7 @@ run('while(session.index<session.items.length){grade(session.items[session.index
 run('start("exam",D.questions.slice(0,1));grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items.length'),1);assert.equal(run('session.right'),0);
 run('start("flash",[D.questions[0]])');assert.ok(!element('#flip').innerHTML.includes('Data are individual facts'));element('#flip').onclick();assert.ok(element('#flip').innerHTML.includes('Data are individual facts'));element('#flip').onclick();assert.ok(!element('#flip').innerHTML.includes('Data are individual facts'));
 run('start("practice",[{...D.sorts[0],kind:"sort"}])');assert.ok(element('#app').innerHTML.includes('Check order'));
-run('start("practice",[{...D.vocab.find(v=>v.term==="ERP"),kind:"wordbank"}])');assert.equal(run('session.items[0].bank.length'),3);assert.ok(element('#app').innerHTML.includes('Check name'));
+run('start("exam",[{...D.vocab.find(v=>v.term==="ERP"),kind:"wordbank"}])');assert.equal(run('session.items[0].bank.length'),3);assert.ok(element('#app').innerHTML.includes('Check name'));
 run('section=3');assert.ok(run('filtered(mixedPool()).every(x=>x.section===3)'));
 const page320=read('dist/index.html'),page304=read('dist/cis304.html');assert.match(page320,/href="cis304.html"/);assert.match(page304,/href="index.html"/);assert.ok(!page304.includes('src="app.js'));assert.ok(!read('dist/cis304.js').includes("setItem('cis320"));
 for(const page of [page320,page304])for(const match of page.matchAll(/(?:src|href)="([\w.-]+\.(?:js|css))\?v=([a-f0-9]+)"/g)){assert.equal(require('node:crypto').createHash('sha256').update(read('dist/'+match[1])).digest('hex').slice(0,12),match[2],match[1]+' cache hash')}
@@ -53,7 +53,7 @@ const tapCards=data.cloze.filter(x=>x.kind==='cloze');assert.equal(tapCards.leng
 for(const x of tapCards){
  assert.equal((x.q.match(/____/g)||[]).length,x.blanks.length);
  assert.equal(x.blanks.join('; '),x.correct);
- ctx.CLOZE=x;run('start("practice",[CLOZE])');
+ ctx.CLOZE=x;run('start("exam",[CLOZE])');
  assert.ok(element('#app').innerHTML.includes('Check sentence'));
  run('session.items[0].picked=session.items[0].blanks.map(w=>session.items[0].bank.indexOf(w));renderCloze(session.items[0])');
  element('#check-blanks').onclick();assert.equal(run('session.lastOK'),true);
@@ -61,6 +61,21 @@ for(const x of tapCards){
 run('start("practice",[D.cloze.find(x=>x.kind==="cloze")])');
 run('session.items[0].picked=[session.items[0].bank.indexOf("information"),session.items[0].bank.indexOf("data")];renderCloze(session.items[0])');
 element('#check-blanks').onclick();assert.equal(run('session.lastOK'),false);run('advance()');assert.equal(run('session.items.length'),2);assert.equal(run('session.items[1].picked.length'),0);
-run('section=0;navigate("practice")');assert.ok(element('#app').innerHTML.includes('Fill in the blanks'));element('#blank-practice').onclick();assert.equal(run('session.total'),38);
+run('section=0;navigate("practice")');assert.ok(element('#app').innerHTML.includes('Fill in the blanks'));element('#blank-practice').onclick();assert.equal(run('session.total'),42);
 run('openLesson(1,2)');element('#lesson-practice').onclick();assert.ok(run('session.items.some(x=>x.kind==="cloze")'));
 console.log('PASS: 27 tappable cloze activities, accurate slots, grading, retry reset, lesson inclusion and visible practice entry.');
+
+assert.equal(data.sorts.length,11);
+assert.deepEqual(data.sorts.find(x=>x.id==='304-s7').items,['Business architecture','Data architecture','Application architecture','Technology architecture']);
+run('section=0;navigate("practice")');element('#sort-practice').onclick();assert.equal(run('session.total'),11);
+run('openLesson(29,2)');element('#lesson-practice').onclick();assert.ok(run('session.items.some(x=>x.id==="304-s7")'));
+console.log('PASS: architecture layers and sequence launcher are available in CIS 304 practice and relevant lessons.');
+
+assert.equal(data.foundations.length,4);
+for(const f of data.foundations){assert.equal(new Set([f.correct,...f.distractors]).size,4);assert.equal((f.q.match(/____/g)||[]).length,f.blanks.length)}
+run('start("practice",[D.questions.find(q=>q.number===46)])');
+assert.equal(run('session.items[0].id'),'304-foundation-1');assert.equal(run('session.items[4].number'),46);
+assert.ok(element('#app').innerHTML.includes('Functional Area Information System'));
+run('grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items[session.index].id'),'304-foundation-1');
+run('start("exam",[D.questions.find(q=>q.number===46)])');assert.equal(run('session.total'),1);
+console.log('PASS: FAIS/EIS definitions precede dependent practice, wrong foundations retry before advancing, exams unchanged.');

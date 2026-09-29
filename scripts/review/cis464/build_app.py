@@ -1,6 +1,7 @@
 from pathlib import Path
 import re
 ROOT=Path(__file__).resolve().parents[3];s=(ROOT/'dist/cis304.js').read_text()
+s=s.replace(",...D.sorts.filter(c=>c.source===number).map(x=>({...x,kind:'sort'}))]", "]")
 # Keep CIS 304's newly added lesson cloze insertion from changing this class's lesson wiring.
 s=s.replace("[q,...D.cloze.filter(c=>c.source===number),...D.checks.filter(c=>c.source===number)]", "[q,...D.checks.filter(c=>c.source===number)]")
 s=s.replace('CIS 304','CIS 464').replace('cis304','cis464').replace('KEY304','KEY464').replace('304-','464-').replace('module1-v1','chapters-v1').replace('ENTERPRISE ARCHITECTURE','PROJECT MANAGEMENT').replace('Module I','Chapters 1, 2, 3 & 10')
@@ -53,4 +54,8 @@ s=s.replace("[q,...D.checks.filter(c=>c.source===number),", "[q,...D.checks.filt
 
 s=s.replace("function chapterPracticePool(){return [...D.questions,...D.vocab,", "function chapterPracticePool(){return [...D.questions,...D.vocab,...D.checks.filter(x=>x.mainPractice),")
 s=s.replace("function mixedPool(){return [...D.questions,...D.vocab,", "function mixedPool(){return [...D.questions,...D.vocab,...D.checks.filter(x=>x.mainPractice),")
+(ROOT/'dist/cis464.js').write_text(s)
+
+s=s.replace("D.sorts.filter(x=>x.mainPractice).map", "D.sorts.map")
+s=s.replace("D.sorts.filter(x=>x.lessonNumbers?.includes(number))", "D.sorts.filter(x=>x.source===number||x.lessonNumbers?.includes(number))")
 (ROOT/'dist/cis464.js').write_text(s)

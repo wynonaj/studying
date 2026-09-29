@@ -170,3 +170,5 @@ import runpy
 runpy.run_path(str(Path(__file__).with_name("term_coverage.py")))
 
 runpy.run_path(str(Path(__file__).with_name("document_comparisons.py")))
+
+runpy.run_path(str(Path(__file__).resolve().parents[1]/"add_sorting.py"),run_name="__main__",init_globals={"only_course":"464"})

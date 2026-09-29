@@ -2582,6 +2582,70 @@
         "Deliver the order"
       ],
       "teach": "This simplified path assumes enough stock. A full activity diagram also shows the no-stock branch."
+    },
+    {
+      "id": "304-s7",
+      "source": 29,
+      "section": 3,
+      "q": "Build the enterprise architecture view: business purpose down to technical support",
+      "items": [
+        "Business architecture",
+        "Data architecture",
+        "Application architecture",
+        "Technology architecture"
+      ],
+      "teach": "Start with what the business needs to do. Describe its data, the applications that use that data, and the technology supporting them. This is the course study view, not a universal chronological implementation order; the domains influence one another."
+    },
+    {
+      "id": "304-s8",
+      "source": 36,
+      "section": 3,
+      "q": "Build the direction-to-implementation relationship",
+      "items": [
+        "Strategy",
+        "Architecture",
+        "Infrastructure"
+      ],
+      "teach": "Strategy sets the goals and direction. Architecture turns them into an organized design. Infrastructure supplies the concrete technology. Feedback can lead to revisions; this is the intended direction of design decisions."
+    },
+    {
+      "id": "304-s9",
+      "source": 19,
+      "section": 2,
+      "q": "Production: build the simplified flow",
+      "items": [
+        "Plan the work",
+        "Transform inputs or perform the service",
+        "Check the result’s quality",
+        "Provide the finished output"
+      ],
+      "teach": "Know what to produce before doing the work. Check that the result meets requirements. Real processes may also check quality during production and repeat steps when corrections are needed."
+    },
+    {
+      "id": "304-s10",
+      "source": 19,
+      "section": 2,
+      "q": "Accounting: build the simplified information flow",
+      "items": [
+        "Record financial events",
+        "Classify the records",
+        "Reconcile and check",
+        "Summarize and report"
+      ],
+      "teach": "First capture what happened, then organize records by category, check that they agree with supporting evidence, and report useful financial information. This is a simplified teaching flow, not every accounting procedure."
+    },
+    {
+      "id": "304-s11",
+      "source": 11,
+      "section": 2,
+      "q": "Build DSRP in the order of its letters",
+      "items": [
+        "Distinctions",
+        "Systems",
+        "Relationships",
+        "Perspectives"
+      ],
+      "teach": "D identifies what something is and is not. S considers parts and wholes. R considers connections. P considers viewpoints. This is acronym order, not a rule that thinking must always happen in four fixed steps."
     }
   ],
   "readings": [
@@ -3651,6 +3715,97 @@
       "blanks": [
         "partners"
       ]
+    }
+  ],
+  "foundations": [
+    {
+      "id": "304-foundation-1",
+      "source": 44,
+      "section": 4,
+      "kind": "cloze",
+      "foundation": true,
+      "foundationIntro": "FAIS = Functional Area Information System. A functional area is one department or type of work, such as accounting, human resources, or sales. An information system combines people, processes, data, and technology to handle information.",
+      "q": "FAIS stands for ____ ____ ____ ____.",
+      "correct": "Functional; Area; Information; System",
+      "answer": "Functional; Area; Information; System",
+      "distractors": [
+        "Financial; Analysis; Information; Service",
+        "Functional; Application; Integration; Software",
+        "Financial; Area; Integration; System"
+      ],
+      "blanks": [
+        "Functional",
+        "Area",
+        "Information",
+        "System"
+      ],
+      "teach": "Remember: Functional Area tells you its scope—one part of the business. For example, a payroll system supports the human-resources function.",
+      "example": "FAIS = Functional Area Information System. A functional area is one department or type of work, such as accounting, human resources, or sales. An information system combines people, processes, data, and technology to handle information."
+    },
+    {
+      "id": "304-foundation-2",
+      "source": 44,
+      "section": 4,
+      "kind": "cloze",
+      "foundation": true,
+      "foundationIntro": "A FAIS focuses on the information needs of one business function. A function is a type of work, such as accounting or sales. A FAIS can connect to other systems, but its primary focus is still that function.",
+      "q": "A FAIS primarily supports ____ in a business.",
+      "correct": "one functional area",
+      "answer": "one functional area",
+      "distractors": [
+        "all functions as an integrated whole",
+        "only external partner organizations",
+        "only the physical computer network"
+      ],
+      "blanks": [
+        "one functional area"
+      ],
+      "teach": "Remember: ask whose work the system mainly supports. An accounting system focused on accounting is a functional-area system; being connected to something else does not automatically change that focus.",
+      "example": "A FAIS focuses on the information needs of one business function. A function is a type of work, such as accounting or sales. A FAIS can connect to other systems, but its primary focus is still that function."
+    },
+    {
+      "id": "304-foundation-3",
+      "source": 45,
+      "section": 4,
+      "kind": "cloze",
+      "foundation": true,
+      "foundationIntro": "EIS = Enterprise Information System in this course. Enterprise means the organization as a whole. An EIS supports information and processes across business functions.",
+      "q": "In CIS 304, EIS stands for ____ ____ ____.",
+      "correct": "Enterprise; Information; System",
+      "answer": "Enterprise; Information; System",
+      "distractors": [
+        "Executive; Information; Service",
+        "Electronic; Integration; Software",
+        "Enterprise; Integration; Service"
+      ],
+      "blanks": [
+        "Enterprise",
+        "Information",
+        "System"
+      ],
+      "teach": "Remember: the E here is Enterprise. Think across departments, rather than one department’s information needs. Other contexts can use EIS differently; use your course’s meaning.",
+      "example": "EIS = Enterprise Information System in this course. Enterprise means the organization as a whole. An EIS supports information and processes across business functions."
+    },
+    {
+      "id": "304-foundation-4",
+      "source": 45,
+      "section": 4,
+      "kind": "cloze",
+      "foundation": true,
+      "foundationIntro": "An enterprise system helps parts of the organization work together. For example, a customer order may need sales, inventory, shipping, and accounting to share consistent information.",
+      "q": "An EIS helps connect information and work ____.",
+      "correct": "across business functions",
+      "answer": "across business functions",
+      "distractors": [
+        "within one isolated functional area only",
+        "only inside a computer processor",
+        "only within the operating system"
+      ],
+      "blanks": [
+        "across business functions"
+      ],
+      "teach": "Remember: sales records the order, inventory checks availability, shipping delivers it, and accounting tracks payment. The key idea is supporting that cross-functional flow.",
+      "example": "An enterprise system helps parts of the organization work together. For example, a customer order may need sales, inventory, shipping, and accounting to share consistent information."
     }
   ]
 }
