@@ -1,6 +1,8 @@
 from pathlib import Path
 import re
 ROOT=Path(__file__).resolve().parents[3];s=(ROOT/'dist/cis304.js').read_text()
+# Keep CIS 304's newly added lesson cloze insertion from changing this class's lesson wiring.
+s=s.replace("[q,...D.cloze.filter(c=>c.source===number),...D.checks.filter(c=>c.source===number)]", "[q,...D.checks.filter(c=>c.source===number)]")
 s=s.replace('CIS 304','CIS 464').replace('cis304','cis464').replace('KEY304','KEY464').replace('304-','464-').replace('module1-v1','chapters-v1').replace('ENTERPRISE ARCHITECTURE','PROJECT MANAGEMENT').replace('Module I','Chapters 1, 2, 3 & 10')
 s=s.replace("let D,section=0", "let D,SLIDES,section=0")
 s=s.replace("['readings','↗','Assigned readings']","['readings','↗','Slides & sources']").replace("['guide','☷','Full answered guide']","['guide','☷','Complete study reference']").replace("['math','#','Formula lab']","['math','#','Financial lab']")

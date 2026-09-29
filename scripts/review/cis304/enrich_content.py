@@ -155,3 +155,6 @@ for source,question,answer,wrong,why in [
 (51,'Within one organization is ____; between organizations is ____.','intraorganizational; interorganizational','interorganizational; intraorganizational|decentralized; centralized|integrated; standardized','Intra means within; inter means between. ERP II extends to business partners.')]:
  d['cloze'].append(dict(id=f'304-blank{len(d["cloze"])+1}',source=source,section=d['questions'][source-1]['section'],q=question,correct=answer,distractors=wrong.split('|'),teach=why,answer=answer))
 p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+
+import runpy
+runpy.run_path(str(Path(__file__).with_name("fill_blanks.py")))

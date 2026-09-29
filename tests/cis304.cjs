@@ -48,3 +48,19 @@ assert.ok(run('D.questions.filter(q=>q.section!==section).every(q=>!progress.les
 run('section=0;start("practice",[D.questions[0]],D.questions[0].number);grade(session.items[0],true,"correct");advance()');
 assert.ok(element('#app').innerHTML.includes('Next lesson'));
 console.log('PASS: next lesson after reading and quiz, chapter-scoped sequence, persisted progress, and honest completion with skipped lessons.');
+
+const tapCards=data.cloze.filter(x=>x.kind==='cloze');assert.equal(tapCards.length,27);
+for(const x of tapCards){
+ assert.equal((x.q.match(/____/g)||[]).length,x.blanks.length);
+ assert.equal(x.blanks.join('; '),x.correct);
+ ctx.CLOZE=x;run('start("practice",[CLOZE])');
+ assert.ok(element('#app').innerHTML.includes('Check sentence'));
+ run('session.items[0].picked=session.items[0].blanks.map(w=>session.items[0].bank.indexOf(w));renderCloze(session.items[0])');
+ element('#check-blanks').onclick();assert.equal(run('session.lastOK'),true);
+}
+run('start("practice",[D.cloze.find(x=>x.kind==="cloze")])');
+run('session.items[0].picked=[session.items[0].bank.indexOf("information"),session.items[0].bank.indexOf("data")];renderCloze(session.items[0])');
+element('#check-blanks').onclick();assert.equal(run('session.lastOK'),false);run('advance()');assert.equal(run('session.items.length'),2);assert.equal(run('session.items[1].picked.length'),0);
+run('section=0;navigate("practice")');assert.ok(element('#app').innerHTML.includes('Fill in the blanks'));element('#blank-practice').onclick();assert.equal(run('session.total'),38);
+run('openLesson(1,2)');element('#lesson-practice').onclick();assert.ok(run('session.items.some(x=>x.kind==="cloze")'));
+console.log('PASS: 27 tappable cloze activities, accurate slots, grading, retry reset, lesson inclusion and visible practice entry.');

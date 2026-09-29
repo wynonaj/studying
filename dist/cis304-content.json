@@ -3143,6 +3143,514 @@
       ],
       "teach": "Intra means within; inter means between. ERP II extends to business partners.",
       "answer": "intraorganizational; interorganizational"
+    },
+    {
+      "id": "304-tapblank-1",
+      "kind": "cloze",
+      "source": 1,
+      "section": 1,
+      "q": "Raw facts are ____. Organized facts with meaning are ____.",
+      "correct": "data; information",
+      "answer": "data; information",
+      "distractors": [
+        "information; data",
+        "knowledge; wisdom",
+        "wisdom; knowledge"
+      ],
+      "teach": "Individual sales numbers are data. Organizing them into a sales report gives them meaning as information.",
+      "blanks": [
+        "data",
+        "information"
+      ]
+    },
+    {
+      "id": "304-tapblank-2",
+      "kind": "cloze",
+      "source": 1,
+      "section": 1,
+      "q": "Understanding gained from information and experience is ____. Sound judgment in applying it reflects ____.",
+      "correct": "knowledge; wisdom",
+      "answer": "knowledge; wisdom",
+      "distractors": [
+        "wisdom; knowledge",
+        "data; information",
+        "information; data"
+      ],
+      "teach": "Knowing seasonal sales patterns is knowledge. Using that understanding to make a sensible decision adds judgment, or wisdom.",
+      "blanks": [
+        "knowledge",
+        "wisdom"
+      ]
+    },
+    {
+      "id": "304-tapblank-3",
+      "kind": "cloze",
+      "source": 3,
+      "section": 1,
+      "q": "The five information-system components are hardware, software, data, procedures, and ____.",
+      "correct": "people",
+      "answer": "people",
+      "distractors": [
+        "profit",
+        "strategy",
+        "buildings"
+      ],
+      "teach": "An information system includes the people who use and manage it. Technology alone cannot define the entire system.",
+      "blanks": [
+        "people"
+      ]
+    },
+    {
+      "id": "304-tapblank-4",
+      "kind": "cloze",
+      "source": 4,
+      "section": 1,
+      "q": "The ____ executes instructions; ____ holds working data for quick access.",
+      "correct": "CPU; memory",
+      "answer": "CPU; memory",
+      "distractors": [
+        "memory; CPU",
+        "storage; output",
+        "input; storage"
+      ],
+      "teach": "The processor does the computing. Working memory holds information currently in use; long-term storage has a different job.",
+      "blanks": [
+        "CPU",
+        "memory"
+      ]
+    },
+    {
+      "id": "304-tapblank-5",
+      "kind": "cloze",
+      "source": 5,
+      "section": 1,
+      "q": "An operating system is ____ software; a word processor is ____ software.",
+      "correct": "system; application",
+      "answer": "system; application",
+      "distractors": [
+        "application; system",
+        "hardware; network",
+        "input; output"
+      ],
+      "teach": "System software manages the computing environment. Application software helps a user perform a task such as writing a document.",
+      "blanks": [
+        "system",
+        "application"
+      ]
+    },
+    {
+      "id": "304-tapblank-6",
+      "kind": "cloze",
+      "source": 7,
+      "section": 1,
+      "q": "A business ____ explains how an organization will achieve its goals and compete.",
+      "correct": "strategy",
+      "answer": "strategy",
+      "distractors": [
+        "database",
+        "processor",
+        "transaction"
+      ],
+      "teach": "Strategy guides the organization’s choices. Decisions about processes and technology should support that direction.",
+      "blanks": [
+        "strategy"
+      ]
+    },
+    {
+      "id": "304-tapblank-7",
+      "kind": "cloze",
+      "source": 9,
+      "section": 1,
+      "q": "A ____ model charges recurring fees; a ____ model offers basic service free and charges for extras.",
+      "correct": "subscription; freemium",
+      "answer": "subscription; freemium",
+      "distractors": [
+        "freemium; subscription",
+        "retail; advertising",
+        "advertising; retail"
+      ],
+      "teach": "A subscription involves repeated payments. Freemium combines free basic service with paid features.",
+      "blanks": [
+        "subscription",
+        "freemium"
+      ]
+    },
+    {
+      "id": "304-tapblank-8",
+      "kind": "cloze",
+      "source": 11,
+      "section": 2,
+      "q": "In DSRP, D means ____ and P means ____.",
+      "correct": "distinctions; perspectives",
+      "answer": "distinctions; perspectives",
+      "distractors": [
+        "perspectives; distinctions",
+        "relationships; systems",
+        "systems; relationships"
+      ],
+      "teach": "Distinctions identify what something is and is not. Perspectives ask whose viewpoint you are using.",
+      "blanks": [
+        "distinctions",
+        "perspectives"
+      ]
+    },
+    {
+      "id": "304-tapblank-9",
+      "kind": "cloze",
+      "source": 11,
+      "section": 2,
+      "q": "In DSRP, S means ____ and R means ____.",
+      "correct": "systems; relationships",
+      "answer": "systems; relationships",
+      "distractors": [
+        "relationships; systems",
+        "distinctions; perspectives",
+        "perspectives; distinctions"
+      ],
+      "teach": "Systems involve parts and wholes. Relationships describe connections among those parts or systems.",
+      "blanks": [
+        "systems",
+        "relationships"
+      ]
+    },
+    {
+      "id": "304-tapblank-10",
+      "kind": "cloze",
+      "source": 12,
+      "section": 2,
+      "q": "A process turns ____ into ____ through related activities.",
+      "correct": "inputs; outputs",
+      "answer": "inputs; outputs",
+      "distractors": [
+        "outputs; inputs",
+        "goals; departments",
+        "departments; goals"
+      ],
+      "teach": "Inputs enter the work. Outputs are what it produces, such as an order becoming a delivered purchase.",
+      "blanks": [
+        "inputs",
+        "outputs"
+      ]
+    },
+    {
+      "id": "304-tapblank-11",
+      "kind": "cloze",
+      "source": 13,
+      "section": 2,
+      "q": "A process ____ represents how work flows so people can understand and analyze it.",
+      "correct": "model",
+      "answer": "model",
+      "distractors": [
+        "sponsor",
+        "platform",
+        "server"
+      ],
+      "teach": "A model is a representation, such as a diagram showing steps, decisions, and handoffs. It helps reveal possible problems.",
+      "blanks": [
+        "model"
+      ]
+    },
+    {
+      "id": "304-tapblank-12",
+      "kind": "cloze",
+      "source": 14,
+      "section": 2,
+      "q": "A project is ____; ongoing operations are ____.",
+      "correct": "temporary; continuing",
+      "answer": "temporary; continuing",
+      "distractors": [
+        "continuing; temporary",
+        "standardized; decentralized",
+        "decentralized; standardized"
+      ],
+      "teach": "A project ends after its particular result is delivered. Operations keep a business or service running.",
+      "blanks": [
+        "temporary",
+        "continuing"
+      ]
+    },
+    {
+      "id": "304-tapblank-13",
+      "kind": "cloze",
+      "source": 15,
+      "section": 2,
+      "q": "The course efficiency formula is ____ divided by ____.",
+      "correct": "PI; AI",
+      "answer": "PI; AI",
+      "distractors": [
+        "AI; PI",
+        "AO; PO",
+        "PO; AO"
+      ],
+      "teach": "PI is planned input and AI is actual input. This compares the resources planned with those used, with output conditions kept in mind.",
+      "blanks": [
+        "PI",
+        "AI"
+      ]
+    },
+    {
+      "id": "304-tapblank-14",
+      "kind": "cloze",
+      "source": 16,
+      "section": 2,
+      "q": "The course effectiveness formula is ____ divided by ____.",
+      "correct": "AO; PO",
+      "answer": "AO; PO",
+      "distractors": [
+        "PO; AO",
+        "PI; AI",
+        "AI; PI"
+      ],
+      "teach": "AO is actual output and PO is planned output. Their ratio compares the result achieved with the target.",
+      "blanks": [
+        "AO",
+        "PO"
+      ]
+    },
+    {
+      "id": "304-tapblank-15",
+      "kind": "cloze",
+      "source": 17,
+      "section": 2,
+      "q": "The course productivity formula is ____ divided by ____.",
+      "correct": "AO; AI",
+      "answer": "AO; AI",
+      "distractors": [
+        "AI; AO",
+        "PI; PO",
+        "PO; PI"
+      ],
+      "teach": "Output per input means results for each unit of resource used, such as orders processed per labor hour.",
+      "blanks": [
+        "AO",
+        "AI"
+      ]
+    },
+    {
+      "id": "304-tapblank-16",
+      "kind": "cloze",
+      "source": 18,
+      "section": 2,
+      "q": "____ obtains needed goods and services; ____ turns inputs into products or services.",
+      "correct": "procurement; production",
+      "answer": "procurement; production",
+      "distractors": [
+        "production; procurement",
+        "fulfillment; accounting",
+        "accounting; fulfillment"
+      ],
+      "teach": "Procurement acquires what is needed. Production uses inputs to create what the business provides.",
+      "blanks": [
+        "procurement",
+        "production"
+      ]
+    },
+    {
+      "id": "304-tapblank-17",
+      "kind": "cloze",
+      "source": 19,
+      "section": 2,
+      "q": "____ delivers what the customer ordered; ____ records financial activity.",
+      "correct": "fulfillment; accounting",
+      "answer": "fulfillment; accounting",
+      "distractors": [
+        "accounting; fulfillment",
+        "procurement; production",
+        "production; procurement"
+      ],
+      "teach": "Fulfilling an order gets it to the customer. Accounting tracks the money-related records of the business.",
+      "blanks": [
+        "fulfillment",
+        "accounting"
+      ]
+    },
+    {
+      "id": "304-tapblank-18",
+      "kind": "cloze",
+      "source": 21,
+      "section": 2,
+      "q": "____ manages processes over time; ____ improves existing processes; ____ fundamentally redesigns them.",
+      "correct": "BPM; BPI; BPR",
+      "answer": "BPM; BPI; BPR",
+      "distractors": [
+        "BPR; BPM; BPI",
+        "BPI; BPR; BPM",
+        "BPM; BPR; BPI"
+      ],
+      "teach": "Management is the ongoing discipline. Improvement makes an existing process better. Re-engineering rethinks it more radically.",
+      "blanks": [
+        "BPM",
+        "BPI",
+        "BPR"
+      ]
+    },
+    {
+      "id": "304-tapblank-19",
+      "kind": "cloze",
+      "source": 30,
+      "section": 3,
+      "q": "____ IT concentrates control; ____ IT gives units more local control.",
+      "correct": "centralized; decentralized",
+      "answer": "centralized; decentralized",
+      "distractors": [
+        "decentralized; centralized",
+        "integrated; standardized",
+        "standardized; integrated"
+      ],
+      "teach": "The contrast is where decisions and control sit. Local flexibility and organization-wide consistency can involve tradeoffs.",
+      "blanks": [
+        "centralized",
+        "decentralized"
+      ]
+    },
+    {
+      "id": "304-tapblank-20",
+      "kind": "cloze",
+      "source": 32,
+      "section": 3,
+      "q": "SOA organizes capabilities as reusable ____.",
+      "correct": "services",
+      "answer": "services",
+      "distractors": [
+        "silos",
+        "processors",
+        "departments"
+      ],
+      "teach": "A service offers a defined capability through an interface so applications or processes can use it.",
+      "blanks": [
+        "services"
+      ]
+    },
+    {
+      "id": "304-tapblank-21",
+      "kind": "cloze",
+      "source": 36,
+      "section": 3,
+      "q": "____ sets direction; ____ provides the organizing blueprint; ____ supplies the supporting technology.",
+      "correct": "strategy; architecture; infrastructure",
+      "answer": "strategy; architecture; infrastructure",
+      "distractors": [
+        "infrastructure; strategy; architecture",
+        "architecture; infrastructure; strategy",
+        "strategy; infrastructure; architecture"
+      ],
+      "teach": "First identify what to achieve. Architecture organizes the needed capabilities; infrastructure supplies the technical foundation.",
+      "blanks": [
+        "strategy",
+        "architecture",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "304-tapblank-22",
+      "kind": "cloze",
+      "source": 40,
+      "section": 4,
+      "q": "Departments that keep information to themselves can create the ____ effect.",
+      "correct": "silo",
+      "answer": "silo",
+      "distractors": [
+        "integration",
+        "standardization",
+        "productivity"
+      ],
+      "teach": "Like separate storage silos, departments can become isolated. Their local decisions may hurt the whole process.",
+      "blanks": [
+        "silo"
+      ]
+    },
+    {
+      "id": "304-tapblank-23",
+      "kind": "cloze",
+      "source": 41,
+      "section": 4,
+      "q": "A ____ perspective follows work across departments from start to customer outcome.",
+      "correct": "business-process",
+      "answer": "business-process",
+      "distractors": [
+        "functional",
+        "hardware",
+        "storage"
+      ],
+      "teach": "Following the whole flow makes handoffs and shared outcomes visible instead of stopping at a department boundary.",
+      "blanks": [
+        "business-process"
+      ]
+    },
+    {
+      "id": "304-tapblank-24",
+      "kind": "cloze",
+      "source": 42,
+      "section": 4,
+      "q": "____ makes practices consistent; ____ connects parts so they work together.",
+      "correct": "standardization; integration",
+      "answer": "standardization; integration",
+      "distractors": [
+        "integration; standardization",
+        "decentralization; centralization",
+        "centralization; decentralization"
+      ],
+      "teach": "Using the same date format is standardization. Connecting systems so an order moves between them is integration.",
+      "blanks": [
+        "standardization",
+        "integration"
+      ]
+    },
+    {
+      "id": "304-tapblank-25",
+      "kind": "cloze",
+      "source": 46,
+      "section": 4,
+      "q": "A ____ serves a functional area; an ____ connects enterprise functions.",
+      "correct": "FAIS; EIS",
+      "answer": "FAIS; EIS",
+      "distractors": [
+        "EIS; FAIS",
+        "ERP; CPU",
+        "CPU; ERP"
+      ],
+      "teach": "A departmental system has a narrower scope. Enterprise systems help information and work cross functional boundaries.",
+      "blanks": [
+        "FAIS",
+        "EIS"
+      ]
+    },
+    {
+      "id": "304-tapblank-26",
+      "kind": "cloze",
+      "source": 47,
+      "section": 4,
+      "q": "ERP stands for Enterprise ____ ____.",
+      "correct": "Resource; Planning",
+      "answer": "Resource; Planning",
+      "distractors": [
+        "Relationship; Processing",
+        "Resource; Processing",
+        "Relationship; Planning"
+      ],
+      "teach": "ERP coordinates major business processes and shared information. Its name refers to enterprise resources and planning.",
+      "blanks": [
+        "Resource",
+        "Planning"
+      ]
+    },
+    {
+      "id": "304-tapblank-27",
+      "kind": "cloze",
+      "source": 51,
+      "section": 4,
+      "q": "ERP II extends integration beyond the organization to customers, suppliers, and other ____.",
+      "correct": "partners",
+      "answer": "partners",
+      "distractors": [
+        "processors",
+        "memory chips",
+        "operating systems"
+      ],
+      "teach": "The important extension is collaboration between organizations, not merely adding more internal departments.",
+      "blanks": [
+        "partners"
+      ]
     }
   ]
 }
