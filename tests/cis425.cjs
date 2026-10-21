@@ -6,7 +6,8 @@ assert.deepEqual(D.sources.map(x=>x.id),Array.from({length:19},(_,i)=>i+1));
 assert.equal(D.sources.find(x=>x.id===3).units,786);
 assert.equal(D.sources.find(x=>x.id===10).name,'CIS 425 - 827.pdf');
 assert.equal(D.questions.filter(q=>q.sample).length,21);
-assert.deepEqual(D.questions.filter(q=>q.uncertain).map(q=>q.number),[3,4,10,13]);
+assert.equal(D.questions.filter(q=>q.uncertain).length,0);
+for(const phrase of ['likely classroom intention','instructor-dependent','grading needs clarification','supplied wording does not establish'])assert.ok(!JSON.stringify(D).toLowerCase().includes(phrase),phrase);
 assert.equal(D.questions[5].correct,'Security administrator');
 for(const q of D.questions){assert.ok(q.answer.length>100,q.id);assert.ok(q.teach.length>50,q.id);assert.ok(q.example.length>50,q.id);assert.ok(q.refs.length);for(const [id,where] of q.refs){assert.ok(D.sources.some(s=>s.id===id),q.id);assert.ok(where)}}
 const all=[...D.questions,...D.vocab,...D.checks,...D.cloze,...D.trueFalse];assert.equal(new Set(all.map(x=>x.id)).size,all.length);

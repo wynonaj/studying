@@ -130,10 +130,10 @@
       "section": 4,
       "title": "SET and stealth",
       "q": "SET-based attack has become more popular these days due to its stealthy penetration.",
-      "answer": "SET means Social-Engineer Toolkit. Your SET lab establishes that a convincing fake login page can capture credentials through user interaction, and a redirect can conceal the deception. This supports the likely classroom intention of TRUE. However, the supplied materials do not measure popularity or prove that stealth caused an increase. Treat the trend claim as instructor-dependent rather than a verified fact.",
-      "teach": "Learn the supported mechanism: a user trusts a deceptive page and submits credentials. Do not turn a classroom trend statement into a universal fact.",
+      "answer": "TRUE. SET means Social-Engineer Toolkit. Your SET lab shows that a convincing fake login page can capture credentials through user interaction, and a redirect can conceal the deception. The key concept is social engineering: deception persuades the user to disclose information, reducing the attacker’s dependence on exploiting a software vulnerability.",
+      "teach": "A user trusts a deceptive page and submits credentials. A familiar appearance and a redirect to the real site can make the credential theft less noticeable.",
       "example": "A fully patched employee enters a password on a cloned login page. The password is disclosed without exploiting a software flaw. Login monitoring and phishing-resistant MFA reduce the resulting risk.",
-      "correct": "Likely classroom intention: true; the popularity trend is unverified",
+      "correct": "True",
       "distractors": [
         "False because SET cannot collect credentials",
         "True because SET always bypasses every control",
@@ -159,8 +159,7 @@
       ],
       "slides": [],
       "sample": "T/F 3",
-      "examEligible": false,
-      "uncertain": true,
+      "format": "tf",
       "goal": "Explain SET and stealth in your own words, recognize a concrete example, and justify the matching protection or limitation.",
       "pitfall": "False because SET cannot collect credentials"
     },
@@ -170,10 +169,10 @@
       "section": 5,
       "title": "Reverse shell and firewall limits",
       "q": "The reverse shell attack is capable of defeating packet filtering firewall but not proxy firewall.",
-      "answer": "A reverse shell starts an outbound connection from a compromised internal host to an attacker. It can pass packet filters that allow that outbound traffic. A proxy can require authentication, restrict destinations and protocols, and inspect traffic, but its effectiveness depends on configuration and visibility. The absolute statement is technically FALSE; a proxy is not an unconditional barrier. The simplified course contrast may intend TRUE, but the exact grading expectation is unresolved.",
+      "answer": "FALSE as written. A reverse shell starts an outbound connection from a compromised internal host to an attacker. It can pass packet filters that allow that outbound traffic. A proxy can require authentication, restrict destinations and protocols, and inspect traffic, but its effectiveness depends on configuration and visibility. A properly configured proxy can block a raw shell connection by enforcing application protocols. A shell tunneled through an allowed application protocol still requires inspection and policy enforcement; the word proxy alone does not guarantee prevention.",
       "teach": "Direction and policy explain the result. Outbound does not mean automatically allowed, and proxy does not mean automatically secure.",
       "example": "A workstation makes an unusual outbound connection after a malicious process starts. Correlate process and network logs, isolate the host, and restrict unnecessary egress rather than relying solely on inbound rules.",
-      "correct": "Technically false as an absolute; course grading needs clarification",
+      "correct": "False: firewall effectiveness depends on its rules and inspection",
       "distractors": [
         "Always true for every proxy",
         "False because reverse shells only start inbound connections",
@@ -199,8 +198,7 @@
       ],
       "slides": [],
       "sample": "T/F 4",
-      "examEligible": false,
-      "uncertain": true,
+      "format": "tf",
       "goal": "Explain Reverse shell and firewall limits in your own words, recognize a concrete example, and justify the matching protection or limitation.",
       "pitfall": "Always true for every proxy"
     },
@@ -398,10 +396,10 @@
       "section": 6,
       "title": "Static analysis terminology",
       "q": "Which of the following is a static analysis tool: Firebug, McAfee Advisor, JSUnpack, Norton SafeWeb, or OpenSSL?",
-      "answer": "JSUnpack is the likely intended classroom selection because it decodes and analyzes suspicious JavaScript. Keep the second guide’s qualification: JSUnpack can execute or emulate JavaScript as part of analysis, so calling it purely static is imprecise. Firebug is a browser debugger, SiteAdvisor and Safe Web are reputation services, and OpenSSL is a cryptographic toolkit. Static analysis examines code without executing it; dynamic analysis observes execution.",
-      "teach": "The exam’s tool label and the general definition are separate things to remember. Automated does not automatically mean static.",
+      "answer": "C. JSUnpack. It unpacks and analyzes suspicious JavaScript to expose concealed code and URLs. Remember the underlying distinction: static analysis inspects code without running it; dynamic analysis observes execution. JSUnpack also uses emulation, so its capabilities extend beyond static inspection. Firebug is a browser debugger, SiteAdvisor and Safe Web are reputation services, and OpenSSL is a cryptographic toolkit. Static analysis examines code without executing it; dynamic analysis observes execution.",
+      "teach": "Associate JSUnpack with unpacking suspicious JavaScript. Static versus dynamic describes whether code executes; manual versus automated describes who or what performs the analysis.",
       "example": "Reading script text and decoding an embedded string without running the script is static work. Observing redirects while script executes in an isolated environment is dynamic work.",
-      "correct": "JSUnpack is likely intended; its analysis is not purely static",
+      "correct": "JSUnpack",
       "distractors": [
         "McAfee Advisor is a source-code compiler",
         "Norton SafeWeb is an offline disassembler",
@@ -423,8 +421,6 @@
       ],
       "slides": [],
       "sample": "MC 5",
-      "examEligible": false,
-      "uncertain": true,
       "originalOptions": [
         "Firebug",
         "McAfee Advisor",
@@ -441,7 +437,7 @@
       "section": 8,
       "title": "TCP reliability",
       "q": "Which protocol is responsible for data packet quality and basic security features in transmission?",
-      "answer": "A. TCP is the likely intended answer: Transmission Control Protocol provides reliable, ordered byte-stream delivery using acknowledgments, retransmissions, sequencing, and a checksum. IP supplies addressing and routing. TCP’s reliability and checksum are not confidentiality or cryptographic authentication. HTTPS adds TLS security at a different level. The phrase basic security in the prompt is loose.",
+      "answer": "A. TCP. Transmission Control Protocol provides reliable, ordered byte-stream delivery using acknowledgments, retransmissions, sequencing, and a checksum. IP supplies addressing and routing. TCP’s reliability and checksum are not confidentiality or cryptographic authentication. HTTPS adds TLS security at a different level.",
       "teach": "TCP handles reliable delivery. It does not itself encrypt your message or prove the other party’s identity.",
       "example": "A file download needs all bytes in order. TCP can retransmit missing data; TLS is needed separately to protect confidentiality and authenticate the server.",
       "correct": "TCP",
@@ -521,14 +517,14 @@
       "section": 2,
       "title": "Dormant program and C2",
       "q": "A program or part of a program lies dormant until triggered by the C2 server. What is it?",
-      "answer": "The wording combines definitions and does not establish a unique answer. A logic bomb is dormant code activated by a specified condition (Ciampa Chapter 2, printed p. 65); a bot or implant can receive commands from a command-and-control (C2) server; a backdoor provides concealed access. If the emphasis is dormant code with a trigger, logic bomb is plausible. If the emphasis is remote C2 instructions, bot is plausible. Keep this item for clarification rather than memorize a guessed single-word key.",
-      "teach": "Dormant trigger and remote control are overlapping properties, not one unique malware name.",
+      "answer": "Bot. A malicious bot is a program on a compromised device that receives instructions from a command-and-control (C2) server. It can wait for a command before carrying out an action. A botnet is a collection of these controlled devices. Distinguish a logic bomb: code activated by a specified condition, such as a date or file deletion. A backdoor provides concealed access.",
+      "teach": "C2 means command and control. In this question, the remote server issuing instructions identifies the program as a bot; the collection of controlled devices is a botnet.",
       "example": "A timed destructive routine is a logic bomb. An infected workstation waiting for remote instructions is a bot. Both can be dormant, but they are classified by different behavior.",
-      "correct": "Ambiguous: logic bomb for a condition trigger; bot for C2 control",
+      "correct": "Bot",
       "distractors": [
-        "Definitely checksum",
-        "Definitely ciphertext",
-        "Definitely a firewall"
+        "Checksum",
+        "Ciphertext",
+        "Firewall"
       ],
       "refs": [
         [
@@ -550,10 +546,9 @@
       ],
       "slides": [],
       "sample": "Fill 2",
-      "examEligible": false,
-      "uncertain": true,
+      "format": "fill",
       "goal": "Explain Dormant program and C2 in your own words, recognize a concrete example, and justify the matching protection or limitation.",
-      "pitfall": "Definitely checksum"
+      "pitfall": "Checksum"
     },
     {
       "id": "425-q14",
@@ -2479,7 +2474,7 @@
       "title": "Manual automated static and dynamic",
       "q": "Why are these four analysis labels not interchangeable?",
       "teach": "Manual versus automated asks who performs the work. Static versus dynamic asks whether the code being analyzed runs.",
-      "answer": "A person can read source statically or debug running code dynamically. A tool can automate either approach. Lecture 6 names Firebug and Malzilla for manual review and JSUnpack, Wepawet, and reputation services under automated tools. Inspect source for suspicious redirects, embedded frames, scripts, form handling, and external references. Legitimate pages can contain those features too, so context and behavior matter. JSUnpack is the likely sample answer but the slide’s actual category is automated, not a definitive purely-static classification.",
+      "answer": "A person can read source statically or debug running code dynamically. A tool can automate either approach. Lecture 6 names Firebug and Malzilla for manual review and JSUnpack, Wepawet, and reputation services under automated tools. Inspect source for suspicious redirects, embedded frames, scripts, form handling, and external references. Legitimate pages can contain those features too, so context and behavior matter. JSUnpack is the sample answer. It unpacks JavaScript and can emulate execution; automated tools can combine static and dynamic techniques.",
       "example": "A script automatically scans source without executing it: automated/static. A human watches an isolated program’s network changes: manual/dynamic.",
       "correct": "Manual/automated and static/dynamic describe two independent dimensions",
       "distractors": [
@@ -2835,6 +2830,38 @@
       "format": "tf"
     },
     {
+      "id": "425-q03-apply",
+      "section": 4,
+      "source": 3,
+      "q": "A fully patched employee enters a password on a cloned login page. The password is disclosed without exploiting a software flaw. Login monitoring and phishing-resistant MFA reduce the resulting risk. Which principle explains this?",
+      "correct": "True",
+      "distractors": [
+        "False because SET cannot collect credentials",
+        "True because SET always bypasses every control",
+        "False because SET is an encryption algorithm"
+      ],
+      "teach": "A user trusts a deceptive page and submits credentials. A familiar appearance and a redirect to the real site can make the credential theft less noticeable.",
+      "answer": "TRUE. SET means Social-Engineer Toolkit. Your SET lab shows that a convincing fake login page can capture credentials through user interaction, and a redirect can conceal the deception. The key concept is social engineering: deception persuades the user to disclose information, reducing the attacker’s dependence on exploiting a software vulnerability.",
+      "example": "A fully patched employee enters a password on a cloned login page. The password is disclosed without exploiting a software flaw. Login monitoring and phishing-resistant MFA reduce the resulting risk.",
+      "format": "tf"
+    },
+    {
+      "id": "425-q04-apply",
+      "section": 5,
+      "source": 4,
+      "q": "A workstation makes an unusual outbound connection after a malicious process starts. Correlate process and network logs, isolate the host, and restrict unnecessary egress rather than relying solely on inbound rules. Which principle explains this?",
+      "correct": "False: firewall effectiveness depends on its rules and inspection",
+      "distractors": [
+        "Always true for every proxy",
+        "False because reverse shells only start inbound connections",
+        "True because a proxy encrypts every endpoint process"
+      ],
+      "teach": "Direction and policy explain the result. Outbound does not mean automatically allowed, and proxy does not mean automatically secure.",
+      "answer": "FALSE as written. A reverse shell starts an outbound connection from a compromised internal host to an attacker. It can pass packet filters that allow that outbound traffic. A proxy can require authentication, restrict destinations and protocols, and inspect traffic, but its effectiveness depends on configuration and visibility. A properly configured proxy can block a raw shell connection by enforcing application protocols. A shell tunneled through an allowed application protocol still requires inspection and policy enforcement; the word proxy alone does not guarantee prevention.",
+      "example": "A workstation makes an unusual outbound connection after a malicious process starts. Correlate process and network logs, isolate the host, and restrict unnecessary egress rather than relying solely on inbound rules.",
+      "format": "tf"
+    },
+    {
       "id": "425-q05-apply",
       "section": 8,
       "source": 5,
@@ -2913,6 +2940,22 @@
       "format": "mc"
     },
     {
+      "id": "425-q10-apply",
+      "section": 6,
+      "source": 10,
+      "q": "Reading script text and decoding an embedded string without running the script is static work. Observing redirects while script executes in an isolated environment is dynamic work. Which principle explains this?",
+      "correct": "JSUnpack",
+      "distractors": [
+        "McAfee Advisor is a source-code compiler",
+        "Norton SafeWeb is an offline disassembler",
+        "OpenSSL is a browser reputation database"
+      ],
+      "teach": "Associate JSUnpack with unpacking suspicious JavaScript. Static versus dynamic describes whether code executes; manual versus automated describes who or what performs the analysis.",
+      "answer": "C. JSUnpack. It unpacks and analyzes suspicious JavaScript to expose concealed code and URLs. Remember the underlying distinction: static analysis inspects code without running it; dynamic analysis observes execution. JSUnpack also uses emulation, so its capabilities extend beyond static inspection. Firebug is a browser debugger, SiteAdvisor and Safe Web are reputation services, and OpenSSL is a cryptographic toolkit. Static analysis examines code without executing it; dynamic analysis observes execution.",
+      "example": "Reading script text and decoding an embedded string without running the script is static work. Observing redirects while script executes in an isolated environment is dynamic work.",
+      "format": "mc"
+    },
+    {
       "id": "425-q11-apply",
       "section": 8,
       "source": 11,
@@ -2924,7 +2967,7 @@
         "HTTP"
       ],
       "teach": "TCP handles reliable delivery. It does not itself encrypt your message or prove the other party’s identity.",
-      "answer": "A. TCP is the likely intended answer: Transmission Control Protocol provides reliable, ordered byte-stream delivery using acknowledgments, retransmissions, sequencing, and a checksum. IP supplies addressing and routing. TCP’s reliability and checksum are not confidentiality or cryptographic authentication. HTTPS adds TLS security at a different level. The phrase basic security in the prompt is loose.",
+      "answer": "A. TCP. Transmission Control Protocol provides reliable, ordered byte-stream delivery using acknowledgments, retransmissions, sequencing, and a checksum. IP supplies addressing and routing. TCP’s reliability and checksum are not confidentiality or cryptographic authentication. HTTPS adds TLS security at a different level.",
       "example": "A file download needs all bytes in order. TCP can retransmit missing data; TLS is needed separately to protect confidentiality and authenticate the server.",
       "format": "mc"
     },
@@ -2942,6 +2985,22 @@
       "teach": "Positive means the system says threat. False means that conclusion is wrong.",
       "answer": "False positive, also called a Type I error in your notes. A false negative (Type II) occurs when malicious traffic is treated as benign. False positives consume analyst time and can interrupt legitimate work if prevention blocks the traffic; false negatives leave attacks undetected.",
       "example": "A legitimate backup triggers a malware alert: false positive. A real malicious download produces no alert: false negative.",
+      "format": "fill"
+    },
+    {
+      "id": "425-q13-apply",
+      "section": 2,
+      "source": 13,
+      "q": "A timed destructive routine is a logic bomb. An infected workstation waiting for remote instructions is a bot. Both can be dormant, but they are classified by different behavior. Which principle explains this?",
+      "correct": "Bot",
+      "distractors": [
+        "Checksum",
+        "Ciphertext",
+        "Firewall"
+      ],
+      "teach": "C2 means command and control. In this question, the remote server issuing instructions identifies the program as a bot; the collection of controlled devices is a botnet.",
+      "answer": "Bot. A malicious bot is a program on a compromised device that receives instructions from a command-and-control (C2) server. It can wait for a command before carrying out an action. A botnet is a collection of these controlled devices. Distinguish a logic bomb: code activated by a specified condition, such as a date or file deletion. A backdoor provides concealed access.",
+      "example": "A timed destructive routine is a logic bomb. An infected workstation waiting for remote instructions is a bot. Both can be dormant, but they are classified by different behavior.",
       "format": "fill"
     },
     {
@@ -4705,7 +4764,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-120",
+      "id": "425-focus-124",
       "source": 22,
       "section": 1,
       "q": "A grade is changed without permission. Which CIA goal is most directly violated?",
@@ -4721,7 +4780,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-121",
+      "id": "425-focus-125",
       "source": 22,
       "section": 1,
       "q": "An outsider reads a private medical record without changing it. Which CIA goal is most directly violated?",
@@ -4737,7 +4796,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-122",
+      "id": "425-focus-126",
       "source": 22,
       "section": 1,
       "q": "A portal cannot serve legitimate students during an attack. Which CIA goal is directly affected?",
@@ -4753,7 +4812,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-123",
+      "id": "425-focus-127",
       "source": 48,
       "section": 1,
       "q": "A business stops offering a service because its risk is unacceptable. Which response fits?",
@@ -4769,7 +4828,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-124",
+      "id": "425-focus-128",
       "source": 48,
       "section": 1,
       "q": "A business buys insurance against some breach-related loss. Which response fits?",
@@ -4785,7 +4844,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-125",
+      "id": "425-focus-129",
       "source": 17,
       "section": 3,
       "q": "Which malware category is defined by unsolicited advertising behavior?",
@@ -4801,7 +4860,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-126",
+      "id": "425-focus-130",
       "source": 17,
       "section": 3,
       "q": "A routine attached to an executable activates when the executable runs. Which virus category fits?",
@@ -4817,7 +4876,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-127",
+      "id": "425-focus-131",
       "source": 17,
       "section": 3,
       "q": "A malicious document macro runs after the user enables it. Which virus category fits?",
@@ -4833,7 +4892,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-128",
+      "id": "425-focus-132",
       "source": 17,
       "section": 3,
       "q": "A virus chooses among a limited set of predefined mutations. Which term fits the textbook?",
@@ -4849,7 +4908,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-129",
+      "id": "425-focus-133",
       "source": 17,
       "section": 3,
       "q": "A virus rewrites its own code into a logically equivalent form. Which term fits?",
@@ -4865,7 +4924,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-130",
+      "id": "425-focus-134",
       "source": 17,
       "section": 3,
       "q": "Malicious code is distributed through pieces of an infected program, with encrypted code and a split decoder. Which course technique is illustrated?",
@@ -4881,7 +4940,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-131",
+      "id": "425-focus-135",
       "source": 17,
       "section": 3,
       "q": "A program quietly sends a user’s browsing activity to another party. Which behavior category fits?",
@@ -4897,7 +4956,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-132",
+      "id": "425-focus-136",
       "source": 17,
       "section": 3,
       "q": "A concealed access method bypasses the usual login checks. What is it?",
@@ -4913,7 +4972,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-133",
+      "id": "425-focus-137",
       "source": 28,
       "section": 3,
       "q": "A SYN flood strains connection state. Why might increasing disk space alone not fix it?",
@@ -4929,7 +4988,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-134",
+      "id": "425-focus-138",
       "source": 29,
       "section": 3,
       "q": "Which control directly keeps user-supplied values out of SQL command structure?",
@@ -4945,7 +5004,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-135",
+      "id": "425-focus-139",
       "source": 29,
       "section": 3,
       "q": "A comment must appear as plain text in a page. Which defense directly prevents interpreting it as executable markup?",
@@ -4961,7 +5020,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-136",
+      "id": "425-focus-140",
       "source": 29,
       "section": 3,
       "q": "Why is WebGoat intentionally vulnerable?",
@@ -4977,7 +5036,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-137",
+      "id": "425-focus-141",
       "source": 31,
       "section": 4,
       "q": "Fake test credentials appear in the lab attacker’s terminal after form submission. What does that demonstrate directly?",
@@ -4993,7 +5052,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-138",
+      "id": "425-focus-142",
       "source": 32,
       "section": 4,
       "q": "A hardware keylogger sits between a keyboard and computer. Why can patching alone be insufficient?",
@@ -5009,7 +5068,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-139",
+      "id": "425-focus-143",
       "source": 34,
       "section": 5,
       "q": "An attacker moves from a user account to higher administrative rights. What has occurred?",
@@ -5025,7 +5084,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-140",
+      "id": "425-focus-144",
       "source": 34,
       "section": 5,
       "q": "A large outbound transfer follows suspicious credential access. What should an analyst conclude immediately?",
@@ -5041,7 +5100,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-141",
+      "id": "425-focus-145",
       "source": 38,
       "section": 7,
       "q": "Alice wants only Bob to recover a message using public-key encryption. Which key does Alice use?",
@@ -5057,7 +5116,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-142",
+      "id": "425-focus-146",
       "source": 18,
       "section": 7,
       "q": "Alice signs a message but does not encrypt its contents. Can an observer read the message?",
@@ -5073,7 +5132,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-143",
+      "id": "425-focus-147",
       "source": 19,
       "section": 7,
       "q": "A digest has 256 bits. How many hexadecimal characters are needed to display it?",
@@ -5089,7 +5148,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-144",
+      "id": "425-focus-148",
       "source": 19,
       "section": 7,
       "q": "An ideal 256-bit hash has a generic birthday collision-search scale near which value?",
@@ -5105,7 +5164,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-145",
+      "id": "425-focus-149",
       "source": 21,
       "section": 7,
       "q": "Does a valid Bitcoin signature alone prove an output has not already been spent?",
@@ -5121,7 +5180,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-146",
+      "id": "425-focus-150",
       "source": 40,
       "section": 7,
       "q": "A miner changes the nonce and recomputes the block-header hash. What is the goal?",
@@ -5137,7 +5196,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-147",
+      "id": "425-focus-151",
       "source": 41,
       "section": 7,
       "q": "Why are block subsidy and transaction fees relevant to Bitcoin’s design?",
@@ -5153,7 +5212,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-148",
+      "id": "425-focus-152",
       "source": 76,
       "section": 7,
       "q": "Why can additional confirmations reduce the risk of a Bitcoin history rewrite?",
@@ -5169,7 +5228,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-149",
+      "id": "425-focus-153",
       "source": 42,
       "section": 8,
       "q": "A real-time voice app values timely audio over retransmitting old audio. Which transport tradeoff is relevant?",
@@ -5185,7 +5244,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-150",
+      "id": "425-focus-154",
       "source": 15,
       "section": 8,
       "q": "An attacker changes a packet and recomputes its ordinary checksum. Why might the receiver accept the checksum?",
@@ -5201,7 +5260,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-151",
+      "id": "425-focus-155",
       "source": 43,
       "section": 8,
       "q": "Why can passive FTP behave differently through a firewall than active FTP?",
@@ -5217,7 +5276,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-152",
+      "id": "425-focus-156",
       "source": 81,
       "section": 8,
       "q": "A mirror receives only selected switch ports. Can it prove no malicious traffic existed elsewhere?",
@@ -5233,7 +5292,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-153",
+      "id": "425-focus-157",
       "source": 83,
       "section": 8,
       "q": "Why is a VM snapshot not automatically an independent backup?",
@@ -5249,7 +5308,7 @@
       "format": "mc"
     },
     {
-      "id": "425-focus-154",
+      "id": "425-focus-158",
       "source": 84,
       "section": 8,
       "q": "A provider supplies a managed platform on which a customer deploys its own application. Which service model fits?",
@@ -6343,7 +6402,7 @@
       "exp": "",
       "q": "What does Logic bomb mean?",
       "answer": "Dormant code activated by a specified condition or event.",
-      "teach": "Dormant code activated by a specified condition or event. Dormant trigger and remote control are overlapping properties, not one unique malware name.",
+      "teach": "Dormant code activated by a specified condition or event. C2 means command and control. In this question, the remote server issuing instructions identifies the program as a bot; the collection of controlled devices is a botnet.",
       "example": "A timed destructive routine is a logic bomb. An infected workstation waiting for remote instructions is a bot. Both can be dormant, but they are classified by different behavior.",
       "correct": "Dormant code activated by a specified condition or event.",
       "distractors": [
@@ -6914,6 +6973,16 @@
       "questions": []
     },
     {
+      "title": "RFC 6561 · Bots and remote command and control",
+      "url": "https://datatracker.ietf.org/doc/html/rfc6561",
+      "questions": []
+    },
+    {
+      "title": "MITRE ATT&CK · Application-layer command and control",
+      "url": "https://attack.mitre.org/techniques/T1071/",
+      "questions": []
+    },
+    {
       "title": "OWASP · XSS prevention",
       "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
       "questions": []
@@ -7277,7 +7346,7 @@
   ],
   "sourceUses": {
     "1": "Scope authority and all 21 original sample prompts, answered individually.",
-    "2": "Cross-checked all five pages. Retained supported explanations; resolved the security-administrator placeholder and preserved ambiguities about C2, SET trend, reverse-shell wording, and static analysis.",
+    "2": "Cross-checked all five pages against the textbook, lectures, and technical references. Integrated the answers and explanations into the topic lessons.",
     "3": "Reviewed assigned Chapter 1 and Chapter 3 section bodies against their contents, summaries, and review topics; used only the malware definitions from Chapter 2 needed by the guide. All 786 PDF pages were indexed, which is distinct from claiming every unrelated chapter was studied.",
     "4": "Reviewed all dated class notes, especially the October 15 exam guidance, RSA worked notation, hardening, and network claims. Corrected imprecise statements rather than reproducing them as facts.",
     "5": "Reviewed all 9 slides and all 9 note units. Used SET mechanism, lab evidence, business impact, and defenses; corrected SET integration and absolute MFA claims.",
@@ -7303,24 +7372,24 @@
       "The second guide could not select a job title without the textbook. Printed page 6 explicitly supports security administrator."
     ],
     [
-      "Qualified",
-      "SET statement",
-      "SET is now identified by the lab. Its mechanism is supported; increased popularity caused by stealth is not demonstrated."
+      "Concept",
+      "SET",
+      "Social-Engineer Toolkit uses deception, including cloned login pages, to capture information through user interaction."
     ],
     [
-      "Clarify with instructor",
-      "Reverse shell T/F",
-      "Technically false as an absolute. Simplified course wording may intend true. No firewall type guarantees prevention."
+      "Concept",
+      "Reverse shell",
+      "An outbound shell may pass permissive packet filters. Application proxies enforce protocol and destination policies; protection depends on configuration and inspection."
     ],
     [
-      "Clarify with instructor",
+      "Concept",
       "Dormant C2 program",
-      "Dormant condition-triggered code suggests logic bomb; remote C2 commands suggest a bot. The supplied wording does not uniquely resolve it."
+      "A bot receives remote C2 commands. A logic bomb activates when a specified condition occurs; a botnet is a collection of controlled devices."
     ],
     [
-      "Qualified",
-      "Static analysis MC",
-      "JSUnpack is likely intended, but automated decoding may use execution/emulation. Do not define all automated analysis as static."
+      "Concept",
+      "JavaScript analysis",
+      "JSUnpack unpacks suspicious JavaScript and includes emulation. Static inspection and dynamic execution are distinct analysis techniques."
     ],
     [
       "Corrected",
@@ -8936,7 +9005,7 @@
   ],
   "counts": {
     "questions": 84,
-    "checks": 154,
+    "checks": 158,
     "vocab": 80,
     "cloze": 12,
     "sorts": 5,
@@ -8966,19 +9035,19 @@
       "source": 3,
       "type": "True/False",
       "prompt": "SET-based attack has become more popular these days due to its stealthy penetration.",
-      "shortAnswer": "Likely classroom intention: True; the popularity claim is not established by these sources.",
+      "shortAnswer": "True — SET uses social engineering and deceptive pages to capture information.",
       "options": [],
       "label": "T/F 3",
-      "uncertain": true
+      "uncertain": false
     },
     {
       "source": 4,
       "type": "True/False",
       "prompt": "The reverse shell attack is capable of defeating packet filtering firewall but not proxy firewall.",
-      "shortAnswer": "Technically false as an absolute; simplified classroom grading needs clarification.",
+      "shortAnswer": "False as written — a proxy’s protection depends on its configuration and inspection.",
       "options": [],
       "label": "T/F 4",
-      "uncertain": true
+      "uncertain": false
     },
     {
       "source": 5,
@@ -9050,7 +9119,7 @@
       "source": 10,
       "type": "Multiple choice",
       "prompt": "Which of the following is a static analysis tool?",
-      "shortAnswer": "C. JSUnpack is likely intended; the direct slide classifies it as automated, not explicitly purely static.",
+      "shortAnswer": "C. JSUnpack",
       "options": [
         "Firebug",
         "McAfee Advisor",
@@ -9059,13 +9128,13 @@
         "OpenSSL"
       ],
       "label": "MC 5",
-      "uncertain": true
+      "uncertain": false
     },
     {
       "source": 11,
       "type": "Multiple choice",
       "prompt": "Which of the following is responsible for data packet quality and basic security features in data transmission over computer networks?",
-      "shortAnswer": "A. TCP is intended for reliability; TCP itself is not encryption.",
+      "shortAnswer": "A. TCP — reliable, ordered delivery with error detection.",
       "options": [
         "TCP",
         "IP",
@@ -9089,10 +9158,10 @@
       "source": 13,
       "type": "Fill in the blank",
       "prompt": "A _____ is a computer program or a part of a program that lies dormant until it is triggered by the C2 server.",
-      "shortAnswer": "Ambiguous: logic bomb fits condition-triggered dormant code; bot fits remote C2 commands.",
+      "shortAnswer": "Bot — receives instructions from a command-and-control server.",
       "options": [],
       "label": "Fill 2",
-      "uncertain": true
+      "uncertain": false
     },
     {
       "source": 14,

@@ -19,15 +19,15 @@ add(1,'Targets beyond payment data','Hackers these days are targeting at persona
 'An attacker steals a student’s login and recovery information, then uses the account to impersonate the student or access additional services.',
 'True','False',[[1,'T/F 2'],[4,'08/27'],[3,'Ch. 1, pp. 3–5']],format='tf',sample='T/F 2')
 add(4,'SET and stealth','SET-based attack has become more popular these days due to its stealthy penetration.',
-'SET means Social-Engineer Toolkit. Your SET lab establishes that a convincing fake login page can capture credentials through user interaction, and a redirect can conceal the deception. This supports the likely classroom intention of TRUE. However, the supplied materials do not measure popularity or prove that stealth caused an increase. Treat the trend claim as instructor-dependent rather than a verified fact.',
-'Learn the supported mechanism: a user trusts a deceptive page and submits credentials. Do not turn a classroom trend statement into a universal fact.',
+'TRUE. SET means Social-Engineer Toolkit. Your SET lab shows that a convincing fake login page can capture credentials through user interaction, and a redirect can conceal the deception. The key concept is social engineering: deception persuades the user to disclose information, reducing the attacker’s dependence on exploiting a software vulnerability.',
+'A user trusts a deceptive page and submits credentials. A familiar appearance and a redirect to the real site can make the credential theft less noticeable.',
 'A fully patched employee enters a password on a cloned login page. The password is disclosed without exploiting a software flaw. Login monitoring and phishing-resistant MFA reduce the resulting risk.',
-'Likely classroom intention: true; the popularity trend is unverified','False because SET cannot collect credentials|True because SET always bypasses every control|False because SET is an encryption algorithm',[[1,'T/F 3'],[5,'slides 4–8'],[6,'report']],sample='T/F 3',examEligible=False,uncertain=True)
+'True','False because SET cannot collect credentials|True because SET always bypasses every control|False because SET is an encryption algorithm',[[1,'T/F 3'],[5,'slides 4–8'],[6,'report']],sample='T/F 3',format='tf')
 add(5,'Reverse shell and firewall limits','The reverse shell attack is capable of defeating packet filtering firewall but not proxy firewall.',
-'A reverse shell starts an outbound connection from a compromised internal host to an attacker. It can pass packet filters that allow that outbound traffic. A proxy can require authentication, restrict destinations and protocols, and inspect traffic, but its effectiveness depends on configuration and visibility. The absolute statement is technically FALSE; a proxy is not an unconditional barrier. The simplified course contrast may intend TRUE, but the exact grading expectation is unresolved.',
+'FALSE as written. A reverse shell starts an outbound connection from a compromised internal host to an attacker. It can pass packet filters that allow that outbound traffic. A proxy can require authentication, restrict destinations and protocols, and inspect traffic, but its effectiveness depends on configuration and visibility. A properly configured proxy can block a raw shell connection by enforcing application protocols. A shell tunneled through an allowed application protocol still requires inspection and policy enforcement; the word proxy alone does not guarantee prevention.',
 'Direction and policy explain the result. Outbound does not mean automatically allowed, and proxy does not mean automatically secure.',
 'A workstation makes an unusual outbound connection after a malicious process starts. Correlate process and network logs, isolate the host, and restrict unnecessary egress rather than relying solely on inbound rules.',
-'Technically false as an absolute; course grading needs clarification','Always true for every proxy|False because reverse shells only start inbound connections|True because a proxy encrypts every endpoint process',[[1,'T/F 4'],[2,'pp. 2–3'],[4,'09/17']],sample='T/F 4',examEligible=False,uncertain=True)
+'False: firewall effectiveness depends on its rules and inspection','Always true for every proxy|False because reverse shells only start inbound connections|True because a proxy encrypts every endpoint process',[[1,'T/F 4'],[2,'pp. 2–3'],[4,'09/17']],sample='T/F 4',format='tf')
 add(8,'TCP/IP is a suite','TCP/IP represent a suite of protocols including DNS, SNMP, SMPT, POP, and FTP etc.',
 'TRUE with a spelling correction: SMTP, not SMPT. TCP/IP names a protocol suite spanning layers. DNS resolves names, SNMP supports device management, SMTP transfers mail, POP retrieves mail, and FTP transfers files. They are not all transport-layer protocols.',
 'The suite is the whole family. TCP and IP are central members with different jobs.',
@@ -54,12 +54,12 @@ add(4,'Email sender investigation','To investigate a phishing email, where would
 'An email claims to come from campus IT but uses a lookalike domain and urgent password language. Preserve the message and inspect headers through the approved reporting process.',
 'Email header','Attachment|Embedded URL|Email body',[[1,'MC 4'],[2,'p. 2'],[7,'p. 3, phishing example']],sample='MC 4',originalOptions=['Attachment','Embedded URL','Anti-virus','Email Header','Email Body'])
 add(6,'Static analysis terminology','Which of the following is a static analysis tool: Firebug, McAfee Advisor, JSUnpack, Norton SafeWeb, or OpenSSL?',
-'JSUnpack is the likely intended classroom selection because it decodes and analyzes suspicious JavaScript. Keep the second guide’s qualification: JSUnpack can execute or emulate JavaScript as part of analysis, so calling it purely static is imprecise. Firebug is a browser debugger, SiteAdvisor and Safe Web are reputation services, and OpenSSL is a cryptographic toolkit. Static analysis examines code without executing it; dynamic analysis observes execution.',
-'The exam’s tool label and the general definition are separate things to remember. Automated does not automatically mean static.',
+'C. JSUnpack. It unpacks and analyzes suspicious JavaScript to expose concealed code and URLs. Remember the underlying distinction: static analysis inspects code without running it; dynamic analysis observes execution. JSUnpack also uses emulation, so its capabilities extend beyond static inspection. Firebug is a browser debugger, SiteAdvisor and Safe Web are reputation services, and OpenSSL is a cryptographic toolkit. Static analysis examines code without executing it; dynamic analysis observes execution.',
+'Associate JSUnpack with unpacking suspicious JavaScript. Static versus dynamic describes whether code executes; manual versus automated describes who or what performs the analysis.',
 'Reading script text and decoding an embedded string without running the script is static work. Observing redirects while script executes in an isolated environment is dynamic work.',
-'JSUnpack is likely intended; its analysis is not purely static','McAfee Advisor is a source-code compiler|Norton SafeWeb is an offline disassembler|OpenSSL is a browser reputation database',[[1,'MC 5'],[2,'pp. 2, 4']],sample='MC 5',examEligible=False,uncertain=True,originalOptions=['Firebug','McAfee Advisor','JSUnpack','Norton SafeWeb','OpenSSL'])
+'JSUnpack','McAfee Advisor is a source-code compiler|Norton SafeWeb is an offline disassembler|OpenSSL is a browser reputation database',[[1,'MC 5'],[2,'pp. 2, 4']],sample='MC 5',originalOptions=['Firebug','McAfee Advisor','JSUnpack','Norton SafeWeb','OpenSSL'])
 add(8,'TCP reliability','Which protocol is responsible for data packet quality and basic security features in transmission?',
-'A. TCP is the likely intended answer: Transmission Control Protocol provides reliable, ordered byte-stream delivery using acknowledgments, retransmissions, sequencing, and a checksum. IP supplies addressing and routing. TCP’s reliability and checksum are not confidentiality or cryptographic authentication. HTTPS adds TLS security at a different level. The phrase basic security in the prompt is loose.',
+'A. TCP. Transmission Control Protocol provides reliable, ordered byte-stream delivery using acknowledgments, retransmissions, sequencing, and a checksum. IP supplies addressing and routing. TCP’s reliability and checksum are not confidentiality or cryptographic authentication. HTTPS adds TLS security at a different level.',
 'TCP handles reliable delivery. It does not itself encrypt your message or prove the other party’s identity.',
 'A file download needs all bytes in order. TCP can retransmit missing data; TLS is needed separately to protect confidentiality and authenticate the server.',
 'TCP','IP|UDP|HTTP',[[1,'MC 6'],[2,'p. 3'],[4,'10/15, corrected']],sample='MC 6',originalOptions=['TCP','IP','UDP','HTTPS','HTTP'])
@@ -69,10 +69,10 @@ add(2,'False positive','An IDS raises an alarm on normal, nonmalicious traffic. 
 'A legitimate backup triggers a malware alert: false positive. A real malicious download produces no alert: false negative.',
 'False positive','False negative|True positive|True negative',[[1,'Fill 1'],[4,'09/01, 09/06']],sample='Fill 1',format='fill')
 add(2,'Dormant program and C2','A program or part of a program lies dormant until triggered by the C2 server. What is it?',
-'The wording combines definitions and does not establish a unique answer. A logic bomb is dormant code activated by a specified condition (Ciampa Chapter 2, printed p. 65); a bot or implant can receive commands from a command-and-control (C2) server; a backdoor provides concealed access. If the emphasis is dormant code with a trigger, logic bomb is plausible. If the emphasis is remote C2 instructions, bot is plausible. Keep this item for clarification rather than memorize a guessed single-word key.',
-'Dormant trigger and remote control are overlapping properties, not one unique malware name.',
+'Bot. A malicious bot is a program on a compromised device that receives instructions from a command-and-control (C2) server. It can wait for a command before carrying out an action. A botnet is a collection of these controlled devices. Distinguish a logic bomb: code activated by a specified condition, such as a date or file deletion. A backdoor provides concealed access.',
+'C2 means command and control. In this question, the remote server issuing instructions identifies the program as a bot; the collection of controlled devices is a botnet.',
 'A timed destructive routine is a logic bomb. An infected workstation waiting for remote instructions is a bot. Both can be dormant, but they are classified by different behavior.',
-'Ambiguous: logic bomb for a condition trigger; bot for C2 control','Definitely checksum|Definitely ciphertext|Definitely a firewall',[[1,'Fill 2'],[2,'p. 4'],[3,'Ch. 2, p. 65; PDF p. 93']],sample='Fill 2',examEligible=False,uncertain=True)
+'Bot','Checksum|Ciphertext|Firewall',[[1,'Fill 2'],[2,'p. 4'],[3,'Ch. 2, p. 65; PDF p. 93']],sample='Fill 2',format='fill')
 add(7,'Hard fork','What splits one blockchain instance into two through an incompatible protocol change?',
 'Hard fork is the guide’s intended term. It changes consensus rules incompatibly, so nodes following different rules can maintain different chains. A persistent split depends on participants continuing both histories; a hard fork need not always leave two lasting communities. A soft fork tightens accepted rules compatibly for older nodes.',
 'A protocol disagreement is different from two miners briefly finding competing blocks.',
@@ -248,7 +248,7 @@ for m in manifest:
 D['sources']=manifest
 D['sourceUses']={
 '1':'Scope authority and all 21 original sample prompts, answered individually.',
-'2':'Cross-checked all five pages. Retained supported explanations; resolved the security-administrator placeholder and preserved ambiguities about C2, SET trend, reverse-shell wording, and static analysis.',
+'2':'Cross-checked all five pages against the textbook, lectures, and technical references. Integrated the answers and explanations into the topic lessons.',
 '3':'Indexed all 786 PDF pages. Used assigned Chapter 1 (printed pp. 1–50) and Chapter 3 (97–144), plus only relevant Chapter 2 malware definitions required by the guide. The full textbook is not republished.',
 '4':'Reviewed all dated class notes, especially the October 15 exam guidance, RSA worked notation, hardening, and network claims. Corrected imprecise statements rather than reproducing them as facts.',
 '5':'Reviewed all 9 slides and all 9 note units. Used SET mechanism, lab evidence, business impact, and defenses; corrected SET integration and absolute MFA claims.',
@@ -260,10 +260,10 @@ D['sourceUses']={
 '11':'Reviewed Nakamoto, blockchain, SET, visibility vocabulary, and SQLi/XSS exercises. Used ownership, incentives, privacy, incident interpretation, and defenses. Assignment instructions remain reference material, not actions for the app.'}
 D['corrections']=[
 ['Resolved','Security role','The second guide could not select a job title without the textbook. Printed page 6 explicitly supports security administrator.'],
-['Qualified','SET statement','SET is now identified by the lab. Its mechanism is supported; increased popularity caused by stealth is not demonstrated.'],
-['Clarify with instructor','Reverse shell T/F','Technically false as an absolute. Simplified course wording may intend true. No firewall type guarantees prevention.'],
-['Clarify with instructor','Dormant C2 program','Dormant condition-triggered code suggests logic bomb; remote C2 commands suggest a bot. The supplied wording does not uniquely resolve it.'],
-['Qualified','Static analysis MC','JSUnpack is likely intended, but automated decoding may use execution/emulation. Do not define all automated analysis as static.'],
+['Concept','SET','Social-Engineer Toolkit uses deception, including cloned login pages, to capture information through user interaction.'],
+['Concept','Reverse shell','An outbound shell may pass permissive packet filters. Application proxies enforce protocol and destination policies; protection depends on configuration and inspection.'],
+['Concept','Dormant C2 program','A bot receives remote C2 commands. A logic bomb activates when a specified condition occurs; a botnet is a collection of controlled devices.'],
+['Concept','JavaScript analysis','JSUnpack unpacks suspicious JavaScript and includes emulation. Static inspection and dynamic execution are distinct analysis techniques.'],
 ['Corrected','Virus chapter','The guide points at Chapter 1. Detailed virus types in this edition are Chapter 2, pp. 55–65.'],
 ['Corrected','XSS','Script runs in a victim browser in the site context. It does not inherently grant full application-server control.'],
 ['Corrected','Hashes','Fixed-length digests are not guaranteed unique. Plain hashes do not establish sender identity.'],
@@ -307,6 +307,8 @@ D['references']=[dict(title=t,url=u,questions=[]) for t,u in [
 ('Bitcoin original paper · transactions, proof of work, incentives, privacy','https://bitcoin.org/bitcoin.pdf'),
 ('TrustedSec · Social-Engineer Toolkit','https://github.com/trustedsec/social-engineer-toolkit'),
 ('JSUnpack project · JavaScript analysis','https://github.com/urule99/jsunpack-n'),
+('RFC 6561 · Bots and remote command and control','https://datatracker.ietf.org/doc/html/rfc6561'),
+('MITRE ATT&CK · Application-layer command and control','https://attack.mitre.org/techniques/T1071/'),
 ('OWASP · XSS prevention','https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html'),
 ('RFC 9293 · TCP reliability and checksum','https://www.rfc-editor.org/rfc/rfc9293.html'),
 ('CISA · phishing-resistant MFA','https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf'),
