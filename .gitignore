@@ -6,3 +6,8 @@ node_modules/
 artifacts/
 *.log
 cis320-progress*.json
+scripts/review/cis425/0*.txt
+scripts/review/cis425/0*.json
+scripts/review/cis425/1[01].txt
+scripts/review/cis425/1[01].json
+scripts/review/cis425/private/

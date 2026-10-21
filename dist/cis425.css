@@ -1,0 +1,11 @@
+.cis425 .shell{grid-template-columns:240px minmax(0,1fr)}
+.cis425 .main-column,.cis425 .heading>div{min-width:0}
+.cis425 .heading{flex-wrap:wrap;align-items:flex-start}
+.cis425 .heading h1{font-size:clamp(28px,3.2vw,38px)}
+.cis425 .class-switch{min-width:0;max-width:100%}
+.cis425 .class-switch a{min-width:0}
+.cis425 label:has(#hash-a),.cis425 label:has(#hash-b){display:grid;gap:8px;margin:16px 0}
+.cis425 #hash-output{font-family:monospace;font-size:14px}
+@media(max-width:1200px){.cis425 .class-switch{order:4;flex-basis:100%}.cis425 .class-switch a{flex:1}.cis425 #stats{margin-left:auto}}
+@media(max-width:900px){.cis425 .shell{grid-template-columns:190px minmax(0,1fr)}}
+@media(max-width:620px){.cis425 .shell{display:block}.cis425 .class-switch{display:grid;grid-template-columns:1fr 1fr}.cis425 aside nav{flex-wrap:wrap;overflow:visible}.cis425 aside nav details{flex-basis:100%}.cis425 aside nav details button{white-space:normal}.cis425 .lesson-list button{overflow-wrap:anywhere}.cis425 .order{overflow-wrap:anywhere}}

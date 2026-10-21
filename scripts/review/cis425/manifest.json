@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "CIS425 Midterm Study Guide.docx",
+    "status": "extracted",
+    "units": 1,
+    "chars": 3543
+  },
+  {
+    "id": 2,
+    "name": "CIS425_Study_Guide.pdf",
+    "status": "extracted",
+    "units": 5,
+    "chars": 15481
+  },
+  {
+    "id": 3,
+    "name": "Ciampa \u00b7 CompTIA Security+ Guide to Network Security Fundamentals \u00b7 Sixth edition",
+    "status": "extracted",
+    "units": 786,
+    "chars": 1908377
+  },
+  {
+    "id": 4,
+    "name": "CIS 425 - Defensive Cybersecurity.docx",
+    "status": "extracted",
+    "units": 1,
+    "chars": 19874
+  },
+  {
+    "id": 5,
+    "name": "SET_Lab2_Presentation.pptx",
+    "status": "extracted",
+    "units": 18,
+    "chars": 5643
+  },
+  {
+    "id": 6,
+    "name": "Lab 2 Deliverable submission.docx",
+    "status": "extracted",
+    "units": 1,
+    "chars": 2127
+  },
+  {
+    "id": 7,
+    "name": "annotated-Lab%201.pdf",
+    "status": "extracted",
+    "units": 3,
+    "chars": 3356
+  },
+  {
+    "id": 8,
+    "name": "Keylogger_Lab1_Presentation.pptx",
+    "status": "extracted",
+    "units": 20,
+    "chars": 5701
+  },
+  {
+    "id": 9,
+    "name": "Lab 0 (2).docx",
+    "status": "extracted",
+    "units": 1,
+    "chars": 11050
+  },
+  {
+    "id": 10,
+    "name": "CIS 425 - 827.pdf",
+    "status": "extracted",
+    "units": 1,
+    "chars": 2275,
+    "note": "User-approved replacement for the missing annotated version."
+  },
+  {
+    "id": 11,
+    "name": "CIS 425 - Defensive Cybersecurity_ In-class assignments.docx",
+    "status": "extracted",
+    "units": 1,
+    "chars": 9856
+  }
+]

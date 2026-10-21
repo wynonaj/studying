@@ -1,0 +1,3 @@
+dist/*.js text eol=lf
+dist/*.css text eol=lf
+dist/*.html text eol=lf
