@@ -9,6 +9,10 @@
 .cis425 #study-menu{display:none}
 .cis425 dd{margin:6px 0 18px;line-height:1.7}
 .cis425 dt{margin-top:18px}
+.cis425 .computer-setting{margin:14px 0;padding:16px;border-left:4px solid #a78bfa}
+.cis425 .computer-setting p{margin:6px 0;font-size:14px;line-height:1.6}
+.cis425 .practice-location{border-left:4px solid #60a5fa;padding:6px 14px;margin:16px 0;background:rgba(96,165,250,.08)}
+.cis425 .practice-location p{margin:4px 0;font-size:14px}
 .cis425 .learning-resume{margin:24px 0;border-left:5px solid #60a5fa}
 .cis425 .lesson-list button.lesson-is-complete{border-left:4px solid #059669}
 .cis425 .lesson-state{font-size:12px;font-weight:700;line-height:1.5;white-space:normal}

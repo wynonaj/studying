@@ -23,14 +23,67 @@ const elements=new Map();function element(s){if(!elements.has(s))elements.set(s,
 const saved=new Map([['cis320-v1','untouched-320'],['cis304-module1-v1','untouched-304'],['cis464-chapters-v1','untouched-464']]);
 const ctx=vm.createContext({console,Date,Math,JSON,Set,BigInt,TextEncoder,Uint8Array,crypto:crypto.webcrypto,document:{querySelector:element,querySelectorAll:()=>[]},window:{scrollTo(){}},localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},INPUT:D});
 vm.runInContext(read('dist/cis425.js').split("document.addEventListener('click'")[0],ctx);const run=s=>vm.runInContext(s,ctx);run('D=INPUT');
+assert.equal(D.foundations.length,D.vocab.length);
+assert.equal(D.learningOrder.length,84);assert.equal(new Set(D.learningOrder).size,84);
+run('section=0');assert.equal(run('nextLearningLesson(22).number'),47);assert.equal(run('nextLearningLesson(1).number'),37);
+const seenDependencies=new Set(),activeDependencies=new Set();
+function checkDependencies(id){assert.ok(!activeDependencies.has(id),'Circular prerequisite '+id);if(seenDependencies.has(id))return;activeDependencies.add(id);for(const dep of D.prerequisites[id]||[])checkDependencies(dep);activeDependencies.delete(id);seenDependencies.add(id)}
+for(const id of Object.keys(D.prerequisites))checkDependencies(id);
+const coreIds=D.basicRoute;
+run('start("practice",[D.questions[19]])');
+assert.equal(D.orientation.length,27);
+assert.deepEqual(JSON.parse(run('JSON.stringify(session.items.slice(0,D.orientation.length).map(x=>x.id))')),D.orientation.map(x=>x.id));
+assert.deepEqual(JSON.parse(run('JSON.stringify(session.items.slice(D.orientation.length,D.orientation.length+D.basicRoute.length).map(x=>x.id))')),coreIds);
+for(const x of D.orientation){assert.equal(new Set([x.correct,...x.distractors]).size,4,x.id);assert.ok(x.foundation&&x.orientation);assert.ok(x.teach.length>50)}
+run('start("practice",[D.questions[36]])');assert.equal(run('session.items[0].id'),'425-context-1');assert.match(element('#app').innerHTML,/private report/);
+assert.match(run('computerSetting(D.questions[36])'),/private document/);assert.match(run('computerSetting(D.questions[0])'),/storage drive/);
+assert.equal(Object.keys(D.topicContexts).length,84);
+for(const pool of ['questions','checks','vocab','foundations','trueFalse','cloze','sorts','discussions'])for(const x of D[pool]){
+ assert.ok(x.setting,pool+' '+x.id);
+ for(const field of ['object','location','purpose','action','example'])assert.ok(x.setting[field]?.length>20,pool+' '+x.id+' '+field);
+ assert.ok(D.topicOrientation.some(t=>t.id===x.topicIntroId),x.id+' concrete introduction');
+ assert.match(run('computerSetting('+JSON.stringify(x)+')'),/Situation:/);
+}
+for(const x of D.topicOrientation){assert.equal(new Set([x.correct,...x.distractors]).size,4,x.id);assert.ok(x.setting.location);}
+assert.match(run('computerSetting(D.questions[83])'),/provider/);
+assert.match(run('computerSetting(D.questions[7])'),/phone call/);
+assert.match(run('computerSetting(D.questions[28])'),/database/);
+assert.match(run('computerSetting(D.questions[34])'),/guest/);
+assert.ok(D.foundations.find(x=>x.id===coreIds[7]).term==='Cryptographic key');
+assert.match(element('#app').innerHTML,/Preparing for:/);
+run('startLearningModule("core")');assert.equal(run('session.items.filter(x=>x.id.startsWith("425-first-check-")).length'),10);
+run('startLearningModule("crypto")');assert.match(element('#app').innerHTML,/Computer context/);
+assert.match(run('computerSetting(D.foundations.find(x=>x.term==="Cryptographic key"))'),/storage drive/);
+assert.match(run('computerSetting(D.foundations.find(x=>x.term==="Hash function"))'),/downloaded file/);
+for(const term of ['Choke point','Visibility','Scalability','Endpoint','Asset','Threat','Risk','Mitigate','Vishing','VoIP','Flow record','Full packet capture','Reputation label','Manual analysis','Automated analysis','Cryptographic key','Double-spending problem','Byte stream','Datagram','Routing','Best-effort delivery','Stream cipher','Block cipher','Sponge construction','One-time pad'])assert.ok(D.foundations.some(x=>x.term===term),'Missing beginner definition '+term);
+for(const x of D.foundations){assert.equal(new Set([x.correct,...x.distractors]).size,4,x.id);assert.ok(x.example.length>20,x.id)}
+const foundationalIds=new Set([...D.vocab,...D.foundations].map(x=>x.id));
+for(const ids of Object.values(D.prerequisites))for(const id of ids)assert.ok(foundationalIds.has(id),'Unknown prerequisite '+id);
+for(const q of D.questions){
+ const ids=JSON.parse(run(`JSON.stringify(foundationSequence([D.questions[${q.number-1}]]).map(x=>x.id))`));
+ assert.equal(ids.at(-1),q.id);assert.equal(new Set(ids).size,ids.length);
+ for(const id of D.prerequisites[q.id])assert.ok(ids.indexOf(id)>=0&&ids.indexOf(id)<ids.indexOf(q.id),'Definition before '+q.id);
+ assert.ok(ids.indexOf(q.topicIntroId)>=0&&ids.indexOf(q.topicIntroId)<ids.indexOf(q.id),'Concrete situation before '+q.id);
+}
+run('start("practice",[D.questions[7]])');
+assert.ok(run('session.items.findIndex(x=>x.term==="Vishing"&&x.foundation)<session.items.findIndex(x=>x.id===D.questions[7].id)'));
+assert.equal(run('session.items[0].foundation'),true);
+const firstDefinition=run('session.items[0].id');run('grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items[session.index].id'),firstDefinition);
+run('grade(session.items[session.index],true,session.items[session.index].correct);advance()');assert.ok(run('session.cleared.has('+JSON.stringify(firstDefinition)+')'));
+run('start("practice",[D.questions[7]])');assert.equal(run('session.items[0].id'),firstDefinition,'Each session includes definitions again');
+run('start("practice",D.questions)');assert.equal(run('session.items.filter(x=>D.questions.some(q=>q.id===x.id)).length'),84,'Every original lesson remains');
+assert.match(D.questions[1].teach,/CC means credit card/);assert.match(D.questions[1].teach,/# symbol means number/);
+assert.match(D.questions[72].q,/manual analysis, automated analysis, static analysis, and dynamic analysis/i);
+assert.match(D.questions[55].q,/stream cipher, a block cipher, a sponge construction, and a one-time pad/i);
+for(const q of D.questions)assert.ok(!/^(Match |Tune detection using evidence|Structure and correct key use both matter)/.test(q.correct),q.id+' needs a concrete answer');
 for(let section=0;section<=8;section++){run('section='+section);for(const v of ['beginner','samples','coverage','teach','practice','flash','map','exam','apply','sort','abbrev','math','discussion','terms','guide','readings']){run(`navigate('${v}')`);assert.ok(element('#app').innerHTML.length>100,v)}}
 run('section=0');for(const q of D.questions){for(let step=0;step<3;step++)run(`openLesson(${q.number},${step})`)}
 run('examHome()');element('#mock-exam').onclick();assert.equal(run('session.total'),45);
 assert.equal(run('session.items.filter(x=>x.format==="tf").length'),15);assert.equal(run('session.items.filter(x=>x.format==="fill").length'),10);
 assert.equal(run('session.items.filter(x=>x.uncertain).length'),0);assert.equal(run('new Set(session.items.map(x=>x.id)).size'),45);
 run('grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items.length'),45);assert.equal(run('session.right'),0);
-run('start("practice",D.questions.slice(4,9));grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items.length'),6);assert.equal(run('session.items[4].id'),D.questions[4].id);
-run('start("flash",[D.questions[5]])');element('#flip').onclick();assert.match(element('#flip').innerHTML,/Security administrator/);element('#remembered').onclick();assert.ok(run('progress.cards[D.questions[5].id].completed'));
+run('start("practice",D.questions.slice(4,9));session.index=session.items.findIndex(x=>x.id===D.questions[4].id);renderSession()');const beforeRetry=run('session.items.length'),retryIndex=run('session.index');run('grade(session.items[session.index],false,"wrong");advance()');assert.equal(run('session.items.length'),beforeRetry+1);assert.equal(run(`session.items[Math.min(${retryIndex}+4,${beforeRetry})].id`),D.questions[4].id);
+run('start("flash",[D.questions[5]]);session.index=session.items.findIndex(x=>x.id===D.questions[5].id);renderSession()');element('#flip').onclick();assert.match(element('#flip').innerHTML,/Security administrator/);element('#remembered').onclick();assert.ok(run('progress.cards[D.questions[5].id].completed'));
 for(const name of ['defense','keys','chain'])run(`mapHome('${name}')`);
 for(let i=0;i<3;i++){run('rsaCase='+i);assert.equal(run('rsaResult(rsaCases[rsaCase]).plain'),run('rsaCases[rsaCase].m'));assert.equal(run('(rsaCases[rsaCase].e*rsaCases[rsaCase].d)%rsaResult(rsaCases[rsaCase]).phi'),1)}
 assert.equal(run('modPow(7,3,55)'),13);
@@ -67,5 +120,5 @@ for(const q of D.questions.slice(45)){assert.ok(D.checks.filter(x=>x.source===q.
 for(let round=0;round<100;round++){const items=JSON.parse(run('JSON.stringify(buildMidtermItems())')),mc=items.filter(x=>!['tf','fill'].includes(x.format));assert.equal(items.length,45);assert.equal(mc.length,20);assert.equal(new Set(mc.map(x=>x.number||x.source)).size,20);for(const section of D.sections)assert.ok(mc.filter(x=>x.section===section.id).length>=2)}
 run('section=0;discussionHome()');element('#discussion-five').onclick();assert.equal((element('#app').innerHTML.match(/Reveal model answer and checklist/g)||[]).length,5);element('#discussion-seven').onclick();assert.equal((element('#app').innerHTML.match(/Reveal model answer and checklist/g)||[]).length,7);
 run('section=0;samplesHome()');assert.match(element('#app').innerHTML,/Email Header/);assert.match(element('#app').innerHTML,/OpenSSL/);
-run('practiceHome()');element('#recall-blanks').onclick();assert.equal(run('session.mode'),'flash');assert.equal(run('session.total'),D.cloze.length);
+run('practiceHome()');element('#recall-blanks').onclick();assert.equal(run('session.mode'),'flash');assert.ok(run('session.total')>=D.cloze.length);assert.equal(run('session.items.filter(x=>D.cloze.some(c=>c.id===x.id)).length'),D.cloze.length);
 console.log('PASS CIS 425: 21 exact professor examples, 19 source records, 84 lessons, chapter/lecture coverage, beginner route, 5/7 discussions, isolated progress, exam scoring, retries, flashcards, blank recall, navigation, and RSA.');

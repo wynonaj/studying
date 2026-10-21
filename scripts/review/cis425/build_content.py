@@ -318,6 +318,14 @@ from enrich_content import enrich
 enrich(D)
 from complete_scope import complete_scope
 complete_scope(D)
+from foundations import add_foundations
+add_foundations(D)
+from learning_order import arrange_learning
+arrange_learning(D)
+from concrete_basics import concrete_basics
+concrete_basics(D)
+from topic_contexts import topic_contexts
+topic_contexts(D)
 from sample_prompts import attach_samples
 attach_samples(D)
 (ROOT/'dist/cis425-content.json').write_text(json.dumps(D,ensure_ascii=False,indent=2),encoding='utf-8')
