@@ -23,6 +23,30 @@ replacefn('examHome','mathHome',r'''function examHome(){$('#app').innerHTML=head
 # Remove obsolete formula and enterprise map implementations completely.
 start=s.index('function mathHome(');end=s.index("document.addEventListener('click'",start)
 s=s[:start]+(Path(__file__).parent/'activities.js').read_text(encoding='utf-8')+'\n'+s[end:]
+# The audit adds beginner, exact-example, coverage, and discussion views.
+start=s.index('function discussionHome(');end=s.index('const mapViews=',start)
+s=s[:start]+s[end:]
+insert=s.index("document.addEventListener('click'")
+s=s[:insert]+(Path(__file__).parent/'audit_views.js').read_text(encoding='utf-8')+'\n'+s[insert:]
+s=s.replace("const navs=[", "const navs=[['beginner','○','Start from zero'],['samples','☷','Professor examples'],['coverage','✓','Topic checklist'],")
+s=s.replace('const fn={teach:', 'const fn={beginner:beginnerHome,samples:samplesHome,coverage:coverageHome,teach:')
+s=s.replace('function navigate(v){view=v;', 'function navigate(v){$("#nav").setAttribute("data-menu-open","false");$("#study-menu").setAttribute("aria-expanded","false");view=v;')
+s=s.replace('function picker(){return', 'function picker(){if(["beginner","samples","coverage","readings"].includes(view))return `<p class="tiny muted">Whole midterm</p>`;return')
+s=s.replace('Every original guide prompt has its own lesson.','Study one concept at a time, then explain it in a scenario.')
+s=s.replace('All 21 professor sample prompts are answered, followed by 24 supporting lessons.','All 21 professor examples are answered, with focused supporting lessons from direct review of all eight lecture decks and assigned textbook sections.')
+s=s.replace('Start with the samples, then practice the supporting concepts.</div>', 'New to security? Start from zero. Then use Professor examples and the Topic checklist to connect each source to practice.</div><div class="actions"><button data-view="beginner">Start from zero</button><button data-view="samples">All 21 professor examples</button><button data-view="coverage">Chapter & lecture checklist</button></div>')
+s=s.replace('Lesson ${q.number} / 45','Lesson ${q.number} / ${D.questions.length}')
+s=s.replace('of 45 lessons shown. Lessons 1–21 answer every professor sample in order.','of ${D.questions.length} lessons shown. Lessons 1–21 answer every professor sample in order.')
+s=s.replace('All 11 sources are accounted for.','All ${D.sources.length} source records are accounted for, including the original 11 references and all eight lecture decks.')
+s=s.replace('The second guide describes eight lecture decks; those decks were not separately attached here, so lecture coverage uses its summaries cross-checked with your notes and labs.','All eight lecture decks are now reviewed directly. Lectures 2–4 were recovered from PPTs_export.zip, and the duplicate Lecture 3 export has matching slide/note text. The original annotated exercise is now available too and matches the replacement text. Use Topic checklist for source-to-lesson links.')
+s=s.replace('Then rehearse 6 discussion answers using the separate rubric.','Then choose 5 or 7 discussion prompts using the separate rubric.')
+s=s.replace("const tf=shuffle(D.trueFalse).slice(0,15),mc=shuffle(D.questions.filter(q=>!q.uncertain&&!['tf','fill','discussion'].includes(q.format))).slice(0,20),bl=shuffle(D.cloze).slice(0,10);start('exam',[...tf,...mc,...bl])", "start('exam',buildMidtermItems())")
+s=s.replace('${paragraphs([q.teach,q.answer,q.example][step])}', '${step===0?`<p class="notice"><b>Your goal:</b> ${esc(q.goal)}</p><p><button data-view="beginner">Explain the starting vocabulary</button></p>`:""}${paragraphs([q.teach,q.answer,q.example][step])}')
+s=s.replace("<button id=\"blank-practice\">Fill in the blanks</button>","<button id=\"blank-practice\">Fill-in-the-blank choices</button><button id=\"recall-blanks\">Recall blanks before revealing</button>")
+s=s.replace("$('#blank-practice').onclick=", "$('#recall-blanks').onclick=()=>start('flash',shuffle(filtered(D.cloze)));$('#blank-practice').onclick=")
+# Supplementary scenario checks participate in mixed and source-scoped practice.
+s=s.replace('...D.vocab,...D.cloze,','...D.checks,...D.vocab,...D.cloze,')
+s+='\n$("#study-menu").onclick=()=>{const open=$("#study-menu").getAttribute("aria-expanded")!=="true";$("#study-menu").setAttribute("aria-expanded",String(open));$("#nav").setAttribute("data-menu-open",String(open))};\n'
 s=s.replace('CIS 425 needs cis425-content.json alongside this page.','CIS 425 needs cis425-content.json alongside this page.')
 # Class-specific source getter for generated practice items.
 s=s.replace('const source=x=>x.number?x:D.questions.find(q=>q.number===x.source);','const source=x=>x.number?x:D.questions.find(q=>q.number===x.source);')
@@ -32,6 +56,7 @@ h=h.replace('CIS 304 · Recall Lab','CIS 425 · Recall Lab').replace('CIS 304 Mo
 h=h.replace('CIS 304 / MODULE I','CIS 425 / MIDTERM').replace('href="cis304.html" class="brand"','href="cis425.html" class="brand"').replace('CIS 304 progress','CIS 425 progress').replace('Loading CIS 304','Loading CIS 425').replace('cis304.js?v=6a55889e690e','cis425.js')
 h=h.replace('href="cis304.html" aria-current="page"','href="cis304.html"')
 h=h.replace('class="cis304"','class="cis304 cis425"').replace('</head>','<link rel="stylesheet" href="cis425.css"></head>')
+h=h.replace('<nav id="nav"','<button id="study-menu" aria-controls="nav" aria-expanded="false">Study menu</button><nav id="nav"')
 h=re.sub(r'<a href="cis425.html"[^>]*>CIS 425 <small>Defensive cybersecurity</small></a>','',h)
 nav='<a href="cis425.html" aria-current="page">CIS 425 <small>Defensive cybersecurity</small></a>'
 h=h.replace('</nav><div id="stats">',nav+'</nav><div id="stats">')

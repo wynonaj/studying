@@ -11,3 +11,4 @@ scripts/review/cis425/0*.json
 scripts/review/cis425/1[01].txt
 scripts/review/cis425/1[01].json
 scripts/review/cis425/private/
+__pycache__/

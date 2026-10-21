@@ -312,5 +312,9 @@ D['references']=[dict(title=t,url=u,questions=[]) for t,u in [
 ('CISA · phishing-resistant MFA','https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf'),
 ('NIST FIPS 180-4 · SHA digest sizes','https://csrc.nist.gov/files/pubs/fips/180-4/final/docs/fips180-4.pdf'),
 ('Assigned blockchain teaching demonstration','https://andersbrownworth.com/blockchain/')]]
+from enrich_content import enrich
+enrich(D)
+from sample_prompts import attach_samples
+attach_samples(D)
 (ROOT/'dist/cis425-content.json').write_text(json.dumps(D,ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'{len(Q)} lessons; {len(D["checks"])} checks; {len(D["vocab"])} terms; {len(D["cloze"])} blanks; {len(D["sorts"])} sequences')

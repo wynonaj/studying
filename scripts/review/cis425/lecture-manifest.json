@@ -1,0 +1,90 @@
+[
+  {
+    "id": 12,
+    "name": "Lecture 1_Opening.pptx",
+    "lecture": 1,
+    "units": 24,
+    "chars": 4610,
+    "sha256": "1a638ed923c6d9edfbe6e7c40673921587cbaec764bcb830041ddc5dc7b1627e",
+    "status": "reviewed",
+    "location": "Downloads",
+    "method": "OOXML slide and note extraction"
+  },
+  {
+    "id": 13,
+    "name": "Lecture 2 Architecture.ppt",
+    "lecture": 2,
+    "units": 30,
+    "chars": 12717,
+    "sha256": "29e0b9e8a6ef98a8162632bd6419163a39497f92057d3f6abb2f6e04c7d1afa3",
+    "status": "reviewed",
+    "location": "PPTs_export.zip",
+    "method": "Legacy PPT record extraction; text-bearing slide/note records deduplicated"
+  },
+  {
+    "id": 14,
+    "name": "Lecture 3 Overview of Attacks - part I.pptx",
+    "lecture": 3,
+    "units": 30,
+    "chars": 6753,
+    "sha256": "750fe727b171242f471d488859337ebb76071d4d528ec049bd8020f33e698e37",
+    "status": "reviewed",
+    "location": "PPTs_export.zip",
+    "method": "OOXML slide and note extraction"
+  },
+  {
+    "id": 15,
+    "name": "Lecture 4 Overview of Attacks - part II.pptx",
+    "lecture": 4,
+    "units": 35,
+    "chars": 8202,
+    "sha256": "8fba0974020e69bdf1e0ec7ce9615073b83e4c5e5cb528dff9dfbe7be08804d7",
+    "status": "reviewed",
+    "location": "PPTs_export.zip",
+    "method": "OOXML slide and note extraction"
+  },
+  {
+    "id": 16,
+    "name": "Lecture 5 - OS Hardening.pptx",
+    "lecture": 5,
+    "units": 37,
+    "chars": 8748,
+    "sha256": "e68e244794b06893f39f2174a03a699ad76b75ada95b51a423dfc587dc37c136",
+    "status": "reviewed",
+    "location": "Downloads",
+    "method": "OOXML slide and note extraction"
+  },
+  {
+    "id": 17,
+    "name": "Lecture 6 - How to determine if a website is malicious.pptx",
+    "lecture": 6,
+    "units": 41,
+    "chars": 6893,
+    "sha256": "140e228abb7db0aa0ef10502154805f4247cbea71a05465df80a466d7bc69b07",
+    "status": "reviewed",
+    "location": "Downloads",
+    "method": "OOXML slide and note extraction"
+  },
+  {
+    "id": 18,
+    "name": "Lecture 7_Cryptography & Cryptocurrency.ppt",
+    "lecture": 7,
+    "units": 50,
+    "chars": 17428,
+    "sha256": "ca732b305f557d19e1c87e48508aeca5b8e9d7239ec0d5c3f08a1bfbc7650d12",
+    "status": "reviewed",
+    "location": "Downloads",
+    "method": "Legacy PPT record extraction; text-bearing slide/note records deduplicated"
+  },
+  {
+    "id": 19,
+    "name": "Lecture 8 Sec_NWK_Admn.ppt",
+    "lecture": 8,
+    "units": 62,
+    "chars": 19495,
+    "sha256": "c14618f03ea19757b9455fe061647b2f2bb0ce5ca89d5c04e40ee322774eeb4a",
+    "status": "reviewed",
+    "location": "Downloads",
+    "method": "Legacy PPT record extraction; text-bearing slide/note records deduplicated"
+  }
+]
