@@ -50,6 +50,22 @@ s+='\n$("#study-menu").onclick=()=>{const open=$("#study-menu").getAttribute("ar
 s=s.replace('CIS 425 needs cis425-content.json alongside this page.','CIS 425 needs cis425-content.json alongside this page.')
 # Class-specific source getter for generated practice items.
 s=s.replace('const source=x=>x.number?x:D.questions.find(q=>q.number===x.source);','const source=x=>x.number?x:D.questions.find(q=>q.number===x.source);')
+s=s.replace('<button id="lesson-complete">${progress.lessons[q.id]?\'✓ Lesson completed\':\'Mark lesson read\'}</button>', '${progress.lessons[q.id]?\'<span class="lesson-completed" role="status">✓ Lesson completed</span>\':\'<button id="lesson-complete">Mark lesson read</button>\'}')
+s=s.replace('function openLesson(number,step=0){', 'function openLesson(number,step=null){const target=D.questions.find(q=>q.number===number);if(!target)return;if(step===null)step=savedLessonStep(target);step=Math.max(0,Math.min(2,Number.isInteger(step)?step:0));progress.lessonSteps??={};progress.lessonSteps[target.id]=step;progress.lastLesson={number,section};save();')
+s=s.replace('openLesson(next.number);window.scrollTo', 'openLesson(next.number,0);window.scrollTo')
+s=s.replace('<button data-lesson="${q.number}"><span class="badge">', '<button data-lesson="${q.number}" class="${progress.lessons[q.id]?\'lesson-is-complete\':\'\'}"><span class="badge">')
+s=s.replace('<span aria-label="${progress.lessons[q.id]?\'Completed\':\'Not completed\'}">${progress.lessons[q.id]?\'✓\':\'→\'}</span>', '<span class="lesson-state ${progress.lessons[q.id]?\'is-complete\':\'\'}">${progress.lessons[q.id]?\'✓ Completed\':Object.hasOwn(progress.lessonSteps||{},q.id)?\'Resume · Step \'+(savedLessonStep(q)+1)+\' of 3\':\'Not started →\'}</span>')
+s=s.replace('</div>`+sections.map(s=>', '</div>`+learningResumeCard()+sections.map(s=>')
+insert=s.index("document.addEventListener('click'")
+s=s[:insert]+(Path(__file__).parent/'learning_progress.js').read_text(encoding='utf-8')+'\n'+s[insert:]
+# Every lesson link shares the same persisted status, across all study views.
+def lesson_link_status(match):
+ opening,value,body,closing=match.groups()
+ if 'lesson-state' in body or 'Resume this lesson' in body:return match.group(0)
+ expression=value[2:-1] if value.startswith('${') and value.endswith('}') else value
+ return opening+body+' ${lessonProgressBadge('+expression+')}'+closing
+s=re.sub(r'(<button\b[^>]*data-lesson="([^"]+)"[^>]*>)(.*?)(</button>)',lesson_link_status,s,flags=re.S)
+s=s.replace("heading('Start from zero','Build the vocabulary first, then follow one connected route through the midterm.')+", "heading('Start from zero','Build the vocabulary first, then follow one connected route through the midterm.')+learningResumeCard(D.beginnerRoute)+")
 (p/'cis425.js').write_text(s,encoding='utf-8')
 h=(p/'cis304.html').read_text(encoding='utf-8')
 h=h.replace('CIS 304 · Recall Lab','CIS 425 · Recall Lab').replace('CIS 304 Module I: all 51 study-guide prompts, beginner lessons, flashcards, process practice and exams.','CIS 425 defensive cybersecurity midterm: answered guide, lessons, labs, flashcards and exam rehearsal.')
