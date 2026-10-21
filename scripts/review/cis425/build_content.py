@@ -328,5 +328,7 @@ from topic_contexts import topic_contexts
 topic_contexts(D)
 from sample_prompts import attach_samples
 attach_samples(D)
+from plain_language import clarify_language
+clarify_language(D)
 (ROOT/'dist/cis425-content.json').write_text(json.dumps(D,ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'{len(Q)} lessons; {len(D["checks"])} checks; {len(D["vocab"])} terms; {len(D["cloze"])} blanks; {len(D["sorts"])} sequences')

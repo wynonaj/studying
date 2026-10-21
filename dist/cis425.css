@@ -9,6 +9,8 @@
 .cis425 #study-menu{display:none}
 .cis425 dd{margin:6px 0 18px;line-height:1.7}
 .cis425 dt{margin-top:18px}
+.cis425 .saved-practice{margin:0 0 24px;border:2px solid #60a5fa;background:rgba(96,165,250,.1)}
+.cis425 .saved-practice h2{margin-top:10px}
 .cis425 .computer-setting{margin:14px 0;padding:16px;border-left:4px solid #a78bfa}
 .cis425 .computer-setting p{margin:6px 0;font-size:14px;line-height:1.6}
 .cis425 .practice-location{border-left:4px solid #60a5fa;padding:6px 14px;margin:16px 0;background:rgba(96,165,250,.08)}

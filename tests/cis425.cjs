@@ -21,7 +21,7 @@ for(const x of all){assert.match(x.id,/^425-/);assert.equal(new Set([x.correct,.
 for(const s of D.sorts){assert.ok(D.questions.some(q=>q.number===s.source));assert.equal(new Set(s.items).size,s.items.length)}
 const elements=new Map();function element(s){if(!elements.has(s))elements.set(s,{innerHTML:'',textContent:'',value:'',disabled:false,dataset:{},focus(){},setAttribute(){},insertAdjacentHTML(_,s){this.innerHTML+=s},classList:{add(){}}});return elements.get(s)}
 const saved=new Map([['cis320-v1','untouched-320'],['cis304-module1-v1','untouched-304'],['cis464-chapters-v1','untouched-464']]);
-const ctx=vm.createContext({console,Date,Math,JSON,Set,BigInt,TextEncoder,Uint8Array,crypto:crypto.webcrypto,document:{querySelector:element,querySelectorAll:()=>[]},window:{scrollTo(){}},localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},INPUT:D});
+const ctx=vm.createContext({console,Date,Math,JSON,Set,BigInt,TextEncoder,Uint8Array,crypto:crypto.webcrypto,document:{querySelector:element,querySelectorAll:()=>[]},window:{scrollTo(){}},localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v),removeItem:k=>saved.delete(k)},INPUT:D});
 vm.runInContext(read('dist/cis425.js').split("document.addEventListener('click'")[0],ctx);const run=s=>vm.runInContext(s,ctx);run('D=INPUT');
 assert.equal(D.foundations.length,D.vocab.length);
 assert.equal(D.learningOrder.length,84);assert.equal(new Set(D.learningOrder).size,84);
@@ -31,7 +31,19 @@ function checkDependencies(id){assert.ok(!activeDependencies.has(id),'Circular p
 for(const id of Object.keys(D.prerequisites))checkDependencies(id);
 const coreIds=D.basicRoute;
 run('start("practice",[D.questions[19]])');
-assert.equal(D.orientation.length,27);
+assert.equal(D.orientation.length,33);
+const orientationIds=D.orientation.map(x=>x.id);
+assert.ok(orientationIds.indexOf('425-introduction-encryption')<orientationIds.indexOf('425-context-5'));
+assert.ok(orientationIds.indexOf('425-introduction-key')<orientationIds.indexOf('425-context-8'));
+assert.ok(orientationIds.indexOf('425-introduction-hash')<orientationIds.indexOf('425-context-21'));
+assert.match(D.orientation.find(x=>x.id==='425-context-18').teach,/HTTPS \(Hypertext Transfer Protocol Secure\).*TLS \(Transport Layer Security\)/);
+for(const pool of ['questions','checks','vocab','foundations','orientation','topicOrientation'])for(const x of D[pool])for(const field of ['answer','teach','example']){
+ const prose=x[field]||'';
+ for(const acronym of ['TLS','HTTPS','IDS','IPS','EDR','SOC']){
+  const re=new RegExp('\\b'+acronym+'\\b','g');let match;
+  while((match=re.exec(prose)))assert.ok(prose.slice(match.index+acronym.length).startsWith(' ('+D.abbreviationExpansions[acronym]+')'),x.id+' expands '+acronym);
+ }
+}
 assert.deepEqual(JSON.parse(run('JSON.stringify(session.items.slice(0,D.orientation.length).map(x=>x.id))')),D.orientation.map(x=>x.id));
 assert.deepEqual(JSON.parse(run('JSON.stringify(session.items.slice(D.orientation.length,D.orientation.length+D.basicRoute.length).map(x=>x.id))')),coreIds);
 for(const x of D.orientation){assert.equal(new Set([x.correct,...x.distractors]).size,4,x.id);assert.ok(x.foundation&&x.orientation);assert.ok(x.teach.length>50)}
@@ -122,3 +134,14 @@ run('section=0;discussionHome()');element('#discussion-five').onclick();assert.e
 run('section=0;samplesHome()');assert.match(element('#app').innerHTML,/Email Header/);assert.match(element('#app').innerHTML,/OpenSSL/);
 run('practiceHome()');element('#recall-blanks').onclick();assert.equal(run('session.mode'),'flash');assert.ok(run('session.total')>=D.cloze.length);assert.equal(run('session.items.filter(x=>D.cloze.some(c=>c.id===x.id)).length'),D.cloze.length);
 console.log('PASS CIS 425: 21 exact professor examples, 19 source records, 84 lessons, chapter/lecture coverage, beginner route, 5/7 discussions, isolated progress, exam scoring, retries, flashcards, blank recall, navigation, and RSA.');
+run('start("practice",[D.questions[7]]);grade(session.items[0],true,session.items[0].correct);advance();grade(session.items[session.index],false,"wrong")');
+const savedIndex=run('session.index'),savedCard=run('session.items[session.index].id'),savedXP=run('progress.xp'),savedTotal=run('session.total');
+run('session=null;navigate("teach")');assert.match(element('#app').innerHTML,/Continue where you left off/);assert.match(element('#app').innerHTML,/Restart this session/);
+run('resumeSavedSession()');assert.equal(run('session.index'),savedIndex);assert.equal(run('session.items[session.index].id'),savedCard);assert.equal(run('session.graded'),true);assert.equal(run('progress.xp'),savedXP);assert.equal(run('session.cleared.size'),1);
+const retainedLessons=run('JSON.stringify(progress.lessons)');run('resumeSavedSession(true)');assert.equal(run('session.index'),0);assert.equal(run('session.total'),savedTotal);assert.equal(run('session.items.length'),savedTotal);assert.equal(run('session.cleared.size'),0);assert.equal(run('progress.xp'),savedXP);assert.equal(run('JSON.stringify(progress.lessons)'),retainedLessons);
+run('start("flash",[D.questions[5]])');element('#flip').onclick();run('session=null;resumeSavedSession()');assert.equal(run('session.revealed'),true);
+run('start("exam",D.trueFalse.slice(0,2));grade(session.items[0],true,session.items[0].correct);advance();session=null;resumeSavedSession()');assert.equal(run('session.mode'),'exam');assert.equal(run('session.index'),1);assert.equal(run('session.right'),1);
+run('session.index=session.items.length;finish()');assert.equal(run('readActiveSession()'),null);
+run('start("practice",D.questions)');assert.ok(saved.get('cis425-midterm-v1-active-session').length<2000000,'Compact session storage');
+assert.match(read('dist/cis425.js'),/fn\(\);showSavedSession\(\)/);
+console.log('PASS CIS 425 session restore: exact position, graded feedback, no duplicate XP, restart retains overall progress, flash reveal, exam score, completed-session cleanup, and compact storage.');
