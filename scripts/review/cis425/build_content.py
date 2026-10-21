@@ -316,6 +316,8 @@ D['references']=[dict(title=t,url=u,questions=[]) for t,u in [
 ('Assigned blockchain teaching demonstration','https://andersbrownworth.com/blockchain/')]]
 from enrich_content import enrich
 enrich(D)
+from complete_scope import complete_scope
+complete_scope(D)
 from sample_prompts import attach_samples
 attach_samples(D)
 (ROOT/'dist/cis425-content.json').write_text(json.dumps(D,ensure_ascii=False,indent=2),encoding='utf-8')

@@ -1025,7 +1025,7 @@
       "section": 2,
       "title": "Defense in depth and architecture",
       "q": "How do choke points, visibility, availability, and scalability guide network defense?",
-      "answer": "Use safeguards at both perimeter and endpoint. A choke point is a controlled entry or exit where traffic can be inspected; internal segmentation also matters. Visibility requires useful telemetry at these boundaries and on hosts. Redundancy reduces single points of failure, while scalability supports changing workload. Balance security with business availability, budget, and capacity.",
+      "answer": "Use safeguards at both perimeter and endpoint. A choke point is a controlled entry or exit where traffic can be inspected; internal segmentation also matters. Visibility requires useful telemetry at these boundaries and on hosts. Redundancy reduces single points of failure, while scalability supports changing workload. Balance security with business availability, budget, and capacity. The castle analogy illustrates defense in depth: a gate, walls, guards, and internal locks protect different boundaries. In a business, filtering, MFA, least privilege, application allowlisting, EDR, monitoring, and recovery provide complementary layers. If a phishing message passes the filter, other layers can still restrict execution, account access, lateral movement, and damage.",
       "teach": "A strong front door cannot show what is happening inside every room. Host and internal telemetry fill that gap.",
       "example": "A retailer inspects gateway traffic, segments payment systems, collects endpoint events, and uses redundant devices to avoid a single outage.",
       "correct": "Layered inspection and telemetry with capacity and availability planning",
@@ -1157,7 +1157,7 @@
       "section": 3,
       "title": "SQL injection versus XSS",
       "q": "What changes when malicious input reaches a SQL query versus a browser?",
-      "answer": "SQL injection makes untrusted input influence database query structure. Parameterized queries keep data separate from SQL commands; least-privilege database accounts limit harm. XSS causes attacker-controlled script to execute in a user’s browser in a trusted site’s context. Use context-aware output encoding, safe APIs, and appropriate sanitization for allowed HTML. Input validation supports both but is insufficient alone. WebGoat is a deliberately vulnerable teaching application. Neither attack is limited to one operating system.",
+      "answer": "SQL injection makes untrusted input influence database query structure. Parameterized queries keep data separate from SQL commands; least-privilege database accounts limit harm. XSS causes attacker-controlled script to execute in a user’s browser in a trusted site’s context. Use context-aware output encoding, safe APIs, and appropriate sanitization for allowed HTML. Input validation supports both but is insufficient alone. WebGoat is a deliberately vulnerable teaching application. Neither attack is limited to one operating system. A buffer overflow occurs when a program writes beyond a buffer’s allocated boundary. It can corrupt adjacent memory, crash the program, or enable code execution. Prevent it through bounds checking, memory-safe programming, and patching; DEP/NX, ASLR, and stack protections add mitigation. SQL injection instead changes a database command through unsafe input; XSS executes injected content in a victim browser. These are different interpreters and require different defenses.",
       "teach": "Ask where the injected content is interpreted: database query engine or victim browser. XSS is not automatically full server control.",
       "example": "A search value must remain a SQL parameter. A comment displayed on a page must remain text or sanitized allowed HTML rather than executable script.",
       "correct": "SQLi changes query interpretation; XSS executes script in the browser",
@@ -1227,7 +1227,7 @@
       "section": 4,
       "title": "Metasploit and SET business case",
       "q": "What do the Metasploit and SET labs demonstrate for a business?",
-      "answer": "Metasploit organizes authorized security testing through exploit, payload, auxiliary, and post-exploitation capabilities. SET is a separate TrustedSec social-engineering toolkit that can integrate with Metasploit; it is not simply a Metasploit module. The credential-harvesting lab demonstrates how user trust can disclose credentials without a software exploit. Prevent with training, filtering, phishing-resistant MFA, and login monitoring. If credentials are disclosed, report, reset affected secrets from a trusted device, revoke sessions, and investigate related access.",
+      "answer": "Metasploit organizes authorized security testing through exploit, payload, auxiliary, and post-exploitation capabilities. SET is a separate TrustedSec social-engineering toolkit that can integrate with Metasploit; it is not simply a Metasploit module. The credential-harvesting lab demonstrates how user trust can disclose credentials without a software exploit. Prevent with training, filtering, phishing-resistant MFA, and login monitoring. If credentials are disclosed, report, reset affected secrets from a trusted device, revoke sessions, and investigate related access. MFA combines distinct factor categories: something you know, have, or are. A password plus another password is not MFA. MFA is a major defense against stolen passwords; phishing-resistant methods such as FIDO/WebAuthn resist deceptive-site authentication. Account monitoring, session revocation, least privilege, and endpoint security remain necessary alongside MFA.",
       "teach": "Explain the weakness, business consequence, evidence, and defense. Exact tool-menu commands are not the stated exam priority.",
       "example": "A fake staff login collects a test password in the isolated lab. A business analogue is account takeover leading to exposed records or fraudulent actions.",
       "correct": "Structured testing and social-engineering simulation reveal technical and human weaknesses",
@@ -1268,7 +1268,7 @@
       "section": 4,
       "title": "Keylogger and encryption boundaries",
       "q": "Why can a keylogger steal information even when a website uses HTTPS?",
-      "answer": "A keylogger records input on the endpoint, often before TLS encrypts it for transport. Software variants may intercept input APIs, run with elevated privileges, or observe forms; hardware variants can sit between keyboard and computer. Not every keylogger requires process injection or admin rights. Defend with endpoint monitoring, least privilege, updates, application controls, physical inspection where appropriate, and phishing-resistant authentication. Transport encryption alone cannot secure a compromised endpoint.",
+      "answer": "A keylogger records input on the endpoint, often before TLS encrypts it for transport. Software variants may intercept input APIs, run with elevated privileges, or observe forms; hardware variants can sit between keyboard and computer. Not every keylogger requires process injection or admin rights. Defend with endpoint monitoring, least privilege, updates, application controls, physical inspection where appropriate, and phishing-resistant authentication. Transport encryption alone cannot secure a compromised endpoint. Phishing is an important delivery route in the lab context: a deceptive attachment or download may install a software keylogger. Other routes include compromised software, exploitation, and physical installation of hardware. A cloned login page captures submitted credentials directly and does not require a keylogger. Physical access controls address hardware capture; endpoint controls address malicious software.",
       "teach": "Protection during transmission does not protect the moment data is typed on a compromised device.",
       "example": "The lab’s isolated victim records test keystrokes. An organization should investigate the endpoint and account access rather than assume HTTPS prevented disclosure.",
       "correct": "The endpoint can capture keystrokes before transport encryption",
@@ -1301,7 +1301,7 @@
       "section": 5,
       "title": "Hardening and patch workflow",
       "q": "What belongs in OS hardening and a safe patch rollout?",
-      "answer": "Inventory assets, apply tested updates, use standard-user accounts, remove unnecessary services, enable appropriate endpoint firewall and protection, restrict software execution, and monitor changes. A patch workflow downloads, tests, pilots, schedules, deploys, and verifies, with rollback planning. NAC checks access posture; GPO distributes domain policy. Patching addresses known vulnerabilities but does not eliminate zero-days. Legacy tool names in notes are historical examples, not a current shopping list.",
+      "answer": "Inventory assets, apply tested updates, use standard-user accounts, remove unnecessary services, enable appropriate endpoint firewall and protection, restrict software execution, and monitor changes. A patch workflow downloads, tests, pilots, schedules, deploys, and verifies, with rollback planning. NAC checks access posture; GPO distributes domain policy. Patching addresses known vulnerabilities but does not eliminate zero-days. Legacy tool names in notes are historical examples, not a current shopping list. Use a standard non-administrator account for routine work and elevate only for approved tasks. Maintain an asset inventory, remove unnecessary software, disable unneeded services, restrict exposed ports, configure host firewalls, keep antivirus/EDR current, and enable appropriate automatic updates. Test and stage changes where needed, verify installation, and monitor failures. An antivirus detects known or suspicious malicious content; EDR adds investigation telemetry and response capabilities.",
       "teach": "Reduce attack surface and limit damage before an incident. Verify that deployed controls actually work.",
       "example": "A business tests a browser update in a representative VM, deploys to a pilot group, monitors compatibility, then expands rollout.",
       "correct": "Test updates, reduce services and privileges, enforce controls, and verify",
@@ -1334,7 +1334,7 @@
       "section": 5,
       "title": "Visibility and incident interpretation",
       "q": "How should an analyst interpret an attack timeline?",
-      "answer": "Correlate host process events, network connections, authentication logs, and file changes. A SOC coordinates monitoring and response. EDR supplies endpoint detection and response evidence. Reconnaissance gathers information; privilege escalation increases rights; credential dumping extracts stored authentication material; SMB commonly supports network file sharing. Process hollowing replaces or maps malicious code into another process context. PowerShell is an administration shell and scripting environment; a sandbox is an isolated execution environment. DLL means Dynamic Link Library. Infiltration gains entry; exfiltration removes information.",
+      "answer": "Correlate host process events, network connections, authentication logs, and file changes. A SOC coordinates monitoring and response. EDR supplies endpoint detection and response evidence. Reconnaissance gathers information; privilege escalation increases rights; credential dumping extracts stored authentication material; SMB commonly supports network file sharing. Process hollowing replaces or maps malicious code into another process context. PowerShell is an administration shell and scripting environment; a sandbox is an isolated execution environment. DLL means Dynamic Link Library. Infiltration gains entry; exfiltration removes information. For a business explanation, connect the sequence to impact: initial access may expose accounts; privilege escalation expands access; credential dumping can enable impersonation; process hollowing can conceal execution; C2 carries remote instructions; exfiltration removes data. Correlate identity, process, file, and network evidence. The SOC investigates and coordinates containment; EDR can expose process ancestry and support endpoint isolation. A penetration test demonstrates a weakness and its potential consequences; it does not by itself prove a real breach occurred.",
       "teach": "Separate the tools, techniques, evidence, and outcomes. Seeing a tool name alone does not establish malicious intent.",
       "example": "An Office process starts unusual PowerShell, followed by a new outbound connection and credential access. Build a timeline, identify affected hosts, preserve evidence, and contain according to the incident plan.",
       "correct": "Correlate process, network, identity, and file evidence into a timeline",
@@ -1598,7 +1598,7 @@
       "section": 8,
       "title": "TCP UDP IP and handshake",
       "q": "How do TCP, UDP, and IP differ, and what is the TCP handshake?",
-      "answer": "TCP provides a reliable ordered byte stream, using SYN, SYN-ACK, ACK for conventional connection establishment. UDP provides datagrams without TCP-style delivery or ordering guarantees and is useful where applications tolerate loss or implement their own recovery. Both operate at the transport layer. IP addresses and routes packets at the network layer with best-effort delivery. UDP is not restricted to private networks, and TCP does not guarantee timeliness or encryption. Packet lengths can vary.",
+      "answer": "TCP provides a reliable ordered byte stream, using SYN, SYN-ACK, ACK for conventional connection establishment. UDP provides datagrams without TCP-style delivery or ordering guarantees and is useful where applications tolerate loss or implement their own recovery. Both operate at the transport layer. IP addresses and routes packets at the network layer with best-effort delivery. UDP is not restricted to private networks, and TCP does not guarantee timeliness or encryption. Packet lengths can vary. A network packet is a unit of data handled at the network layer, not the smallest possible unit of transmission. Its header contains addressing and control fields; its payload (body) carries the data, including higher-layer headers. Bits, link-layer frames, IP packets, and TCP segments name different units. A TCP reverse shell uses TCP for the outbound shell connection; TCP reliability does not make that connection trustworthy.",
       "teach": "Reliability, latency tradeoffs, and routing are separate design concerns.",
       "example": "A voice application may prioritize timely delivery over retransmitting old audio; a file transfer needs all bytes. Both rely on IP routing.",
       "correct": "TCP reliable stream; UDP datagrams; IP best-effort routing",
@@ -5322,6 +5322,198 @@
       "answer": "Platform as a Service supplies the application platform; the customer still has application and data responsibilities.",
       "example": "An IaaS customer still patches its own guest OS. A SaaS customer may not patch the vendor’s servers but still controls its own user access and data-sharing choices.",
       "format": "mc"
+    },
+    {
+      "id": "425-scope-check-1",
+      "source": 42,
+      "section": 8,
+      "q": "An IP packet contains a TCP header and application data. Which part of the IP packet carries them?",
+      "correct": "The IP payload",
+      "distractors": [
+        "Only the IP source address",
+        "Only the link preamble",
+        "The private signing key"
+      ],
+      "answer": "Encapsulation places higher-layer headers and data inside the lower layer’s payload.",
+      "teach": "Encapsulation places higher-layer headers and data inside the lower layer’s payload.",
+      "example": "A voice application may prioritize timely delivery over retransmitting old audio; a file transfer needs all bytes. Both rely on IP routing.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-2",
+      "source": 32,
+      "section": 4,
+      "q": "A fake login page captures a typed password. Must a keylogger have been installed?",
+      "correct": "No; the form itself can send the submitted credentials to the attacker",
+      "distractors": [
+        "Yes; every phishing page installs keyboard hardware",
+        "Yes; HTTPS only works with keyloggers",
+        "No; passwords cannot be captured"
+      ],
+      "answer": "Credential harvesting and keystroke logging are different capture mechanisms.",
+      "teach": "Credential harvesting and keystroke logging are different capture mechanisms.",
+      "example": "The lab’s isolated victim records test keystrokes. An organization should investigate the endpoint and account access rather than assume HTTPS prevented disclosure.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-3",
+      "source": 29,
+      "section": 3,
+      "q": "A program writes past the end of a memory array and corrupts adjacent memory. What is the flaw?",
+      "correct": "Buffer overflow",
+      "distractors": [
+        "SQL injection by definition",
+        "Cross-site scripting by definition",
+        "A collision in SHA-256"
+      ],
+      "answer": "A memory boundary is exceeded; SQLi and XSS involve different interpreters.",
+      "teach": "A memory boundary is exceeded; SQLi and XSS involve different interpreters.",
+      "example": "A search value must remain a SQL parameter. A comment displayed on a page must remain text or sanitized allowed HTML rather than executable script.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-4",
+      "source": 66,
+      "section": 2,
+      "q": "A company wants to block employee access to known malicious website categories. Which course device fits best?",
+      "correct": "A filtering proxy or secure web gateway",
+      "distractors": [
+        "A passive IDS with no enforcement",
+        "A keyboard logger",
+        "A plain packet checksum"
+      ],
+      "answer": "The intermediary can enforce URL, destination, and category policies.",
+      "teach": "The intermediary can enforce URL, destination, and category policies.",
+      "example": "A school needs to restrict gambling sites and stop unknown executables. A web proxy addresses the browsing policy; application controls address execution.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-5",
+      "source": 66,
+      "section": 2,
+      "q": "Which control most directly prevents an unapproved executable from running?",
+      "correct": "Application allowlisting",
+      "distractors": [
+        "A passive network IDS alone",
+        "A larger Internet connection",
+        "A digital signature typed into email"
+      ],
+      "answer": "Execution policy belongs to application control; observing network traffic is not the same operation.",
+      "teach": "Execution policy belongs to application control; observing network traffic is not the same operation.",
+      "example": "A school needs to restrict gambling sites and stop unknown executables. A web proxy addresses the browsing policy; application controls address execution.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-6",
+      "source": 25,
+      "section": 2,
+      "q": "A phishing email passes filtering. Why can defense in depth still reduce damage?",
+      "correct": "Other layers can restrict authentication, execution, privileges, and outbound activity",
+      "distractors": [
+        "All layers automatically fail together",
+        "A castle analogy replaces endpoint controls",
+        "Only a stronger password matters"
+      ],
+      "answer": "Layers protect different boundaries and actions rather than relying on one perfect filter.",
+      "teach": "Layers protect different boundaries and actions rather than relying on one perfect filter.",
+      "example": "A retailer inspects gateway traffic, segments payment systems, collects endpoint events, and uses redundant devices to avoid a single outage.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-7",
+      "source": 31,
+      "section": 4,
+      "q": "A user enters a password and then a second password. Is that MFA?",
+      "correct": "No; both are the same knowledge-factor category",
+      "distractors": [
+        "Yes; two prompts always mean two factors",
+        "Yes; any longer password is MFA",
+        "No; MFA requires exactly three factors"
+      ],
+      "answer": "MFA requires distinct factor categories, such as knowledge and possession.",
+      "teach": "MFA requires distinct factor categories, such as knowledge and possession.",
+      "example": "A fake staff login collects a test password in the isolated lab. A business analogue is account takeover leading to exposed records or fraudulent actions.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-8",
+      "source": 34,
+      "section": 5,
+      "q": "Why does a SOC need a timeline linking identity, endpoint, and network evidence?",
+      "correct": "To connect activity, assess scope and impact, and choose containment actions",
+      "distractors": [
+        "To assume every alert proves complete theft",
+        "To avoid investigating host processes",
+        "To replace all preventive controls"
+      ],
+      "answer": "A connected sequence supports better decisions than an isolated alert.",
+      "teach": "A connected sequence supports better decisions than an isolated alert.",
+      "example": "An Office process starts unusual PowerShell, followed by a new outbound connection and credential access. Build a timeline, identify affected hosts, preserve evidence, and contain according to the incident plan.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-9",
+      "source": 33,
+      "section": 5,
+      "q": "Why use a non-admin account for everyday work?",
+      "correct": "To limit what ordinary activity or a compromised process can change",
+      "distractors": [
+        "To make phishing messages impossible",
+        "To remove the need for patching",
+        "To guarantee all files are encrypted"
+      ],
+      "answer": "Least privilege reduces authority and potential impact; it complements other controls.",
+      "teach": "Least privilege reduces authority and potential impact; it complements other controls.",
+      "example": "A business tests a browser update in a representative VM, deploys to a pilot group, monitors compatibility, then expands rollout.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-10",
+      "source": 20,
+      "section": 7,
+      "q": "Does hashing alone make a blockchain impossible to alter?",
+      "correct": "No; hash links reveal changes, while validation and consensus protect the accepted history",
+      "distractors": [
+        "Yes; any SHA-256 hash permanently freezes all computers",
+        "Yes; signatures are unnecessary",
+        "No; blocks contain no hashes"
+      ],
+      "answer": "Tamper evidence and agreement on history are separate but complementary mechanisms.",
+      "teach": "Tamper evidence and agreement on history are separate but complementary mechanisms.",
+      "example": "Change an old record in a teaching chain. Its hash and descendants no longer match. Rehashing a local copy is easy in a toy demo; convincing a real consensus network is the costly part.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-11",
+      "source": 61,
+      "section": 7,
+      "q": "A valid digital signature is attached to a readable document. What does it provide?",
+      "correct": "Origin/integrity evidence under the trusted key, without automatically hiding the document",
+      "distractors": [
+        "Automatic secrecy of the document",
+        "Proof every statement is true",
+        "Proof the private key was never compromised"
+      ],
+      "answer": "Signatures and encryption protect different goals; attribution depends on key custody and trust.",
+      "teach": "Signatures and encryption protect different goals; attribution depends on key custody and trust.",
+      "example": "Alice signs an invoice. If an attacker changes the amount, Bob’s verification fails. If Bob instead trusts an attacker’s substitute public key, he has not authenticated Alice.",
+      "format": "mc"
+    },
+    {
+      "id": "425-scope-check-12",
+      "source": 34,
+      "section": 5,
+      "q": "A test reverse shell reaches an outside controller from an employee workstation. What business risk does it demonstrate?",
+      "correct": "Remote command access could enable disruption, further access, or data theft within the process’s permissions",
+      "distractors": [
+        "That every customer record has already been stolen",
+        "That TCP itself supplies authorization",
+        "That the host needs no recovery assessment"
+      ],
+      "answer": "Connect the demonstrated capability to potential consequences without inventing evidence of actual losses.",
+      "teach": "Connect the demonstrated capability to potential consequences without inventing evidence of actual losses.",
+      "example": "An Office process starts unusual PowerShell, followed by a new outbound connection and credential access. Build a timeline, identify affected hosts, preserve evidence, and contain according to the incident plan.",
+      "format": "mc"
     }
   ],
   "cloze": [
@@ -6954,6 +7146,601 @@
         "A malware signature database only",
         "A network naming hierarchy"
       ]
+    },
+    {
+      "id": "425-scope-term-15-80",
+      "source": 15,
+      "section": 8,
+      "term": "Checksum",
+      "exp": "",
+      "q": "What is Checksum?",
+      "correct": "An error-detection value recalculated by a receiver and compared with the transmitted value to detect corruption; an ordinary checksum does not authenticate a sender.",
+      "answer": "An error-detection value recalculated by a receiver and compared with the transmitted value to detect corruption; an ordinary checksum does not authenticate a sender.",
+      "teach": "An error-detection value recalculated by a receiver and compared with the transmitted value to detect corruption; an ordinary checksum does not authenticate a sender. An error check catches transmission damage. Authenticating malicious changes requires a stronger, trusted construction.",
+      "example": "A bit flips while a segment is transmitted and the checksum comparison fails. The receiver can discard it; reliable transport may retransmit.",
+      "distractors": [
+        "A secret signing key",
+        "Encryption that hides packet content",
+        "Proof against deliberate attacker recomputation"
+      ]
+    },
+    {
+      "id": "425-scope-term-12-81",
+      "source": 12,
+      "section": 2,
+      "term": "False positive",
+      "exp": "",
+      "q": "What is False positive?",
+      "correct": "An alert that incorrectly labels benign activity as malicious or suspicious.",
+      "answer": "An alert that incorrectly labels benign activity as malicious or suspicious.",
+      "teach": "An alert that incorrectly labels benign activity as malicious or suspicious. Positive means the system says threat. False means that conclusion is wrong.",
+      "example": "A legitimate backup triggers a malware alert: false positive. A real malicious download produces no alert: false negative.",
+      "distractors": [
+        "A missed real attack",
+        "A correctly blocked attack",
+        "A successful key exchange"
+      ]
+    },
+    {
+      "id": "425-scope-term-18-82",
+      "source": 18,
+      "section": 7,
+      "term": "Authentication",
+      "exp": "",
+      "q": "What is Authentication?",
+      "correct": "Checking a claimed identity or message origin using appropriate evidence and trusted mechanisms.",
+      "answer": "Checking a claimed identity or message origin using appropriate evidence and trusted mechanisms.",
+      "teach": "Checking a claimed identity or message origin using appropriate evidence and trusted mechanisms. Ask three separate questions: who can read, who created or approved it, and what details are being obscured?",
+      "example": "A sender signs a document with the sender’s private signing key and protects the content for the recipient. The recipient decrypts and verifies using the appropriate keys and a trusted identity binding.",
+      "distractors": [
+        "Hiding every message automatically",
+        "Granting every verified user administrator rights",
+        "Only making code hard to read"
+      ]
+    },
+    {
+      "id": "425-scope-term-18-83",
+      "source": 18,
+      "section": 7,
+      "term": "Obfuscation",
+      "exp": "",
+      "q": "What is Obfuscation?",
+      "correct": "Making information or code harder to understand; it does not by itself establish strong confidentiality or authenticity.",
+      "answer": "Making information or code harder to understand; it does not by itself establish strong confidentiality or authenticity.",
+      "teach": "Making information or code harder to understand; it does not by itself establish strong confidentiality or authenticity. Ask three separate questions: who can read, who created or approved it, and what details are being obscured?",
+      "example": "A sender signs a document with the sender’s private signing key and protects the content for the recipient. The recipient decrypts and verifies using the appropriate keys and a trusted identity binding.",
+      "distractors": [
+        "Proof of who sent a message",
+        "An automatic replacement for encryption",
+        "A network routing guarantee"
+      ]
+    },
+    {
+      "id": "425-scope-term-26-84",
+      "source": 26,
+      "section": 2,
+      "term": "Firewall",
+      "exp": "",
+      "q": "What is Firewall?",
+      "correct": "A control that permits or blocks network traffic according to configured policy and inspection capabilities.",
+      "answer": "A control that permits or blocks network traffic according to configured policy and inspection capabilities.",
+      "teach": "A control that permits or blocks network traffic according to configured policy and inspection capabilities. Detection versus prevention describes the response, not whether the tool possesses its own intelligence.",
+      "example": "An alert-only sensor reports suspicious traffic. An inline prevention rule blocks the same traffic, potentially interrupting legitimate service if the rule is wrong.",
+      "distractors": [
+        "A guarantee all permitted traffic is harmless",
+        "A keylogger",
+        "Only a passive log archive"
+      ]
+    },
+    {
+      "id": "425-scope-term-33-85",
+      "source": 33,
+      "section": 5,
+      "term": "Antivirus",
+      "exp": "",
+      "q": "What is Antivirus?",
+      "correct": "Software that detects, blocks, or removes malicious code using signatures and other analysis techniques.",
+      "answer": "Software that detects, blocks, or removes malicious code using signatures and other analysis techniques.",
+      "teach": "Software that detects, blocks, or removes malicious code using signatures and other analysis techniques. Reduce attack surface and limit damage before an incident. Verify that deployed controls actually work.",
+      "example": "A business tests a browser update in a representative VM, deploys to a pilot group, monitors compatibility, then expands rollout.",
+      "distractors": [
+        "A guarantee every threat is detected",
+        "A replacement for patching",
+        "A protocol for Bitcoin consensus"
+      ]
+    },
+    {
+      "id": "425-scope-term-13-86",
+      "source": 13,
+      "section": 2,
+      "term": "Bot",
+      "exp": "",
+      "q": "What is Bot?",
+      "correct": "A remotely controlled program on a compromised system that can receive instructions through command and control.",
+      "answer": "A remotely controlled program on a compromised system that can receive instructions through command and control.",
+      "teach": "A remotely controlled program on a compromised system that can receive instructions through command and control. C2 means command and control. In this question, the remote server issuing instructions identifies the program as a bot; the collection of controlled devices is a botnet.",
+      "example": "A timed destructive routine is a logic bomb. An infected workstation waiting for remote instructions is a bot. Both can be dormant, but they are classified by different behavior.",
+      "distractors": [
+        "Every dormant routine regardless of purpose",
+        "A public signature verification key",
+        "A packet error check"
+      ]
+    },
+    {
+      "id": "425-scope-term-17-87",
+      "source": 17,
+      "section": 3,
+      "term": "Adware",
+      "exp": "",
+      "q": "What is Adware?",
+      "correct": "Software characterized by unwanted advertising and sometimes associated tracking or browser redirection.",
+      "answer": "Software characterized by unwanted advertising and sometimes associated tracking or browser redirection.",
+      "teach": "Software characterized by unwanted advertising and sometimes associated tracking or browser redirection. Compare how malware spreads, hides, and acts. These categories can overlap: a backdoor may install spyware that includes a keylogger.",
+      "example": "An infected document executes a malicious macro; a network worm spreads independently; a fake antivirus page scares a user into paying. Each has a different mechanism and defense.",
+      "distractors": [
+        "Always a self-spreading network worm",
+        "Only hardware that records keystrokes",
+        "A legitimate transaction signature"
+      ]
+    },
+    {
+      "id": "425-scope-term-1-88",
+      "source": 1,
+      "section": 7,
+      "term": "Plaintext",
+      "exp": "",
+      "q": "What is Plaintext?",
+      "correct": "Readable, unencrypted data before encryption or after decryption.",
+      "answer": "Readable, unencrypted data before encryption or after decryption.",
+      "teach": "Readable, unencrypted data before encryption or after decryption. Plaintext is the readable message. Ciphertext is its encrypted representation. A digest is a different kind of output.",
+      "example": "A payroll file is encrypted before transfer. Someone who intercepts the file sees ciphertext and needs the appropriate decryption key to read it.",
+      "distractors": [
+        "The encrypted output",
+        "A public-key fingerprint only",
+        "A packet error counter"
+      ]
+    },
+    {
+      "id": "425-scope-term-1-89",
+      "source": 1,
+      "section": 7,
+      "term": "Ciphertext",
+      "exp": "",
+      "q": "What is Ciphertext?",
+      "correct": "The encrypted representation of plaintext, recovered using the appropriate decryption method and key.",
+      "answer": "The encrypted representation of plaintext, recovered using the appropriate decryption method and key.",
+      "teach": "The encrypted representation of plaintext, recovered using the appropriate decryption method and key. Plaintext is the readable message. Ciphertext is its encrypted representation. A digest is a different kind of output.",
+      "example": "A payroll file is encrypted before transfer. Someone who intercepts the file sees ciphertext and needs the appropriate decryption key to read it.",
+      "distractors": [
+        "A readable original message",
+        "A reversible SHA-256 digest",
+        "A firewall rule"
+      ]
+    },
+    {
+      "id": "425-scope-term-1-90",
+      "source": 1,
+      "section": 7,
+      "term": "Encryption",
+      "exp": "",
+      "q": "What is Encryption?",
+      "correct": "Transforming plaintext into ciphertext using a cryptographic algorithm and key.",
+      "answer": "Transforming plaintext into ciphertext using a cryptographic algorithm and key.",
+      "teach": "Transforming plaintext into ciphertext using a cryptographic algorithm and key. Plaintext is the readable message. Ciphertext is its encrypted representation. A digest is a different kind of output.",
+      "example": "A payroll file is encrypted before transfer. Someone who intercepts the file sees ciphertext and needs the appropriate decryption key to read it.",
+      "distractors": [
+        "Computing an ordinary packet checksum",
+        "Deleting all copies of a file",
+        "Proving every claim is true"
+      ]
+    },
+    {
+      "id": "425-scope-term-1-91",
+      "source": 1,
+      "section": 7,
+      "term": "Decryption",
+      "exp": "",
+      "q": "What is Decryption?",
+      "correct": "Recovering plaintext from ciphertext using the appropriate algorithm and key.",
+      "answer": "Recovering plaintext from ciphertext using the appropriate algorithm and key.",
+      "teach": "Recovering plaintext from ciphertext using the appropriate algorithm and key. Plaintext is the readable message. Ciphertext is its encrypted representation. A digest is a different kind of output.",
+      "example": "A payroll file is encrypted before transfer. Someone who intercepts the file sees ciphertext and needs the appropriate decryption key to read it.",
+      "distractors": [
+        "Reversing every cryptographic hash",
+        "Generating a firewall alert",
+        "Changing a network port"
+      ]
+    },
+    {
+      "id": "425-scope-term-42-92",
+      "source": 42,
+      "section": 8,
+      "term": "Data packet",
+      "exp": "",
+      "q": "What is Data packet?",
+      "correct": "A network-layer unit containing a header and payload; the payload can include higher-layer headers and application data.",
+      "answer": "A network-layer unit containing a header and payload; the payload can include higher-layer headers and application data.",
+      "teach": "A network-layer unit containing a header and payload; the payload can include higher-layer headers and application data. Reliability, latency tradeoffs, and routing are separate design concerns.",
+      "example": "A voice application may prioritize timely delivery over retransmitting old audio; a file transfer needs all bytes. Both rely on IP routing.",
+      "distractors": [
+        "The smallest possible physical transmission unit",
+        "Only a readable application message",
+        "An entire Internet connection"
+      ]
+    },
+    {
+      "id": "425-scope-term-42-93",
+      "source": 42,
+      "section": 8,
+      "term": "Header",
+      "exp": "",
+      "q": "What is Header?",
+      "correct": "Control information preceding carried data, such as IP addressing or TCP sequence fields at the relevant layer.",
+      "answer": "Control information preceding carried data, such as IP addressing or TCP sequence fields at the relevant layer.",
+      "teach": "Control information preceding carried data, such as IP addressing or TCP sequence fields at the relevant layer. Reliability, latency tradeoffs, and routing are separate design concerns.",
+      "example": "A voice application may prioritize timely delivery over retransmitting old audio; a file transfer needs all bytes. Both rely on IP routing.",
+      "distractors": [
+        "Always the complete application file",
+        "A secret private key",
+        "The same thing as every payload"
+      ]
+    },
+    {
+      "id": "425-scope-term-42-94",
+      "source": 42,
+      "section": 8,
+      "term": "Payload / body",
+      "exp": "",
+      "q": "What is Payload / body?",
+      "correct": "The content carried by a protocol unit; at a lower layer it can include another layer’s header and data.",
+      "answer": "The content carried by a protocol unit; at a lower layer it can include another layer’s header and data.",
+      "teach": "The content carried by a protocol unit; at a lower layer it can include another layer’s header and data. Reliability, latency tradeoffs, and routing are separate design concerns.",
+      "example": "A voice application may prioritize timely delivery over retransmitting old audio; a file transfer needs all bytes. Both rely on IP routing.",
+      "distractors": [
+        "Always malware",
+        "Only the destination address",
+        "A guarantee of encrypted content"
+      ]
+    },
+    {
+      "id": "425-scope-term-38-95",
+      "source": 38,
+      "section": 7,
+      "term": "Symmetric cryptography",
+      "exp": "",
+      "q": "What is Symmetric cryptography?",
+      "correct": "Encryption and decryption use a shared secret key; secure distribution and protection of that key are essential.",
+      "answer": "Encryption and decryption use a shared secret key; secure distribution and protection of that key are essential.",
+      "teach": "Encryption and decryption use a shared secret key; secure distribution and protection of that key are essential. For secrecy think recipient; for signature think sender. Protect private and shared secret keys.",
+      "example": "Alice wants only Bob to read a message and wants Bob to verify her approval. She protects it for Bob and signs it using her own signing key.",
+      "distractors": [
+        "Everyone publishes the decryption key",
+        "A hash with a reverse operation",
+        "Only a signature verification method"
+      ]
+    },
+    {
+      "id": "425-scope-term-38-96",
+      "source": 38,
+      "section": 7,
+      "term": "Asymmetric cryptography",
+      "exp": "",
+      "q": "What is Asymmetric cryptography?",
+      "correct": "Cryptography using a related public/private key pair, with different operations for encryption or signatures.",
+      "answer": "Cryptography using a related public/private key pair, with different operations for encryption or signatures.",
+      "teach": "Cryptography using a related public/private key pair, with different operations for encryption or signatures. For secrecy think recipient; for signature think sender. Protect private and shared secret keys.",
+      "example": "Alice wants only Bob to read a message and wants Bob to verify her approval. She protects it for Bob and signs it using her own signing key.",
+      "distractors": [
+        "Encryption with the same shared secret only",
+        "A method without any keys",
+        "A checksum that identifies every sender"
+      ]
+    },
+    {
+      "id": "425-scope-term-38-97",
+      "source": 38,
+      "section": 7,
+      "term": "Public key",
+      "exp": "",
+      "q": "What is Public key?",
+      "correct": "The shareable member of a key pair, used for signature verification or encryption to its owner as the scheme permits.",
+      "answer": "The shareable member of a key pair, used for signature verification or encryption to its owner as the scheme permits.",
+      "teach": "The shareable member of a key pair, used for signature verification or encryption to its owner as the scheme permits. For secrecy think recipient; for signature think sender. Protect private and shared secret keys.",
+      "example": "Alice wants only Bob to read a message and wants Bob to verify her approval. She protects it for Bob and signs it using her own signing key.",
+      "distractors": [
+        "The secret signing key everyone must share",
+        "An ordinary password",
+        "A private key copied into a URL"
+      ]
+    },
+    {
+      "id": "425-scope-term-38-98",
+      "source": 38,
+      "section": 7,
+      "term": "Private key",
+      "exp": "",
+      "q": "What is Private key?",
+      "correct": "The secret member of a key pair, used for signing or decryption as the scheme permits; keep it protected.",
+      "answer": "The secret member of a key pair, used for signing or decryption as the scheme permits; keep it protected.",
+      "teach": "The secret member of a key pair, used for signing or decryption as the scheme permits; keep it protected. For secrecy think recipient; for signature think sender. Protect private and shared secret keys.",
+      "example": "Alice wants only Bob to read a message and wants Bob to verify her approval. She protects it for Bob and signs it using her own signing key.",
+      "distractors": [
+        "A public directory of all users",
+        "A packet checksum",
+        "The recipient’s freely shared verification key"
+      ]
+    },
+    {
+      "id": "425-scope-term-61-99",
+      "source": 61,
+      "section": 7,
+      "term": "Non-repudiation",
+      "exp": "",
+      "q": "What is Non-repudiation?",
+      "correct": "Evidence supporting attribution of a signed action, relying on trusted identity binding and protected signing keys.",
+      "answer": "Evidence supporting attribution of a signed action, relying on trusted identity binding and protected signing keys.",
+      "teach": "Evidence supporting attribution of a signed action, relying on trusted identity binding and protected signing keys. The signature must match both the message and the trusted sender key. Verifying a signature is different from decrypting a message for privacy.",
+      "example": "Alice signs an invoice. If an attacker changes the amount, Bob’s verification fails. If Bob instead trusts an attacker’s substitute public key, he has not authenticated Alice.",
+      "distractors": [
+        "Automatic secrecy of every signed message",
+        "Proof that signed content is true",
+        "A guarantee a key can never be stolen"
+      ]
+    },
+    {
+      "id": "425-scope-term-19-100",
+      "source": 19,
+      "section": 7,
+      "term": "SHA-256",
+      "exp": "",
+      "q": "What is SHA-256?",
+      "correct": "A cryptographic hash producing a 256-bit digest, displayed as 64 hexadecimal characters.",
+      "answer": "A cryptographic hash producing a 256-bit digest, displayed as 64 hexadecimal characters.",
+      "teach": "A cryptographic hash producing a 256-bit digest, displayed as 64 hexadecimal characters. A large output space makes a matching pair hard to find, but fixed-length outputs cannot uniquely represent every possible input.",
+      "example": "Two distinct files could share a digest. A trusted expected hash can help verify a download, but an attacker changing both file and untrusted posted hash defeats that simple comparison.",
+      "distractors": [
+        "A reversible encryption cipher",
+        "A 256-character password generator",
+        "The secret key for all Bitcoin users"
+      ]
+    },
+    {
+      "id": "425-scope-term-14-101",
+      "source": 14,
+      "section": 7,
+      "term": "Hard fork",
+      "exp": "",
+      "q": "What is Hard fork?",
+      "correct": "An incompatible consensus-rule change that can split a blockchain when participants continue following different rules.",
+      "answer": "An incompatible consensus-rule change that can split a blockchain when participants continue following different rules.",
+      "teach": "An incompatible consensus-rule change that can split a blockchain when participants continue following different rules. A protocol disagreement is different from two miners briefly finding competing blocks.",
+      "example": "One group adopts a rule that older nodes reject while another group continues the old rules. Their accepted transaction histories can diverge.",
+      "distractors": [
+        "A temporary collision between network cables",
+        "A guaranteed permanent split after every update",
+        "A method for decrypting a hash"
+      ]
+    },
+    {
+      "id": "425-scope-term-76-102",
+      "source": 76,
+      "section": 7,
+      "term": "Soft fork",
+      "exp": "",
+      "q": "What is Soft fork?",
+      "correct": "A consensus-rule tightening whose accepted blocks remain valid under the older rules; older nodes do not enforce every new restriction.",
+      "answer": "A consensus-rule tightening whose accepted blocks remain valid under the older rules; older nodes do not enforce every new restriction.",
+      "teach": "A consensus-rule tightening whose accepted blocks remain valid under the older rules; older nodes do not enforce every new restriction. The same owner might authorize two conflicting spends. The network needs rules and agreement about which valid history to accept.",
+      "example": "Two transactions spend the same previous output and both have genuine owner signatures. They cannot both enter the same valid transaction history.",
+      "distractors": [
+        "An incompatible expansion of accepted blocks",
+        "A private-key backup",
+        "A replacement for transaction signatures"
+      ]
+    },
+    {
+      "id": "425-scope-term-9-103",
+      "source": 9,
+      "section": 4,
+      "term": "Phishing",
+      "exp": "",
+      "q": "What is Phishing?",
+      "correct": "Deceptive messages or sites that impersonate a trusted source to obtain information or induce harmful actions.",
+      "answer": "Deceptive messages or sites that impersonate a trusted source to obtain information or induce harmful actions.",
+      "teach": "Deceptive messages or sites that impersonate a trusted source to obtain information or induce harmful actions. Headers provide evidence for investigation. Reading the visible sender label alone is not enough.",
+      "example": "An email claims to come from campus IT but uses a lookalike domain and urgent password language. Preserve the message and inspect headers through the approved reporting process.",
+      "distractors": [
+        "Every unsolicited advertisement",
+        "A cryptographic signature",
+        "Only attacks conducted by phone"
+      ]
+    },
+    {
+      "id": "425-scope-term-31-104",
+      "source": 31,
+      "section": 4,
+      "term": "Metasploit",
+      "exp": "",
+      "q": "What is Metasploit?",
+      "correct": "A modular penetration-testing framework for validating vulnerabilities and demonstrating their potential impact in authorized tests.",
+      "answer": "A modular penetration-testing framework for validating vulnerabilities and demonstrating their potential impact in authorized tests.",
+      "teach": "A modular penetration-testing framework for validating vulnerabilities and demonstrating their potential impact in authorized tests. Explain the weakness, business consequence, evidence, and defense. Exact tool-menu commands are not the stated exam priority.",
+      "example": "A fake staff login collects a test password in the isolated lab. A business analogue is account takeover leading to exposed records or fraudulent actions.",
+      "distractors": [
+        "A cryptographic digest",
+        "Another name for every SET feature",
+        "A guarantee a real breach occurred"
+      ]
+    },
+    {
+      "id": "425-scope-term-31-105",
+      "source": 31,
+      "section": 4,
+      "term": "Credential harvester",
+      "exp": "",
+      "q": "What is Credential harvester?",
+      "correct": "A mechanism that collects submitted login information, often through a deceptive form or cloned login page.",
+      "answer": "A mechanism that collects submitted login information, often through a deceptive form or cloned login page.",
+      "teach": "A mechanism that collects submitted login information, often through a deceptive form or cloned login page. Explain the weakness, business consequence, evidence, and defense. Exact tool-menu commands are not the stated exam priority.",
+      "example": "A fake staff login collects a test password in the isolated lab. A business analogue is account takeover leading to exposed records or fraudulent actions.",
+      "distractors": [
+        "A tool that always decrypts TLS",
+        "A synonym for patch management",
+        "A hardware firewall"
+      ]
+    },
+    {
+      "id": "425-scope-term-13-106",
+      "source": 13,
+      "section": 2,
+      "term": "C2 server",
+      "exp": "",
+      "q": "What is C2 server?",
+      "correct": "A command-and-control system that sends instructions to compromised programs and receives their communications.",
+      "answer": "A command-and-control system that sends instructions to compromised programs and receives their communications.",
+      "teach": "A command-and-control system that sends instructions to compromised programs and receives their communications. C2 means command and control. In this question, the remote server issuing instructions identifies the program as a bot; the collection of controlled devices is a botnet.",
+      "example": "A timed destructive routine is a logic bomb. An infected workstation waiting for remote instructions is a bot. Both can be dormant, but they are classified by different behavior.",
+      "distractors": [
+        "A server that automatically patches all clients",
+        "A public checksum directory",
+        "A required component of every macro virus"
+      ]
+    },
+    {
+      "id": "425-scope-term-4-107",
+      "source": 4,
+      "section": 5,
+      "term": "TCP reverse shell",
+      "exp": "",
+      "q": "What is TCP reverse shell?",
+      "correct": "A command interface whose TCP connection is initiated from the compromised host toward a controller.",
+      "answer": "A command interface whose TCP connection is initiated from the compromised host toward a controller.",
+      "teach": "A command interface whose TCP connection is initiated from the compromised host toward a controller. Direction and policy explain the result. Outbound does not mean automatically allowed, and proxy does not mean automatically secure.",
+      "example": "A workstation makes an unusual outbound connection after a malicious process starts. Correlate process and network logs, isolate the host, and restrict unnecessary egress rather than relying solely on inbound rules.",
+      "distractors": [
+        "An inbound-only connection from an attacker",
+        "A secure channel merely because it uses TCP",
+        "A guarantee every proxy is bypassed"
+      ]
+    },
+    {
+      "id": "425-scope-term-28-108",
+      "source": 28,
+      "section": 3,
+      "term": "DoS",
+      "exp": "",
+      "q": "What is DoS?",
+      "correct": "Denial of service: exhausting or disrupting resources so legitimate users cannot obtain a service.",
+      "answer": "Denial of service: exhausting or disrupting resources so legitimate users cannot obtain a service.",
+      "teach": "Denial of service: exhausting or disrupting resources so legitimate users cannot obtain a service. Bandwidth floods and application connection exhaustion stress different resources. Match mitigation to the bottleneck.",
+      "example": "A service is unavailable despite modest bandwidth because many connections remain incomplete. Appropriate connection limits and timeouts address this pattern.",
+      "distractors": [
+        "Only stealing passwords",
+        "Only changing grades",
+        "A form of digital signature"
+      ]
+    },
+    {
+      "id": "425-scope-term-29-109",
+      "source": 29,
+      "section": 3,
+      "term": "Buffer overflow",
+      "exp": "",
+      "q": "What is Buffer overflow?",
+      "correct": "Writing beyond an allocated memory buffer, potentially corrupting memory, crashing a program, or enabling execution.",
+      "answer": "Writing beyond an allocated memory buffer, potentially corrupting memory, crashing a program, or enabling execution.",
+      "teach": "Writing beyond an allocated memory buffer, potentially corrupting memory, crashing a program, or enabling execution. Ask where the injected content is interpreted: database query engine or victim browser. XSS is not automatically full server control.",
+      "example": "A search value must remain a SQL parameter. A comment displayed on a page must remain text or sanitized allowed HTML rather than executable script.",
+      "distractors": [
+        "Changing a SQL query through unsafe input",
+        "Executing script in a browser by definition",
+        "An ordinary retransmitted TCP segment"
+      ]
+    },
+    {
+      "id": "425-scope-term-33-110",
+      "source": 33,
+      "section": 5,
+      "term": "OS hardening",
+      "exp": "",
+      "q": "What is OS hardening?",
+      "correct": "Reducing an operating system’s attack surface through secure configuration, updates, restricted privileges, and protective controls.",
+      "answer": "Reducing an operating system’s attack surface through secure configuration, updates, restricted privileges, and protective controls.",
+      "teach": "Reducing an operating system’s attack surface through secure configuration, updates, restricted privileges, and protective controls. Reduce attack surface and limit damage before an incident. Verify that deployed controls actually work.",
+      "example": "A business tests a browser update in a representative VM, deploys to a pilot group, monitors compatibility, then expands rollout.",
+      "distractors": [
+        "Disabling every production firewall",
+        "Giving all users administrator access",
+        "Installing every optional service"
+      ]
+    },
+    {
+      "id": "425-scope-term-66-111",
+      "source": 66,
+      "section": 2,
+      "term": "ACL",
+      "exp": "",
+      "q": "What is ACL?",
+      "correct": "An access control list specifying which identities or traffic are permitted or denied under defined rules.",
+      "answer": "An access control list specifying which identities or traffic are permitted or denied under defined rules.",
+      "teach": "An access control list specifying which identities or traffic are permitted or denied under defined rules. Begin with the requested action. Address filtering, website mediation, and local program execution are different enforcement points.",
+      "example": "A school needs to restrict gambling sites and stop unknown executables. A web proxy addresses the browsing policy; application controls address execution.",
+      "distractors": [
+        "An automatic proof a site is safe",
+        "An encryption algorithm",
+        "A packet payload capture"
+      ]
+    },
+    {
+      "id": "425-scope-term-66-112",
+      "source": 66,
+      "section": 2,
+      "term": "Proxy server",
+      "exp": "",
+      "q": "What is Proxy server?",
+      "correct": "An intermediary that handles client requests and can enforce destination, category, authentication, and application policies.",
+      "answer": "An intermediary that handles client requests and can enforce destination, category, authentication, and application policies.",
+      "teach": "An intermediary that handles client requests and can enforce destination, category, authentication, and application policies. Begin with the requested action. Address filtering, website mediation, and local program execution are different enforcement points.",
+      "example": "A school needs to restrict gambling sites and stop unknown executables. A web proxy addresses the browsing policy; application controls address execution.",
+      "distractors": [
+        "A guarantee every malicious site is blocked",
+        "Only a passive packet recording",
+        "A tool that approves every executable"
+      ]
+    },
+    {
+      "id": "425-scope-term-25-113",
+      "source": 25,
+      "section": 2,
+      "term": "Defense in depth",
+      "exp": "",
+      "q": "What is Defense in depth?",
+      "correct": "Using complementary security layers so a failure of one control does not leave the organization wholly exposed.",
+      "answer": "Using complementary security layers so a failure of one control does not leave the organization wholly exposed.",
+      "teach": "Using complementary security layers so a failure of one control does not leave the organization wholly exposed. A strong front door cannot show what is happening inside every room. Host and internal telemetry fill that gap.",
+      "example": "A retailer inspects gateway traffic, segments payment systems, collects endpoint events, and uses redundant devices to avoid a single outage.",
+      "distractors": [
+        "Depending on one secret product",
+        "Adding identical alerts without response",
+        "Removing internal access controls"
+      ]
+    },
+    {
+      "id": "425-scope-term-34-114",
+      "source": 34,
+      "section": 5,
+      "term": "Attack chain",
+      "exp": "",
+      "q": "What is Attack chain?",
+      "correct": "A connected sequence of attacker activity, from entry and execution through access expansion and possible data theft or disruption.",
+      "answer": "A connected sequence of attacker activity, from entry and execution through access expansion and possible data theft or disruption.",
+      "teach": "A connected sequence of attacker activity, from entry and execution through access expansion and possible data theft or disruption. Separate the tools, techniques, evidence, and outcomes. Seeing a tool name alone does not establish malicious intent.",
+      "example": "An Office process starts unusual PowerShell, followed by a new outbound connection and credential access. Build a timeline, identify affected hosts, preserve evidence, and contain according to the incident plan.",
+      "distractors": [
+        "Proof every alert is an actual breach",
+        "A blockchain mining rule",
+        "A list of unrelated tools without timing"
+      ]
     }
   ],
   "references": [
@@ -7020,6 +7807,16 @@
     {
       "title": "RFC 8915 · NTS adds security to time synchronization",
       "url": "https://www.rfc-editor.org/rfc/rfc8915",
+      "questions": []
+    },
+    {
+      "title": "Rapid7 · Metasploit Framework",
+      "url": "https://help.rapid7.com/metasploit/Content/getting-started/about-msf.html",
+      "questions": []
+    },
+    {
+      "title": "MITRE ATT&CK · Process hollowing",
+      "url": "https://attack.mitre.org/techniques/T1055/012/",
       "questions": []
     }
   ],
@@ -8564,6 +9361,121 @@
           ]
         ]
       ]
+    },
+    {
+      "id": "requested-core",
+      "title": "Core topic checklist",
+      "basis": "Definitions, explanations, and application practice for every topic in the requested review list",
+      "topics": [
+        [
+          "Exam format; Chapters 1 and 3; Lectures 1–8; Labs 0–2",
+          [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            31,
+            32,
+            35
+          ]
+        ],
+        [
+          "Plaintext, ciphertext, checksums, packets, headers and payloads",
+          [
+            1,
+            15,
+            42,
+            77
+          ]
+        ],
+        [
+          "Symmetric/asymmetric keys, signatures, authenticity and non-repudiation",
+          [
+            18,
+            38,
+            59,
+            60,
+            61
+          ]
+        ],
+        [
+          "SHA-256, hash links, blockchain, Bitcoin, hard and soft forks",
+          [
+            14,
+            19,
+            20,
+            21,
+            75,
+            76
+          ]
+        ],
+        [
+          "Keyloggers, phishing, Metasploit, SET and credential harvesting",
+          [
+            9,
+            31,
+            32
+          ]
+        ],
+        [
+          "C2, credential dumping, process hollowing, privilege escalation, EDR and SOC",
+          [
+            13,
+            34,
+            82
+          ]
+        ],
+        [
+          "TCP reverse shells, DoS/DDoS, SQLi, buffer overflow and XSS",
+          [
+            4,
+            28,
+            29
+          ]
+        ],
+        [
+          "Hardening, patches, standard accounts, services/ports, updates and host protection",
+          [
+            16,
+            33,
+            71,
+            72
+          ]
+        ],
+        [
+          "Firewalls, ACLs, proxy filtering, IDS/IPS and application allowlisting",
+          [
+            26,
+            27,
+            66,
+            78
+          ]
+        ],
+        [
+          "Castle analogy, layered controls, MFA and least privilege",
+          [
+            24,
+            25,
+            31,
+            33
+          ]
+        ],
+        [
+          "Business impact, attack-chain visibility and discussion answers",
+          [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            31,
+            34
+          ]
+        ]
+      ]
     }
   ],
   "primer": [
@@ -9005,8 +9917,8 @@
   ],
   "counts": {
     "questions": 84,
-    "checks": 158,
-    "vocab": 80,
+    "checks": 170,
+    "vocab": 115,
     "cloze": 12,
     "sorts": 5,
     "trueFalse": 25,
