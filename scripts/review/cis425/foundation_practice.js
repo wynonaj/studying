@@ -24,11 +24,26 @@ function practiceLocation(x){
 function computerSetting(x){
  if(x.orientation)return `<section class="card computer-setting"><p>${esc(x.context)}</p></section>`;
  const setting=x.setting||D.topicContexts[String(x.number||x.source)]||D.practicalContexts[x.contextKey||source(x)?.contextKey];
- return setting?`<section class="card computer-setting"><p><b>Situation:</b> ${esc(setting.object)}</p><p><b>Location:</b> ${esc(setting.location)}</p>${x.topicOrientation?'':`<p><b>Security task:</b> ${esc(setting.purpose)}</p>`}${setting.example?`<p><b>Concrete example:</b> ${esc(setting.example)}</p>`:''}<details><summary>What happens and why it matters</summary><p>${esc(setting.action)}</p></details></section>`:'';
+ return setting?`<section class="card computer-setting">${setting.focus?`<p><b>Current focus:</b> ${esc(setting.focus)}</p>`:''}<p><b>Situation:</b> ${esc(setting.object)}</p><p><b>Location:</b> ${esc(setting.location)}</p>${x.topicOrientation?'':`<p><b>Security task:</b> ${esc(setting.purpose)}</p>`}${setting.example&&setting.example!==setting.object?`<p><b>Concrete example:</b> ${esc(setting.example)}</p>`:''}<details><summary>What happens and why it matters</summary><p>${esc(setting.action)}</p></details></section>`:'';
 }
 function examSetting(x){
  const setting=x.setting||D.topicContexts[String(x.number||x.source)];
  return setting?`<details class="card computer-setting"><summary>Scenario context</summary><p><b>Situation:</b> ${esc(setting.object)}</p><p><b>Location:</b> ${esc(setting.location)}</p></details>`:'';
+}
+function purposeBlock(x){
+ const purpose=x.purpose||source(x)?.purpose;
+ return purpose?`<section class="concept-purpose"><h3>Purpose</h3>${paragraphs(purpose)}${resultWalkthrough(x)}</section>`:'';
+}
+function resultWalkthrough(x){
+ const flow=x.walkthrough||source(x)?.walkthrough;if(!flow)return '';
+ return `<dl class="result-walkthrough">${[['Starting point','starting'],['What happens','operation'],['Result','result'],['How the result is used','use']].map(([label,key])=>`<dt><b>${label}</b></dt><dd>${esc(flow[key])}</dd>`).join('')}</dl>${timelineBlock(x)}${flow.workedExample?`<details class="worked-result"><summary>Worked example with actual values</summary><p>${esc(flow.workedExample)}</p></details>`:''}`;
+}
+function timelineBlock(x){
+ const steps=x.timeline||source(x)?.timeline;
+ return steps?.length?`<details class="concept-timeline" open><summary>Timeline: who does what and when</summary><ol>${steps.map(step=>`<li><b>${esc(step.when)}</b><p><strong>${esc(step.who)}:</strong> ${esc(step.event)}</p></li>`).join('')}</ol></details>`:'';
+}
+function hashResultExplanation(a,b,ha,hb){
+ return `<h3>1. Reference calculation</h3><p>The program read the reference text: <b>${esc(a)}</b>.</p><p>Calculated hash value: <code>${esc(ha)}</code></p><h3>2. Download calculation</h3><p>The program read your simulated downloaded text: <b>${esc(b)}</b>.</p><p>Calculated hash value: <code>${esc(hb)}</code></p><h3>3. Compare the two calculated values</h3><p>${ha===hb?'The values match. In this example, the comparison supports matching contents.':'The values differ. The supplied contents differ; the simulated copy does not match the reference.'}</p><h3>4. Use the result</h3><p>${ha===hb?'For a real download, also establish that the reference comes from a trusted source for the exact release. A hash match alone does not certify that software is harmless.':'For a real download, investigate or obtain the correct file before relying on it. A mismatch does not say whether the cause was an error, a legitimate different version, or an attacker.'}</p><p>These calculations did not encrypt, repair, or replace either text. This is a text simulation; a file-checking tool reads the actual file’s bytes.</p>`;
 }
 function practiceDefinitions(x){
  const lookup=new Map([...D.vocab,...D.foundations].map(v=>[v.id,v]));

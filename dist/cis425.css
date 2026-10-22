@@ -9,6 +9,21 @@
 .cis425 #study-menu{display:none}
 .cis425 dd{margin:6px 0 18px;line-height:1.7}
 .cis425 dt{margin-top:18px}
+.cis425 .completion-success{margin:18px 0;padding:20px;background:#d1fae5;color:#064e3b;border:2px solid #059669;border-radius:10px}
+.cis425 .completion-success h2{color:#064e3b;margin:0 0 10px;font-size:26px}
+.cis425 .completed-history{margin:0 0 24px;border-left:5px solid #059669}
+.cis425 .completed-record{padding:16px 0;border-bottom:1px solid rgba(148,163,184,.3)}
+.cis425 .concept-timeline{margin:18px 0}
+.cis425 .concept-timeline summary{font-weight:800}
+.cis425 .concept-timeline li{padding:8px 0}
+.cis425 .concept-timeline li p{margin:5px 0;line-height:1.65}
+.cis425 .result-walkthrough{margin:14px 0 0}
+.cis425 .result-walkthrough dt{margin-top:12px}
+.cis425 .result-walkthrough dd{margin:4px 0 12px;line-height:1.65}
+.cis425 .worked-result p{overflow-wrap:anywhere}
+.cis425 .concept-purpose{margin:16px 0;padding:12px 16px;border-left:4px solid #34d399;background:rgba(52,211,153,.08)}
+.cis425 .concept-purpose h3{margin:0 0 6px}
+.cis425 .concept-purpose p{margin:6px 0;line-height:1.65}
 .cis425 .saved-practice{margin:0 0 24px;border:2px solid #60a5fa;background:rgba(96,165,250,.1)}
 .cis425 .saved-practice h2{margin-top:10px}
 .cis425 .computer-setting{margin:14px 0;padding:16px;border-left:4px solid #a78bfa}

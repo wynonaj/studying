@@ -31,7 +31,7 @@ function checkDependencies(id){assert.ok(!activeDependencies.has(id),'Circular p
 for(const id of Object.keys(D.prerequisites))checkDependencies(id);
 const coreIds=D.basicRoute;
 run('start("practice",[D.questions[19]])');
-assert.equal(D.orientation.length,33);
+assert.equal(D.orientation.length,42);
 const orientationIds=D.orientation.map(x=>x.id);
 assert.ok(orientationIds.indexOf('425-introduction-encryption')<orientationIds.indexOf('425-context-5'));
 assert.ok(orientationIds.indexOf('425-introduction-key')<orientationIds.indexOf('425-context-8'));
@@ -47,8 +47,8 @@ for(const pool of ['questions','checks','vocab','foundations','orientation','top
 assert.deepEqual(JSON.parse(run('JSON.stringify(session.items.slice(0,D.orientation.length).map(x=>x.id))')),D.orientation.map(x=>x.id));
 assert.deepEqual(JSON.parse(run('JSON.stringify(session.items.slice(D.orientation.length,D.orientation.length+D.basicRoute.length).map(x=>x.id))')),coreIds);
 for(const x of D.orientation){assert.equal(new Set([x.correct,...x.distractors]).size,4,x.id);assert.ok(x.foundation&&x.orientation);assert.ok(x.teach.length>50)}
-run('start("practice",[D.questions[36]])');assert.equal(run('session.items[0].id'),'425-context-1');assert.match(element('#app').innerHTML,/private report/);
-assert.match(run('computerSetting(D.questions[36])'),/private document/);assert.match(run('computerSetting(D.questions[0])'),/storage drive/);
+run('start("practice",[D.questions[36]])');assert.equal(run('session.items[0].id'),'425-context-1');assert.match(element('#app').innerHTML,/saved report/);
+assert.match(run('computerSetting(D.questions[36])'),/document/i);assert.match(run('computerSetting(D.questions[0])'),/storage drive/);
 assert.equal(Object.keys(D.topicContexts).length,84);
 for(const pool of ['questions','checks','vocab','foundations','trueFalse','cloze','sorts','discussions'])for(const x of D[pool]){
  assert.ok(x.setting,pool+' '+x.id);
@@ -65,8 +65,14 @@ assert.ok(D.foundations.find(x=>x.id===coreIds[7]).term==='Cryptographic key');
 assert.match(element('#app').innerHTML,/Preparing for:/);
 run('startLearningModule("core")');assert.equal(run('session.items.filter(x=>x.id.startsWith("425-first-check-")).length'),10);
 run('startLearningModule("crypto")');assert.match(element('#app').innerHTML,/Computer context/);
-assert.match(run('computerSetting(D.foundations.find(x=>x.term==="Cryptographic key"))'),/storage drive/);
-assert.match(run('computerSetting(D.foundations.find(x=>x.term==="Hash function"))'),/downloaded file/);
+assert.match(run('computerSetting(D.foundations.find(x=>x.term==="Cryptographic key"))'),/key value handled by software/);
+assert.match(run('computerSetting(D.foundations.find(x=>x.term==="Hash function"))'),/downloaded/);
+for(const group of [['IDS','IPS','Firewall','Proxy server','Application allowlisting'],['PCAP','Flow record'],['Confidentiality','Integrity','Availability'],['Security administrator','Security technician','Security manager','CISO']]){
+ const situations=group.map(term=>D.foundations.find(x=>x.term===term).setting.object);
+ assert.equal(new Set(situations).size,group.length,'Term-specific situations: '+group.join(', '));
+}
+for(const term of ['IDS','IPS','Firewall','Proxy server','Scalability','Endpoint','Keylogger']){const x=D.foundations.find(x=>x.term===term);assert.ok(x.setting.focus.includes(term));assert.match(run('computerSetting('+JSON.stringify(x)+')'),/Current focus:/);}
+const earlyCases=D.orientation.filter(x=>x.id.startsWith('425-context-')).map(x=>x.context);assert.equal(new Set(earlyCases).size,earlyCases.length,'Continuing cases identify the new focus');
 for(const term of ['Choke point','Visibility','Scalability','Endpoint','Asset','Threat','Risk','Mitigate','Vishing','VoIP','Flow record','Full packet capture','Reputation label','Manual analysis','Automated analysis','Cryptographic key','Double-spending problem','Byte stream','Datagram','Routing','Best-effort delivery','Stream cipher','Block cipher','Sponge construction','One-time pad'])assert.ok(D.foundations.some(x=>x.term===term),'Missing beginner definition '+term);
 for(const x of D.foundations){assert.equal(new Set([x.correct,...x.distractors]).size,4,x.id);assert.ok(x.example.length>20,x.id)}
 const foundationalIds=new Set([...D.vocab,...D.foundations].map(x=>x.id));
@@ -145,3 +151,38 @@ run('session.index=session.items.length;finish()');assert.equal(run('readActiveS
 run('start("practice",D.questions)');assert.ok(saved.get('cis425-midterm-v1-active-session').length<2000000,'Compact session storage');
 assert.match(read('dist/cis425.js'),/fn\(\);showSavedSession\(\)/);
 console.log('PASS CIS 425 session restore: exact position, graded feedback, no duplicate XP, restart retains overall progress, flash reveal, exam score, completed-session cleanup, and compact storage.');
+for(const pool of ['questions','checks','vocab','foundations','orientation','topicOrientation','trueFalse','cloze','sorts','discussions'])for(const x of D[pool]){
+ assert.ok(x.purpose?.length>30,pool+' '+x.id+' purpose');
+ assert.match(run('purposeBlock('+JSON.stringify(x)+')'),/<h3>Purpose<\/h3>/);
+ for(const key of ['starting','operation','result','use'])assert.ok(x.walkthrough?.[key]?.length>25,pool+' '+x.id+' '+key);
+ assert.match(run('resultWalkthrough('+JSON.stringify(x)+')'),/How the result is used/);
+ assert.ok(x.timeline?.length>=4,pool+' '+x.id+' timeline');
+ for(const step of x.timeline)for(const field of ['when','who','event'])assert.ok(step[field]?.length>4,x.id+' '+field);
+}
+assert.ok(D.vocab.some(x=>x.term==='Hash value'));
+for(const name of ['reference','start','two','later','deterministic'])assert.ok(D.orientation.some(x=>x.id==='425-timeline-check-'+name));
+const downloadTimeline=D.hashTimeline.map(x=>x.event).join(' ');
+assert.match(downloadTimeline,/does not imply/);assert.match(downloadTimeline,/not comparing the file with itself/);assert.match(downloadTimeline,/earlier baseline/);
+assert.match(run('hashResultExplanation("original","edited","111","222")'),/supplied contents differ/);
+assert.match(run('hashResultExplanation("same","same","111","111")'),/values match/);
+run('mathHome()');assert.match(element('#app').innerHTML,/Reference contents/);assert.match(element('#app').innerHTML,/who does what and when/);
+run('start("practice",[D.orientation.find(x=>x.id==="425-context-23")])');
+assert.match(run('feedback(D.orientation.find(x=>x.id==="425-context-23"),true)'),/Purpose/);
+assert.match(D.orientation.find(x=>x.id==='425-context-23').purpose,/trusted reference/);
+const hashWalkthrough=D.orientation.find(x=>x.id==='425-context-24').walkthrough;
+for(const text of ['Amount: 10','Amount: 90'])assert.ok(hashWalkthrough.workedExample.includes(crypto.createHash('sha256').update(text,'utf8').digest('hex')),'Worked hash value '+text);
+assert.match(hashWalkthrough.use,/compares the computed digest with the trusted reference/);
+for(const suffix of ['compare','alone','mismatch'])assert.ok(D.orientation.some(x=>x.id==='425-result-check-'+suffix));
+assert.match(D.foundations.find(x=>x.term==='IDS').purpose,/notify defenders/);
+assert.match(D.foundations.find(x=>x.term==='Checksum').purpose,/accidental corruption/);
+run('start("flash",[D.questions[5]])');element('#flip').onclick();assert.match(element('#flip').innerHTML,/<h3>Purpose<\/h3>/);
+run('progress.completedSessions=[];session={mode:"practice",items:D.questions.slice(0,6).map(prepare),index:0,total:6,cleared:new Set(),first:{},right:0,graded:false,revealed:false,lessonNumber:null};session.initial=session.items.map(describeSessionItem);renderSession()');
+for(let i=0;i<6;i++){run('grade(session.items[session.index],true,session.items[session.index].correct)');if(i<5)run('advance()')}
+assert.match(element('#feedback').innerHTML,/✓ Completed/);assert.equal(run('progress.completedSessions.length'),1);assert.equal(run('progress.completedSessions[0].total'),6);
+const completeKey=run('progress.completedSessions[0].key'),completeXP=run('progress.xp');
+run('resumeSavedSession(true)');assert.equal(run('session.index'),0);assert.equal(run('progress.completedSessions.length'),1);assert.equal(run('progress.xp'),completeXP);
+run('restoreBeforeRestart()');assert.equal(run('session.index'),5);assert.equal(run('session.cleared.size'),6);assert.match(element('#feedback').innerHTML,/✓ Completed/);assert.equal(run('progress.completedSessions[0].attempts'),1);
+run('progress=JSON.parse(localStorage.getItem(KEY425));session=null;navigate("practice")');assert.match(element('#app').innerHTML,/Saved completions/);
+run('viewCompletedSession('+JSON.stringify(completeKey)+')');assert.match(element('#app').innerHTML,/completed all 6 items/);assert.equal(run('progress.xp'),completeXP);
+run('reviewCompletedSession('+JSON.stringify(completeKey)+')');assert.equal(run('progress.completedSessions.length'),1);
+console.log('PASS CIS 425 completion: green saved completion before leaving the last answer, persistence across reload and restart, previous-place restoration, no duplicate attempts/XP, and completed-result review.');

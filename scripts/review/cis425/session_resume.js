@@ -8,7 +8,7 @@ function restoreSessionItem(saved,catalog){
 function saveActiveSession(){
  if(!session||session.index>=session.items.length)return;
  try{
-  const saved={version:1,mode:session.mode,section,index:session.index,total:session.total,right:session.right,cleared:[...session.cleared],first:session.first,graded:session.graded,lastOK:session.lastOK,revealed:session.revealed,lessonNumber:session.lessonNumber,items:session.items.map(describeSessionItem),initial:session.initial||session.items.map(describeSessionItem)};
+  const saved={version:1,mode:session.mode,section,index:session.index,total:session.total,right:session.right,cleared:[...session.cleared],first:session.first,graded:session.graded,lastOK:session.lastOK,revealed:session.revealed,completionRecorded:session.completionRecorded,lessonNumber:session.lessonNumber,items:session.items.map(describeSessionItem),initial:session.initial||session.items.map(describeSessionItem)};
   localStorage.setItem(SESSION425,JSON.stringify(saved));
  }catch{storageOK=false;stats()}
 }
@@ -28,6 +28,8 @@ function savedSessionMarkup(){
 }
 function showSavedSession(){
  if(session)return;
+ const history=completedSessionMarkup();if(history)$('#app').insertAdjacentHTML('afterbegin',history);
+ try{if(localStorage.getItem(SESSION425+'-before-restart'))$('#app').insertAdjacentHTML('afterbegin','<section class="card"><h3>Return to the attempt before your last restart</h3><button data-undo-restart="true">Restore previous place</button></section>')}catch{}
  const html=savedSessionMarkup();if(!html)return;
  $('#app').insertAdjacentHTML('afterbegin',html);
  $('#resume-saved-practice').onclick=()=>resumeSavedSession(false);
@@ -39,6 +41,7 @@ function resumeSavedSession(restart=false){
  view=saved.mode==='flash'?'flash':saved.mode==='exam'?'exam':'practice';
  const catalog=sessionCatalog();
  if(restart){
+  try{localStorage.setItem(SESSION425+'-before-restart',localStorage.getItem(SESSION425))}catch{storageOK=false;stats()}
   const initial=saved.initial||saved.items;
   const items=initial.map(x=>restoreSessionItem(x,catalog));if(items.some(x=>!x))return;
   session={mode:saved.mode,items:items.map(prepare),index:0,total:items.length,cleared:new Set(),first:{},right:0,graded:false,revealed:false,lessonNumber:saved.lessonNumber,initial};
@@ -49,7 +52,7 @@ function resumeSavedSession(restart=false){
   session.graded=true;session.lastOK=saved.lastOK;
   const x=session.items[session.index];
   document.querySelectorAll('[data-option],[data-blank-word],[data-blank-slot],#check-blanks,#clear-blanks,[data-move],#check-order,[data-word],[data-remove],#check-bank').forEach(b=>b.disabled=true);
-  $('#feedback').innerHTML=feedback(x,session.lastOK)+'<button class="primary" id="next">Continue →</button>';
+  $('#feedback').innerHTML=feedback(x,session.lastOK)+'<button class="primary" id="next">Continue →</button>'+completionBanner(session);
   $('#next').onclick=advance;
  }else if(wasRevealed&&session.mode==='flash'&&$('#flip'))$('#flip').onclick();
  saveActiveSession();$('#app').focus();window.scrollTo(0,0);

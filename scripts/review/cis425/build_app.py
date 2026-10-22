@@ -1,5 +1,14 @@
 from pathlib import Path
-import re,hashlib,json
+import re,hashlib,json,time
+def write_generated(path,text):
+ for attempt in range(8):
+  try:
+   if path.exists() and path.read_bytes()==text.encode('utf-8'):return
+   path.write_text(text,encoding='utf-8',newline='\n')
+   return
+  except OSError as error:
+   if error.errno not in (13,22) or attempt==7:raise
+   time.sleep(.1)
 ROOT=Path(__file__).resolve().parents[3]
 p=ROOT/'dist'
 s=(p/'cis304.js').read_text(encoding='utf-8').replace('304','425').replace('KEY425','KEY425').replace('cis425-module1-v1','cis425-midterm-v1').replace('Module I','Midterm').replace('ENTERPRISE ARCHITECTURE','DEFENSIVE CYBERSECURITY').replace('51','45')
@@ -101,7 +110,26 @@ s=s.replace('function finish(){const s=session;if(!s)return;', 'function finish(
 s=s.replace("[view];fn();const p=$('#section');", "[view];fn();showSavedSession();const p=$('#section');")
 s=s.replace('End session</button></div>', 'End session</button><button data-restart-session="true">Restart session</button></div>')
 s=s.replace('if(b.dataset.view)navigate(b.dataset.view);', 'if(b.dataset.restartSession){saveActiveSession();resumeSavedSession(true)}else if(b.dataset.view)navigate(b.dataset.view);')
-(p/'cis425.js').write_text(s,encoding='utf-8')
+s=s.replace('<h3>Why this fits</h3>', '${purposeBlock(x)}<h3>Why this fits</h3>')
+s=s.replace('${paragraphs(x.answer)}', '${purposeBlock(x)}${paragraphs(x.answer)}')
+s=s.replace('${paragraphs(q.answer)}', '${purposeBlock(q)}${paragraphs(q.answer)}')
+s=s.replace('${paragraphs(v.answer)}', '${purposeBlock(v)}${paragraphs(v.answer)}')
+s=s.replace('${paragraphs([q.teach,q.answer,q.example][step])}', '${purposeBlock(q)}${paragraphs([q.teach,q.answer,q.example][step])}')
+s=s.replace('<div class="lesson-copy">${paragraphs(x.teach)}', '<div class="lesson-copy">${purposeBlock(x)}${paragraphs(x.teach)}')
+s=s.replace('<h2>A one-character change, a new digest</h2>', '<h2>Compare original and downloaded contents</h2><p>This text simulation stands in for an original file and a downloaded copy. You initiate the check with the button below; downloading a real file does not by itself prove this comparison occurred.</p>${timelineBlock({timeline:D.hashTimeline})}')
+s=s.replace('Message A<input', 'Reference contents (simulated publisher original)<input').replace('Message B<input', 'Downloaded contents (simulated copy)<input')
+s=re.sub(r'output\.innerHTML=`<p><b>A</b>.*?authenticated construction is needed to defend against malicious replacement\.</p>`', 'output.innerHTML=hashResultExplanation(a,b,ha,hb)',s,flags=re.S)
+insert=s.index("document.addEventListener('click'")
+s=s[:insert]+(Path(__file__).parent/'completion_history.js').read_text(encoding='utf-8')+'\n'+s[insert:]
+s=s.replace('function finish(){const s=session;if(!s)return;', 'function finish(){const s=session;if(!s)return;rememberCompletedSession(s);')
+s=s.replace("'Every item cleared ✓'", "'✓ Completed'").replace("'Recall round completed'", "'✓ Flashcards completed'")
+s=s.replace('<div class="eyebrow">CIS 425 · SESSION COMPLETE</div>', '<div class="eyebrow">CIS 425 · SESSION COMPLETE</div>${completionBanner(s)}')
+s=s.replace("$('#next').onclick=advance;saveActiveSession()}", "$('#next').onclick=advance;rememberCompletedSession(s);if(completionReady(s))$('#feedback').insertAdjacentHTML('beforeend',completionBanner(s));saveActiveSession()}")
+s=s.replace('if(b.dataset.restartSession)', 'if(b.dataset.completionList){showCompletionList()}else if(b.dataset.viewCompletion){viewCompletedSession(b.dataset.viewCompletion)}else if(b.dataset.reviewCompletion){reviewCompletedSession(b.dataset.reviewCompletion)}else if(b.dataset.undoRestart){restoreBeforeRestart()}else if(b.dataset.restartSession)')
+s=s.replace('<p>${done} / ${qs.length} lessons completed.', '${done===qs.length?\'<p class="lesson-completed">✓ Completed</p>\':\'\'}<p>${done} / ${qs.length} lessons completed.')
+s=s.replace('function sessionHeader(x){saveActiveSession();const s=session;return `<div class="study">', 'function sessionHeader(x){saveActiveSession();const s=session;return `<div class="study"><div id="session-completion-status"></div>')
+s=s.replace("if(completionReady(s))$('#feedback').insertAdjacentHTML('beforeend',completionBanner(s));", "if(completionReady(s)){$('#feedback').insertAdjacentHTML('beforeend',completionBanner(s));$('#session-completion-status').innerHTML=completionBanner(s);$('#next').textContent='View completed session'}")
+write_generated(p/'cis425.js',s)
 h=(p/'cis304.html').read_text(encoding='utf-8')
 h=h.replace('CIS 304 · Recall Lab','CIS 425 · Recall Lab').replace('CIS 304 Module I: all 51 study-guide prompts, beginner lessons, flashcards, process practice and exams.','CIS 425 defensive cybersecurity midterm: answered guide, lessons, labs, flashcards and exam rehearsal.')
 h=h.replace('CIS 304 / MODULE I','CIS 425 / MIDTERM').replace('href="cis304.html" class="brand"','href="cis425.html" class="brand"').replace('CIS 304 progress','CIS 425 progress').replace('Loading CIS 304','Loading CIS 425').replace('cis304.js?v=6a55889e690e','cis425.js')

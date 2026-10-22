@@ -23,6 +23,14 @@ def clarify_language(D):
   if x['id']=='425-context-21':ordered.extend(cards[t] for t in ['hash','digest'])
   ordered.append(x)
  D['orientation']=ordered
+ from purpose import add_purposes
+ add_purposes(D)
+ from results import explain_results
+ explain_results(D)
+ from timelines import add_timelines
+ add_timelines(D)
+ from specific_scenarios import specific_scenarios
+ specific_scenarios(D)
  expansions={v['term']:v['exp'] for v in D['vocab'] if v.get('exp')}
  expansions.update({
  'TLS':'Transport Layer Security','SSL':'Secure Sockets Layer','HTTPS':'Hypertext Transfer Protocol Secure','HTTP':'Hypertext Transfer Protocol',
@@ -47,7 +55,7 @@ def clarify_language(D):
    full=expansions[m[0]]
    return m[0] if s[m.end():].startswith(' ('+full+')') else m[0]+' ('+full+')'
   return pattern.sub(replace,s)
- fields={'answer','teach','example','object','location','purpose','action','meaning','context','intro','goal','shortAnswer'}
+ fields={'answer','teach','example','object','location','purpose','action','meaning','context','intro','goal','shortAnswer','starting','operation','result','use','workedExample','when','who','event','focus'}
  def walk(value):
   if isinstance(value,list):
    for item in value:walk(item)
