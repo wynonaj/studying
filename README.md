@@ -2,7 +2,7 @@
 
 The app has two separate workspaces:
 
-- **Classes** — CIS 320, CIS 304, and CIS 464, with separate progress for each class.
+- **Classes** — CIS 320, CIS 304, CIS 425, and CIS 464, with separate progress for each class.
 - **Career** — entry-level technology interview preparation for a May 2027 graduate, with role-specific learning paths, tap-based practice, spoken mock interviews, applied cases, flashcards, and research notes.
 
 A static study app covering Chapters 1, 2, 3, 4, and 12 from the supplied CIS 320 Test 1 guide.
@@ -105,6 +105,12 @@ CIS 304 includes all **51 original study-guide prompts**, organized into Foundat
 To regenerate the authored content, run `python3 scripts/review/cis304/build_content.py` followed by `python3 scripts/review/cis304/enrich_content.py`. JSON is fetched without caching. After changing JS or CSS, update the SHA-256 first-12-character version in the HTML pages. `npm test` runs both class suites; `npm run check` checks both class scripts. Static deployment still uses the entire `dist` directory, so both class pages deploy together.
 
 Source notes: questions follow the supplied Fall 2026 study guide, supplemented by the Module I slides and linked references. The EA-properties answer explicitly identifies a synthesis of slides 33–36, because a separate fixed list was not supplied. SOA retains the course’s cloud association while explaining that reusable services need not be cloud-hosted. Linked videos are not represented as verified transcripts. Content is a study aid, not an instructor-issued answer key.
+
+## CIS 425 Defensive Cybersecurity
+
+`dist/cis425.html` is a separate class workspace built from all eight supplied lecture decks. It includes 57 lessons, 183 term cards, focused checks, tappable fill-in-the-blank activities, shuffled sequences, flashcards, and practice exams. Every lesson identifies its lecture and source slides. Progress uses the separate `cis425-lectures-v1` browser-storage key.
+
+The source extractor and reproducible builders live in `scripts/review/cis425/`. The extracted source map records 275 slides across Lectures 1–8.
 
 ## CIS 464 Project Management
 

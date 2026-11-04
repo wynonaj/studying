@@ -1,0 +1,4027 @@
+[
+  {
+    "lecture": 1,
+    "file": "Lecture 1_Opening.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "CIS 425",
+          "Cybersecurity",
+          "& Defense",
+          "Lecture One"
+        ],
+        "notes": [
+          "12"
+        ]
+      },
+      {
+        "number": 2,
+        "text": [
+          "Class Overview",
+          "Two tests (Midterm and Final Exam)",
+          "Multiple hands-on labs, review exercises, and quizzes",
+          "One “Security in the News” Presentation",
+          "Goal of the class: To provide students with a better understanding of Computer Network Defense through hands on labs, demonstrations, and informative lectures"
+        ],
+        "notes": [
+          "13"
+        ]
+      },
+      {
+        "number": 3,
+        "text": [
+          "Resources",
+          "Required",
+          "You will need to have your own computer in which you can install",
+          "VirtualBox",
+          "VirtualBox",
+          "can be downloaded for free",
+          "You will need a good amount of free space on your machine to load the virtual machines we will use for testing",
+          "You will also need to read / complete the exercises and required readings before you come to class"
+        ],
+        "notes": []
+      },
+      {
+        "number": 4,
+        "text": [
+          "Why are we having this class?",
+          "Cybercrime has become big business",
+          "Traditional criminals find it much safer to steal by using a computer versus physically breaking into a location",
+          "Old: Rob a bank with a gun and a ski mask",
+          "New: Rob a bank using a Trojan installed on multiple users computers",
+          "Same result with much less risk"
+        ],
+        "notes": []
+      },
+      {
+        "number": 5,
+        "text": [
+          "Why are we having this class?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 6,
+        "text": [
+          "Everyone is getting Targeted"
+        ],
+        "notes": []
+      },
+      {
+        "number": 7,
+        "text": [
+          "We mean Everyone"
+        ],
+        "notes": []
+      },
+      {
+        "number": 8,
+        "text": [
+          "Got the point yet?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 9,
+        "text": [
+          "Motivation of Cyber Criminals",
+          "Money , Money, Money",
+          "Millions of dollars at stake",
+          "Small scams yield profits in the hundreds of thousands of dollars range"
+        ],
+        "notes": []
+      },
+      {
+        "number": 10,
+        "text": [
+          "Motivation of Cyber Criminals (cont)",
+          "Stealing Information",
+          "State sponsored attacks",
+          "Why build something when you can steal it?",
+          "Saves money and time",
+          "Can catch up quickly to the leaders in the field"
+        ],
+        "notes": []
+      },
+      {
+        "number": 11,
+        "text": [
+          "Motivation of Cyber Criminals (cont)",
+          "Fun (ex.",
+          "Lulzsec",
+          ",",
+          "Antisec",
+          ", defacements)",
+          "Hackers will deface a site to show they could access it",
+          "Curiosity to test skills",
+          "Cyber",
+          "Hacktivisim",
+          "(",
+          "Lulzsec",
+          ", Anti-Sec, G8 protests, etc)",
+          "Hackers hide behind a politically motivated cause",
+          "Disrupt websites (",
+          "DDoS",
+          "), steal credentials, post embarrassing information"
+        ],
+        "notes": []
+      },
+      {
+        "number": 12,
+        "text": [
+          "Stuxnet",
+          "– best hack of the decade",
+          "Worm is discovered in July of 2010 which is targeting industrial software and equipment",
+          "Worm uses **4** different 0days to spread with 60% of infections being in Iran",
+          "Did you read that? 4 0days which were NEVER seen before all in one worm",
+          "Used USB to enter SCADA network",
+          ".5mb (large for malware) but worked",
+          "reliably",
+          "on every windows version north of Win95",
+          "Digitally signed by two stolen driver signing",
+          "certs",
+          "Targets variable -frequency drives made by",
+          "Vacon",
+          "and",
+          "Fararo",
+          "Paya",
+          "on Siemens S7-300 Systems (almost guaranteed to be used only in Iran)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 13,
+        "text": [
+          "The Kicker",
+          "Stuxnet",
+          "owns its way across the Internet",
+          "Each time it infects a new host it checks to see if it has Siemens software installed, if it does it waits till it is run, if not it spreads to every other host on the network and waits for further instructions",
+          "When it finds the software running it…",
+          "Record normal reading of drives (807-1210Hz)",
+          "Play back normal reading like spy movies do with video",
+          "Wildly vary drive speed (1-1410Hz)",
+          "Result is a destroyed centrifuge and poorly refined uranium",
+          "Impact",
+          "Uranium enrichment at",
+          "Natanz",
+          "dropped by 30%",
+          "Iran may have destroyed 1000 centrifuges (10%) between Nov 2009 and Jan 2010.",
+          "Who? Israel? USA? Germany? France? Russia? Anonymous?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 14,
+        "text": [
+          "What’s Wrong with this Picture?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 15,
+        "text": [
+          "More Security Failures"
+        ],
+        "notes": []
+      },
+      {
+        "number": 16,
+        "text": [
+          "Who designed this “Security System”?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 17,
+        "text": [
+          "Where is my bike?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 18,
+        "text": [
+          "Do you want to be the one that designed these “Security Solutions”?",
+          "This class will help you:",
+          "Identify and understand current attacks being used in the wild against corporate networks.",
+          "Create and maintain virtual machines utilizing",
+          "VirtualBox",
+          "to test malicious code.",
+          "Analyze malicious code by performing dynamic malware analysis using various tools.",
+          "Understand how to use security devices to defend and respond to attacks against networks.",
+          "Understand the core incident response functions tied to successfully handling a computer security incident."
+        ],
+        "notes": []
+      },
+      {
+        "number": 19,
+        "text": [
+          "Oracle",
+          "VirtualBox",
+          "Overview",
+          "What is",
+          "VirtualBox",
+          "?",
+          "Software that allows you to run multiple Operating Systems at the same time, on the same machine.",
+          "Allows you to run multiple operating systems, appliances, and applications in networked or segregated environments.",
+          "You can visit",
+          "https://www.virtualbox.org",
+          "/",
+          "for more information",
+          "You will complete a hands-on lab using",
+          "Virtualbox",
+          "in the second week."
+        ],
+        "notes": []
+      },
+      {
+        "number": 20,
+        "text": [
+          "VirtualBox",
+          "Benefits",
+          "Save money (Less power and less hardware required)",
+          "Deployment of new systems is simple",
+          "Rebuild machines or create new ones in minutes",
+          "Great for malicious code analysis",
+          "Can run malware and then revert the system to a clean state"
+        ],
+        "notes": []
+      },
+      {
+        "number": 21,
+        "text": [
+          "Downsides of",
+          "VirtualBox",
+          "One piece of hardware goes down, multiple systems go down (Many systems running on one piece of hardware)",
+          "Learning curve to set up and configure",
+          "VvirtualBox",
+          "environment"
+        ],
+        "notes": []
+      },
+      {
+        "number": 22,
+        "text": [
+          "Homework for next week",
+          "Refer to Canvas Course Module for details."
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "lecture": 2,
+    "file": "Lecture 2 Architecture.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "Lecture 2: Secure Network Architecture"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 2,
+        "text": [
+          "Quick Review from Last Week",
+          "Attacks using electronic means are occurring all the time",
+          "Attackers are hitting all types of targets (Military, large companies, small businesses",
+          "Attackers have three primary motives:",
+          "Money (Criminals)",
+          "Steal information (State sponsored)",
+          "Fun / hacktivism",
+          "VMWare – Virtualization software that allows you to run multiple systems on one piece of hardware",
+          "Allows you to build as well as re-image systems very quickly",
+          "Great for testing malicious code",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 3,
+        "text": [
+          "Goal of this Lecture",
+          "Explain the security devices that may be used to defend against attacks",
+          "Discuss security principles and best practices used to defend both enterprise and small networks",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 4,
+        "text": [
+          "Question for the class",
+          "Which of these would you rather have protecting you?",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 5,
+        "text": [
+          "Second Question for the class",
+          "How much money are you willing to spend on security?",
+          "What are you protecting?",
+          "Budgets and the actual value of the information you are protecting determine the level of security that is assigned to the networks / systems your organization runs",
+          "You want to use all tools available to your in order to protect the network",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Ask them how much they are willing to spend if they live in: 1) Harrisonburg 2) Afghanistan",
+          "<number>"
+        ]
+      },
+      {
+        "number": 6,
+        "text": [
+          "Security",
+          "principles tied to Enterprise Architecture",
+          "Depth in Defense – Multiple safeguards must be implemented to ensure that if one security mechanism is bypassed, others still protect the network",
+          "Perimeter defense",
+          "Host based defenses",
+          "Goal is to make it so that if the bad guys get past one thing, they don’t own the network until they get past several other security mechanisms",
+          "Class example – you are in charge of protecting a king in a big castle",
+          "What safeguards can you use to protect the castle?",
+          "How do you lock down the castle?",
+          "Same walkthrough with Showker – discuss how you would protect the building",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Depth in defense – discuss castle analogy",
+          "Choke points – explain the concept of putting video cameras by all doors in buildings and sensitive internal areas so you can see who is coming and going – the same principle carries over to networks – need to see what is coming in and going out of your network",
+          "Visibility for monitoring – similar to above, need to be able to see what is going on",
+          "<number>"
+        ]
+      },
+      {
+        "number": 7,
+        "text": [
+          "Security",
+          "principles tied to Enterprise Architecture",
+          "Choke Points – Security devices should be placed at all internet points of presence to ensure that traffic moving in and out of the network can be monitored by the security team",
+          "Old practice that has worked for thousands of years",
+          "Think of a bank – how many ways are there to enter and exit?",
+          "Why do you think this is designed in this manner?",
+          "From a network perspective, if you have multiple connections to your ISP, you essentially are adding “doors” to your network",
+          "This requires your organization to spend large amounts of money on tools to monitor and protect the network",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Depth in defense – discuss castle analogy",
+          "Choke points – explain the concept of putting video cameras by all doors in buildings and sensitive internal areas so you can see who is coming and going – the same principle carries over to networks – need to see what is coming in and going out of your network",
+          "Visibility for monitoring – similar to above, need to be able to see what is going on",
+          "<number>"
+        ]
+      },
+      {
+        "number": 8,
+        "text": [
+          "Security",
+          "principles tied to Enterprise Architecture",
+          "Visibility for monitoring – The Enterprise Architect needs to work with the security team to ensure they have proper visibility at both the gateway level and on the internal network",
+          "Use of flow monitoring devices (ex. Lancope) and full packet capture devices (ex. Niksun) can assist with this",
+          "Same principle as physical security – if you are in charge of security, you want to be able to monitor everyone that went in and out of the building with cameras",
+          "Do the same thing, but monitor packets on a network instead of people in a building",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Depth in defense – discuss castle analogy",
+          "Choke points – explain the concept of putting video cameras by all doors in buildings and sensitive internal areas so you can see who is coming and going – the same principle carries over to networks – need to see what is coming in and going out of your network",
+          "Visibility for monitoring – similar to above, need to be able to see what is going on",
+          "<number>"
+        ]
+      },
+      {
+        "number": 9,
+        "text": [
+          "Design principles tied to Enterprise Architecture",
+          "When designing and building secure networks, the following principles must be implemented by Enterprise Architects:",
+          "High availability / redundancy (five 9’s concept – virtually no downtime)",
+          "Scalability (needs to be able to grow as the organization grows)",
+          "Security (network needs to be locked down as much as possible while still allowing users to get their work done",
+          "Meets the needs of the users/business owners that you support",
+          "The network exists solely to enable users to perform business functions",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 10,
+        "text": [
+          "Sample Network Diagram",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 11,
+        "text": [
+          "Devices used to Protect the Network and Identify Attacks",
+          "Firewalls",
+          "Routers",
+          "Proxy Servers",
+          "IDS/IPS",
+          "HIPS",
+          "Anti-virus",
+          "Full packet capture devices",
+          "Flow data devices",
+          "Application whitelisting solutions",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 12,
+        "text": [
+          "Firewalls",
+          "Similar to a list at a restricted event or club",
+          "Devices sit at the perimeter of the network to limit access to/from the network",
+          "Contain a list of rules that allow or block traffic to/from the network",
+          "Administrators can create extremely granular rules",
+          "Ex. Only allow one IP in the entire world to connect to a device on only one port",
+          "Multiple firewalls can be used within a network",
+          "Vendors offer small home network devices up to enterprise class devices",
+          "Common vendors: Cisco Pix, CheckPoint, Netscreen",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 13,
+        "text": [
+          "Routers",
+          "Enterprise level devices used to connect networks",
+          "Also used for filtering traffic (automated scanning)",
+          "Utilize Access Control Lists (ACL’s) for restricting traffic",
+          "Similar to firewalls, Router ACL’s can be very broad (ex. Block all IP’s associated with a country/region) or very granular (ex. Only allow one IP to connect to one port on one machine on the network)",
+          "Common vendors: Cisco, Juniper, Extreme Networks, Huawei",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 14,
+        "text": [
+          "Intrusion Detection / Intrusion Prevention Systems (IDS/IPS)",
+          "Security devices that act similar to a burglar alarm",
+          "Trigger when know bad traffic is seen (Signature based)",
+          "Can also be configured to trigger based off anomalies (Anomaly based)",
+          "IDS devices are passive – just tell you when they saw something potentially bad",
+          "IPS Devices can be made active – If the device sees something bad, it can block the traffic (ex. Send a reset to the host)",
+          "Biggest issues with IDS/IPS:",
+          "Tuning – requires lots of human interaction",
+          "False positives",
+          "Common vendors: Sourcefire (make Snort), TippingPoint, McAfee",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 15,
+        "text": [
+          "Proxy Servers",
+          "Serve as a intermediary to vet traffic before allowing it to connect to the requested website",
+          "Used to block access to inappropriate or malicious websites on corporate networks (ex. gambling, adult content, sites hosting malware)",
+          "Websites are categorized and added to category lists on a daily basis by vendors",
+          "Lists include Pornography, Gambling, Hate/Offensive Content, Sports, News, etc)",
+          "Network owners can restrict access based on categories",
+          "Owners can also block individual websites",
+          "Common vendors: WebSense, Bluecoat, Squid (Open Source)",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 16,
+        "text": [
+          "Host Based Intrusion Prevention",
+          "Security software that runs on a local machine",
+          "Host based (not network based)",
+          "Signatures / triggers are written off events which occur locally on the system",
+          "Example of events: Generate an alert if you see a new file created in C:\\Windows\\System32",
+          "Generate an event if a file with a specific MD5 hash is detected on the machine",
+          "Pros: Rules can get pretty granular",
+          "Cons: Somewhat difficult to set up, requires lots of human interaction for tuning and creating rules",
+          "Common Vendors: Symantec End Point Protection, McAfee HBSS",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 17,
+        "text": [
+          "Anti-virus",
+          "Security software used for detecting",
+          "known",
+          "malicious files and threats",
+          "Anti-virus is normally installed and run on host systems as well as mail gateways",
+          "Signature based as well as heuristic based detection",
+          "Vendors release updated signatures multiple times per day",
+          "Users machines must update to obtain the latest signature definition files",
+          "Similar to wanted posters used by the police – if you don’t know who the bad guys are, you can’t watch for them",
+          "Pros: Inexpensive, easy to use, mature technology",
+          "Cons: Only catch threats that have been seen previously",
+          "Common Vendors: Symantec, McAfee, F-Secure, Kaspersky",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 18,
+        "text": [
+          "Full Packet Capture Devices",
+          "Similar to a DVR – record and store traffic coming to/from your network",
+          "Allows analysts to replay the traffic and validate if connections were successful, what file(s) were downloaded, etc",
+          "Pros: Being able to see the traffic that was generated is vital for conducting security investigations",
+          "Cons: The devices are expensive, storage limitations restrict the amount of traffic you can keep on your network",
+          "Common vendors: Niksun",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 19,
+        "text": [
+          "Flow Data",
+          "Flow data devices show you a listing of connections to/from your network",
+          "Differ from full PCAP solutions, for flow data only shows you the connections made (not what occurred within the connections)",
+          "Similar to have a call detail record that highlights all the numbers you called",
+          "Not as valuable as being able to hear what you were talking about, but the data is still valuable",
+          "Common usage: Allows analysts to identify “top talkers”, search for hosts that connected to a known bad IP address, etc",
+          "Common vendors: Lancope, Mazu Networks",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 20,
+        "text": [
+          "Application Whitelisting Solutions",
+          "Take the opposite approach of most security devices",
+          "Instead of restricting “known bad” they are only allowing “known good”",
+          "Keep a central repository of known good applications",
+          "If a user tries to run an application that is not on the known good list, the application will fail and an alert will be generated",
+          "Pros: Work very well to restrict users from running unwanted / malicious programs",
+          "Cons: Very difficult to implement on an enterprise network, requires resources to manage/tune approved applications",
+          "Common Vendors: Bit9",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "Firewall – Like a list at a club – granularly restricts/allows access for specific connections",
+          "IDS – Burglar alarm – matches signatures for known bad strings",
+          "Routers – ACL’s block access to specific IP’s or ranges at a very high level in the perimeter",
+          "Proxy server – Blocks access to specific sites / categories of sites lower in the stack. Also requires users to authenticate to get out to the web",
+          "HIPS – Host based protection – Alerts on suspicious events at the host level (can create rules if new files are created, registry keys are changed, etc)",
+          "Anti-virus – not great but still good for known bad threats",
+          "Full packet capture – good for retrospective analysis",
+          "Flow data – good for identifying if a compromise has occurred (can check for access to known bad sites)",
+          "Application whitelisting – great but difficult to implement – allows you to lock down workstations so malicious code can not be installed",
+          "<number>"
+        ]
+      },
+      {
+        "number": 21,
+        "text": [
+          "Case Study",
+          "You have a known bad IP that keeps scanning systems on your network and attempting to run exploits on the publically available web servers……",
+          "What devices can you use to block the attacker?",
+          "You want to protect your users from being able to connect to a malicious website…….",
+          "What devices can you use to block access to the malicious website?",
+          "You have users that keep installing malicious applications on their corporate workstations…….",
+          "What tools can you use to keep them from installing unauthorized software?",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 22,
+        "text": [
+          "Case Study",
+          "Answer: Firewall, Router (ACL's), IDS/IPS",
+          "Answer: Proxy Server (firewalls can be used as well but the proxy is the best answer)",
+          "Answer: Application whitelisting solutions (ex. Bit9) work best, but you can also block some of this with host based protection and/or AV by labeling certain programs as malicious.",
+          "UNCLASSIFIED"
+        ],
+        "notes": []
+      },
+      {
+        "number": 23,
+        "text": [
+          "Wrap Up",
+          "Depth in defense is vital to protecting networks",
+          "One single solution will never stop all attacks",
+          "Use all of the tools / resources available to you in order to stop attacks",
+          "Base solutions off the amount of money your organization is willing to spend (don’t buy a Ferrari if you only have money for a Honda)",
+          "Technology will not fix everything – Human interaction will be required to maintain a secure network",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 24,
+        "text": [
+          "Extra slide –A Professional’s Rant",
+          "There are a lot of things wrong with the way the IT industry approaches security these days…",
+          "Security for compliance is not cost effective",
+          "Doing a “best practice” does not always buy you a lot of protection",
+          "Hackers don’t care if your 98% compliant",
+          "A good security architect looks at the big picture and understands risk",
+          "Big picture = Hackers break in certain ways because they are lazy",
+          "RISK = Threat x Vulnerability x Cost",
+          "Hackers want your data",
+          "Users have access to data, thus hackers want your users",
+          "Stop hackers where it makes the most sense and cost the least",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 25,
+        "text": [
+          "Questions",
+          "?????",
+          "UNCLASSIFIED"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      }
+    ]
+  },
+  {
+    "lecture": 3,
+    "file": "Lecture 3 Overview of Attacks - part I.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "Lecture",
+          "Three",
+          "– Overview of Attacks (Part One)"
+        ],
+        "notes": [
+          "http://isc.sans.org/diary.html?storyid=6613",
+          "9"
+        ]
+      },
+      {
+        "number": 2,
+        "text": [
+          "Overview of Attacks",
+          "Crime has transitioned from the physical world over to the web",
+          "Criminals have less risk of being caught when not operating in a physical environment",
+          "The internet also makes conducting crimes / attacks much easier",
+          "Can conduct crimes from your home (ex. Don’t have to go to a bank to steal money)",
+          "Easier to research targets",
+          "Requires no physical weapons",
+          "Easier to hide when you do not have to appear in person to commit the crime"
+        ],
+        "notes": [
+          "http://isc.sans.org/diary.html?storyid=6613",
+          "10"
+        ]
+      },
+      {
+        "number": 3,
+        "text": [
+          "Common Attacks Seen Today",
+          "Distributed Denial of Service Attacks (DDoS)",
+          "SQL Injection",
+          "Cross site scripting",
+          "Phishing",
+          "Backdoor programs",
+          "Web Site Defacements",
+          "419 Scams (Nigerian Email Scams)"
+        ],
+        "notes": [
+          "XSS",
+          "Faq’s",
+          ":",
+          "http://www.cgisecurity.com/xss-faq.html#whatis",
+          "14"
+        ]
+      },
+      {
+        "number": 4,
+        "text": [
+          "Distributed Denial of Service Attacks (DDoS)",
+          "Carried out by using large quantities of compromised machines (usually a botnet) to overwhelm servers on a network",
+          "Goal of the attack: Generate enough traffic so that legitimate users can not access the company’s website",
+          "Gained popularity back in 2000 (Yahoo, CNN – Mafiaboy attacks)",
+          "Require no skills to carry out",
+          "Simple real world example – Domino’s pizza"
+        ],
+        "notes": [
+          "http://en.wikipedia.org/wiki/Advance-fee_fraud",
+          "23"
+        ]
+      },
+      {
+        "number": 5,
+        "text": [
+          "Distributed Denial of Service Attacks (DDoS)"
+        ],
+        "notes": [
+          "http://",
+          "www.fbi.gov",
+          "/scams-safety/fraud",
+          "24"
+        ]
+      },
+      {
+        "number": 6,
+        "text": [
+          "Distributed Denial of Service Attacks (DDoS)",
+          "Common DDoS Attacks:",
+          "Syn flood – sent millions of syn requests (“hello” to a web server",
+          "TCP Three way handshake explanation",
+          "Syn (Hello)",
+          "Syn-Ack (Hi there)",
+          "Ack (I’m great, you ready to talk?)",
+          "Easy to carry out (free tools)",
+          "Success depends on the bandwidth of the target you are attacking and the number of computers you have at your disposal for generating requests"
+        ],
+        "notes": []
+      },
+      {
+        "number": 7,
+        "text": [
+          "DDoS Attacks – Common Clients",
+          "Low Orbit Ion Cannon (LOIC) – Used by Anonymous / Wikileaks / Operation Payback",
+          "Connects to IRC channel",
+          "Extremely simple to use"
+        ],
+        "notes": []
+      },
+      {
+        "number": 8,
+        "text": [
+          "DDoS Attacks – Slowloris",
+          "Totally different concept",
+          "Instead of flooding the server with requests from thousands of hosts, use a small amount of hosts to generate requests",
+          "Attack takes advantage of the timeout feature",
+          "If the server you are attacking has long timeouts, the attacker can keep sessions open",
+          "This ties up resources and after a while the server will not be able to accept new connections"
+        ],
+        "notes": []
+      },
+      {
+        "number": 9,
+        "text": [
+          "DDoS Attacks – Slowloris",
+          "Similar to calling Domino’s Pizza and when they pick up, stumbling over and over",
+          "“Uh, could I uh, have uh, a large, uh, wait, why did I call you again….oh yeah, sorry about that, I wanted to order a, wait hold on, my friend is calling me….nevermind, I will call them back. Ok, I’m ready to order a large cheese, no wait, I don’t like cheese pizza, let’s go with Pepperoni instead. Oh, can I get some breadsticks as well….wait, sorry, I meant cheese sticks. Do you guys have cheese sticks? I love cheese sticks…do you like cheese sticks?”",
+          "How long before you hang up? (Timeout length)",
+          "Do not prop the door or the alarm will go off"
+        ],
+        "notes": []
+      },
+      {
+        "number": 10,
+        "text": [
+          "How to Protect Against DDoS Attacks",
+          "Work with your ISP to filter incoming traffic",
+          "Use your border routers to filter as well",
+          "Implement a load balancer",
+          "Set timeout values to shorter lengths"
+        ],
+        "notes": []
+      },
+      {
+        "number": 11,
+        "text": [
+          "SQL Injection",
+          "Security vulnerability where input is not properly sanitized in web applications that have a database connection.",
+          "Essentially the attacker is attempting to access data from a database through input manipulation",
+          "Goal is to obtain access to data that the attacker should not have access to",
+          "Popular targets (payment databases holding credit card data)",
+          "Databases containing usernames/passwords"
+        ],
+        "notes": []
+      },
+      {
+        "number": 12,
+        "text": [
+          "SQL Injection (cont)",
+          "Sample YouTube Video demo from Imperva:",
+          "http://www.youtube.com/watch?v=h-9rHTLHJTY"
+        ],
+        "notes": []
+      },
+      {
+        "number": 13,
+        "text": [
+          "How to Protect Against SQL Injection Attacks",
+          "Sanitize input",
+          "Web application firewalls",
+          "Lots of great information on the OWASP SQL Injection Prevention Cheat Sheet",
+          "https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet"
+        ],
+        "notes": []
+      },
+      {
+        "number": 14,
+        "text": [
+          "Cross Site Scripting (XSS)",
+          "Web application vulnerability",
+          "Allows attackers the ability to inject client side scripts into web pages",
+          "Allows an attacker to:",
+          "Gain elevated privileges",
+          "Steal session cookies"
+        ],
+        "notes": []
+      },
+      {
+        "number": 15,
+        "text": [
+          "Protecting against XSS Attacks",
+          "OWASP to the rescue (again)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 16,
+        "text": [
+          "Web Site Defacements",
+          "Attackers exploiting a vulnerability which allows them to change the source code on your web server",
+          "Goal of the attackers:",
+          "Embarrass the company targeted",
+          "Gain fame/ notoriety for leaving their mark",
+          "Pranks",
+          "Zone-",
+          "h",
+          "tracks/mirrors defacements:",
+          "http://www.zone-h.org/archive/special=1",
+          "Hundreds of defacements submitted daily"
+        ],
+        "notes": []
+      },
+      {
+        "number": 17,
+        "text": [
+          "Zone-",
+          "h",
+          "Web Site Defacements Listing"
+        ],
+        "notes": []
+      },
+      {
+        "number": 18,
+        "text": [
+          "How to Protect against Web Site Defacements",
+          "Patch systems",
+          "Use strong passwords / authentication",
+          "Monitor traffic and investigate suspicious connection attempts",
+          "Use limited permission accounts"
+        ],
+        "notes": []
+      },
+      {
+        "number": 19,
+        "text": [
+          "419 Scams (Advanced Free Fraud)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 20,
+        "text": [
+          "419 Scams (Lottery Scams)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 21,
+        "text": [
+          "419 Scams (Nigerian Email Scams / Lottery Scams / Advanced Fee Fraud)",
+          "Standard plot: I’m (Insert name here) and I’m stuck in Nigeria. My father is the owner of (insert company here) and I have access to 50 Million Dollars. However, I can’t get it out of the country. BUT, if you send me your bank account details, I will send you the money and then I will come get my share when I leave here",
+          "Problem: When you provide the bad guys your account information, they don’t transfer the money – they take yours!"
+        ],
+        "notes": []
+      },
+      {
+        "number": 22,
+        "text": [
+          "419 Scams (Nigerian Email Scams / Lottery Scams)",
+          "Standard plot two: Congratulations! You have won two million pounds in the UK lottery and a new BMW. Your entry number XXXXX was randomly selected in the drawing held on XX/XX/XX. To validate that you really are John Doe, please provide the following details.",
+          "Problem: When you eventually provide the bad guys your account information, they don’t transfer your “winnings” to your account – they take your money instead"
+        ],
+        "notes": []
+      },
+      {
+        "number": 23,
+        "text": [
+          "419 Scams (Nigerian Email Scams / Lottery Scams)",
+          "Attackers now work in phases to not arouse suspicion",
+          "Step one: Just ask you for your name and contact info (no account information)",
+          "Also ask you to call them if you have questions",
+          "Step two: Once they have sold you on the fact that they are “legitimate”, they ask you for your account information",
+          "The attackers even offer to have you fly over",
+          "When you do, they kidnap you and hold you for ransom"
+        ],
+        "notes": []
+      },
+      {
+        "number": 24,
+        "text": [
+          "How to Protect Against 419 Scams",
+          "Delete any emails received asking you for informatio",
+          "n",
+          "Never respond to any emails soliciting information from you",
+          "Report 419 scams to the FBI:",
+          "https://tips.fbi.gov/",
+          "Educate your friends and family so they do not become victims",
+          "http://www.fbi.gov/scams-safety/fraud"
+        ],
+        "notes": []
+      },
+      {
+        "number": 25,
+        "text": [
+          "Wrap Up",
+          "New attacks emerge all the time",
+          "Many of these attacks can be avoided with minimal effort and by following good basic security practices",
+          "Next class – Overview of phishing, spear phishing, fake anti-virus, and fake disk defragmenters"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "lecture": 4,
+    "file": "Lecture 4 Overview of Attacks - part II.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "Lecture",
+          "Four",
+          "– Overview of Attacks (Part Two)"
+        ],
+        "notes": [
+          "5"
+        ]
+      },
+      {
+        "number": 2,
+        "text": [
+          "Review from Part I",
+          "DDoS attacks – flooding servers with requests to overwhelm them so they can not respond to legitimate requests",
+          "SQL Injection – attacker is attempting to access data from a database through input manipulation",
+          "Cross Site Scripting – attackers the ability to inject client side scripts into web pages",
+          "Web Defacements – Attackers exploiting a vulnerability which allows them to change the source code on your web server",
+          "419 Scams – Social engineering ploy used to get users to provide their online banking information"
+        ],
+        "notes": [
+          "http://www.intego.com/news/mac-defender-fake-antivirus-program-targets-mac-users.asp",
+          "26"
+        ]
+      },
+      {
+        "number": 3,
+        "text": [
+          "Overview of Attacks",
+          "The attacks we will describe today all require user interaction",
+          "Effectively you have to do something to be compromised",
+          "Attacks described today are primarily used for financial gain",
+          "Some are used for state sponsored related attacks"
+        ],
+        "notes": []
+      },
+      {
+        "number": 4,
+        "text": [
+          "Common Attacks Seen Today",
+          "Phishing",
+          "Spear Phishing",
+          "Fake Anti-Virus",
+          "Fake Disk Defragmenter Software"
+        ],
+        "notes": []
+      },
+      {
+        "number": 5,
+        "text": [
+          "Fishing versus Phishing",
+          "Traditional Fishing",
+          "– Person throws a lure into the water and hope that a fish bites.",
+          "Take the fish and:",
+          "Eat it",
+          "Sell it",
+          "Mount it on the wall",
+          "etc"
+        ],
+        "notes": []
+      },
+      {
+        "number": 6,
+        "text": [
+          "Fishing versus Phishing",
+          "Digital “Phishing”",
+          "- Attacker sends an email or IM “lure” to an unsuspecting victim.",
+          "Goal is to get the victim to “bite” and provide information:",
+          "Usernames",
+          "Passwords",
+          "Personal Information (ex. SSN, Address, Mothers Maiden Name, etc)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 7,
+        "text": [
+          "Ways to Get Users to Bite",
+          "1) Asks user to reply directly to an email"
+        ],
+        "notes": []
+      },
+      {
+        "number": 8,
+        "text": [
+          "Ways to Get Users to Bite",
+          "2) Trick user into clicking on a link or file that appears to be legitimate"
+        ],
+        "notes": []
+      },
+      {
+        "number": 9,
+        "text": [
+          "Ways to Get Users to Bite",
+          "Additional methods used:",
+          "Ask users to",
+          "install a malicious file",
+          "or",
+          "click on a malicious attachment",
+          "(ex. Office document, PDF, etc)",
+          "SMS –",
+          "text message with link to a website (ex. online dating site)",
+          "Vishing –",
+          "‘Social Engineering’ over the phone with the goal of having the user provide sensitive information",
+          "May spoof caller ID (VoIP makes this easy)",
+          "Use automated recordings"
+        ],
+        "notes": []
+      },
+      {
+        "number": 10,
+        "text": [
+          "Is this a Legitimate Email?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 11,
+        "text": [
+          "Answer: No!"
+        ],
+        "notes": []
+      },
+      {
+        "number": 12,
+        "text": [
+          "Why You Should Care About Phishing",
+          "Businesses and consumers are losing A LOT of money via identity theft.",
+          "Cost of phishing has been estimated at over",
+          "3 Billion dollars",
+          "annually.",
+          "(Gartner report)",
+          "In one example, 880 people were successfully targeted in one week with the average profit of $886 per victim.",
+          "http://voices.washingtonpost.com/securityfix/2009/06/spear-phishing_gang_resurfaces.html",
+          "880 x 886 = $779,680",
+          "Not bad for a week’s worth of work!",
+          "Note: This is just the profit for the attacker. This does not include time spent fixing your credit, lawyer fees, etc",
+          "Result:",
+          "Customers lose trust and shy away from the use of online transactions."
+        ],
+        "notes": []
+      },
+      {
+        "number": 13,
+        "text": [
+          "Spear Phishing – What is it?",
+          "Malicious and targeted email sent to specific users",
+          "Usually involves a small list of recipients",
+          "Emails contain malicious files and/or hyperlinks tied to relevant subject matter",
+          "Current events, news stories, holiday/seasonal related themes, etc.",
+          "Goal of the attacker:",
+          "Trick the user into clicking on the malicious link or malicious attachment",
+          "Obtaining sensitive information (documents as well as user credentials)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 14,
+        "text": [
+          "Spear Phishing Example"
+        ],
+        "notes": []
+      },
+      {
+        "number": 15,
+        "text": [
+          "Steps in a Spear Phishing Attack"
+        ],
+        "notes": []
+      },
+      {
+        "number": 16,
+        "text": [
+          "Investigating Phishing",
+          "Who sent it?",
+          "Sender’s Name",
+          "Domain",
+          "Spoofed or Real?",
+          "IP",
+          "Who was it sent to?",
+          "Recipient list",
+          "BCC?",
+          "When was it sent?",
+          "Time and Time Zone",
+          "Subject / Attachment?",
+          "Body of the Email",
+          "Strange Server Generated Strings"
+        ],
+        "notes": []
+      },
+      {
+        "number": 17,
+        "text": [
+          "Headers",
+          "Delivered-To: XXXXXXXXXXXXX@gmail.com",
+          "Received: by 10.236.111.46 with SMTP id v34cs581528yhg;",
+          "Wed, 5 Jan 2011 XXXXXXXXXX -0800 (PST)",
+          "Received: by 10.142.11.2 with SMTP id 2mr253515wfk.275.1294232332935;",
+          "Wed, 05 Jan 2011 XXXXXXXXXX -0800 (PST)",
+          "Received: from",
+          "ccccc-ddddd",
+          "([113.28.117.3])",
+          "by mx.google.com with ESMTP id p7si32937473wfl.41.2011.01.05.04.58.51;",
+          "Wed, 05 Jan 2011 XXXX -0800 (PST)",
+          "Received-SPF: neutral (google.com: 113.28.117.3 is neither permitted nor denied by best guess record for domain of XXXXXXX@state.gov) client-",
+          "ip",
+          "=113.28.117.3;",
+          "Authentication-Results: mx.google.com;",
+          "spf",
+          "=neutral (google.com: 113.28.117.3 is neither permitted nor denied by best guess record for domain of Fake Sender@state.gov)",
+          "smtp.mail",
+          "=Fake Sender@state.gov",
+          "Received: from mail pickup service by",
+          "ccccc-ddddd",
+          "with Microsoft SMTPSVC;",
+          "Wed, 5 Jan 2011 XXXXX +0800",
+          "Thread-Topic: Draft US-China Joint Statement",
+          "From: “Fake Sender\"",
+          "To: Victims",
+          "Subject:",
+          "Fw:Draft",
+          "US-China Joint Statement",
+          "Date: Wed, 5 Jan 2011",
+          "xxxxx",
+          "+0800"
+        ],
+        "notes": []
+      },
+      {
+        "number": 18,
+        "text": [
+          "Automated Analysis",
+          "http://www.mxtoolbox.com/EmailHeaders.aspx"
+        ],
+        "notes": []
+      },
+      {
+        "number": 19,
+        "text": [
+          "With Graphics:",
+          "http://www.edwinbush.com/my-tools-page/email-header-analyzer/"
+        ],
+        "notes": []
+      },
+      {
+        "number": 20,
+        "text": [
+          "Why Organizations are concerned about Spear Phishing",
+          "If you accidentally click on a malicious link or file and your machine is not patched, an attacker could:",
+          "Install files that allow for keystroke monitoring (e.g. steal your login credentials for any site you visit)",
+          "Exfiltrate data from your workstation",
+          "Use your workstation as a hop point to access other machines",
+          "If your machine is compromised, you will have to go through the headaches of setting up a new workstation"
+        ],
+        "notes": []
+      },
+      {
+        "number": 21,
+        "text": [
+          "How to Protect Against Phishing and Spear Phishing Attacks",
+          "Use the keyboard, not the mouse.",
+          "Never click on links in emails that are purportedly from your bank, PayPal, etc. Browse the site directly by typing it in yourself.",
+          "Use the phone.",
+          "Contact the sender to validate the message.",
+          "Never respond to unsolicited emails.",
+          "If they ask you for personal information, just delete them.",
+          "Review Email headers",
+          "– Ensure the message was not spoofed"
+        ],
+        "notes": []
+      },
+      {
+        "number": 22,
+        "text": [
+          "How to Protect Against Phishing and Spear Phishing Attacks at Home",
+          "Use Anti-phishing toolbars",
+          "from Netcraft, Microsoft, Mozilla, etc. on your personal computer.",
+          "Keep your computer patched.",
+          "Both the OS and programs.",
+          "Watch your accounts closely.",
+          "Monitor them for unusual activity, such as unexpected transactions.",
+          "Educate Yourself!",
+          "Try the Phishing Test at:",
+          "https://www.sonicwall.com/phishing-iq-test/",
+          "See the global cyber-attacks map (real-time):",
+          "https://securitycenter.sonicwall.com/m/page/worldwide-attacks"
+        ],
+        "notes": []
+      },
+      {
+        "number": 23,
+        "text": [
+          "Fake Anti-Virus"
+        ],
+        "notes": []
+      },
+      {
+        "number": 24,
+        "text": [
+          "Fake Anti-Virus",
+          "Also known as “Scareware”, “Rogueware”, etc",
+          "Fake security program that in many cases looks legitimate and is professionally designed",
+          "Attacker’s goal is to have the end user install the program on their workstation",
+          "End state goal: Make money by having users pay a “license fee”"
+        ],
+        "notes": []
+      },
+      {
+        "number": 25,
+        "text": [
+          "Fake Anti-Virus",
+          "Once installed, the malware:",
+          "Can be extremely difficult to uninstall",
+          "May install a keystroke logger",
+          "Can disable your real anti-virus software",
+          "Can alter your search queries",
+          "Display annoying pop-up ads, asking the user to pay for a license key for the software",
+          "“License Fees” can range from $20-$50 dollars"
+        ],
+        "notes": []
+      },
+      {
+        "number": 26,
+        "text": [
+          "Fake Anti-Virus Even Targets Mac Users"
+        ],
+        "notes": []
+      },
+      {
+        "number": 27,
+        "text": [
+          "How to Protect Against Fake Anti-Virus",
+          "Keep your anti-virus software up to date",
+          "Keep your operating system and popular applications patched",
+          "Do not install suspicious programs on your workstation",
+          "Educate end users"
+        ],
+        "notes": []
+      },
+      {
+        "number": 28,
+        "text": [
+          "Fake Disk Defragmenter Software"
+        ],
+        "notes": []
+      },
+      {
+        "number": 29,
+        "text": [
+          "Fake Disk Defragmenter Software",
+          "Essentially an extension of fake anti-virus software",
+          "Attackers state that there are disk errors on your workstation",
+          "Show a fake report highlighting disk errors",
+          "Goal is to get the potential victims to purchase a software program",
+          "The program will not fix anything on your machine",
+          "Victims end up providing credit card information to criminals and end up becoming victims of identity theft"
+        ],
+        "notes": []
+      },
+      {
+        "number": 30,
+        "text": [
+          "How to Protect Against Fake Disk Defragmenter Attacks",
+          "Keep your anti-virus software up to date",
+          "Keep your operating system and popular applications patched",
+          "Do not install suspicious programs on your workstation",
+          "Educate end users"
+        ],
+        "notes": []
+      },
+      {
+        "number": 31,
+        "text": [
+          "Wrap Up",
+          "Technology can assist with reducing instances of Phishing, Fake AV, etc, but",
+          "education and user awareness are key to not becoming a victim",
+          "."
+        ],
+        "notes": []
+      },
+      {
+        "number": 32,
+        "text": [
+          "Reconnaissance",
+          "Nearly every hacking attacks begins with an intensive reconnaissance.",
+          "How would you go about doing this? Imagine you are trying to break into a house.",
+          "What tools have we learned so far to do this?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 33,
+        "text": [
+          "Additional Information",
+          "US-CERT – Reporting Phishing",
+          "http://www.us-cert.gov/nav/report_phishing.html",
+          "Microsoft Phishing Education",
+          "http://www.microsoft.com/mscorp/safety/technologies/antiphishing/guidance.mspx",
+          "National Cyber Security Alliance",
+          "http://www.staysafeonline.org/content/top-8-cyber-security-practices"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "lecture": 5,
+    "file": "Lecture 5 - OS Hardening.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "Lecture Five - Operation System Hardening and Guide to Secure Workstations"
+        ],
+        "notes": [
+          "Essentially",
+          "you want to harden the individual assets the same way you would a bank vault. You don’t just secure the doors to the bank, but you also secure the room the money is held in (Vault) in case the perimeter security is penetrated",
+          "2"
+        ]
+      },
+      {
+        "number": 2,
+        "text": [
+          "Operating System Hardening",
+          "Previously, we discussed some of the most popular security gadgets that protect our IT infrastructure – perimeter and hosts.",
+          "OS Hardening Definition",
+          ": Making changes to the host to make it more secure and to reduce the change of the asset being compromised",
+          "Hardening your workstation makes it less vulnerable to attacks",
+          "Hardening steps are easy to carry out",
+          "OS hardening provides another layer of defense",
+          "Must protect assets at the host level in case perimeter defenses are bypassed"
+        ],
+        "notes": [
+          "Essentially",
+          "you want to harden the individual assets the same way you would a bank vault. You don’t just secure the doors to the bank, but you also secure the room the money is held in (Vault) in case the perimeter security is penetrated",
+          "3"
+        ]
+      },
+      {
+        "number": 3,
+        "text": [
+          "Bank Example",
+          "You are in charge of security for a local bank branch. If given the option, which of the following options would you prefer:",
+          "Have perimeter security (locks on the doors, cameras, etc)",
+          "Have perimeter security along with an internal vault",
+          "Not locking down workstations is like relying on the front door locks of the bank to keep the bad guys out – it’s not sufficient"
+        ],
+        "notes": [
+          "5"
+        ]
+      },
+      {
+        "number": 4,
+        "text": [
+          "Another Example - Castle Analogy",
+          "Question for the class – which one is more secure?",
+          "Castle with one single wall and open courtyard",
+          "Multi-tier defense (Castle with multiple walls and safeguards)",
+          "If you were the king of the castle, which solution would you want protecting you?"
+        ],
+        "notes": [
+          "Note that patching does NOT protect",
+          "against zero day attacks (attacks where the vendor has not released a patch for a new vulnerability)",
+          "6"
+        ]
+      },
+      {
+        "number": 5,
+        "text": [
+          "Basic Steps for Hardening Operating Systems / Workstations",
+          "Patching",
+          "Log in with non-Admin account (Limited permissions)",
+          "Turn off unnecessary / insecure services",
+          "Enable automatic updates",
+          "Personal Firewall / Endpoint Security",
+          "Anti-virus",
+          "Host IPS",
+          "NoScript",
+          "/ other browser plugins",
+          "Microsoft’s EMET",
+          "tool and its descendants"
+        ],
+        "notes": [
+          "Explain that if you haven’t installed a patch but the port the vulnerable service runs",
+          "on is blocked, you won’t be compromised.",
+          "17"
+        ]
+      },
+      {
+        "number": 6,
+        "text": [
+          "Patching",
+          "Patching ensures your workstation is protected against",
+          "KNOWN",
+          "vulnerabilities",
+          "Extremely simple and automated process:",
+          "Patch is released",
+          "Organization downloads the patch",
+          "Install it in test environment",
+          "If things go ok, install in Production during a scheduled outage",
+          "Process has been around for years, but organizations still have trouble with it"
+        ],
+        "notes": [
+          "Explain that if you haven’t installed a patch but the port the vulnerable service runs",
+          "on is blocked, you won’t",
+          "be compromised.",
+          "18"
+        ]
+      },
+      {
+        "number": 7,
+        "text": [
+          "Patching (Cont)",
+          "Enterprise tools used for patching:",
+          "Microsoft WSUS / SMS",
+          "BigFix",
+          "YUM (Linux Servers)",
+          "Microsoft GPO’s",
+          "Home use –",
+          "Secunia",
+          "PSI Tool",
+          "Great for identifying vulnerable applications and out of date programs:",
+          "http://",
+          "secunia.com/vulnerability_scanning/personal",
+          "/"
+        ],
+        "notes": [
+          "Explain that if you haven’t installed a patch but the port the vulnerable service runs",
+          "on is blocked, you won’t",
+          "be compromised.",
+          "19"
+        ]
+      },
+      {
+        "number": 8,
+        "text": [
+          "Patch Release Schedule",
+          "Microsoft – Every second Tuesday of each month",
+          "Oracle – Quarterly",
+          "Adobe – As needed",
+          "Other vendors – Ad-hoc / as needed"
+        ],
+        "notes": []
+      },
+      {
+        "number": 9,
+        "text": [
+          "Log in with",
+          "Non-Admin Account",
+          "(Limited",
+          "Pe",
+          "rmissions",
+          ")",
+          "One of the biggest problems with compromises is admin accounts",
+          "Many organizations allow users to run as administrators on their machines",
+          "The problem is, if your machine is compromised, the bad guys get full access to your machine",
+          "Bad guys can then Install programs on your machine (",
+          "keyloggers",
+          ", reverse shells, etc)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 10,
+        "text": [
+          "Reverse Shell",
+          "A Shell is a user-computer interface allowing a system to process user commands. Shell is a concept before GUI went",
+          "popluar",
+          ".",
+          "Most network firewall egress",
+          "filters",
+          "allow",
+          "http (",
+          "tcp",
+          "80",
+          "),",
+          "https",
+          "(",
+          "tcp",
+          "443",
+          "),",
+          "dns",
+          "(",
+          "tcp",
+          "/",
+          "udp",
+          "53",
+          "),",
+          "smtp",
+          "(",
+          "tcp",
+          "25",
+          ") and ping",
+          "(ICMP echo requests",
+          "and",
+          "replies",
+          ") outgoing connections",
+          ".",
+          "Bad guys try to lure an internal machine by malware to leak data through a green exit.",
+          "To defend – Signature Based Analysis."
+        ],
+        "notes": []
+      },
+      {
+        "number": 11,
+        "text": [
+          "Log in with",
+          "Non-Admin Account",
+          "(Limited",
+          "Permissions",
+          ")",
+          "Solution: Do not let users have admin rights on their workstation",
+          "If the users need to install software, have them call the helpdesk",
+          "If it’s a small company, make users log in with admin rights to install the program and then log off",
+          "We have seen numerous real world examples where users have clicked on a malicious attachment or attempted to install a malicious file but were denied because they had limited permissions"
+        ],
+        "notes": []
+      },
+      {
+        "number": 12,
+        "text": [
+          "Turn off Unnecessary /Insecure Services",
+          "Many companies create standard builds for servers and workstation",
+          "Attempt to create a “one size fits all” solution",
+          "Problem is, you have many systems running services that they do not need",
+          "Extra services = potential vulnerabilities that must be mitigated",
+          "Best practice: Disable unnecessary services"
+        ],
+        "notes": []
+      },
+      {
+        "number": 13,
+        "text": [
+          "Turn off",
+          "Unnecessary /Insecure Services",
+          "Question for the class……Do you really think this server really needs to be running all of these services?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 14,
+        "text": [
+          "Enable automatic updates",
+          "Extremely easy to implement – three clicks in Windows",
+          "Mac OS X – also three",
+          "clicks",
+          "No longer available"
+        ],
+        "notes": []
+      },
+      {
+        "number": 15,
+        "text": [
+          "Enable automatic updates - Windows"
+        ],
+        "notes": []
+      },
+      {
+        "number": 16,
+        "text": [
+          "Enable automatic updates - Mac"
+        ],
+        "notes": []
+      },
+      {
+        "number": 17,
+        "text": [
+          "Personal Firewall / Endpoint Security",
+          "Used to block access to vulnerable services",
+          "Default install after Windows XP Service Pack 2",
+          "Cheap (Free or minimal cost for commercial solutions)",
+          "Can be used on servers",
+          "Just have to allow access to ports that need to communicate",
+          "Help protect against lateral compromise / scanning"
+        ],
+        "notes": []
+      },
+      {
+        "number": 18,
+        "text": [
+          "Windows Firewall"
+        ],
+        "notes": []
+      },
+      {
+        "number": 19,
+        "text": [
+          "Mac OS X Firewall"
+        ],
+        "notes": []
+      },
+      {
+        "number": 20,
+        "text": [
+          "Anti-virus",
+          "Not the best protection – only alerts on known threats",
+          "It’s still good to run AV on your workstation for detecting known threats",
+          "Cheap (free for JMU students)",
+          "Easy to use and keep up to date",
+          "Major vendors: Symantec, McAfee, F-Secure, etc"
+        ],
+        "notes": []
+      },
+      {
+        "number": 21,
+        "text": [
+          "Host IPS",
+          "Concept is somewhat similar to network based IPS systems but designed for performing detection at the host level",
+          "Signatures can be both heuristic as well as based on pattern matches",
+          "Host IPS has the ability to get very granular and can be set to trigger on know bad patterns/files/etc",
+          "Major vendors: Symantec, McAfee HBSS"
+        ],
+        "notes": []
+      },
+      {
+        "number": 22,
+        "text": [
+          "Host IPS",
+          "Pros:",
+          "Can be customized to flag on very specific patterns",
+          "Provides an additional layer of security",
+          "Signatures can get very granular",
+          "Cons:",
+          "Lots of false positives / noise",
+          "Requires resources to review the console logs",
+          "Shear volume of alerts can be overwhelming on a large network"
+        ],
+        "notes": []
+      },
+      {
+        "number": 23,
+        "text": [
+          "NoScript",
+          "/ other browser plugins",
+          "Restricts the browser’s ability to execute flash,",
+          "javascript",
+          ", and other potentially malicious files",
+          "Easy to install (simple plug in)",
+          "Users can also run browsers that were designed with security in mind (ex. Google Chrome)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 24,
+        "text": [
+          "NoScript",
+          "Screenshot"
+        ],
+        "notes": []
+      },
+      {
+        "number": 25,
+        "text": [
+          "Microsoft’s EMET tool",
+          "Microsoft “Enhanced Mitigation Experience Toolkit”",
+          "Tool created to help prevent vulnerabilities from being exploited on Windows systems",
+          "Requires .net framework to be installed",
+          "Can be downloaded here:",
+          "http://",
+          "www.microsoft.com/download/en/details.aspx?id=1677",
+          "Microsoft",
+          "announced",
+          "that they have stopped supporting EMET in 2018. The",
+          "successors to EMET are the",
+          "Process Mitigations",
+          "Module",
+          "—aka",
+          "Process Mitigation Management Tool",
+          "—and the",
+          "Windows Defender Exploit Guard",
+          "only available on Windows 10 and Windows Server 2016",
+          "."
+        ],
+        "notes": []
+      },
+      {
+        "number": 26,
+        "text": [
+          "Microsoft EMET Tool Screenshot"
+        ],
+        "notes": []
+      },
+      {
+        "number": 27,
+        "text": [
+          "Hardening Guides",
+          "Guides created by the NSA, CSIS, and other organizations that provide best practices on securing workstations",
+          "Ex. Registry key changes, disabling services, etc",
+          "Pros of using the guides:",
+          "Cost (free)",
+          "Greatly assist in locking down a workstation",
+          "Cons of using the guides:",
+          "Require a great amount of time to test changes before implementing",
+          "Can be complicated dealing with compatibility issues when new applications are installed"
+        ],
+        "notes": []
+      },
+      {
+        "number": 28,
+        "text": [
+          "Hardening Guides (cont)",
+          "General suggestion – If you are going to use the guides, make a few changes at a time and then test",
+          "It’s much easier to figure out which of five changes you just made caused the problem versus which of the last 150 changes you just made caused the problem"
+        ],
+        "notes": []
+      },
+      {
+        "number": 29,
+        "text": [
+          "How to Enforce Hardening on a Network",
+          "Network Access Control (NAC) – Agent that is installed on a user’s workstation",
+          "Agent checks in each time the user logs on to ensure the latest patches, Anti-virus definitions, and GPO’s are installed",
+          "Used frequently for “Road Warriors” - heavy business travelers",
+          "GPO pushes also work very well for ensuring hardening changes made are successfully installed and properly configured"
+        ],
+        "notes": []
+      },
+      {
+        "number": 30,
+        "text": [
+          "Wrap Up",
+          "Hardening workstations is vital to protecting assets against attacks",
+          "Limited permissions is one of the most powerful ways to protect users machines from being compromised",
+          "Many of the hardening steps are quite easy to carry out (patching, AV, auto-updates, etc)"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "lecture": 6,
+    "file": "Lecture 6 - How to determine if a website is malicious.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "Lecture Six – How to Review a Web Site to Determine if it is Malicious"
+        ],
+        "notes": [
+          "http://www.eweek.com/c/a/Security/Malicious-Websites-Jump-Dramatically-in-2010-835022/",
+          "3"
+        ]
+      },
+      {
+        "number": 2,
+        "text": [
+          "Review from Last Week",
+          "OS Hardening - Making changes to the host to make it more secure and to reduce the change of the asset being compromised",
+          "Hardening your workstation makes it less vulnerable to attacks",
+          "Patching",
+          "Individual steps to harden workstations:",
+          "Patching",
+          "Log in with non-Admin account (Limited permissions)",
+          "Turn off unnecessary / insecure services",
+          "Enable automatic updates",
+          "Personal Firewall / Endpoint Security",
+          "Anti-virus",
+          "Host IPS",
+          "NoScript",
+          "/ other browser",
+          "plugins",
+          "Microsoft EMET tool"
+        ],
+        "notes": [
+          "4"
+        ]
+      },
+      {
+        "number": 3,
+        "text": [
+          "How to Review a Web Site to Determine if it is malicious",
+          "Millions of malicious web sites hosting drive by exploits (.jar files,",
+          "pdf’s",
+          ",",
+          "exe’s",
+          ", and other file types)",
+          "Common to see legitimate web sites compromised to host malicious files",
+          "“Nearly 80 percent of all malicious sites are compromised legitimate Websites” –",
+          "WebSense"
+        ],
+        "notes": [
+          "5"
+        ]
+      },
+      {
+        "number": 4,
+        "text": [
+          "Question – Is this site Malicious?"
+        ],
+        "notes": [
+          "7"
+        ]
+      },
+      {
+        "number": 5,
+        "text": [
+          "Answer:",
+          "Depends on When You Visited"
+        ],
+        "notes": [
+          "8"
+        ]
+      },
+      {
+        "number": 6,
+        "text": [
+          "How do You Review a Site to Determine if it is Malicious?",
+          "If you come across a potentially suspicious web site, how can you tell if it’s clean?",
+          "Two primary methods:",
+          "Manual review of source code / files on the site",
+          "Use automated tools to review the site in question",
+          "Both methods have pros and cons described in the following slides"
+        ],
+        "notes": [
+          "9"
+        ]
+      },
+      {
+        "number": 7,
+        "text": [
+          "Manual Review of Web Sites",
+          "Requires the user to manually review source code of the site (HTML, JavaScript)",
+          "Review the site and search for malicious files, redirects to compromised sites, etc",
+          "Pros:",
+          "Human reviewing code - allows user to catch attacks not previously seen",
+          "Ability to not rely on pattern matching",
+          "Many fewer false positives",
+          "Cons:",
+          "Humans make mistakes – easy to miss something",
+          "Time consuming to manually review source code",
+          "Reviewer must have programming experience and/or understand how code functions"
+        ],
+        "notes": [
+          "http://",
+          "getfirebug.com",
+          "/",
+          "10"
+        ]
+      },
+      {
+        "number": 8,
+        "text": [
+          "Manual Review – Items to look for",
+          "Keep an eye out for the following when manually reviewing web sites:",
+          "Iframe",
+          "(Inline frame) – can be used by attackers to redirect visitors to a malicious web site",
+          "No interaction required other than visiting a web site (no clicking on files, running code, etc)",
+          "Iframes",
+          "can be used to force the user to download malware, run a malicious file in the browser",
+          "Goal is to exploit a user’s machine/browser that is not patched against a",
+          "vulnerability",
+          "Javascript",
+          "/",
+          "VBscript",
+          "& other dynamic functions",
+          "Forms, handlers, timeout session variables",
+          "URLs esp. third party external links"
+        ],
+        "notes": [
+          "http://",
+          "getfirebug.com",
+          "/",
+          "11"
+        ]
+      },
+      {
+        "number": 9,
+        "text": [
+          "Manual Review – Items to look for (Cont)",
+          "Malicious JavaScript – Most browsers are configured to run JavaScript each time a user visits a web site",
+          "Problem is, browser does not know whether or not the JavaScript is malicious",
+          "Malicious JavaScript - frequently used in “Drive by Downloads”",
+          "Goal of the attacker is to have the user run the JavaScript within their browser",
+          "NoScript",
+          "works fantastically to protect against this threat",
+          "Review the actual JavaScript and determine:",
+          "What it is attempting to do? (pull down files? Execute code?)"
+        ],
+        "notes": [
+          "12"
+        ]
+      },
+      {
+        "number": 10,
+        "text": [
+          "Tools Used to Perform Manual Review of Source Code",
+          "Firebug: Firefox plug in which allows users to edit, debug, and monitor source code on any web page",
+          "Inspect and edit HTML",
+          "Debug and profile JavaScript",
+          "Execute JavaScript on the fly",
+          "Download Firebug here:",
+          "http://getfirebug.com"
+        ],
+        "notes": [
+          "14"
+        ]
+      },
+      {
+        "number": 11,
+        "text": [
+          "Firebug Screenshot"
+        ],
+        "notes": [
+          "JavaScript",
+          "unpacker",
+          "Written by Blake",
+          "Hartstein",
+          "17"
+        ]
+      },
+      {
+        "number": 12,
+        "text": [
+          "Tools Used to Perform Manual Review of Source Code",
+          "Malzilla",
+          "– tool with numerous decoders",
+          "Can be used to manually decode JavaScript",
+          "Can be used to request a web page by using a different user agent",
+          "NOTE: Always use the tool in a VM in case the site is dirty",
+          "Can be downloaded here:",
+          "http://sourceforge.net/projects/malzilla/files/Malzilla%20Win32%20Binary%20package/"
+        ],
+        "notes": [
+          "Tool used for reviewing flash files,",
+          "Javascript",
+          ", and potentially",
+          "malicious PDF files",
+          "18"
+        ]
+      },
+      {
+        "number": 13,
+        "text": [
+          "Malzilla",
+          "Screenshot"
+        ],
+        "notes": [
+          "Reputation based site",
+          "Used for providing a reputation based score on whether or not the site is malicious",
+          "21"
+        ]
+      },
+      {
+        "number": 14,
+        "text": [
+          "Tools Used to Perform Manual Review of Source Code",
+          "Notepad – Simple",
+          "Mozilla Firefox: Right click on the page and select “View Page Source”",
+          "Microsoft Internet Explorer – Click “View >> Source”"
+        ],
+        "notes": []
+      },
+      {
+        "number": 15,
+        "text": [
+          "Automated Tools",
+          "Allow the analyst to quickly determine if a website is potentially malicious",
+          "Pros",
+          "Analysis is quick",
+          "Users of the tools do not have to understand code",
+          "Tools are updated frequently to identify new attacks",
+          "Cons:",
+          "Analysts are relying on someone else to tell them if something is bad",
+          "How confident are you that the tool will catch everything?",
+          "Automated tools do not always detect new attacks",
+          "Signature based tools have to be told what to look for",
+          "Heuristics have a better chance, but come as a price (high false positive rates)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 16,
+        "text": [
+          "Automated Tools",
+          "JSUnpack",
+          ":",
+          "http://",
+          "jsunpack.jeek.org/dec/go",
+          "Wepawet",
+          ":",
+          "http://",
+          "wepawet.iseclab.org",
+          "/",
+          "McAfee",
+          "SiteAdvisor",
+          ":",
+          "http://",
+          "www.siteadvisor.com",
+          "/",
+          "Norton Safe Web:",
+          "http://",
+          "safeweb.norton.com",
+          "/",
+          "Malware domain list:",
+          "http://",
+          "www.malwaredomainlist.com",
+          "/",
+          "Google Safe browsing:",
+          "http://",
+          "code.google.com/apis/safebrowsing",
+          "/"
+        ],
+        "notes": []
+      },
+      {
+        "number": 17,
+        "text": [
+          "JSUnpack",
+          "– JavaScript",
+          "Unpacker"
+        ],
+        "notes": []
+      },
+      {
+        "number": 18,
+        "text": [
+          "Wepawet"
+        ],
+        "notes": []
+      },
+      {
+        "number": 19,
+        "text": [
+          "McAfee Site Advisor",
+          "Reputation based methodology",
+          "Used for providing a reputation based score on whether or not the site is malicious",
+          "Not perfect (has to scan sites first to determine that they are malicious, but it’s a start"
+        ],
+        "notes": []
+      },
+      {
+        "number": 20,
+        "text": [
+          "McAfee Site Advisor"
+        ],
+        "notes": []
+      },
+      {
+        "number": 21,
+        "text": [
+          "Norton Safe Web"
+        ],
+        "notes": []
+      },
+      {
+        "number": 22,
+        "text": [
+          "Malware domains list",
+          "Site used to track domains hosting malware",
+          "Botnet",
+          "related,",
+          "crimeware",
+          ", etc",
+          "Daily",
+          "Updates",
+          "https://",
+          "www.malwaredomainlist.com/mdl.php",
+          "!!!Be VERY CAREFUL with visiting the sites displayed!!!"
+        ],
+        "notes": []
+      },
+      {
+        "number": 23,
+        "text": [
+          "Malware domains list"
+        ],
+        "notes": []
+      },
+      {
+        "number": 24,
+        "text": [
+          "Google Safe browsing"
+        ],
+        "notes": []
+      },
+      {
+        "number": 25,
+        "text": [
+          "Other Ways to Test Potentially Malicious Websites",
+          "Use your virtual machine",
+          "Set up your virtual machine to mimic your current host workstation",
+          "Set up your monitoring tools to detect changes to the file system, registry, network traffic, etc",
+          "Visit the site and see what happens"
+        ],
+        "notes": []
+      },
+      {
+        "number": 26,
+        "text": [
+          "Other Options for Testing",
+          "If you don’t have a virtual machine and want to pull down source code from a potentially malicious website, try the following tools:",
+          "PDFmyURL",
+          ": http://",
+          "pdfmyurl.com",
+          "/",
+          "Grabs the source code from the page and adds it to a PDF",
+          "Allows you to see the website source code without visiting the site",
+          "Web-",
+          "sniffer.net",
+          ": http://web-",
+          "sniffer.net",
+          "/",
+          "Allows you to spoof the user agent and obtain the source code / response from the website without infecting your local machine"
+        ],
+        "notes": []
+      },
+      {
+        "number": 27,
+        "text": [
+          "DIY",
+          "Take a look at these sites and relat",
+          "e them to this lecture. How can they become handy to protect Internet surfers from malicious websites?",
+          "Web-sniffer -",
+          "https://",
+          "chrome.google.com/webstore/detail/web-sniffer/ndfgffclcpdbgghfgkmooklaendohaef?hl=en",
+          "Siteadvisor",
+          "(now",
+          "Mcafee",
+          ")- http://www.siteadvisor.com/"
+        ],
+        "notes": []
+      },
+      {
+        "number": 28,
+        "text": [
+          "Wrap Up",
+          "There are millions of malicious sites on the web",
+          "Use your Virtual Machines and/or the tools we discussed this evening to assist in determining if the site you wish to visit is malicious",
+          "If possible, always browse sites from a VM"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "lecture": 7,
+    "file": "Lecture 7_Cryptography & Cryptocurrency.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "Cryptography & Cryptocurrency"
+        ],
+        "notes": []
+      },
+      {
+        "number": 2,
+        "text": [
+          "Learning Objectives",
+          "Understand",
+          "cryptography & cryptocurrency",
+          "Describe hash, symmetric, and asymmetric cryptographic algorithms",
+          "Explain different cryptographic attacks",
+          "List the various ways in which cryptography is used"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 3,
+        "text": [
+          "What is Cryptography?",
+          "Cryptography",
+          "Scrambling information so it cannot be read",
+          "Transforms information into secure form so unauthorized persons cannot access it",
+          "Steganography",
+          "Hides the existence of data",
+          "An image, audio, or video file can contain hidden messages embedded in the file",
+          "Achieved by dividing data and hiding in unused portions of the file",
+          "May hide data in the file header fields that describe the file, between sections of the",
+          "metadata",
+          "(data used to describe the content or structure of the actual data)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 4,
+        "text": [
+          "What is Cryptography?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 5,
+        "text": [
+          "What is Cryptography?",
+          "Encryption",
+          "Changing original text into a secret message using cryptography",
+          "Decryption",
+          "Changing secret message back to original form",
+          "Plaintext",
+          "Unencrypted data to be encrypted or is the output of decryption",
+          "Ciphertext",
+          "The scrambled and unreadable output of encryption",
+          "Cleartext data",
+          "Data stored or transmitted without encryption"
+        ],
+        "notes": []
+      },
+      {
+        "number": 6,
+        "text": [
+          "What is Cryptography?",
+          "Plaintext data is input into a",
+          "cryptographic algorithm",
+          "(also called a",
+          "cipher",
+          ")",
+          "Consists of procedures based on a mathematical formula used to encrypt and decrypt the data",
+          "Key",
+          "A mathematical value entered into the algorithm to produce ciphertext",
+          "The reverse process uses the key to decrypt the message",
+          "Substitution cipher",
+          "Substitutes one character for another",
+          "One type is a R",
+          "O",
+          "T13, in which the entire alphabet is rotated 13 steps (A = N)",
+          "XOR cipher",
+          "Based on the binary operation eXclusive OR that compares two bits"
+        ],
+        "notes": []
+      },
+      {
+        "number": 7,
+        "text": [
+          "What is Cryptography?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 8,
+        "text": [
+          "Cryptography and Security",
+          "Cryptography can provide five basic protections",
+          "Confidentiality",
+          "Ensures only authorized parties can view it",
+          "Integrity",
+          "Ensures information is correct and unaltered",
+          "Authentication",
+          "Ensures sender can be verified through cryptography",
+          "Non-repudiation",
+          "Proves that a user performed an action",
+          "Obfuscation",
+          "Making something obscure or unclear",
+          "Security through obscurity",
+          "An approach in security where virtually any system can be made secure as long as outsiders are unaware of it or how it functions"
+        ],
+        "notes": []
+      },
+      {
+        "number": 9,
+        "text": [
+          "Cryptography and Security",
+          "Characteristic",
+          "Description",
+          "Protection",
+          "Confidentiality",
+          "Ensures that only authorized parties can view the information",
+          "Encrypted information can only be viewed by those who have been provided the key",
+          "Integrity",
+          "Ensures that the information is correct and no unauthorized person or malicious software has altered that data",
+          "Encrypted information cannot be changed except by authorized users who have the key",
+          "Authentication",
+          "Provides proof of the genuineness of the user",
+          "Proof that the sender was legitimate and not an imposter can be obtained",
+          "Non-repudiation",
+          "Proves that a user performed an action",
+          "Individuals are prevented from fraudulently denying that they were involved in a transaction",
+          "Obfuscation",
+          "Makes something obscure or unclear",
+          "By hiding the details the original cannot be determined"
+        ],
+        "notes": []
+      },
+      {
+        "number": 10,
+        "text": [
+          "Hash Algorithms",
+          "Hash algorithms",
+          "Creates a unique “digital fingerprint” of a set of data and is commonly called",
+          "hashing",
+          "This fingerprint, called a digest (sometimes called a message digest or hash), represents the contents",
+          "Its contents cannot be used to reveal original data set",
+          "Is primarily used for comparison purposes",
+          "Hashing is intended to be one way in that its digest cannot be reversed to reveal the original set of data"
+        ],
+        "notes": []
+      },
+      {
+        "number": 11,
+        "text": [
+          "Hash Algorithms",
+          "Hash algorithms are naturally collision resistance (e.g., birthday attack).",
+          "Hash is irreversible (one-way operation).",
+          "Hash is puzzle friendly (e.g., bitcoin mining) – hard to solve but easy to verify.",
+          "Bitcoin adopts SHA256 (for now) to has transactions."
+        ],
+        "notes": []
+      },
+      {
+        "number": 12,
+        "text": [
+          "Hash Algorithms",
+          "Secure hashing algorithm (desirable) characteristics:",
+          "Fixed size",
+          "Short and long data sets have the same size hash",
+          "Unique",
+          "Two different data sets cannot produce the same hash (susceptible to collision or birthday attacks like MD5)",
+          "Original",
+          "Data set cannot be created to have a predefined hash",
+          "Secure",
+          "Resulting hash cannot be reversed to determine original plaintext"
+        ],
+        "notes": []
+      },
+      {
+        "number": 13,
+        "text": [
+          "Hash Algorithms",
+          "Hashing is often used as a check to verify that the original contents of an item has not been changed"
+        ],
+        "notes": []
+      },
+      {
+        "number": 14,
+        "text": [
+          "Hash Algorithms",
+          "Message Digest 5 (M",
+          "D5)",
+          "Most well-known of the M",
+          "D hash algorithms",
+          "Message length padded to 512 bits",
+          "Weaknesses in compression function could lead to collisions",
+          "Some security experts recommend using a more secure hash algorithm",
+          "Secure Hash Algorithm (S",
+          "H",
+          "A)",
+          "More secure than M",
+          "D",
+          "S",
+          "H",
+          "A-2 is currently considered to be a secure hash",
+          "S",
+          "H",
+          "A-3 was announced as a new standard in 2015 and may be suitable for low-power devices"
+        ],
+        "notes": []
+      },
+      {
+        "number": 15,
+        "text": [
+          "Cryptography and Security",
+          "Cryptography can provide protection to data as that data resides in any of three states:",
+          "Data in-use – data actions being performed by “endpoint devices”",
+          "Data in-transit – actions that transmit the data across a network",
+          "Data at-rest – data this is stored on electronic media"
+        ],
+        "notes": []
+      },
+      {
+        "number": 16,
+        "text": [
+          "Cryptographic Algorithms",
+          "A fundamental difference in cryptographic algorithms is the amount of data processed at a time",
+          "Stream cipher",
+          "- takes one character and replaces it with another",
+          "Block cipher",
+          "- manipulates an entire block of plaintext at one time",
+          "Sponge function",
+          "- takes as input a string of any length and returns a string of any requested variable length",
+          "Three categories of cryptographic algorithms",
+          "Hash algorithms",
+          "Symmetric cryptographic algorithms",
+          "Asymmetric cryptographic algorithms"
+        ],
+        "notes": []
+      },
+      {
+        "number": 17,
+        "text": [
+          "Symmetric",
+          "Cryptographic Algorithms",
+          "Symmetric cryptographic algorithms - use the same single key to encrypt and decrypt a document",
+          "Original cryptographic algorithms were symmetric",
+          "Also called",
+          "private key cryptography",
+          "(the key is kept private between sender and receiver)",
+          "Common algorithms include:",
+          "Data Encryption Standard",
+          "Triple Data Encryption Standard",
+          "Advanced Encryption Standard",
+          "Several other algorithms"
+        ],
+        "notes": []
+      },
+      {
+        "number": 18,
+        "text": [
+          "Symmetric Cryptographic Algorithms"
+        ],
+        "notes": []
+      },
+      {
+        "number": 19,
+        "text": [
+          "Symmetric Cryptographic Algorithms (3 of 5)",
+          "Data Encryption Standard (D",
+          "E",
+          "S)",
+          "Based on product originally designed in early 1970s",
+          "Uses a 56-bit key and is a block cipher",
+          "Triple Data Encryption standard (3",
+          "D",
+          "E",
+          "S)",
+          "Designed to replace D",
+          "E",
+          "S",
+          "Uses three rounds of encryption",
+          "Ciphertext of first round becomes input for second iteration",
+          "Most secure versions use different keys used for each round"
+        ],
+        "notes": []
+      },
+      {
+        "number": 20,
+        "text": [
+          "Symmetric Cryptographic Algorithms"
+        ],
+        "notes": []
+      },
+      {
+        "number": 21,
+        "text": [
+          "Asymmetric Cryptographic Algorithms",
+          "Weakness of symmetric algorithms",
+          "Distributing and maintaining a secure single key among multiple users distributed geographically",
+          "Asymmetric cryptographic algorithms",
+          "Also known as",
+          "public key cryptography",
+          "Uses two mathematically related keys",
+          "Public key available to everyone and freely distributed",
+          "Private key known only to individual to whom it belongs"
+        ],
+        "notes": []
+      },
+      {
+        "number": 22,
+        "text": [
+          "Asymmetric Cryptographic Algorithms"
+        ],
+        "notes": []
+      },
+      {
+        "number": 23,
+        "text": [
+          "Asymmetric Cryptographic Algorithms",
+          "Important principles",
+          "Key pairs",
+          "Public key",
+          "Private key",
+          "Both directions",
+          "- keys can work in both directions",
+          "Common asymmetric cryptographic algorithms:",
+          "R",
+          "S",
+          "A",
+          "Elliptic Curve Cryptography",
+          "Digital Signature Algorithm",
+          "Those relating to Key Exchange"
+        ],
+        "notes": []
+      },
+      {
+        "number": 24,
+        "text": [
+          "Asymmetric Cryptographic Algorithms",
+          "R",
+          "S",
+          "A",
+          "Published in 1977 and patented by M",
+          "I",
+          "T in 1983",
+          "Most common asymmetric cryptography algorithm",
+          "Uses two large prime numbers"
+        ],
+        "notes": []
+      },
+      {
+        "number": 25,
+        "text": [
+          "Asymmetric Cryptographic Algorithms",
+          "Digital Signature Algorithm (D",
+          "S",
+          "A)",
+          "Digital signature - an electronic verification",
+          "Verifies the sender",
+          "Prevents sender from disowning the message",
+          "Proves message integrity"
+        ],
+        "notes": []
+      },
+      {
+        "number": 26,
+        "text": [
+          "Asymmetric Cryptographic Algorithms"
+        ],
+        "notes": []
+      },
+      {
+        "number": 27,
+        "text": [
+          "Algorithm Attacks",
+          "Known Ciphertext Attack",
+          "Statistical tools can be used to attempt to discover a pattern in the ciphertexts, which can then be used to reveal the plaintext or key",
+          "Statistic",
+          "Example",
+          "How Used",
+          "Underlying language of plaintext",
+          "English",
+          "By knowing which language is used for the plaintext message inferences can be made regarding statistical values of that language",
+          "Distribution of characters",
+          "In English E is most commonly used letter, Q is least commonly used",
+          "Patterns can emerge when more common letters are used more frequently",
+          "Null ciphertexts",
+          "Distinguishing between actual ciphertexts and injected null messages",
+          "Attacks may inject a frame that contains null values to compare it with the frames containing ciphertext",
+          "Management frames",
+          "Analyze content of network management information",
+          "Because network management frames typically contain information that remains constant this can help establish patterns"
+        ],
+        "notes": []
+      },
+      {
+        "number": 28,
+        "text": [
+          "Algorithm Attacks",
+          "Downgrade Attack",
+          "A threat actor forces the system to abandon the current higher security mode of operation and instead “fall back” to implementing an older and less secure mode",
+          "Using Deprecated Algorithms",
+          "Means to use a cryptographic algorithm that should not be used because of known vulnerabilities",
+          "Improper Implementation",
+          "Known as misconfiguration implementation",
+          "Many cryptographic algorithms have several configuration options",
+          "Unless careful consideration is given to these options the cryptography may be improperly implemented"
+        ],
+        "notes": []
+      },
+      {
+        "number": 29,
+        "text": [
+          "Collision Attacks",
+          "When two files have the same hash this is known as a",
+          "collision",
+          "Collision attack",
+          "An attempt to find two input strings of a hash function that produce the same hash result",
+          "Birthday attack",
+          "Based on the",
+          "birthday paradox",
+          ", which says that for there to be a 50 percent chance that someone in a given room shares your birthday, 253 people would need to be in the room"
+        ],
+        "notes": []
+      },
+      {
+        "number": 30,
+        "text": [
+          "Using Cryptography",
+          "Cryptography should be used to secure:",
+          "Data-in-transit, data-at-rest, and when possible data-in-use",
+          "This includes:",
+          "Individual files",
+          "Databases",
+          "Removable media",
+          "Data on mobile devices",
+          "Cryptography can be applied through:",
+          "Software",
+          "Hardware"
+        ],
+        "notes": []
+      },
+      {
+        "number": 31,
+        "text": [
+          "Encryption Through Software",
+          "File and File System Cryptography",
+          "Encryption software can be used to encrypt or decrypt files one-by-one",
+          "Pretty Good Privacy (P",
+          "G",
+          "P)",
+          "Widely used asymmetric cryptography system",
+          "Used for files and e-mails on Windows systems",
+          "G",
+          "N",
+          "U Privacy Guard (G",
+          "NuP",
+          "G)",
+          "Open-source product that runs on Windows, UNIX, and Linux operating systems",
+          "Open",
+          "P",
+          "G",
+          "P is another open-source alternative that is based on P",
+          "G",
+          "P"
+        ],
+        "notes": []
+      },
+      {
+        "number": 32,
+        "text": [
+          "Encryption Through Software",
+          "Operating System Encryption",
+          "Microsoft Windows Encrypting File System (E",
+          "F",
+          "S)",
+          "Cryptography system for Windows",
+          "Uses N",
+          "T",
+          "F",
+          "S file system",
+          "Tightly integrated with the file system",
+          "Encryption and decryption are transparent to the user",
+          "Full Disk Encryption (F",
+          "D",
+          "E)",
+          "Protects all data on a hard drive",
+          "Example:",
+          "BitLocker",
+          "drive encryption software that is included in Microsoft Windows",
+          "BitLocker encrypts the entire system volume, including the Windows Registry",
+          "Prevents attackers from accessing data by booting from another O",
+          "S or placing the hard drive in another computer"
+        ],
+        "notes": []
+      },
+      {
+        "number": 33,
+        "text": [
+          "Hardware Encryption",
+          "Software encryption can be subject to attacks to exploit its vulnerabilities",
+          "Cryptography can be embedded in hardware",
+          "Provides higher degree of security",
+          "Can be applied to U",
+          "S",
+          "B devices and standard hard drives",
+          "Hardware encryption options include:",
+          "Trusted platform module",
+          "Hardware security model"
+        ],
+        "notes": []
+      },
+      {
+        "number": 34,
+        "text": [
+          "Hardware Encryption",
+          "U",
+          "S",
+          "B device encryption",
+          "Encrypted hardware-based flash drives can be used",
+          "Will not connect a computer until correct password has been provided",
+          "All data copied to the drive is automatically encrypted",
+          "Tamper-resistant external cases",
+          "Administrators can remotely control and track activity on the devices",
+          "Stolen drives can be remotely disabled",
+          "Self-Encrypting Drives (S",
+          "E",
+          "Ds)",
+          "Self-encrypting hard disk drives protect all files stored on them",
+          "The drive and host device perform authentication process during initial power up",
+          "If authentication fails, the drive can be configured to deny access or even delete encryption keys so all data is permanently unreadable"
+        ],
+        "notes": []
+      },
+      {
+        "number": 35,
+        "text": [
+          "Hardware Encryption",
+          "Trusted Platform Module (T",
+          "P",
+          "M) & Hardware Security Module (H",
+          "S",
+          "M)",
+          "A chip on a computer’s motherboard that provides cryptographic services",
+          "Includes a true random number generator",
+          "Entirely done in hardware so it cannot be subject to software attack",
+          "Prevents computer from booting if files or data have been altered",
+          "Prompts for password if hard drive moved to a new computer"
+        ],
+        "notes": []
+      },
+      {
+        "number": 36,
+        "text": [
+          "Summary",
+          "Cryptography is the practice of transforming information into a secure form while being transmitted or stored",
+          "The strength of a cryptographic algorithm depends upon several factors",
+          "Cryptography can provide confidentiality, integrity, authentication, non-repudiation, and obfuscation",
+          "Hashing creates a unique digital fingerprint that represents contents of original material",
+          "Used only for comparison",
+          "Symmetric cryptography vs. Asymmetric cryptography"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 37,
+        "text": [
+          "Blockchain & Cryptography"
+        ],
+        "notes": []
+      },
+      {
+        "number": 38,
+        "text": [
+          "Background of Blockchain",
+          "Blockchain incarnations (e.g., Bitcoin, Ethereum) are called cryptocurrencies for a good reason.",
+          "Data is transparent, but encrypted/hashed, and secured?",
+          "Cryptography (e.g., Hash, PKI, digital signature) is widely used in almost every aspect of cryptocurrency operations.",
+          "Cryptography functions operate on different levels – public chain, consortium chain, and private (peer-to-peer) chain.",
+          "DLT, Blockchain, Bitcoin, Ethereum, Litcoin, Libra…"
+        ],
+        "notes": []
+      },
+      {
+        "number": 39,
+        "text": [
+          "Basic Block Components",
+          "Block Header (Control Message)",
+          "Hash pointer (SHA-256) of the previous block (Bitcoin uses 65-bit long hexadecimal)",
+          "Merkle Root (time to observe the data structure of Blockchain)",
+          "Metadata: Timestamp, size, nonce, reserved sector",
+          "Block Content",
+          "Transactions: to and from addresses (Hashed public key), amount, size, hash pointer, transaction fee, mining reward, etc."
+        ],
+        "notes": []
+      },
+      {
+        "number": 40,
+        "text": [
+          "Blockchain Data Structure",
+          "A linked list using hash pointers",
+          "Could be an array (pros and cons?)",
+          "Merkle Tree (Imagine a tree that is upside down): leaves, branches, and roots.",
+          "Proof of Membership/Non-membership",
+          "Sorted Merkle tree vs. Merkle tree"
+        ],
+        "notes": []
+      },
+      {
+        "number": 41,
+        "text": [
+          "Inside a Block"
+        ],
+        "notes": []
+      },
+      {
+        "number": 42,
+        "text": [
+          "Inside a Transaction"
+        ],
+        "notes": []
+      },
+      {
+        "number": 43,
+        "text": [
+          "Inside a Chain"
+        ],
+        "notes": []
+      },
+      {
+        "number": 44,
+        "text": [
+          "Major Security Challenges",
+          "Illegal/Fraudulent Transactions",
+          "Proof of Membership (Root Hash Value)",
+          "Proof of Non-membership (sorted Merkle Tree)",
+          "The Byzantine General’s Problem (Trust Issue)",
+          "Consensus",
+          "Byzantine Fault Tolerance (BFT)",
+          "Double-Spending",
+          "Comparing to fiat money (banknotes)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 45,
+        "text": [
+          "The Longest Chain Rule",
+          "The longest chain is what individual nodes accept as the valid version of the blockchain.",
+          "The rule that nodes adopt the longest chain of blocks allows every node on the network to agree on what the blockchain looks like, and therefore agree on the same transaction history.",
+          "Serves multiple purposes (e.g., consensus, double-spending mitigation, forking, etc.)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 46,
+        "text": [
+          "Forking",
+          "What happens when protocol changes are implemented without consensus?",
+          "Hard fork = Split",
+          "Bitcoin vs. Bitcoin Cash",
+          "Ethereum Classic vs. Ethereum",
+          "Soft fork = Natural selection"
+        ],
+        "notes": []
+      },
+      {
+        "number": 47,
+        "text": [
+          "Bitcoin Mining",
+          "It is essentially a math problem, easy to verify but hard to solve; not complex yet extremely laborious.",
+          "Remember the brute force challenge in cryptography? Large input space vs. Tiny output range",
+          "Throw in nonce and reserved section to spice up the game = mining gets harder and harder"
+        ],
+        "notes": []
+      },
+      {
+        "number": 48,
+        "text": [],
+        "notes": []
+      },
+      {
+        "number": 49,
+        "text": [],
+        "notes": []
+      },
+      {
+        "number": 50,
+        "text": [
+          "What is Distributed Ledger?",
+          "Decentralized means that every node makes a decision for it’s own behavior and the resulting system behavior is the aggregate response.",
+          "Distributed means that the processing is shared across multiple nodes, but the decisions may still require a consensus (a form of centralized decision)."
+        ],
+        "notes": []
+      },
+      {
+        "number": 51,
+        "text": [
+          "Peer to Peer Network",
+          "In a P2P network, the user utilizes and provides the foundation of the network at the same time, although providing the resources is entirely voluntary. Each peer (a “peer” being a computer system on the network) is considered equal and are commonly referred to as nodes. A peer makes a portion of computing resources such as disk storage, processing power or network bandwidth, directly available to other participants without the need for any central coordination by servers or stable hosts."
+        ],
+        "notes": []
+      },
+      {
+        "number": 52,
+        "text": [
+          "Digital Signatures",
+          "Digital signatures are one of the main aspects of ensuring the security and integrity of the data that is recorded onto a blockchain. They are a standard part a blockchain protocols, mainly used for securing transactions and blocks of transactions, transferral of information, contract management and any other cases where detecting and preventing any external tampering is important. Digital signatures utilize asymmetric cryptography, meaning that information can be shared with anyone, through the use of a public key."
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "lecture": 8,
+    "file": "Lecture 8 Sec_NWK_Admn.pptx",
+    "slides": [
+      {
+        "number": 1,
+        "text": [
+          "Lecture 8: Network Security Administration"
+        ],
+        "notes": []
+      },
+      {
+        "number": 2,
+        "text": [
+          "Learning Objectives",
+          "List and describe the functions of secure network protocols",
+          "Explain the placement of security devices and technologies",
+          "Tell how security data can be analyzed",
+          "Explain how to manage and secure network platforms"
+        ],
+        "notes": []
+      },
+      {
+        "number": 3,
+        "text": [
+          "Data Exchange",
+          "The data we send/receive on the Internet is divided in to smaller pieces that are called packets (why do we bother?)",
+          "It happens when we send emails, text messages, photos, MP3s, and video clips."
+        ],
+        "notes": []
+      },
+      {
+        "number": 4,
+        "text": [
+          "More About Packets",
+          "Each packet has a specific length.",
+          "Each packet contains not only data content but also control message (e.g. address of destination, Checksum)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 5,
+        "text": [
+          "How Packets Travel",
+          "It is wild west out there on the Internet, due to a lack of regulation (many consider that a benefit and basic human right).",
+          "This is why each packet needs control message including source IP, receiver IP, encryption, checksum, proxy server address etc…"
+        ],
+        "notes": []
+      },
+      {
+        "number": 6,
+        "text": [
+          "How Packets Travel",
+          "In addition to control message, we also need a “vehicle” that can transport data packets from one place to another.",
+          "These “vehicles” are called protocols.",
+          "The two most important protocols are: TCP and IP. TCP inserts control message into data packets regarding their routes and destination. IP takes care of the actual delivery."
+        ],
+        "notes": []
+      },
+      {
+        "number": 7,
+        "text": [
+          "TCP",
+          "A protocol that divides data into segments and makes sure they are delivered in a reliable manner.",
+          "Think of TCP as a responsible truck driver who checks everything to ensure a safe and reliable delivery."
+        ],
+        "notes": []
+      },
+      {
+        "number": 8,
+        "text": [
+          "IP",
+          "Responsible for packets routing.",
+          "Closely works with TCP.",
+          "TCP must know which route to take to arrive at destination.",
+          "IP address."
+        ],
+        "notes": []
+      },
+      {
+        "number": 9,
+        "text": [
+          "Challenge!",
+          "There are millions or even billions of network device in the world (PC, server, handheld device).",
+          "As long as a computing device needs to get online, it requires an IP address. Let’s find out what address do you have?"
+        ],
+        "notes": []
+      },
+      {
+        "number": 10,
+        "text": [
+          "Data Packets Analysis",
+          "As we discussed earlier, network data exchange is based on packets. Network attack is no exception.",
+          "So if we can analyze and monitor data packets, dangerous codes can be identified."
+        ],
+        "notes": []
+      },
+      {
+        "number": 11,
+        "text": [
+          "Secure Network Protocols"
+        ],
+        "notes": []
+      },
+      {
+        "number": 12,
+        "text": [
+          "Firewall Types & OSI"
+        ],
+        "notes": []
+      },
+      {
+        "number": 13,
+        "text": [
+          "A Typical TCP Packet"
+        ],
+        "notes": []
+      },
+      {
+        "number": 14,
+        "text": [
+          "A Typical IP Packet"
+        ],
+        "notes": [
+          "Question: Is TCP packet bigger than IP packet?",
+          "<number>"
+        ]
+      },
+      {
+        "number": 15,
+        "text": [
+          "<number>",
+          "IP Address Spoofing",
+          "Attacker",
+          "1.4.5.6",
+          "Victim",
+          "60.77.8.32",
+          "Compromised",
+          "Host",
+          "123.67.8.23",
+          "Compromised",
+          "Host",
+          "123.67.33.4",
+          "Attack",
+          "Replies",
+          "Allows Reading of Replies",
+          "Without Exposing Attacker"
+        ],
+        "notes": []
+      },
+      {
+        "number": 16,
+        "text": [
+          "TCP SYN/ACK Host Scanning Attack"
+        ],
+        "notes": []
+      },
+      {
+        "number": 17,
+        "text": [
+          "Analytical Tool: Sam Spade"
+        ],
+        "notes": []
+      },
+      {
+        "number": 18,
+        "text": [
+          "<number>",
+          "Analytical Tool"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 19,
+        "text": [
+          "Wireshark",
+          "Wireshark is a packet analyzer. It is used for network troubleshooting and analysis."
+        ],
+        "notes": []
+      },
+      {
+        "number": 20,
+        "text": [
+          "Free Download",
+          "http://www.wireshark.org/download.html",
+          "If this is the first time running WireShark, make sure it can capture all network interfaces (e.g. WiFi adapter, NIC card).",
+          "Run as administrator if necessary."
+        ],
+        "notes": []
+      },
+      {
+        "number": 21,
+        "text": [
+          "Interfaces",
+          "Verify you have all required interface by going to Menu Bar: Capture",
+          "",
+          "Interfaces"
+        ],
+        "notes": []
+      },
+      {
+        "number": 22,
+        "text": [
+          "Secure Network Protocols",
+          "Protocols",
+          "Rules for communication",
+          "Essential for proper communication between network devices",
+          "Transmission Control Protocol/Internet Protocol (T",
+          "C",
+          "P/I",
+          "P)",
+          "Most common protocol suite used for local area networks and the Internet",
+          "Comprises several protocols that all function together"
+        ],
+        "notes": []
+      },
+      {
+        "number": 23,
+        "text": [
+          "Secure Network Protocols",
+          "I",
+          "P",
+          "Protocol that functions primarily at Open Systems Interconnection (O",
+          "S",
+          "I) Network Layer (Layer 3)",
+          "Provides network addressing and routing",
+          "T",
+          "C",
+          "P",
+          "Transport Layer (Layer 4) protocol",
+          "Establishes connections and ensures reliable data transport between devices",
+          "T",
+          "C",
+          "P/I",
+          "P uses a four layer architecture",
+          "Network Interface, Internet, Transport, Application"
+        ],
+        "notes": []
+      },
+      {
+        "number": 24,
+        "text": [
+          "Secure Network Protocols",
+          "Several basic T",
+          "C",
+          "P/I",
+          "P Protocols that relate to security:",
+          "Simple Network Management Protocol (S",
+          "N",
+          "M",
+          "P)",
+          "Domain Name System (D",
+          "N",
+          "S)",
+          "File Transfer Protocol",
+          "There are also email protocols that are not natively secure",
+          "Steps can be taken to protect email correspondence"
+        ],
+        "notes": []
+      },
+      {
+        "number": 25,
+        "text": [
+          "Simple Network Management Protocol (S",
+          "N",
+          "M",
+          "P)",
+          "Used to manage network equipment and is supported by most network equipment manufacturers",
+          "Allows administrators to remotely monitor, manage, and configure network devices",
+          "Functions by exchanging management information between network devices",
+          "Each S",
+          "N",
+          "M",
+          "P-managed device has an agent or a service",
+          "Listens for and executes commands"
+        ],
+        "notes": []
+      },
+      {
+        "number": 26,
+        "text": [
+          "Simple Network Management Protocol (S",
+          "N",
+          "M",
+          "P)",
+          "Agents are password protected",
+          "Password is known as a",
+          "community string",
+          "Security vulnerabilities were present in S",
+          "M",
+          "N",
+          "P versions 1 and 2",
+          "Version 3 uses usernames and passwords along with encryption to address vulnerabilities"
+        ],
+        "notes": []
+      },
+      {
+        "number": 27,
+        "text": [
+          "S",
+          "N",
+          "M",
+          "P vs. ICMP (Ping)",
+          "ICMP or ping is used for availability calculations and latency or response time.",
+          "SNMP is used for almost all of the other statistics, including CPU, memory, buffers, interface traffic and errors and many, many more statistics."
+        ],
+        "notes": []
+      },
+      {
+        "number": 28,
+        "text": [
+          "Domain Name System (D",
+          "N",
+          "S)",
+          "D",
+          "N",
+          "S",
+          "A T",
+          "C",
+          "P/I",
+          "P protocol that maps I",
+          "P addresses to their symbolic name",
+          "The D",
+          "N",
+          "S database is organized as a hierarchy",
+          "Database consists of the name of a site and a corresponding I",
+          "P number",
+          "The database is distributed to many different servers on the Internet",
+          "To prevent bottlenecking and to ensure efficiency"
+        ],
+        "notes": []
+      },
+      {
+        "number": 29,
+        "text": [
+          "Domain Name System (D",
+          "N",
+          "S)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 30,
+        "text": [
+          "Domain Name System (D",
+          "N",
+          "S)",
+          "D",
+          "N",
+          "S is often the focus of attacks",
+          "D",
+          "N",
+          "S poisoning substitutes fraudulent I",
+          "P address",
+          "Can be done in local host table or external D",
+          "N",
+          "S server",
+          "Can be thwarted by using Domain Name System Security Extensions (D",
+          "N",
+          "S",
+          "S",
+          "E",
+          "C)",
+          "D",
+          "N",
+          "S",
+          "S",
+          "E",
+          "C adds additional resource records and message header information which can be used to verify the requested data has not been altered in transmission",
+          "Attacker asks the valid D",
+          "N",
+          "S for a zone transfer",
+          "A zone transfer allows attacker access to network, hardware, and operating system information"
+        ],
+        "notes": []
+      },
+      {
+        "number": 31,
+        "text": [
+          "File Transfer Protocol (F",
+          "T",
+          "P)",
+          "T",
+          "C",
+          "P/I",
+          "P protocol used for transferring files",
+          "File transfer protocol (F",
+          "T",
+          "P) – an unsecure protocol used to connect to an F",
+          "T",
+          "P server",
+          "Methods for using F",
+          "T",
+          "P on local host computer",
+          "From a command prompt",
+          "Using a web browser",
+          "Using an F",
+          "T",
+          "P client"
+        ],
+        "notes": []
+      },
+      {
+        "number": 32,
+        "text": [
+          "File Transfer Protocol (F",
+          "T",
+          "P)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 33,
+        "text": [
+          "File Transfer Protocol (F",
+          "T",
+          "P)",
+          "Using F",
+          "T",
+          "P behind a firewall can present challenges",
+          "F",
+          "T",
+          "P uses two ports",
+          "Port 21 is the F",
+          "T",
+          "P control part",
+          "Port 20 is the data port",
+          "F",
+          "T",
+          "P active mode",
+          "Client’s firewall may sometimes drop packets on Port 20 (the data channel connection)",
+          "F",
+          "T",
+          "P passive mode",
+          "The client sends a P",
+          "A",
+          "S",
+          "V command to the command channel and the server responds with the T",
+          "C",
+          "P port number to use to establish the data channel"
+        ],
+        "notes": []
+      },
+      {
+        "number": 34,
+        "text": [
+          "File Transfer Protocol (F",
+          "T",
+          "P)",
+          "F",
+          "T",
+          "P vulnerabilities",
+          "Does not use encryption",
+          "Files transferred using F",
+          "T",
+          "P are vulnerable to man-in-the-middle attacks",
+          "Secure transmission options over F",
+          "T",
+          "P",
+          "Secure sockets layer (F",
+          "T",
+          "P",
+          "S) encrypts commands",
+          "Uses S",
+          "S",
+          "L or T",
+          "L",
+          "S to encrypt commands sent over the control port (port 21); data port may not be encrypted",
+          "Secure F",
+          "T",
+          "P (S",
+          "F",
+          "T",
+          "P)",
+          "Uses only a single T",
+          "C",
+          "P port instead of two ports",
+          "All data and commands are encrypted"
+        ],
+        "notes": []
+      },
+      {
+        "number": 35,
+        "text": [
+          "Secure Email Protocols",
+          "Secure/Multipurpose Internet Mail Extensions (S/M",
+          "I",
+          "M",
+          "E)",
+          "A protocol for securing email messages",
+          "S/M",
+          "I",
+          "M",
+          "E has limitations:",
+          "Cannot be used when mail is accessed through a web browser instead of a dedicated email application",
+          "Because S/M",
+          "I",
+          "M",
+          "E encrypts the entire message, this makes it difficult for any third-party tools that inspect email for malware",
+          "Because it also would be encrypted",
+          "Some enterprises and government agencies automate encrypting and decrypting email",
+          "Use a mail gateway appliance"
+        ],
+        "notes": []
+      },
+      {
+        "number": 36,
+        "text": [
+          "Using Secure Network Protocols",
+          "Application or technology",
+          "Recommended secure protocol",
+          "Voice and video",
+          "Secure Real-time Transport Protocol (S",
+          "R",
+          "T",
+          "P)",
+          "Time synchronization",
+          "Network Time Protocol (N",
+          "T",
+          "P)",
+          "Email",
+          "Secure/Multipurpose Internet Mail Extensions (S/M",
+          "I",
+          "M",
+          "E)",
+          "Web browsing",
+          "Hypertext Transport Protocol Secure (H",
+          "T",
+          "T",
+          "P",
+          "S)",
+          "File transfer",
+          "Secure F",
+          "T",
+          "P (S",
+          "F",
+          "T",
+          "P)",
+          "Remote access",
+          "Virtual Private Network (V",
+          "P",
+          "N)",
+          "Domain name resolution",
+          "DNS Security Extensions (D",
+          "N",
+          "S",
+          "SEC)",
+          "Routing and switching",
+          "I",
+          "P Security (I",
+          "P",
+          "sec)",
+          "Network address translation",
+          "I",
+          "P Security (I",
+          "P",
+          "sec)",
+          "Subscription services",
+          "I",
+          "P Security (I",
+          "P",
+          "sec)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 37,
+        "text": [
+          "Placement of Security Devices and Technologies",
+          "The protection that security devices provide can be easily negated if those devices are not properly located in the network architecture",
+          "S",
+          "S",
+          "L/T",
+          "L",
+          "S accelerator",
+          "– a separate hardware card that inserts into a web server that contains co-processors to handle S",
+          "S",
+          "L/T",
+          "L",
+          "S processing",
+          "a S",
+          "S",
+          "L/T",
+          "L",
+          "S hardware module can be installed as a “virtual S",
+          "S",
+          "L/T",
+          "L",
+          "S server” alongside the forward proxy server",
+          "Port mirrors",
+          "– allows the administrator to configure a switch to copy traffic that occurs on some or all ports to a designated port on the switch (see Figure 7-4)",
+          "Network tap (test access point)",
+          "– a device that can monitor traffic (see Figure 7-5)"
+        ],
+        "notes": []
+      },
+      {
+        "number": 38,
+        "text": [
+          "Placement of Security Devices and Technologies"
+        ],
+        "notes": []
+      },
+      {
+        "number": 39,
+        "text": [
+          "Placement of Security Devices and Technologies"
+        ],
+        "notes": []
+      },
+      {
+        "number": 40,
+        "text": [
+          "Placement of Security Devices and Technologies",
+          "Sensors, collectors, and filters",
+          "– should be placed where the stream of data is largest",
+          "Sensors – monitor traffic for network intrusion detection and prevention devices",
+          "Collectors – gather traffic for S",
+          "I",
+          "E",
+          "M devices",
+          "Filters – block traffic for Internet content filters"
+        ],
+        "notes": []
+      },
+      {
+        "number": 41,
+        "text": [
+          "Placement of Security Devices and Technologies",
+          "Aggregation switch",
+          "– used to combine multiple network connections into a single link",
+          "Should be located between routers and servers where they can detect and stop attacks directed at a server or application",
+          "Correlation engine",
+          "– aggregates and correlates content from different sources to uncover an attack",
+          "Should be in the protected internal network using data collected from the logs of different hardware devices",
+          "D",
+          "D",
+          "o",
+          "S mitigator",
+          "– a hardware device that identifies and blocks real-time distributed denial of service (D",
+          "D",
+          "o",
+          "S) attacks",
+          "Should be in the network where they can monitor the largest stream of data"
+        ],
+        "notes": []
+      },
+      {
+        "number": 42,
+        "text": [
+          "Analyzing Security Data",
+          "Security logs",
+          "Can reveal types of attacks that are being directed at the network and if attacks were successful",
+          "Access logs",
+          "Provide details regarding requests for specific files",
+          "Audit logs",
+          "Used to record which user performed an action",
+          "Event logs",
+          "Document any unsuccessful events and the most significant successful events"
+        ],
+        "notes": []
+      },
+      {
+        "number": 43,
+        "text": [
+          "Analyzing Security Data",
+          "A routine review of logs helps to identify:",
+          "Security incidents",
+          "Policy violations",
+          "Fraudulent activity",
+          "Operational problems",
+          "Logs can be useful for:",
+          "Performing auditing analysis",
+          "Supporting the organization’s internal investigations",
+          "Identifying operational trends and long-term problems",
+          "Logs can provide documentation that the organization is complying with laws and regulatory requirements"
+        ],
+        "notes": []
+      },
+      {
+        "number": 44,
+        "text": [
+          "Data from Security Devices",
+          "Almost every hardware device designed for security can generate logs",
+          "Firewall log items to be examined",
+          "I",
+          "P addresses rejected and dropped",
+          "Probes to ports that have no application services on them",
+          "Source-routed packets",
+          "Suspicious outbound connections",
+          "Unsuccessful logins"
+        ],
+        "notes": []
+      },
+      {
+        "number": 45,
+        "text": [
+          "Data from Security Software",
+          "Security software can produce important data that can be analyzed",
+          "Data Execution Prevention (D",
+          "E",
+          "P)",
+          "A Microsoft Windows feature that prevents attackers from using buffer overflow to execute malware",
+          "D",
+          "E",
+          "P events and those from similar software can be logged along with the level of severity",
+          "File integrity check (F",
+          "I",
+          "C)",
+          "A service that can monitor any changes made to computer files, such as O",
+          "S files",
+          "These changes can compromise security and indicate a security breach has occurred"
+        ],
+        "notes": []
+      },
+      {
+        "number": 46,
+        "text": [
+          "Data from Security Tools",
+          "Tool",
+          "Description",
+          "Explanation",
+          "Application Whitelisting",
+          "A whitelist is an inventory of applications and associated components that have been pre-approved and authorized to be active and present on the device",
+          "Application whitelisting technologies are designed to permit only known good activity and block everything else",
+          "Removable media control",
+          "Removable media control is a tool that can be used to restrict which removable media can be attached to a system",
+          "Removable media can introduce malware into a system and be used to steal valuable information",
+          "Advanced malware management",
+          "Often a third-party service, advanced malware management tools monitor a network for any unusual activity",
+          "Advanced malware management tools often use experience-based techniques such as heuristic monitoring to determine if a threat exists"
+        ],
+        "notes": []
+      },
+      {
+        "number": 47,
+        "text": [
+          "Issues in Analyzing Security Data",
+          "There are issues with log management",
+          "Generating, transmitting, storing, analyzing, and disposing of computer security log data",
+          "This is due to:",
+          "Multiple devices generating logs",
+          "Very large volume of data",
+          "Different log formats",
+          "A solution:",
+          "Use a centralized device log analyzer"
+        ],
+        "notes": []
+      },
+      {
+        "number": 48,
+        "text": [
+          "Managing and Securing Network Platforms",
+          "Some applications and platforms require special security considerations:",
+          "Virtualization",
+          "Cloud computing",
+          "Software defined networking"
+        ],
+        "notes": []
+      },
+      {
+        "number": 49,
+        "text": [
+          "Virtualization",
+          "Virtualization",
+          "A means of managing and presenting computer resources without regard to physical layout or location",
+          "Host virtualization",
+          "An entire operating system environment is simulated",
+          "Virtual machine - a simulated software-based emulation of a computer",
+          "The host system runs a hypervisor that manages the virtual operating systems and supports one or more guest systems"
+        ],
+        "notes": []
+      },
+      {
+        "number": 50,
+        "text": [
+          "Virtualization",
+          "The VM monitor program is called a",
+          "hypervisor",
+          "Manages the V",
+          "M operating systems",
+          "Two types of hypervisor:",
+          "Type I – runs directly on the computer’s hardware instead of the underlying O",
+          "S",
+          "Type II – run on the host O",
+          "S, much like an application"
+        ],
+        "notes": []
+      },
+      {
+        "number": 51,
+        "text": [
+          "Virtualization",
+          "Container or application cell",
+          "Holds only the necessary O",
+          "S components that are needed for that specific application to run",
+          "Reduces the necessary hard drive storage space and R",
+          "A",
+          "M needed",
+          "Allows for containers to start more quickly because the O",
+          "S does not have to be started"
+        ],
+        "notes": []
+      },
+      {
+        "number": 52,
+        "text": [
+          "Virtualization",
+          "Virtual Desktop Infrastructure (V",
+          "D",
+          "I)",
+          "The process of running a user desktop inside a V",
+          "M that resides on a server",
+          "Enables personalized desktops for each user to be available on any computer or device that can access the server",
+          "Allows centralized management of all virtual desktops",
+          "Virtual Distributed Ethernet (V",
+          "D",
+          "E)",
+          "An Ethernet-compliant virtual network that can connect physical computers and/or virtual machines together"
+        ],
+        "notes": []
+      },
+      {
+        "number": 53,
+        "text": [
+          "Virtualization",
+          "Virtualization advantages",
+          "New virtual server machines can be made available (host availability) and resources can easily be expanded or contracted as needed (host elasticity)",
+          "Can reduce costs",
+          "Fewer physical computers must be purchased and maintained",
+          "Can provided uninterrupted server access to users",
+          "Supports",
+          "live migration",
+          "which allows a virtual machine to be moved to a different physical computer with no impact to users"
+        ],
+        "notes": []
+      },
+      {
+        "number": 54,
+        "text": [
+          "Virtualization",
+          "Security-related advantages of virtualization:",
+          "Test latest security updates by downloading on a virtual machine before installing on production computers",
+          "A",
+          "snapshot",
+          "of a particular state of a virtual machine can be saved for later use",
+          "Testing the existing security configuration",
+          "(security control testing)",
+          "can be performed using a simulated network environment",
+          "A suspicious program can be loaded into an isolated virtual machine and executed",
+          "(sandboxing)",
+          "If malware, only the virtual machine will be impacted"
+        ],
+        "notes": []
+      },
+      {
+        "number": 55,
+        "text": [
+          "Virtualization",
+          "Security concerns for virtualized environments:",
+          "Not all hypervisors have the necessary security controls to keep out attackers",
+          "Existing security tools were designed for single physical servers",
+          "VMs must be protected from both outside networks and other V",
+          "M",
+          "s on the same physical computer",
+          "VMs may be able to “escape” from the contained environment and directly interact with the host O",
+          "S",
+          "Important to have",
+          "virtual machine escape protection",
+          "Virtual machine sprawl",
+          "The widespread proliferation of V",
+          "M",
+          "s without proper oversight or management"
+        ],
+        "notes": []
+      },
+      {
+        "number": 56,
+        "text": [
+          "Cloud Computing",
+          "On-premises model",
+          "Enterprises in the past purchased all the hardware and software necessary to run the organization",
+          "Resulted in spiraling costs",
+          "Hosted services",
+          "Servers, storage, and the supporting networking infrastructure are shared by multiple enterprises over a remote network connection",
+          "Cloud computing",
+          "A model for enabling convenient, on-demand network access to a shared pool of configurable computing resources",
+          "It is a pay-per-use computing model",
+          "Customers pay for only the resources they need"
+        ],
+        "notes": []
+      },
+      {
+        "number": 57,
+        "text": [
+          "Cloud Computing",
+          "Types of clouds",
+          "Public cloud",
+          "Community cloud",
+          "Private cloud",
+          "Hybrid cloud",
+          "Four service models in cloud computing:",
+          "Software as a Service (S",
+          "a",
+          "a",
+          "S)",
+          "Vendor provides access to the vendor’s software applications running on a cloud infrastructure",
+          "Platform as a Service (P",
+          "a",
+          "a",
+          "S)",
+          "Consumers install and run their own specialized applications on the cloud computing network",
+          "Infrastructure as a Service (I",
+          "a",
+          "a",
+          "S)",
+          "Vendor allows customers to deploy and run their own software, including O",
+          "S",
+          "s and applications",
+          "Security as a Service (SEC",
+          "a",
+          "a",
+          "S)",
+          "All security services are delivered from the cloud to the enterprise"
+        ],
+        "notes": []
+      },
+      {
+        "number": 58,
+        "text": [
+          "Cloud Computing",
+          "Cloud computing security challenges",
+          "Cloud provider must guarantee means to approve authorized users and deny imposters",
+          "Transmissions from the cloud must be protected",
+          "Customers’ data must be isolated from other customers",
+          "The highest level of application availability and security must be maintained",
+          "Cloud access security broker (C",
+          "A",
+          "S",
+          "B)",
+          "A set of software tools or services that resides between the enterprises’ on-premises infrastructure and the cloud provider’s infrastructure",
+          "Acts as a “gatekeeper”",
+          "Ensures that the security policies of the enterprise extend to its data in the cloud"
+        ],
+        "notes": []
+      },
+      {
+        "number": 59,
+        "text": [
+          "Summary",
+          "T",
+          "C",
+          "P/I",
+          "P is the most common protocol for LANs and the Internet",
+          "Protocols for transferring files",
+          "F",
+          "T",
+          "P and F",
+          "T",
+          "P",
+          "S",
+          "The correct placement of security devices is essential for protection",
+          "An S",
+          "S",
+          "L/T",
+          "L",
+          "S accelerator can be a separate hardware card or a separate S",
+          "S",
+          "L/T",
+          "L",
+          "S hardware module installed as a “virtual S",
+          "S",
+          "L server”",
+          "Monitoring traffic on switches can be done in two ways:",
+          "A managed switch that supports port mirroring",
+          "Install a network tap (test access point)"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      },
+      {
+        "number": 60,
+        "text": [
+          "Summary",
+          "A log is a record of events that occur",
+          "Security logs are particularly important because they can reveal the types of attacks that are being directed at the network",
+          "A solution to log management is to use a centralized device log analyzer",
+          "Some applications and platforms require special security considerations",
+          "Virtualization",
+          "Cloud computing"
+        ],
+        "notes": [
+          "<number>"
+        ]
+      }
+    ]
+  }
+]
