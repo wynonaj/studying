@@ -1,0 +1,11 @@
+function startLearningModule(id){
+ section=0;
+ const module=D.learningModules.find(m=>m.id===id);
+ if(id==='core')start('practice',[...D.basicRoute.map(id=>D.foundations.find(x=>x.id===id)),...D.checks.filter(x=>x.id.startsWith('425-first-check-'))]);
+ else if(module)start('practice',module.lessons.map(n=>D.questions.find(q=>q.number===n)));
+}
+function beginnerHome(title='Start from zero'){
+ section=0;
+ $('#app').innerHTML=heading(title,'Follow the numbered path: learn the words, check their meanings, then use them in an example.')+learningResumeCard(D.learningOrder)+`<section class="card" style="margin-top:20px"><span class="tag">START HERE · NO PRIOR KNOWLEDGE</span><h2>0. Data, keys, encryption, and hashes</h2><p>Data is information. An algorithm is a procedure. A key controls a cryptographic operation. Encryption hides readable information; a hash produces a summary for comparison. Learn these separately before comparing them.</p><p>Each practice session starts with this core vocabulary, then introduces the words needed for the selected topics. Missed definition questions repeat before you move on.</p><button class="primary" data-learningmodule="core">Learn the basics one question at a time →</button><details><summary>See the core definitions</summary><dl>${D.basicRoute.map(id=>D.foundations.find(x=>x.id===id)).map(x=>`<dt><b>${esc(x.term)}</b></dt><dd>${esc(x.answer)}</dd>`).join('')}</dl></details></section>`+D.learningModules.map(module=>{const qs=module.lessons.map(n=>D.questions.find(q=>q.number===n)),done=qs.filter(q=>progress.lessons[q.id]).length;return `<section class="card" style="margin-top:22px"><h2>${esc(module.title)}</h2><p>${done} / ${qs.length} lessons completed. Questions introduce vocabulary before asking you to apply it.</p><button data-learningmodule="${esc(module.id)}">Practice this stage with definitions</button><div class="lesson-list">${qs.map(q=>`<button data-lesson="${q.number}"><span class="badge">${q.number}</span><span class="lesson-label">${esc(q.title)}<small>${esc(q.goal)}</small></span>${lessonProgressBadge(q.number)}</button>`).join('')}</div></section>`}).join('');
+ document.querySelectorAll('[data-learningmodule]').forEach(button=>button.onclick=()=>startLearningModule(button.dataset.learningmodule));
+}
