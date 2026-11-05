@@ -70,7 +70,14 @@ run('section=0;progress.lessons={};openLesson(D.questions[0].number,2);continueL
 
 const html=read('dist/cis320-test2.html'),index=read('dist/index.html'),classes=read('dist/classes.html');
 assert.match(index,/href="cis320-test2.html"/);assert.match(html,/href="index.html"/);assert.match(classes,/Test 1 and Test 2/);
+assert.match(html,/cis320-test2-content\.js/,'Test 2 content is bundled with the page');
+assert.match(read('dist/cis320-test2-content.js'),/^window\.CIS320_TEST2_CONTENT=/,'bundled content initializes before the app');
+assert.match(read('dist/cis320-test2.js'),/if\(window\.CIS320_TEST2_CONTENT\)/,'app uses bundled content without a second network request');
 assert.ok(read('dist/cis320-test2.js').includes("fetch('cis320-test2-content.json'"));
+const bundledWindow={scrollTo(){},CIS320_TEST2_CONTENT:D};
+const bundledCtx=vm.createContext({console,Date,Math,JSON,Set,Intl,document:{querySelector:element,querySelectorAll:()=>[],addEventListener(){}},window:bundledWindow,localStorage:{getItem:()=>null,setItem(){}},fetch(){throw Error('JSON endpoint should not be requested when bundled content is present')}});
+vm.runInContext(read('dist/cis320-test2.js'),bundledCtx);
+assert.match(element('#app').innerHTML,/Understand Test 2 before you memorize it/,'bundled content renders even when the JSON endpoint is unavailable');
 assert.ok(!read('dist/cis320-test2.js').includes("setItem('cis320-v1"));
 assert.ok(!read('dist/cis320-test2.js').includes('type="text"'),'no typed quiz answer controls');
 assert.match(read('dist/cis320-test2.js'),/0x5D[^<]*0101 1101/,'remembered hexadecimal exam pattern is taught');

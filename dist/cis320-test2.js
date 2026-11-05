@@ -106,4 +106,12 @@ function balancedExam(pool,length){if(section||length<12)return shuffle(pool).sl
 function examHome(){const all=[...D.questions,...D.checks,...D.vocab,...D.exercises];$('#app').innerHTML=heading('Make Test 2 feel familiar','Generate a fresh exam from the supplied guide, lecture concepts, terms, and provided subnet exercises. Explanations appear after the scored first answer.')+`<section class="card"><h2>Build a multiple-choice exam</h2><div class="row"><label>Question bank<br><select id="exam-bank"><option value="all">Guide + checks + terms + subnet exercises</option><option value="guide">Study-guide topics only</option><option value="exercises">20 provided subnet exercises</option></select></label><label>Length<br><select id="exam-length"><option value="10">10</option><option value="20" selected>20</option><option value="40">40</option><option value="9999">Entire selected bank</option></select></label></div><p>No teaching card appears before an exam answer. Your first choice is scored.</p><button class="primary" id="exam-start">Generate exam</button></section>`;$('#exam-start').onclick=()=>{const bank=$('#exam-bank').value,pool=filtered(bank==='guide'?D.questions:bank==='exercises'?D.exercises:all),length=Math.min(pool.length,+$('#exam-length').value);start('exam',balancedExam(pool,length))}}
 
 document.addEventListener('click',event=>{const button=event.target.closest('button');if(!button||button.disabled)return;if(button.dataset.view)navigate(button.dataset.view);else if(button.dataset.lesson)openLesson(+button.dataset.lesson);else if(button.dataset.practiceSection){section=+button.dataset.practiceSection;start('practice',shuffle(filtered(D.questions)))}else if(button.dataset.question)start('practice',[D.questions.find(item=>item.number===+button.dataset.question)])});
-fetch('cis320-test2-content.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw Error('Could not load Test 2 content');return response.json()}).then(data=>{D=data;render()}).catch(error=>{$('#app').innerHTML=`<section class="card"><h1>Test 2 content could not load</h1><p>${esc(error.message)}</p><button onclick="location.reload()">Try again</button></section>`});
+function startApp(data){D=data;render()}
+if(window.CIS320_TEST2_CONTENT){
+  startApp(window.CIS320_TEST2_CONTENT);
+}else{
+  fetch('cis320-test2-content.json',{cache:'no-store'})
+    .then(response=>{if(!response.ok)throw Error('Could not load Test 2 content');return response.json()})
+    .then(startApp)
+    .catch(error=>{$('#app').innerHTML=`<section class="card"><h1>Test 2 content could not load</h1><p>${esc(error.message)}</p><button onclick="location.reload()">Try again</button></section>`});
+}
