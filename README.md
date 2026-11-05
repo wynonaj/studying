@@ -5,7 +5,7 @@ The app has two separate workspaces:
 - **Classes** — CIS 320, CIS 304, CIS 425, and CIS 464, with separate progress for each class.
 - **Career** — entry-level technology interview preparation for a May 2027 graduate, with role-specific learning paths, tap-based practice, spoken mock interviews, applied cases, flashcards, and research notes.
 
-A static study app covering Chapters 1, 2, 3, 4, and 12 from the supplied CIS 320 Test 1 guide.
+A static study app with separate CIS 320 Test 1 and Test 2 workspaces, plus independent sections for CIS 304, CIS 425, CIS 464, and career interview preparation.
 
 ## Run locally
 
@@ -41,6 +41,25 @@ Use an HTTP server rather than opening `index.html` directly: the app loads its 
 - Correct and incorrect answers receive spaced explanations; broader vocabulary comparisons are expandable. Layer-job matching and a side-by-side OSI/TCP/IP model builder are available in Put it in order. No exercise requires a typed answer.
 
 The full guide retains all 54 original prompts. Clarifications correct inconsistencies in the provided notes. The dictionary has 154 terms, including supplemental vocabulary; Learn uses an explicit list of guide-relevant terms. The new understanding bank is excluded from the original-question and exam banks.
+
+## CIS 320 Test 2
+
+`cis320-test2.html` is a separate CIS 320 workspace for Chapters 5–9. It keeps Test 1 unchanged and stores progress under `cis320-test2-v1`.
+
+The Test 2 section includes all **57 topics** from the completed guide: Chapter 5 Transport, Chapter 6 Application, Chapter 7 Support Services, Chapter 8 Routing, Chapter 8 Subnetting, and Chapter 9 Wireless. Each topic has a three-step beginner lesson, a complete guide answer, a concrete example, four authored answer choices, delayed retry after a miss, flashcard review, and chapter filtering.
+
+The subnetting path preserves all **20 supplied answered exercises** in their own bank. The live tutor calculates masks, host bits, totals, conventional usable hosts, block boundaries, network, broadcast, and first/last hosts. It generates fresh addresses for Big 5 practice, binary/decimal/hexadecimal and mask conversions, host requirements, and parent-prefix subnet requirements. The visible formula sheet distinguishes total addresses from usable hosts, shows the eight binary place values and the four-bits-per-hex-digit rule, and explains the `/31` and `/32` exceptions.
+
+Supporting practice adds 107 direct terms, 24 scenario checks, 13 tap-to-fill sentences, 14 shuffled sequences, abbreviation word builders, connection maps, and a generated exam. The source library records all 189 lecture slides, the 5-page completed guide, the 15-page exercise document, the 24-page scanned subnetting reading, and the three unique pasted-note sets after deduplicating 11 supplied files.
+
+Course-source corrections are stated where they matter: DHCP expands to **Dynamic Host Configuration Protocol**; the number of created subnets requires an original parent prefix; a classful exercise is labeled as a classful assumption; ordinary `/30` questions are separated from the `/31` point-to-point exception; and sharing one public IPv4 address among simultaneous flows is identified as PAT/NAPT behavior.
+
+- `dist/cis320-test2-content.json`: all Test 2 lessons and practice data.
+- `dist/cis320-test2.js`: Test 2 activities, scoring, retries, completion, and subnet generators.
+- `scripts/review/cis320-test2/`: source manifest, authored content modules, builders, and page wiring.
+- `tests/cis320-test2.cjs`: source counts, answer integrity, all views, 1,300 subnet calculations, fresh-number generation, retries, storage isolation, navigation, and cache hashes.
+
+Regenerate the Test 2 data with `python3 scripts/review/cis320-test2/build_content.py`, then run `python3 scripts/review/cis320-test2/wire_pages.py` after changing browser assets. Deploy the entire `dist/` directory so both CIS 320 tests and the other class tabs remain together.
 
 ## Files and editing
 
