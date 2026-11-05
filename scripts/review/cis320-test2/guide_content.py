@@ -123,9 +123,9 @@ GUIDE_TOPICS = [
             "Only the destination port",
             "The source IP and Ethernet frame check sequence",
         ),
-        "An IP address reaches a host; a port reaches the right application on that host. A socket endpoint combines an IP address, a port, and a transport protocol.",
-        "Ports are 16-bit values from 0 through 65535. Port 0 is reserved. The course groups 1-1023 as well-known and the rest as application ports; the standard also distinguishes registered 1024-49151 and dynamic/private 49152-65535. Memorize FTP 20/21, SSH 22, Telnet 23, SMTP 25, DNS 53, DHCP 67/68 UDP, HTTP 80, POP3 110, IMAP 143, and HTTPS 443.",
-        "A browser connection might use 192.168.1.5:52340 to 203.0.113.20:443 over TCP. The temporary client port and server port 443 identify the two application endpoints.",
+        "Read one packet like a labeled delivery. Source means where this packet came from; destination means where it is going. Each IP address identifies a device's network location. Each port identifies a program or service inside that device. TCP is the set of transport rules the two endpoint computers use for a reliable, ordered connection.",
+        "A TCP connection uses five identifying pieces: source IP, source port, destination IP, destination port, and TCP. The source IP identifies the device sending this packet. The source port identifies its sending program for this conversation. The destination IP identifies the device receiving the packet. The destination port identifies the receiving program or service. TCP means the endpoints number bytes, acknowledge received data, retransmit missing data, and restore the original order. A port is a 16-bit software number from 0 through 65535; it is not a physical socket or cable hole. Common destination service ports include HTTP 80 and HTTPS 443.",
+        "Suppose a browser sends 192.168.1.5:52340 → 203.0.113.20:443 using TCP. 192.168.1.5 is the laptop's source IP. 52340 is the browser connection's temporary source port. 203.0.113.20 is the web server's destination IP. 443 is the HTTPS service's destination port. TCP supplies reliable delivery rules. When the server replies, the direction reverses: 203.0.113.20:443 becomes the source and 192.168.1.5:52340 becomes the destination.",
         CH5,
     ),
     _topic(

@@ -110,9 +110,9 @@
         "Only the destination port",
         "The source IP and Ethernet frame check sequence"
       ],
-      "teach": "An IP address reaches a host; a port reaches the right application on that host. A socket endpoint combines an IP address, a port, and a transport protocol.",
-      "answer": "Ports are 16-bit values from 0 through 65535. Port 0 is reserved. The course groups 1-1023 as well-known and the rest as application ports; the standard also distinguishes registered 1024-49151 and dynamic/private 49152-65535. Memorize FTP 20/21, SSH 22, Telnet 23, SMTP 25, DNS 53, DHCP 67/68 UDP, HTTP 80, POP3 110, IMAP 143, and HTTPS 443.",
-      "example": "A browser connection might use 192.168.1.5:52340 to 203.0.113.20:443 over TCP. The temporary client port and server port 443 identify the two application endpoints.",
+      "teach": "Read one packet like a labeled delivery. Source means where this packet came from; destination means where it is going. Each IP address identifies a device's network location. Each port identifies a program or service inside that device. TCP is the set of transport rules the two endpoint computers use for a reliable, ordered connection.",
+      "answer": "A TCP connection uses five identifying pieces: source IP, source port, destination IP, destination port, and TCP. The source IP identifies the device sending this packet. The source port identifies its sending program for this conversation. The destination IP identifies the device receiving the packet. The destination port identifies the receiving program or service. TCP means the endpoints number bytes, acknowledge received data, retransmit missing data, and restore the original order. A port is a 16-bit software number from 0 through 65535; it is not a physical socket or cable hole. Common destination service ports include HTTP 80 and HTTPS 443.",
+      "example": "Suppose a browser sends 192.168.1.5:52340 → 203.0.113.20:443 using TCP. 192.168.1.5 is the laptop's source IP. 52340 is the browser connection's temporary source port. 203.0.113.20 is the web server's destination IP. 443 is the HTTPS service's destination port. TCP supplies reliable delivery rules. When the server replies, the direction reverses: 203.0.113.20:443 becomes the source and 192.168.1.5:52340 becomes the destination.",
       "sourceLabel": "Completed Study Guide PDF - Chapter 5 Transport Layer",
       "slides": [],
       "number": 4,
@@ -1222,6 +1222,78 @@
       "id": "t2-v009",
       "section": 1,
       "source": 4,
+      "title": "Source IP address",
+      "term": "Source IP address",
+      "exp": null,
+      "q": "Which term matches this meaning? The IP address of the device that sent this packet. Source means where this one packet came from; on the reply, the former destination normally becomes the new source.",
+      "correct": "Source IP address",
+      "distractors": [
+        "The number of the sending application",
+        "The IP address of the device receiving this packet",
+        "The MAC address of the next router"
+      ],
+      "answer": "The IP address of the device that sent this packet. Source means where this one packet came from; on the reply, the former destination normally becomes the new source.",
+      "teach": "The defining clue is the job or scope in the sentence. The IP address of the device that sent this packet. Source means where this one packet came from; on the reply, the former destination normally becomes the new source. That exact idea is called Source IP address.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v010",
+      "section": 1,
+      "source": 4,
+      "title": "Destination IP address",
+      "term": "Destination IP address",
+      "exp": null,
+      "q": "Which term matches this meaning? The IP address of the device this packet is trying to reach. Routers read it to move the packet toward the destination network.",
+      "correct": "Destination IP address",
+      "distractors": [
+        "The number of the receiving application",
+        "The IP address of the device that sent this packet",
+        "The sequence number of the first byte"
+      ],
+      "answer": "The IP address of the device this packet is trying to reach. Routers read it to move the packet toward the destination network.",
+      "teach": "The defining clue is the job or scope in the sentence. The IP address of the device this packet is trying to reach. Routers read it to move the packet toward the destination network. That exact idea is called Destination IP address.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v011",
+      "section": 1,
+      "source": 4,
+      "title": "Source port",
+      "term": "Source port",
+      "exp": null,
+      "q": "Which term matches this meaning? The port number of the sending application for this conversation. A client commonly chooses a temporary source port so the reply can return to the correct client program.",
+      "correct": "Source port",
+      "distractors": [
+        "The IP address of the sender",
+        "The usual port of the receiving service",
+        "The number of routers already crossed"
+      ],
+      "answer": "The port number of the sending application for this conversation. A client commonly chooses a temporary source port so the reply can return to the correct client program.",
+      "teach": "The defining clue is the job or scope in the sentence. The port number of the sending application for this conversation. A client commonly chooses a temporary source port so the reply can return to the correct client program. That exact idea is called Source port.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v012",
+      "section": 1,
+      "source": 4,
+      "title": "Destination port",
+      "term": "Destination port",
+      "exp": null,
+      "q": "Which term matches this meaning? The port number of the application or service that should receive this transport data on the destination device, such as TCP port 443 for an HTTPS server.",
+      "correct": "Destination port",
+      "distractors": [
+        "The IP address of the receiving device",
+        "The temporary port chosen by the sending client",
+        "The destination device's MAC manufacturer code"
+      ],
+      "answer": "The port number of the application or service that should receive this transport data on the destination device, such as TCP port 443 for an HTTPS server.",
+      "teach": "The defining clue is the job or scope in the sentence. The port number of the application or service that should receive this transport data on the destination device, such as TCP port 443 for an HTTPS server. That exact idea is called Destination port.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v013",
+      "section": 1,
+      "source": 4,
       "title": "Socket",
       "term": "Socket",
       "exp": null,
@@ -1237,7 +1309,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v010",
+      "id": "t2-v014",
       "section": 1,
       "source": 1,
       "title": "Multiplexing",
@@ -1255,7 +1327,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v011",
+      "id": "t2-v015",
       "section": 1,
       "source": 7,
       "title": "Flow control",
@@ -1273,7 +1345,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v012",
+      "id": "t2-v016",
       "section": 1,
       "source": 7,
       "title": "Sliding window",
@@ -1291,7 +1363,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v013",
+      "id": "t2-v017",
       "section": 1,
       "source": 8,
       "title": "SYN",
@@ -1309,7 +1381,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v014",
+      "id": "t2-v018",
       "section": 1,
       "source": 8,
       "title": "ACK",
@@ -1327,7 +1399,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v015",
+      "id": "t2-v019",
       "section": 1,
       "source": 5,
       "title": "netstat",
@@ -1345,7 +1417,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v016",
+      "id": "t2-v020",
       "section": 1,
       "source": 6,
       "title": "TIME_WAIT",
@@ -1363,7 +1435,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v017",
+      "id": "t2-v021",
       "section": 2,
       "source": 10,
       "title": "HTTP",
@@ -1381,7 +1453,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v018",
+      "id": "t2-v022",
       "section": 2,
       "source": 10,
       "title": "HTTPS",
@@ -1399,7 +1471,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v019",
+      "id": "t2-v023",
       "section": 2,
       "source": 11,
       "title": "URL",
@@ -1417,7 +1489,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v020",
+      "id": "t2-v024",
       "section": 2,
       "source": 12,
       "title": "API",
@@ -1435,7 +1507,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v021",
+      "id": "t2-v025",
       "section": 2,
       "source": 12,
       "title": "REST",
@@ -1453,7 +1525,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v022",
+      "id": "t2-v026",
       "section": 2,
       "source": 12,
       "title": "JSON",
@@ -1471,7 +1543,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v023",
+      "id": "t2-v027",
       "section": 2,
       "source": 13,
       "title": "MUA",
@@ -1489,7 +1561,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v024",
+      "id": "t2-v028",
       "section": 2,
       "source": 13,
       "title": "MTA",
@@ -1507,7 +1579,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v025",
+      "id": "t2-v029",
       "section": 2,
       "source": 14,
       "title": "SMTP",
@@ -1525,7 +1597,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v026",
+      "id": "t2-v030",
       "section": 2,
       "source": 14,
       "title": "POP3",
@@ -1543,7 +1615,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v027",
+      "id": "t2-v031",
       "section": 2,
       "source": 14,
       "title": "IMAP",
@@ -1561,7 +1633,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v028",
+      "id": "t2-v032",
       "section": 2,
       "source": 15,
       "title": "FTP",
@@ -1579,7 +1651,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v029",
+      "id": "t2-v033",
       "section": 2,
       "source": 15,
       "title": "SFTP",
@@ -1597,7 +1669,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v030",
+      "id": "t2-v034",
       "section": 2,
       "source": 15,
       "title": "FTPS",
@@ -1615,7 +1687,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v031",
+      "id": "t2-v035",
       "section": 2,
       "source": 16,
       "title": "Swarm",
@@ -1633,7 +1705,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v032",
+      "id": "t2-v036",
       "section": 2,
       "source": 16,
       "title": "Seeder",
@@ -1651,7 +1723,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v033",
+      "id": "t2-v037",
       "section": 2,
       "source": 16,
       "title": "Tracker",
@@ -1669,7 +1741,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v034",
+      "id": "t2-v038",
       "section": 2,
       "source": 17,
       "title": "QUIC",
@@ -1687,7 +1759,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v035",
+      "id": "t2-v039",
       "section": 3,
       "source": 18,
       "title": "CIDR",
@@ -1705,7 +1777,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v036",
+      "id": "t2-v040",
       "section": 3,
       "source": 19,
       "title": "RFC 1918",
@@ -1723,7 +1795,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v037",
+      "id": "t2-v041",
       "section": 3,
       "source": 21,
       "title": "NAT",
@@ -1741,7 +1813,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v038",
+      "id": "t2-v042",
       "section": 3,
       "source": 21,
       "title": "NAPT",
@@ -1759,7 +1831,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v039",
+      "id": "t2-v043",
       "section": 3,
       "source": 21,
       "title": "PAT",
@@ -1777,7 +1849,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v040",
+      "id": "t2-v044",
       "section": 3,
       "source": 22,
       "title": "DHCP",
@@ -1795,7 +1867,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v041",
+      "id": "t2-v045",
       "section": 3,
       "source": 22,
       "title": "DORA",
@@ -1813,7 +1885,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v042",
+      "id": "t2-v046",
       "section": 3,
       "source": 23,
       "title": "Lease",
@@ -1831,7 +1903,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v043",
+      "id": "t2-v047",
       "section": 3,
       "source": 24,
       "title": "Rogue DHCP server",
@@ -1849,7 +1921,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v044",
+      "id": "t2-v048",
       "section": 3,
       "source": 24,
       "title": "DHCP starvation",
@@ -1867,7 +1939,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v045",
+      "id": "t2-v049",
       "section": 3,
       "source": 24,
       "title": "DHCP snooping",
@@ -1885,7 +1957,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v046",
+      "id": "t2-v050",
       "section": 3,
       "source": 25,
       "title": "ARP",
@@ -1903,7 +1975,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v047",
+      "id": "t2-v051",
       "section": 3,
       "source": 25,
       "title": "ARP cache",
@@ -1921,7 +1993,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v048",
+      "id": "t2-v052",
       "section": 3,
       "source": 26,
       "title": "DNS",
@@ -1939,7 +2011,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v049",
+      "id": "t2-v053",
       "section": 3,
       "source": 26,
       "title": "Zone",
@@ -1957,7 +2029,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v050",
+      "id": "t2-v054",
       "section": 3,
       "source": 26,
       "title": "Delegation",
@@ -1975,7 +2047,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v051",
+      "id": "t2-v055",
       "section": 3,
       "source": 27,
       "title": "Recursive query",
@@ -1993,7 +2065,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v052",
+      "id": "t2-v056",
       "section": 3,
       "source": 27,
       "title": "Iterative query",
@@ -2011,7 +2083,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v053",
+      "id": "t2-v057",
       "section": 3,
       "source": 28,
       "title": "A record",
@@ -2029,7 +2101,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v054",
+      "id": "t2-v058",
       "section": 3,
       "source": 28,
       "title": "AAAA record",
@@ -2047,7 +2119,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v055",
+      "id": "t2-v059",
       "section": 3,
       "source": 28,
       "title": "CNAME record",
@@ -2065,7 +2137,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v056",
+      "id": "t2-v060",
       "section": 3,
       "source": 28,
       "title": "MX record",
@@ -2083,7 +2155,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v057",
+      "id": "t2-v061",
       "section": 3,
       "source": 28,
       "title": "PTR record",
@@ -2101,7 +2173,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v058",
+      "id": "t2-v062",
       "section": 3,
       "source": 28,
       "title": "SOA record",
@@ -2119,7 +2191,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v059",
+      "id": "t2-v063",
       "section": 4,
       "source": 30,
       "title": "Routing table",
@@ -2137,7 +2209,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v060",
+      "id": "t2-v064",
       "section": 4,
       "source": 30,
       "title": "Next hop",
@@ -2155,7 +2227,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v061",
+      "id": "t2-v065",
       "section": 4,
       "source": 30,
       "title": "Metric",
@@ -2173,7 +2245,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v062",
+      "id": "t2-v066",
       "section": 4,
       "source": 30,
       "title": "Longest-prefix match",
@@ -2191,7 +2263,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v063",
+      "id": "t2-v067",
       "section": 4,
       "source": 31,
       "title": "Static route",
@@ -2209,7 +2281,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v064",
+      "id": "t2-v068",
       "section": 4,
       "source": 31,
       "title": "Dynamic routing",
@@ -2227,7 +2299,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v065",
+      "id": "t2-v069",
       "section": 4,
       "source": 32,
       "title": "AS",
@@ -2245,7 +2317,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v066",
+      "id": "t2-v070",
       "section": 4,
       "source": 32,
       "title": "IGP",
@@ -2263,7 +2335,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v067",
+      "id": "t2-v071",
       "section": 4,
       "source": 32,
       "title": "EGP",
@@ -2281,7 +2353,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v068",
+      "id": "t2-v072",
       "section": 4,
       "source": 32,
       "title": "RIP",
@@ -2299,7 +2371,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v069",
+      "id": "t2-v073",
       "section": 4,
       "source": 32,
       "title": "OSPF",
@@ -2317,7 +2389,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v070",
+      "id": "t2-v074",
       "section": 4,
       "source": 32,
       "title": "BGP",
@@ -2335,7 +2407,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v071",
+      "id": "t2-v075",
       "section": 4,
       "source": 33,
       "title": "Distance vector",
@@ -2353,7 +2425,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v072",
+      "id": "t2-v076",
       "section": 4,
       "source": 33,
       "title": "Link state",
@@ -2371,7 +2443,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v073",
+      "id": "t2-v077",
       "section": 4,
       "source": 34,
       "title": "Route aggregation",
@@ -2389,7 +2461,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v074",
+      "id": "t2-v078",
       "section": 4,
       "source": 35,
       "title": "MPLS",
@@ -2407,7 +2479,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v075",
+      "id": "t2-v079",
       "section": 4,
       "source": 36,
       "title": "SDN",
@@ -2425,7 +2497,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v076",
+      "id": "t2-v080",
       "section": 4,
       "source": 36,
       "title": "OpenFlow",
@@ -2443,7 +2515,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v077",
+      "id": "t2-v081",
       "section": 5,
       "source": 40,
       "title": "CIDR prefix",
@@ -2461,7 +2533,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v078",
+      "id": "t2-v082",
       "section": 5,
       "source": 45,
       "title": "Parent prefix",
@@ -2479,7 +2551,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v079",
+      "id": "t2-v083",
       "section": 5,
       "source": 39,
       "title": "Borrowed bit",
@@ -2497,7 +2569,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v080",
+      "id": "t2-v084",
       "section": 5,
       "source": 39,
       "title": "Host bit",
@@ -2515,7 +2587,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v081",
+      "id": "t2-v085",
       "section": 5,
       "source": 40,
       "title": "Subnet mask",
@@ -2533,7 +2605,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v082",
+      "id": "t2-v086",
       "section": 5,
       "source": 43,
       "title": "Network address",
@@ -2551,7 +2623,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v083",
+      "id": "t2-v087",
       "section": 5,
       "source": 43,
       "title": "Broadcast address",
@@ -2569,7 +2641,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v084",
+      "id": "t2-v088",
       "section": 5,
       "source": 43,
       "title": "Usable host address",
@@ -2587,7 +2659,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v085",
+      "id": "t2-v089",
       "section": 5,
       "source": 43,
       "title": "Block size",
@@ -2605,7 +2677,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v086",
+      "id": "t2-v090",
       "section": 5,
       "source": 43,
       "title": "Interesting octet",
@@ -2623,7 +2695,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v087",
+      "id": "t2-v091",
       "section": 5,
       "source": 21,
       "title": "Inside local",
@@ -2641,7 +2713,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v088",
+      "id": "t2-v092",
       "section": 5,
       "source": 21,
       "title": "Inside global",
@@ -2659,7 +2731,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v089",
+      "id": "t2-v093",
       "section": 5,
       "source": 21,
       "title": "Outside global",
@@ -2677,7 +2749,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v090",
+      "id": "t2-v094",
       "section": 5,
       "source": 44,
       "title": "IPv6 interface ID",
@@ -2695,7 +2767,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v091",
+      "id": "t2-v095",
       "section": 6,
       "source": 51,
       "title": "WLAN",
@@ -2713,7 +2785,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v092",
+      "id": "t2-v096",
       "section": 6,
       "source": 51,
       "title": "WPAN",
@@ -2731,7 +2803,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v093",
+      "id": "t2-v097",
       "section": 6,
       "source": 51,
       "title": "WMAN",
@@ -2749,7 +2821,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v094",
+      "id": "t2-v098",
       "section": 6,
       "source": 47,
       "title": "ISM",
@@ -2767,7 +2839,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v095",
+      "id": "t2-v099",
       "section": 6,
       "source": 49,
       "title": "MIMO",
@@ -2785,7 +2857,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v096",
+      "id": "t2-v100",
       "section": 6,
       "source": 50,
       "title": "WEP",
@@ -2803,7 +2875,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v097",
+      "id": "t2-v101",
       "section": 6,
       "source": 50,
       "title": "WPA2",
@@ -2821,7 +2893,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v098",
+      "id": "t2-v102",
       "section": 6,
       "source": 50,
       "title": "WPA3",
@@ -2839,7 +2911,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v099",
+      "id": "t2-v103",
       "section": 6,
       "source": 53,
       "title": "CSMA/CA",
@@ -2857,7 +2929,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v100",
+      "id": "t2-v104",
       "section": 6,
       "source": 55,
       "title": "BSS",
@@ -2875,7 +2947,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v101",
+      "id": "t2-v105",
       "section": 6,
       "source": 55,
       "title": "ESS",
@@ -2893,7 +2965,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v102",
+      "id": "t2-v106",
       "section": 6,
       "source": 55,
       "title": "DS",
@@ -2911,7 +2983,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v103",
+      "id": "t2-v107",
       "section": 6,
       "source": 55,
       "title": "Portal",
@@ -2929,7 +3001,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v104",
+      "id": "t2-v108",
       "section": 6,
       "source": 57,
       "title": "OFDM",
@@ -2947,7 +3019,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v105",
+      "id": "t2-v109",
       "section": 6,
       "source": 57,
       "title": "FHSS",
@@ -2965,7 +3037,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v106",
+      "id": "t2-v110",
       "section": 6,
       "source": 57,
       "title": "DSSS",
@@ -2983,7 +3055,7 @@
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     },
     {
-      "id": "t2-v107",
+      "id": "t2-v111",
       "section": 6,
       "source": 46,
       "title": "Channel",
@@ -3037,6 +3109,86 @@
     {
       "id": "t2-check-003",
       "section": 1,
+      "source": 4,
+      "title": "Apply guide topic 4",
+      "q": "A laptop sends a TCP packet to a web server. What does the source IP identify?",
+      "correct": "The laptop that sent this packet",
+      "distractors": [
+        "The web service inside the server",
+        "The server receiving this packet",
+        "The next router's application"
+      ],
+      "answer": "Source means where this packet came from. The source IP names the sending device's IP location, not the program inside it.",
+      "teach": "Source means where this packet came from. The source IP names the sending device's IP location, not the program inside it.",
+      "example": "In 192.168.1.5:52340 → 203.0.113.20:443, 192.168.1.5 is the source IP for the request."
+    },
+    {
+      "id": "t2-check-004",
+      "section": 1,
+      "source": 4,
+      "title": "Apply guide topic 4",
+      "q": "A laptop sends a TCP packet to a web server. What does the destination IP identify?",
+      "correct": "The server this packet is trying to reach",
+      "distractors": [
+        "The browser tab that sent the request",
+        "The laptop that sent this packet",
+        "The server's HTTPS process by itself"
+      ],
+      "answer": "Destination means where this packet is going. The destination IP names the receiving device or network interface; routers use that address to move the packet across networks.",
+      "teach": "Destination means where this packet is going. The destination IP names the receiving device or network interface; routers use that address to move the packet across networks.",
+      "example": "In 192.168.1.5:52340 → 203.0.113.20:443, 203.0.113.20 is the destination IP for the request."
+    },
+    {
+      "id": "t2-check-005",
+      "section": 1,
+      "source": 4,
+      "title": "Apply guide topic 4",
+      "q": "In 192.168.1.5:52340 → 203.0.113.20:443, what does source port 52340 identify?",
+      "correct": "The sending browser's temporary endpoint for this conversation",
+      "distractors": [
+        "The laptop's IP address",
+        "The HTTPS service waiting on the server",
+        "The physical switch port used by the laptop"
+      ],
+      "answer": "A source port identifies the sending application endpoint. A client usually chooses a temporary port so the operating system knows which program should receive the returning data.",
+      "teach": "A source port identifies the sending application endpoint. A client usually chooses a temporary port so the operating system knows which program should receive the returning data.",
+      "example": "If several browser connections share one laptop IP, different temporary source ports keep their replies separated."
+    },
+    {
+      "id": "t2-check-006",
+      "section": 1,
+      "source": 4,
+      "title": "Apply guide topic 4",
+      "q": "In 192.168.1.5:52340 → 203.0.113.20:443, what does destination port 443 identify?",
+      "correct": "The HTTPS service that should receive the data on the server",
+      "distractors": [
+        "The server's IP address",
+        "The browser's temporary reply endpoint",
+        "The fourth router on the path"
+      ],
+      "answer": "The destination port identifies the receiving application or service inside the destination device. It is a software endpoint number, not a physical hole in the computer.",
+      "teach": "The destination port identifies the receiving application or service inside the destination device. It is a software endpoint number, not a physical hole in the computer.",
+      "example": "The server operating system sees destination TCP port 443 and gives the data to the HTTPS server process listening there."
+    },
+    {
+      "id": "t2-check-007",
+      "section": 1,
+      "source": 4,
+      "title": "Apply guide topic 4",
+      "q": "What does TCP add to the four IP-and-port values that identify this connection?",
+      "correct": "The transport rules for a reliable, ordered, connection-oriented byte stream",
+      "distractors": [
+        "The physical cable used on every hop",
+        "The DNS name of both devices",
+        "The permanent MAC addresses of all routers"
+      ],
+      "answer": "TCP is the protocol: the agreed set of transport rules both endpoint computers follow. TCP opens a connection, numbers bytes, acknowledges received data, retransmits missing data, restores order, and uses ports to reach the correct programs.",
+      "teach": "TCP is the protocol: the agreed set of transport rules both endpoint computers follow. TCP opens a connection, numbers bytes, acknowledges received data, retransmits missing data, restores order, and uses ports to reach the correct programs.",
+      "example": "The same IP and port numbers used with UDP would describe a different transport conversation because UDP follows different delivery rules."
+    },
+    {
+      "id": "t2-check-008",
+      "section": 1,
       "source": 6,
       "title": "Apply guide topic 6",
       "q": "Which TCP state means the remote side closed, but the local application has not finished closing?",
@@ -3051,7 +3203,7 @@
       "example": "A stuck application can leave many sockets in CLOSE_WAIT."
     },
     {
-      "id": "t2-check-004",
+      "id": "t2-check-009",
       "section": 1,
       "source": 8,
       "title": "Apply guide topic 8",
@@ -3067,7 +3219,7 @@
       "example": "SYN → SYN+ACK → ACK establishes both directions."
     },
     {
-      "id": "t2-check-005",
+      "id": "t2-check-010",
       "section": 2,
       "source": 10,
       "title": "Apply guide topic 10",
@@ -3083,7 +3235,7 @@
       "example": "404 means the requested resource was not found."
     },
     {
-      "id": "t2-check-006",
+      "id": "t2-check-011",
       "section": 2,
       "source": 11,
       "title": "Apply guide topic 11",
@@ -3099,7 +3251,7 @@
       "example": "scheme=https, host=example.edu, port=8443, path=/a, query=week=2, fragment=top."
     },
     {
-      "id": "t2-check-007",
+      "id": "t2-check-012",
       "section": 2,
       "source": 14,
       "title": "Apply guide topic 14",
@@ -3115,7 +3267,7 @@
       "example": "Reading a message on the phone can also mark it read on the laptop through IMAP."
     },
     {
-      "id": "t2-check-008",
+      "id": "t2-check-013",
       "section": 2,
       "source": 17,
       "title": "Apply guide topic 17",
@@ -3131,7 +3283,7 @@
       "example": "Loss can still delay the affected QUIC stream, but other streams can continue."
     },
     {
-      "id": "t2-check-009",
+      "id": "t2-check-014",
       "section": 3,
       "source": 21,
       "title": "Apply guide topic 21",
@@ -3147,7 +3299,7 @@
       "example": "192.168.1.10:50000 and .11:50000 can become one public IP with different public-side ports."
     },
     {
-      "id": "t2-check-010",
+      "id": "t2-check-015",
       "section": 3,
       "source": 22,
       "title": "Apply guide topic 22",
@@ -3163,7 +3315,7 @@
       "example": "Remember DORA as a four-part exchange: the device discovers servers, receives an offer, requests that offer, and receives the final acknowledgment."
     },
     {
-      "id": "t2-check-011",
+      "id": "t2-check-016",
       "section": 3,
       "source": 25,
       "title": "Apply guide topic 25",
@@ -3179,7 +3331,7 @@
       "example": "Each router removes the old link-layer frame and builds a new one for its next hop."
     },
     {
-      "id": "t2-check-012",
+      "id": "t2-check-017",
       "section": 3,
       "source": 27,
       "title": "Apply guide topic 27",
@@ -3195,7 +3347,7 @@
       "example": "Root and TLD servers commonly provide referrals."
     },
     {
-      "id": "t2-check-013",
+      "id": "t2-check-018",
       "section": 4,
       "source": 30,
       "title": "Apply guide topic 30",
@@ -3211,7 +3363,7 @@
       "example": "A /24 fixes more leading destination bits than /16 or /8."
     },
     {
-      "id": "t2-check-014",
+      "id": "t2-check-019",
       "section": 4,
       "source": 32,
       "title": "Apply guide topic 32",
@@ -3227,7 +3379,7 @@
       "example": "An ISP can use OSPF internally and BGP with other networks."
     },
     {
-      "id": "t2-check-015",
+      "id": "t2-check-020",
       "section": 4,
       "source": 34,
       "title": "Apply guide topic 34",
@@ -3243,7 +3395,7 @@
       "example": "192.168.0.0/24 and 192.168.1.0/24 form 192.168.0.0/23."
     },
     {
-      "id": "t2-check-016",
+      "id": "t2-check-021",
       "section": 4,
       "source": 36,
       "title": "Apply guide topic 36",
@@ -3259,7 +3411,7 @@
       "example": "A switch matches a flow entry installed by the controller."
     },
     {
-      "id": "t2-check-017",
+      "id": "t2-check-022",
       "section": 5,
       "source": 45,
       "title": "Apply guide topic 45",
@@ -3275,7 +3427,7 @@
       "example": "The /27 block size is 32 addresses, producing boundaries 0, 32, 64, and so on."
     },
     {
-      "id": "t2-check-018",
+      "id": "t2-check-023",
       "section": 5,
       "source": 43,
       "title": "Apply guide topic 43",
@@ -3291,7 +3443,7 @@
       "example": "A /29 has 8 total addresses and conventionally 6 usable host addresses."
     },
     {
-      "id": "t2-check-019",
+      "id": "t2-check-024",
       "section": 5,
       "source": 41,
       "title": "Apply guide topic 41",
@@ -3307,7 +3459,7 @@
       "example": "255.0.255.0 would have separated islands of prefix bits."
     },
     {
-      "id": "t2-check-020",
+      "id": "t2-check-025",
       "section": 5,
       "source": 43,
       "title": "Apply guide topic 43",
@@ -3323,7 +3475,7 @@
       "example": ".12 is network, .13 and .14 are usable, and .15 is broadcast."
     },
     {
-      "id": "t2-check-021",
+      "id": "t2-check-026",
       "section": 6,
       "source": 46,
       "title": "Apply guide topic 46",
@@ -3339,7 +3491,7 @@
       "example": "Adjacent access points should avoid occupying overlapping 2.4 GHz channels."
     },
     {
-      "id": "t2-check-022",
+      "id": "t2-check-027",
       "section": 6,
       "source": 49,
       "title": "Apply guide topic 49",
@@ -3355,7 +3507,7 @@
       "example": "802.11n introduced MIMO to the Wi-Fi generations in this course table."
     },
     {
-      "id": "t2-check-023",
+      "id": "t2-check-028",
       "section": 6,
       "source": 53,
       "title": "Apply guide topic 53",
@@ -3371,7 +3523,7 @@
       "example": "No ACK causes a retry after another backoff."
     },
     {
-      "id": "t2-check-024",
+      "id": "t2-check-029",
       "section": 6,
       "source": 55,
       "title": "Apply guide topic 55",
@@ -3425,9 +3577,26 @@
     {
       "id": "t2-cloze-03",
       "kind": "cloze",
+      "section": 1,
+      "source": 4,
+      "title": "Build the relationship · 3",
+      "q": "For one request, the ____ IP and port identify the sender; the ____ IP and port identify the receiver; ____ supplies the reliable transport rules.",
+      "correct": "source; destination; TCP",
+      "distractors": [
+        "gateway",
+        "MAC",
+        "DNS"
+      ],
+      "answer": "Read one direction at a time: source is where this message came from, destination is where it is going, and TCP states how the endpoint programs communicate reliably.",
+      "teach": "Read one direction at a time: source is where this message came from, destination is where it is going, and TCP states how the endpoint programs communicate reliably.",
+      "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
+    },
+    {
+      "id": "t2-cloze-04",
+      "kind": "cloze",
       "section": 2,
       "source": 14,
-      "title": "Build the relationship · 3",
+      "title": "Build the relationship · 4",
       "q": "____ sends or relays mail; ____ synchronizes a server mailbox; ____ commonly downloads mail.",
       "correct": "SMTP; IMAP; POP3",
       "distractors": [
@@ -3440,11 +3609,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-04",
+      "id": "t2-cloze-05",
       "kind": "cloze",
       "section": 2,
       "source": 12,
-      "title": "Build the relationship · 4",
+      "title": "Build the relationship · 5",
       "q": "A REST API commonly uses ____ to read, ____ to create, and ____ to remove a resource.",
       "correct": "GET; POST; DELETE",
       "distractors": [
@@ -3457,11 +3626,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-05",
+      "id": "t2-cloze-06",
       "kind": "cloze",
       "section": 3,
       "source": 22,
-      "title": "Build the relationship · 5",
+      "title": "Build the relationship · 6",
       "q": "The DHCP memory sequence is ____: Discover, Offer, Request, Acknowledgment.",
       "correct": "DORA",
       "distractors": [
@@ -3474,11 +3643,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-06",
+      "id": "t2-cloze-07",
       "kind": "cloze",
       "section": 3,
       "source": 25,
-      "title": "Build the relationship · 6",
+      "title": "Build the relationship · 7",
       "q": "ARP starts with a local-link ____ request and learns an IPv4-to-____ mapping.",
       "correct": "broadcast; MAC address",
       "distractors": [
@@ -3491,11 +3660,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-07",
+      "id": "t2-cloze-08",
       "kind": "cloze",
       "section": 3,
       "source": 27,
-      "title": "Build the relationship · 7",
+      "title": "Build the relationship · 8",
       "q": "A ____ DNS resolver returns the final result; an ____ server may return a referral.",
       "correct": "recursive; iterative",
       "distractors": [
@@ -3508,11 +3677,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-08",
+      "id": "t2-cloze-09",
       "kind": "cloze",
       "section": 4,
       "source": 30,
-      "title": "Build the relationship · 8",
+      "title": "Build the relationship · 9",
       "q": "A router first uses ____ match to choose the most specific prefix, then a ____ may help compare suitable paths.",
       "correct": "longest-prefix; metric",
       "distractors": [
@@ -3525,11 +3694,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-09",
+      "id": "t2-cloze-10",
       "kind": "cloze",
       "section": 4,
       "source": 33,
-      "title": "Build the relationship · 9",
+      "title": "Build the relationship · 10",
       "q": "____ vector learns distance and direction from neighbors; ____ state builds a topology map.",
       "correct": "distance; link",
       "distractors": [
@@ -3542,11 +3711,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-10",
+      "id": "t2-cloze-11",
       "kind": "cloze",
       "section": 5,
       "source": 45,
-      "title": "Build the relationship · 10",
+      "title": "Build the relationship · 11",
       "q": "Borrowed bits = ____ prefix − ____ prefix; number of subnets = 2^borrowed bits.",
       "correct": "current; parent",
       "distractors": [
@@ -3559,11 +3728,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-11",
+      "id": "t2-cloze-12",
       "kind": "cloze",
       "section": 5,
       "source": 43,
-      "title": "Build the relationship · 11",
+      "title": "Build the relationship · 12",
       "q": "An ordinary IPv4 subnet begins with the ____ address and ends with the ____ address.",
       "correct": "network; broadcast",
       "distractors": [
@@ -3576,11 +3745,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-12",
+      "id": "t2-cloze-13",
       "kind": "cloze",
       "section": 6,
       "source": 53,
-      "title": "Build the relationship · 12",
+      "title": "Build the relationship · 13",
       "q": "Shared Ethernet is associated with CSMA/____; Wi-Fi uses CSMA/____.",
       "correct": "CD; CA",
       "distractors": [
@@ -3593,11 +3762,11 @@
       "example": "Read the whole completed sentence aloud once after checking it. The surrounding words explain the role of each blank."
     },
     {
-      "id": "t2-cloze-13",
+      "id": "t2-cloze-14",
       "kind": "cloze",
       "section": 6,
       "source": 55,
-      "title": "Build the relationship · 13",
+      "title": "Build the relationship · 14",
       "q": "One access-point cell is a ____; multiple connected cells form an ____.",
       "correct": "BSS; ESS",
       "distractors": [

@@ -30,6 +30,12 @@ assert.match(D.questions.find(x=>x.title.includes('/19')||x.q.includes('/19')).a
 assert.match(D.questions.find(x=>x.title.includes('subnet count')||x.q.toLowerCase().includes('parent prefix'))?.answer||'',/parent/i);
 assert.match(D.checks.find(x=>x.q.includes('total addresses and usable')).teach,/network address.*broadcast address/i);
 assert.match(D.questions.find(x=>x.q.includes('TCP')&&x.title.toLowerCase().includes('end-to-end')).answer,/routers/i);
+for(const term of ['Source IP address','Destination IP address','Source port','Destination port'])assert.ok(D.vocab.some(x=>x.term===term),`${term} has its own beginner definition`);
+for(const phrase of ['source IP identify','destination IP identify','source port 52340','destination port 443','What does TCP add'])assert.ok(D.checks.some(x=>x.q.includes(phrase)),`${phrase} has its own practice question`);
+const connectionTopic=D.questions.find(x=>x.title==='Ports and sockets');
+assert.match(connectionTopic.answer,/source IP identifies the device sending/i);
+assert.match(connectionTopic.answer,/destination port identifies the receiving program/i);
+assert.match(connectionTopic.example,/direction reverses/i);
 assert.match(D.exercises[0].correct,/broadcast address/i);
 assert.equal(D.exercises[19].correct,'Router');
 
