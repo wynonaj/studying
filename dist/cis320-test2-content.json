@@ -3071,6 +3071,1932 @@
       "answer": "A defined slice of radio spectrum on which wireless devices transmit; overlapping nearby channels can interfere.",
       "teach": "The defining clue is the job or scope in the sentence. A defined slice of radio spectrum on which wireless devices transmit; overlapping nearby channels can interfere. That exact idea is called Channel.",
       "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v112",
+      "section": 1,
+      "source": 1,
+      "title": "Transport layer",
+      "term": "Transport layer",
+      "exp": null,
+      "q": "Which term matches this meaning? The layer that carries data between application programs on endpoint devices. TCP or UDP works here, and port numbers identify the programs.",
+      "correct": "Transport layer",
+      "distractors": [
+        "Application layer",
+        "Network layer",
+        "Data Link layer"
+      ],
+      "answer": "The layer that carries data between application programs on endpoint devices. TCP or UDP works here, and port numbers identify the programs.",
+      "teach": "The defining clue is the job or scope in the sentence. The layer that carries data between application programs on endpoint devices. TCP or UDP works here, and port numbers identify the programs. That exact idea is called Transport layer.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v113",
+      "section": 1,
+      "source": 3,
+      "title": "Host",
+      "term": "Host",
+      "exp": null,
+      "q": "Which term matches this meaning? Any endpoint device with a network address that can send or receive network data, such as a laptop, phone, or server.",
+      "correct": "Host",
+      "distractors": [
+        "Router hop",
+        "Port number",
+        "Protocol rule"
+      ],
+      "answer": "Any endpoint device with a network address that can send or receive network data, such as a laptop, phone, or server.",
+      "teach": "The defining clue is the job or scope in the sentence. Any endpoint device with a network address that can send or receive network data, such as a laptop, phone, or server. That exact idea is called Host.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v114",
+      "section": 1,
+      "source": 4,
+      "title": "Application process",
+      "term": "Application process",
+      "exp": null,
+      "q": "Which term matches this meaning? A running program or part of a program that sends or receives data, such as a browser process or web-server process.",
+      "correct": "Application process",
+      "distractors": [
+        "Network interface",
+        "Routing protocol",
+        "Subnet mask"
+      ],
+      "answer": "A running program or part of a program that sends or receives data, such as a browser process or web-server process.",
+      "teach": "The defining clue is the job or scope in the sentence. A running program or part of a program that sends or receives data, such as a browser process or web-server process. That exact idea is called Application process.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v115",
+      "section": 1,
+      "source": 4,
+      "title": "Protocol",
+      "term": "Protocol",
+      "exp": null,
+      "q": "Which term matches this meaning? An agreed set of rules that tells devices how to format, send, receive, and interpret a particular kind of communication.",
+      "correct": "Protocol",
+      "distractors": [
+        "Physical medium",
+        "IP address",
+        "Port number"
+      ],
+      "answer": "An agreed set of rules that tells devices how to format, send, receive, and interpret a particular kind of communication.",
+      "teach": "The defining clue is the job or scope in the sentence. An agreed set of rules that tells devices how to format, send, receive, and interpret a particular kind of communication. That exact idea is called Protocol.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v116",
+      "section": 1,
+      "source": 4,
+      "title": "Transport endpoint",
+      "term": "Transport endpoint",
+      "exp": null,
+      "q": "Which term matches this meaning? One end of a TCP or UDP conversation, identified by an IP address, a port number, and the transport protocol.",
+      "correct": "Transport endpoint",
+      "distractors": [
+        "Intermediate router",
+        "Ethernet cable end",
+        "DNS zone"
+      ],
+      "answer": "One end of a TCP or UDP conversation, identified by an IP address, a port number, and the transport protocol.",
+      "teach": "The defining clue is the job or scope in the sentence. One end of a TCP or UDP conversation, identified by an IP address, a port number, and the transport protocol. That exact idea is called Transport endpoint.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v117",
+      "section": 1,
+      "source": 4,
+      "title": "TCP connection",
+      "term": "TCP connection",
+      "exp": null,
+      "q": "Which term matches this meaning? A logical conversation created between two application endpoints that follow TCP's sequencing, acknowledgment, and reliability rules.",
+      "correct": "TCP connection",
+      "distractors": [
+        "One physical cable",
+        "One DNS lookup",
+        "One routing-table row"
+      ],
+      "answer": "A logical conversation created between two application endpoints that follow TCP's sequencing, acknowledgment, and reliability rules.",
+      "teach": "The defining clue is the job or scope in the sentence. A logical conversation created between two application endpoints that follow TCP's sequencing, acknowledgment, and reliability rules. That exact idea is called TCP connection.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v118",
+      "section": 1,
+      "source": 1,
+      "title": "Byte stream",
+      "term": "Byte stream",
+      "exp": null,
+      "q": "Which term matches this meaning? An ordered flow of bytes presented to an application without preserving separate message boundaries; TCP provides this service.",
+      "correct": "Byte stream",
+      "distractors": [
+        "Routing-table stream",
+        "Wireless channel list",
+        "DNS record set"
+      ],
+      "answer": "An ordered flow of bytes presented to an application without preserving separate message boundaries; TCP provides this service.",
+      "teach": "The defining clue is the job or scope in the sentence. An ordered flow of bytes presented to an application without preserving separate message boundaries; TCP provides this service. That exact idea is called Byte stream.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v119",
+      "section": 1,
+      "source": 9,
+      "title": "TCP header",
+      "term": "TCP header",
+      "exp": null,
+      "q": "Which term matches this meaning? Control information placed before TCP application bytes, including ports, sequence and acknowledgment numbers, flags, window, and checksum.",
+      "correct": "TCP header",
+      "distractors": [
+        "Ethernet trailer",
+        "DNS zone",
+        "Subnet prefix"
+      ],
+      "answer": "Control information placed before TCP application bytes, including ports, sequence and acknowledgment numbers, flags, window, and checksum.",
+      "teach": "The defining clue is the job or scope in the sentence. Control information placed before TCP application bytes, including ports, sequence and acknowledgment numbers, flags, window, and checksum. That exact idea is called TCP header.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v120",
+      "section": 1,
+      "source": 9,
+      "title": "Checksum",
+      "term": "Checksum",
+      "exp": null,
+      "q": "Which term matches this meaning? A calculated error-detection value that lets a receiver notice that bits changed while data was stored or transmitted.",
+      "correct": "Checksum",
+      "distractors": [
+        "Encryption key",
+        "Port assignment",
+        "Route metric"
+      ],
+      "answer": "A calculated error-detection value that lets a receiver notice that bits changed while data was stored or transmitted.",
+      "teach": "The defining clue is the job or scope in the sentence. A calculated error-detection value that lets a receiver notice that bits changed while data was stored or transmitted. That exact idea is called Checksum.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v121",
+      "section": 1,
+      "source": 7,
+      "title": "Receive window",
+      "term": "Receive window",
+      "exp": null,
+      "q": "Which term matches this meaning? The amount of additional TCP data a receiver currently says it has room to accept.",
+      "correct": "Receive window",
+      "distractors": [
+        "Wireless coverage area",
+        "Routing-table size",
+        "DNS cache lifetime"
+      ],
+      "answer": "The amount of additional TCP data a receiver currently says it has room to accept.",
+      "teach": "The defining clue is the job or scope in the sentence. The amount of additional TCP data a receiver currently says it has room to accept. That exact idea is called Receive window.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v122",
+      "section": 1,
+      "source": 8,
+      "title": "Three-way handshake",
+      "term": "Three-way handshake",
+      "exp": null,
+      "q": "Which term matches this meaning? The TCP opening exchange SYN, SYN+ACK, ACK that creates the connection and confirms both endpoints' starting sequence numbers.",
+      "correct": "Three-way handshake",
+      "distractors": [
+        "DHCP DORA exchange",
+        "DNS iterative lookup",
+        "Wi-Fi channel scan"
+      ],
+      "answer": "The TCP opening exchange SYN, SYN+ACK, ACK that creates the connection and confirms both endpoints' starting sequence numbers.",
+      "teach": "The defining clue is the job or scope in the sentence. The TCP opening exchange SYN, SYN+ACK, ACK that creates the connection and confirms both endpoints' starting sequence numbers. That exact idea is called Three-way handshake.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v123",
+      "section": 1,
+      "source": 5,
+      "title": "Listening port",
+      "term": "Listening port",
+      "exp": null,
+      "q": "Which term matches this meaning? A port on which a server program is waiting for a new connection or message addressed to that service.",
+      "correct": "Listening port",
+      "distractors": [
+        "Temporary client address",
+        "Router exit interface",
+        "Wireless frequency"
+      ],
+      "answer": "A port on which a server program is waiting for a new connection or message addressed to that service.",
+      "teach": "The defining clue is the job or scope in the sentence. A port on which a server program is waiting for a new connection or message addressed to that service. That exact idea is called Listening port.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v124",
+      "section": 1,
+      "source": 6,
+      "title": "FIN",
+      "term": "FIN",
+      "exp": null,
+      "q": "Which term matches this meaning? A TCP control flag meaning the sender has finished sending bytes in that direction and wants to close that half of the connection.",
+      "correct": "FIN",
+      "distractors": [
+        "A request to begin a connection",
+        "A request to repeat DNS",
+        "A flow-control window"
+      ],
+      "answer": "A TCP control flag meaning the sender has finished sending bytes in that direction and wants to close that half of the connection.",
+      "teach": "The defining clue is the job or scope in the sentence. A TCP control flag meaning the sender has finished sending bytes in that direction and wants to close that half of the connection. That exact idea is called FIN.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v125",
+      "section": 1,
+      "source": 6,
+      "title": "ESTABLISHED",
+      "term": "ESTABLISHED",
+      "exp": null,
+      "q": "Which term matches this meaning? The TCP state in which the connection is open and both endpoints can exchange application data.",
+      "correct": "ESTABLISHED",
+      "distractors": [
+        "Waiting for a first connection",
+        "Waiting for the local program to close",
+        "No connection exists"
+      ],
+      "answer": "The TCP state in which the connection is open and both endpoints can exchange application data.",
+      "teach": "The defining clue is the job or scope in the sentence. The TCP state in which the connection is open and both endpoints can exchange application data. That exact idea is called ESTABLISHED.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v126",
+      "section": 1,
+      "source": 6,
+      "title": "CLOSE_WAIT",
+      "term": "CLOSE_WAIT",
+      "exp": null,
+      "q": "Which term matches this meaning? The TCP state after the remote endpoint's FIN arrives while the local application has not yet closed its own side.",
+      "correct": "CLOSE_WAIT",
+      "distractors": [
+        "The initial connection request",
+        "The final delayed-packet timer",
+        "The state before any SYN arrives"
+      ],
+      "answer": "The TCP state after the remote endpoint's FIN arrives while the local application has not yet closed its own side.",
+      "teach": "The defining clue is the job or scope in the sentence. The TCP state after the remote endpoint's FIN arrives while the local application has not yet closed its own side. That exact idea is called CLOSE_WAIT.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v127",
+      "section": 2,
+      "source": 10,
+      "title": "Application layer",
+      "term": "Application layer",
+      "exp": null,
+      "q": "Which term matches this meaning? The layer where network services take a form programs and people use, such as web requests, email, file transfer, and name lookup.",
+      "correct": "Application layer",
+      "distractors": [
+        "Physical layer",
+        "Data Link layer",
+        "Transport header"
+      ],
+      "answer": "The layer where network services take a form programs and people use, such as web requests, email, file transfer, and name lookup.",
+      "teach": "The defining clue is the job or scope in the sentence. The layer where network services take a form programs and people use, such as web requests, email, file transfer, and name lookup. That exact idea is called Application layer.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v128",
+      "section": 2,
+      "source": 10,
+      "title": "Client",
+      "term": "Client",
+      "exp": null,
+      "q": "Which term matches this meaning? A program or device that starts a request for a service, such as a browser asking a web server for a page.",
+      "correct": "Client",
+      "distractors": [
+        "A server waiting for requests",
+        "A router forwarding packets",
+        "A cable carrying signals"
+      ],
+      "answer": "A program or device that starts a request for a service, such as a browser asking a web server for a page.",
+      "teach": "The defining clue is the job or scope in the sentence. A program or device that starts a request for a service, such as a browser asking a web server for a page. That exact idea is called Client.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v129",
+      "section": 2,
+      "source": 10,
+      "title": "Server",
+      "term": "Server",
+      "exp": null,
+      "q": "Which term matches this meaning? A program or device that waits for client requests and provides a service or resource in response.",
+      "correct": "Server",
+      "distractors": [
+        "A client initiating every request",
+        "A switch learning MAC addresses",
+        "A subnet mask"
+      ],
+      "answer": "A program or device that waits for client requests and provides a service or resource in response.",
+      "teach": "The defining clue is the job or scope in the sentence. A program or device that waits for client requests and provides a service or resource in response. That exact idea is called Server.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v130",
+      "section": 2,
+      "source": 10,
+      "title": "HTTP request",
+      "term": "HTTP request",
+      "exp": null,
+      "q": "Which term matches this meaning? The message a web client sends to ask a server to perform an action on a resource; it includes a method, target, headers, and sometimes a body.",
+      "correct": "HTTP request",
+      "distractors": [
+        "The server's returned result",
+        "A TCP acknowledgment only",
+        "A DNS referral"
+      ],
+      "answer": "The message a web client sends to ask a server to perform an action on a resource; it includes a method, target, headers, and sometimes a body.",
+      "teach": "The defining clue is the job or scope in the sentence. The message a web client sends to ask a server to perform an action on a resource; it includes a method, target, headers, and sometimes a body. That exact idea is called HTTP request.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v131",
+      "section": 2,
+      "source": 10,
+      "title": "HTTP response",
+      "term": "HTTP response",
+      "exp": null,
+      "q": "Which term matches this meaning? The message a web server returns with a status code, headers, and sometimes a body containing the requested data.",
+      "correct": "HTTP response",
+      "distractors": [
+        "The client's initial request",
+        "A DHCP offer",
+        "An ARP broadcast"
+      ],
+      "answer": "The message a web server returns with a status code, headers, and sometimes a body containing the requested data.",
+      "teach": "The defining clue is the job or scope in the sentence. The message a web server returns with a status code, headers, and sometimes a body containing the requested data. That exact idea is called HTTP response.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v132",
+      "section": 2,
+      "source": 12,
+      "title": "HTTP method",
+      "term": "HTTP method",
+      "exp": null,
+      "q": "Which term matches this meaning? The request word that states the desired action, such as GET to retrieve, POST to submit, or DELETE to remove.",
+      "correct": "HTTP method",
+      "distractors": [
+        "HTTP status code",
+        "URL fragment",
+        "TCP state"
+      ],
+      "answer": "The request word that states the desired action, such as GET to retrieve, POST to submit, or DELETE to remove.",
+      "teach": "The defining clue is the job or scope in the sentence. The request word that states the desired action, such as GET to retrieve, POST to submit, or DELETE to remove. That exact idea is called HTTP method.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v133",
+      "section": 2,
+      "source": 10,
+      "title": "HTTP status code",
+      "term": "HTTP status code",
+      "exp": null,
+      "q": "Which term matches this meaning? A three-digit result in an HTTP response, such as 200 for success or 404 when a requested resource is not found.",
+      "correct": "HTTP status code",
+      "distractors": [
+        "A client source port",
+        "A DNS record type",
+        "A Wi-Fi channel"
+      ],
+      "answer": "A three-digit result in an HTTP response, such as 200 for success or 404 when a requested resource is not found.",
+      "teach": "The defining clue is the job or scope in the sentence. A three-digit result in an HTTP response, such as 200 for success or 404 when a requested resource is not found. That exact idea is called HTTP status code.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v134",
+      "section": 2,
+      "source": 12,
+      "title": "Web resource",
+      "term": "Web resource",
+      "exp": null,
+      "q": "Which term matches this meaning? The specific thing identified by a URL that a client can request, such as a page, image, record, or API object.",
+      "correct": "Web resource",
+      "distractors": [
+        "Every server on the Internet",
+        "A TCP window",
+        "A MAC address block"
+      ],
+      "answer": "The specific thing identified by a URL that a client can request, such as a page, image, record, or API object.",
+      "teach": "The defining clue is the job or scope in the sentence. The specific thing identified by a URL that a client can request, such as a page, image, record, or API object. That exact idea is called Web resource.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v135",
+      "section": 2,
+      "source": 11,
+      "title": "URL scheme",
+      "term": "URL scheme",
+      "exp": null,
+      "q": "Which term matches this meaning? The first URL part, such as https, that names the access method or protocol family to use.",
+      "correct": "URL scheme",
+      "distractors": [
+        "The server host name",
+        "The resource path",
+        "The fragment after #"
+      ],
+      "answer": "The first URL part, such as https, that names the access method or protocol family to use.",
+      "teach": "The defining clue is the job or scope in the sentence. The first URL part, such as https, that names the access method or protocol family to use. That exact idea is called URL scheme.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v136",
+      "section": 2,
+      "source": 11,
+      "title": "URL host",
+      "term": "URL host",
+      "exp": null,
+      "q": "Which term matches this meaning? The URL part naming the server to contact, usually a domain name or IP address.",
+      "correct": "URL host",
+      "distractors": [
+        "The request method",
+        "The query after ?",
+        "The local source port"
+      ],
+      "answer": "The URL part naming the server to contact, usually a domain name or IP address.",
+      "teach": "The defining clue is the job or scope in the sentence. The URL part naming the server to contact, usually a domain name or IP address. That exact idea is called URL host.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v137",
+      "section": 2,
+      "source": 11,
+      "title": "URL path",
+      "term": "URL path",
+      "exp": null,
+      "q": "Which term matches this meaning? The slash-separated URL part identifying a resource location within the server.",
+      "correct": "URL path",
+      "distractors": [
+        "The protocol scheme",
+        "The host name",
+        "The fragment after #"
+      ],
+      "answer": "The slash-separated URL part identifying a resource location within the server.",
+      "teach": "The defining clue is the job or scope in the sentence. The slash-separated URL part identifying a resource location within the server. That exact idea is called URL path.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v138",
+      "section": 2,
+      "source": 11,
+      "title": "URL query",
+      "term": "URL query",
+      "exp": null,
+      "q": "Which term matches this meaning? Optional input after ? in a URL, commonly written as name=value pairs for the server to process.",
+      "correct": "URL query",
+      "distractors": [
+        "The scheme before ://",
+        "The host name",
+        "The fragment after #"
+      ],
+      "answer": "Optional input after ? in a URL, commonly written as name=value pairs for the server to process.",
+      "teach": "The defining clue is the job or scope in the sentence. Optional input after ? in a URL, commonly written as name=value pairs for the server to process. That exact idea is called URL query.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v139",
+      "section": 2,
+      "source": 11,
+      "title": "URL fragment",
+      "term": "URL fragment",
+      "exp": null,
+      "q": "Which term matches this meaning? The label after # that points to a location within the returned resource and is normally handled by the client rather than sent to the server.",
+      "correct": "URL fragment",
+      "distractors": [
+        "The query after ?",
+        "The server port",
+        "The URL scheme"
+      ],
+      "answer": "The label after # that points to a location within the returned resource and is normally handled by the client rather than sent to the server.",
+      "teach": "The defining clue is the job or scope in the sentence. The label after # that points to a location within the returned resource and is normally handled by the client rather than sent to the server. That exact idea is called URL fragment.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v140",
+      "section": 2,
+      "source": 10,
+      "title": "TLS",
+      "term": "TLS",
+      "exp": null,
+      "q": "Which term matches this meaning? The security protocol that protects application traffic with encryption and authentication; HTTPS is HTTP carried through TLS.",
+      "correct": "TLS",
+      "distractors": [
+        "A file-transfer command",
+        "A routing metric",
+        "A wireless channel"
+      ],
+      "answer": "The security protocol that protects application traffic with encryption and authentication; HTTPS is HTTP carried through TLS.",
+      "teach": "The defining clue is the job or scope in the sentence. The security protocol that protects application traffic with encryption and authentication; HTTPS is HTTP carried through TLS. That exact idea is called TLS.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v141",
+      "section": 2,
+      "source": 16,
+      "title": "Peer",
+      "term": "Peer",
+      "exp": null,
+      "q": "Which term matches this meaning? One participant in a peer-to-peer system that can receive data from and provide data to other participants.",
+      "correct": "Peer",
+      "distractors": [
+        "Only the central server",
+        "A route prefix",
+        "An email status code"
+      ],
+      "answer": "One participant in a peer-to-peer system that can receive data from and provide data to other participants.",
+      "teach": "The defining clue is the job or scope in the sentence. One participant in a peer-to-peer system that can receive data from and provide data to other participants. That exact idea is called Peer.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v142",
+      "section": 2,
+      "source": 16,
+      "title": "Peer-to-peer",
+      "term": "Peer-to-peer",
+      "exp": null,
+      "q": "Which term matches this meaning? A design in which participating devices exchange data directly and can act as both clients and providers instead of relying on one server for every piece.",
+      "correct": "Peer-to-peer",
+      "distractors": [
+        "A design with one required central data server",
+        "A TCP close state",
+        "A DNS hierarchy"
+      ],
+      "answer": "A design in which participating devices exchange data directly and can act as both clients and providers instead of relying on one server for every piece.",
+      "teach": "The defining clue is the job or scope in the sentence. A design in which participating devices exchange data directly and can act as both clients and providers instead of relying on one server for every piece. That exact idea is called Peer-to-peer.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v143",
+      "section": 2,
+      "source": 17,
+      "title": "HTTP/2",
+      "term": "HTTP/2",
+      "exp": null,
+      "q": "Which term matches this meaning? A version of HTTP that multiplexes several application streams over a TCP connection.",
+      "correct": "HTTP/2",
+      "distractors": [
+        "HTTP over QUIC only",
+        "A DNS record version",
+        "A Wi-Fi generation"
+      ],
+      "answer": "A version of HTTP that multiplexes several application streams over a TCP connection.",
+      "teach": "The defining clue is the job or scope in the sentence. A version of HTTP that multiplexes several application streams over a TCP connection. That exact idea is called HTTP/2.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v144",
+      "section": 2,
+      "source": 17,
+      "title": "HTTP/3",
+      "term": "HTTP/3",
+      "exp": null,
+      "q": "Which term matches this meaning? A version of HTTP that uses QUIC over UDP so independent streams do not all depend on one TCP byte stream.",
+      "correct": "HTTP/3",
+      "distractors": [
+        "HTTP over raw Ethernet",
+        "A TCP connection state",
+        "An email retrieval protocol"
+      ],
+      "answer": "A version of HTTP that uses QUIC over UDP so independent streams do not all depend on one TCP byte stream.",
+      "teach": "The defining clue is the job or scope in the sentence. A version of HTTP that uses QUIC over UDP so independent streams do not all depend on one TCP byte stream. That exact idea is called HTTP/3.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v145",
+      "section": 3,
+      "source": 18,
+      "title": "Public IP address",
+      "term": "Public IP address",
+      "exp": null,
+      "q": "Which term matches this meaning? An IP address intended to be globally unique and routable on the public Internet.",
+      "correct": "Public IP address",
+      "distractors": [
+        "An address reusable inside unrelated private networks",
+        "A local MAC address",
+        "A transport port"
+      ],
+      "answer": "An IP address intended to be globally unique and routable on the public Internet.",
+      "teach": "The defining clue is the job or scope in the sentence. An IP address intended to be globally unique and routable on the public Internet. That exact idea is called Public IP address.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v146",
+      "section": 3,
+      "source": 19,
+      "title": "Private IP address",
+      "term": "Private IP address",
+      "exp": null,
+      "q": "Which term matches this meaning? An address from an RFC 1918 block used inside private networks and normally translated before public-Internet communication.",
+      "correct": "Private IP address",
+      "distractors": [
+        "A globally routed public address",
+        "An Ethernet hardware address",
+        "A DNS mail record"
+      ],
+      "answer": "An address from an RFC 1918 block used inside private networks and normally translated before public-Internet communication.",
+      "teach": "The defining clue is the job or scope in the sentence. An address from an RFC 1918 block used inside private networks and normally translated before public-Internet communication. That exact idea is called Private IP address.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v147",
+      "section": 3,
+      "source": 20,
+      "title": "Link-local address",
+      "term": "Link-local address",
+      "exp": null,
+      "q": "Which term matches this meaning? An address usable only on the local network link and not forwarded by routers; IPv4 self-assigned link-local addresses use 169.254.0.0/16.",
+      "correct": "Link-local address",
+      "distractors": [
+        "A globally routed address",
+        "An RFC 1918 block shared through NAT",
+        "A TCP service port"
+      ],
+      "answer": "An address usable only on the local network link and not forwarded by routers; IPv4 self-assigned link-local addresses use 169.254.0.0/16.",
+      "teach": "The defining clue is the job or scope in the sentence. An address usable only on the local network link and not forwarded by routers; IPv4 self-assigned link-local addresses use 169.254.0.0/16. That exact idea is called Link-local address.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v148",
+      "section": 3,
+      "source": 20,
+      "title": "Loopback address",
+      "term": "Loopback address",
+      "exp": null,
+      "q": "Which term matches this meaning? An address a host uses to send traffic back to itself for testing; IPv4 commonly uses 127.0.0.1.",
+      "correct": "Loopback address",
+      "distractors": [
+        "The default gateway",
+        "A public DNS server",
+        "A broadcast to every subnet"
+      ],
+      "answer": "An address a host uses to send traffic back to itself for testing; IPv4 commonly uses 127.0.0.1.",
+      "teach": "The defining clue is the job or scope in the sentence. An address a host uses to send traffic back to itself for testing; IPv4 commonly uses 127.0.0.1. That exact idea is called Loopback address.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v149",
+      "section": 3,
+      "source": 18,
+      "title": "Address allocation",
+      "term": "Address allocation",
+      "exp": null,
+      "q": "Which term matches this meaning? The act of assigning or distributing address space to an organization, network, or device for use.",
+      "correct": "Address allocation",
+      "distractors": [
+        "Encrypting an address",
+        "Resolving an address to a MAC",
+        "Calculating a checksum"
+      ],
+      "answer": "The act of assigning or distributing address space to an organization, network, or device for use.",
+      "teach": "The defining clue is the job or scope in the sentence. The act of assigning or distributing address space to an organization, network, or device for use. That exact idea is called Address allocation.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v150",
+      "section": 3,
+      "source": 22,
+      "title": "Default gateway",
+      "term": "Default gateway",
+      "exp": null,
+      "q": "Which term matches this meaning? The local router interface a host sends packets to when their destination is outside the host's own subnet.",
+      "correct": "Default gateway",
+      "distractors": [
+        "The final remote server",
+        "The DNS root server",
+        "The client's source port"
+      ],
+      "answer": "The local router interface a host sends packets to when their destination is outside the host's own subnet.",
+      "teach": "The defining clue is the job or scope in the sentence. The local router interface a host sends packets to when their destination is outside the host's own subnet. That exact idea is called Default gateway.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v151",
+      "section": 3,
+      "source": 22,
+      "title": "DHCP client",
+      "term": "DHCP client",
+      "exp": null,
+      "q": "Which term matches this meaning? The device asking a DHCP server for IP configuration.",
+      "correct": "DHCP client",
+      "distractors": [
+        "The system offering address leases",
+        "The router running BGP",
+        "The DNS authority"
+      ],
+      "answer": "The device asking a DHCP server for IP configuration.",
+      "teach": "The defining clue is the job or scope in the sentence. The device asking a DHCP server for IP configuration. That exact idea is called DHCP client.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v152",
+      "section": 3,
+      "source": 22,
+      "title": "DHCP server",
+      "term": "DHCP server",
+      "exp": null,
+      "q": "Which term matches this meaning? The authorized system that offers and confirms leases containing an IP address and other network settings.",
+      "correct": "DHCP server",
+      "distractors": [
+        "The device requesting a lease",
+        "The ARP cache",
+        "The TCP receiver"
+      ],
+      "answer": "The authorized system that offers and confirms leases containing an IP address and other network settings.",
+      "teach": "The defining clue is the job or scope in the sentence. The authorized system that offers and confirms leases containing an IP address and other network settings. That exact idea is called DHCP server.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v153",
+      "section": 3,
+      "source": 24,
+      "title": "DHCP address pool",
+      "term": "DHCP address pool",
+      "exp": null,
+      "q": "Which term matches this meaning? The set of IP addresses a DHCP server is allowed to lease to clients.",
+      "correct": "DHCP address pool",
+      "distractors": [
+        "A DNS zone",
+        "A TCP receive window",
+        "A routing-protocol table"
+      ],
+      "answer": "The set of IP addresses a DHCP server is allowed to lease to clients.",
+      "teach": "The defining clue is the job or scope in the sentence. The set of IP addresses a DHCP server is allowed to lease to clients. That exact idea is called DHCP address pool.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v154",
+      "section": 3,
+      "source": 22,
+      "title": "Broadcast",
+      "term": "Broadcast",
+      "exp": null,
+      "q": "Which term matches this meaning? A local-link transmission intended for every device in the broadcast domain rather than one specific receiver.",
+      "correct": "Broadcast",
+      "distractors": [
+        "A packet sent to one exact host",
+        "A route shared between autonomous systems",
+        "A TCP retransmission"
+      ],
+      "answer": "A local-link transmission intended for every device in the broadcast domain rather than one specific receiver.",
+      "teach": "The defining clue is the job or scope in the sentence. A local-link transmission intended for every device in the broadcast domain rather than one specific receiver. That exact idea is called Broadcast.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v155",
+      "section": 3,
+      "source": 26,
+      "title": "Authoritative DNS server",
+      "term": "Authoritative DNS server",
+      "exp": null,
+      "q": "Which term matches this meaning? A DNS server that holds the official records for a zone and can answer for that zone from its own data.",
+      "correct": "Authoritative DNS server",
+      "distractors": [
+        "A client cache only",
+        "A DHCP lease server",
+        "An Ethernet switch"
+      ],
+      "answer": "A DNS server that holds the official records for a zone and can answer for that zone from its own data.",
+      "teach": "The defining clue is the job or scope in the sentence. A DNS server that holds the official records for a zone and can answer for that zone from its own data. That exact idea is called Authoritative DNS server.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v156",
+      "section": 3,
+      "source": 27,
+      "title": "DNS resolver",
+      "term": "DNS resolver",
+      "exp": null,
+      "q": "Which term matches this meaning? A DNS service that accepts a client's name question, finds or caches the answer, and returns the result.",
+      "correct": "DNS resolver",
+      "distractors": [
+        "The authoritative owner of every zone",
+        "A TCP listener",
+        "A subnet mask"
+      ],
+      "answer": "A DNS service that accepts a client's name question, finds or caches the answer, and returns the result.",
+      "teach": "The defining clue is the job or scope in the sentence. A DNS service that accepts a client's name question, finds or caches the answer, and returns the result. That exact idea is called DNS resolver.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v157",
+      "section": 3,
+      "source": 26,
+      "title": "DNS namespace",
+      "term": "DNS namespace",
+      "exp": null,
+      "q": "Which term matches this meaning? The tree of DNS names, beginning at the root and branching into top-level domains, domains, and host names.",
+      "correct": "DNS namespace",
+      "distractors": [
+        "A routing table",
+        "A DHCP pool",
+        "A TCP byte stream"
+      ],
+      "answer": "The tree of DNS names, beginning at the root and branching into top-level domains, domains, and host names.",
+      "teach": "The defining clue is the job or scope in the sentence. The tree of DNS names, beginning at the root and branching into top-level domains, domains, and host names. That exact idea is called DNS namespace.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v158",
+      "section": 3,
+      "source": 27,
+      "title": "Root DNS server",
+      "term": "Root DNS server",
+      "exp": null,
+      "q": "Which term matches this meaning? A server at the top of the DNS hierarchy that normally refers a resolver toward the correct top-level-domain servers.",
+      "correct": "Root DNS server",
+      "distractors": [
+        "The final authority for every host record",
+        "A local ARP responder",
+        "An HTTP client"
+      ],
+      "answer": "A server at the top of the DNS hierarchy that normally refers a resolver toward the correct top-level-domain servers.",
+      "teach": "The defining clue is the job or scope in the sentence. A server at the top of the DNS hierarchy that normally refers a resolver toward the correct top-level-domain servers. That exact idea is called Root DNS server.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v159",
+      "section": 3,
+      "source": 26,
+      "title": "TLD",
+      "term": "TLD",
+      "exp": "Top-Level Domain",
+      "q": "What does TLD stand for?",
+      "correct": "Top-Level Domain",
+      "distractors": [
+        "Transport Link Directory",
+        "Top Local Device",
+        "Transfer Layer Domain"
+      ],
+      "answer": "TLD stands for Top-Level Domain. The DNS level directly below the root, such as .com, .edu, or .org.",
+      "teach": "First expand the letters: Top-Level Domain. Then connect the name to its job. The DNS level directly below the root, such as .com, .edu, or .org.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v160",
+      "section": 3,
+      "source": 26,
+      "title": "Hostname",
+      "term": "Hostname",
+      "exp": null,
+      "q": "Which term matches this meaning? A name assigned to a particular host or service within a domain, such as www in www.example.com.",
+      "correct": "Hostname",
+      "distractors": [
+        "A subnet prefix",
+        "A TCP port",
+        "A MAC manufacturer code"
+      ],
+      "answer": "A name assigned to a particular host or service within a domain, such as www in www.example.com.",
+      "teach": "The defining clue is the job or scope in the sentence. A name assigned to a particular host or service within a domain, such as www in www.example.com. That exact idea is called Hostname.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v161",
+      "section": 3,
+      "source": 28,
+      "title": "Resource record",
+      "term": "Resource record",
+      "exp": null,
+      "q": "Which term matches this meaning? One typed DNS data entry, such as A, AAAA, MX, NS, or CNAME, stored in a zone or cache.",
+      "correct": "Resource record",
+      "distractors": [
+        "An Ethernet frame",
+        "A TCP segment number",
+        "A DHCP address pool"
+      ],
+      "answer": "One typed DNS data entry, such as A, AAAA, MX, NS, or CNAME, stored in a zone or cache.",
+      "teach": "The defining clue is the job or scope in the sentence. One typed DNS data entry, such as A, AAAA, MX, NS, or CNAME, stored in a zone or cache. That exact idea is called Resource record.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v162",
+      "section": 4,
+      "source": 29,
+      "title": "Router",
+      "term": "Router",
+      "exp": null,
+      "q": "Which term matches this meaning? A device or software function that reads destination IP information and forwards packets between different networks.",
+      "correct": "Router",
+      "distractors": [
+        "A device forwarding only by local MAC address",
+        "A web application",
+        "A DNS resource record"
+      ],
+      "answer": "A device or software function that reads destination IP information and forwards packets between different networks.",
+      "teach": "The defining clue is the job or scope in the sentence. A device or software function that reads destination IP information and forwards packets between different networks. That exact idea is called Router.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v163",
+      "section": 4,
+      "source": 29,
+      "title": "Ethernet switch",
+      "term": "Ethernet switch",
+      "exp": null,
+      "q": "Which term matches this meaning? A Layer 2 device that learns MAC-address locations and forwards Ethernet frames within a LAN or VLAN.",
+      "correct": "Ethernet switch",
+      "distractors": [
+        "A router choosing Internet paths",
+        "A DNS resolver",
+        "A transport endpoint"
+      ],
+      "answer": "A Layer 2 device that learns MAC-address locations and forwards Ethernet frames within a LAN or VLAN.",
+      "teach": "The defining clue is the job or scope in the sentence. A Layer 2 device that learns MAC-address locations and forwards Ethernet frames within a LAN or VLAN. That exact idea is called Ethernet switch.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v164",
+      "section": 4,
+      "source": 29,
+      "title": "LAN",
+      "term": "LAN",
+      "exp": "Local Area Network",
+      "q": "What does LAN stand for?",
+      "correct": "Local Area Network",
+      "distractors": [
+        "Long Access Node",
+        "Link Address Number",
+        "Local Application Name"
+      ],
+      "answer": "LAN stands for Local Area Network. A network covering a limited local area, such as one home, office, floor, or campus segment.",
+      "teach": "First expand the letters: Local Area Network. Then connect the name to its job. A network covering a limited local area, such as one home, office, floor, or campus segment.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v165",
+      "section": 4,
+      "source": 29,
+      "title": "VLAN",
+      "term": "VLAN",
+      "exp": "Virtual Local Area Network",
+      "q": "What does VLAN stand for?",
+      "correct": "Virtual Local Area Network",
+      "distractors": [
+        "Variable Link Address Number",
+        "Virtual Long-haul Access Network",
+        "Verified Local Application Node"
+      ],
+      "answer": "VLAN stands for Virtual Local Area Network. A logical Layer 2 network that creates a separate broadcast domain on switching equipment.",
+      "teach": "First expand the letters: Virtual Local Area Network. Then connect the name to its job. A logical Layer 2 network that creates a separate broadcast domain on switching equipment.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v166",
+      "section": 4,
+      "source": 29,
+      "title": "Ethernet frame",
+      "term": "Ethernet frame",
+      "exp": null,
+      "q": "Which term matches this meaning? The Data Link layer unit used on one Ethernet hop; it contains local source and destination MAC addresses around its payload.",
+      "correct": "Ethernet frame",
+      "distractors": [
+        "An end-to-end TCP conversation",
+        "A DNS zone",
+        "A routing protocol"
+      ],
+      "answer": "The Data Link layer unit used on one Ethernet hop; it contains local source and destination MAC addresses around its payload.",
+      "teach": "The defining clue is the job or scope in the sentence. The Data Link layer unit used on one Ethernet hop; it contains local source and destination MAC addresses around its payload. That exact idea is called Ethernet frame.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v167",
+      "section": 4,
+      "source": 29,
+      "title": "IP packet",
+      "term": "IP packet",
+      "exp": null,
+      "q": "Which term matches this meaning? The Network layer unit containing source and destination IP addresses that routers forward across networks.",
+      "correct": "IP packet",
+      "distractors": [
+        "A local Ethernet-only wrapper",
+        "An application process",
+        "A physical radio channel"
+      ],
+      "answer": "The Network layer unit containing source and destination IP addresses that routers forward across networks.",
+      "teach": "The defining clue is the job or scope in the sentence. The Network layer unit containing source and destination IP addresses that routers forward across networks. That exact idea is called IP packet.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v168",
+      "section": 4,
+      "source": 29,
+      "title": "Collision domain",
+      "term": "Collision domain",
+      "exp": null,
+      "q": "Which term matches this meaning? The set of interfaces that could contend or collide on one shared half-duplex Ethernet medium; each switched port normally separates it.",
+      "correct": "Collision domain",
+      "distractors": [
+        "Every network sharing one DNS name",
+        "A router's complete route table",
+        "An IPv6 prefix"
+      ],
+      "answer": "The set of interfaces that could contend or collide on one shared half-duplex Ethernet medium; each switched port normally separates it.",
+      "teach": "The defining clue is the job or scope in the sentence. The set of interfaces that could contend or collide on one shared half-duplex Ethernet medium; each switched port normally separates it. That exact idea is called Collision domain.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v169",
+      "section": 4,
+      "source": 29,
+      "title": "Broadcast domain",
+      "term": "Broadcast domain",
+      "exp": null,
+      "q": "Which term matches this meaning? The group of devices that receive a Layer 2 broadcast; a VLAN usually forms one such domain and routers separate them.",
+      "correct": "Broadcast domain",
+      "distractors": [
+        "One TCP connection",
+        "One DNS record",
+        "One source port"
+      ],
+      "answer": "The group of devices that receive a Layer 2 broadcast; a VLAN usually forms one such domain and routers separate them.",
+      "teach": "The defining clue is the job or scope in the sentence. The group of devices that receive a Layer 2 broadcast; a VLAN usually forms one such domain and routers separate them. That exact idea is called Broadcast domain.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v170",
+      "section": 4,
+      "source": 30,
+      "title": "Network interface",
+      "term": "Network interface",
+      "exp": null,
+      "q": "Which term matches this meaning? The hardware or software connection through which a device joins a network and sends or receives frames or packets.",
+      "correct": "Network interface",
+      "distractors": [
+        "A complete network protocol",
+        "A DNS zone",
+        "A TCP state"
+      ],
+      "answer": "The hardware or software connection through which a device joins a network and sends or receives frames or packets.",
+      "teach": "The defining clue is the job or scope in the sentence. The hardware or software connection through which a device joins a network and sends or receives frames or packets. That exact idea is called Network interface.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v171",
+      "section": 4,
+      "source": 30,
+      "title": "Route",
+      "term": "Route",
+      "exp": null,
+      "q": "Which term matches this meaning? A routing-table instruction describing which next hop or interface to use for a destination prefix.",
+      "correct": "Route",
+      "distractors": [
+        "An application-layer request",
+        "A MAC checksum",
+        "A source port"
+      ],
+      "answer": "A routing-table instruction describing which next hop or interface to use for a destination prefix.",
+      "teach": "The defining clue is the job or scope in the sentence. A routing-table instruction describing which next hop or interface to use for a destination prefix. That exact idea is called Route.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v172",
+      "section": 4,
+      "source": 30,
+      "title": "Destination prefix",
+      "term": "Destination prefix",
+      "exp": null,
+      "q": "Which term matches this meaning? A network address plus prefix length representing the group of destination IP addresses a route can match.",
+      "correct": "Destination prefix",
+      "distractors": [
+        "One destination application port",
+        "A source MAC address",
+        "A TCP sequence range"
+      ],
+      "answer": "A network address plus prefix length representing the group of destination IP addresses a route can match.",
+      "teach": "The defining clue is the job or scope in the sentence. A network address plus prefix length representing the group of destination IP addresses a route can match. That exact idea is called Destination prefix.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v173",
+      "section": 4,
+      "source": 31,
+      "title": "Convergence",
+      "term": "Convergence",
+      "exp": null,
+      "q": "Which term matches this meaning? The process of routers reaching an updated, consistent routing view after a link or topology change.",
+      "correct": "Convergence",
+      "distractors": [
+        "Converting binary to decimal",
+        "Opening a TCP connection",
+        "Encrypting a Wi-Fi frame"
+      ],
+      "answer": "The process of routers reaching an updated, consistent routing view after a link or topology change.",
+      "teach": "The defining clue is the job or scope in the sentence. The process of routers reaching an updated, consistent routing view after a link or topology change. That exact idea is called Convergence.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v174",
+      "section": 4,
+      "source": 33,
+      "title": "Topology",
+      "term": "Topology",
+      "exp": null,
+      "q": "Which term matches this meaning? The map of devices and links showing how network parts are connected.",
+      "correct": "Topology",
+      "distractors": [
+        "A list of application ports",
+        "A DNS mailbox record",
+        "A TCP acknowledgment"
+      ],
+      "answer": "The map of devices and links showing how network parts are connected.",
+      "teach": "The defining clue is the job or scope in the sentence. The map of devices and links showing how network parts are connected. That exact idea is called Topology.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v175",
+      "section": 4,
+      "source": 33,
+      "title": "Hop count",
+      "term": "Hop count",
+      "exp": null,
+      "q": "Which term matches this meaning? The number of router-to-router steps along a path; RIP uses it as a route metric.",
+      "correct": "Hop count",
+      "distractors": [
+        "The number of application bytes",
+        "The subnet prefix length",
+        "The Wi-Fi channel width"
+      ],
+      "answer": "The number of router-to-router steps along a path; RIP uses it as a route metric.",
+      "teach": "The defining clue is the job or scope in the sentence. The number of router-to-router steps along a path; RIP uses it as a route metric. That exact idea is called Hop count.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v176",
+      "section": 4,
+      "source": 32,
+      "title": "Path vector",
+      "term": "Path vector",
+      "exp": null,
+      "q": "Which term matches this meaning? A routing approach that advertises reachable prefixes with path information such as the autonomous systems already crossed; BGP uses it.",
+      "correct": "Path vector",
+      "distractors": [
+        "A local MAC-learning method",
+        "A DHCP allocation mode",
+        "A TCP flow-control value"
+      ],
+      "answer": "A routing approach that advertises reachable prefixes with path information such as the autonomous systems already crossed; BGP uses it.",
+      "teach": "The defining clue is the job or scope in the sentence. A routing approach that advertises reachable prefixes with path information such as the autonomous systems already crossed; BGP uses it. That exact idea is called Path vector.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v177",
+      "section": 4,
+      "source": 34,
+      "title": "Supernetting",
+      "term": "Supernetting",
+      "exp": null,
+      "q": "Which term matches this meaning? Combining correctly aligned adjacent address blocks into one larger block with a shorter prefix, often for route summarization.",
+      "correct": "Supernetting",
+      "distractors": [
+        "Dividing one network into smaller subnets",
+        "Translating ports",
+        "Creating a DNS child zone"
+      ],
+      "answer": "Combining correctly aligned adjacent address blocks into one larger block with a shorter prefix, often for route summarization.",
+      "teach": "The defining clue is the job or scope in the sentence. Combining correctly aligned adjacent address blocks into one larger block with a shorter prefix, often for route summarization. That exact idea is called Supernetting.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v178",
+      "section": 4,
+      "source": 35,
+      "title": "Label-switched path",
+      "term": "Label-switched path",
+      "exp": null,
+      "q": "Which term matches this meaning? The planned sequence through an MPLS network that packets follow by using short labels.",
+      "correct": "Label-switched path",
+      "distractors": [
+        "A TCP byte sequence",
+        "A DNS referral chain",
+        "A Wi-Fi channel plan"
+      ],
+      "answer": "The planned sequence through an MPLS network that packets follow by using short labels.",
+      "teach": "The defining clue is the job or scope in the sentence. The planned sequence through an MPLS network that packets follow by using short labels. That exact idea is called Label-switched path.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v179",
+      "section": 4,
+      "source": 36,
+      "title": "Control plane",
+      "term": "Control plane",
+      "exp": null,
+      "q": "Which term matches this meaning? The logic that learns topology, calculates paths, and decides what forwarding rules should exist.",
+      "correct": "Control plane",
+      "distractors": [
+        "The hardware action that forwards each packet",
+        "The application payload",
+        "The physical cable"
+      ],
+      "answer": "The logic that learns topology, calculates paths, and decides what forwarding rules should exist.",
+      "teach": "The defining clue is the job or scope in the sentence. The logic that learns topology, calculates paths, and decides what forwarding rules should exist. That exact idea is called Control plane.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v180",
+      "section": 4,
+      "source": 36,
+      "title": "Data plane",
+      "term": "Data plane",
+      "exp": null,
+      "q": "Which term matches this meaning? The part of a network device that applies installed rules to forward each arriving packet or frame.",
+      "correct": "Data plane",
+      "distractors": [
+        "The logic that designs routing policy",
+        "A DNS control record",
+        "A TCP application"
+      ],
+      "answer": "The part of a network device that applies installed rules to forward each arriving packet or frame.",
+      "teach": "The defining clue is the job or scope in the sentence. The part of a network device that applies installed rules to forward each arriving packet or frame. That exact idea is called Data plane.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v181",
+      "section": 4,
+      "source": 36,
+      "title": "SDN controller",
+      "term": "SDN controller",
+      "exp": null,
+      "q": "Which term matches this meaning? Software that makes logically centralized network-control decisions and programs forwarding devices in an SDN design.",
+      "correct": "SDN controller",
+      "distractors": [
+        "A switch port carrying user data",
+        "A DNS recursive resolver",
+        "A wireless client"
+      ],
+      "answer": "Software that makes logically centralized network-control decisions and programs forwarding devices in an SDN design.",
+      "teach": "The defining clue is the job or scope in the sentence. Software that makes logically centralized network-control decisions and programs forwarding devices in an SDN design. That exact idea is called SDN controller.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v182",
+      "section": 5,
+      "source": 37,
+      "title": "Subnet",
+      "term": "Subnet",
+      "exp": null,
+      "q": "Which term matches this meaning? One smaller IP network created from a larger parent address block; every address in it shares the subnet prefix.",
+      "correct": "Subnet",
+      "distractors": [
+        "One transport connection",
+        "A DNS zone only",
+        "A wireless channel"
+      ],
+      "answer": "One smaller IP network created from a larger parent address block; every address in it shares the subnet prefix.",
+      "teach": "The defining clue is the job or scope in the sentence. One smaller IP network created from a larger parent address block; every address in it shares the subnet prefix. That exact idea is called Subnet.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v183",
+      "section": 5,
+      "source": 39,
+      "title": "IPv4 address",
+      "term": "IPv4 address",
+      "exp": null,
+      "q": "Which term matches this meaning? A 32-bit number written as four decimal octets that identifies an IPv4 network interface and its location within an address plan.",
+      "correct": "IPv4 address",
+      "distractors": [
+        "A 48-bit MAC address",
+        "A 16-bit port number",
+        "A DNS name"
+      ],
+      "answer": "A 32-bit number written as four decimal octets that identifies an IPv4 network interface and its location within an address plan.",
+      "teach": "The defining clue is the job or scope in the sentence. A 32-bit number written as four decimal octets that identifies an IPv4 network interface and its location within an address plan. That exact idea is called IPv4 address.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v184",
+      "section": 5,
+      "source": 40,
+      "title": "Octet",
+      "term": "Octet",
+      "exp": null,
+      "q": "Which term matches this meaning? A group of eight bits. An IPv4 address contains four octets, each displayed as a decimal value from 0 through 255.",
+      "correct": "Octet",
+      "distractors": [
+        "A group of four bits",
+        "A group of sixteen ports",
+        "A routing-table row"
+      ],
+      "answer": "A group of eight bits. An IPv4 address contains four octets, each displayed as a decimal value from 0 through 255.",
+      "teach": "The defining clue is the job or scope in the sentence. A group of eight bits. An IPv4 address contains four octets, each displayed as a decimal value from 0 through 255. That exact idea is called Octet.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v185",
+      "section": 5,
+      "source": 40,
+      "title": "Bit",
+      "term": "Bit",
+      "exp": null,
+      "q": "Which term matches this meaning? One binary digit with a value of 0 or 1; address prefixes and masks divide IP addresses at bit boundaries.",
+      "correct": "Bit",
+      "distractors": [
+        "Eight binary digits",
+        "One decimal octet",
+        "One hexadecimal byte"
+      ],
+      "answer": "One binary digit with a value of 0 or 1; address prefixes and masks divide IP addresses at bit boundaries.",
+      "teach": "The defining clue is the job or scope in the sentence. One binary digit with a value of 0 or 1; address prefixes and masks divide IP addresses at bit boundaries. That exact idea is called Bit.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v186",
+      "section": 5,
+      "source": 39,
+      "title": "Network ID",
+      "term": "Network ID",
+      "exp": null,
+      "q": "Which term matches this meaning? The fixed leading address portion identifying the original network or allocated block.",
+      "correct": "Network ID",
+      "distractors": [
+        "The varying device portion",
+        "The broadcast address only",
+        "A TCP connection identifier"
+      ],
+      "answer": "The fixed leading address portion identifying the original network or allocated block.",
+      "teach": "The defining clue is the job or scope in the sentence. The fixed leading address portion identifying the original network or allocated block. That exact idea is called Network ID.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v187",
+      "section": 5,
+      "source": 39,
+      "title": "Subnet ID",
+      "term": "Subnet ID",
+      "exp": null,
+      "q": "Which term matches this meaning? Bits borrowed from the original host portion to identify one smaller subnet inside the parent network.",
+      "correct": "Subnet ID",
+      "distractors": [
+        "The original network prefix only",
+        "The remaining host bits",
+        "A port number"
+      ],
+      "answer": "Bits borrowed from the original host portion to identify one smaller subnet inside the parent network.",
+      "teach": "The defining clue is the job or scope in the sentence. Bits borrowed from the original host portion to identify one smaller subnet inside the parent network. That exact idea is called Subnet ID.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v188",
+      "section": 5,
+      "source": 39,
+      "title": "Host ID",
+      "term": "Host ID",
+      "exp": null,
+      "q": "Which term matches this meaning? The bits that vary among interfaces inside one subnet after the current prefix; all 0 names the network and all 1 names the broadcast in ordinary IPv4.",
+      "correct": "Host ID",
+      "distractors": [
+        "The fixed prefix bits",
+        "The DNS host name",
+        "The TCP source port"
+      ],
+      "answer": "The bits that vary among interfaces inside one subnet after the current prefix; all 0 names the network and all 1 names the broadcast in ordinary IPv4.",
+      "teach": "The defining clue is the job or scope in the sentence. The bits that vary among interfaces inside one subnet after the current prefix; all 0 names the network and all 1 names the broadcast in ordinary IPv4. That exact idea is called Host ID.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v189",
+      "section": 5,
+      "source": 40,
+      "title": "Prefix length",
+      "term": "Prefix length",
+      "exp": null,
+      "q": "Which term matches this meaning? The slash number stating how many leading address bits belong to the current network and subnet prefix.",
+      "correct": "Prefix length",
+      "distractors": [
+        "The count of usable hosts",
+        "The number of address octets",
+        "The final host value"
+      ],
+      "answer": "The slash number stating how many leading address bits belong to the current network and subnet prefix.",
+      "teach": "The defining clue is the job or scope in the sentence. The slash number stating how many leading address bits belong to the current network and subnet prefix. That exact idea is called Prefix length.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v190",
+      "section": 5,
+      "source": 43,
+      "title": "Total addresses",
+      "term": "Total addresses",
+      "exp": null,
+      "q": "Which term matches this meaning? Every bit pattern contained in an address block, including reserved network and broadcast endpoints in ordinary IPv4.",
+      "correct": "Total addresses",
+      "distractors": [
+        "Only device-assignable addresses",
+        "Only router addresses",
+        "Only public addresses"
+      ],
+      "answer": "Every bit pattern contained in an address block, including reserved network and broadcast endpoints in ordinary IPv4.",
+      "teach": "The defining clue is the job or scope in the sentence. Every bit pattern contained in an address block, including reserved network and broadcast endpoints in ordinary IPv4. That exact idea is called Total addresses.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v191",
+      "section": 5,
+      "source": 42,
+      "title": "Usable host range",
+      "term": "Usable host range",
+      "exp": null,
+      "q": "Which term matches this meaning? The addresses assignable to ordinary devices between the network address and broadcast address in a conventional IPv4 subnet.",
+      "correct": "Usable host range",
+      "distractors": [
+        "Every address including both reserved endpoints",
+        "Only the default gateway",
+        "The parent prefix"
+      ],
+      "answer": "The addresses assignable to ordinary devices between the network address and broadcast address in a conventional IPv4 subnet.",
+      "teach": "The defining clue is the job or scope in the sentence. The addresses assignable to ordinary devices between the network address and broadcast address in a conventional IPv4 subnet. That exact idea is called Usable host range.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v192",
+      "section": 5,
+      "source": 37,
+      "title": "Classful addressing",
+      "term": "Classful addressing",
+      "exp": null,
+      "q": "Which term matches this meaning? The older IPv4 system that treated Class A, B, and C boundaries as fixed default network sizes.",
+      "correct": "Classful addressing",
+      "distractors": [
+        "Prefix-length addressing at any bit boundary",
+        "Port translation",
+        "IPv6 interface numbering"
+      ],
+      "answer": "The older IPv4 system that treated Class A, B, and C boundaries as fixed default network sizes.",
+      "teach": "The defining clue is the job or scope in the sentence. The older IPv4 system that treated Class A, B, and C boundaries as fixed default network sizes. That exact idea is called Classful addressing.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v193",
+      "section": 5,
+      "source": 37,
+      "title": "Classless addressing",
+      "term": "Classless addressing",
+      "exp": null,
+      "q": "Which term matches this meaning? Modern prefix-length addressing that can divide or summarize blocks at any valid bit boundary instead of fixed classes.",
+      "correct": "Classless addressing",
+      "distractors": [
+        "Fixed Class A, B, and C boundaries only",
+        "MAC addressing",
+        "TCP sequencing"
+      ],
+      "answer": "Modern prefix-length addressing that can divide or summarize blocks at any valid bit boundary instead of fixed classes.",
+      "teach": "The defining clue is the job or scope in the sentence. Modern prefix-length addressing that can divide or summarize blocks at any valid bit boundary instead of fixed classes. That exact idea is called Classless addressing.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v194",
+      "section": 5,
+      "source": 38,
+      "title": "Large broadcast domain",
+      "term": "Large broadcast domain",
+      "exp": null,
+      "q": "Which term matches this meaning? A Layer 2 network containing many devices that all receive each broadcast, which can waste capacity and make faults or attacks affect more devices.",
+      "correct": "Large broadcast domain",
+      "distractors": [
+        "A subnet containing only one host",
+        "A TCP connection across routers",
+        "A DNS zone with many names"
+      ],
+      "answer": "A Layer 2 network containing many devices that all receive each broadcast, which can waste capacity and make faults or attacks affect more devices.",
+      "teach": "The defining clue is the job or scope in the sentence. A Layer 2 network containing many devices that all receive each broadcast, which can waste capacity and make faults or attacks affect more devices. That exact idea is called Large broadcast domain.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v195",
+      "section": 5,
+      "source": 41,
+      "title": "Contiguous subnet mask",
+      "term": "Contiguous subnet mask",
+      "exp": null,
+      "q": "Which term matches this meaning? A valid mask whose binary bits are all 1 from the left and then all 0, with no 1 appearing after the first 0.",
+      "correct": "Contiguous subnet mask",
+      "distractors": [
+        "A mask with alternating 1 and 0 bits",
+        "A transport checksum",
+        "A MAC address"
+      ],
+      "answer": "A valid mask whose binary bits are all 1 from the left and then all 0, with no 1 appearing after the first 0.",
+      "teach": "The defining clue is the job or scope in the sentence. A valid mask whose binary bits are all 1 from the left and then all 0, with no 1 appearing after the first 0. That exact idea is called Contiguous subnet mask.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v196",
+      "section": 6,
+      "source": 48,
+      "title": "Wi-Fi",
+      "term": "Wi-Fi",
+      "exp": null,
+      "q": "Which term matches this meaning? A family of IEEE 802.11 wireless LAN technologies that carries network frames through radio instead of an Ethernet cable.",
+      "correct": "Wi-Fi",
+      "distractors": [
+        "Every kind of radio communication",
+        "A TCP transport protocol",
+        "A wired fiber standard"
+      ],
+      "answer": "A family of IEEE 802.11 wireless LAN technologies that carries network frames through radio instead of an Ethernet cable.",
+      "teach": "The defining clue is the job or scope in the sentence. A family of IEEE 802.11 wireless LAN technologies that carries network frames through radio instead of an Ethernet cable. That exact idea is called Wi-Fi.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v197",
+      "section": 6,
+      "source": 53,
+      "title": "Wireless station",
+      "term": "Wireless station",
+      "exp": null,
+      "q": "Which term matches this meaning? A device interface participating in an 802.11 network, such as a laptop's Wi-Fi adapter or an access point radio.",
+      "correct": "Wireless station",
+      "distractors": [
+        "A DNS server only",
+        "A routing-table entry",
+        "A cable connector"
+      ],
+      "answer": "A device interface participating in an 802.11 network, such as a laptop's Wi-Fi adapter or an access point radio.",
+      "teach": "The defining clue is the job or scope in the sentence. A device interface participating in an 802.11 network, such as a laptop's Wi-Fi adapter or an access point radio. That exact idea is called Wireless station.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v198",
+      "section": 6,
+      "source": 55,
+      "title": "Access point",
+      "term": "Access point",
+      "exp": null,
+      "q": "Which term matches this meaning? A device that coordinates a Wi-Fi cell and bridges associated wireless stations toward a distribution system or wired network.",
+      "correct": "Access point",
+      "distractors": [
+        "A client source port",
+        "A DNS root server",
+        "A subnet mask"
+      ],
+      "answer": "A device that coordinates a Wi-Fi cell and bridges associated wireless stations toward a distribution system or wired network.",
+      "teach": "The defining clue is the job or scope in the sentence. A device that coordinates a Wi-Fi cell and bridges associated wireless stations toward a distribution system or wired network. That exact idea is called Access point.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v199",
+      "section": 6,
+      "source": 47,
+      "title": "Radio frequency",
+      "term": "Radio frequency",
+      "exp": null,
+      "q": "Which term matches this meaning? The rate at which a radio wave oscillates, measured in hertz; Wi-Fi uses ranges such as 2.4, 5, and 6 GHz.",
+      "correct": "Radio frequency",
+      "distractors": [
+        "The number of packets per route",
+        "A TCP port range",
+        "A DNS query type"
+      ],
+      "answer": "The rate at which a radio wave oscillates, measured in hertz; Wi-Fi uses ranges such as 2.4, 5, and 6 GHz.",
+      "teach": "The defining clue is the job or scope in the sentence. The rate at which a radio wave oscillates, measured in hertz; Wi-Fi uses ranges such as 2.4, 5, and 6 GHz. That exact idea is called Radio frequency.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v200",
+      "section": 6,
+      "source": 47,
+      "title": "Spectrum",
+      "term": "Spectrum",
+      "exp": null,
+      "q": "Which term matches this meaning? The range of radio frequencies available for signals and divided into bands and channels.",
+      "correct": "Spectrum",
+      "distractors": [
+        "A list of IP routes",
+        "A TCP byte stream",
+        "A DNS hierarchy"
+      ],
+      "answer": "The range of radio frequencies available for signals and divided into bands and channels.",
+      "teach": "The defining clue is the job or scope in the sentence. The range of radio frequencies available for signals and divided into bands and channels. That exact idea is called Spectrum.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v201",
+      "section": 6,
+      "source": 47,
+      "title": "GHz",
+      "term": "GHz",
+      "exp": "Gigahertz",
+      "q": "What does GHz stand for?",
+      "correct": "Gigahertz",
+      "distractors": [
+        "Gigabyte host zone",
+        "Global hertz group",
+        "Gateway handling zone"
+      ],
+      "answer": "GHz stands for Gigahertz. A frequency unit equal to one billion cycles per second, used to name Wi-Fi radio bands.",
+      "teach": "First expand the letters: Gigahertz. Then connect the name to its job. A frequency unit equal to one billion cycles per second, used to name Wi-Fi radio bands.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v202",
+      "section": 6,
+      "source": 46,
+      "title": "Interference",
+      "term": "Interference",
+      "exp": null,
+      "q": "Which term matches this meaning? Unwanted signal energy that overlaps a receiver's channel and makes the intended signal harder to decode correctly.",
+      "correct": "Interference",
+      "distractors": [
+        "A successful TCP handshake",
+        "A DNS referral",
+        "A route summary"
+      ],
+      "answer": "Unwanted signal energy that overlaps a receiver's channel and makes the intended signal harder to decode correctly.",
+      "teach": "The defining clue is the job or scope in the sentence. Unwanted signal energy that overlaps a receiver's channel and makes the intended signal harder to decode correctly. That exact idea is called Interference.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v203",
+      "section": 6,
+      "source": 46,
+      "title": "Nonoverlapping channel",
+      "term": "Nonoverlapping channel",
+      "exp": null,
+      "q": "Which term matches this meaning? A channel whose occupied frequency range does not significantly share spectrum with another selected nearby channel.",
+      "correct": "Nonoverlapping channel",
+      "distractors": [
+        "A channel using the same frequencies",
+        "A private IP block",
+        "A full-duplex cable"
+      ],
+      "answer": "A channel whose occupied frequency range does not significantly share spectrum with another selected nearby channel.",
+      "teach": "The defining clue is the job or scope in the sentence. A channel whose occupied frequency range does not significantly share spectrum with another selected nearby channel. That exact idea is called Nonoverlapping channel.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v204",
+      "section": 6,
+      "source": 49,
+      "title": "Antenna",
+      "term": "Antenna",
+      "exp": null,
+      "q": "Which term matches this meaning? The component that converts electrical radio-frequency energy into radio waves for transmission and reverses the process for reception.",
+      "correct": "Antenna",
+      "distractors": [
+        "A transport header",
+        "A DNS cache",
+        "A subnet prefix"
+      ],
+      "answer": "The component that converts electrical radio-frequency energy into radio waves for transmission and reverses the process for reception.",
+      "teach": "The defining clue is the job or scope in the sentence. The component that converts electrical radio-frequency energy into radio waves for transmission and reverses the process for reception. That exact idea is called Antenna.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v205",
+      "section": 6,
+      "source": 49,
+      "title": "Spatial stream",
+      "term": "Spatial stream",
+      "exp": null,
+      "q": "Which term matches this meaning? One independent data stream transmitted through a distinct radio path in a MIMO system.",
+      "correct": "Spatial stream",
+      "distractors": [
+        "A TCP connection state",
+        "A DNS referral",
+        "A route metric"
+      ],
+      "answer": "One independent data stream transmitted through a distinct radio path in a MIMO system.",
+      "teach": "The defining clue is the job or scope in the sentence. One independent data stream transmitted through a distinct radio path in a MIMO system. That exact idea is called Spatial stream.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v206",
+      "section": 6,
+      "source": 57,
+      "title": "Modulation",
+      "term": "Modulation",
+      "exp": null,
+      "q": "Which term matches this meaning? Changing a signal property in a controlled pattern so that the signal carries data bits.",
+      "correct": "Modulation",
+      "distractors": [
+        "Assigning an IP address",
+        "Choosing a route",
+        "Resolving a host name"
+      ],
+      "answer": "Changing a signal property in a controlled pattern so that the signal carries data bits.",
+      "teach": "The defining clue is the job or scope in the sentence. Changing a signal property in a controlled pattern so that the signal carries data bits. That exact idea is called Modulation.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v207",
+      "section": 6,
+      "source": 50,
+      "title": "Encryption",
+      "term": "Encryption",
+      "exp": null,
+      "q": "Which term matches this meaning? Transforming readable data with a key so an unauthorized observer cannot understand it.",
+      "correct": "Encryption",
+      "distractors": [
+        "Proving who a device is",
+        "Detecting a route",
+        "Choosing a radio channel"
+      ],
+      "answer": "Transforming readable data with a key so an unauthorized observer cannot understand it.",
+      "teach": "The defining clue is the job or scope in the sentence. Transforming readable data with a key so an unauthorized observer cannot understand it. That exact idea is called Encryption.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v208",
+      "section": 6,
+      "source": 50,
+      "title": "Authentication",
+      "term": "Authentication",
+      "exp": null,
+      "q": "Which term matches this meaning? Checking that a user, device, or server is the identity it claims to be.",
+      "correct": "Authentication",
+      "distractors": [
+        "Hiding data contents with encryption only",
+        "Calculating a subnet mask",
+        "Forwarding a frame"
+      ],
+      "answer": "Checking that a user, device, or server is the identity it claims to be.",
+      "teach": "The defining clue is the job or scope in the sentence. Checking that a user, device, or server is the identity it claims to be. That exact idea is called Authentication.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v209",
+      "section": 6,
+      "source": 53,
+      "title": "Half-duplex",
+      "term": "Half-duplex",
+      "exp": null,
+      "q": "Which term matches this meaning? Communication in which a shared medium carries transmission in only one direction at a time.",
+      "correct": "Half-duplex",
+      "distractors": [
+        "Simultaneous sending and receiving",
+        "A DNS query mode",
+        "A subnet type"
+      ],
+      "answer": "Communication in which a shared medium carries transmission in only one direction at a time.",
+      "teach": "The defining clue is the job or scope in the sentence. Communication in which a shared medium carries transmission in only one direction at a time. That exact idea is called Half-duplex.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v210",
+      "section": 6,
+      "source": 53,
+      "title": "Full-duplex",
+      "term": "Full-duplex",
+      "exp": null,
+      "q": "Which term matches this meaning? Communication in which both endpoints can send and receive at the same time on separate signal paths.",
+      "correct": "Full-duplex",
+      "distractors": [
+        "Only one sender at a time on a shared path",
+        "A Wi-Fi roaming mode",
+        "A route protocol"
+      ],
+      "answer": "Communication in which both endpoints can send and receive at the same time on separate signal paths.",
+      "teach": "The defining clue is the job or scope in the sentence. Communication in which both endpoints can send and receive at the same time on separate signal paths. That exact idea is called Full-duplex.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v211",
+      "section": 6,
+      "source": 53,
+      "title": "Physical medium",
+      "term": "Physical medium",
+      "exp": null,
+      "q": "Which term matches this meaning? The actual path that carries a signal, such as copper wire, fiber, or shared radio space.",
+      "correct": "Physical medium",
+      "distractors": [
+        "A transport protocol",
+        "A destination port",
+        "A DNS record"
+      ],
+      "answer": "The actual path that carries a signal, such as copper wire, fiber, or shared radio space.",
+      "teach": "The defining clue is the job or scope in the sentence. The actual path that carries a signal, such as copper wire, fiber, or shared radio space. That exact idea is called Physical medium.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v212",
+      "section": 6,
+      "source": 53,
+      "title": "Shared medium",
+      "term": "Shared medium",
+      "exp": null,
+      "q": "Which term matches this meaning? One signal-carrying path used by multiple devices that must coordinate when they transmit; Wi-Fi stations share the radio channel.",
+      "correct": "Shared medium",
+      "distractors": [
+        "A dedicated full-duplex path for one endpoint pair",
+        "A shared IP address only",
+        "A DNS zone"
+      ],
+      "answer": "One signal-carrying path used by multiple devices that must coordinate when they transmit; Wi-Fi stations share the radio channel.",
+      "teach": "The defining clue is the job or scope in the sentence. One signal-carrying path used by multiple devices that must coordinate when they transmit; Wi-Fi stations share the radio channel. That exact idea is called Shared medium.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v213",
+      "section": 6,
+      "source": 53,
+      "title": "Collision",
+      "term": "Collision",
+      "exp": null,
+      "q": "Which term matches this meaning? The destructive overlap that occurs when devices transmit at the same time on a shared medium and the receiver cannot decode the intended frame.",
+      "correct": "Collision",
+      "distractors": [
+        "A successful Wi-Fi association",
+        "A TCP connection close",
+        "A DNS cache hit"
+      ],
+      "answer": "The destructive overlap that occurs when devices transmit at the same time on a shared medium and the receiver cannot decode the intended frame.",
+      "teach": "The defining clue is the job or scope in the sentence. The destructive overlap that occurs when devices transmit at the same time on a shared medium and the receiver cannot decode the intended frame. That exact idea is called Collision.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v214",
+      "section": 6,
+      "source": 53,
+      "title": "Link-layer ACK",
+      "term": "Link-layer ACK",
+      "exp": null,
+      "q": "Which term matches this meaning? A short local acknowledgment saying one Wi-Fi frame arrived successfully across this radio link; it is separate from an end-to-end TCP ACK.",
+      "correct": "Link-layer ACK",
+      "distractors": [
+        "An end-to-end TCP byte acknowledgment",
+        "A DHCP address offer",
+        "A DNS answer"
+      ],
+      "answer": "A short local acknowledgment saying one Wi-Fi frame arrived successfully across this radio link; it is separate from an end-to-end TCP ACK.",
+      "teach": "The defining clue is the job or scope in the sentence. A short local acknowledgment saying one Wi-Fi frame arrived successfully across this radio link; it is separate from an end-to-end TCP ACK. That exact idea is called Link-layer ACK.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v215",
+      "section": 6,
+      "source": 52,
+      "title": "IEEE 802.15",
+      "term": "IEEE 802.15",
+      "exp": null,
+      "q": "Which term matches this meaning? The IEEE standards family for wireless personal-area networks, including short-range technologies and low-rate sensor networking.",
+      "correct": "IEEE 802.15",
+      "distractors": [
+        "The Ethernet switching family",
+        "The Internet routing family",
+        "The HTTP version family"
+      ],
+      "answer": "The IEEE standards family for wireless personal-area networks, including short-range technologies and low-rate sensor networking.",
+      "teach": "The defining clue is the job or scope in the sentence. The IEEE standards family for wireless personal-area networks, including short-range technologies and low-rate sensor networking. That exact idea is called IEEE 802.15.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v216",
+      "section": 6,
+      "source": 54,
+      "title": "802.11 wireless frame",
+      "term": "802.11 wireless frame",
+      "exp": null,
+      "q": "Which term matches this meaning? The Data Link layer unit sent across a Wi-Fi hop; its address fields can identify the transmitter, receiver, original source, and final link-layer destination.",
+      "correct": "802.11 wireless frame",
+      "distractors": [
+        "An end-to-end TCP byte stream",
+        "A DNS resource record",
+        "A subnet mask"
+      ],
+      "answer": "The Data Link layer unit sent across a Wi-Fi hop; its address fields can identify the transmitter, receiver, original source, and final link-layer destination.",
+      "teach": "The defining clue is the job or scope in the sentence. The Data Link layer unit sent across a Wi-Fi hop; its address fields can identify the transmitter, receiver, original source, and final link-layer destination. That exact idea is called 802.11 wireless frame.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v217",
+      "section": 6,
+      "source": 56,
+      "title": "Bluetooth",
+      "term": "Bluetooth",
+      "exp": null,
+      "q": "Which term matches this meaning? A short-range wireless personal-area technology that commonly uses the 2.4 GHz band and frequency hopping.",
+      "correct": "Bluetooth",
+      "distractors": [
+        "A wired Ethernet standard",
+        "A TCP reliability mode",
+        "A DNS query type"
+      ],
+      "answer": "A short-range wireless personal-area technology that commonly uses the 2.4 GHz band and frequency hopping.",
+      "teach": "The defining clue is the job or scope in the sentence. A short-range wireless personal-area technology that commonly uses the 2.4 GHz band and frequency hopping. That exact idea is called Bluetooth.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
+    },
+    {
+      "id": "t2-v218",
+      "section": 6,
+      "source": 56,
+      "title": "Wireless coexistence",
+      "term": "Wireless coexistence",
+      "exp": null,
+      "q": "Which term matches this meaning? Different radio technologies operating near one another while taking steps to reduce harmful interference in shared spectrum.",
+      "correct": "Wireless coexistence",
+      "distractors": [
+        "Combining two IP subnets",
+        "Opening a TCP connection",
+        "Delegating a DNS zone"
+      ],
+      "answer": "Different radio technologies operating near one another while taking steps to reduce harmful interference in shared spectrum.",
+      "teach": "The defining clue is the job or scope in the sentence. Different radio technologies operating near one another while taking steps to reduce harmful interference in shared spectrum. That exact idea is called Wireless coexistence.",
+      "example": "If a question describes this exact job, separate it from nearby terms by asking where it acts and what information it changes or carries."
     }
   ],
   "checks": [

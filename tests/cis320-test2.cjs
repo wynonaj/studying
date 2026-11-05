@@ -8,7 +8,7 @@ assert.equal(D.exercises.length,20,'all supplied subnet exercises');
 assert.deepEqual(D.exercises.map(x=>x.exerciseNumber),Array.from({length:20},(_,i)=>i+1));
 assert.equal(D.sources.filter(s=>s.kind==='slides').reduce((n,s)=>n+s.count,0),189);
 assert.deepEqual(D.sourceSummary,{lectureSlides:189,guideTopics:57,exactExercises:20,providedPastedNotes:11,uniquePastedNotes:3});
-assert.ok(D.vocab.length>=90,'wide direct-definition coverage');
+assert.ok(D.vocab.length>=210,'wide direct-definition coverage');
 assert.ok(D.checks.length>=20);assert.ok(D.cloze.length>=12);assert.ok(D.sorts.length>=12);
 const banks=['questions','vocab','checks','cloze','sorts','exercises','connections'];
 const ids=banks.flatMap(k=>D[k].map(x=>x.id));assert.equal(new Set(ids).size,ids.length,'stable unique IDs');
@@ -22,6 +22,9 @@ for(const key of ['questions','vocab','checks','exercises'])for(const x of D[key
   assert.ok(D.sections.some(s=>s.id===x.section),x.id);
 }
 for(const q of D.questions){assert.ok(q.title);assert.ok(q.sourceLabel);assert.ok(Array.isArray(q.slides));}
+assert.equal(new Set(D.vocab.map(x=>x.term)).size,D.vocab.length,'every vocabulary term is unique');
+for(const q of D.questions)assert.ok(D.vocab.some(term=>term.source===q.number),`guide topic ${q.number} defines its words before teaching`);
+for(const term of ['Transport layer','Host','Protocol','Client','Server','Public IP address','Private IP address','Router','Ethernet switch','IPv4 address','Octet','Wi-Fi','Physical medium','Shared medium'])assert.ok(D.vocab.some(x=>x.term===term),`${term} has a direct foundation question`);
 for(const x of D.cloze){assert.equal((x.q.match(/____/g)||[]).length,x.correct.split('; ').length,x.id);assert.ok(x.distractors.length>=3);}
 for(const x of D.sorts){assert.ok(x.items.length>=3);assert.equal(new Set(x.items).size,x.items.length);assert.ok(x.teach.length>50);}
 assert.match(D.vocab.find(x=>x.term==='DHCP').answer,/Dynamic Host Configuration Protocol/);
@@ -44,7 +47,8 @@ const saved=new Map([['cis320-v1','test-one-progress'],['cis304-module1-v1','cis
 const ctx=vm.createContext({console,Date,Math,JSON,Set,Intl,document:{querySelector:element,querySelectorAll:()=>[],addEventListener(){}},window:{scrollTo(){}},localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},INPUT:D});
 const source=read('dist/cis320-test2.js').split("document.addEventListener('click'")[0];vm.runInContext(source,ctx);const run=s=>vm.runInContext(s,ctx);run('D=INPUT');
 for(const view of ['teach','practice','flash','connections','subnet','exam','exercises','sort','cloze','abbrev','terms','guide','sources']){run(`navigate('${view}')`);assert.ok(element('#app').innerHTML.length>100,view)}
-for(const q of D.questions){for(let step=0;step<3;step++)run(`openLesson(${q.number},${step})`);assert.match(element('#app').innerHTML,/Try this topic/)}
+for(const q of D.questions){run(`openLesson(${q.number},0)`);assert.match(element('#app').innerHTML,/Words this lesson uses/);for(let step=1;step<3;step++)run(`openLesson(${q.number},${step})`);assert.match(element('#app').innerHTML,/Try this topic/)}
+run('openLesson(4,2)');element('#lesson-practice').onclick();assert.ok(run('session.items.some(item=>item.term==="Source IP address")'),'topic practice includes its defined terms');
 for(const sort of D.sorts){ctx.SORT=sort;for(let i=0;i<20;i++)assert.notEqual(run('JSON.stringify(shuffledOrder(SORT.items))'),JSON.stringify(sort.items));}
 for(let p=0;p<=32;p++)for(let n=0;n<40;n++){
   const ip=Math.floor(Math.random()*0x100000000)>>>0;ctx.IP=ip;ctx.P=p;
