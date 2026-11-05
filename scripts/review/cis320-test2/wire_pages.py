@@ -20,6 +20,7 @@ def replace_once(text: str, old: str, new: str, label: str) -> str:
 
 index = DIST / "index.html"
 text = index.read_text(encoding="utf-8")
+text = text.replace('<body><header>', '<body class="cis320-test1"><header>', 1)
 class_nav = '<nav class="class-switch" aria-label="Choose class"><a href="index.html" aria-current="page">CIS 320 <small>Networking</small></a><a href="cis304.html">CIS 304 <small>Enterprise architecture</small></a><a href="cis464.html">CIS 464 <small>Project management</small></a><a href="cis425.html">CIS 425 <small>Defensive cybersecurity</small></a></nav>'
 test_nav = '<nav class="test-switch" aria-label="Choose CIS 320 exam"><a href="index.html" aria-current="page">Test 1 <small>Ch. 1–4, 12</small></a><a href="cis320-test2.html">Test 2 <small>Ch. 5–9</small></a></nav>'
 text = replace_once(text, class_nav, class_nav + test_nav, "Test 1/Test 2 navigation")
@@ -54,4 +55,3 @@ for page in DIST.glob("*.html"):
     refresh(page)
 
 print("Wired CIS 320 Test 2 and refreshed static asset hashes.")
-
