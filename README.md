@@ -61,6 +61,19 @@ Course-source corrections are stated where they matter: DHCP expands to **Dynami
 
 Regenerate the Test 2 data with `python3 scripts/review/cis320-test2/build_content.py`, then run `python3 scripts/review/cis320-test2/wire_pages.py` after changing browser assets. Deploy the entire `dist/` directory so both CIS 320 tests and the other class tabs remain together.
 
+## CIS 464 Exam 2
+
+`cis464-test2.html` is a separate CIS 464 workspace for Chapters 4–7. Exam 1 remains at `cis464.html`; Exam 2 progress uses the independent `cis464-exam2-v1` browser key.
+
+The Exam 2 build preserves the complete supplied 3,135-line study guide. It includes all **33 chapter objectives** as separately answered lessons, plus chapter overviews and additional material for **72 lessons** total. Practice includes **391 term/comparison cards**, 23 application and calculation questions, tap-to-fill relationships, ordered processes, flashcards, chapter filtering, missed-item retries, and generated exams. The complete reference retains the source’s tables, examples, formulas, distinctions, vocabulary summaries, exam-focus notes, and final review.
+
+- `dist/cis464-test2-content.json`: Exam 2 lessons and practice data.
+- `dist/cis464-test2.js`: independent learning, practice, scoring, retries, flashcards, and exams.
+- `scripts/review/cis464-test2/`: the supplied source and reproducible content builder.
+- `tests/cis464-test2.cjs`: objective counts, source preservation, choice integrity, views, retries, storage isolation, and navigation.
+
+Regenerate with `python3 scripts/review/cis464-test2/build_content.py`.
+
 ## Files and editing
 
 - `dist/index.html`: page shell and script loading.
