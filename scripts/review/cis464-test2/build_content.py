@@ -88,10 +88,10 @@ TOPIC_ANSWERS={
 'Bottom-up example':'A bottom-up estimate prices detailed components first, then adds them to obtain the total. For example, software, labor, hardware, training, and reserve estimates are calculated separately and summed.',
 'Earned value management analysis: Worked example':'With PV=$10,000, EV=$8,000, and AC=$9,000: CV=−$1,000, SV=−$2,000, CPI=0.89, and SPI=0.80. The project is over budget and behind schedule.',
 'Cost control tools':'Cost control uses budget and actual-cost reports, variance and trend analysis, earned value management, forecasting, change control, and project-management or accounting software.',
-'Additional AI cost-management discussion':'The slides connect excessive AI spending to FOMO, unbounded agents, poor tool selection, repeated uncached work, and weak growth planning. High performers use strategy, executive sponsorship, governance, workload-based model routing, task-level cost tracking, and vendor flexibility.',
+'Controlling AI costs':'Excessive AI spending can come from FOMO, unbounded agents, poor tool selection, repeated uncached work, and weak growth planning. Cost control uses strategy, executive sponsorship, governance, workload-based model routing, task-level cost tracking, and vendor flexibility.',
 'Stakeholder engagement levels':'Stakeholder engagement can be unaware, resistant, neutral, supportive, or leading. The team compares current and desired levels and plans how to close important gaps.',
 'Risk management plan':'The risk management plan explains how the project will identify, analyze, respond to, monitor, and report risks. It defines the process, roles, categories, timing, budget, and thresholds for risk work.',
-"Your professor's EMV example":'For each option, multiply every outcome by its probability and add the results. The project with the best probability-weighted value has the highest EMV, although decision makers may also consider risk preference and strategic fit.',
+'EMV worked example':'For each option, multiply every outcome by its probability and add the results. The project with the best probability-weighted value has the highest EMV, although decision makers may also consider risk preference and strategic fit.',
 'Risk versus issue':'A risk is an uncertain future event that may affect objectives. An issue is a problem or event that has already occurred and now requires action.',
 'Methods of identifying risks':'Teams identify risks with brainstorming, interviews, checklists, document reviews, assumption analysis, SWOT analysis, cause-and-effect diagrams, Delphi techniques, and lessons learned from earlier projects.',
 'Risk monitoring':'Assign every important risk an owner, review triggers and status regularly, carry out approved responses, identify new risks, update the register, and evaluate whether the risk process works.',
@@ -107,12 +107,18 @@ TOPIC_ANSWERS={
 'Motivation theories: The five levels':'Maslow’s five levels are physiological needs, safety, social belonging, esteem, and self-actualization. Lower needs generally require attention before higher-level growth needs strongly motivate someone.',
 'Leadership legacy styles':'The lecture’s leadership legacy styles are ambassador, advocate, people mover, truth seeker, creative builder, and experienced guide. Each describes the type of influence a leader tends to leave behind.',
 'Blake-Mouton Managerial Grid':'The Blake-Mouton Managerial Grid compares concern for people with concern for results. It helps describe leadership approaches based on whether each concern is low or high.',
-'Can leadership be learned?':'The slides treat leadership as a learnable skill developed through practice, feedback, reflection, education, mentoring, experience, and willingness to change old habits.',
+'Can leadership be learned?':'Leadership can be developed through practice, feedback, reflection, education, mentoring, experience, and willingness to change old habits.',
 "Team development: Tuckman's Model":'Tuckman’s stages are forming, storming, norming, performing, and adjourning. Teams meet and orient first, work through disagreement, establish norms, perform effectively, and finally close the work.',
 'How to prevent these dysfunctions':'Build trust, discuss disagreement constructively, make clear commitments, hold people accountable, and keep attention on shared project results.',
 'Five common conflict management approaches':'The five approaches are collaborate or problem-solve, compromise or reconcile, smooth or accommodate, force or direct, and withdraw or avoid. The project manager chooses based on urgency, importance, relationships, and the need for a lasting solution.',
 'Communication barriers':'Communication barriers include language or jargon, cultural differences, assumptions, emotion, noise, poor timing, information overload, status differences, inaccessible tools, weak listening, and missing feedback.',
 'Microaggressions':'Microaggressions are everyday comments or behaviors that communicate bias toward historically marginalized people. They may be intentional or unintentional, and their impact still matters.',
+'RACI definitions':'RACI means Responsible, Accountable, Consulted, and Informed. Responsible performs the work; Accountable owns the final result and approval; Consulted provides input; Informed receives updates.',
+'Three risk preferences':'Risk-averse people prefer lower uncertainty, risk-neutral people judge mainly by expected value, and risk-seeking people may accept greater uncertainty for a potentially larger reward.',
+"McGregor's Theory X and Theory Y":'Theory X assumes workers dislike work and need close supervision. Theory Y assumes people can be self-directed, responsible, and motivated when the environment supports them.',
+"Ouchi's Theory Z":'Theory Z emphasizes trust, quality, collective decision making, cultural values, and long-term relationships and commitment.',
+"Effectiveness: Covey's Seven Habits":'Covey’s habits are Be proactive; Begin with the end in mind; Put first things first; Think win-win; Seek first to understand, then to be understood; Synergize; and Sharpen the saw.',
+'Communication planning':'A communications plan identifies what information is needed, who needs it, who prepares it, how it will be delivered, when and how often it will be delivered, and how problems will be escalated.',
 'Profit formula':'Profit = Revenue − Expenses.',
 'Profit margin formula':'Profit margin = (Profit ÷ Revenue) × 100%.',
 'EVM formulas':'CV = EV − AC; SV = EV − PV; CPI = EV ÷ AC; SPI = EV ÷ PV.',
@@ -155,6 +161,71 @@ QUESTION_OVERRIDES={
 'Before the meeting':'What should the project manager do before a meeting?',
 'Why can adding people cause more delays?':'Why can adding people to a late project make it later?',
 'Microaggressions':'What is a microaggression, and why does impact matter?',
+'Work Breakdown Structure (WBS)':'What is a Work Breakdown Structure, and how does it organize project work?',
+'Requirements Traceability Matrix (RTM)':'What does an RTM track throughout a project?',
+'Definition of Done':'What conditions does a Definition of Done establish?',
+'Questions a project manager should ask':'Which questions should a project manager answer before building the schedule?',
+'Methods for estimating schedules':'Which methods can a team use to estimate activity durations?',
+'Forward pass and backward pass':'What does a forward pass calculate, and what does a backward pass calculate?',
+'SMART milestones':'What does each letter in SMART require from a milestone?',
+'Bottom-up example':'How does bottom-up cost estimating work?',
+'Ways to improve estimates':'How can a project team improve the accuracy of estimates?',
+'Three core EVM values':'What do PV, EV, and AC measure?',
+'Cost control tools':'Which tools help a project manager monitor and control costs?',
+'Controlling AI costs':'Which behaviors can make organizational AI spending unnecessarily high?',
+'Stakeholder engagement levels':'What are the five stakeholder engagement levels?',
+'Responsibility Assignment Matrix (RAM)':'What does a Responsibility Assignment Matrix show?',
+'RACI definitions':'What does each letter in RACI mean?',
+'Team charter or team contract':'What rules should a team charter establish?',
+'EMV worked example':'How is EMV used to compare risky project options?',
+'Resource loading':'What does resource loading measure?',
+'Resource leveling':'How does resource leveling correct an overallocation?',
+'Resource Breakdown Structure (RBS)':'How does an RBS organize project resources?',
+'Three risk preferences':'How do risk-averse, risk-neutral, and risk-seeking decision makers differ?',
+'Negative risks: threats':'What makes a project risk a threat?',
+'Positive risks: opportunities':'What makes a project risk an opportunity?',
+'Issue log':'What information does an issue log track?',
+'Potential sources of project risk':'Which categories can produce project risk?',
+'Methods of identifying risks':'Which methods can a team use to discover project risks?',
+'Contingency reserve':'When is contingency reserve used, and is it inside the cost baseline?',
+'Management reserve':'When is management reserve used, and is it inside the cost baseline?',
+'Five response strategies for negative risks':'What are the five response strategies for threats?',
+'Five response strategies for positive risks':'What are the five response strategies for opportunities?',
+'Residual risk':'What remains after a risk response is implemented?',
+'Secondary risk':'What is a secondary risk?',
+'Inherent risk':'What does inherent risk measure?',
+'Risk monitoring':'What should happen while project risks are being monitored?',
+'Top Ten Risk Item Tracking':'Why does a team maintain a Top Ten Risk Item list?',
+'Practical risk management':'Which day-to-day behaviors make project risk management effective?',
+'Example: 5 people':'How many communication channels exist among five people?',
+'Example: 10 people':'How many communication channels exist among ten people?',
+'During the meeting':'What should happen during an effective project meeting?',
+'After the meeting':'What should happen after an effective project meeting?',
+'Factors to consider':'Which factors determine the best communication medium?',
+'Communication tool selection':'Which communication tools fit routine, complex, urgent, sensitive, and reference information?',
+'Email etiquette':'Which practices make project email clear and reliable?',
+'Effective listening':'Which behaviors demonstrate effective listening?',
+'Self-Determination Theory: Ryan and Deci':'How does Self-Determination Theory distinguish intrinsic and extrinsic motivation?',
+"Maslow's Hierarchy of Needs":'How does Maslow organize human needs?',
+"McGregor's Theory X and Theory Y":'How do Theory X and Theory Y make different assumptions about workers?',
+"Ouchi's Theory Z":'What workplace assumptions define Theory Z?',
+"Thamhain and Wilemon's nine influence bases":'What are Thamhain and Wilemon’s nine ways a project manager can influence people?',
+"French and Raven's five bases of social power":'What are French and Raven’s five sources of social power?',
+"Effectiveness: Covey's Seven Habits":'What are Covey’s Seven Habits of Highly Effective People?',
+"Kurt Lewin's leadership styles":'How do autocratic, democratic, and laissez-faire leadership differ?',
+'Six emotional leadership styles':'What are the six emotional leadership styles and their general purposes?',
+'Leadership legacy styles':'What leadership legacies can a leader leave behind?',
+'Emotional intelligence (EQ)':'What is emotional intelligence, and why does a project manager need it?',
+'Important EQ-related abilities':'Which abilities make up emotional intelligence?',
+'Personality and team development':'Why should a project manager adapt to different personalities?',
+'Ways to develop a team':'Which actions help a project team develop?',
+'Applying the theories':'How can a project manager match motivation theories to individual needs?',
+'Common causes of project conflict':'What commonly causes conflict on projects?',
+'Five common conflict management approaches':'What are the five approaches for handling project conflict?',
+'Five team dysfunctions':'What are the five team dysfunctions, and how do they build on one another?',
+'Communication and project success':'How can poor communication damage project performance?',
+'Communication planning':'Which questions must a communications plan answer?',
+'Communication barriers':'Which barriers can prevent a project message from being understood?',
 'Profit formula':'How do you calculate profit?',
 'Profit margin formula':'How do you calculate profit margin?',
 'EVM formulas':'Which formulas calculate EVM cost and schedule performance?',
@@ -194,6 +265,10 @@ QUESTION_CONFIGS={
  'distractors':['Mandatory, discretionary, finish-to-start, and finish-to-finish','Internal, external, start-to-start, and start-to-finish','Optimistic, pessimistic, mandatory, and discretionary'],
  'teach':'The four categories answer why the relationship exists. Mandatory comes from the work itself, discretionary comes from a team preference, external crosses the project boundary, and internal stays within the team’s control. FS, SS, FF, and SF answer a different question: how the start and finish points connect.',
  'example':'Testing after coding is usually mandatory. Waiting for a government permit is external. Writing one report before another by preference is discretionary. A team-controlled review before its own release is internal.'},
+'RACI definitions':{
+ 'distractors':['Responsible approves the final result; Accountable performs the work; Consulted receives updates; Informed gives expert input','Responsible and Accountable both only receive updates; Consulted performs the work; Informed approves it','Responsible provides optional advice; Accountable receives status reports; Consulted owns the result; Informed performs the work'],
+ 'teach':'RACI separates four different relationships to one task. Responsible identifies who does the work. Accountable identifies the single person who answers for the finished result. Consulted people participate through two-way input. Informed people receive one-way updates.',
+ 'example':'For a project report, an analyst may be Responsible, the project manager Accountable, a security specialist Consulted, and the sponsor Informed.'},
 }
 
 CHECK_CONFIGS={
@@ -243,7 +318,8 @@ TEACH_OVERRIDES={
 'During the meeting':'The facilitator keeps discussion tied to the agenda, confirms decisions, and records actions with owners and dates. This turns conversation into accountable project work.',
 'Factors to consider':'A communication medium must fit the message. Sensitive or complicated issues need quick feedback and richer interaction, while routine information may need a durable written record that people can retrieve later.',
 'Project management application':'Motivation theories are useful only when connected to a person’s situation. A manager first identifies the unmet need or work condition, then chooses an action such as autonomy, recognition, clearer expectations, or skill development.',
-"6. Ouchi's Theory Z":'Theory Z assumes that trust, long-term relationships, shared responsibility, and collective decisions can strengthen commitment. It contrasts with managing mainly through close control or individual rewards.',
+"Ouchi's Theory Z":'Theory Z assumes that trust, long-term relationships, shared responsibility, and collective decisions can strengthen commitment. It contrasts with managing mainly through close control or individual rewards.',
+'Controlling AI costs':'AI spending becomes wasteful when teams choose expensive models by habit, let automated agents run without limits, repeat uncached work, or fail to match the tool to the task. Monitoring cost per completed task exposes whether spending creates useful output.',
 'Emotional intelligence (EQ)':'A project manager regularly works through disagreement, pressure, and uncertainty. Recognizing emotions and regulating reactions helps the manager listen accurately, respond deliberately, and preserve working relationships.',
 'Personality and team development':'People differ in communication, decision making, pace, and response to conflict. Discussing those differences helps the team design working agreements instead of treating every difference as poor performance.',
 'Ways to develop a team':'Training improves capability, while coaching, team-building, clear norms, and prompt conflict resolution improve how people use those capabilities together. Development addresses both skill and collaboration.',
@@ -376,10 +452,11 @@ def first_answer(md,title):
 
 def display_title(title,parent):
     generic={'Formula','Example','Examples','Causes','Methods','Types','The five levels','Key distinction','Key distinctions','Worked example','Your professor\'s example','Another example','Practice calculator'}
-    title=re.sub(r'^[A-G]\.\s*','',title)
+    title=re.sub(r'^(?:\d+\.|[A-G]\.)\s*','',title)
+    title={'Your professor\'s EMV example':'EMV worked example','Additional AI cost-management discussion':'Controlling AI costs','Email etiquette from your slides':'Email etiquette','Risk-related project management advice':'Practical risk management'}.get(title,title)
     if title in generic and parent:
         parent=re.sub(r'^(?:Objective|Cost objective) \d+:\s*','',parent)
-        parent=re.sub(r'^[A-G]\.\s*','',parent)
+        parent=re.sub(r'^(?:\d+\.|[A-G]\.)\s*','',parent)
         parent=re.sub(r'^(?:Explain how to|List methods for|Calculate (?:a|the)|Conduct|Differentiate|Prepare|Identify|Compare)\s+','',parent,flags=re.I)
         if 'scope creep' in parent.lower(): parent='Scope creep'
         if 'communication channels' in parent.lower(): parent='Communication channels'
@@ -396,19 +473,21 @@ def lesson_question(lesson):
     if ' versus ' in low or ' vs. ' in low or ' vs ' in low:
         pair=re.sub(r'\s+(?:versus|vs\.)\s+',' and ',title,flags=re.I)
         return f'What is the difference between {pair}?'
-    if low.startswith(('methods of ','ways to ','types of ','steps ','five ','four ','three ','major ','potential sources','common causes','factors to consider')):
-        return f'Which answer correctly describes {title.lower()}?'
+    if low.startswith(('methods of ','ways to ','types of ','steps ','major ')):
+        return f'Which items belong to {title.lower()}?'
     if any(word in low for word in ('formula','calculation','estimate')):
         return f'How is {title.lower()} calculated or used?'
     if low.endswith((' plan',' matrix',' chart',' register',' statement',' structure',' analysis',' theory',' model',' method',' grid',' law',' baseline',' histogram',' list',' attributes',' criteria',' card',' cards',' management',' communication',' communications')):
         return f'What is the purpose of {title}?'
-    return f'What does {title} mean in project management?'
+    if low.endswith('s') and not low.endswith(('analysis','process')): return f'What are {title}?'
+    return f'What is {title}?'
 
 def is_practice_lesson(lesson):
     if lesson['kind'] in {'overview','objective'}: return False
     low=lesson['title'].lower()
-    grouped=('terms to know','vocabulary','critical distinctions','memorize the differences','basic financial vocabulary','meeting vocabulary','examples for exam questions','exam examples')
-    return not any(label in low for label in grouped)
+    grouped=('terms to know','vocabulary','critical distinctions','memorize the differences','basic financial vocabulary','meeting vocabulary','examples','raci example','project management application')
+    aggregators={'motivation theories','theories of influence and power','leadership styles','general leadership styles','motivation theory comparison','emotional intelligence and personality','communication channels reference table'}
+    return not any(label in low for label in grouped) and low not in aggregators
 
 def prose_terms(md):
     found=[]

@@ -10,8 +10,8 @@ assert.deepEqual(D.sections.map(s=>D.lessons.filter(x=>x.section===s.id).length)
 assert.equal(D.questions.length,D.lessons.length,'one core question per lesson');
 assert.ok(D.vocab.length>=300,'extensive term and comparison coverage without data-table rows masquerading as vocabulary');
 const coreQuestions=D.questions.filter(x=>x.practice!==false);
-assert.equal(coreQuestions.length,191,'normal practice contains direct concept questions only');
-assert.deepEqual(D.sections.map(s=>coreQuestions.filter(x=>x.section===s.id).length),[21,49,52,69]);
+assert.equal(coreQuestions.length,180,'normal practice contains direct concept questions only');
+assert.deepEqual(D.sections.map(s=>coreQuestions.filter(x=>x.section===s.id).length),[21,49,51,59]);
 assert.ok(coreQuestions.every(x=>!['objective','overview'].includes(x.kind)));
 assert.ok(coreQuestions.every(x=>!x.q.startsWith('What must you know for')));
 for(const term of ['Tangible costs and benefits','Intangible costs and benefits','Direct costs','Indirect costs','Sunk costs','Life cycle costing','Cradle-to-grave analysis'])assert.ok(D.vocab.some(x=>x.term===term),term);
@@ -30,6 +30,8 @@ const profit=D.questions.find(x=>x.title==='Profit formula');
 assert.equal(profit.q,'How do you calculate profit?');assert.equal(profit.correct,'Profit = Revenue − Expenses.');
 assert.deepEqual(profit.distractors,['Profit = Revenue + Expenses','Profit = Expenses − Revenue','Profit = Revenue ÷ Expenses']);
 assert.match(profit.teach,/amount left over/);assert.match(profit.example,/\$25,000/);
+const raci=D.questions.find(x=>x.title==='RACI definitions');
+assert.equal(raci.q,'What does each letter in RACI mean?');assert.match(raci.correct,/Responsible performs the work/);assert.match(raci.correct,/Accountable owns the final result/);assert.match(raci.teach,/four different relationships/);
 for(const group of [D.questions,D.vocab,D.checks,D.cloze,D.sorts])for(const x of group){
   assert.notEqual((x.teach||'').trim(),(x.correct||'').trim(),`explanation must add reasoning: ${x.id}`);
   assert.doesNotMatch(`${x.teach||''} ${x.example||''}`,/complete .*lesson|source explanation|study-guide answer|where this appears|physically or logically/i);
