@@ -113,6 +113,10 @@ TOPIC_ANSWERS={
 'Five common conflict management approaches':'The five approaches are collaborate or problem-solve, compromise or reconcile, smooth or accommodate, force or direct, and withdraw or avoid. The project manager chooses based on urgency, importance, relationships, and the need for a lasting solution.',
 'Communication barriers':'Communication barriers include language or jargon, cultural differences, assumptions, emotion, noise, poor timing, information overload, status differences, inaccessible tools, weak listening, and missing feedback.',
 'Microaggressions':'Microaggressions are everyday comments or behaviors that communicate bias toward historically marginalized people. They may be intentional or unintentional, and their impact still matters.',
+'Profit formula':'Profit = Revenue − Expenses.',
+'Profit margin formula':'Profit margin = (Profit ÷ Revenue) × 100%.',
+'EVM formulas':'CV = EV − AC; SV = EV − PV; CPI = EV ÷ AC; SPI = EV ÷ PV.',
+'EMV formula':'EMV = the sum of each probability × its monetary outcome.',
 }
 
 QUESTION_OVERRIDES={
@@ -151,15 +155,132 @@ QUESTION_OVERRIDES={
 'Before the meeting':'What should the project manager do before a meeting?',
 'Why can adding people cause more delays?':'Why can adding people to a late project make it later?',
 'Microaggressions':'What is a microaggression, and why does impact matter?',
+'Profit formula':'How do you calculate profit?',
+'Profit margin formula':'How do you calculate profit margin?',
+'EVM formulas':'Which formulas calculate EVM cost and schedule performance?',
+'EMV formula':'How do you calculate Expected Monetary Value?',
+}
+
+QUESTION_CONFIGS={
+'Profit formula':{
+ 'distractors':['Profit = Revenue + Expenses','Profit = Expenses − Revenue','Profit = Revenue ÷ Expenses'],
+ 'teach':'Revenue is all income earned before costs are removed. Expenses are the costs paid to produce that income. Subtracting expenses shows the amount left over, which is profit.',
+ 'example':'If a project-related service earns $100,000 and costs $75,000, the profit is $100,000 − $75,000 = $25,000.'},
+'Profit margin formula':{
+ 'distractors':['Profit margin = Profit − Revenue','Profit margin = Revenue ÷ Profit × 100%','Profit margin = Expenses ÷ Revenue × 100%'],
+ 'teach':'Profit margin changes the dollar profit into a percentage of revenue. Dividing by revenue answers: “Of every dollar earned, what portion remained as profit?” Multiplying by 100 converts the decimal to a percentage.',
+ 'example':'A $25,000 profit on $100,000 of revenue gives $25,000 ÷ $100,000 = 0.25, or a 25% profit margin.'},
+'PERT estimate: Formula':{
+ 'distractors':['(Optimistic + Most likely + Pessimistic) ÷ 3','(Optimistic + Most likely + 4 × Pessimistic) ÷ 6','(4 × Optimistic + Most likely + Pessimistic) ÷ 6'],
+ 'teach':'PERT gives the most-likely estimate four times the weight of either extreme because the middle estimate represents the outcome the team expects most often. The six in the denominator is the total weight: 1 + 4 + 1.',
+ 'example':'For O=4, M=7, and P=16: (4 + 4×7 + 16) ÷ 6 = 48 ÷ 6 = 8 days.'},
+'Slack formulas':{
+ 'distractors':['Total slack = ES − LS or EF − LF','Total slack = EF − ES','Total slack = LF + EF'],
+ 'teach':'Early dates show when work can occur as soon as possible. Late dates show the last time it can occur without delaying the project. The gap between the matching late and early dates is the available scheduling flexibility.',
+ 'example':'If ES=2 and LS=5, total slack is 5 − 2 = 3 days. The activity can start three days later without moving the project finish date.'},
+'Communication channels: Formula':{
+ 'distractors':['n × (n − 1)','n² ÷ 2','n + (n − 1)'],
+ 'teach':'Each person could communicate with every other person, producing n(n−1) directional pairings. A relationship between Alex and Jordan is the same pair as Jordan and Alex, so dividing by two removes the duplicate count.',
+ 'example':'With 5 people: 5×4÷2 = 10 possible two-person communication channels.'},
+'EMV formula':{
+ 'distractors':['EMV = Monetary outcome ÷ Probability','EMV = Probability + Monetary outcome','EMV = Highest possible outcome only'],
+ 'teach':'EMV weights each possible financial result by how likely it is. Multiplying probability by outcome gives that outcome’s probability-adjusted contribution; adding all contributions gives the average value expected across many similar decisions.',
+ 'example':'A 30% chance of losing $50,000 contributes 0.30×−$50,000 = −$15,000 to EMV.'},
+'EVM formulas':{
+ 'distractors':['CV = AC − EV; SV = PV − EV; CPI = AC ÷ EV; SPI = PV ÷ EV','CV = EV − PV; SV = EV − AC; CPI = EV ÷ PV; SPI = EV ÷ AC','CV = EV + AC; SV = EV + PV; CPI = AC ÷ PV; SPI = PV ÷ AC'],
+ 'teach':'Cost measures compare earned work with what it actually cost, so CV and CPI use EV and AC. Schedule measures compare earned work with what should have been completed, so SV and SPI use EV and PV. Positive variances and indexes above 1 are favorable.',
+ 'example':'If EV=$80,000, AC=$100,000, and PV=$100,000, then CV=−$20,000, CPI=0.80, SV=−$20,000, and SPI=0.80: over budget and behind schedule.'},
+'Four categories explaining WHY tasks are dependent':{
+ 'distractors':['Mandatory, discretionary, finish-to-start, and finish-to-finish','Internal, external, start-to-start, and start-to-finish','Optimistic, pessimistic, mandatory, and discretionary'],
+ 'teach':'The four categories answer why the relationship exists. Mandatory comes from the work itself, discretionary comes from a team preference, external crosses the project boundary, and internal stays within the team’s control. FS, SS, FF, and SF answer a different question: how the start and finish points connect.',
+ 'example':'Testing after coding is usually mandatory. Waiting for a government permit is external. Writing one report before another by preference is discretionary. A team-controlled review before its own release is internal.'},
+}
+
+CHECK_CONFIGS={
+'Product scope versus project scope':(['Product scope describes the work; project scope describes product features','Product scope and project scope both describe only the schedule','Product scope describes the budget; project scope describes only quality'], 'Product scope answers what the product must do. Project scope answers what work the team must perform to create that product. Keeping them separate prevents a feature list from being mistaken for the full implementation effort.', 'A registration dashboard is product scope. Designing, coding, testing, documenting, and training people to use it are project scope.'),
+'Five scope documents':(['Work Breakdown Structure (WBS)','Scope statement','Requirements management plan'], 'The RTM creates a row for each requirement and follows it through its source, implementation, testing, and status. That trace lets the team prove that no approved requirement disappeared or remained unverified.', 'If requirement R-17 calls for confirmation email, its RTM row can link the stakeholder request to the feature, test case, owner, and acceptance result.'),
+'WBS wording':(['WBS deliverable: Prepare training materials; activity: Training materials','WBS deliverable: Conduct testing; activity: Testing','WBS deliverable: Create documentation; activity: Documentation'], 'A WBS names the outputs the project must produce, so its labels normally use nouns. A schedule names the actions that produce those outputs, so activities normally begin with verbs.', '“Training materials” names an output. “Prepare training materials” names the work performed to create it.'),
+'Scope creep':(['Add the feature immediately because a stakeholder requested it','Reject every change without recording it','Ask the team to fit it in without changing schedule or cost'], 'A request becomes scope creep only when it enters the project without controlled evaluation and approval. Change control makes the tradeoffs visible before anyone commits the team.', 'A two-week feature may also require testing, documentation, training, and support. The decision maker needs those effects before approving it.'),
+'Dependency type':(['Start-to-start (SS)','Finish-to-finish (FF)','Start-to-finish (SF)'], 'Finish-to-start connects a predecessor’s finish to a successor’s start. Coding is the predecessor, and testing is the successor, so testing waits for coding to finish.', 'Washing a car must finish before drying can start.'),
+'Critical path':(['Only that activity becomes late; the project finish never changes','The project automatically gains two days of slack','All noncritical activities must also slip two days'], 'A zero-slack activity has no unused schedule flexibility. A delay therefore passes directly to the project finish unless the team shortens later critical work or changes the network.', 'If the critical path finishes Friday and one critical task slips to Monday, the project also moves to Monday unless time is recovered.'),
+'PERT':(['7 days','9 days','10 days'], 'PERT weights the most-likely value four times: (4 + 4×7 + 16) ÷ 6 = 48 ÷ 6 = 8. A simple average would ignore the intended weighting.', 'The weights are 1, 4, and 1, so the denominator is six.'),
+'Effort and duration':(['8 hours of effort and 2 days of duration','16 hours of effort and 2 days of duration','8 hours of effort and 1 day of duration'], 'Effort adds every person’s labor hours. Duration measures elapsed calendar time. Two people working simultaneously contribute 8+8=16 labor hours while only one day passes.', 'Parallel work can reduce duration without reducing total effort.'),
+'Profit margin':(['$25,000 profit and 33.3% profit margin','$75,000 profit and 25% profit margin','$25,000 profit and 75% profit margin'], 'Profit is revenue minus cost: $100,000−$75,000=$25,000. Margin divides that profit by revenue: $25,000÷$100,000=0.25=25%.', 'Margin always uses revenue as the denominator, not expenses.'),
+'EVM cost':(['CV = $20,000 and CPI = 1.25','CV = −$20,000 and CPI = 1.25','CV = $20,000 and CPI = 0.80'], 'Cost variance compares earned value with actual cost: 80,000−100,000=−20,000. CPI uses the same two values as a ratio: 80,000÷100,000=0.80. Both results show cost inefficiency.', 'A negative CV and CPI below 1 mean the project paid more than the value of work it earned.'),
+'EVM schedule':(['SV = $20,000 and SPI = 1.25','SV = −$20,000 and SPI = 1.25','SV = $20,000 and SPI = 0.80'], 'Schedule variance compares earned value with planned value: 80,000−100,000=−20,000. SPI is 80,000÷100,000=0.80. The team completed only 80% of the value planned by this point.', 'A negative SV and SPI below 1 indicate that the project is behind schedule.'),
+'RACI accountability':(['Several people should be Accountable so ownership is shared','No one should be Accountable until the deliverable is complete','The Responsible worker must always be the only Accountable person'], 'RACI separates doing the work from answering for its final result. Several people can be Responsible for tasks, but one Accountable owner prevents conflicting approvals and uncertainty about who makes the final decision.', 'Two analysts may prepare a report, while one project sponsor is Accountable for accepting it.'),
+'Resource leveling':(['Adds more work to fill every unused hour','Removes the activity from the project scope','Keeps every date fixed even when capacity is insufficient'], 'Leveling compares assigned work with actual capacity. When demand exceeds capacity, the schedule moves work, changes sequencing, or assigns another available resource. The finish date can change because resource limits are real constraints.', 'A person with 16 hours assigned in an 8-hour day needs work moved, split, or reassigned.'),
+'Risk versus issue':(['An issue, because a supplier is involved','A completed response, because the event is known','A positive opportunity, because delivery has not occurred'], '“Might miss” describes uncertainty, so the event is still a risk. It becomes an issue only after the supplier actually misses the delivery date.', 'Risks receive planned responses and triggers. Issues require immediate resolution and tracking in an issue log.'),
+'EMV':(['$15,000','−$50,000','−$150,000'], 'A threat uses a negative monetary outcome. Multiply 0.30 by −$50,000 to get −$15,000. EMV expresses the probability-weighted financial effect, not the worst-case loss itself.', 'Across many similar decisions, a 30% chance of losing $50,000 averages to an expected loss of $15,000 per decision.'),
+'Threat responses':(['Mitigate','Transfer','Accept'], 'Avoidance changes the plan so the threat cannot occur or cannot affect the objective. Mitigation only lowers probability or impact, transfer shifts ownership, and acceptance leaves the risk in place.', 'Choosing a proven technology instead of an unstable experimental one may remove a technical threat entirely.'),
+'Opportunity responses':(['Enhance','Share','Accept'], 'Exploit takes action to make an opportunity happen, rather than merely increasing its probability. Enhance improves the chance or benefit, share involves another party, and accept waits without proactive action.', 'Assigning the best available specialist to guarantee an early-completion opportunity is exploitation.'),
+'Communication channels':(['40','50','90'], 'The formula counts unique pairs: 10×9÷2=45. Multiplying by nine counts every person’s relationships, and dividing by two removes duplicate pairs.', 'Alex-to-Jordan and Jordan-to-Alex represent one relationship, not two separate channels.'),
+'Push/pull/interactive':(['Push communication','Pull communication','Broadcast-only communication'], 'A live meeting allows participants to send, receive, question, and clarify in real time, so it is interactive. Push sends information one way, while pull requires recipients to retrieve stored information.', 'Email is normally push; a knowledge base is pull; a video conversation is interactive.'),
+'Herzberg':(['Hygiene factors create lasting motivation; motivators only prevent dissatisfaction','All employee needs belong to one identical category','Pay is the only factor capable of changing satisfaction'], 'Herzberg separates the conditions that prevent dissatisfaction from the factors that make work satisfying. Fixing poor pay or unsafe conditions removes complaints, while achievement, recognition, responsibility, and growth create motivation.', 'A fair policy may stop frustration; meaningful responsibility can make the work motivating.'),
+'Power':(['Legitimate power','Reward power','Referent power'], 'Expert power comes from trusted knowledge or skill. Legitimate power comes from position, reward power from control of benefits, and referent power from admiration or identification.', 'A security architect may influence a decision because the team trusts her technical expertise even when she is not the manager.'),
+'Tuckman':(['Forming','Norming','Performing'], 'Storming occurs when team members challenge roles, priorities, authority, or working methods. The disagreement can be productive if the team resolves it and moves into shared norms.', 'A newly assembled team is forming; a team debating who decides and how work should happen is storming.'),
+'Conflict':(['Forcing or directing','Withdrawing or avoiding','Smoothing or accommodating'], 'Collaborating investigates the needs beneath each position and searches for a solution that satisfies both sides. It takes more effort than forcing or avoiding but is best suited to an important conflict requiring a durable outcome.', 'Two teams needing the same specialist can redesign timing and responsibilities so both critical needs are met.'),
+}
+
+TEACH_OVERRIDES={
+'Chapter 4 overview':'Scope planning gives the team a shared boundary. Without that boundary, different people can expect different deliverables, making schedule and cost estimates unreliable and allowing unapproved work to enter the project.',
+'Schedule management plan':'The plan sets the rules for building and controlling the schedule. The Gantt chart is the schedule display itself. One governs the process; the other shows activities across time.',
+'Learning curve theory':'Repeated work often becomes faster because people improve their method, remember prior solutions, and make fewer mistakes. Estimates for later units can therefore be lower than estimates for the first unit.',
+'Cradle-to-grave analysis':'A purchase can create costs long after acquisition. Counting operation, maintenance, support, retirement, and disposal prevents a cheap initial option from appearing less expensive than it truly is.',
+'Cost management plan':'This plan defines how the team will estimate, measure, report, and control money. It creates consistent rules before the team begins comparing planned and actual costs.',
+'Cost estimate':'An estimate predicts how much resources or work will cost using the information currently available. It includes assumptions and uncertainty and can change as the project becomes clearer.',
+'Cost baseline':'The baseline spreads the approved budget across time. That time-phased plan lets the manager compare how much the project planned to spend by a date with how much value and cost actually occurred.',
+'Black swan event':'A black swan is difficult to predict yet produces extreme consequences. Ordinary contingency planning may not name the event, so resilient projects also preserve management flexibility and reserves for unexpected disruption.',
+'11. Expected Monetary Value (EMV) analysis':'EMV does not promise that an outcome will equal the calculated number. It provides a probability-weighted average that helps compare risky options on a consistent financial basis.',
+'Risk management plan':'This plan defines the project’s risk process before individual risks are handled. A risk register stores the individual risks; the plan explains how the team will find, score, respond to, and monitor them.',
+'Contingency reserve':'Contingency reserve covers identified uncertainty that the team can partly anticipate. Because it supports known risks in planned work, it belongs inside the cost baseline.',
+'Management reserve':'Management reserve protects against unforeseen work that cannot be tied to a known risk. It sits outside the cost baseline so using it requires management control rather than routine activity spending.',
+'Inherent risk':'Inherent risk measures exposure before a response. Comparing it with residual risk after controls shows how much the response reduced the original threat or opportunity.',
+'Top Ten Risk Item Tracking':'Focusing regular reviews on the most important risks keeps limited management attention on exposures that could affect the project most. The list changes as probability, impact, and triggers change.',
+'Risk-related project management advice':'Risk management works only when it changes decisions and actions. Assigning owners, monitoring triggers, funding responses, and updating the register turns a list of worries into active control.',
+'Example: 10 people':'Team size creates relationships faster than it creates people. Ten people have 45 unique pairs, which explains why adding staff increases coordination work rather than adding only productive capacity.',
+"Brooks' Law":'New staff initially consume experienced staff time for onboarding and create more communication paths. On a late software project, that short-term coordination cost can exceed the new people’s immediate contribution.',
+'During the meeting':'The facilitator keeps discussion tied to the agenda, confirms decisions, and records actions with owners and dates. This turns conversation into accountable project work.',
+'Factors to consider':'A communication medium must fit the message. Sensitive or complicated issues need quick feedback and richer interaction, while routine information may need a durable written record that people can retrieve later.',
+'Project management application':'Motivation theories are useful only when connected to a person’s situation. A manager first identifies the unmet need or work condition, then chooses an action such as autonomy, recognition, clearer expectations, or skill development.',
+"6. Ouchi's Theory Z":'Theory Z assumes that trust, long-term relationships, shared responsibility, and collective decisions can strengthen commitment. It contrasts with managing mainly through close control or individual rewards.',
+'Emotional intelligence (EQ)':'A project manager regularly works through disagreement, pressure, and uncertainty. Recognizing emotions and regulating reactions helps the manager listen accurately, respond deliberately, and preserve working relationships.',
+'Personality and team development':'People differ in communication, decision making, pace, and response to conflict. Discussing those differences helps the team design working agreements instead of treating every difference as poor performance.',
+'Ways to develop a team':'Training improves capability, while coaching, team-building, clear norms, and prompt conflict resolution improve how people use those capabilities together. Development addresses both skill and collaboration.',
+'Common causes of project conflict':'Projects combine limited resources, interdependent work, deadlines, and people with different priorities. Conflict becomes easier to solve when the team identifies the underlying cause instead of arguing only about positions.',
+'Five team dysfunctions':'The dysfunctions build on one another. Low trust discourages honest disagreement, weak discussion reduces commitment, weak commitment undermines accountability, and poor accountability shifts attention away from team results.',
+}
+
+VOCAB_TEACH_OVERRIDES={
+'Decomposition':'A project manager begins with a large deliverable and divides it until each work package is small enough to estimate, assign, monitor, and control. The point is to make large scope manageable without losing its relationship to the whole project.',
+"Murphy's Law":'The law reminds managers to plan for uncertainty instead of assuming ideal conditions. Risk reviews, buffers, backups, and contingency plans reduce the damage when foreseeable problems occur.',
+'Top-down / analogous':'This method starts with the cost or duration of a similar past project and adjusts for differences. It is fast when little detail exists, but it is usually less precise than estimating every component.',
+'Effort vs. duration':'Effort adds all labor hours, while duration measures calendar time. Two people can complete 16 hours of effort in one eight-hour day when they work in parallel.',
+'Avoid':'Avoidance changes the plan so a threat can no longer affect the project. Mitigation leaves the threat in place but reduces its probability or impact.',
+'Exploit':'Exploitation commits resources to make a beneficial uncertain event occur. Enhancement only increases the chance or value of the opportunity without guaranteeing it.',
+'1. Be proactive':'Being proactive means acting on factors you can influence before circumstances force a response. In a project, that includes raising a risk early and preparing a response instead of waiting for failure.',
 }
 
 def clean_heading(s): return re.sub(r'\*\*','',s).strip().strip('#').strip()
+def plain_math(s):
+    s=s.replace('\\\\[',' ').replace('\\\\]',' ').replace('\\[',' ').replace('\\]',' ')
+    s=re.sub(r'\\boxed\{([^{}]*)\}',r'\1',s)
+    s=re.sub(r'\\text\{([^{}]*)\}',r'\1',s)
+    # The supplied guide uses simple fractions; repeat so inner text replacements settle first.
+    for _ in range(3): s=re.sub(r'\\frac\{([^{}]*)\}\{([^{}]*)\}',r'(\1) ÷ (\2)',s)
+    s=s.replace('\\times','×').replace('\\sum','Σ').replace('\\sigma','σ').replace('\\qquad','; ').replace('boxed','')
+    s=s.replace('\\(','').replace('\\)','')
+    s=s.replace('\\,',' ').replace('\\','')
+    s=s.replace('{','').replace('}','')
+    s=re.sub(r'\s*=\s*',' = ',s)
+    return re.sub(r'\s+',' ',s).strip()
 def strip_md(s):
+    s=plain_math(s)
     s=re.sub(r'!\[[^]]*\]\([^)]*\)','',s); s=re.sub(r'\[([^]]+)\]\([^)]*\)',r'\1',s)
     s=re.sub(r'[`*_>#]','',s); s=re.sub(r'\s+',' ',s)
     return s.strip()
 def inline(s):
-    s=html.escape(s.strip())
+    s=html.escape(plain_math(s.strip()))
     s=re.sub(r'`([^`]+)`',r'<code>\1</code>',s)
     s=re.sub(r'\*\*([^*]+)\*\*',r'<strong>\1</strong>',s)
     s=re.sub(r'\*([^*]+)\*',r'<em>\1</em>',s)
@@ -171,6 +292,8 @@ def markdown_html(md):
     while i<len(lines):
         line=lines[i]
         if not line.strip(): flush(); i+=1; continue
+        if re.match(r'^\s*\\\\?\[',line):
+            flush(); out.append('<div class="formula">'+html.escape(plain_math(line))+'</div>'); i+=1; continue
         if line.startswith('|') and i+1<len(lines) and re.match(r'^\s*\|?\s*:?-+',lines[i+1]):
             flush(); rows=[]
             while i<len(lines) and lines[i].lstrip().startswith('|'):
@@ -281,16 +404,109 @@ def lesson_question(lesson):
         return f'What is the purpose of {title}?'
     return f'What does {title} mean in project management?'
 
-def rows_from_tables(md,ch):
-    rows=[]; lines=md.splitlines(); i=0
+def is_practice_lesson(lesson):
+    if lesson['kind'] in {'overview','objective'}: return False
+    low=lesson['title'].lower()
+    grouped=('terms to know','vocabulary','critical distinctions','memorize the differences','basic financial vocabulary','meeting vocabulary','examples for exam questions','exam examples')
+    return not any(label in low for label in grouped)
+
+def prose_terms(md):
+    found=[]
+    skip={'example','exam distinction','exam tip','important distinction','answer','remember','important','relationship to the project charter'}
+    for line in md.splitlines():
+        line=line.strip()
+        patterns=[
+          r'^\*\*([^*]{2,100}?):\*\*\s*(.+)$',
+          r'^\*\*([^*]{2,80}?)\*\*\s+(?:is|are|means|refers to)\s+(.+)$',
+          r'^\*\*([^*]{2,80}?)\s+(?:is|are|means)\s+([^*]+?)\.?\*\*\s*$',
+        ]
+        match=next((re.match(pattern,line,re.I) for pattern in patterns if re.match(pattern,line,re.I)),None)
+        if not match: continue
+        term=strip_md(match.group(1)).rstrip(':').strip(); definition=strip_md(match.group(2)).strip().rstrip('.')
+        if term.lower() in skip or len(term)<2 or len(definition)<5: continue
+        found.append((term,definition))
+    return found
+
+def is_vocab_title(title):
+    low=title.lower()
+    blocked=('objective ','chapter ','overview','example','questions ','methods ','ways ','steps ','factors ','common causes','potential sources','how ','why ','what ','memorize','terms to know','vocabulary','critical distinctions','worked example','formula')
+    return not any(low.startswith(x) for x in blocked) and ':' not in title[:3]
+
+def source_facts(md):
+    facts=[]
+    for block in re.split(r'\n\s*\n',md):
+        value=strip_md(block)
+        if not value or value.startswith('|') or len(value)<25: continue
+        if re.match(r'^(your professor|your slides|the slides|this chapter|this section|exam tip|remember)',value,re.I): continue
+        facts.append(value)
+    # Table rows often contain the clearest contrast or application.
+    lines=md.splitlines(); i=0
     while i<len(lines)-2:
         if lines[i].lstrip().startswith('|') and re.match(r'^\s*\|?\s*:?-+',lines[i+1]):
-            head=[strip_md(c) for c in lines[i].strip().strip('|').split('|')]; data=[]; i+=2
+            i+=2
+            while i<len(lines) and lines[i].lstrip().startswith('|'):
+                cells=[strip_md(c) for c in lines[i].strip().strip('|').split('|')]
+                if len(cells)>=2 and cells[0] and cells[1]: facts.append(f'{cells[0]} means {cells[1]}.')
+                i+=1
+            continue
+        i+=1
+    result=[]
+    for fact in facts:
+        if fact not in result: result.append(fact)
+    return result
+
+def lesson_explanation(lesson,lessons):
+    config=QUESTION_CONFIGS.get(lesson['title'])
+    if config: return config['teach']
+    if lesson['title'] in TEACH_OVERRIDES: return TEACH_OVERRIDES[lesson['title']]
+    answer=re.sub(r'\W+',' ',lesson['summary'].lower()).strip()
+    candidates=[]
+    for fact in source_facts(lesson['raw']):
+        normalized=re.sub(r'\W+',' ',fact.lower()).strip()
+        if normalized==answer or normalized in answer or answer in normalized: continue
+        if fact.startswith(('\\[','Profit =','Profit margin =')): continue
+        candidates.append(fact)
+    if candidates:
+        preferred=next((x for x in candidates if re.search(r'\b(because|so that|helps|allows|ensures|instead|while|without|when|example|means)\b',x,re.I)),candidates[0])
+        return preferred[:700]
+    siblings=[x for x in lessons if x['section']==lesson['section'] and x['parent']==lesson['parent'] and x['id']!=lesson['id']]
+    if siblings:
+        other=siblings[0]
+        return f'Use this concept within {lesson["parent"]}. Keep it separate from {other["title"]}: {other["summary"]}'[:700]
+    return f'This concept supports the chapter goal of {CHAPTERS[lesson["section"]][1].lower()} Use it to identify the specific decision, document, calculation, or behavior named in the question.'
+
+def lesson_example(lesson):
+    config=QUESTION_CONFIGS.get(lesson['title'])
+    if config: return config['example']
+    raw=lesson['raw']
+    match=re.search(r'(?m)^(?:\*\*)?(?:Example|For example)(?:\*\*)?:?\s*(.+?)(?=\n\s*\n|\n#{2,4}|$)',raw,re.I|re.S)
+    if match:
+        value=strip_md(match.group(1))
+        if value: return value[:500]
+    return ''
+
+def rows_from_tables(md,ch):
+    rows=[]; lines=md.splitlines(); i=0; group=0
+    allowed={'term','document','type','method','approach','letter','component','category','abbreviation','law','symbol','reserve','technique','metric',"don't confuse",'level','preference','strategy','need','theory','influence base','power','habit','style','term a','name'}
+    definition_priority=['definition','meaning','explanation','main concept','key difference','associated theory or model','general focus','role','purpose','formula','estimate']
+    while i<len(lines)-2:
+        if lines[i].lstrip().startswith('|') and re.match(r'^\s*\|?\s*:?-+',lines[i+1]):
+            group+=1
+            head=[strip_md(c) for c in lines[i].strip().strip('|').split('|')]; lower=[x.lower() for x in head]; data=[]; i+=2
             while i<len(lines) and lines[i].lstrip().startswith('|'):
                 data.append([strip_md(c) for c in lines[i].strip().strip('|').split('|')]); i+=1
-            if len(head)>=2 and head[0].lower() not in {'id','year','activity','path','team size','n','criterion'}:
+            if len(head)>=2 and lower[0] in allowed:
                 for r in data:
-                    if len(r)>=2 and r[0] and r[1] and len(r[0])<=90 and len(r[1])<=600: rows.append((ch,r[0],r[1]))
+                    if not r or not r[0]: continue
+                    if lower[0]=='term a' and len(r)>=3:
+                        term=f'{r[0]} versus {r[1]}'; definition=r[2]
+                    else:
+                        idx=next((lower.index(label) for label in definition_priority if label in lower),1)
+                        if idx>=len(r): continue
+                        term=r[0]; definition=r[idx]
+                        if lower[0]=='metric' and 'interpretation' in lower and lower.index('interpretation')<len(r): definition+=f'; {r[lower.index("interpretation")]}'
+                        elif lower[0] in {'letter','symbol','theory','need'} and len(r)>idx+1 and r[idx+1]: definition+=f' — {r[idx+1]}'
+                    if term and definition and len(term)<=120 and 2<len(definition)<=700: rows.append((ch,group,term,definition))
             continue
         i+=1
     return rows
@@ -301,6 +517,25 @@ def choice_set(correct,pool):
         if v!=correct and v not in vals: vals.append(v)
     while len(vals)<3: vals.append(f'An unrelated project concept {len(vals)+1}')
     return vals[:3]
+
+def title_tokens(title):
+    stop={'what','is','a','the','of','and','or','to','for','how','why','objective','cost','project','management','formula','example'}
+    return {w for w in re.findall(r'[a-z0-9]+',title.lower()) if w not in stop and len(w)>2}
+
+def lesson_distractors(lesson,lessons):
+    config=QUESTION_CONFIGS.get(lesson['title'])
+    if config: return config['distractors']
+    wanted=title_tokens(lesson['title'])
+    candidates=[]
+    for other in lessons:
+        if other['id']==lesson['id'] or other['section']!=lesson['section'] or other['summary']==lesson['summary']: continue
+        shared=len(wanted & title_tokens(other['title']))
+        distance=abs(other['number']-lesson['number'])
+        score=(12 if other['parent']==lesson['parent'] else 0)+(3 if other['kind']==lesson['kind'] else 0)+(5*shared)+max(0,8-distance/2)
+        score-=abs(len(other['summary'])-len(lesson['summary']))/150
+        candidates.append((score,other['number'],other['summary']))
+    candidates.sort(key=lambda x:(-x[0],x[1]))
+    return choice_set(lesson['summary'],[x[2] for x in candidates])
 
 def main():
     text=SOURCE.read_text(); lessons=[]; number=1; chapter_sources={}
@@ -321,18 +556,35 @@ def main():
     # Every objective and granular topic receives a direct, answerable question.
     questions=[]
     for lesson in lessons:
-        siblings=[x['summary'] for x in lessons if x['section']==lesson['section'] and x['parent']==lesson['parent'] and x['id']!=lesson['id']]
-        chapter_pool=[x['summary'] for x in lessons if x['section']==lesson['section'] and x['id']!=lesson['id']]
-        pool=siblings+chapter_pool
-        questions.append(dict(id='q-'+lesson['id'],number=lesson['number'],section=lesson['section'],source=lesson['number'],title=lesson['title'],q=lesson_question(lesson),correct=lesson['summary'],distractors=choice_set(lesson['summary'],pool),teach=f"{lesson['summary']} This directly answers the question about {lesson['title']}.",answer=lesson['summary'],example=f"The complete {lesson['title']} lesson includes the source explanation, examples, comparisons, or formulas.",kind=lesson['kind']))
-    # Table rows become term/comparison cards; deduplicate exact labels within a chapter.
-    seen=set(); vocab=[]
+        questions.append(dict(id='q-'+lesson['id'],number=lesson['number'],section=lesson['section'],source=lesson['number'],title=lesson['title'],q=lesson_question(lesson),correct=lesson['summary'],distractors=lesson_distractors(lesson,lessons),teach=lesson_explanation(lesson,lessons),answer=lesson['summary'],example=lesson_example(lesson),kind=lesson['kind'],practice=is_practice_lesson(lesson)))
+    # Build the glossary from definition tables, bold prose definitions, and concrete lesson topics.
+    # Worked examples and numeric tables remain practice material rather than pretending to be vocabulary.
+    candidates=[]
     for ch in CHAPTERS:
-        for _,term,definition in rows_from_tables(chapter_sources[ch],ch):
-            key=(ch,term.lower())
-            if key in seen: continue
-            seen.add(key); peers=[d for c,t,d in rows_from_tables(chapter_sources[ch],ch) if d!=definition]
-            vocab.append(dict(id=f'464e2-v{len(vocab)+1:03}',section=ch,source=next((l['number'] for l in lessons if l['section']==ch and term.lower() in l['raw'].lower()),lessons[0]['number']),title=term,term=term,q=f'Which description correctly matches {term}?',correct=definition,distractors=choice_set(definition,peers),teach=f'{term} means: {definition}',answer=definition,example=f'Keep {term} separate from nearby concepts by identifying its specific purpose.'))
+        chapter_lessons=[l for l in lessons if l['section']==ch]
+        for _,group,term,definition in rows_from_tables(chapter_sources[ch],ch):
+            source=next((l for l in chapter_lessons if term.lower() in l['raw'].lower()),chapter_lessons[0])
+            candidates.append(dict(section=ch,group=f'table-{group}',term=term,definition=definition,source=source))
+        for term,definition in prose_terms(chapter_sources[ch]):
+            source=next((l for l in chapter_lessons if term.lower() in l['raw'].lower()),chapter_lessons[0])
+            candidates.append(dict(section=ch,group=f'lesson-{source["number"]}',term=term,definition=definition,source=source))
+        for lesson in chapter_lessons:
+            if lesson['kind']=='topic' and is_vocab_title(lesson['title']):
+                candidates.append(dict(section=ch,group=f'parent-{lesson["parent"]}',term=lesson['title'],definition=lesson['summary'],source=lesson))
+    seen=set(); unique=[]
+    for item in candidates:
+        key=(item['section'],item['term'].lower())
+        if key in seen: continue
+        seen.add(key); unique.append(item)
+    vocab=[]
+    for item in unique:
+        ch,term,definition,source=item['section'],item['term'],item['definition'],item['source']
+        peers=[x['definition'] for x in unique if x['section']==ch and x['group']==item['group'] and x['definition']!=definition]
+        if len(peers)<3:
+            nearby=sorted((x for x in unique if x['section']==ch and x['definition']!=definition),key=lambda x:abs(x['source']['number']-source['number']))
+            peers.extend(x['definition'] for x in nearby if x['definition'] not in peers)
+        teach=VOCAB_TEACH_OVERRIDES.get(term,lesson_explanation(source,lessons))
+        vocab.append(dict(id=f'464e2-v{len(vocab)+1:03}',section=ch,source=source['number'],title=term,term=term,q=f'What does {term} mean?',correct=definition,distractors=choice_set(definition,peers),teach=teach,answer=definition,example=lesson_example(source)))
     checks=[
       (4,'Product scope versus project scope','Which statement correctly separates product scope from project scope?','Product scope describes product features; project scope describes the work required to create them'),
       (4,'Five scope documents','Which document checks whether every requirement is addressed from need through validation?','Requirements Traceability Matrix (RTM)'),
@@ -359,9 +611,9 @@ def main():
       (7,'Conflict','Which conflict approach seeks a win-win solution by addressing underlying needs?','Collaborating or problem solving'),
     ]
     check_items=[]
-    all_answers=[x[3] for x in checks]
     for i,(ch,title,q,correct) in enumerate(checks,1):
-        check_items.append(dict(id=f'464e2-c{i:02}',section=ch,source=next(l['number'] for l in lessons if l['section']==ch),title=title,q=q,correct=correct,distractors=choice_set(correct,all_answers),teach=correct,answer=correct,example='Apply the definition or formula step by step before choosing.'))
+        distractors,teach,example=CHECK_CONFIGS[title]
+        check_items.append(dict(id=f'464e2-c{i:02}',section=ch,source=next(l['number'] for l in lessons if l['section']==ch),title=title,q=q,correct=correct,distractors=distractors,teach=teach,answer=correct,example=example))
     cloze=[
       (4,'Product ____ describes features; project ____ describes the work required to create them.',['scope','scope']),
       (4,'A WBS uses ____ for deliverables; schedule activities normally use ____.',['nouns','verbs']),
@@ -372,8 +624,20 @@ def main():
       (7,'Communication channels for n people = n(n−1) ÷ ____.',['2']),
       (7,'Tuckman: Forming → ____ → Norming → Performing → Adjourning.',['Storming']),
     ]
+    cloze_teach=[
+      ('Product scope names the product’s features. Project scope names the labor and processes needed to create those features.','A dashboard can be product scope; designing, coding, and testing it are project scope.'),
+      ('A WBS describes outputs, so nouns keep attention on what must exist. A schedule describes actions, so verbs show what the team must do.','“Test report” is a WBS deliverable; “prepare test report” is an activity.'),
+      ('PERT uses one optimistic estimate, four copies of the most-likely estimate, and one pessimistic estimate. The denominator six equals the total weighting.','For 4, 7, and 16 days: (4+28+16)÷6=8 days.'),
+      ('Cost performance compares earned value with actual cost, while schedule performance compares earned value with planned value. That is why AC appears in CV and PV appears in SV.','EV=80, AC=100 gives a negative cost variance; EV=80, PV=100 gives a negative schedule variance.'),
+      ('Responsible identifies who performs the work. Accountable identifies the one person who gives final approval and answers for the result. Consulted people provide input, and Informed people receive updates.','Several developers may be Responsible, but one product owner can remain Accountable.'),
+      ('Uncertainty separates a risk from an issue. A risk may happen, so the team prepares a response; an issue has happened, so the team must resolve it.','“The server might fail” is a risk. “The server failed” is an issue.'),
+      ('The formula begins with every person’s possible relationships, then divides by two because each pair would otherwise be counted twice.','Five people create 5×4÷2=10 channels.'),
+      ('Teams often disagree while establishing roles and methods. Resolving that storming stage allows shared norms to form before the team performs effectively.','A team arguing over decision authority is storming, not yet norming.'),
+    ]
     cloze_items=[]
-    for i,(ch,q,ans) in enumerate(cloze,1): cloze_items.append(dict(id=f'464e2-b{i:02}',section=ch,source=next(l['number'] for l in lessons if l['section']==ch),title='Build the relationship',q=q,correct='; '.join(ans),distractors=['schedule','cost','manager'],teach='Read the completed sentence as one relationship.',answer='; '.join(ans),example='The surrounding words identify the role of each blank.',kind='cloze'))
+    for i,(ch,q,ans) in enumerate(cloze,1):
+        teach,example=cloze_teach[i-1]
+        cloze_items.append(dict(id=f'464e2-b{i:02}',section=ch,source=next(l['number'] for l in lessons if l['section']==ch),title='Build the relationship',q=q,correct='; '.join(ans),distractors=['schedule','cost','manager'],teach=teach,answer='; '.join(ans),example=example,kind='cloze'))
     sorts=[
       (4,'Scope management flow',['Collect and validate requirements','Write the detailed scope statement','Create the WBS and scope baseline','Validate completed deliverables','Control requested scope changes']),
       (5,'Schedule development',['Define activities','Sequence activities','Estimate resources and durations','Build the network and find the critical path','Develop and baseline the schedule']),
@@ -382,8 +646,16 @@ def main():
       (7,'Tuckman team development',['Forming','Storming','Norming','Performing','Adjourning']),
       (7,'Effective meeting',['Define purpose and needed participants','Send agenda and prework','Facilitate discussion and decisions','Assign actions, owners, and due dates','Distribute minutes and follow up']),
     ]
+    sort_teach=[
+      'Requirements establish the need. The scope statement defines the boundary, the WBS organizes deliverables, validation checks the finished work, and change control protects the approved baseline.',
+      'Each scheduling step needs information produced by the previous step: activities must exist before sequencing, and sequence plus duration estimates are required before finding the critical path.',
+      'A forward pass moves from the beginning toward completion. At a merge, the successor must wait for every predecessor, so it uses the largest predecessor finish.',
+      'Risk work is cyclical: the team defines the process, finds uncertainty, prioritizes it, prepares responses, and continues monitoring because risks change throughout the project.',
+      'Tuckman describes how team relationships mature: orientation, disagreement, shared norms, effective performance, and closure.',
+      'A useful meeting starts with a reason and preparation, produces decisions and assigned actions, then preserves accountability through minutes and follow-up.',
+    ]
     sort_items=[]
-    for i,(ch,title,items) in enumerate(sorts,1): sort_items.append(dict(id=f'464e2-s{i:02}',section=ch,source=next(l['number'] for l in lessons if l['section']==ch),title=title,q=f'Put {title.lower()} in order.',items=items,correct=' → '.join(items),distractors=[],teach=f'{title} follows this sequence so each later step uses the result of the earlier one.',answer=' → '.join(items),example='Follow the work from preparation through completion.',kind='sort'))
+    for i,(ch,title,items) in enumerate(sorts,1): sort_items.append(dict(id=f'464e2-s{i:02}',section=ch,source=next(l['number'] for l in lessons if l['section']==ch),title=title,q=f'Put {title.lower()} in order.',items=items,correct=' → '.join(items),distractors=[],teach=sort_teach[i-1],answer=' → '.join(items),example=f'The first step is “{items[0]}” because it supplies the starting information for the remaining sequence.',kind='sort'))
     review=text[re.search(r'^# \*\*Final Exam Review',text,re.M).start():]
     data=dict(title='CIS 464 Exam 2',module='Chapters 4–7',sections=[dict(id=ch,chapter=ch,title=t,intro=q) for ch,(t,q) in CHAPTERS.items()],lessons=lessons,questions=questions,vocab=vocab,checks=check_items,cloze=cloze_items,sorts=sort_items,reviewHtml=markdown_html(review),sourceText=text,sourceSummary=dict(objectives=33,chapters=4,sourceLines=len(text.splitlines()),lectureSlides=238,lessons=len(lessons),terms=len(vocab)))
     OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')

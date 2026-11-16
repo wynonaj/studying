@@ -8,7 +8,13 @@ assert.deepEqual(D.sections.map(s=>objectives.filter(x=>x.section===s.id).length
 assert.equal(D.lessons.length,235,'granular objective, topic, and overview lessons');
 assert.deepEqual(D.sections.map(s=>D.lessons.filter(x=>x.section===s.id).length),[29,67,59,80]);
 assert.equal(D.questions.length,D.lessons.length,'one core question per lesson');
-assert.ok(D.vocab.length>=350,'extensive study-guide term and comparison coverage');
+assert.ok(D.vocab.length>=300,'extensive term and comparison coverage without data-table rows masquerading as vocabulary');
+const coreQuestions=D.questions.filter(x=>x.practice!==false);
+assert.equal(coreQuestions.length,191,'normal practice contains direct concept questions only');
+assert.deepEqual(D.sections.map(s=>coreQuestions.filter(x=>x.section===s.id).length),[21,49,52,69]);
+assert.ok(coreQuestions.every(x=>!['objective','overview'].includes(x.kind)));
+assert.ok(coreQuestions.every(x=>!x.q.startsWith('What must you know for')));
+for(const term of ['Tangible costs and benefits','Intangible costs and benefits','Direct costs','Indirect costs','Sunk costs','Life cycle costing','Cradle-to-grave analysis'])assert.ok(D.vocab.some(x=>x.term===term),term);
 assert.equal(D.sourceSummary.sourceLines,read('scripts/review/cis464-test2/study-guide.md').split(/\r?\n/).length);
 assert.equal(D.sourceText,read('scripts/review/cis464-test2/study-guide.md'));
 for(const phrase of ['Objective 5: Explain how to control scope creep','Cost objective 6: Conduct earned value management analysis','Objective 3: Explain how resource leveling works','Objective 7: Minimize the negative effects of conflict'])assert.ok(objectives.some(x=>x.title===phrase),phrase);
@@ -20,6 +26,15 @@ const invest=D.questions.find(x=>x.title==='INVEST rule for user stories');
 assert.equal(invest.q,'What does each letter in INVEST require from a user story?');
 for(const word of ['Independent','Negotiable','Valuable','Estimable','Small','Testable'])assert.match(invest.correct,new RegExp(word));
 assert.equal(D.sourceSummary.lectureSlides,238);
+const profit=D.questions.find(x=>x.title==='Profit formula');
+assert.equal(profit.q,'How do you calculate profit?');assert.equal(profit.correct,'Profit = Revenue − Expenses.');
+assert.deepEqual(profit.distractors,['Profit = Revenue + Expenses','Profit = Expenses − Revenue','Profit = Revenue ÷ Expenses']);
+assert.match(profit.teach,/amount left over/);assert.match(profit.example,/\$25,000/);
+for(const group of [D.questions,D.vocab,D.checks,D.cloze,D.sorts])for(const x of group){
+  assert.notEqual((x.teach||'').trim(),(x.correct||'').trim(),`explanation must add reasoning: ${x.id}`);
+  assert.doesNotMatch(`${x.teach||''} ${x.example||''}`,/complete .*lesson|source explanation|study-guide answer|where this appears|physically or logically/i);
+}
+assert.ok(D.questions.every(x=>!/[\\](?:text|frac|boxed)|\\\\\[/.test(x.correct)),'no raw formula markup in answers');
 for(const x of D.lessons){assert.ok(x.html.length>20,x.title);assert.ok(x.summary.length>20,x.title);assert.ok(x.objective);}
 assert.match(D.reviewHtml,/Every calculation you should practice/);
 assert.ok(D.checks.some(x=>x.q.includes('communication channels')));assert.ok(D.checks.some(x=>x.q.includes('PERT')));assert.ok(D.checks.some(x=>x.q.includes('EMV')));
@@ -29,9 +44,10 @@ const elements=new Map();function el(s){if(!elements.has(s))elements.set(s,{inne
 const saved=new Map([['cis464-chapters-v1','exam-one'],['cis320-test2-v1','networking']]);
 const ctx=vm.createContext({console,Date,Math,JSON,Set,Intl,document:{querySelector:el,querySelectorAll:()=>[],addEventListener(){}},window:{scrollTo(){},CIS464_EXAM2_CONTENT:null},localStorage:{getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)},INPUT:D});
 const source=read('dist/cis464-test2.js').split("document.addEventListener('click'")[0];vm.runInContext(source,ctx);const run=s=>vm.runInContext(s,ctx);run('D=INPUT');
-for(const view of ['teach','objectives','practice','flash','exam','apply','sort','cloze','terms','guide','sources']){run(`navigate('${view}')`);assert.ok(el('#app').innerHTML.length>100,view)}
-run("navigate('practice')");assert.match(el('#app').innerHTML,/29 guided topics/);assert.match(el('#app').innerHTML,/Mix all \d+ chapter items/);
-for(const lesson of D.lessons){for(let step=0;step<3;step++)run(`openLesson(${lesson.number},${step})`);assert.match(el('#app').innerHTML,/Practice this lesson/)}
+for(const view of ['teach','objectives','practice','flash','exam','apply','sort','cloze','terms','guide']){run(`navigate('${view}')`);assert.ok(el('#app').innerHTML.length>100,view)}
+run("navigate('practice')");assert.match(el('#app').innerHTML,/21 direct concept questions/);assert.match(el('#app').innerHTML,/Mix all \d+ chapter items/);assert.doesNotMatch(el('#app').innerHTML,/What must you know/);
+run("navigate('objectives')");assert.match(el('#app').innerHTML,/Practice its \d+ concepts/);assert.match(el('#app').innerHTML,/objective tells you the area to study/i);
+for(const lesson of D.lessons){for(let step=0;step<3;step++)run(`openLesson(${lesson.number},${step})`);assert.match(el('#app').innerHTML,lesson.kind==='objective'?/Practice \d+ concepts/:/Practice this lesson/)}
 run('start("practice",D.questions.slice(0,3));grade(session.items[0],false,"wrong");advance()');assert.equal(run('session.items[4-1].id'),D.questions[0].id,'missed item returns after other items');
 run('while(session.index<session.items.length){grade(session.items[session.index],true,session.items[session.index].correct);advance()}');assert.ok(saved.has('cis464-exam2-v1'));assert.equal(saved.get('cis464-chapters-v1'),'exam-one');
 run('start("flash",[D.questions[0]])');assert.ok(!el('#app').innerHTML.includes(D.questions[0].correct));el('#flip').onclick();assert.ok(el('#app').innerHTML.includes(D.questions[0].correct));
@@ -40,6 +56,7 @@ run('start("practice",[D.cloze[0]])');assert.match(el('#app').innerHTML,/Check s
 
 const html=read('dist/cis464-test2.html'),exam1=read('dist/cis464.html'),classes=read('dist/classes.html');
 assert.match(html,/cis464-test2-content\.js/);assert.match(html,/cis464\.html/);assert.match(exam1,/cis464-test2\.html/);assert.match(classes,/Exam 1 and Exam 2/);
+assert.doesNotMatch(read('dist/cis464-test2.js'),/What is physically or logically happening|Where this appears in the Exam 2 material|Source coverage/);
 assert.match(read('dist/cis464-test2-content.js'),/^window\.CIS464_EXAM2_CONTENT=/);
 for(const page of fs.readdirSync(path.join(root,'dist')).filter(x=>x.endsWith('.html')).map(x=>read('dist/'+x)))for(const m of page.matchAll(/(?:src|href)="([^"?]+\.(?:js|css))\?v=([a-f0-9]+)"/g))assert.equal(m[2],crypto.createHash('sha256').update(read('dist/'+m[1])).digest('hex').slice(0,12),m[1]);
 console.log(`PASS CIS 464 Exam 2: ${objectives.length} objectives, ${D.lessons.length} granular lessons, ${D.vocab.length} terms/comparisons, ${D.sourceSummary.lectureSlides} audited lecture slides, complete ${D.sourceSummary.sourceLines}-line guide, separate progress, retries, flashcards, blanks, sorts, and exams.`);
