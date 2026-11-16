@@ -65,7 +65,7 @@ Regenerate the Test 2 data with `python3 scripts/review/cis320-test2/build_conte
 
 `cis464-test2.html` is a separate CIS 464 workspace for Chapters 4–7. Exam 1 remains at `cis464.html`; Exam 2 progress uses the independent `cis464-exam2-v1` browser key.
 
-The Exam 2 build preserves the complete supplied 3,135-line study guide. It includes all **33 chapter objectives** as separately answered lessons, plus chapter overviews and additional material for **72 lessons** total. Practice includes **391 term/comparison cards**, 23 application and calculation questions, tap-to-fill relationships, ordered processes, flashcards, chapter filtering, missed-item retries, and generated exams. The complete reference retains the source’s tables, examples, formulas, distinctions, vocabulary summaries, exam-focus notes, and final review.
+The Exam 2 build preserves the complete supplied 3,135-line study guide and was audited against the four Schwalbe Chapters 4–7 decks containing 238 slides. It includes all **33 chapter objectives** as separately answered lessons, then breaks the concepts inside those broad objectives into **235 granular lessons**: 29 for Chapter 4, 67 for Chapter 5, 59 for Chapter 6, and 80 for Chapter 7. Practice also includes **391 term/comparison cards**, 23 application and calculation questions, tap-to-fill relationships, ordered processes, flashcards, chapter filtering, missed-item retries, and generated exams. The complete reference retains the source’s tables, examples, formulas, distinctions, vocabulary summaries, exam-focus notes, and final review.
 
 - `dist/cis464-test2-content.json`: Exam 2 lessons and practice data.
 - `dist/cis464-test2.js`: independent learning, practice, scoring, retries, flashcards, and exams.

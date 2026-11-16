@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
 SOURCE=Path(__file__).with_name('study-guide.md')
 OUT=ROOT/'dist/cis464-test2-content.json'
+OUT_JS=ROOT/'dist/cis464-test2-content.js'
 
 CHAPTERS={
 4:('Project Scope Planning','What exactly are we supposed to deliver?'),
@@ -55,6 +56,101 @@ OBJECTIVE_ANSWERS={
 'Objective 5: List major theories of motivation, influence, power, effectiveness, emotional intelligence, personality, and team building':'Know the named theorists and models, their components, and the behavior each predicts or recommends rather than treating all leadership and motivation ideas as interchangeable.',
 'Objective 6: Decide how to motivate and develop people':'Understand individual needs, provide meaningful work and autonomy, set clear expectations, recognize contributions, coach skills, remove obstacles, and adapt leadership to the person and situation.',
 'Objective 7: Minimize the negative effects of conflict':'Address disagreements early, separate people from problems, choose an appropriate conflict approach, build psychological safety, and prevent dysfunction, groupthink, and unrealistic death-march conditions.',
+}
+
+TOPIC_ANSWERS={
+'What counts as project scope?':'Project scope includes the work required to create the agreed deliverables, such as configuration, data migration, testing, training, and documentation. Unrelated operations, future projects, past work, and unapproved products remain out of scope.',
+'Types of requirements':'Requirement categories include business, stakeholder, user, functional, nonfunctional, technical, operational, feasibility, solution, transition, product, process, quality, implementation, architectural, quality-of-service, and project requirements.',
+'Methods of collecting requirements':'Teams can collect requirements through interviews, focus groups, facilitated workshops, brainstorming, surveys, observation, prototypes, document analysis, benchmarking, Joint Application Design workshops, and use cases.',
+'Why requirements collection is difficult':'Requirements are difficult to collect because time is limited, stakeholders may disagree or struggle to explain what they need, expectations may be unrealistic, systems may be hard to visualize, and technology or connected functions can change.',
+'Scope creep: Causes':'Scope creep commonly comes from vague requirements, unclear boundaries, missing change-control procedures, unreviewed feature requests, weak validation, and poor communication.',
+'Methods of control':'Control scope creep by establishing a clear scope baseline, validating requirements and deliverables, recording change requests, analyzing each request’s effects, and approving or rejecting it through integrated change control.',
+'Agile scope management':'Agile manages scope in short iterations. Teams refine and prioritize requirements through feedback, deliver usable increments, and treat a sprint as a fixed-length iteration rather than trying to define every detail once at the beginning.',
+'MoSCoW prioritization':'MoSCoW ranks requirements as Must have, Should have, Could have, and Won’t have in the current delivery.',
+'INVEST rule for user stories':'INVEST means Independent, Negotiable, Valuable, Estimable, Small, and Testable. A useful user story should satisfy all six qualities.',
+'Big Visual Charts (BVCs)':'Big Visual Charts, also called information radiators, display current work, progress, and issues where the team can understand project status at a glance.',
+'Steps for developing a schedule':'Develop a schedule by identifying activities, sequencing them, estimating resources and durations, creating the activity network, finding the critical path, and approving the resulting schedule baseline.',
+'Four categories explaining WHY tasks are dependent':'Mandatory dependencies come from the work itself, discretionary dependencies reflect a preferred sequence, external dependencies involve work outside the project, and internal dependencies remain under the project team’s control.',
+'FS':'Finish-to-start means the successor cannot start until the predecessor finishes.',
+'SS':'Start-to-start means the successor cannot start until the predecessor starts.',
+'FF':'Finish-to-finish means the successor cannot finish until the predecessor finishes.',
+'SF':'Start-to-finish means the successor cannot finish until the predecessor starts. It is uncommon.',
+'Example: Find the critical path':'Calculate the duration of every complete path through the network. The path with the greatest total duration is the critical path and normally determines the earliest project finish date.',
+'Slack formulas':'Total slack equals LS minus ES or LF minus EF. Free slack is the time an activity can slip without delaying the early start of its immediate successor.',
+'Forward pass and backward pass':'A forward pass calculates earliest start and finish times: EF = ES + duration, and a successor uses the latest predecessor EF. A backward pass calculates latest finish and start times: LS = LF − duration, and a predecessor uses the earliest successor LS.',
+'PERT estimate: Formula':'PERT expected duration equals (optimistic + 4 × most likely + pessimistic) ÷ 6.',
+"PERT estimate: Your professor's example":'For optimistic 8, most likely 10, and pessimistic 24 workdays, PERT gives (8 + 4×10 + 24) ÷ 6 = 12 workdays.',
+'PERT estimate: Another example':'For optimistic 3, most likely 6, and pessimistic 15, PERT gives (3 + 4×6 + 15) ÷ 6 = 7 work units.',
+'Additional PERT formulas':'PERT standard deviation equals (pessimistic − optimistic) ÷ 6. PERT variance is that standard deviation squared. The weighted expected-duration formula remains the main formula emphasized by the lecture.',
+'Effort versus duration':'Effort is the total labor required, such as 16 person-hours. Duration is the elapsed calendar time, such as one day when two people each work eight hours.',
+'Crashing versus fast tracking':'Crashing shortens the schedule by adding resources or cost to critical-path work. Fast tracking overlaps activities that were planned sequentially, which usually increases rework and risk.',
+'Full-Time Equivalent (FTE)':'A Full-Time Equivalent converts labor capacity into the workload of one full-time worker. Two half-time workers equal one FTE.',
+'Bottom-up example':'A bottom-up estimate prices detailed components first, then adds them to obtain the total. For example, software, labor, hardware, training, and reserve estimates are calculated separately and summed.',
+'Earned value management analysis: Worked example':'With PV=$10,000, EV=$8,000, and AC=$9,000: CV=−$1,000, SV=−$2,000, CPI=0.89, and SPI=0.80. The project is over budget and behind schedule.',
+'Cost control tools':'Cost control uses budget and actual-cost reports, variance and trend analysis, earned value management, forecasting, change control, and project-management or accounting software.',
+'Additional AI cost-management discussion':'The slides connect excessive AI spending to FOMO, unbounded agents, poor tool selection, repeated uncached work, and weak growth planning. High performers use strategy, executive sponsorship, governance, workload-based model routing, task-level cost tracking, and vendor flexibility.',
+'Stakeholder engagement levels':'Stakeholder engagement can be unaware, resistant, neutral, supportive, or leading. The team compares current and desired levels and plans how to close important gaps.',
+'Risk management plan':'The risk management plan explains how the project will identify, analyze, respond to, monitor, and report risks. It defines the process, roles, categories, timing, budget, and thresholds for risk work.',
+"Your professor's EMV example":'For each option, multiply every outcome by its probability and add the results. The project with the best probability-weighted value has the highest EMV, although decision makers may also consider risk preference and strategic fit.',
+'Risk versus issue':'A risk is an uncertain future event that may affect objectives. An issue is a problem or event that has already occurred and now requires action.',
+'Methods of identifying risks':'Teams identify risks with brainstorming, interviews, checklists, document reviews, assumption analysis, SWOT analysis, cause-and-effect diagrams, Delphi techniques, and lessons learned from earlier projects.',
+'Risk monitoring':'Assign every important risk an owner, review triggers and status regularly, carry out approved responses, identify new risks, update the register, and evaluate whether the risk process works.',
+'Resource leveling versus resource smoothing':'Resource leveling moves or delays work to resolve resource limits and may change the project finish date. Resource smoothing redistributes work only within available slack so the critical completion date does not change.',
+'Communication channels reference table':'Potential channels grow quickly as the team grows: 2 people have 1 channel, 3 have 3, 4 have 6, 5 have 10, and 10 have 45. Use n(n−1)÷2 for any team size.',
+'Communication channels: Formula':'For n people, the number of potential two-person communication channels is n(n−1)÷2.',
+'Why can adding people cause more delays?':'New people require recruiting, onboarding, training, and coordination. Existing members lose productive time helping them, and the larger team creates more communication channels. This is the reasoning behind Brooks’ Law.',
+'Before the meeting':'Before a meeting, confirm that a meeting is necessary, define its purpose, invite only people who contribute or need the result, choose an accessible time and place, and send the agenda and preparation material early.',
+'Motivation theories':'The chapter covers Self-Determination Theory, Maslow’s hierarchy, Herzberg’s Motivation-Hygiene Theory, McClelland’s acquired needs, McGregor’s Theory X and Theory Y, and Ouchi’s Theory Z. Each explains motivation from a different angle.',
+'Theories of influence and power':'Thamhain and Wilemon describe nine project influence bases, while French and Raven classify social power as legitimate, reward, coercive, expert, and referent power. The models explain where a leader’s influence comes from.',
+'Theories of influence and power: Key distinctions':'Legitimate power comes from formal position, reward power from the ability to provide benefits, coercive power from the ability to punish, expert power from knowledge, and referent power from respect or identification.',
+'Push, pull, and interactive communication: Key distinction':'Push sends information to recipients, pull stores information for recipients to retrieve, and interactive communication supports a live two-way exchange.',
+'Motivation theories: The five levels':'Maslow’s five levels are physiological needs, safety, social belonging, esteem, and self-actualization. Lower needs generally require attention before higher-level growth needs strongly motivate someone.',
+'Leadership legacy styles':'The lecture’s leadership legacy styles are ambassador, advocate, people mover, truth seeker, creative builder, and experienced guide. Each describes the type of influence a leader tends to leave behind.',
+'Blake-Mouton Managerial Grid':'The Blake-Mouton Managerial Grid compares concern for people with concern for results. It helps describe leadership approaches based on whether each concern is low or high.',
+'Can leadership be learned?':'The slides treat leadership as a learnable skill developed through practice, feedback, reflection, education, mentoring, experience, and willingness to change old habits.',
+"Team development: Tuckman's Model":'Tuckman’s stages are forming, storming, norming, performing, and adjourning. Teams meet and orient first, work through disagreement, establish norms, perform effectively, and finally close the work.',
+'How to prevent these dysfunctions':'Build trust, discuss disagreement constructively, make clear commitments, hold people accountable, and keep attention on shared project results.',
+'Five common conflict management approaches':'The five approaches are collaborate or problem-solve, compromise or reconcile, smooth or accommodate, force or direct, and withdraw or avoid. The project manager chooses based on urgency, importance, relationships, and the need for a lasting solution.',
+'Communication barriers':'Communication barriers include language or jargon, cultural differences, assumptions, emotion, noise, poor timing, information overload, status differences, inaccessible tools, weak listening, and missing feedback.',
+'Microaggressions':'Microaggressions are everyday comments or behaviors that communicate bias toward historically marginalized people. They may be intentional or unintentional, and their impact still matters.',
+}
+
+QUESTION_OVERRIDES={
+'Important definitions':'How do project scope, product scope, deliverables, in-scope work, and out-of-scope work differ?',
+'Memorize the differences':'How do the scope statement, WBS, scope management plan, requirements management plan, and RTM differ?',
+'Types of requirements':'Which categories can project requirements fall into?',
+'Methods of collecting requirements':'Which methods can a project team use to collect requirements?',
+'Why requirements collection is difficult':'Why is collecting requirements difficult?',
+'Methods of control':'How can a project manager control scope creep?',
+'Agile scope management':'How does Agile manage project scope?',
+'Value Breakdown Structure (VBS)':'How does a Value Breakdown Structure differ from a WBS?',
+'MoSCoW prioritization':'What do the four MoSCoW priority categories mean?',
+'INVEST rule for user stories':'What does each letter in INVEST require from a user story?',
+'Big Visual Charts (BVCs)':'What are Big Visual Charts, and why does a project team use them?',
+'Steps for developing a schedule':'What are the steps for developing a project schedule?',
+'Four categories explaining WHY tasks are dependent':'What are the four reasons that project activities may depend on one another?',
+'FS':'What does a finish-to-start dependency require?',
+'SS':'What does a start-to-start dependency require?',
+'FF':'What does a finish-to-finish dependency require?',
+'SF':'What does a start-to-finish dependency require?',
+'Example: Find the critical path':'How do you identify the critical path in an activity network?',
+'Slack formulas':'How do you calculate total slack?',
+'Scope creep: Causes':'What causes uncontrolled project scope growth?',
+'PERT estimate: Formula':'What is the PERT expected-duration formula?',
+"PERT estimate: Your professor's example":'Using the lecture values O=8, M=10, and P=24, what PERT duration should you obtain?',
+'PERT estimate: Another example':'Using O=3, M=6, and P=15, what PERT duration should you obtain?',
+'Earned value management analysis: Worked example':'What do CV, SV, CPI, and SPI show when PV=$10,000, EV=$8,000, and AC=$9,000?',
+'Communication channels: Formula':'What formula calculates the number of potential communication channels among n people?',
+'Push, pull, and interactive communication: Key distinction':'How do push, pull, and interactive communication differ?',
+'Motivation theories: The five levels':'What are Maslow’s five levels of need, from lowest to highest?',
+'Theories of influence and power: Key distinctions':'How do legitimate, reward, coercive, expert, and referent power differ?',
+'Effort versus duration':'What is the difference between effort and duration?',
+'Crashing versus fast tracking':'How do crashing and fast tracking shorten a schedule differently?',
+'Full-Time Equivalent (FTE)':'What does Full-Time Equivalent measure?',
+'Risk versus issue':'What is the difference between a risk and an issue?',
+'Before the meeting':'What should the project manager do before a meeting?',
+'Why can adding people cause more delays?':'Why can adding people to a late project make it later?',
+'Microaggressions':'What is a microaggression, and why does impact matter?',
 }
 
 def clean_heading(s): return re.sub(r'\*\*','',s).strip().strip('#').strip()
@@ -107,11 +203,83 @@ def split_h2(md):
     for j,m in enumerate(matches): out.append((clean_heading(m.group(1)),md[m.end():matches[j+1].start() if j+1<len(matches) else len(md)]))
     return out
 
+def heading_blocks(md):
+    """Return every meaningful H2-H4 block while retaining its parent objective/topic."""
+    matches=list(re.finditer(r'^(#{2,4})\s+\*\*(.+?)\*\*\s*$',md,re.M)); out=[]; stack={}
+    for i,m in enumerate(matches):
+        level=len(m.group(1)); title=clean_heading(m.group(2))
+        end=len(md)
+        for nxt in matches[i+1:]:
+            if len(nxt.group(1))<=level:
+                end=nxt.start(); break
+        for old in list(stack):
+            if old>=level: del stack[old]
+        parent=stack.get(level-1) or stack.get(2)
+        stack[level]=title
+        if title.startswith('Part ') or title=='Practice calculator' or re.fullmatch(r'[\d/]+',title): continue
+        if title in {'Chapter 6: Vocabulary summary','Chapter 7: Complete vocabulary summary'}: continue
+        out.append(dict(level=level,title=title,parent=parent,body=md[m.end():end]))
+    return out
+
+def table_summary(md):
+    lines=md.splitlines(); result=[]; i=0
+    while i<len(lines)-2:
+        if lines[i].lstrip().startswith('|') and re.match(r'^\s*\|?\s*:?-+',lines[i+1]):
+            i+=2
+            while i<len(lines) and lines[i].lstrip().startswith('|') and len(result)<3:
+                cells=[strip_md(c) for c in lines[i].strip().strip('|').split('|')]
+                if len(cells)>=2 and cells[0] and cells[1]: result.append(f'{cells[0]}: {cells[1]}')
+                i+=1
+            if result: return '; '.join(result)
+        i+=1
+    return ''
+
 def first_answer(md,title):
+    """Build a concrete answer from the source instead of a generic placeholder."""
+    if title in TOPIC_ANSWERS: return TOPIC_ANSWERS[title]
+    candidates=[]
     for p in re.split(r'\n\s*\n',md):
         t=strip_md(p)
-        if t and not t.startswith('|') and len(t)>25: return t[:500]
-    return f'This topic explains {title.lower()} and how it is applied in project management.'
+        if t and not t.startswith('|') and len(t)>15:
+            t=re.sub(r'^[-*]\s*','',t)
+            candidates.append(t)
+    answer=next((x for x in candidates if len(x)>=40 and not re.match(r'^(example|exam tip|remember|your professor|imagine|the following|these categories|this distinction|the slides|your slides)',x,re.I)),None)
+    answer=answer or table_summary(md) or (candidates[0] if candidates else '')
+    if not answer:
+        raise ValueError(f'No answerable source content for lesson: {title}')
+    if len(answer)>520:
+        answer=answer[:517].rsplit(' ',1)[0]+'…'
+    return answer
+
+def display_title(title,parent):
+    generic={'Formula','Example','Examples','Causes','Methods','Types','The five levels','Key distinction','Key distinctions','Worked example','Your professor\'s example','Another example','Practice calculator'}
+    title=re.sub(r'^[A-G]\.\s*','',title)
+    if title in generic and parent:
+        parent=re.sub(r'^(?:Objective|Cost objective) \d+:\s*','',parent)
+        parent=re.sub(r'^[A-G]\.\s*','',parent)
+        parent=re.sub(r'^(?:Explain how to|List methods for|Calculate (?:a|the)|Conduct|Differentiate|Prepare|Identify|Compare)\s+','',parent,flags=re.I)
+        if 'scope creep' in parent.lower(): parent='Scope creep'
+        if 'communication channels' in parent.lower(): parent='Communication channels'
+        parent=parent[:1].upper()+parent[1:]
+        return f'{parent}: {title}'
+    return title
+
+def lesson_question(lesson):
+    title=lesson['title']; low=title.lower()
+    if title in QUESTION_OVERRIDES: return QUESTION_OVERRIDES[title]
+    if lesson['kind']=='overview': return f'What is the main focus of Chapter {lesson["section"]}?'
+    if lesson['kind']=='objective': return f'What must you know for {title.lower()}?'
+    if re.match(r'^(what|why|how|when|which)\b',title,re.I): return title.rstrip('?')+'?'
+    if ' versus ' in low or ' vs. ' in low or ' vs ' in low:
+        pair=re.sub(r'\s+(?:versus|vs\.)\s+',' and ',title,flags=re.I)
+        return f'What is the difference between {pair}?'
+    if low.startswith(('methods of ','ways to ','types of ','steps ','five ','four ','three ','major ','potential sources','common causes','factors to consider')):
+        return f'Which answer correctly describes {title.lower()}?'
+    if any(word in low for word in ('formula','calculation','estimate')):
+        return f'How is {title.lower()} calculated or used?'
+    if low.endswith((' plan',' matrix',' chart',' register',' statement',' structure',' analysis',' theory',' model',' method',' grid',' law',' baseline',' histogram',' list',' attributes',' criteria',' card',' cards',' management',' communication',' communications')):
+        return f'What is the purpose of {title}?'
+    return f'What does {title} mean in project management?'
 
 def rows_from_tables(md,ch):
     rows=[]; lines=md.splitlines(); i=0
@@ -140,24 +308,23 @@ def main():
         md=chapter_text(text,ch); chapter_sources[ch]=md
         intro=md[:re.search(r'^## ',md,re.M).start()]
         overview=CHAPTER_OVERVIEWS[ch]
-        lessons.append(dict(id=f'464e2-l{number:03}',number=number,section=ch,kind='overview',title=f'Chapter {ch} overview',objective=f'Understand the purpose and exam focus of Chapter {ch}.',summary=overview,html=markdown_html(intro) or f'<p>{html.escape(overview)}</p>',raw=intro)); number+=1
-        parts=split_h2(md)
-        for title,body in parts:
-            if title.startswith(('Objective ','Cost objective ')):
-                summary=OBJECTIVE_ANSWERS[title]
-                lessons.append(dict(id=f'464e2-l{number:03}',number=number,section=ch,kind='objective',title=title,objective=title.split(':',1)[1].strip(),summary=summary,html=markdown_html(body),raw=body)); number+=1
-            elif title.startswith('Part '):
-                h3=list(re.finditer(r'^### \*\*(.+?)\*\*\s*$',body,re.M))
-                for j,m in enumerate(h3):
-                    t=clean_heading(m.group(1)); b=body[m.end():h3[j+1].start() if j+1<len(h3) else len(body)]
-                    if len(strip_md(b))<35: continue
-                    summary=first_answer(b,t)
-                    lessons.append(dict(id=f'464e2-l{number:03}',number=number,section=ch,kind='additional',title=t,objective=f'Explain {t}.',summary=summary,html=markdown_html(b),raw=b)); number+=1
-    # Every objective is a separate scored question; additional lessons receive one too.
+        lessons.append(dict(id=f'464e2-l{number:03}',number=number,section=ch,kind='overview',title=f'Chapter {ch} overview',objective=f'Understand the purpose and exam focus of Chapter {ch}.',summary=overview,html=markdown_html(intro) or f'<p>{html.escape(overview)}</p>',raw=intro,parent=f'Chapter {ch}')); number+=1
+        for block in heading_blocks(md):
+            original=block['title']; body=block['body']
+            is_objective=original.startswith(('Objective ','Cost objective '))
+            # A heading with no explanatory source text is only a visual divider, not a lesson.
+            if not is_objective and len(strip_md(body))<15 and not table_summary(body): continue
+            title=display_title(original,block['parent'])
+            summary=OBJECTIVE_ANSWERS[original] if is_objective else first_answer(body,title)
+            objective=original.split(':',1)[1].strip() if is_objective else f'Explain {title} clearly and distinguish it from related concepts.'
+            lessons.append(dict(id=f'464e2-l{number:03}',number=number,section=ch,kind='objective' if is_objective else 'topic',title=title,objective=objective,summary=summary,html=markdown_html(body),raw=body,parent=block['parent'] or f'Chapter {ch}')); number+=1
+    # Every objective and granular topic receives a direct, answerable question.
     questions=[]
     for lesson in lessons:
-        pool=[x['summary'] for x in lessons if x['section']==lesson['section'] and x['id']!=lesson['id']]
-        questions.append(dict(id='q-'+lesson['id'],number=lesson['number'],section=lesson['section'],source=lesson['number'],title=lesson['title'],q=f"Which answer best explains {lesson['title']}?",correct=lesson['summary'],distractors=choice_set(lesson['summary'],pool),teach=lesson['summary'],answer=lesson['summary'],example=f"Open the {lesson['title']} lesson to see the complete guide explanation, examples, comparisons, and formulas.",kind=lesson['kind']))
+        siblings=[x['summary'] for x in lessons if x['section']==lesson['section'] and x['parent']==lesson['parent'] and x['id']!=lesson['id']]
+        chapter_pool=[x['summary'] for x in lessons if x['section']==lesson['section'] and x['id']!=lesson['id']]
+        pool=siblings+chapter_pool
+        questions.append(dict(id='q-'+lesson['id'],number=lesson['number'],section=lesson['section'],source=lesson['number'],title=lesson['title'],q=lesson_question(lesson),correct=lesson['summary'],distractors=choice_set(lesson['summary'],pool),teach=f"{lesson['summary']} This directly answers the question about {lesson['title']}.",answer=lesson['summary'],example=f"The complete {lesson['title']} lesson includes the source explanation, examples, comparisons, or formulas.",kind=lesson['kind']))
     # Table rows become term/comparison cards; deduplicate exact labels within a chapter.
     seen=set(); vocab=[]
     for ch in CHAPTERS:
@@ -218,8 +385,9 @@ def main():
     sort_items=[]
     for i,(ch,title,items) in enumerate(sorts,1): sort_items.append(dict(id=f'464e2-s{i:02}',section=ch,source=next(l['number'] for l in lessons if l['section']==ch),title=title,q=f'Put {title.lower()} in order.',items=items,correct=' → '.join(items),distractors=[],teach=f'{title} follows this sequence so each later step uses the result of the earlier one.',answer=' → '.join(items),example='Follow the work from preparation through completion.',kind='sort'))
     review=text[re.search(r'^# \*\*Final Exam Review',text,re.M).start():]
-    data=dict(title='CIS 464 Exam 2',module='Chapters 4–7',sections=[dict(id=ch,chapter=ch,title=t,intro=q) for ch,(t,q) in CHAPTERS.items()],lessons=lessons,questions=questions,vocab=vocab,checks=check_items,cloze=cloze_items,sorts=sort_items,reviewHtml=markdown_html(review),sourceText=text,sourceSummary=dict(objectives=33,chapters=4,sourceLines=len(text.splitlines()),lessons=len(lessons),terms=len(vocab)))
+    data=dict(title='CIS 464 Exam 2',module='Chapters 4–7',sections=[dict(id=ch,chapter=ch,title=t,intro=q) for ch,(t,q) in CHAPTERS.items()],lessons=lessons,questions=questions,vocab=vocab,checks=check_items,cloze=cloze_items,sorts=sort_items,reviewHtml=markdown_html(review),sourceText=text,sourceSummary=dict(objectives=33,chapters=4,sourceLines=len(text.splitlines()),lectureSlides=238,lessons=len(lessons),terms=len(vocab)))
     OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+    OUT_JS.write_text('window.CIS464_EXAM2_CONTENT='+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n')
     print('Wrote',OUT,data['sourceSummary'],'questions',len(questions),'checks',len(check_items),'blanks',len(cloze_items),'sorts',len(sort_items))
 
 if __name__=='__main__': main()
